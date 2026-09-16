@@ -881,7 +881,7 @@ const META = {
   title: 'AI Coding 福利站导航',
   tagline: '免费额度合集',
   keywords: ['claude code'],
-  repoUrl: 'https://github.com/qi-jingjie/gcmp-welfare-temp',
+  repoUrl: 'https://github.com/Q-shuang-dot/gcmp-welfare-temp',
   pagesUrl: 'https://panxunying.github.io/ai-coding-welfare/',
 };
 const EVENTS = [

@@ -11,7 +11,7 @@
 
 <p align="center">
   <a href="https://agentrouter.org/register?aff=aibw"><b>AgentRouter 注册</b></a> ·
-  <a href="https://github.com/qi-jingjie/gcmp-welfare-temp"><b>GCMP Gateway 注册</b></a> ·
+  <a href="https://github.com/Q-shuang-dot/gcmp-welfare-temp"><b>GCMP Gateway 注册</b></a> ·
   <a href="https://docode.cc/register?aff=1Qof"><b>DoCode 注册</b></a> ·
   <a href="https://api.justwoker.icu/register?aff=OIWh"><b>JustDoWork 注册</b></a> ·
   <a href="https://kktoken.cc/sign-up?aff=JMQC"><b>KKtoken AI 注册</b></a> ·
@@ -20,7 +20,7 @@
   <a href="https://tabitoken.com/sign-up?aff=AfA4"><b>TaBiAI 注册</b></a>
 </p>
 
-<p align="center"><a href="https://qi-jingjie.github.io/gcmp-welfare-temp/compare/">📊 按次 vs 按量折算横评</a> · <a href="https://qi-jingjie.github.io/gcmp-welfare-temp/status/">🩺 可用性历史</a> · <a href="https://qi-jingjie.github.io/gcmp-welfare-temp/changelog/">🗓 变动日志</a> · <a href="https://qi-jingjie.github.io/gcmp-welfare-temp/feed.xml">🔔 Atom 订阅</a></p>
+<p align="center"><a href="https://q-shuang-dot.github.io/gcmp-welfare-temp/compare/">📊 按次 vs 按量折算横评</a> · <a href="https://q-shuang-dot.github.io/gcmp-welfare-temp/status/">🩺 可用性历史</a> · <a href="https://q-shuang-dot.github.io/gcmp-welfare-temp/changelog/">🗓 变动日志</a> · <a href="https://q-shuang-dot.github.io/gcmp-welfare-temp/feed.xml">🔔 Atom 订阅</a></p>
 
 ---
 
@@ -29,7 +29,7 @@
 | 站点 | 状态 | 首日可得 | 额度构成 | 之后每天 | 兼容协议 | 模型 | 注册 | 邀请码 |
 | :-- | :--: | :--: | :-- | :--: | :--: | :--: | :--: | :--: |
 | **AgentRouter** 🔥 | 🟢 在线 | **$175** | 注册 $100 + 本页邀请 $50 + 首签 $25 | $25/天 | Anthropic + OpenAI | 6 个可查 | [点此注册 →](https://agentrouter.org/register?aff=aibw) | — |
-| **GCMP Gateway** 🔥 | 🟢 在线 | 站内公示 | — | — | OpenAI / Anthropic / Responses | 7 个可查 | [点此注册 →](https://github.com/qi-jingjie/gcmp-welfare-temp) | — |
+| **GCMP Gateway** 🔥 | 🟢 在线 | 站内公示 | — | — | OpenAI / Anthropic / Responses | 7 个可查 | [点此注册 →](https://github.com/Q-shuang-dot/gcmp-welfare-temp) | — |
 | **DoCode** | 🟢 在线 | **300 站内刀** | 注册 50 站内刀 + 本页邀请 250 站内刀 | 无签到 | Anthropic + OpenAI | 需登录查看 | [点此注册 →](https://docode.cc/register?aff=1Qof) | `1Qof` |
 | **JustDoWork** | 🟢 在线 | **≈$92** | 注册 $70 + 首签 ≈$22 | ≈$22/天 | Anthropic + OpenAI | 需登录查看 | [GitHub 注册 →](https://api.justwoker.icu/register?aff=OIWh) | — |
 | **KKtoken AI** | 🟢 在线 | **$120** | 注册 $75 + 本页邀请 $25 + 首签 $20 | $20/天 | Anthropic + OpenAI | 需登录查看 | [GitHub 注册 →](https://kktoken.cc/sign-up?aff=JMQC) | — |
@@ -207,7 +207,7 @@ curl -s https://agentrouter.org/v1/chat/completions \
 
 > 本地自托管 AI 网关 · 7 个逻辑模型，OpenAI / Anthropic / Responses 三协议全收，故障转移 + 热加载 + 本地管理页，没有额度焦虑
 
-<a href="https://github.com/qi-jingjie/gcmp-welfare-temp"><img src="https://img.shields.io/badge/%E7%AB%8B%E5%8D%B3%E6%B3%A8%E5%86%8C-GCMP%20Gateway-brightgreen?style=for-the-badge" alt="注册 GCMP Gateway"></a>
+<a href="https://github.com/Q-shuang-dot/gcmp-welfare-temp"><img src="https://img.shields.io/badge/%E7%AB%8B%E5%8D%B3%E6%B3%A8%E5%86%8C-GCMP%20Gateway-brightgreen?style=for-the-badge" alt="注册 GCMP Gateway"></a>
 
 **为什么值得注册**
 
@@ -258,7 +258,7 @@ curl -s https://agentrouter.org/v1/chat/completions \
 
 **官方渠道**
 
-- 仓库: https://github.com/qi-jingjie/gcmp-welfare-temp
+- 仓库: https://github.com/Q-shuang-dot/gcmp-welfare-temp
 - 管理页: http://127.0.0.1:15900/admin
 
 ---
@@ -798,7 +798,7 @@ curl -s https://seekai.cc/v1/chat/completions \
 
 **实时数据**（自动抓取站点公开接口）
 
-- ⚠ 接口已连续 250 小时没抓到新数据，下列信息为 `2026-09-05 20:22 UTC` 的快照
+- ⚠ 接口已连续 251 小时没抓到新数据，下列信息为 `2026-09-05 20:22 UTC` 的快照
 - 站点名称：**TaBiAI**
 - 面板版本：`init-20260817-f880a343`
 - 每日签到：✅
@@ -904,8 +904,8 @@ curl -s https://tabitoken.com/v1/chat/completions \
 CI 每 6 小时抓一次各站接口，与上一次快照逐字段比对，目前已攒下 116 个样本、覆盖约 25.9 天。额度调整、掉线与恢复、模型上下线、价格变动都会自动记一条：
 
 - 点仓库右上角 **Watch → Custom → Releases**：有重要变动时 GitHub 直接发邮件
-- 订阅 [Atom feed](https://qi-jingjie.github.io/gcmp-welfare-temp/feed.xml)：RSS 阅读器 / Feedly / Telegram 机器人都能读
-- 在线看：[变动日志](https://qi-jingjie.github.io/gcmp-welfare-temp/changelog/) · [可用性历史](https://qi-jingjie.github.io/gcmp-welfare-temp/status/)
+- 订阅 [Atom feed](https://q-shuang-dot.github.io/gcmp-welfare-temp/feed.xml)：RSS 阅读器 / Feedly / Telegram 机器人都能读
+- 在线看：[变动日志](https://q-shuang-dot.github.io/gcmp-welfare-temp/changelog/) · [可用性历史](https://q-shuang-dot.github.io/gcmp-welfare-temp/status/)
 
 最近几条：
 
@@ -979,7 +979,7 @@ npm run check     # 校验链接是否还活着
 
 发现好用的公益站 / 中转站？两种方式：
 
-- 提 [Issue](https://github.com/qi-jingjie/gcmp-welfare-temp/issues/new?template=new-site.yml) 填个表单，我来收录
+- 提 [Issue](https://github.com/Q-shuang-dot/gcmp-welfare-temp/issues/new?template=new-site.yml) 填个表单，我来收录
 - 或者直接 PR：往 `data/sites.json` 加一条，跑 `npm run refresh && npm run build` 后提交
 
 收录标准：**能免费拿到额度**、注册流程不套娃、站点公开接口可探测。

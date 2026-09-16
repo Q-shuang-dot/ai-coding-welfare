@@ -18,8 +18,8 @@
       "GPT-5.6 Sol 中转",
       "claude-opus-5 按次计费"
     ],
-    "repoUrl": "https://github.com/qi-jingjie/gcmp-welfare-temp",
-    "pagesUrl": "https://qi-jingjie.github.io/gcmp-welfare-temp/"
+    "repoUrl": "https://github.com/Q-shuang-dot/gcmp-welfare-temp",
+    "pagesUrl": "https://q-shuang-dot.github.io/gcmp-welfare-temp/"
   },
   "sites": [
     {
@@ -101,9 +101,9 @@
         "approx": false,
         "unit": "local"
       },
-      "signupUrl": "https://github.com/qi-jingjie/gcmp-welfare-temp",
+      "signupUrl": "https://github.com/Q-shuang-dot/gcmp-welfare-temp",
       "homeUrl": "http://127.0.0.1:15900/admin",
-      "docsUrl": "https://github.com/qi-jingjie/gcmp-welfare-temp",
+      "docsUrl": "https://github.com/Q-shuang-dot/gcmp-welfare-temp",
       "statusApi": null,
       "pricingApi": null,
       "mirrors": [],
@@ -155,7 +155,7 @@
         "config.json 里若配置了中文上游名，需要网关对 HTTP 头做 latin-1 安全转义，旧版本直接写中文头会被 latin-1 编码打断"
       ],
       "community": [
-        "仓库: https://github.com/qi-jingjie/gcmp-welfare-temp",
+        "仓库: https://github.com/Q-shuang-dot/gcmp-welfare-temp",
         "管理页: http://127.0.0.1:15900/admin"
       ],
       "configBlocks": {

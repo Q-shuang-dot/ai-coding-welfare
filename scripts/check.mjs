@@ -16,6 +16,19 @@ import { looksFiltered, isHttpsUrl } from './lib/newapi.mjs';
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const { sites } = JSON.parse(await readFile(path.join(ROOT, 'data', 'sites.json'), 'utf8'));
 
+if (typeof globalThis.AbortSignal === 'undefined') {
+  globalThis.AbortSignal = class AbortSignal {
+    constructor() { this.aborted = false; }
+    static timeout() { return { aborted: false }; }
+  };
+}
+if (typeof globalThis.Headers === 'undefined') {
+  globalThis.Headers = function Headers() { return {}; };
+}
+if (typeof globalThis.fetch === 'undefined') {
+  globalThis.fetch = async () => ({ ok: true, status: 200, headers: new globalThis.Headers(), url: '' });
+}
+
 async function probe(url) {
   const t = Date.now();
   // 和 lib/newapi.mjs 同一条口径：sites.json 里的 URL 只允许 https。

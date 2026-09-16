@@ -9,11 +9,11 @@
 <meta property="og:type" content="website">
 <meta property="og:title" content="GCMP Gateway 免费额度 / 邀请链接 / Claude Code 配置 — AI Coding 福利站导航">
 <meta property="og:description" content="GCMP Gateway：本地自托管 AI 网关 · 7 个逻辑模型，OpenAI / Anthropic / Responses 三协议全收，故障转移 + 热加载 + 本地管理页，没有额度焦虑。含实时在线状态、模型价格、Claude Code / Codex 接入配置与踩坑清单，数据快照 2026-09-16 06:24 UTC。">
-<meta property="og:url" content="https://qi-jingjie.github.io/gcmp-welfare-temp/sites/gcmp-gateway/">
+<meta property="og:url" content="https://q-shuang-dot.github.io/gcmp-welfare-temp/sites/gcmp-gateway/">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="canonical" href="https://qi-jingjie.github.io/gcmp-welfare-temp/sites/gcmp-gateway/">
-<link rel="alternate" type="application/atom+xml" title="变动日志" href="https://qi-jingjie.github.io/gcmp-welfare-temp/feed.xml">
-<script type="application/ld+json">[{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"AI Coding 福利站导航","item":"https://qi-jingjie.github.io/gcmp-welfare-temp/"},{"@type":"ListItem","position":2,"name":"GCMP Gateway","item":"https://qi-jingjie.github.io/gcmp-welfare-temp/sites/gcmp-gateway/"}]},{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"GCMP Gateway 监听地址只有 127.0.0.1，别的机器怎么用？","acceptedAnswer":{"@type":"Answer","text":"默认只监听本机。想让局域网设备使用，需要你另外做反代或改成 0.0.0.0 并补防火墙规则。"}},{"@type":"Question","name":"为什么我直连上游 200，走网关却失败？","acceptedAnswer":{"@type":"Answer","text":"先看响应头里的 X-Gateway-Upstream / X-Gateway-Model，再对照管理页路由命中；常见原因是上游 key、UA 或请求协议不匹配。"}},{"@type":"Question","name":"中文上游名为什么有时候会报错？","acceptedAnswer":{"@type":"Answer","text":"旧版网关直接把中文上游名写进 HTTP 头时会被 latin-1 编码打断；当前版本会自动转义。"}}]}]</script>
+<link rel="canonical" href="https://q-shuang-dot.github.io/gcmp-welfare-temp/sites/gcmp-gateway/">
+<link rel="alternate" type="application/atom+xml" title="变动日志" href="https://q-shuang-dot.github.io/gcmp-welfare-temp/feed.xml">
+<script type="application/ld+json">[{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"AI Coding 福利站导航","item":"https://q-shuang-dot.github.io/gcmp-welfare-temp/"},{"@type":"ListItem","position":2,"name":"GCMP Gateway","item":"https://q-shuang-dot.github.io/gcmp-welfare-temp/sites/gcmp-gateway/"}]},{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"GCMP Gateway 监听地址只有 127.0.0.1，别的机器怎么用？","acceptedAnswer":{"@type":"Answer","text":"默认只监听本机。想让局域网设备使用，需要你另外做反代或改成 0.0.0.0 并补防火墙规则。"}},{"@type":"Question","name":"为什么我直连上游 200，走网关却失败？","acceptedAnswer":{"@type":"Answer","text":"先看响应头里的 X-Gateway-Upstream / X-Gateway-Model，再对照管理页路由命中；常见原因是上游 key、UA 或请求协议不匹配。"}},{"@type":"Question","name":"中文上游名为什么有时候会报错？","acceptedAnswer":{"@type":"Answer","text":"旧版网关直接把中文上游名写进 HTTP 头时会被 latin-1 编码打断；当前版本会自动转义。"}}]}]</script>
 <style>
 /* AI Coding 福利站导航 — 落地页样式（手写，非生成物） */
 :root {
@@ -226,7 +226,7 @@ tr.shut td { color: var(--fg-dim); }
       <span class="pill">数据更新 <b>2026-09-16 06:24 UTC</b></span>
     </div>
     <div class="cta-row">
-      <a class="btn btn-primary" href="https://github.com/qi-jingjie/gcmp-welfare-temp" target="_blank" rel="noopener">查看部署文档 →</a>
+      <a class="btn btn-primary" href="https://github.com/Q-shuang-dot/gcmp-welfare-temp" target="_blank" rel="noopener">查看部署文档 →</a>
       <a class="btn btn-ghost" href="#config">直接看接入配置</a>
     </div>
     
@@ -249,7 +249,7 @@ tr.shut td { color: var(--fg-dim); }
   <section><h2>⚠️ 使用前必读</h2><ul class="hl"><li>服务只监听 127.0.0.1:15900，不会自动暴露到公网；想让局域网设备使用需要自行代理或改监听地址</li><li>网关仅转发请求，模型质量、可用性与额度来自你配置的上游账号，不是这个仓库本身提供的</li><li>config.json 里若配置了中文上游名，需要网关对 HTTP 头做 latin-1 安全转义，旧版本直接写中文头会被 latin-1 编码打断</li></ul></section>
   
   
-  <section><h2>官方渠道</h2><ul class="hl"><li>仓库: https://github.com/qi-jingjie/gcmp-welfare-temp</li><li>管理页: http://127.0.0.1:15900/admin</li></ul></section>
+  <section><h2>官方渠道</h2><ul class="hl"><li>仓库: https://github.com/Q-shuang-dot/gcmp-welfare-temp</li><li>管理页: http://127.0.0.1:15900/admin</li></ul></section>
 
   <section><h2>常见问题</h2>
     <details><summary>GCMP Gateway 监听地址只有 127.0.0.1，别的机器怎么用？</summary><p>默认只监听本机。想让局域网设备使用，需要你另外做反代或改成 0.0.0.0 并补防火墙规则。</p></details>
@@ -278,7 +278,7 @@ document.querySelectorAll('.copy').forEach(function (btn) {
       <li>请勿把生产密钥、隐私数据、企业代码交给来源不明的中转服务；重要项目请使用官方 API。</li>
       <li>请遵守各站点与上游服务商条款，禁止批量注册、刷量、转售额度。</li>
     </ul>
-    <p>数据快照时间：2026-09-16 06:24 UTC · 由 <a href="https://github.com/qi-jingjie/gcmp-welfare-temp">github.com/qi-jingjie/gcmp-welfare-temp</a> 自动生成 · <a href="https://qi-jingjie.github.io/gcmp-welfare-temp/feed.xml">Atom 订阅</a></p>
+    <p>数据快照时间：2026-09-16 06:24 UTC · 由 <a href="https://github.com/Q-shuang-dot/gcmp-welfare-temp">github.com/Q-shuang-dot/gcmp-welfare-temp</a> 自动生成 · <a href="https://q-shuang-dot.github.io/gcmp-welfare-temp/feed.xml">Atom 订阅</a></p>
   </footer>
 </div>
 </body>
