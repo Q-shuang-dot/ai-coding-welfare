@@ -6,6 +6,17 @@ AI Coding 福利站导航的自动变动记录：站点上下线、额度调整�
 
 > 只记录会影响「值不值得注册」的字段。探测被站点 WAF 拦下时不记在线状态变化，避免机房 IP 被拦被误报成掉线。
 
+## 2026-09-16
+
+- 🆕 新收录 GCMP Gateway <sub>06:24 UTC</sub>
+- 📢 DoCode 发了公告：现在免费用户体验期，可用模型作出如下调整，下架gpt模型，新上架grok，如有使用问题请联系管理 <sub>06:24 UTC</sub>
+- 🆕 新收录 SeekAi <sub>06:24 UTC</sub>
+- 🗑️ 移除收录 gorouter <sub>06:24 UTC</sub>
+- 🗑️ 移除收录 rawchat <sub>06:24 UTC</sub>
+- 🗑️ 移除收录 anyrouter <sub>06:24 UTC</sub>
+- 🗑️ 移除收录 cheapcodex <sub>06:24 UTC</sub>
+- 🗑️ 移除收录 nofx <sub>06:24 UTC</sub>
+
 ## 2026-09-15
 
 - 🟢 GoRouter 恢复在线 <sub>17:01 UTC</sub>

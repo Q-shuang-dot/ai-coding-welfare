@@ -4,9 +4,9 @@
 
 <p align="center">
   <img src="https://img.shields.io/badge/%E6%94%B6%E5%BD%95%E7%AB%99%E7%82%B9-8%20%E4%B8%AA-blue" alt="收录站点">
-  <img src="https://img.shields.io/badge/%E5%9C%A8%E7%BA%BF-7%2F8-orange" alt="在线">
+  <img src="https://img.shields.io/badge/%E5%9C%A8%E7%BA%BF-8%2F8-brightgreen" alt="在线">
   <img src="https://img.shields.io/badge/%E9%A6%96%E6%97%A5%E5%8F%AF%E5%BE%97-%E6%9C%80%E9%AB%98%20%24175-success" alt="首日可得">
-  <img src="https://img.shields.io/badge/%E6%95%B0%E6%8D%AE%E6%9B%B4%E6%96%B0-2026--09--15%2021.23%20UTC-informational" alt="数据更新">
+  <img src="https://img.shields.io/badge/%E6%95%B0%E6%8D%AE%E6%9B%B4%E6%96%B0-2026--09--16%2006.24%20UTC-informational" alt="数据更新">
 </p>
 
 <p align="center">
@@ -34,10 +34,10 @@
 | **JustDoWork** | 🟢 在线 | **≈$92** | 注册 $70 + 首签 ≈$22 | ≈$22/天 | Anthropic + OpenAI | 需登录查看 | [GitHub 注册 →](https://api.justwoker.icu/register?aff=OIWh) | — |
 | **KKtoken AI** | 🟢 在线 | **$120** | 注册 $75 + 本页邀请 $25 + 首签 $20 | $20/天 | Anthropic + OpenAI | 需登录查看 | [GitHub 注册 →](https://kktoken.cc/sign-up?aff=JMQC) | — |
 | **Matrix** | 🟢 在线 | **600 积分** | 本页邀请 600 积分 | — | OpenAI 兼容 | 需登录查看 | [点此注册 →](https://matrix.mzsjai.com/login?redirect=%2Fapp%2Fgrowth%3FinviteCode%3DMX3CDVGATLJW) | — |
-| **SeekAi** | 🔴 异常 | 站内公示 | — | — | OpenAI | 需登录查看 | [点此注册 →](https://seekai.cc/sign-up?aff=dDJy) | `dDJy` |
+| **SeekAi** | 🟢 在线 | 站内公示 | — | 支持签到 | OpenAI | 需登录查看 | [点此注册 →](https://seekai.cc/sign-up?aff=dDJy) | `dDJy` |
 | **TaBiAI** | 🟢 在线 | **$120** | 注册 $100 + 本页邀请 $20 | 支持签到 | Anthropic + OpenAI | 4 个可查 | [GitHub 注册 →](https://tabitoken.com/sign-up?aff=AfA4) | — |
 
-> 「首日可得」= 注册基础额度 + 本页邀请链接额度 + 当天能领的签到额度（每日重置额度池的站点按一天的池子算）；模型、价格、在线状态由脚本抓取站点公开接口自动生成，最后更新：`2026-09-15 21:23 UTC`。
+> 「首日可得」= 注册基础额度 + 本页邀请链接额度 + 当天能领的签到额度（每日重置额度池的站点按一天的池子算）；模型、价格、在线状态由脚本抓取站点公开接口自动生成，最后更新：`2026-09-16 06:24 UTC`。
 >
 > 「邀请码」列写了码的站（DoCode `1Qof`、SeekAi `dDJy`），注册表单里有一栏要**自己填**，漏填就只拿得到注册基础额度、事后补不上；其余站写 — 是因为邀请额度由链接自带，不用手打。
 >
@@ -90,7 +90,7 @@ powershell -ExecutionPolicy Bypass -File scripts/quickstart.ps1
 - 面板版本：`init-20260915-25158da5`
 - 邀请他人可得：**$50**
 - 登录方式：GitHub / LinuxDO
-- 接口延迟：256 ms
+- 接口延迟：319 ms
 
 **镜像 / 备用入口**
 
@@ -290,7 +290,7 @@ curl -s https://agentrouter.org/v1/chat/completions \
 - 每日签到：❌
 - 开放注册：✅
 - 登录方式：账号密码
-- 接口延迟：776 ms
+- 接口延迟：2705 ms
 
 **镜像 / 备用入口**
 
@@ -384,9 +384,9 @@ curl -s https://docode.cc/v1/chat/completions \
 
 <details><summary><b>站点最新公告</b>（自动同步）</summary>
 
+- `2026-09-16` 现在免费用户体验期，可用模型作出如下调整，下架gpt模型，新上架grok，如有使用问题请联系管理
 - `2026-09-15` 国模分组倍率下调，其中deepseek仅保留DeepSeek-V4.1-Flash与DeepSeek-V4-Pro-0813。
 - `2026-09-10` 今天openai炸了，gpt全线都不太行，推荐用grok或者cc特殊分组
-- `2026-08-29` 已上架按次收费的分组，有gemini和opus4.6，价格详情可以查看定价页面。
 
 </details>
 
@@ -420,7 +420,7 @@ curl -s https://docode.cc/v1/chat/completions \
 - 开放注册：✅（站点关掉了邮箱密码注册，得用 GitHub 登录建号（防批量注册的常规做法）。）
 - 登录方式：GitHub / 账号密码
 - GitHub 账号需满 **365 天**
-- 接口延迟：668 ms
+- 接口延迟：2500 ms
 
 > 该站模型清单需登录后台查看，注册后在「模型价格」页确认。
 
@@ -531,7 +531,7 @@ curl -s https://api.justwoker.icu/v1/chat/completions \
 - 每日签到：✅
 - 开放注册：✅（站点关掉了邮箱密码注册，得用 GitHub 登录建号（防批量注册的常规做法）。）
 - 登录方式：GitHub / 账号密码
-- 接口延迟：1114 ms
+- 接口延迟：3146 ms
 
 > 该站把价格页设成了登录可见（`/api/pricing` 返回 401），本页不列模型表。站内公示的计价口径是输入 $1 / 百万 tokens、输出 $1 / 百万 tokens，按 token 而不是按次，注册后在控制台「模型价格」页确认实际清单与倍率。
 
@@ -637,7 +637,7 @@ curl -s https://kktoken.cc/v1/chat/completions \
 
 **实时数据**（自动抓取站点公开接口）
 
-- 接口延迟：1570 ms
+- 接口延迟：3756 ms
 
 > 模型清单与价格需登录后在控制台「模型列表」查看（按每百万 Tokens 计价，可按厂商 / 上下文窗口筛选），站点没有公开的模型与定价接口，本页不做承诺。
 
@@ -681,7 +681,7 @@ curl -s https://kktoken.cc/v1/chat/completions \
 
 ---
 
-### 🔴 SeekAi
+### 🟢 SeekAi
 
 > New API 中转站 · 注册送额度，签到与邀请持续续命，支持 Claude Code / Codex / Cursor
 
@@ -696,7 +696,12 @@ curl -s https://kktoken.cc/v1/chat/completions \
 
 **实时数据**（自动抓取站点公开接口）
 
-_暂无实时数据_
+- 站点名称：**SeekAi**
+- 面板版本：`v1.0.0-rc.25`
+- 每日签到：✅
+- 开放注册：✅
+- 登录方式：GitHub / Telegram / 账号密码
+- 接口延迟：3290 ms
 
 **镜像 / 备用入口**
 
@@ -799,7 +804,7 @@ curl -s https://seekai.cc/v1/chat/completions \
 - 每日签到：✅
 - 开放注册：✅（站点关掉了邮箱密码注册，得用 GitHub 登录建号（防批量注册的常规做法）。）
 - 登录方式：GitHub / 账号密码
-- 接口延迟：399 ms
+- 接口延迟：576 ms
 
 **当前可用模型**
 
@@ -896,7 +901,7 @@ curl -s https://tabitoken.com/v1/chat/completions \
 
 ## 🔔 额度变了，这里会通知你
 
-CI 每 6 小时抓一次各站接口，与上一次快照逐字段比对，目前已攒下 115 个样本、覆盖约 25.5 天。额度调整、掉线与恢复、模型上下线、价格变动都会自动记一条：
+CI 每 6 小时抓一次各站接口，与上一次快照逐字段比对，目前已攒下 116 个样本、覆盖约 25.9 天。额度调整、掉线与恢复、模型上下线、价格变动都会自动记一条：
 
 - 点仓库右上角 **Watch → Custom → Releases**：有重要变动时 GitHub 直接发邮件
 - 订阅 [Atom feed](https://qi-jingjie.github.io/gcmp-welfare-temp/feed.xml)：RSS 阅读器 / Feedly / Telegram 机器人都能读
@@ -904,12 +909,12 @@ CI 每 6 小时抓一次各站接口，与上一次快照逐字段比对，目�
 
 最近几条：
 
-- `2026-09-15` 🟢 GoRouter 恢复在线
-- `2026-09-15` 📢 DoCode 发了公告：国模分组倍率下调，其中deepseek仅保留DeepSeek-V4.1-Flash与DeepSeek-V4-Pro-0813。
-- `2026-09-15` 🔴 GoRouter 探测不到了：注册页与公开接口都没响应
-- `2026-09-15` ➕ AgentRouter 上线模型：gpt-6-astra
-- `2026-09-15` 🏷️ AgentRouter deepseek-v4-flash 价格 $2 入 / $6 出（每 1M） → $4 入 / $12 出（每 1M）
-- `2026-09-15` 🏷️ AgentRouter glm-5.3 价格 $3 入 / $12 出（每 1M） → $5 入 / $25 出（每 1M）
+- `2026-09-16` 🆕 新收录 GCMP Gateway
+- `2026-09-16` 📢 DoCode 发了公告：现在免费用户体验期，可用模型作出如下调整，下架gpt模型，新上架grok，如有使用问题请联系管理
+- `2026-09-16` 🆕 新收录 SeekAi
+- `2026-09-16` 🗑️ 移除收录 gorouter
+- `2026-09-16` 🗑️ 移除收录 rawchat
+- `2026-09-16` 🗑️ 移除收录 anyrouter
 
 完整记录见 [CHANGELOG.md](CHANGELOG.md)。
 

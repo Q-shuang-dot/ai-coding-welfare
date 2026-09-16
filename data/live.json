@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-09-15T21:23:00.353Z",
+  "generatedAt": "2026-09-16T06:24:52.958Z",
   "sites": [
     {
       "id": "agentrouter",
-      "checkedAt": "2026-09-15T21:22:54.475Z",
+      "checkedAt": "2026-09-16T06:24:46.760Z",
       "online": true,
-      "latencyMs": 256,
+      "latencyMs": 319,
       "error": "invalid json",
       "systemName": "Agent Router",
       "version": "init-20260915-25158da5",
@@ -164,7 +164,7 @@
       "signup": {
         "status": 200,
         "ok": true,
-        "ms": 1134,
+        "ms": 1240,
         "attempts": 1
       },
       "mirrors": [
@@ -193,11 +193,134 @@
       "probeBlocked": false
     },
     {
-      "id": "docode",
-      "checkedAt": "2026-09-15T21:22:49.113Z",
+      "id": "gcmp-gateway",
+      "checkedAt": "2026-09-16T06:24:40.607Z",
       "apiOk": true,
       "pricingOk": false,
-      "latencyMs": 776,
+      "latencyMs": null,
+      "error": null,
+      "systemName": null,
+      "version": null,
+      "registerOpen": null,
+      "passwordRegister": null,
+      "checkinEnabled": null,
+      "loginMethods": [],
+      "githubMinAccountAgeDays": null,
+      "quotaPerUnit": null,
+      "inviteeBonusUsd": null,
+      "inviterBonusUsd": null,
+      "topupEnabled": null,
+      "services": [],
+      "announcements": [],
+      "models": [
+        {
+          "name": "opus-5",
+          "fixedPrice": null,
+          "ratio": "—",
+          "inputPerMTok": null,
+          "outputPerMTok": null,
+          "protocols": [
+            "OpenAI",
+            "Responses",
+            "Anthropic"
+          ]
+        },
+        {
+          "name": "opus-4-8",
+          "fixedPrice": null,
+          "ratio": "—",
+          "inputPerMTok": null,
+          "outputPerMTok": null,
+          "protocols": [
+            "OpenAI",
+            "Responses",
+            "Anthropic"
+          ]
+        },
+        {
+          "name": "sonnet-5",
+          "fixedPrice": null,
+          "ratio": "—",
+          "inputPerMTok": null,
+          "outputPerMTok": null,
+          "protocols": [
+            "OpenAI",
+            "Responses",
+            "Anthropic"
+          ]
+        },
+        {
+          "name": "gpt-5.6",
+          "fixedPrice": null,
+          "ratio": "—",
+          "inputPerMTok": null,
+          "outputPerMTok": null,
+          "protocols": [
+            "OpenAI",
+            "Responses"
+          ]
+        },
+        {
+          "name": "glm-5.3",
+          "fixedPrice": null,
+          "ratio": "—",
+          "inputPerMTok": null,
+          "outputPerMTok": null,
+          "protocols": [
+            "OpenAI",
+            "Responses",
+            "Anthropic"
+          ]
+        },
+        {
+          "name": "deepseek",
+          "fixedPrice": null,
+          "ratio": "—",
+          "inputPerMTok": null,
+          "outputPerMTok": null,
+          "protocols": [
+            "OpenAI",
+            "Responses",
+            "Anthropic"
+          ]
+        },
+        {
+          "name": "cheap",
+          "fixedPrice": null,
+          "ratio": "—",
+          "inputPerMTok": null,
+          "outputPerMTok": null,
+          "protocols": [
+            "OpenAI",
+            "Responses",
+            "Anthropic"
+          ]
+        }
+      ],
+      "modelsSource": "public-api",
+      "defaults": {
+        "claude": null,
+        "openai": "gpt-5.6"
+      },
+      "online": true,
+      "signup": {
+        "status": 200,
+        "ok": true,
+        "ms": 3761,
+        "attempts": 1
+      },
+      "mirrors": [],
+      "probeBlocked": false,
+      "dataStale": false,
+      "staleFrom": null,
+      "staleFields": []
+    },
+    {
+      "id": "docode",
+      "checkedAt": "2026-09-16T06:24:43.350Z",
+      "apiOk": true,
+      "pricingOk": false,
+      "latencyMs": 2705,
       "error": null,
       "systemName": "DoCode",
       "version": "",
@@ -214,6 +337,11 @@
       "topupEnabled": null,
       "services": [],
       "announcements": [
+        {
+          "id": 29,
+          "date": "2026-09-16",
+          "text": "现在免费用户体验期，可用模型作出如下调整，下架gpt模型，新上架grok，如有使用问题请联系管理"
+        },
         {
           "id": 28,
           "date": "2026-09-15",
@@ -233,11 +361,6 @@
           "id": 25,
           "date": "2026-08-06",
           "text": "基本稳定，相关分组倍率已回落"
-        },
-        {
-          "id": 24,
-          "date": "2026-08-06",
-          "text": "号源暂时全断了，全网价格都上涨，gpt每个vip等级都上调了1-2点。"
         }
       ],
       "models": [],
@@ -249,7 +372,7 @@
       "signup": {
         "status": 200,
         "ok": true,
-        "ms": 678,
+        "ms": 2616,
         "attempts": 1
       },
       "mirrors": [
@@ -266,9 +389,9 @@
     },
     {
       "id": "justdowork",
-      "checkedAt": "2026-09-15T21:22:48.988Z",
+      "checkedAt": "2026-09-16T06:24:43.116Z",
       "online": true,
-      "latencyMs": 668,
+      "latencyMs": 2500,
       "error": null,
       "systemName": "JustDoWork",
       "version": "v1.0.0-rc.23",
@@ -294,7 +417,7 @@
       "signup": {
         "status": 200,
         "ok": true,
-        "ms": 797,
+        "ms": 3259,
         "attempts": 1
       },
       "mirrors": [],
@@ -308,10 +431,10 @@
     },
     {
       "id": "kktoken",
-      "checkedAt": "2026-09-15T21:22:49.426Z",
+      "checkedAt": "2026-09-16T06:24:43.745Z",
       "apiOk": true,
       "pricingOk": false,
-      "latencyMs": 1114,
+      "latencyMs": 3146,
       "error": null,
       "systemName": "KKtoken AI",
       "version": "v1.0.0-rc.25",
@@ -338,7 +461,7 @@
       "signup": {
         "status": 200,
         "ok": true,
-        "ms": 1112,
+        "ms": 3135,
         "attempts": 1
       },
       "mirrors": [],
@@ -349,87 +472,11 @@
       "staleFields": []
     },
     {
-      "id": "gorouter",
-      "checkedAt": "2026-09-15T21:22:57.318Z",
-      "apiOk": true,
-      "pricingOk": false,
-      "latencyMs": 517,
-      "error": null,
-      "systemName": "GoRouter",
-      "version": "init-20260813-3cd90886",
-      "registerOpen": true,
-      "passwordRegister": false,
-      "checkinEnabled": true,
-      "loginMethods": [
-        "GitHub",
-        "账号密码"
-      ],
-      "githubMinAccountAgeDays": null,
-      "quotaPerUnit": 500000,
-      "inviteeBonusUsd": null,
-      "inviterBonusUsd": null,
-      "topupEnabled": null,
-      "services": [],
-      "announcements": [],
-      "models": [
-        {
-          "name": "claude-opus-5",
-          "ratio": 0,
-          "completionRatio": 0,
-          "fixedPrice": 0.3,
-          "inputPerMTok": null,
-          "outputPerMTok": null,
-          "groups": [
-            "default"
-          ],
-          "protocols": [
-            "anthropic",
-            "openai"
-          ]
-        },
-        {
-          "name": "claude-opus-5-thinking",
-          "ratio": 0,
-          "completionRatio": 0,
-          "fixedPrice": 0.3,
-          "inputPerMTok": null,
-          "outputPerMTok": null,
-          "groups": [
-            "default"
-          ],
-          "protocols": [
-            "anthropic",
-            "openai"
-          ]
-        }
-      ],
-      "modelsSource": "cached",
-      "defaults": {
-        "claude": "claude-opus-5",
-        "openai": "claude-opus-5"
-      },
-      "signup": {
-        "status": 403,
-        "ok": false,
-        "ms": 774,
-        "attempts": 1
-      },
-      "mirrors": [],
-      "probeBlocked": false,
-      "online": true,
-      "dataStale": true,
-      "staleFrom": "2026-09-05T20:22:54.779Z",
-      "staleFields": [
-        "models",
-        "defaults"
-      ]
-    },
-    {
       "id": "matrix",
-      "checkedAt": "2026-09-15T21:22:49.887Z",
+      "checkedAt": "2026-09-16T06:24:44.357Z",
       "apiOk": true,
       "pricingOk": false,
-      "latencyMs": 1570,
+      "latencyMs": 3756,
       "error": null,
       "systemName": null,
       "version": null,
@@ -453,7 +500,7 @@
       "signup": {
         "status": 200,
         "ok": true,
-        "ms": 1648,
+        "ms": 3820,
         "attempts": 1
       },
       "mirrors": [],
@@ -464,11 +511,59 @@
       "staleFields": []
     },
     {
+      "id": "seekai",
+      "checkedAt": "2026-09-16T06:24:43.894Z",
+      "apiOk": true,
+      "pricingOk": false,
+      "latencyMs": 3290,
+      "error": null,
+      "systemName": "SeekAi",
+      "version": "v1.0.0-rc.25",
+      "registerOpen": true,
+      "passwordRegister": true,
+      "checkinEnabled": true,
+      "loginMethods": [
+        "GitHub",
+        "Telegram",
+        "账号密码"
+      ],
+      "githubMinAccountAgeDays": null,
+      "quotaPerUnit": 500000,
+      "inviteeBonusUsd": null,
+      "inviterBonusUsd": null,
+      "topupEnabled": null,
+      "services": [],
+      "announcements": [],
+      "models": [],
+      "modelsSource": "login-required",
+      "defaults": {
+        "claude": null,
+        "openai": null
+      },
+      "signup": {
+        "status": 200,
+        "ok": true,
+        "ms": 3316,
+        "attempts": 1
+      },
+      "mirrors": [
+        {
+          "homeUrl": "https://api.hcnsec.cn",
+          "online": true
+        }
+      ],
+      "probeBlocked": false,
+      "online": true,
+      "dataStale": false,
+      "staleFrom": null,
+      "staleFields": []
+    },
+    {
       "id": "tabitoken",
-      "checkedAt": "2026-09-15T21:22:51.266Z",
+      "checkedAt": "2026-09-16T06:24:45.811Z",
       "apiOk": true,
       "pricingOk": true,
-      "latencyMs": 399,
+      "latencyMs": 576,
       "error": null,
       "systemName": "TaBiAI",
       "version": "init-20260817-f880a343",
@@ -560,7 +655,7 @@
       "signup": {
         "status": 403,
         "ok": false,
-        "ms": 1030,
+        "ms": 3095,
         "attempts": 1
       },
       "mirrors": [],
@@ -572,173 +667,6 @@
         "models",
         "defaults"
       ]
-    },
-    {
-      "id": "rawchat",
-      "checkedAt": "2026-09-15T21:22:53.921Z",
-      "apiOk": false,
-      "pricingOk": false,
-      "latencyMs": 10,
-      "error": "HTTP 403",
-      "systemName": "RawChat公益站",
-      "version": "1.0.0.0",
-      "registerOpen": true,
-      "passwordRegister": true,
-      "checkinEnabled": null,
-      "loginMethods": [
-        "邮箱"
-      ],
-      "githubMinAccountAgeDays": null,
-      "quotaPerUnit": null,
-      "inviteeBonusUsd": null,
-      "inviterBonusUsd": null,
-      "topupEnabled": null,
-      "services": [
-        "Codex"
-      ],
-      "announcements": [],
-      "models": [],
-      "modelsSource": "login-required",
-      "defaults": {
-        "claude": null,
-        "openai": null
-      },
-      "signup": {
-        "status": 403,
-        "ok": false,
-        "ms": 1080,
-        "attempts": 1
-      },
-      "mirrors": [],
-      "online": false,
-      "dataStale": true,
-      "staleFrom": "2026-09-01T14:01:52.402Z",
-      "staleFields": [
-        "systemName",
-        "version",
-        "registerOpen",
-        "passwordRegister",
-        "loginMethods",
-        "services"
-      ],
-      "probeBlocked": false
-    },
-    {
-      "id": "anyrouter",
-      "checkedAt": "2026-09-15T21:22:55.590Z",
-      "apiOk": false,
-      "pricingOk": false,
-      "latencyMs": 142,
-      "error": "invalid json",
-      "systemName": null,
-      "version": null,
-      "registerOpen": null,
-      "passwordRegister": null,
-      "checkinEnabled": null,
-      "loginMethods": [],
-      "githubMinAccountAgeDays": null,
-      "quotaPerUnit": null,
-      "inviteeBonusUsd": null,
-      "inviterBonusUsd": null,
-      "topupEnabled": null,
-      "services": [],
-      "announcements": [],
-      "models": [],
-      "modelsSource": "login-required",
-      "defaults": {
-        "claude": null,
-        "openai": null
-      },
-      "signup": {
-        "status": 200,
-        "ok": true,
-        "ms": 2473,
-        "attempts": 1
-      },
-      "mirrors": [],
-      "probeBlocked": false,
-      "online": true,
-      "dataStale": false,
-      "staleFrom": null,
-      "staleFields": []
-    },
-    {
-      "id": "cheapcodex",
-      "checkedAt": "2026-09-15T21:22:50.510Z",
-      "apiOk": true,
-      "pricingOk": false,
-      "latencyMs": 2188,
-      "error": null,
-      "systemName": null,
-      "version": null,
-      "registerOpen": null,
-      "passwordRegister": null,
-      "checkinEnabled": null,
-      "loginMethods": [],
-      "githubMinAccountAgeDays": null,
-      "quotaPerUnit": null,
-      "inviteeBonusUsd": null,
-      "inviterBonusUsd": null,
-      "topupEnabled": null,
-      "services": [],
-      "announcements": [],
-      "models": [],
-      "modelsSource": "login-required",
-      "defaults": {
-        "claude": null,
-        "openai": null
-      },
-      "signup": {
-        "status": 200,
-        "ok": true,
-        "ms": 2192,
-        "attempts": 1
-      },
-      "mirrors": [],
-      "probeBlocked": false,
-      "online": true,
-      "dataStale": false,
-      "staleFrom": null,
-      "staleFields": []
-    },
-    {
-      "id": "nofx",
-      "checkedAt": "2026-09-15T21:22:51.104Z",
-      "apiOk": true,
-      "pricingOk": false,
-      "latencyMs": 2781,
-      "error": null,
-      "systemName": null,
-      "version": null,
-      "registerOpen": null,
-      "passwordRegister": null,
-      "checkinEnabled": null,
-      "loginMethods": [],
-      "githubMinAccountAgeDays": null,
-      "quotaPerUnit": null,
-      "inviteeBonusUsd": null,
-      "inviterBonusUsd": null,
-      "topupEnabled": null,
-      "services": [],
-      "announcements": [],
-      "models": [],
-      "modelsSource": "login-required",
-      "defaults": {
-        "claude": null,
-        "openai": null
-      },
-      "signup": {
-        "status": 200,
-        "ok": true,
-        "ms": 3176,
-        "attempts": 1
-      },
-      "mirrors": [],
-      "probeBlocked": false,
-      "online": true,
-      "dataStale": false,
-      "staleFrom": null,
-      "staleFields": []
     }
   ]
 }
