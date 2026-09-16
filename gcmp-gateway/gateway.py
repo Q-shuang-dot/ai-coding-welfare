@@ -441,18 +441,26 @@ def is_masked(k):
 
 
 def public_config(cfg):
-    """给管理页的配置：apiKey 掩码化。/admin/api/config 曾原样吐出全部明文密钥。"""
-    ups = {}
+    """给管理页的配置：apiKey 掩码化；占位 key 的上游不展示，避免泄露模板供应商名。"""
+    keep = []
     for name, up in (cfg.get("upstreams") or {}).items():
+        key = (up.get("apiKey") or "").strip() if isinstance(up, dict) else ""
+        if key in ("sk-REPLACE_ME", "REPLACE_ME", ""):
+            continue
         u = dict(up)
-        if u.get("apiKey"):
-            u["apiKey"] = mask_key(u["apiKey"])
-        ups[name] = u
+        u["apiKey"] = mask_key(u.get("apiKey", ""))
+        keep.append((name, u))
+    ups = {}
+    for idx, (name, u) in enumerate(keep, start=1):
+        ups[f"{idx:02d}_{name}"] = u
     out = {**cfg, "upstreams": ups}
     acc = dict(cfg.get("access") or {})
     if acc.get("apiKey"):
         acc["apiKey"] = mask_key(acc["apiKey"])
     out["access"] = acc
+    if not keep:
+        out["models"] = []
+        out["skills"] = []
     return out
 
 
@@ -472,7 +480,7 @@ def unmask_keys(new_cfg, old_cfg):
 
 def parse_host(raw):
     h = (raw or "").strip()
-    if h.startswith("["):                       # [::1]:15900
+    if h.startswith("["):                       # [::1]:15800
         end = h.find("]")
         return h[1:end].lower() if end > 0 else ""
     return h.split(":")[0].lower()
@@ -1911,7 +1919,7 @@ class Handler(BaseHTTPRequestHandler):
             return True
         self._json(403, {"ok": False, "error":
                          "拒绝该 Host，请用 http://127.0.0.1:%s/admin/ 访问"
-                         % (cfg.get("listen", {}).get("port", 15900))})
+                         % (cfg.get("listen", {}).get("port", 15800))})
         return False
 
     def _serve_file(self, relpath, content_type):
@@ -1992,7 +2000,12 @@ class Handler(BaseHTTPRequestHandler):
                 data.append({"id": alias_id, "object": "model", "created": now,
                              "owned_by": "gcmp-alias"})
             self._json(200, {"object": "list", "data": data})
-        elif path in ("/admin", "/admin/"):
+        if path in ("/", ""):
+            self.send_response(302)
+            self.send_header("Location", "/admin/")
+            self.end_headers()
+            return
+        if path in ("/admin", "/admin/"):
             try:
                 with open(ADMIN_HTML, "rb") as f:
                     data = f.read()
@@ -2013,10 +2026,12 @@ class Handler(BaseHTTPRequestHandler):
                 breaker = {k: {"fails": v["fails"], "reason": v.get("reason", ""),
                                "cooldown_left": max(0, round(v.get("open_until", 0) - now))}
                            for k, v in BREAK.items()}
-            self._json(200, {"config": public_config(cfg), "sticky": sticky, "health": health,
+            public = public_config(cfg)
+            public["models"] = []
+            self._json(200, {"config": public, "sticky": sticky, "health": health,
                              "logs": RECENT_LOGS[-80:], "bridge": bridge_status(),
                              "breaker": breaker, "stats": stats_snapshot(),
-                             "skills": skills_snapshot(),
+                             "skills": [],
                              "lanIps": lan_ips(),
                              "listenHost": (cfg.get("listen") or {}).get("host", "127.0.0.1")})
         elif path == "/admin/api/health":
@@ -2270,7 +2285,7 @@ class Handler(BaseHTTPRequestHandler):
         cfg = load_config()
         acc = cfg.get("access") or {}
         key = acc.get("apiKey", "")
-        port = int((cfg.get("listen") or {}).get("port") or 15900)
+        port = int((cfg.get("listen") or {}).get("port") or 15800)
         base_url = f"http://127.0.0.1:{port}/v1"
         # 读请求体可选 model；未指定时挑健康模型（避开 claude 系全挂的情况）
         try:
@@ -2470,7 +2485,7 @@ class Handler(BaseHTTPRequestHandler):
                 "id": gw_id,
                 "name": m.get("name", model_id),
                 "provider": "gateway",
-                "baseUrl": "http://127.0.0.1:15900/v1",
+                "baseUrl": "http://127.0.0.1:15800/v1",
                 "model": model_id,
                 "sdkMode": "openai-sse",
                 "proxy": "noproxy",
@@ -3075,7 +3090,7 @@ class Handler(BaseHTTPRequestHandler):
 def main():
     cfg = load_config()
     host = cfg.get("listen", {}).get("host", "127.0.0.1")
-    port = int(cfg.get("listen", {}).get("port", 15900))
+    port = int(cfg.get("listen", {}).get("port", 15800))
     srv = ThreadingHTTPServer((host, port), Handler)
     srv.daemon_threads = True
     print(f"GCMP 聚合网关 http://{host}:{port}  (代理={cfg.get('proxy') or '无'})", flush=True)

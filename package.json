@@ -15,6 +15,8 @@
     "check": "node scripts/check.mjs",
     "notify": "node scripts/notify.mjs",
     "test": "node scripts/test.mjs",
+    "gateway:start": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/start-gateway.ps1",
+    "gateway:stop": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/stop-gateway.ps1",
     "all": "npm test && npm run refresh && npm run history && npm run build && npm run check"
   },
   "keywords": [

@@ -1,7 +1,7 @@
 {
   "listen": {
     "host": "127.0.0.1",
-    "port": 15900
+    "port": 15800
   },
   "access": {
     "enabled": true,
@@ -403,7 +403,7 @@
     }
   ],
   "bridge": {
-    "enabled": true,
+    "enabled": false,
     "script": "codex-bridge\\bridge.py",
     "port": 15731
   }

@@ -20,20 +20,11 @@ start-gateway.bat
 
 启动后：
 
-- 网关地址 `http://127.0.0.1:15900/v1`
-- 管理页面 `http://127.0.0.1:15900/admin/`
-- 学习中心 `http://127.0.0.1:15900/learn/`
+- 网关地址 `http://127.0.0.1:15800/v1`
+- 管理页面 `http://127.0.0.1:15800/admin/`
 - 停止：`stop-gateway.bat`
 
 也可以直接运行 `python gateway.py`（前台，能看到实时日志）。
-
-## 子项目 codex-bridge
-
-`codex-bridge/` 是 sharedchat 上游的适配层。sharedchat 只认真实的 codex 客户端，没法直接发 HTTP，所以由它调用本地 `codex.exe` 并把输出翻译成 OpenAI 格式，监听 `http://127.0.0.1:15731/v1`。
-
-`gpt-5.6` 的第三条路由（sharedchat 兜底）依赖它。不启动的话前两条路由仍然能用，只是少一层兜底。详见 [codex-bridge/README.md](codex-bridge/README.md)。
-
-网关会按 `config.json` 的 `bridge.enabled` 决定是否在启动时自动把它拉起来，也可以在管理页的「codex 桥接」区手动开关。
 
 ## 客户端配置（VS Code GCMP）
 
@@ -44,7 +35,7 @@ start-gateway.bat
   "id": "gw-opus-5",
   "name": "Opus-5 (Gateway)",
   "provider": "gateway",
-  "baseUrl": "http://127.0.0.1:15900/v1",
+  "baseUrl": "http://127.0.0.1:15800/v1",
   "model": "opus-5",
   "sdkMode": "openai-sse",
   "proxy": "noproxy"
@@ -57,7 +48,7 @@ start-gateway.bat
 
 ```jsonc
 {
-  "listen": { "host": "127.0.0.1", "port": 15900 },
+  "listen": { "host": "127.0.0.1", "port": 15800 },
   "proxy": "http://127.0.0.1:7897",     // 上游默认走的代理，null 表示直连
   "timeouts": { "connect": 25, "open": 90, "read": 300 },
   "health": { "interval": 30 },          // 后台健康检查周期（秒），0 关闭
@@ -128,23 +119,10 @@ start-gateway.bat
 - 审计会真实消耗配额。想先做零成本排查，可以只比对各上游 `/models` 返回的模型清单与 `route` 里的模型名——`GET /models` 各家都免费，能查出「模型已下架」「密钥失效」「上游欠费」这三类死路由，剩下的才交给深度审计
 - 模型卡片的「粘性上游」勾选框对应 `sticky` 字段，取消勾选后该模型严格按路由表顺序尝试（成本敏感的模型建议关掉）
 - 路由表「优先」列的 ★ 表示当前粘性上游
-- 「codex 桥接」区：开关控制是否随网关自动启动（写入 `config.json` 的 `bridge.enabled`），旁边的 ▶/■ 可即时启停。徽标显示实时运行状态；如果桥是外部手动启的，网关的「停止」管不到它，需用 `codex-bridge/stop-bridge.bat`
 - 「调用统计」分区按路由列出调用次数、成功率、延迟、token 用量、**缓存命中率**和**累计花费**。花费按上游的 `pricing` 换算，没配价格的显示「未知」而不是猜一个数
 - 底部显示最近的网关日志
 
 保存配置时会自动备份成 `config.json.bak`。
-
-## 学习中心
-
-`http://127.0.0.1:15900/learn/`（管理页顶栏也有「📚 学习」入口）。纯前端页面，无第三方依赖：
-
-- **计划**：六周 AI 工程学习路线（基础 → RAG → 评估 → Agent → 简历），每项任务可打勾，进度条自动统计，进度存 `localStorage`
-- **知识库**：70+ 张知识点卡片（网关/Agent/RAG/安全/评测…），支持搜索、分类筛选、掌握度标记（不会/学习中/已掌握）
-- **面试**：STAR 项目故事、24 条高频面试 Q&A、JD 关键词对照表
-- **抽卡**：随机出题自测，优先抽未掌握的知识点，答完标记掌握度
-- 顶栏 ⬇/⬆ 可导出/导入进度 JSON 备份
-
-进度同时会同步到网关的 `learn-progress.json`（`/learn/api/progress`），换浏览器或清 localStorage 后能恢复。本机直接双击 `learn.html` 也能打开（只是没有云端进度同步）。
 
 ## 故障转移行为
 

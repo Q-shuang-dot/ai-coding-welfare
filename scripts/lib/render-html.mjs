@@ -56,13 +56,13 @@ function siteCard(site, snap) {
   const local = site.panel === 'local';
 
   const credit = local
-    ? `自托管 / ${site.setup?.port ?? '15900'}`
+    ? `自托管 / ${site.setup?.port ?? '15800'}`
     : p.firstDay != null
       ? `首日 <b${shut ? ' class="struck"' : ''}>${usd(p.firstDay, p.approx, p.unit)}</b>${p.daily != null ? ` / 每天 ${usd(p.daily, p.approx, p.unit)}` : ''}`
       : snap?.checkinEnabled
         ? '每日签到'
         : snap?.checkinEnabled === false
-          ? '无签到'
+          ? '无签到'          npx serve docs -p 8080
           : '额度未知';
 
   const meta = [

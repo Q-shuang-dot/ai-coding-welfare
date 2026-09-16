@@ -102,7 +102,7 @@
         "unit": "local"
       },
       "signupUrl": "https://github.com/Q-shuang-dot/gcmp-welfare-temp",
-      "homeUrl": "http://127.0.0.1:15900/admin",
+      "homeUrl": "http://127.0.0.1:15800/admin",
       "docsUrl": "https://github.com/Q-shuang-dot/gcmp-welfare-temp",
       "statusApi": null,
       "pricingApi": null,
@@ -133,10 +133,10 @@
         "steps": [
           "clone 仓库并把 config.example.json 复制为 config.json",
           "按你的上游平台填入 apiKey，必要时按站点说明补 User-Agent / chatPath / protocol 等字段",
-          "运行网关后浏览器打开 http://127.0.0.1:15900/admin 确认模型与路由状态",
-          "客户端 Base URL 填 http://127.0.0.1:15900/v1，模型名填逻辑模型名"
+          "运行网关后浏览器打开 http://127.0.0.1:15800/admin 确认模型与路由状态",
+          "客户端 Base URL 填 http://127.0.0.1:15800/v1，模型名填逻辑模型名"
         ],
-        "dashboardUrl": "http://127.0.0.1:15900/admin"
+        "dashboardUrl": "http://127.0.0.1:15800/admin"
       },
       "modelsNote": "本页收录 7 个逻辑模型：opus-5 / opus-4-8 / sonnet-5 / gpt-5.6 / glm-5.3 / deepseek / cheap；实际命中哪个上游由网关按路由与健康度决定。",
       "register": {
@@ -150,34 +150,34 @@
       },
       "earnMore": [],
       "caveats": [
-        "服务只监听 127.0.0.1:15900，不会自动暴露到公网；想让局域网设备使用需要自行代理或改监听地址",
+        "服务只监听 127.0.0.1:15800，不会自动暴露到公网；想让局域网设备使用需要自行代理或改监听地址",
         "网关仅转发请求，模型质量、可用性与额度来自你配置的上游账号，不是这个仓库本身提供的",
         "config.json 里若配置了中文上游名，需要网关对 HTTP 头做 latin-1 安全转义，旧版本直接写中文头会被 latin-1 编码打断"
       ],
       "community": [
         "仓库: https://github.com/Q-shuang-dot/gcmp-welfare-temp",
-        "管理页: http://127.0.0.1:15900/admin"
+        "管理页: http://127.0.0.1:15800/admin"
       ],
       "configBlocks": {
         "vscode": {
           "title": "VS Code GCMP",
           "language": "json",
-          "code": "{\n  \"gcmp.compatibleModels\": [\n    \"opus-5\",\n    \"opus-4-8\",\n    \"sonnet-5\",\n    \"gpt-5.6\",\n    \"glm-5.3\",\n    \"deepseek\",\n    \"cheap\"\n  ],\n  \"gcmp.baseUrl\": \"http://127.0.0.1:15900/v1\"\n}"
+          "code": "{\n  \"gcmp.compatibleModels\": [\n    \"opus-5\",\n    \"opus-4-8\",\n    \"sonnet-5\",\n    \"gpt-5.6\",\n    \"glm-5.3\",\n    \"deepseek\",\n    \"cheap\"\n  ],\n  \"gcmp.baseUrl\": \"http://127.0.0.1:15800/v1\"\n}"
         },
         "claudeCode": {
           "title": "Claude Code",
           "language": "bash",
-          "code": "# macOS / Linux\nexport ANTHROPIC_BASE_URL=http://127.0.0.1:15900\nexport ANTHROPIC_AUTH_TOKEN=你的 GCMP Key\nexport ANTHROPIC_MODEL=glm-5.3\nclaude"
+          "code": "# macOS / Linux\nexport ANTHROPIC_BASE_URL=http://127.0.0.1:15800\nexport ANTHROPIC_AUTH_TOKEN=你的 GCMP Key\nexport ANTHROPIC_MODEL=glm-5.3\nclaude"
         },
         "codex": {
           "title": "Codex CLI",
           "language": "toml",
-          "code": "model = \"gpt-5.6\"\nmodel_provider = \"gcmp\"\n\n[model_providers.gcmp]\nname = \"GCMP Gateway\"\nbase_url = \"http://127.0.0.1:15900/v1\"\nenv_key = \"GCMP_API_KEY\"\nwire_api = \"responses\""
+          "code": "model = \"gpt-5.6\"\nmodel_provider = \"gcmp\"\n\n[model_providers.gcmp]\nname = \"GCMP Gateway\"\nbase_url = \"http://127.0.0.1:15800/v1\"\nenv_key = \"GCMP_API_KEY\"\nwire_api = \"responses\""
         },
         "openaiSdk": {
           "title": "OpenAI SDK",
           "language": "python",
-          "code": "from openai import OpenAI\n\nclient = OpenAI(\n    api_key=\"你的 GCMP Key\",\n    base_url=\"http://127.0.0.1:15900/v1\",\n)\nresp = client.chat.completions.create(\n    model=\"glm-5.3\",\n    messages=[{\"role\": \"user\", \"content\": \"ping\"}],\n)\nprint(resp.choices[0].message.content)"
+          "code": "from openai import OpenAI\n\nclient = OpenAI(\n    api_key=\"你的 GCMP Key\",\n    base_url=\"http://127.0.0.1:15800/v1\",\n)\nresp = client.chat.completions.create(\n    model=\"glm-5.3\",\n    messages=[{\"role\": \"user\", \"content\": \"ping\"}],\n)\nprint(resp.choices[0].message.content)"
         }
       }
     },
