@@ -14,14 +14,7 @@
       "claude-opus-5 API",
       "New API",
       "AgentRouter",
-      "RawChat",
-      "Matrix 统一网关",
       "TaBiAI",
-      "GoRouter",
-      "KKtoken",
-      "AnyRouter",
-      "CheapCodex",
-      "NOFX 积分",
       "GPT-5.6 Sol 中转",
       "claude-opus-5 按次计费"
     ],
@@ -40,7 +33,7 @@
         "dailyCheckin": 25,
         "approx": false
       },
-      "signupUrl": "https://agentrouter.org/register?aff=szt3",
+      "signupUrl": "https://agentrouter.org/register?aff=aibw",
       "homeUrl": "https://agentrouter.org",
       "docsUrl": "https://agentrouter.org/docs/index.html",
       "statusApi": "https://agentrouter.org/api/status",
@@ -200,8 +193,8 @@
         "approx": false,
         "unit": "site-usd"
       },
-      "signupUrl": "https://docode.cc/register?aff=zMRe",
-      "inviteCode": "zMRe",
+      "signupUrl": "https://docode.cc/register?aff=1Qof",
+      "inviteCode": "1Qof",
       "homeUrl": "https://docode.cc",
       "docsUrl": null,
       "statusApi": "https://docode.cc/api/status",
@@ -272,7 +265,7 @@
         "dailyCheckin": 22,
         "approx": true
       },
-      "signupUrl": "https://api.justwoker.icu/sign-up?aff=VTrz",
+      "signupUrl": "https://api.justwoker.icu/register?aff=OIWh",
       "homeUrl": "https://api.justwoker.icu",
       "docsUrl": "https://api.justwoker.icu/dashboard/overview",
       "statusApi": "https://api.justwoker.icu/api/status",
@@ -328,7 +321,7 @@
         "dailyCheckin": 20,
         "approx": false
       },
-      "signupUrl": "https://kktoken.cc/sign-up?aff=MzG9",
+      "signupUrl": "https://kktoken.cc/sign-up?aff=JMQC",
       "homeUrl": "https://kktoken.cc",
       "docsUrl": "https://kktoken.cc/dashboard/overview",
       "statusApi": "https://kktoken.cc/api/status",
@@ -377,63 +370,6 @@
       "community": []
     },
     {
-      "id": "gorouter",
-      "name": "GoRouter",
-      "subtitle": "New API 中转站 · 注册送 $50，本页邀请码再加 $20，按次计费里最便宜的一档",
-      "recommended": false,
-      "credits": {
-        "signup": 50,
-        "invite": 20,
-        "dailyCheckin": null,
-        "approx": false
-      },
-      "signupUrl": "https://gorouter.app/sign-up?aff=PZDx",
-      "homeUrl": "https://gorouter.app",
-      "docsUrl": null,
-      "statusApi": "https://gorouter.app/api/status",
-      "pricingApi": "https://gorouter.app/api/pricing",
-      "mirrors": [],
-      "tags": [
-        "New API",
-        "免费额度",
-        "Claude Code",
-        "Anthropic 兼容",
-        "按次计费"
-      ],
-      "highlights": [
-        "新用户注册送 $50，从本页邀请链接进入再加 $20，首日 $70（2026-08-11 实测到账）",
-        "按次计费里单价最低的一档：claude-opus-5 每次 $0.3，opus-4-8 每次 $0.2，首日 $70 够跑两百多次",
-        "Anthropic 与 OpenAI 两种协议都开着，Claude Code 填个 Base URL 就能直连",
-        "面板开着每日签到，可以持续领额度"
-      ],
-      "endpoints": {
-        "anthropic": "https://gorouter.app",
-        "openai": "https://gorouter.app/v1"
-      },
-      "register": {
-        "methods": [
-          "GitHub OAuth"
-        ],
-        "requirements": [
-          "务必从本页邀请链接进入注册（带 ?aff=PZDx），$20 在注册那一刻结算，事后补不上",
-          "已关闭账号密码注册，只能用 GitHub 授权；注册完成后可以再设密码用于登录",
-          "注册页有 Cloudflare Turnstile 人机校验，需要能正常加载 Cloudflare 脚本"
-        ]
-      },
-      "earnMore": [
-        "面板已开启每日签到，登录后台点签到即可（每次给多少站点没公示，以站内为准）",
-        "邀请他人注册：每成功邀请一人到账 $40（2026-08-11 实测两笔；站点公开接口没公示这个数字）"
-      ],
-      "caveats": [
-        "按次计费而不是按 token：claude-opus-5 / -thinking 每次 $0.3，claude-opus-4-8 系每次 $0.2。首日 $70 约等于 233 次 opus-5 请求，Claude Code 里一问一答就算一次，与按 token 的站没法直接比",
-        "只有 Claude Opus 四个模型，没有 GPT / Gemini；OpenAI 兼容协议虽然开着，但能填的模型名只有 claude-*（下面 Codex CLI 示例就是这么配的），想拿它跑 GPT / Codex 原生模型是不行的",
-        "只有一个 default 分组，没有 vip 分组可切，遇到上游拥塞只能等",
-        "站点支持在线充值（站内公示 $1 ≈ ¥7.3，Stripe 通道 ¥8），是中转站不是纯公益站，免费额度用完要付费才能续",
-        "站点前面挂着 Cloudflare，机房 IP 容易被拦，本页的自动探测偶尔会标「被 WAF 拦下」，不代表站点对你不可用"
-      ],
-      "community": []
-    },
-    {
       "id": "matrix",
       "name": "Matrix",
       "subtitle": "统一 API 网关 + 开源应用商店 · 邀请注册送 600 积分，实名再送 2000",
@@ -446,7 +382,7 @@
         "approx": false,
         "unit": "point"
       },
-      "signupUrl": "https://matrix.mzsjai.com/login?redirect=%2Fapp%2Fgrowth%3FinviteCode%3DMXMRFO52KD2_",
+      "signupUrl": "https://matrix.mzsjai.com/login?redirect=%2Fapp%2Fgrowth%3FinviteCode%3DMX3CDVGATLJW",
       "homeUrl": "https://matrix.mzsjai.com",
       "docsUrl": "https://matrix.mzsjai.com/docs/quickstart",
       "statusApi": "https://matrix.mzsjai.com/api/health",
@@ -513,6 +449,78 @@
       ]
     },
     {
+      "id": "seekai",
+      "name": "SeekAi",
+      "subtitle": "New API 中转站 · 注册送额度，签到与邀请持续续命，支持 Claude Code / Codex / Cursor",
+      "recommended": false,
+      "credits": {
+        "signup": null,
+        "invite": null,
+        "dailyCheckin": null,
+        "approx": false
+      },
+      "signupUrl": "https://seekai.cc/sign-up?aff=dDJy",
+      "inviteCode": "dDJy",
+      "homeUrl": "https://seekai.cc",
+      "docsUrl": "https://hcnote.cn/",
+      "statusApi": "https://seekai.cc/api/status",
+      "pricingApi": null,
+      "mirrors": [
+        {
+          "label": "API 域名",
+          "homeUrl": "https://api.hcnsec.cn",
+          "signupUrl": "https://api.hcnsec.cn/sign-up?aff=3J8z"
+        }
+      ],
+      "tags": [
+        "New API",
+        "公益站",
+        "免费额度",
+        "Claude Code",
+        "Codex",
+        "OpenAI 兼容"
+      ],
+      "highlights": [
+        "新用户注册即送可用余额，站方称默认额度足够免费用半年，邀请人与被邀请人都有奖励",
+        "每日签到已开启，登录后台点签到即可持续续命",
+        "支持邮箱密码、GitHub、Telegram 三种登录方式，注册需要邮箱验证码并通过 Cloudflare Turnstile 人机校验",
+        "OpenAI 兼容协议直连 Claude Code / Codex / Cursor / Cherry Studio 等主流客户端"
+      ],
+      "endpoints": {
+        "anthropic": null,
+        "openai": "https://seekai.cc/v1"
+      },
+      "modelsNote": "模型清单与价格需登录后在控制台「模型广场」查看，公开接口不暴露具体模型与定价；站内公告提到 Claude / DeepSeek / GPT / Gemini / Step 等多类模型。",
+      "register": {
+        "methods": [
+          "邮箱 + 密码",
+          "GitHub OAuth",
+          "Telegram OAuth"
+        ],
+        "requirements": [
+          "务必从本页邀请链接进入注册（带 ?aff=dDJy），邀请额度才会发放",
+          "注册需要邮箱验证码，并经过 Cloudflare Turnstile 人机校验",
+          "新用户注册即送默认余额，同时可通过邀请、签到、任务继续获取额度"
+        ]
+      },
+      "earnMore": [
+        "每日签到领额度（登录后台点签到）",
+        "邀请他人注册，邀请人与被邀请者都能获得额度",
+        "关注站内公告，不定期开放任务与活动兑换码"
+      ],
+      "caveats": [
+        "免费用户高峰时段会限速或遇到模型不可用，站方建议深夜或凌晨挂长任务，白天优先使用 step / auto / qwen3.6 等小模型",
+        "额度是站内余额，公开接口没有美元换算，本页只做定性描述，不做美元折算",
+        "模型可用性与价格会随上游调整，以控制台实时页面为准",
+        "站点备案主体为新疆幻城网安科技，运营主体与同域名下的建站业务共用同一备案主体"
+      ],
+      "community": [
+        "Telegram: https://t.me/ModelFreeApi",
+        "邮箱: yangyuqi@xjhcit.cn",
+        "QQ群: 94355225"
+      ]
+    },
+    {
       "id": "tabitoken",
       "name": "TaBiAI",
       "subtitle": "New API 中转站 · 注册送 $100，本页邀请码再加 $20，专供 Claude Opus",
@@ -523,7 +531,7 @@
         "dailyCheckin": null,
         "approx": false
       },
-      "signupUrl": "https://tabitoken.com/sign-up?aff=EQIT",
+      "signupUrl": "https://tabitoken.com/sign-up?aff=AfA4",
       "homeUrl": "https://tabitoken.com",
       "docsUrl": null,
       "statusApi": "https://tabitoken.com/api/status",
@@ -566,271 +574,6 @@
         "站点支持在线充值（站内公示 $1 ≈ ¥7.3，Stripe 通道 ¥8），是中转站不是纯公益站，免费额度用完要付费才能续",
         "模型分 default / vip 两个分组，同一模型在不同分组的可用性可能不同，以站内为准",
         "站点前面挂着 Cloudflare，机房 IP 容易被拦，本页的自动探测偶尔会标「被 WAF 拦下」，不代表站点对你不可用"
-      ],
-      "community": []
-    },
-    {
-      "id": "rawchat",
-      "name": "RawChat 公益站",
-      "subtitle": "Codex 公益站 · 每日 $50 额度池，0 点自动重置",
-      "recommended": false,
-      "panel": "vibecode",
-      "credits": {
-        "signup": null,
-        "invite": null,
-        "dailyCheckin": null,
-        "dailyQuota": 50,
-        "approx": false
-      },
-      "signupUrl": "https://new.sharedchat.cc/list/#/register?i=MaVP1",
-      "homeUrl": "https://new.sharedchat.cc/list/",
-      "docsUrl": null,
-      "statusApi": "https://new.sharedchat.cc/frontend-api/getConfig",
-      "pricingApi": null,
-      "mirrors": [],
-      "tags": [
-        "公益站",
-        "Codex",
-        "每日重置",
-        "免费额度"
-      ],
-      "highlights": [
-        "每日 $50 额度池，每天 0 点自动重置，不用签到、不用充值",
-        "专供 Codex：后台「使用教程」直接复制一键安装脚本，自动装依赖并写好环境变量",
-        "邮箱注册即可，没有 GitHub 账号年龄门槛，也没有人机校验",
-        "按额度计费 + 3 小时滚动窗口，日常 vibe coding 基本够用"
-      ],
-      "endpoints": {
-        "anthropic": null,
-        "openai": null
-      },
-      "setup": {
-        "client": "Codex CLI",
-        "note": "Base URL 与 API Key 登录后才由后台下发，本页不做猜测；控制台「使用教程」里选 Codex 就能复制对应平台的一键安装脚本。",
-        "steps": [
-          "从本页邀请链接注册并登录 → 控制台「当前套餐」点一次『领取 Codex 权益』",
-          "打开「使用教程」→ 选择 Codex → 复制对应平台（macOS / Linux / Windows）的安装脚本",
-          "在终端执行脚本，它会装好依赖并写入 Base URL / Key 等环境变量，重开终端后直接跑 codex"
-        ],
-        "dashboardUrl": "https://new.sharedchat.cc/list/#/vibe-code/dashboard"
-      },
-      "modelsNote": "该站走 Codex 官方客户端 + 上游号池，不单独公示模型清单与价格，用量直接从每日 $50 的额度池里扣。",
-      "register": {
-        "methods": [
-          "邮箱注册"
-        ],
-        "requirements": [
-          "务必从本页邀请链接进入注册（带 ?i=MaVP1），否则拿不到邀请奖励",
-          "目前只开放邮箱注册，没有 GitHub / Google 登录入口",
-          "注册登录后要在控制台点一次「领取 Codex 权益」，每日额度才会生效"
-        ]
-      },
-      "earnMore": [
-        "每天 0 点额度自动重置，不需要签到",
-        "后台「邀请奖励」邀请他人注册可拿额外奖励"
-      ],
-      "caveats": [
-        "$50 是每日重置的额度池，当天用不完会清零，不会累积到第二天",
-        "额度按 3 小时滚动窗口限速，且全站共用上游号池，高峰期会显示「已触发限速」，等窗口刷新即可",
-        "当前只开放 Codex 方向，要用 Claude Code 请走本页其它站点",
-        "站内挂着付费站推广位，注意区分免费公益入口与付费站入口"
-      ],
-      "community": []
-    },
-    {
-      "id": "anyrouter",
-      "name": "AnyRouter",
-      "subtitle": "New API 中转站 · 注册送 $75，本页邀请码再加 $50，Anthropic 与 OpenAI 两条原生路由都开着",
-      "recommended": false,
-      "credits": {
-        "signup": 75,
-        "invite": 50,
-        "dailyCheckin": 25,
-        "approx": false
-      },
-      "signupUrl": "https://anyrouter.top/register?aff=Z24N",
-      "homeUrl": "https://anyrouter.top",
-      "docsUrl": null,
-      "statusApi": "https://anyrouter.top/api/status",
-      "pricingApi": null,
-      "mirrors": [],
-      "tags": [
-        "New API",
-        "免费额度",
-        "签到",
-        "Claude Code",
-        "按 token 计费",
-        "Anthropic 兼容",
-        "OpenAI 兼容"
-      ],
-      "highlights": [
-        "注册送 $75，从本页邀请链接进入再加 $50，每日签到再领 $25，首日合计 $150",
-        "Anthropic 与 OpenAI 两条原生路由都开着：未鉴权 POST /v1/messages 与 /v1/chat/completions 都由 New API 亲自回「无效的令牌」，Claude Code 与 Codex 填个 Base URL 就能直连",
-        "站内公示按 token 计价：输入 $5 / 百万 tokens、输出 $25 / 百万 tokens，按量扣不是按次，短问答很省",
-        "站内公示支持 GPT-5.6 Sol；GitHub 账号不满 5 年的可以改用 LinuxDO 登录，绕开年龄门槛"
-      ],
-      "endpoints": {
-        "anthropic": "https://anyrouter.top",
-        "openai": "https://anyrouter.top/v1"
-      },
-      "modelsNote": "整站（含 `/api/status`、`/api/pricing`、robots.txt 与注册页）都挂在 JS 人机挑战后面，返回的是 `var arg1=...` 的挑战页而不是 JSON，公开接口读不到模型清单，本页不列模型表。站内公示的计价口径是输入 $5 / 百万 tokens、输出 $25 / 百万 tokens，并公示支持 GPT-5.6 Sol，注册后在控制台「模型价格」页确认实际清单与倍率。",
-      "register": {
-        "methods": [
-          "GitHub OAuth",
-          "LinuxDO OAuth"
-        ],
-        "requirements": [
-          "务必从本页邀请链接进入注册（带 ?aff=Z24N），$50 在注册那一刻结算，事后补不上",
-          "GitHub 账号注册满 5 年才允许绑定——门槛比本页其它站高得多，小号一律被拒",
-          "GitHub 不满 5 年就改走 LinuxDO 登录，这条路没有账号年龄要求",
-          "签到领的 $25 要退出再重新登录一次才会刷新到额度上"
-        ]
-      },
-      "earnMore": [
-        "每日签到领 $25（登录后台点签到，之后退出重新登录一次刷新额度）",
-        "邀请他人注册也有奖励，金额站点公开接口读不到，登录后台「邀请」页确认"
-      ],
-      "caveats": [
-        "整站挂着 JS 人机挑战，连 robots.txt 与注册页都返回挑战页，本页的自动探测读不到它的 /api/status——所以上面「实时数据」一栏除了接口延迟基本是空的，站名、面板版本、模型数都拿不到。那是我们读不到，不代表你打不开",
-        "额度数字（注册 $75 / 邀请 $50 / 签到 $25）与 $5 / $25 的价格都是站内公示口径，公开接口无法核对，进后台自己确认一遍再算账",
-        "GitHub 满 5 年这条门槛卡掉的人不少，注册前先看一眼自己账号的创建年份，不够就走 LinuxDO",
-        "只有 /v1/* 的中转接口不吃挑战，网页端偶发挑战失败时换个浏览器或稍后再试"
-      ],
-      "community": []
-    },
-    {
-      "id": "cheapcodex",
-      "name": "CheapCodex",
-      "subtitle": "自研 AI 网关 · 本页邀请码送 $20，每日签到再 $20，OpenAI / Anthropic / Codex 三条协议一把 Key",
-      "recommended": false,
-      "panel": "relay",
-      "credits": {
-        "signup": null,
-        "invite": 20,
-        "dailyCheckin": 20,
-        "approx": false
-      },
-      "signupUrl": "https://api.cheapcodex.online/register?aff=U7SSQZSDB36S",
-      "homeUrl": "https://api.cheapcodex.online",
-      "docsUrl": null,
-      "statusApi": "https://api.cheapcodex.online/v1/models",
-      "pricingApi": null,
-      "mirrors": [],
-      "tags": [
-        "免费额度",
-        "签到",
-        "Codex",
-        "Claude Code",
-        "OpenAI 兼容",
-        "Anthropic 兼容"
-      ],
-      "highlights": [
-        "从本页邀请链接注册送 $20，每日签到再领 $20，首日合计 $40",
-        "三条原生路由都开着：带无效 key 探 /v1/chat/completions、/v1/messages、/v1/responses 一律回 INVALID_API_KEY，而 /v1/bogus 回 404 —— Claude Code 与 Codex CLI 都能直连",
-        "/v1/responses 在线意味着 Codex CLI 能走它原生的 responses 协议，不用退回 chat",
-        "鉴权头收三种：Authorization: Bearer、x-api-key、x-goog-api-key —— 站点自己的 401 报错里列的，OpenAI / Anthropic / Gemini 三家客户端的习惯都照顾到了",
-        "站内公示可以用 GPT-5.6 Sol"
-      ],
-      "endpoints": {
-        "anthropic": "https://api.cheapcodex.online",
-        "openai": "https://api.cheapcodex.online/v1"
-      },
-      "modelsNote": "这个站的面板接口在它自己的 robots.txt 里是 `Disallow: /api`，本页按规矩不碰，所以拿不到模型清单与单价，只探 robots 放行的 `/v1/models`（不带 key 必然回 `API_KEY_REQUIRED`，能回就说明网关活着）。站内公示可以用 GPT-5.6 Sol，完整清单与价格注册后在控制台确认。",
-      "register": {
-        "methods": [
-          "邮箱注册"
-        ],
-        "requirements": [
-          "务必从本页邀请链接进入注册（带 ?aff=U7SSQZSDB36S），$20 在注册那一刻结算，事后补不上",
-          "只能用邮箱建号：站点前端自带的公开配置里 github / google / linuxdo / 微信 / 钉钉 / OIDC 的 oauth 开关全是 false，没有第三方登录入口",
-          "注册页的人机校验目前是关的（配了 Turnstile site key 但 turnstile_enabled=false），加载不出 Cloudflare 脚本也能注册"
-        ]
-      },
-      "earnMore": [
-        "每日签到领 $20（登录后台点签到）",
-        "邀请他人注册也有奖励（站点前端配置里 affiliate_enabled=true），金额没公示，登录后台「邀请」页确认"
-      ],
-      "caveats": [
-        "额度数字（邀请 $20 / 签到 $20）与 GPT-5.6 Sol 都是站内公示口径，面板接口 robots 禁爬、本页无法自动核对，进后台自己确认一遍再算账",
-        "上面「实时数据」一栏只有接口延迟：本页只对 /v1/models 做存活探测，站名、面板版本、模型数一概拿不到",
-        "站内挂着付费订阅商品、收单走站外的 pay.ldxp.cn，前端配置里 payment_enabled 目前是 false（站内直充没开）——是付费网关不是纯公益站，免费额度用完要付费才能续",
-        "另一个域名 api.cheapcodex.ccwu.cc 提供同一套应用（.online 的 robots.txt 里声明的 sitemap 就指向它），但邀请码在那边是否同样结算无法从公开接口确认，建议就走本页链接"
-      ],
-      "community": []
-    },
-    {
-      "id": "nofx",
-      "name": "NOFX",
-      "subtitle": "任务制积分站 · 做任务领 API 积分，签到 / Discord / 邀请 / 发推都给分，免密码登录、无需绑卡",
-      "recommended": false,
-      "panel": "relay",
-      "credits": {
-        "signup": null,
-        "invite": 10,
-        "dailyCheckin": 5,
-        "approx": false,
-        "unit": "point"
-      },
-      "signupUrl": "https://nofx.one/zh-CN/sign-in?ref=J369GHY4",
-      "homeUrl": "https://nofx.one/zh-CN",
-      "docsUrl": null,
-      "statusApi": "https://nofx.one/sitemap.xml",
-      "pricingApi": null,
-      "mirrors": [],
-      "tags": [
-        "积分制",
-        "免费额度",
-        "Discord 签到",
-        "Codex",
-        "OpenAI 兼容"
-      ],
-      "highlights": [
-        "从本页邀请链接注册得 10 积分，之后每天签到 +$5 积分，站点自报「第一笔积分，30 秒就能到账」",
-        "积分是靠做任务领的，不是充值买的：加入 Discord +$5、每日签到 +$5、邀请一位好友 +$5（不限每日人数）、在 X 发一条带邀请码的推文过审 +$20",
-        "免密码登录：邮箱 magic link 或 GitHub 授权，站点明确写着「不签发或保存登录密码」，也支持两步验证",
-        "一个 Key 调用主流模型，站内公示可以用 gpt-5.6-sol；据反馈约 5 积分能换 7M tokens 左右",
-        "无需绑卡，注册后立刻能签到领第一笔"
-      ],
-      "endpoints": {
-        "anthropic": null,
-        "openai": null
-      },
-      "setup": {
-        "client": "OpenAI 兼容",
-        "note": "中转地址（Base URL）与 Key 只在登录后的「接入文档」/「API Key」页下发，落地页与 sitemap 都没有，本页不做猜测。",
-        "steps": [
-          "从本页邀请链接注册并登录（输入邮箱收 magic link，或直接用 GitHub 授权）",
-          "进「任务中心」把能领的先领掉：加入 Discord 后在任意频道输入 /verify 填验证码拿 $5，再输入 /checkin 拿当日签到的 $5",
-          "在「API Key」页建一把 Key，「接入文档」页拿当前中转地址，客户端里填 Base URL + Key，模型名到控制台确认"
-        ],
-        "dashboardUrl": "https://nofx.one/zh-CN/tasks"
-      },
-      "modelsNote": "站点公开面只有落地页和法律条款两类页面（sitemap 里就这几条），模型清单、单价与中转地址都在登录后的「接入文档」里，所以本页既不列模型表也不猜 Base URL。计费单位是站内积分，站点界面把它写成「$5 积分」；据反馈约 5 积分换 7M tokens 左右，并公示可以用 gpt-5.6-sol —— 都以站内实际为准。",
-      "register": {
-        "methods": [
-          "邮箱 magic link",
-          "GitHub OAuth"
-        ],
-        "requirements": [
-          "务必从本页邀请链接进入注册（带 ?ref=J369GHY4），邀请关系在注册那一刻绑定，事后补不上",
-          "免密码登录：填邮箱收一条登录链接，或直接用 GitHub 授权；站点隐私条款写明「不签发或保存登录密码」",
-          "签到和 Discord 验证这两笔要在 Discord 里做（/checkin 与 /verify，命令得从弹出列表里选，不能直接粘贴），不进 Discord 就领不到"
-        ]
-      },
-      "earnMore": [
-        "每日签到 +$5 积分（Discord 里输入 /checkin，每日刷新）",
-        "加入 Discord 并用 /verify 验证 +$5 积分（一次性，验证码领取后 30 分钟内有效）",
-        "邀请好友注册，邀请者每人 +$5 积分，不限每日人数",
-        "在 X 发一条带邀请码的推文、上传截图过审 +$20 积分（一次性）",
-        "体验合作 APP 的任务另有积分，由合作方 HMAC 回调自动确认"
-      ],
-      "caveats": [
-        "额度是站内积分，站方没有公开积分与美元的换算，本页按积分原样显示，不折算美元、也不并入跨站的美元合计——站点界面写的「$5 积分」是它自己的单位，别当成 5 美元",
-        "积分有 30 天有效期：从首次奖励入账起算，期间有真实 API 消耗会重新计算 30 天，到期前 7 天 / 1 天有站内和邮件提醒。领了不用会过期，这点和本页其它站不一样",
-        "每日签到「剩余积分超过 $50 时暂停」，攒不到很高，是设计成让你边领边用的",
-        "落地页的 CTA 写「注册领取 $20 积分」，而本页登记的邀请注册是 10 积分——两个口径站点没在公开页面上对齐，进后台看实际到账数",
-        "「分享到 X」那 $20 要发带自己邀请码的推文并上传截图过审，本质是替站点做推广，要不要做自己判断",
-        "站点公开面读不到任何机器可读的状态：robots.txt 禁掉了 /api/ 与控制台各页，本页只探 sitemap.xml 判断站点还活着，所以「实时数据」一栏只有延迟"
       ],
       "community": []
     }

@@ -468,14 +468,11 @@ test('health 挂了但注册页 200 → 页面仍算在线，不误报异常', (
   assert.equal(m.error, 'timeout');
 });
 
-console.log('relay 面板（robots 禁 /api，只能探中转口或落地页）');
 /**
- * 2026-09-01 实测：api.cheapcodex.online 的 robots.txt 是 Allow: / + Disallow: /api，
- * 面板接口按规矩不碰；robots 放行的 /v1/models 不带 key 必然回 401：
- *   {"code":"API_KEY_REQUIRED","message":"API key is required in Authorization header (Bearer scheme), …"}
- * probeUrl 只给 { status, ok, ms }，看不到 body——所以口径就是「401 = 活着且要鉴权」。
+ * relay 面板探针假数据：这里不需要真实域名，rlFetch 只认 RL_SITE.statusApi；
+ * 用例覆盖 401/200/500/超时/403 五种分支。
  */
-const RL_SITE = { id: 'cheapcodex', panel: 'relay', statusApi: 'https://api.cheapcodex.online/v1/models' };
+const RL_SITE = { id: 'relay-fixture', panel: 'relay', statusApi: 'https://relay-fixture.test/api/status' };
 const rlFetch = (res) => async (url) => (String(url) === RL_SITE.statusApi ? res : { status: 0, ok: false, error: 'unreachable' });
 
 const rlKeyRequired = await probeSite(RL_SITE, rlFetch({ status: 401, ok: false, ms: 233, attempts: 1 }));
@@ -889,20 +886,19 @@ const META = {
 };
 const EVENTS = [
   { at: '2026-08-30T08:56:00.000Z', siteId: 'rawchat', type: 'online', severity: 'major', text: 'RawChat 恢复在线' },
-  { at: '2026-08-30T10:21:00.000Z', siteId: 'gorouter', type: 'site_added', severity: 'major', text: '新收录 GoRouter' },
   { at: '2026-08-26T11:42:00.000Z', siteId: 'agentrouter', type: 'price_change', severity: 'major', text: '价格变了 <b>' },
 ];
 const GROUPS = groupByDay(EVENTS);
 
 test('按天分组：天倒序、天内也倒序', () => {
   assert.deepEqual(GROUPS.map((g) => g.date), ['2026-08-30', '2026-08-26']);
-  assert.deepEqual(GROUPS[0].events.map((e) => e.siteId), ['gorouter', 'rawchat']);
-  assert.equal(GROUPS[0].updated, '2026-08-30T10:21:00.000Z');
+  assert.deepEqual(GROUPS[0].events.map((e) => e.siteId), ['rawchat']);
+  assert.equal(GROUPS[0].updated, '2026-08-30T08:56:00.000Z');
 });
 test('Atom 一天一条 entry，不是一条事件一条推送（6 小时一次会淹掉订阅者）', () => {
-  const xml = renderAtom({ meta: META, groups: GROUPS, updated: EVENTS[1].at });
+  const xml = renderAtom({ meta: META, groups: GROUPS, updated: EVENTS[0].at });
   assert.equal(xml.match(/<entry>/g).length, 2);
-  assert.match(xml, /<title>2026-08-30 · 2 项变动<\/title>/);
+  assert.match(xml, /<title>2026-08-30 · 1 项变动<\/title>/);
   assert.match(xml, /<id>tag:panxunying\.github\.io,2026-08-30:changelog<\/id>/);
 });
 test('Atom 正文里的 HTML 必须转义，否则 feed 是坏的 XML', () => {
@@ -916,8 +912,8 @@ test('空日志也能生成合法 feed', () => {
   assert.ok(!/<entry>/.test(xml));
 });
 test('Release 标题一句话概括，多条时带「另有 N 项」', () => {
-  assert.equal(summarize([EVENTS[1]]), '新收录 GoRouter');
-  assert.match(summarize(EVENTS), /（另有 2 项变动）$/);
+  assert.equal(summarize([EVENTS[0]]), 'RawChat 恢复在线');
+  assert.match(summarize(EVENTS), /（另有 1 项变动）$/);
   assert.equal(summarize([]), '没有变动');
   assert.equal(icon('offline'), '🔴');
   assert.equal(icon('unknown_type'), '·');

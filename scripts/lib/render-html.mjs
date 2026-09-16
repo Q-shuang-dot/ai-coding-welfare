@@ -198,6 +198,8 @@ export function renderHtml({ meta, sites, live, css, groups = [], history }) {
   const { best, total, others } = usdTotals(plans);
   const extra = othersNote(others);
   const first = openSites.find((s) => s.recommended) ?? openSites[0] ?? null;
+  const welfareSites = sites.filter((s) => s.panel !== 'local');
+  const localSites = sites.filter((s) => s.panel === 'local');
   const desc = `${meta.tagline}。当前收录 ${sites.length} 个站点，${online} 个在线${
     closedSites.length ? `、${openSites.length} 个还收新用户` : ''
   }${best ? `，单站首日最高可得 $${best} 免费额度，还收新用户的美元站全注册约 $${total}` : ''}${extra ? `；${extra}` : ''}。`;
@@ -225,8 +227,15 @@ export function renderHtml({ meta, sites, live, css, groups = [], history }) {
     </div>
   </header>
 
-  <section id="sites">
-    <h2>站点一览</h2>
+  <section id="gateway">
+    <h2>本地网关</h2>
+    <p class="hint">自托管、无额度限制、多上游故障转移；以下是当前可用的本地网关实例。</p>
+    <div class="grid">${localSites.map((s) => siteCard(s, byId.get(s.id))).join('')}
+    </div>
+  </section>
+
+  <section id="welfare">
+    <h2>福利站总览</h2>
     <p class="hint">额度、模型、在线状态由脚本定时抓取站点公开接口自动更新。</p>
     ${
       closedSites.length
@@ -236,7 +245,7 @@ export function renderHtml({ meta, sites, live, css, groups = [], history }) {
         : ''
     }
     ${extra ? `<p class="hint">${esc(extra)}——站内积分与美元没有公开换算关系，未计入上面的美元合计。</p>` : ''}
-    <div class="grid">${sites.map((s) => siteCard(s, byId.get(s.id))).join('')}
+    <div class="grid">${welfareSites.map((s) => siteCard(s, byId.get(s.id))).join('')}
     </div>
   </section>
 ${modelsTable(sites, byId)}
