@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-09-16T16:55:18.021Z",
+  "generatedAt": "2026-09-16T21:18:05.110Z",
   "sites": [
     {
       "id": "agentrouter",
-      "checkedAt": "2026-09-16T16:55:12.168Z",
+      "checkedAt": "2026-09-16T21:17:58.789Z",
       "online": true,
-      "latencyMs": 248,
+      "latencyMs": 343,
       "error": "invalid json",
       "systemName": "Agent Router",
       "version": "init-20260915-25158da5",
@@ -164,7 +164,7 @@
       "signup": {
         "status": 200,
         "ok": true,
-        "ms": 1205,
+        "ms": 1285,
         "attempts": 1
       },
       "mirrors": [
@@ -194,7 +194,7 @@
     },
     {
       "id": "gcmp-gateway",
-      "checkedAt": "2026-09-16T16:55:06.070Z",
+      "checkedAt": "2026-09-16T21:17:52.376Z",
       "apiOk": true,
       "pricingOk": false,
       "latencyMs": null,
@@ -306,7 +306,7 @@
       "signup": {
         "status": 200,
         "ok": true,
-        "ms": 1246,
+        "ms": 1185,
         "attempts": 1
       },
       "mirrors": [],
@@ -317,10 +317,10 @@
     },
     {
       "id": "docode",
-      "checkedAt": "2026-09-16T16:55:08.514Z",
+      "checkedAt": "2026-09-16T21:17:53.178Z",
       "apiOk": true,
       "pricingOk": false,
-      "latencyMs": 2443,
+      "latencyMs": 764,
       "error": null,
       "systemName": "DoCode",
       "version": "",
@@ -372,7 +372,7 @@
       "signup": {
         "status": 200,
         "ok": true,
-        "ms": 2350,
+        "ms": 648,
         "attempts": 1
       },
       "mirrors": [
@@ -389,9 +389,9 @@
     },
     {
       "id": "justdowork",
-      "checkedAt": "2026-09-16T16:55:08.820Z",
+      "checkedAt": "2026-09-16T21:17:53.043Z",
       "online": true,
-      "latencyMs": 2757,
+      "latencyMs": 674,
       "error": null,
       "systemName": "JustDoWork",
       "version": "v1.0.0-rc.23",
@@ -417,7 +417,7 @@
       "signup": {
         "status": 200,
         "ok": true,
-        "ms": 3634,
+        "ms": 1488,
         "attempts": 1
       },
       "mirrors": [],
@@ -431,10 +431,10 @@
     },
     {
       "id": "kktoken",
-      "checkedAt": "2026-09-16T16:55:09.079Z",
+      "checkedAt": "2026-09-16T21:17:53.763Z",
       "apiOk": true,
       "pricingOk": false,
-      "latencyMs": 3014,
+      "latencyMs": 1393,
       "error": null,
       "systemName": "KKtoken AI",
       "version": "v1.0.0-rc.25",
@@ -461,7 +461,7 @@
       "signup": {
         "status": 200,
         "ok": true,
-        "ms": 3450,
+        "ms": 979,
         "attempts": 1
       },
       "mirrors": [],
@@ -473,10 +473,10 @@
     },
     {
       "id": "matrix",
-      "checkedAt": "2026-09-16T16:55:09.698Z",
+      "checkedAt": "2026-09-16T21:17:53.970Z",
       "apiOk": true,
       "pricingOk": false,
-      "latencyMs": 3632,
+      "latencyMs": 1598,
       "error": null,
       "systemName": null,
       "version": null,
@@ -500,7 +500,7 @@
       "signup": {
         "status": 200,
         "ok": true,
-        "ms": 3721,
+        "ms": 1661,
         "attempts": 1
       },
       "mirrors": [],
@@ -512,10 +512,10 @@
     },
     {
       "id": "seekai",
-      "checkedAt": "2026-09-16T16:55:09.367Z",
+      "checkedAt": "2026-09-16T21:17:53.644Z",
       "apiOk": true,
       "pricingOk": false,
-      "latencyMs": 3299,
+      "latencyMs": 1270,
       "error": null,
       "systemName": "SeekAi",
       "version": "v1.0.0-rc.25",
@@ -543,7 +543,7 @@
       "signup": {
         "status": 200,
         "ok": true,
-        "ms": 3212,
+        "ms": 1102,
         "attempts": 1
       },
       "mirrors": [
@@ -560,10 +560,10 @@
     },
     {
       "id": "tabitoken",
-      "checkedAt": "2026-09-16T16:55:11.678Z",
+      "checkedAt": "2026-09-16T21:17:55.742Z",
       "apiOk": true,
       "pricingOk": true,
-      "latencyMs": 784,
+      "latencyMs": 711,
       "error": null,
       "systemName": "TaBiAI",
       "version": "init-20260817-f880a343",
@@ -655,7 +655,7 @@
       "signup": {
         "status": 403,
         "ok": false,
-        "ms": 3286,
+        "ms": 1104,
         "attempts": 1
       },
       "mirrors": [],
