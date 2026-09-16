@@ -1,0 +1,57 @@
+name: CodeQL 代码扫描
+
+# 对应 issue #3 的安全报告：与其信一个陌生 bot 贴的告警列表，不如自己把 CodeQL 开起来，
+# 结果直接进本仓库的 Security → Code scanning，谁都能复核。
+#
+# 只扫 scripts/**（仓库里唯一的手写 JS）。docs/ 是生成的静态页、几百 KB 内联样式，
+# 扫它纯属浪费时间，还会把生成物里的模板字符串报成一堆噪音。
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/**'
+      - '.github/workflows/codeql.yml'
+  pull_request:
+    branches: [main]
+    paths:
+      - 'scripts/**'
+  schedule:
+    # 每周一次兜底，避开整点
+    - cron: '41 4 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  security-events: write
+
+concurrency:
+  group: codeql-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  analyze:
+    name: 分析 JavaScript
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - name: 初始化 CodeQL
+        uses: github/codeql-action/init@v4
+        with:
+          languages: javascript-typescript
+          # 用 security-extended 而不是默认套件：issue #3 里那两条规则
+          # （js/file-access-to-http、js/incomplete-html-attribute-sanitization）
+          # 都不在默认集里，扫不出来就没法自己复核那份报告。
+          # 不用 security-and-quality —— 那套还捎带一堆代码风格查询，噪音大过收益。
+          queries: security-extended
+          config: |
+            paths:
+              - scripts
+            paths-ignore:
+              - docs
+              - promo
+
+      - name: 执行分析
+        uses: github/codeql-action/analyze@v4
+        with:
+          category: /language:javascript-typescript

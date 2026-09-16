@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GCMP Gateway 免费额度 / 邀请链接 / Claude Code 配置 — AI Coding 福利站导航</title>
+<meta name="description" content="GCMP Gateway：本地自托管 AI 网关 · 7 个逻辑模型，OpenAI / Anthropic / Responses 三协议全收，故障转移 + 热加载 + 本地管理页，没有额度焦虑。含实时在线状态、模型价格、Claude Code / Codex 接入配置与踩坑清单，数据快照 2026-01-01 00:00 UTC。">
+<meta name="keywords" content="Claude Code 免费,Claude Code 中转,Codex 中转,Codex 公益站,AI API 中转站,公益站,免费 API 额度,每日免费额度,claude-opus-5 API,New API,AgentRouter,RawChat,Matrix 统一网关,TaBiAI,GoRouter,KKtoken,AnyRouter,CheapCodex,NOFX 积分,GPT-5.6 Sol 中转,claude-opus-5 按次计费">
+<meta property="og:type" content="website">
+<meta property="og:title" content="GCMP Gateway 免费额度 / 邀请链接 / Claude Code 配置 — AI Coding 福利站导航">
+<meta property="og:description" content="GCMP Gateway：本地自托管 AI 网关 · 7 个逻辑模型，OpenAI / Anthropic / Responses 三协议全收，故障转移 + 热加载 + 本地管理页，没有额度焦虑。含实时在线状态、模型价格、Claude Code / Codex 接入配置与踩坑清单，数据快照 2026-01-01 00:00 UTC。">
+<meta property="og:url" content="https://qi-jingjie.github.io/gcmp-welfare-temp/sites/gcmp-gateway/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://qi-jingjie.github.io/gcmp-welfare-temp/sites/gcmp-gateway/">
+<link rel="alternate" type="application/atom+xml" title="变动日志" href="https://qi-jingjie.github.io/gcmp-welfare-temp/feed.xml">
+<script type="application/ld+json">[{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"AI Coding 福利站导航","item":"https://qi-jingjie.github.io/gcmp-welfare-temp/"},{"@type":"ListItem","position":2,"name":"GCMP Gateway","item":"https://qi-jingjie.github.io/gcmp-welfare-temp/sites/gcmp-gateway/"}]},{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"GCMP Gateway 监听地址只有 127.0.0.1，别的机器怎么用？","acceptedAnswer":{"@type":"Answer","text":"默认只监听本机。想让局域网设备使用，需要你另外做反代或改成 0.0.0.0 并补防火墙规则。"}},{"@type":"Question","name":"为什么我直连上游 200，走网关却失败？","acceptedAnswer":{"@type":"Answer","text":"先看响应头里的 X-Gateway-Upstream / X-Gateway-Model，再对照管理页路由命中；常见原因是上游 key、UA 或请求协议不匹配。"}},{"@type":"Question","name":"中文上游名为什么有时候会报错？","acceptedAnswer":{"@type":"Answer","text":"旧版网关直接把中文上游名写进 HTTP 头时会被 latin-1 编码打断；当前版本会自动转义。"}}]}]</script>
+<style>
+/* AI Coding 福利站导航 — 落地页样式（手写，非生成物） */
+:root {
+  --bg: #07111f;
+  --bg-soft: #0f172a;
+  --card: #0f172a;
+  --line: #1e293b;
+  --fg: #e8ecf6;
+  --fg-dim: #98a1b8;
+  --accent: #69a9ff;
+  --accent-2: #8b5cf6;
+  --accent-3: #2dd4bf;
+  --ok: #34d399;
+  --bad: #f87171;
+  --radius: 18px;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background:
+    radial-gradient(900px 500px at 15% -10%, rgba(105, 169, 255, 0.22), transparent 60%),
+    radial-gradient(800px 460px at 95% 0%, rgba(139, 92, 246, 0.16), transparent 55%),
+    var(--bg);
+  color: var(--fg);
+  font: 16px/1.7 ui-sans-serif, system-ui, -apple-system, "Segoe UI", "Microsoft YaHei", sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.wrap { max-width: 1080px; margin: 0 auto; padding: 0 20px; }
+
+/* ---------- hero ---------- */
+header.hero { padding: 84px 0 56px; text-align: center; }
+.hero h1 {
+  margin: 0 0 14px;
+  font-size: clamp(30px, 5.6vw, 52px);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  background: linear-gradient(96deg, #fff 20%, var(--accent-2) 55%, var(--accent) 90%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.hero p.sub { margin: 0 auto 26px; max-width: 620px; color: var(--fg-dim); font-size: clamp(15px, 2vw, 18px); }
+
+.pills { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-bottom: 30px; }
+.pill {
+  padding: 6px 13px; border: 1px solid var(--line); border-radius: 999px;
+  background: rgba(255, 255, 255, 0.03); color: var(--fg-dim); font-size: 13px;
+}
+.pill b { color: var(--fg); }
+
+.cta-row { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
+.btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 13px 24px; border-radius: 12px; text-decoration: none;
+  font-weight: 650; font-size: 15px; transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.btn-primary {
+  color: #0a0c11; background: linear-gradient(96deg, var(--accent-2), var(--accent));
+  box-shadow: 0 8px 26px rgba(105, 169, 255, 0.32);
+}
+.btn-ghost { color: var(--fg); border: 1px solid var(--line); background: var(--bg-soft); }
+.btn:hover { transform: translateY(-2px); }
+
+/* ---------- sections ---------- */
+section { padding: 44px 0; }
+h2 { font-size: clamp(21px, 3vw, 28px); margin: 0 0 6px; letter-spacing: -0.01em; }
+h2 + .hint { margin: 0 0 26px; color: var(--fg-dim); font-size: 14px; }
+
+.grid { display: grid; gap: 18px; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); }
+
+.card {
+  border: 1px solid var(--line); border-radius: var(--radius); background: var(--card);
+  padding: 22px; display: flex; flex-direction: column; gap: 14px;
+}
+.card.featured { border-color: rgba(105, 169, 255, 0.55); box-shadow: 0 0 0 1px rgba(105, 169, 255, 0.18) inset; }
+.card h3 { margin: 0; font-size: 20px; display: flex; align-items: center; gap: 9px; flex-wrap: wrap; }
+.card .desc { margin: 0; color: var(--fg-dim); font-size: 14px; }
+
+.dot { width: 9px; height: 9px; border-radius: 50%; flex: none; }
+.dot.up { background: var(--ok); box-shadow: 0 0 0 4px rgba(52, 211, 153, 0.16); }
+.dot.down { background: var(--bad); box-shadow: 0 0 0 4px rgba(248, 113, 113, 0.16); }
+
+.tag { font-size: 12px; padding: 3px 9px; border-radius: 6px; background: rgba(105, 169, 255, 0.14); color: #c4b5fd; }
+.tags { display: flex; flex-wrap: wrap; gap: 6px; }
+
+.kv { display: grid; grid-template-columns: auto 1fr; gap: 6px 14px; font-size: 14px; margin: 0; }
+.kv dt { color: var(--fg-dim); }
+.kv dd { margin: 0; }
+.kv dd b { color: var(--ok); }
+/* 额度构成写在首日额度后面，压暗一档，别抢主数字的视觉 */
+.kv dd small { color: var(--fg-dim); font-size: 12px; display: block; }
+
+ul.hl, ol.hl { margin: 0; padding-left: 18px; font-size: 14px; color: var(--fg-dim); }
+ul.hl li, ol.hl li { margin-bottom: 5px; }
+ul.hl li::marker, ol.hl li::marker { color: var(--accent); }
+
+pre {
+  margin: 0; padding: 14px 16px; overflow-x: auto; font-size: 13px; line-height: 1.65;
+  background: #0c0e15; border: 1px solid var(--line); border-radius: 10px;
+  font-family: ui-monospace, SFMono-Regular, "Cascadia Code", Consolas, monospace;
+}
+pre code { color: #cbd5e1; }
+.copy {
+  align-self: flex-start; margin-top: 8px; padding: 5px 11px; font-size: 12px; cursor: pointer;
+  color: var(--fg-dim); background: transparent; border: 1px solid var(--line); border-radius: 7px;
+}
+.copy:hover { color: var(--fg); border-color: var(--accent); }
+
+details { border: 1px solid var(--line); border-radius: 10px; background: var(--bg-soft); padding: 14px 16px; margin-bottom: 10px; }
+details summary { cursor: pointer; font-weight: 600; }
+details p { color: var(--fg-dim); margin: 10px 0 0; font-size: 14px; }
+
+.table-wrap { overflow-x: auto; border: 1px solid var(--line); border-radius: var(--radius); }
+table { width: 100%; border-collapse: collapse; font-size: 13px; min-width: 560px; }
+table th, table td { padding: 8px 10px; border-bottom: 1px solid var(--line); text-align: left; }
+table th { color: var(--fg-dim); font-weight: 600; }
+table code { color: var(--accent-2); }
+
+footer { padding: 40px 0 64px; border-top: 1px solid var(--line); color: var(--fg-dim); font-size: 13px; }
+footer ul { padding-left: 18px; }
+footer a { color: var(--accent-2); }
+
+/* ---------- 站内导航（多页之后加的） ---------- */
+.topbar-stripe { height: 3px; background: linear-gradient(90deg, var(--accent), var(--accent-2), var(--accent-3)); }
+.nav { border-bottom: 1px solid var(--line); background: rgba(7, 17, 31, 0.72); backdrop-filter: blur(8px); position: sticky; top: 0; z-index: 20; }
+.navrow { display: flex; align-items: center; gap: 4px; flex-wrap: wrap; padding: 10px 20px; }
+.navlink {
+  padding: 7px 12px; border-radius: 9px; text-decoration: none;
+  color: var(--fg-dim); font-size: 14px; white-space: nowrap;
+}
+.navlink:hover { color: var(--fg); background: rgba(255, 255, 255, 0.05); }
+.navlink.active { color: var(--fg); background: rgba(105, 169, 255, 0.16); }
+.navspace { flex: 1 1 auto; }
+
+/* 面包屑：详情页比首页深两层，给个回头路 */
+.crumb { margin: 0 0 10px; font-size: 13px; color: var(--fg-dim); }
+.crumb a { color: var(--accent-2); text-decoration: none; }
+
+/* ---------- 可用性色条 ---------- */
+.bars { display: flex; gap: 3px; align-items: flex-end; min-width: 120px; }
+.bar { display: block; width: 9px; height: 22px; border-radius: 3px; background: var(--line); }
+.bar.ok { background: var(--ok); }
+.bar.part { background: linear-gradient(to top, var(--bad) 50%, var(--ok) 50%); }
+.bar.bad { background: var(--bad); }
+/* 没有样本 ≠ 掉线：留一格暗底，别让空档看着像故障 */
+.bar.nodata { background: repeating-linear-gradient(45deg, #1b1f2b, #1b1f2b 2px, #232838 2px, #232838 4px); }
+
+/* ---------- 变动日志 ---------- */
+section.day { padding: 22px 0; border-top: 1px solid var(--line); }
+section.day h2 { font-size: 18px; }
+section.day h2 a { color: var(--fg); text-decoration: none; }
+ul.events { list-style: none; margin: 12px 0 0; padding: 0; font-size: 14px; }
+ul.events li { display: flex; align-items: baseline; gap: 8px; padding: 6px 0; color: var(--fg-dim); flex-wrap: wrap; }
+.ev-ico { flex: none; width: 18px; text-align: center; }
+.ev-site { color: var(--accent-2); text-decoration: none; font-size: 12px; }
+.muted { color: #6b7385; font-size: 12px; font-weight: 400; }
+
+.mt-auto { margin-top: auto; }
+
+/* ---------- 停注：站点还在跑，但不收新用户 ---------- */
+/* 这类站点仍然留在页面上（老用户还看得上、也方便看它什么时候回来），
+   但额度对新人不成立，所以视觉上必须一眼区分，不能和还能注册的站长得一样。 */
+.tag.warn { background: rgba(251, 191, 36, 0.16); color: #fbbf24; }
+.pill.warn { border-color: rgba(251, 191, 36, 0.45); color: #fbbf24; }
+.card.shut { border-color: rgba(251, 191, 36, 0.34); }
+.card.shut .kv b.struck,
+.kv b.struck { text-decoration: line-through; color: var(--fg-dim); }
+tr.shut td { color: var(--fg-dim); }
+.notice {
+  margin: 0;
+  padding: 9px 12px;
+  border-left: 3px solid #fbbf24;
+  border-radius: 0 8px 8px 0;
+  background: rgba(251, 191, 36, 0.08);
+  color: #f3d38a;
+  font-size: 13px;
+  line-height: 1.6;
+}
+@media (max-width: 640px) {
+  header.hero { padding: 40px 0 36px; }
+  .card { padding: 18px; }
+  .navrow { padding: 8px 12px; gap: 2px; }
+  .navlink { padding: 6px 9px; font-size: 13px; }
+}
+</style>
+</head>
+<body>
+<div class="topbar-stripe"></div>
+<nav class="nav"><div class="wrap navrow"><a class="navlink active" href="../../">站点总览</a><a class="navlink" href="../../compare/">按次 vs 按量</a><a class="navlink" href="../../status/">可用性</a><a class="navlink" href="../../changelog/">变动日志</a><span class="navspace"></span><a class="navlink" href="../../feed.xml">Atom 订阅</a></div></nav>
+<div class="wrap">
+  <header class="hero">
+    <p class="crumb"><a href="../../">AI Coding 福利站导航</a> › GCMP Gateway</p>
+    <h1>GCMP Gateway</h1>
+    <p class="sub">本地自托管 AI 网关 · 7 个逻辑模型，OpenAI / Anthropic / Responses 三协议全收，故障转移 + 热加载 + 本地管理页，没有额度焦虑</p>
+    <div class="pills">
+      <span class="pill"><span class="dot up"></span> 在线</span>
+      
+      
+      <span class="pill">可查模型 <b>7</b> 个</span>
+      <span class="pill">数据更新 <b>2026-01-01 00:00 UTC</b></span>
+    </div>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="https://github.com/qi-jingjie/gcmp-welfare-temp" target="_blank" rel="noopener">查看部署文档 →</a>
+      <a class="btn btn-ghost" href="#config">直接看接入配置</a>
+    </div>
+    
+    
+  </header>
+
+  <section><h2>部署方式</h2>
+    <dl class="kv"><dt>逻辑模型</dt><dd><code>opus-5</code>、<code>opus-4-8</code>、<code>sonnet-5</code>、<code>gpt-5.6</code>、<code>glm-5.3</code>、<code>deepseek</code>、<code>cheap</code></dd><dt>默认 OpenAI 模型</dt><dd><code>glm-5.3</code></dd><dt>默认 Claude 模型</dt><dd><code>glm-5.3</code></dd><dt>协议支持</dt><dd>OpenAI / Anthropic / Responses</dd><dt>数据快照</dt><dd>2026-01-01 00:00 UTC</dd><dt>部署步骤</dt><dd><ol class="hl"><li>clone 仓库并把 config.example.json 复制为 config.json</li><li>按你的上游平台填入 apiKey，必要时按站点说明补 User-Agent / chatPath / protocol 等字段</li><li>运行网关后浏览器打开 http://127.0.0.1:15900/admin 确认模型与路由状态</li><li>客户端 Base URL 填 http://127.0.0.1:15900/v1，模型名填逻辑模型名</li></ol></dd><dt>管理页</dt><dd><a class="btn btn-ghost" href="http://127.0.0.1:15900/admin" target="_blank" rel="noopener">打开管理页</a></dd></dl>
+  </section>
+
+  <section><h2>为什么值得自托管</h2><ul class="hl"><li>你的网关你做主：部署在本机，没有注册链接、没有额度限制、没有账号被封的风险——上游 key 在你手里，随时换</li><li>多上游故障转移：opus-5 / gpt-5.6 / glm-5.3 / deepseek / cheap 等 7 个逻辑模型，一条挂了自动切下一条，比只挂一家免费站稳得多</li><li>VS Code GCMP、Claude Code、Codex、OpenAI SDK 一套地址全搞定：/v1/chat/completions + /v1/responses + Anthropic /messages 三协议自带转换，不用自己写适配</li><li>config.json 热加载，管理页可看路由命中、上游健康、请求统计与一键测试；响应头自带 X-Gateway-Upstream / X-Gateway-Model，排障一眼看到实际命中的上游</li></ul></section>
+  <section><h2>当前可用模型与价格</h2><p class="hint">倍率 1 ≈ $2 / 1M tokens。抓取自站点公开定价接口，一切以站内实时公示为准。</p>
+    <div class="table-wrap"><table><thead><tr><th>模型</th><th>倍率</th><th>输入 /1M</th><th>输出 /1M</th><th>协议</th></tr></thead>
+    <tbody><tr><td><code>opus-5</code></td><td>—</td><td>—</td><td>—</td><td>OpenAI / Responses / Anthropic</td></tr><tr><td><code>opus-4-8</code></td><td>—</td><td>—</td><td>—</td><td>OpenAI / Responses / Anthropic</td></tr><tr><td><code>sonnet-5</code></td><td>—</td><td>—</td><td>—</td><td>OpenAI / Responses / Anthropic</td></tr><tr><td><code>gpt-5.6</code></td><td>—</td><td>—</td><td>—</td><td>OpenAI / Responses</td></tr><tr><td><code>glm-5.3</code></td><td>—</td><td>—</td><td>—</td><td>OpenAI / Responses / Anthropic</td></tr><tr><td><code>deepseek</code></td><td>—</td><td>—</td><td>—</td><td>OpenAI / Responses / Anthropic</td></tr><tr><td><code>cheap</code></td><td>—</td><td>—</td><td>—</td><td>OpenAI / Responses / Anthropic</td></tr></tbody></table></div></section>
+  <section><h2>前置要求</h2><ul class="hl"><li>本页不是远程福利站，不提供注册链接与免费额度</li><li>需要准备自己的上游 key，并遵守各上游平台条款</li></ul></section>
+  <section id="config"><h2>接入配置</h2><p class="hint">这是一个跑在你本机的网关服务，不能远程注册；需要自己 clone 仓库、填入上游 key 并启动进程。</p>
+<ol class="hl"><li>clone 仓库并把 config.example.json 复制为 config.json</li><li>按你的上游平台填入 apiKey，必要时按站点说明补 User-Agent / chatPath / protocol 等字段</li><li>运行网关后浏览器打开 http://127.0.0.1:15900/admin 确认模型与路由状态</li><li>客户端 Base URL 填 http://127.0.0.1:15900/v1，模型名填逻辑模型名</li></ol>
+<p><a class="btn btn-ghost" href="http://127.0.0.1:15900/admin" target="_blank" rel="noopener">打开控制台</a></p></section>
+  
+  <section><h2>⚠️ 使用前必读</h2><ul class="hl"><li>服务只监听 127.0.0.1:15900，不会自动暴露到公网；想让局域网设备使用需要自行代理或改监听地址</li><li>网关仅转发请求，模型质量、可用性与额度来自你配置的上游账号，不是这个仓库本身提供的</li><li>config.json 里若配置了中文上游名，需要网关对 HTTP 头做 latin-1 安全转义，旧版本直接写中文头会被 latin-1 编码打断</li></ul></section>
+  
+  
+  <section><h2>官方渠道</h2><ul class="hl"><li>仓库: https://github.com/qi-jingjie/gcmp-welfare-temp</li><li>管理页: http://127.0.0.1:15900/admin</li></ul></section>
+
+  <section><h2>常见问题</h2>
+    <details><summary>GCMP Gateway 监听地址只有 127.0.0.1，别的机器怎么用？</summary><p>默认只监听本机。想让局域网设备使用，需要你另外做反代或改成 0.0.0.0 并补防火墙规则。</p></details>
+    <details><summary>为什么我直连上游 200，走网关却失败？</summary><p>先看响应头里的 X-Gateway-Upstream / X-Gateway-Model，再对照管理页路由命中；常见原因是上游 key、UA 或请求协议不匹配。</p></details>
+    <details><summary>中文上游名为什么有时候会报错？</summary><p>旧版网关直接把中文上游名写进 HTTP 头时会被 latin-1 编码打断；当前版本会自动转义。</p></details>
+  </section>
+
+  <section><h2>其它福利站</h2>
+    <p class="hint">额度用完了就换一家，各站额度互不影响。</p>
+    <ul class="hl"><li><a href="../agentrouter/">AgentRouter</a> — AI Coding 公益站 · 注册即送额度，签到每日续命</li><li><a href="../docode/">DoCode</a> — New API 中转站 · 注册送 50 站内刀，注册时填邀请码 zMRe 再加 250，首日 300 刀，Claude 与 GPT 都在架上</li><li><a href="../justdowork/">JustDoWork</a> — New API 中转站 · GitHub 一键登录，支持签到与绘图</li><li><a href="../kktoken/">KKtoken AI</a> — New API 中转站 · 注册送 $75，本页邀请码再加 $25，按 token 计费输入输出各 $1/M</li><li><a href="../gorouter/">GoRouter</a> — New API 中转站 · 注册送 $50，本页邀请码再加 $20，按次计费里最便宜的一档</li><li><a href="../matrix/">Matrix</a> — 统一 API 网关 + 开源应用商店 · 邀请注册送 600 积分，实名再送 2000</li><li><a href="../tabitoken/">TaBiAI</a> — New API 中转站 · 注册送 $100，本页邀请码再加 $20，专供 Claude Opus</li><li><a href="../rawchat/">RawChat 公益站</a> — Codex 公益站 · 每日 $50 额度池，0 点自动重置</li><li><a href="../anyrouter/">AnyRouter</a> — New API 中转站 · 注册送 $75，本页邀请码再加 $50，Anthropic 与 OpenAI 两条原生路由都开着</li><li><a href="../cheapcodex/">CheapCodex</a> — 自研 AI 网关 · 本页邀请码送 $20，每日签到再 $20，OpenAI / Anthropic / Codex 三条协议一把 Key</li><li><a href="../nofx/">NOFX</a> — 任务制积分站 · 做任务领 API 积分，签到 / Discord / 邀请 / 发推都给分，免密码登录、无需绑卡</li></ul>
+  </section>
+<script>
+document.querySelectorAll('.copy').forEach(function (btn) {
+  btn.addEventListener('click', function () {
+    navigator.clipboard.writeText(btn.previousElementSibling.innerText).then(function () {
+      btn.textContent = '已复制 ✓';
+      setTimeout(function () { btn.textContent = '复制配置'; }, 1800);
+    });
+  });
+});
+</script>
+  <footer>
+    <ul>
+      <li>本页注册链接为<strong>邀请链接</strong>，通过它注册双方都会获得站点发放的额度，不影响你的注册流程。</li>
+      <li>本站只做信息聚合，与各站点无隶属关系，不代收费用、不承诺可用性；公益站可能随时改规则或关站。</li>
+      <li>请勿把生产密钥、隐私数据、企业代码交给来源不明的中转服务；重要项目请使用官方 API。</li>
+      <li>请遵守各站点与上游服务商条款，禁止批量注册、刷量、转售额度。</li>
+    </ul>
+    <p>数据快照时间：2026-09-15 21:23 UTC · 由 <a href="https://github.com/qi-jingjie/gcmp-welfare-temp">github.com/qi-jingjie/gcmp-welfare-temp</a> 自动生成 · <a href="https://qi-jingjie.github.io/gcmp-welfare-temp/feed.xml">Atom 订阅</a></p>
+  </footer>
+</div>
+</body>
+</html>

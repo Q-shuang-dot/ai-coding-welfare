@@ -1,0 +1,20 @@
+# Dependabot 配置（对应 issue #3 的安全报告）
+#
+# 这个仓库 package.json 里一个依赖都没有（零 dependencies / 零 devDependencies，
+# 全靠 Node 18+ 自带的 fetch 和标准库），所以 npm 生态开了也扫不出东西，不配。
+# 真正需要盯的是 workflow 里钉的那几个 action 版本——它们是唯一的第三方代码，
+# 而且跑在有 contents: write 权限的 CI 里。
+version: 2
+updates:
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+      day: monday
+      time: '04:00'
+      timezone: Asia/Shanghai
+    open-pull-requests-limit: 3
+    commit-message:
+      prefix: chore
+    labels:
+      - dependencies

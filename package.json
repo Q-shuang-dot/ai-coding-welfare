@@ -1,0 +1,29 @@
+{
+  "name": "gcmp-welfare-temp",
+  "version": "1.0.0",
+  "private": true,
+  "description": "AI Coding 福利站导航：免费额度中转站 / 公益站合集，README 与落地页由脚本自动生成",
+  "type": "module",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "refresh": "node scripts/refresh.mjs",
+    "history": "node scripts/history.mjs",
+    "backfill": "node scripts/history.mjs --backfill",
+    "build": "node scripts/build.mjs",
+    "check": "node scripts/check.mjs",
+    "notify": "node scripts/notify.mjs",
+    "test": "node scripts/test.mjs",
+    "all": "npm test && npm run refresh && npm run history && npm run build && npm run check"
+  },
+  "keywords": [
+    "claude-code",
+    "codex",
+    "ai-api",
+    "free-credits",
+    "new-api",
+    "agentrouter"
+  ],
+  "license": "MIT"
+}

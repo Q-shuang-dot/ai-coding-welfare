@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>按次计费 vs 按量计费：12 个 AI Coding 福利站折算横评 — AI Coding 福利站导航</title>
+<meta name="description" content="把 12 个免费 AI Coding 中转站 / 公益站的首日额度折算成「能跑多少次 Claude Code 一问一答」，按次计费与按量计费同尺度对比，数据快照 2026-09-15 21:23 UTC。">
+<meta name="keywords" content="Claude Code 免费,Claude Code 中转,Codex 中转,Codex 公益站,AI API 中转站,公益站,免费 API 额度,每日免费额度,claude-opus-5 API,New API,AgentRouter,RawChat,Matrix 统一网关,TaBiAI,GoRouter,KKtoken,AnyRouter,CheapCodex,NOFX 积分,GPT-5.6 Sol 中转,claude-opus-5 按次计费">
+<meta property="og:type" content="website">
+<meta property="og:title" content="按次计费 vs 按量计费：12 个 AI Coding 福利站折算横评 — AI Coding 福利站导航">
+<meta property="og:description" content="把 12 个免费 AI Coding 中转站 / 公益站的首日额度折算成「能跑多少次 Claude Code 一问一答」，按次计费与按量计费同尺度对比，数据快照 2026-09-15 21:23 UTC。">
+<meta property="og:url" content="https://qi-jingjie.github.io/gcmp-welfare-temp/compare/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://qi-jingjie.github.io/gcmp-welfare-temp/compare/">
+<link rel="alternate" type="application/atom+xml" title="变动日志" href="https://qi-jingjie.github.io/gcmp-welfare-temp/feed.xml">
+<script type="application/ld+json">[{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"AI Coding 福利站导航","item":"https://qi-jingjie.github.io/gcmp-welfare-temp/"},{"@type":"ListItem","position":2,"name":"按次 vs 按量","item":"https://qi-jingjie.github.io/gcmp-welfare-temp/compare/"}]},{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"为什么送的美元一样多，能用的次数差这么远？","acceptedAnswer":{"@type":"Answer","text":"按次计费的站一次请求固定扣钱（$0.2~0.8），和 tokens 用量无关；按量计费的站按 tokens 扣。同样 $100，按次站可能只够一两百次对话，按量站在轻负载下能跑更多次。"}},{"@type":"Question","name":"一次「一问一答」按多少 token 算？","acceptedAnswer":{"@type":"Answer","text":"本页统一按输入 15,000 tokens、输出 2,000 tokens 折算——Claude Code 的系统提示与工具结果占掉大部分输入。开了 prompt cache 或长上下文，实际值会明显偏离这个估算。"}},{"@type":"Question","name":"哪个站最划算？","acceptedAnswer":{"@type":"Answer","text":"按本页折算口径，还收新用户的站里 AgentRouter 的首日额度能跑最多次（约 875 次）。但公益站规则天天变，以站内实时公示为准。"}}]}]</script>
+<style>
+/* AI Coding 福利站导航 — 落地页样式（手写，非生成物） */
+:root {
+  --bg: #07111f;
+  --bg-soft: #0f172a;
+  --card: #0f172a;
+  --line: #1e293b;
+  --fg: #e8ecf6;
+  --fg-dim: #98a1b8;
+  --accent: #69a9ff;
+  --accent-2: #8b5cf6;
+  --accent-3: #2dd4bf;
+  --ok: #34d399;
+  --bad: #f87171;
+  --radius: 18px;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background:
+    radial-gradient(900px 500px at 15% -10%, rgba(105, 169, 255, 0.22), transparent 60%),
+    radial-gradient(800px 460px at 95% 0%, rgba(139, 92, 246, 0.16), transparent 55%),
+    var(--bg);
+  color: var(--fg);
+  font: 16px/1.7 ui-sans-serif, system-ui, -apple-system, "Segoe UI", "Microsoft YaHei", sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.wrap { max-width: 1080px; margin: 0 auto; padding: 0 20px; }
+
+/* ---------- hero ---------- */
+header.hero { padding: 84px 0 56px; text-align: center; }
+.hero h1 {
+  margin: 0 0 14px;
+  font-size: clamp(30px, 5.6vw, 52px);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  background: linear-gradient(96deg, #fff 20%, var(--accent-2) 55%, var(--accent) 90%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.hero p.sub { margin: 0 auto 26px; max-width: 620px; color: var(--fg-dim); font-size: clamp(15px, 2vw, 18px); }
+
+.pills { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-bottom: 30px; }
+.pill {
+  padding: 6px 13px; border: 1px solid var(--line); border-radius: 999px;
+  background: rgba(255, 255, 255, 0.03); color: var(--fg-dim); font-size: 13px;
+}
+.pill b { color: var(--fg); }
+
+.cta-row { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
+.btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 13px 24px; border-radius: 12px; text-decoration: none;
+  font-weight: 650; font-size: 15px; transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.btn-primary {
+  color: #0a0c11; background: linear-gradient(96deg, var(--accent-2), var(--accent));
+  box-shadow: 0 8px 26px rgba(105, 169, 255, 0.32);
+}
+.btn-ghost { color: var(--fg); border: 1px solid var(--line); background: var(--bg-soft); }
+.btn:hover { transform: translateY(-2px); }
+
+/* ---------- sections ---------- */
+section { padding: 44px 0; }
+h2 { font-size: clamp(21px, 3vw, 28px); margin: 0 0 6px; letter-spacing: -0.01em; }
+h2 + .hint { margin: 0 0 26px; color: var(--fg-dim); font-size: 14px; }
+
+.grid { display: grid; gap: 18px; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); }
+
+.card {
+  border: 1px solid var(--line); border-radius: var(--radius); background: var(--card);
+  padding: 22px; display: flex; flex-direction: column; gap: 14px;
+}
+.card.featured { border-color: rgba(105, 169, 255, 0.55); box-shadow: 0 0 0 1px rgba(105, 169, 255, 0.18) inset; }
+.card h3 { margin: 0; font-size: 20px; display: flex; align-items: center; gap: 9px; flex-wrap: wrap; }
+.card .desc { margin: 0; color: var(--fg-dim); font-size: 14px; }
+
+.dot { width: 9px; height: 9px; border-radius: 50%; flex: none; }
+.dot.up { background: var(--ok); box-shadow: 0 0 0 4px rgba(52, 211, 153, 0.16); }
+.dot.down { background: var(--bad); box-shadow: 0 0 0 4px rgba(248, 113, 113, 0.16); }
+
+.tag { font-size: 12px; padding: 3px 9px; border-radius: 6px; background: rgba(105, 169, 255, 0.14); color: #c4b5fd; }
+.tags { display: flex; flex-wrap: wrap; gap: 6px; }
+
+.kv { display: grid; grid-template-columns: auto 1fr; gap: 6px 14px; font-size: 14px; margin: 0; }
+.kv dt { color: var(--fg-dim); }
+.kv dd { margin: 0; }
+.kv dd b { color: var(--ok); }
+/* 额度构成写在首日额度后面，压暗一档，别抢主数字的视觉 */
+.kv dd small { color: var(--fg-dim); font-size: 12px; display: block; }
+
+ul.hl, ol.hl { margin: 0; padding-left: 18px; font-size: 14px; color: var(--fg-dim); }
+ul.hl li, ol.hl li { margin-bottom: 5px; }
+ul.hl li::marker, ol.hl li::marker { color: var(--accent); }
+
+pre {
+  margin: 0; padding: 14px 16px; overflow-x: auto; font-size: 13px; line-height: 1.65;
+  background: #0c0e15; border: 1px solid var(--line); border-radius: 10px;
+  font-family: ui-monospace, SFMono-Regular, "Cascadia Code", Consolas, monospace;
+}
+pre code { color: #cbd5e1; }
+.copy {
+  align-self: flex-start; margin-top: 8px; padding: 5px 11px; font-size: 12px; cursor: pointer;
+  color: var(--fg-dim); background: transparent; border: 1px solid var(--line); border-radius: 7px;
+}
+.copy:hover { color: var(--fg); border-color: var(--accent); }
+
+details { border: 1px solid var(--line); border-radius: 10px; background: var(--bg-soft); padding: 14px 16px; margin-bottom: 10px; }
+details summary { cursor: pointer; font-weight: 600; }
+details p { color: var(--fg-dim); margin: 10px 0 0; font-size: 14px; }
+
+.table-wrap { overflow-x: auto; border: 1px solid var(--line); border-radius: var(--radius); }
+table { width: 100%; border-collapse: collapse; font-size: 13px; min-width: 560px; }
+table th, table td { padding: 8px 10px; border-bottom: 1px solid var(--line); text-align: left; }
+table th { color: var(--fg-dim); font-weight: 600; }
+table code { color: var(--accent-2); }
+
+footer { padding: 40px 0 64px; border-top: 1px solid var(--line); color: var(--fg-dim); font-size: 13px; }
+footer ul { padding-left: 18px; }
+footer a { color: var(--accent-2); }
+
+/* ---------- 站内导航（多页之后加的） ---------- */
+.topbar-stripe { height: 3px; background: linear-gradient(90deg, var(--accent), var(--accent-2), var(--accent-3)); }
+.nav { border-bottom: 1px solid var(--line); background: rgba(7, 17, 31, 0.72); backdrop-filter: blur(8px); position: sticky; top: 0; z-index: 20; }
+.navrow { display: flex; align-items: center; gap: 4px; flex-wrap: wrap; padding: 10px 20px; }
+.navlink {
+  padding: 7px 12px; border-radius: 9px; text-decoration: none;
+  color: var(--fg-dim); font-size: 14px; white-space: nowrap;
+}
+.navlink:hover { color: var(--fg); background: rgba(255, 255, 255, 0.05); }
+.navlink.active { color: var(--fg); background: rgba(105, 169, 255, 0.16); }
+.navspace { flex: 1 1 auto; }
+
+/* 面包屑：详情页比首页深两层，给个回头路 */
+.crumb { margin: 0 0 10px; font-size: 13px; color: var(--fg-dim); }
+.crumb a { color: var(--accent-2); text-decoration: none; }
+
+/* ---------- 可用性色条 ---------- */
+.bars { display: flex; gap: 3px; align-items: flex-end; min-width: 120px; }
+.bar { display: block; width: 9px; height: 22px; border-radius: 3px; background: var(--line); }
+.bar.ok { background: var(--ok); }
+.bar.part { background: linear-gradient(to top, var(--bad) 50%, var(--ok) 50%); }
+.bar.bad { background: var(--bad); }
+/* 没有样本 ≠ 掉线：留一格暗底，别让空档看着像故障 */
+.bar.nodata { background: repeating-linear-gradient(45deg, #1b1f2b, #1b1f2b 2px, #232838 2px, #232838 4px); }
+
+/* ---------- 变动日志 ---------- */
+section.day { padding: 22px 0; border-top: 1px solid var(--line); }
+section.day h2 { font-size: 18px; }
+section.day h2 a { color: var(--fg); text-decoration: none; }
+ul.events { list-style: none; margin: 12px 0 0; padding: 0; font-size: 14px; }
+ul.events li { display: flex; align-items: baseline; gap: 8px; padding: 6px 0; color: var(--fg-dim); flex-wrap: wrap; }
+.ev-ico { flex: none; width: 18px; text-align: center; }
+.ev-site { color: var(--accent-2); text-decoration: none; font-size: 12px; }
+.muted { color: #6b7385; font-size: 12px; font-weight: 400; }
+
+.mt-auto { margin-top: auto; }
+
+/* ---------- 停注：站点还在跑，但不收新用户 ---------- */
+/* 这类站点仍然留在页面上（老用户还看得上、也方便看它什么时候回来），
+   但额度对新人不成立，所以视觉上必须一眼区分，不能和还能注册的站长得一样。 */
+.tag.warn { background: rgba(251, 191, 36, 0.16); color: #fbbf24; }
+.pill.warn { border-color: rgba(251, 191, 36, 0.45); color: #fbbf24; }
+.card.shut { border-color: rgba(251, 191, 36, 0.34); }
+.card.shut .kv b.struck,
+.kv b.struck { text-decoration: line-through; color: var(--fg-dim); }
+tr.shut td { color: var(--fg-dim); }
+.notice {
+  margin: 0;
+  padding: 9px 12px;
+  border-left: 3px solid #fbbf24;
+  border-radius: 0 8px 8px 0;
+  background: rgba(251, 191, 36, 0.08);
+  color: #f3d38a;
+  font-size: 13px;
+  line-height: 1.6;
+}
+@media (max-width: 640px) {
+  header.hero { padding: 40px 0 36px; }
+  .card { padding: 18px; }
+  .navrow { padding: 8px 12px; gap: 2px; }
+  .navlink { padding: 6px 9px; font-size: 13px; }
+}
+</style>
+</head>
+<body>
+<div class="topbar-stripe"></div>
+<nav class="nav"><div class="wrap navrow"><a class="navlink" href="../">站点总览</a><a class="navlink active" href="../compare/">按次 vs 按量</a><a class="navlink" href="../status/">可用性</a><a class="navlink" href="../changelog/">变动日志</a><span class="navspace"></span><a class="navlink" href="../feed.xml">Atom 订阅</a></div></nav>
+<div class="wrap">
+  <header class="hero">
+    <p class="crumb"><a href="../">AI Coding 福利站导航</a> › 按次 vs 按量</p>
+    <h1>按次计费 vs 按量计费</h1>
+    <p class="sub">同样送 $100，能跑多少次 Claude Code 差十倍。把所有站折算到同一个单位再比。</p>
+    <div class="pills">
+      <span class="pill">收录 <b>12</b> 站</span>
+      <span class="pill">美元站全注册约 <b>$817</b></span>
+      <span class="pill">最耐用 <b>AgentRouter</b></span>
+      <span class="pill">数据更新 <b>2026-09-15 21:23 UTC</b></span>
+    </div>
+  </header>
+
+  <section>
+    <h2>折算对比</h2>
+    <p class="hint">「能跑多少次」= 首日额度 ÷ 单次成本。按次站直接用站内单价，按量站按输入 15,000 / 输出 2,000 tokens 估算，取各站最便宜的 Claude 型号。</p>
+    <div class="table-wrap"><table>
+      <thead><tr><th>站点</th><th>计费方式</th><th>首日额度</th><th>单次成本</th><th>约能跑</th><th>折算所用模型</th></tr></thead>
+      <tbody><tr><td><a href="../sites/agentrouter/">AgentRouter</a></td><td>按量</td><td>$175</td><td>$0.2 / 次</td><td><b>875</b> 次</td><td><code>claude-opus-4-8</code></td></tr><tr><td><a href="../sites/gcmp-gateway/">GCMP Gateway</a></td><td>需登录查看</td><td>—</td><td>—</td><td>需登录查看</td><td><code>—</code></td></tr><tr><td><a href="../sites/docode/">DoCode</a></td><td>需登录查看</td><td>300 站内刀</td><td>—</td><td>需登录查看</td><td><code>—</code></td></tr><tr><td><a href="../sites/justdowork/">JustDoWork</a></td><td>需登录查看</td><td>≈$92</td><td>—</td><td>需登录查看</td><td><code>—</code></td></tr><tr><td><a href="../sites/kktoken/">KKtoken AI</a></td><td>需登录查看</td><td>$120</td><td>—</td><td>需登录查看</td><td><code>—</code></td></tr><tr><td><a href="../sites/gorouter/">GoRouter</a></td><td>按次</td><td>$70</td><td>$0.3 / 次</td><td><b>233</b> 次</td><td><code>claude-opus-5</code></td></tr><tr><td><a href="../sites/matrix/">Matrix</a></td><td>站内积分</td><td>600 积分</td><td>—</td><td>积分无公开换算</td><td><code>—</code></td></tr><tr><td><a href="../sites/tabitoken/">TaBiAI</a></td><td>按次</td><td>$120</td><td>$0.35 / 次</td><td><b>342</b> 次</td><td><code>claude-opus-5</code></td></tr><tr><td><a href="../sites/rawchat/">RawChat 公益站</a></td><td>每日额度池</td><td>$50</td><td>—</td><td>需登录查看</td><td><code>—</code></td></tr><tr><td><a href="../sites/anyrouter/">AnyRouter</a></td><td>需登录查看</td><td>$150</td><td>—</td><td>需登录查看</td><td><code>—</code></td></tr><tr><td><a href="../sites/cheapcodex/">CheapCodex</a></td><td>需登录查看</td><td>$40</td><td>—</td><td>需登录查看</td><td><code>—</code></td></tr><tr><td><a href="../sites/nofx/">NOFX</a></td><td>站内积分</td><td>15 积分</td><td>—</td><td>积分无公开换算</td><td><code>—</code></td></tr></tbody>
+    </table></div>
+    <p class="hint">每日重置额度池的站点，「约能跑」是每天的量，次日回满但不累积。积分站没有公开的积分—美元换算，不参与折算。</p>
+  </section>
+
+  <section>
+    <h2>怎么挑</h2>
+    <ul class="hl">
+      <li>重度用 Claude Code（长上下文、大量工具调用）：优先按次计费的站，一次多贵都是固定价，不会被上下文撑爆。</li>
+      <li>轻量问答、写小段代码：按量计费更划算，同样的钱能跑更多次。</li>
+      <li>想长期不断供：看有没有每日签到或每日重置额度池——一次性注册额度总会用完。</li>
+      <li>都注册一遍最稳：额度互不影响，一个站限速就换下一个。</li>
+    </ul>
+  </section>
+
+  <section><h2>常见问题</h2>
+    <details><summary>为什么送的美元一样多，能用的次数差这么远？</summary><p>按次计费的站一次请求固定扣钱（$0.2~0.8），和 tokens 用量无关；按量计费的站按 tokens 扣。同样 $100，按次站可能只够一两百次对话，按量站在轻负载下能跑更多次。</p></details>
+    <details><summary>一次「一问一答」按多少 token 算？</summary><p>本页统一按输入 15,000 tokens、输出 2,000 tokens 折算——Claude Code 的系统提示与工具结果占掉大部分输入。开了 prompt cache 或长上下文，实际值会明显偏离这个估算。</p></details>
+    <details><summary>哪个站最划算？</summary><p>按本页折算口径，还收新用户的站里 AgentRouter 的首日额度能跑最多次（约 875 次）。但公益站规则天天变，以站内实时公示为准。</p></details>
+  </section>
+  <footer>
+    <ul>
+      <li>本页注册链接为<strong>邀请链接</strong>，通过它注册双方都会获得站点发放的额度，不影响你的注册流程。</li>
+      <li>本站只做信息聚合，与各站点无隶属关系，不代收费用、不承诺可用性；公益站可能随时改规则或关站。</li>
+      <li>请勿把生产密钥、隐私数据、企业代码交给来源不明的中转服务；重要项目请使用官方 API。</li>
+      <li>请遵守各站点与上游服务商条款，禁止批量注册、刷量、转售额度。</li>
+    </ul>
+    <p>数据快照时间：2026-09-15 21:23 UTC · 由 <a href="https://github.com/qi-jingjie/gcmp-welfare-temp">github.com/qi-jingjie/gcmp-welfare-temp</a> 自动生成 · <a href="https://qi-jingjie.github.io/gcmp-welfare-temp/feed.xml">Atom 订阅</a></p>
+  </footer>
+</div>
+</body>
+</html>

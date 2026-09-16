@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://qi-jingjie.github.io/gcmp-welfare-temp/sitemap.xml

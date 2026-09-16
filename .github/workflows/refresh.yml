@@ -1,0 +1,95 @@
+name: 刷新福利站数据
+
+on:
+  schedule:
+    # 每 6 小时刷新一次（避开整点，降低被限流概率）
+    - cron: '17 */6 * * *'
+  push:
+    branches: [main]
+    paths:
+      - 'data/sites.json'
+      - 'scripts/**'
+      - 'docs/assets/**'
+      - '.github/workflows/refresh.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: refresh
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: '22'
+
+      - name: 单测（合并逻辑不能把页面刷空）
+        run: npm test
+
+      - name: 抓取站点实时数据
+        run: npm run refresh
+
+      # 必须在 build 之前：这一步比对 HEAD 里的旧快照与刚抓到的新快照，
+      # 产出 data/history.json + data/changelog.json，落地页要读它们
+      - name: 归档历史 + 比对变动
+        id: history
+        run: npm run history
+
+      - name: 重新生成 README 与全站页面
+        run: npm run build
+
+      - name: 提交变更
+        id: commit
+        run: |
+          if [ -z "$(git status --porcelain)" ]; then
+            echo "数据没有变化，跳过提交。"
+            echo "pushed=0" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add README.md CHANGELOG.md docs data/live.json data/history.json data/changelog.json
+          git commit -m "chore: 自动刷新福利站数据 $(date -u '+%Y-%m-%d %H:%M UTC')"
+          # 带重试地推：本次跑到一半时 main 可能已经被别人推动过（合 PR、手动推、
+          # 上一轮 refresh），直接 git push 会吃 "! [rejected] (fetch first)" 然后整个
+          # workflow 标红、这一轮重新生成的数据也白扔。2026-09-01 合两个 Dependabot PR
+          # 时就这么翻过一次车。
+          # rebase 里 -X theirs 指的是「正在重放的那个提交」，也就是我们刚生成的这批产物；
+          # 冲突的一定是生成物（README / docs / live.json），以我们这份新的为准才对。
+          for i in 1 2 3; do
+            if git push; then
+              echo "pushed=1" >> "$GITHUB_OUTPUT"
+              exit 0
+            fi
+            echo "推送被拒（第 $i 次），拉一下再试"
+            git pull --rebase -X theirs origin main || { git rebase --abort || true; exit 1; }
+            sleep $((i * 5))
+          done
+          echo "重试三次仍推不上去，放弃本轮提交" >&2
+          exit 1
+
+      # 只有「影响值不值得注册」的变动才发 Release：
+      # Watch → Custom → Releases 的人会收到邮件，6 小时一次的小抖动不配打扰他们
+      - name: 发 Release（仅重要变动）
+        if: steps.history.outputs.major != '0' && steps.commit.outputs.pushed == '1'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh release create "${{ steps.history.outputs.tag }}" \
+            --title "${{ steps.history.outputs.title }}" \
+            --notes-file .tmp/release-notes.md
+
+      # 没配 secret 时脚本自己安静退出，不会把 CI 弄红
+      - name: 推送到 Telegram（可选）
+        if: steps.history.outputs.major != '0'
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: npm run notify

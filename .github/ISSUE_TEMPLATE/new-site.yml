@@ -1,0 +1,79 @@
+name: 投稿新的福利站
+description: 推荐一个能免费领额度的中转站 / 公益站
+title: '[收录] 站点名称'
+labels: [new-site]
+body:
+  - type: input
+    id: name
+    attributes:
+      label: 站点名称
+      placeholder: 例如 AgentRouter
+    validations:
+      required: true
+
+  - type: input
+    id: signup
+    attributes:
+      label: 注册链接
+      description: 有邀请链接就直接贴邀请链接
+      placeholder: https://example.com/register?aff=xxxx
+    validations:
+      required: true
+
+  - type: input
+    id: home
+    attributes:
+      label: 站点首页
+      placeholder: https://example.com
+    validations:
+      required: true
+
+  - type: dropdown
+    id: panel
+    attributes:
+      label: 面板类型
+      description: 决定能否自动抓取额度与模型（New API / One API 系可以）
+      options:
+        - New API
+        - One API
+        - Veloera / Done Hub
+        - 自研或未知
+    validations:
+      required: true
+
+  - type: input
+    id: bonus
+    attributes:
+      label: 新用户能拿多少额度
+      placeholder: 例如 注册送 $50，签到 $25/天；发站内积分的写清单位，例如 邀请注册送 600 积分
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: protocols
+    attributes:
+      label: 支持的兼容协议
+      options:
+        - label: Anthropic 兼容（Claude Code 可直连）
+        - label: OpenAI 兼容（Codex / Cursor / SDK 可直连）
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: 注册门槛与注意事项
+      placeholder: |
+        - 是否只能 GitHub / LinuxDO 登录
+        - 是否有账号注册天数、邀请码等限制
+        - 是否限速、限模型、限语言
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: confirm
+    attributes:
+      label: 确认
+      options:
+        - label: 我确认该站点当前可以免费拿到额度，且注册流程没有强制付费
+          required: true
+        - label: 我知道收录后仓库会自动定时探测该站点的公开接口
+          required: true

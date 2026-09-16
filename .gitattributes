@@ -1,0 +1,7 @@
+# 统一换行符：脚本跨平台可执行，避免 Windows 下 CRLF 污染 bash 脚本
+* text=auto eol=lf
+*.sh text eol=lf
+*.ps1 text eol=crlf
+*.png binary
+*.jpg binary
+*.ico binary

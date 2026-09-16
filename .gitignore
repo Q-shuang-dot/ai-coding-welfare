@@ -1,0 +1,13 @@
+node_modules/
+.DS_Store
+Thumbs.db
+*.log
+check.log
+.idea/
+.vscode/
+.env
+.env.*
+# scripts/history.mjs 的中间产物（Release 正文 / 推送素材），不进仓库
+.tmp/
+# 发帖底稿（自己用的推广话术，没必要公开在仓库里）
+promo/

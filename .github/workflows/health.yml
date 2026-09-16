@@ -1,0 +1,54 @@
+name: 死链巡检
+
+on:
+  schedule:
+    - cron: '23 3 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: '22'
+
+      - name: 检查注册链接与站点可用性
+        id: check
+        run: npm run check 2>&1 | tee check.log
+        continue-on-error: true
+
+      - name: 链接异常时开 Issue 报警
+        if: steps.check.outcome == 'failure'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          TITLE="⚠️ 福利站链接巡检失败"
+          EXISTING=$(gh issue list --state open --label link-broken --json number --jq '.[0].number' || true)
+          BODY=$'巡检发现关键链接不可用，请核对 `data/sites.json`。\n\n```\n'"$(tail -40 check.log)"$'\n```'
+          if [ -n "$EXISTING" ]; then
+            gh issue comment "$EXISTING" --body "$BODY"
+          else
+            gh label create link-broken --color d73a4a --description "推广链接或站点不可用" 2>/dev/null || true
+            gh issue create --title "$TITLE" --label link-broken --body "$BODY"
+          fi
+
+      - name: 汇总到运行摘要
+        if: always()
+        run: |
+          {
+            echo '## 巡检结果'
+            echo '```'
+            cat check.log
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: 有关键失败则让本次运行标红
+        if: steps.check.outcome == 'failure'
+        run: exit 1
