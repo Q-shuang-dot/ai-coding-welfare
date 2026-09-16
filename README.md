@@ -995,7 +995,7 @@ npm run check     # 校验链接是否还活着
 ## 💬 交流群
 
 <p align="center">
-  <img src="docs/assets/qq-group.png" width="260" alt="QQ 群二维码 GCMP-福利站 1125690737">
+  <img src="docs/assets/qq-group.jpg" width="260" alt="QQ 群二维码 GCMP-福利站 1125690737">
 </p>
 
 <p align="center">QQ 群：<b>1125690737</b>（GCMP-福利站） · 扫码或搜群号加入，第一时间获取站点变动与上车技巧。</p>
