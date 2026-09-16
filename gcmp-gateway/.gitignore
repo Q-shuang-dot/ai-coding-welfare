@@ -1,0 +1,13 @@
+# 含真实密钥的本地配置（从 config.example.json 复制后填入自己的 key）
+config.json
+config.json.bak
+config.json.bak-*
+
+# 运行期产生的状态文件
+stats.json
+stats.json.tmp
+learn-progress.json
+learn-progress.json.tmp
+
+__pycache__/
+*.pyc
