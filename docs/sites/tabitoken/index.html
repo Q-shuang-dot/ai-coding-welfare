@@ -28,7 +28,7 @@
   --accent-3: #14b8a6;
   --ok: #16a34a;
   --bad: #ef4444;
-  --radius: 18px;
+  --radius: 16px;
 }
 
 * { box-sizing: border-box; }
@@ -46,13 +46,13 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-.wrap { max-width: 1080px; margin: 0 auto; padding: 0 20px; }
+.wrap { max-width: 1120px; margin: 0 auto; padding: 0 20px; }
 
 /* ---------- hero ---------- */
-header.hero { padding: 84px 0 56px; text-align: center; }
+header.hero { padding: 70px 0 44px; text-align: center; }
 .hero h1 {
   margin: 0 0 14px;
-  font-size: clamp(30px, 5.6vw, 52px);
+  font-size: clamp(28px, 5.4vw, 48px);
   line-height: 1.15;
   letter-spacing: -0.02em;
   background: linear-gradient(96deg, var(--accent-2) 20%, var(--accent) 70%, var(--accent-3) 100%);
@@ -60,9 +60,9 @@ header.hero { padding: 84px 0 56px; text-align: center; }
   background-clip: text;
   color: transparent;
 }
-.hero p.sub { margin: 0 auto 26px; max-width: 620px; color: var(--fg-dim); font-size: clamp(15px, 2vw, 18px); }
+.hero p.sub { margin: 0 auto 24px; max-width: 620px; color: var(--fg-dim); font-size: clamp(15px, 2vw, 18px); }
 
-.pills { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-bottom: 30px; }
+.pills { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-bottom: 28px; }
 .pill {
   padding: 6px 13px; border: 1px solid var(--line); border-radius: 999px;
   background: rgba(255, 255, 255, 0.6); color: var(--fg-dim); font-size: 13px;
@@ -72,7 +72,7 @@ header.hero { padding: 84px 0 56px; text-align: center; }
 .cta-row { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
 .btn {
   display: inline-flex; align-items: center; gap: 8px;
-  padding: 13px 24px; border-radius: 12px; text-decoration: none;
+  padding: 12px 22px; border-radius: 12px; text-decoration: none;
   font-weight: 650; font-size: 15px; transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
 .btn-primary {
@@ -83,32 +83,54 @@ header.hero { padding: 84px 0 56px; text-align: center; }
 .btn:hover { transform: translateY(-2px); }
 
 /* ---------- sections ---------- */
-section { padding: 44px 0; }
-h2 { font-size: clamp(21px, 3vw, 28px); margin: 0 0 6px; letter-spacing: -0.01em; }
-h2 + .hint { margin: 0 0 26px; color: var(--fg-dim); font-size: 14px; }
+section { padding: 28px 0; }
+section + section { border-top: 1px solid var(--line); }
+h2 { font-size: clamp(18px, 2.4vw, 22px); margin: 0 0 10px; letter-spacing: -0.01em; }
+h2 + .hint { margin: 0 0 18px; color: var(--fg-dim); font-size: 13px; }
 
-.grid { display: grid; gap: 18px; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); }
+/* ---------- 首页：站点行列表 ---------- */
+.rows { display: flex; flex-direction: column; gap: 12px; }
 
-.card {
-  border: 1px solid var(--line); border-radius: var(--radius); background: var(--card);
-  padding: 22px; display: flex; flex-direction: column; gap: 14px;
+.row {
+  display: grid;
+  grid-template-columns: minmax(220px, 1.2fr) minmax(140px, 1fr) minmax(160px, 1fr) auto;
+  gap: 14px;
+  align-items: center;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--card);
+  padding: 18px 20px;
 }
-.card.featured { border-color: rgba(59, 130, 246, 0.45); box-shadow: 0 0 0 1px rgba(59, 130, 246, 0.14) inset; }
-.card h3 { margin: 0; font-size: 20px; display: flex; align-items: center; gap: 9px; flex-wrap: wrap; }
-.card .desc { margin: 0; color: var(--fg-dim); font-size: 14px; }
+.row.two {
+  grid-template-columns: auto 1fr;
+}
+.row.head {
+  padding: 10px 20px;
+  background: rgba(239, 242, 247, 0.9);
+  color: var(--fg-dim);
+  font-weight: 600;
+  font-size: 13px;
+}
+.row .status { display: inline-flex; align-items: center; gap: 8px; font-weight: 600; }
+.row .meta { color: var(--fg-dim); font-size: 14px; }
+.row .actions { display: flex; flex-wrap: wrap; gap: 8px; justify-content: flex-end; }
+.row .actions .btn { padding: 9px 14px; font-size: 13px; border-radius: 10px; }
+.row.featured { border-color: rgba(59, 130, 246, 0.45); box-shadow: 0 0 0 1px rgba(59, 130, 246, 0.12) inset; }
+.row.shut { border-color: rgba(251, 191, 36, 0.4); }
+.row .struck { text-decoration: line-through; color: var(--fg-dim); }
+.row .tag { font-size: 12px; padding: 3px 9px; border-radius: 6px; background: rgba(59, 130, 246, 0.12); color: var(--accent-2); }
+.row .tag.warn { background: rgba(251, 191, 36, 0.18); color: #b45309; }
+.row .tags { display: flex; flex-wrap: wrap; gap: 6px; }
 
 .dot { width: 9px; height: 9px; border-radius: 50%; flex: none; }
 .dot.up { background: var(--ok); box-shadow: 0 0 0 4px rgba(22, 163, 74, 0.18); }
 .dot.down { background: var(--bad); box-shadow: 0 0 0 4px rgba(239, 68, 68, 0.18); }
 
-.tag { font-size: 12px; padding: 3px 9px; border-radius: 6px; background: rgba(59, 130, 246, 0.12); color: var(--accent-2); }
-.tags { display: flex; flex-wrap: wrap; gap: 6px; }
-
-.kv { display: grid; grid-template-columns: auto 1fr; gap: 6px 14px; font-size: 14px; margin: 0; }
+/* ---------- 详情页：更紧凑的段落 ---------- */
+.kv { display: grid; grid-template-columns: auto 1fr; gap: 6px 16px; font-size: 14px; margin: 0; }
 .kv dt { color: var(--fg-dim); }
 .kv dd { margin: 0; }
 .kv dd b { color: var(--ok); }
-/* 额度构成写在首日额度后面，压暗一档，别抢主数字的视觉 */
 .kv dd small { color: var(--fg-dim); font-size: 12px; display: block; }
 
 ul.hl, ol.hl { margin: 0; padding-left: 18px; font-size: 14px; color: var(--fg-dim); }
@@ -137,11 +159,11 @@ table th, table td { padding: 8px 10px; border-bottom: 1px solid var(--line); te
 table th { color: var(--fg-dim); font-weight: 600; }
 table code { color: var(--accent-2); }
 
-footer { padding: 40px 0 64px; border-top: 1px solid var(--line); color: var(--fg-dim); font-size: 13px; }
+footer { padding: 36px 0 56px; border-top: 1px solid var(--line); color: var(--fg-dim); font-size: 13px; }
 footer ul { padding-left: 18px; }
 footer a { color: var(--accent-2); }
 
-/* ---------- 站内导航（多页之后加的） ---------- */
+/* ---------- 站内导航 ---------- */
 .topbar-stripe { height: 3px; background: linear-gradient(90deg, var(--accent), var(--accent-2), var(--accent-3)); }
 .nav { border-bottom: 1px solid var(--line); background: rgba(255,255,255,0.72); backdrop-filter: blur(8px); position: sticky; top: 0; z-index: 20; }
 .navrow { display: flex; align-items: center; gap: 4px; flex-wrap: wrap; padding: 10px 20px; }
@@ -153,7 +175,6 @@ footer a { color: var(--accent-2); }
 .navlink.active { color: var(--fg); background: rgba(59, 130, 246, 0.14); }
 .navspace { flex: 1 1 auto; }
 
-/* 面包屑：详情页比首页深两层，给个回头路 */
 .crumb { margin: 0 0 10px; font-size: 13px; color: var(--fg-dim); }
 .crumb a { color: var(--accent-2); text-decoration: none; }
 
@@ -163,7 +184,6 @@ footer a { color: var(--accent-2); }
 .bar.ok { background: var(--ok); }
 .bar.part { background: linear-gradient(to top, var(--bad) 50%, var(--ok) 50%); }
 .bar.bad { background: var(--bad); }
-/* 没有样本 ≠ 掉线：留一格暗底，别让空档看着像故障 */
 .bar.nodata { background: repeating-linear-gradient(45deg, #e5e7eb, #e5e7eb 2px, #dde2e9 2px, #dde2e9 4px); }
 
 /* ---------- 变动日志 ---------- */
@@ -178,14 +198,11 @@ ul.events li { display: flex; align-items: baseline; gap: 8px; padding: 6px 0; c
 
 .mt-auto { margin-top: auto; }
 
-/* ---------- 停注：站点还在跑，但不收新用户 ---------- */
-/* 这类站点仍然留在页面上（老用户还看得上、也方便看它什么时候回来），
-   但额度对新人不成立，所以视觉上必须一眼区分，不能和还能注册的站长得一样。 */
+/* ---------- 停注 ---------- */
 .tag.warn { background: rgba(251, 191, 36, 0.18); color: #b45309; }
 .pill.warn { border-color: rgba(251, 191, 36, 0.55); color: #b45309; }
-.card.shut { border-color: rgba(251, 191, 36, 0.4); }
-.card.shut .kv b.struck,
-.kv b.struck { text-decoration: line-through; color: var(--fg-dim); }
+.kv b.struck,
+.row .struck { text-decoration: line-through; color: var(--fg-dim); }
 tr.shut td { color: var(--fg-dim); }
 .notice {
   margin: 0;
@@ -197,14 +214,19 @@ tr.shut td { color: var(--fg-dim); }
   font-size: 13px;
   line-height: 1.6;
 }
+
 #gateway {
   background: linear-gradient(180deg, rgba(59, 130, 246, 0.06), rgba(124, 58, 237, 0.06));
   border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
 }
+
+@media (max-width: 860px) {
+  .row { grid-template-columns: 1fr; gap: 10px; padding: 16px; }
+  .row .actions { justify-content: flex-start; }
+}
 @media (max-width: 640px) {
-  header.hero { padding: 40px 0 36px; }
-  .card { padding: 18px; }
+  header.hero { padding: 40px 0 32px; }
   .navrow { padding: 8px 12px; gap: 2px; }
   .navlink { padding: 6px 9px; font-size: 13px; }
 }
@@ -234,7 +256,7 @@ tr.shut td { color: var(--fg-dim); }
   </header>
 
   <section><h2>能拿多少额度</h2>
-    <dl class="kv"><dt>首日可得</dt><dd><b>$120</b></dd><dt>额度构成</dt><dd>注册 $100 + 本页邀请 $20</dd><dt>站点名称</dt><dd>TaBiAI</dd><dt>面板版本</dt><dd><code>init-20260817-f880a343</code></dd><dt>每日签到</dt><dd>✅</dd><dt>开放注册</dt><dd>✅（仅 GitHub 注册）</dd><dt>登录方式</dt><dd>GitHub / 账号密码</dd><dt>接口延迟</dt><dd>576 ms</dd><dt>数据快照</dt><dd>2026-09-05 20:22 UTC</dd></dl>
+    <div class="rows"><div class="row head"><div>项目</div><div>数值</div></div><div class="row"><div>首日可得</div><div><b>$120</b></div></div><div class="row"><div>额度构成</div><div>注册 $100 + 本页邀请 $20</div></div><div class="row"><div>站点名称</div><div>TaBiAI</div></div><div class="row"><div>面板版本</div><div><code>init-20260817-f880a343</code></div></div><div class="row"><div>每日签到</div><div>✅</div></div><div class="row"><div>开放注册</div><div>✅（仅 GitHub 注册）</div></div><div class="row"><div>登录方式</div><div>GitHub / 账号密码</div></div><div class="row"><div>接口延迟</div><div>576 ms</div></div><div class="row"><div>数据快照</div><div>2026-09-05 20:22 UTC</div></div></div>
   </section>
 
   <section><h2>为什么值得注册</h2><ul class="hl"><li>新用户注册送 $100，从本页邀请链接进入再加 $20，首日 $120（2026-08-30 实测到账）</li><li>Anthropic 与 OpenAI 两种协议都开着，Claude Code 填个 Base URL 就能直连</li><li>只放 Claude Opus 四个型号（opus-5 / opus-5-thinking / opus-4-8 / 4-8-thinking），定价接口公开可查</li><li>面板开着每日签到，可以持续领额度</li></ul></section>

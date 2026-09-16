@@ -207,7 +207,9 @@ export function renderSitePage({ meta, site, snap, live, css, history, siblings 
   </header>
 
   <section><h2>${site.panel === 'local' ? '部署方式' : '能拿多少额度'}</h2>
-    <dl class="kv">${(site.panel === 'local' ? localFactRows(site, snap) : factRows(site, snap)).map(([k, v]) => `<dt>${esc(k)}</dt><dd>${v}</dd>`).join('')}</dl>
+    <div class="rows"><div class="row head"><div>项目</div><div>数值</div></div>${
+      (site.panel === 'local' ? localFactRows(site, snap) : factRows(site, snap)).map(([k, v]) => `<div class="row"><div>${esc(k)}</div><div>${v}</div></div>`).join('')
+    }</div>
   </section>
 
   ${list(site.panel === 'local' ? '为什么值得自托管' : '为什么值得注册', site.highlights)}

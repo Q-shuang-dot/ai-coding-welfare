@@ -54,69 +54,46 @@ function siteCard(site, snap) {
   const route = signupRoute(snap);
   const shut = route.state === 'closed';
   const local = site.panel === 'local';
-  const facts = [
-    local
-      ? ['部署端口', site.setup?.port ?? '15900']
-      : p.firstDay != null
-        ? [
-            '首日可得',
-            `<b${shut ? ' class="struck"' : ''}>${usd(p.firstDay, p.approx, p.unit)}</b>${
-              shut ? '<small> 站点停注中，新号拿不到</small>' : p.sources > 1 && breakdown(p) ? `<small> ${esc(breakdown(p))}</small>` : ''
-            }`,
-          ]
-        : null,
-    local
-      ? ['管理页', site.setup?.dashboardUrl ? `<a href="${esc(site.setup.dashboardUrl)}" target="_blank" rel="noopener">${esc(site.setup.dashboardUrl)}</a>` : '见部署文档']
-      : p.daily != null
-        ? ['之后每天', p.resets ? `重置额度池 ${usd(p.daily, p.approx, p.unit)}（不累积）` : `签到 ${usd(p.daily, p.approx, p.unit)}`]
-        : snap?.checkinEnabled
-          ? ['每日签到', '支持']
-          : snap?.checkinEnabled === false
-            ? ['每日签到', '不支持']
-            : null,
-    local
-      ? ['逻辑模型', `${site.setup?.models?.length ?? snap?.models?.length ?? 0} 个`]
-      : p.inviter
-        ? ['邀请他人', `$${p.inviter}`]
-        : null,
-    snap?.services?.length ? ['已开放服务', esc(snap.services.join(' / '))] : null,
-    route.short && !local ? ['注册通道', esc(route.short)] : null,
-    snap?.loginMethods?.length ? ['登录方式', esc(snap.loginMethods.join(' / '))] : null,
-    snap?.githubMinAccountAgeDays ? ['账号门槛', `GitHub 满 ${snap.githubMinAccountAgeDays} 天`] : null,
-    local ? ['默认 Claude 模型', snap?.defaults?.claude ? esc(snap.defaults.claude) : '见部署文档'] : null,
-    local ? ['默认 OpenAI 模型', snap?.defaults?.openai ? esc(snap.defaults.openai) : '见部署文档'] : null,
-    snap?.models?.length ? ['可用模型', snap.models.map((m) => esc(m.name)).join('、')] : ['可用模型', '登录后台查看'],
-    ['接口延迟', snap?.latencyMs != null ? `${snap.latencyMs} ms` : '—'],
-    staleHours(snap) ? ['数据快照', `${fmt(snap.staleFrom)}（接口暂未响应，沿用上次结果）`] : null,
-    snap?.probeBlocked && !staleHours(snap)
-      ? ['数据快照', `${fmt(snap.staleFrom ?? snap.checkedAt)}（本次探测被站点 WAF 拦下，机房 IP 常见，不影响家宽访问）`]
-      : null,
+
+  const credit = local
+    ? `自托管 / ${site.setup?.port ?? '15900'}`
+    : p.firstDay != null
+      ? `首日 <b${shut ? ' class="struck"' : ''}>${usd(p.firstDay, p.approx, p.unit)}</b>${p.daily != null ? ` / 每天 ${usd(p.daily, p.approx, p.unit)}` : ''}`
+      : snap?.checkinEnabled
+        ? '每日签到'
+        : snap?.checkinEnabled === false
+          ? '无签到'
+          : '额度未知';
+
+  const meta = [
+    route.short && !local ? `注册：${esc(route.short)}` : null,
+    snap?.latencyMs != null ? `${snap.latencyMs}ms` : null,
+    snap?.models?.length ? `${snap.models.length} 模型` : null,
   ].filter(Boolean);
 
   return `
-      <article class="card${site.recommended ? ' featured' : ''}${shut ? ' shut' : ''}">
-        <h3><span class="dot ${up ? 'up' : 'down'}" title="${up ? '在线' : '异常'}"></span>${esc(site.name)}${
-          site.recommended ? '<span class="tag">首推</span>' : ''
-        }${shut ? '<span class="tag warn">暂停注册</span>' : ''}</h3>
-        <p class="desc">${esc(site.subtitle)}</p>
-        ${route.note ? `<p class="notice">${esc(route.note)}</p>` : ''}
-        <div class="tags">${(site.tags ?? []).map((t) => `<span class="tag">${esc(t)}</span>`).join('')}</div>
-        <dl class="kv">${facts.map(([k, v]) => `<dt>${esc(k)}</dt><dd>${v}</dd>`).join('')}</dl>
-        <ul class="hl">${(site.highlights ?? []).slice(0, 3).map((h) => `<li>${esc(h)}</li>`).join('')}</ul>
-        ${accessBlock(site, snap)}
-        <div class="mt-auto"></div>
-        ${
-          site.panel === 'local'
-            ? `<a class="btn btn-primary" href="${esc(site.docsUrl || site.homeUrl || site.signupUrl)}" target="_blank" rel="noopener">查看部署文档 →</a>`
-            : `<a class="btn ${shut ? 'btn-ghost' : 'btn-primary'}" href="${esc(site.signupUrl)}" target="_blank" rel="noopener">${
-                shut ? `打开 ${esc(site.name)}（已停注）→` : `免费注册 ${esc(site.name)} →`
-              }</a>`
-        }
-        <a class="btn btn-ghost" href="sites/${esc(site.id)}/">额度明细 / 接入配置 / 可用性 →</a>
-        ${(site.mirrors ?? [])
-          .map((m) => `<a class="btn btn-ghost" href="${esc(m.signupUrl)}" target="_blank" rel="noopener">${esc(m.label ?? '备用入口')}</a>`)
-          .join('')}
-      </article>`;
+      <div class="row${site.recommended ? ' featured' : ''}${shut ? ' shut' : ''}">
+        <div class="status">
+          <span class="dot ${up ? 'up' : 'down'}" title="${up ? '在线' : '异常'}"></span>
+          <span>${esc(site.name)}${site.recommended ? ' <span class="tag">首推</span>' : ''}${shut ? ' <span class="tag warn">停注</span>' : ''}</span>
+        </div>
+        <div class="meta">
+          <div>${esc(site.subtitle)}</div>
+          ${meta.length ? `<div class="tags">${meta.map((t) => `<span class="tag">${t}</span>`).join('')}</div>` : ''}
+          ${route.note ? `<div class="notice">${esc(route.note)}</div>` : ''}
+        </div>
+        <div class="meta">${credit}</div>
+        <div class="actions">
+          ${
+            site.panel === 'local'
+              ? `<a class="btn btn-primary" href="${esc(site.docsUrl || site.homeUrl || site.signupUrl)}" target="_blank" rel="noopener">部署文档 →</a>`
+              : `<a class="btn ${shut ? 'btn-ghost' : 'btn-primary'}" href="${esc(site.signupUrl)}" target="_blank" rel="noopener">${
+                  shut ? `打开 ${esc(site.name)} →` : `免费注册 →`
+                }</a>`
+          }
+          <a class="btn btn-ghost" href="sites/${esc(site.id)}/">详情 →</a>
+        </div>
+      </div>`;
 }
 
 function modelsTable(sites, byId) {
@@ -230,7 +207,9 @@ export function renderHtml({ meta, sites, live, css, groups = [], history }) {
   <section id="gateway">
     <h2>本地网关</h2>
     <p class="hint">自托管、无额度限制、多上游故障转移；以下是当前可用的本地网关实例。</p>
-    <div class="grid">${localSites.map((s) => siteCard(s, byId.get(s.id))).join('')}
+    <div class="rows">
+      <div class="row head"><div>站点</div><div>说明</div><div>额度 / 状态</div><div>操作</div></div>
+      ${localSites.map((s) => siteCard(s, byId.get(s.id))).join('')}
     </div>
   </section>
 
@@ -245,7 +224,9 @@ export function renderHtml({ meta, sites, live, css, groups = [], history }) {
         : ''
     }
     ${extra ? `<p class="hint">${esc(extra)}——站内积分与美元没有公开换算关系，未计入上面的美元合计。</p>` : ''}
-    <div class="grid">${welfareSites.map((s) => siteCard(s, byId.get(s.id))).join('')}
+    <div class="rows">
+      <div class="row head"><div>站点</div><div>说明</div><div>额度 / 状态</div><div>操作</div></div>
+      ${welfareSites.map((s) => siteCard(s, byId.get(s.id))).join('')}
     </div>
   </section>
 ${modelsTable(sites, byId)}

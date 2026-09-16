@@ -1047,7 +1047,7 @@ test('停注的站点不算进「全注册能拿多少」，否则是虚报', ()
   assert.doesNotMatch(shutHtml, /首日最高/, '唯一的站停注了，就不该再有「首日最高」这个数');
   assert.match(shutHtml, /可注册 <b>0\/1<\/b>/);
   // 卡片留在页面上（老用户还用得着），但额度划掉、主按钮降级
-  assert.match(shutHtml, /class="card[^"]*shut"/);
+  assert.match(shutHtml, /class="row[^"]*shut"/);
   assert.match(shutHtml, /<b class="struck">\$120<\/b>/);
   assert.doesNotMatch(shutHtml, /免费注册 Demo 站/);
 });
