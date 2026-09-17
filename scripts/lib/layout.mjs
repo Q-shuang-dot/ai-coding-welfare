@@ -47,7 +47,7 @@ function navBar(base, current) {
 const ld = (data) =>
   JSON.stringify(data).replace(/</g, '\\u003c').replace(/>/g, '\\u003e').replace(/&/g, '\\u0026');
 
-export function pageShell({ meta, css, title, desc, canonical, base = '', current = '', jsonLd = [], body, live }) {
+export function pageShell({ meta, css, title, desc, canonical, base = '', current = '', jsonLd = [], body, live, local = false }) {
   const feed = `${meta.pagesUrl}feed.xml`;
   return `<!doctype html>
 <html lang="zh-CN">
@@ -74,7 +74,12 @@ ${navBar(base, current)}
 ${body}
   <footer>
     <ul>
-      <li>本页注册链接为<strong>邀请链接</strong>，通过它注册双方都会获得站点发放的额度，不影响你的注册流程。</li>
+      ${
+        // 自托管网关页既没有注册链接也没有额度，就别往上贴「邀请链接」那段免责声明
+        local
+          ? '<li>本页说明的是<strong>自托管网关</strong>：跑在你自己机器上的转发服务，不提供注册链接、不发免费额度，上游 key 需要你自行准备。</li>'
+          : '<li>本页注册链接为<strong>邀请链接</strong>，通过它注册双方都会获得站点发放的额度，不影响你的注册流程。</li>'
+      }
       <li>本站只做信息聚合，与各站点无隶属关系，不代收费用、不承诺可用性；公益站可能随时改规则或关站。</li>
       <li>请勿把生产密钥、隐私数据、企业代码交给来源不明的中转服务；重要项目请使用官方 API。</li>
       <li>请遵守各站点与上游服务商条款，禁止批量注册、刷量、转售额度。</li>

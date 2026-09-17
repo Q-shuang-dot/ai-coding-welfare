@@ -129,6 +129,7 @@
       },
       "setup": {
         "client": "本地网关",
+        "port": 15800,
         "note": "这是一个跑在你本机的网关服务，不能远程注册；需要自己 clone 仓库、填入上游 key 并启动进程。",
         "steps": [
           "clone 仓库并把 config.example.json 复制为 config.json",

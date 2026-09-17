@@ -126,6 +126,8 @@ export function auditCredits(sites, live) {
   const byId = new Map((live?.sites ?? []).map((s) => [s.id, s]));
   const warns = [];
   for (const site of sites) {
+    // 自托管条目（panel: local）没有注册额度这回事，不该因为「credits 没填」被念叨
+    if (site.panel === 'local') continue;
     const plan = creditPlan(site, byId.get(site.id));
     // 接口实测值是美元口径（New API 的 quota_for_invitee），只能和美元站对账
     if (plan.unit === DEFAULT_UNIT && plan.invite != null && plan.apiInvite != null && plan.invite !== plan.apiInvite) {

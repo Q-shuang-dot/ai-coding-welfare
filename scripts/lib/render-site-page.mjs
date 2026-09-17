@@ -38,8 +38,19 @@ function factRows(site, snap) {
   ].filter(Boolean);
 }
 
-function modelsTable(snap) {
+function modelsTable(site, snap) {
   if (!snap?.models?.length) return '';
+  const local = site.panel === 'local';
+  // 自托管网关的逻辑模型没有「价格」这回事（成本来自你自己配的上游），
+  // 照搬福利站那张倍率 / 输入 / 输出表只会得到一列破折号，所以只列模型名与协议
+  if (local) {
+    return `<section><h2>支持的逻辑模型</h2><p class="hint">客户端里填逻辑模型名即可，具体走哪条上游由网关按 config.json 的路由与健康度决定。</p>
+    <div class="table-wrap"><table><thead><tr><th>逻辑模型</th><th>支持的协议</th></tr></thead>
+    <tbody>${snap.models
+      .map((m) => `<tr><td><code>${esc(m.name)}</code></td><td>${esc((m.protocols ?? []).join(' / '))}</td></tr>`)
+      .join('')}</tbody></table></div></section>`;
+  }
+  if (snap.models.every((m) => m.fixedPrice == null && m.inputPerMTok == null)) return '';
   const fixedAny = snap.models.some((m) => m.fixedPrice != null);
   const rows = snap.models.map((m) => {
     const fixed = m.fixedPrice != null;
@@ -160,10 +171,14 @@ export function renderSitePage({ meta, site, snap, live, css, history, siblings 
   const route = signupRoute(snap);
   const shut = route.state === 'closed';
   const url = `${meta.pagesUrl}sites/${site.id}/`;
-  const title = `${site.name} 免费额度 / 邀请链接 / Claude Code 配置 — ${meta.title}`;
-  const desc = `${site.name}：${site.subtitle}${
-    shut ? '。⚠ 站点接口自报已暂停新用户注册' : p.firstDay != null ? `。首日可得 ${usd(p.firstDay, p.approx, p.unit)}${breakdown(p) ? `（${breakdown(p)}）` : ''}` : ''
-  }。含实时在线状态、模型价格、Claude Code / Codex 接入配置与踩坑清单，数据快照 ${fmt(snap?.checkedAt)}。`;
+  const title = site.panel === 'local'
+    ? `${site.name} 自托管 AI 网关 · 部署与客户端配置 — ${meta.title}`
+    : `${site.name} 免费额度 / 邀请链接 / Claude Code 配置 — ${meta.title}`;
+  const desc = site.panel === 'local'
+    ? `${site.name}：${site.subtitle}。含部署步骤、逻辑模型清单、VS Code / Claude Code / Codex / OpenAI SDK 接入配置与排障要点，数据快照 ${fmt(snap?.checkedAt)}。`
+    : `${site.name}：${site.subtitle}${
+        shut ? '。⚠ 站点接口自报已暂停新用户注册' : p.firstDay != null ? `。首日可得 ${usd(p.firstDay, p.approx, p.unit)}${breakdown(p) ? `（${breakdown(p)}）` : ''}` : ''
+      }。含实时在线状态、模型价格、Claude Code / Codex 接入配置与踩坑清单，数据快照 ${fmt(snap?.checkedAt)}。`;
 
   const faq = site.panel === 'local'
     ? [
@@ -213,7 +228,7 @@ export function renderSitePage({ meta, site, snap, live, css, history, siblings 
   </section>
 
   ${list(site.panel === 'local' ? '为什么值得自托管' : '为什么值得注册', site.highlights)}
-  ${modelsTable(snap)}
+  ${modelsTable(site, snap)}
   ${list(site.panel === 'local' ? '前置要求' : '注册要求', site.register?.requirements)}
   ${configBlocks(site, snap)}
   ${list('如何继续拿额度', site.earnMore)}
@@ -233,7 +248,11 @@ export function renderSitePage({ meta, site, snap, live, css, history, siblings 
   </section>
 
   <section><h2>其它福利站</h2>
-    <p class="hint">额度用完了就换一家，各站额度互不影响。</p>
+    <p class="hint">${
+      site.panel === 'local'
+        ? '网关自己不发额度——上游 key 可以自己买，也可以从下面这些还在收人的福利站领。两件事互不依赖。'
+        : '额度用完了就换一家，各站额度互不影响。'
+    }</p>
     <ul class="hl">${siblings
       .map((s) => `<li><a href="../${esc(s.id)}/">${esc(s.name)}</a> — ${esc(s.subtitle)}</li>`)
       .join('')}</ul>
@@ -248,6 +267,7 @@ ${COPY_JS}`;
     title,
     desc,
     canonical: url,
+    local: site.panel === 'local',
     jsonLd: [
       breadcrumb(meta, [
         { name: meta.title, url: meta.pagesUrl },

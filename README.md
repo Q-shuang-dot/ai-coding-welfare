@@ -3,15 +3,14 @@
 <p align="center">免费额度 · 白嫖 Claude Code / Codex / Cursor 的中转与公益站合集</p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/%E6%94%B6%E5%BD%95%E7%AB%99%E7%82%B9-8%20%E4%B8%AA-blue" alt="收录站点">
-  <img src="https://img.shields.io/badge/%E5%9C%A8%E7%BA%BF-8%2F8-brightgreen" alt="在线">
+  <img src="https://img.shields.io/badge/%E6%94%B6%E5%BD%95%E7%A6%8F%E5%88%A9%E7%AB%99-7%20%E4%B8%AA-blue" alt="收录福利站">
+  <img src="https://img.shields.io/badge/%E5%9C%A8%E7%BA%BF-7%2F7-brightgreen" alt="在线">
   <img src="https://img.shields.io/badge/%E9%A6%96%E6%97%A5%E5%8F%AF%E5%BE%97-%E6%9C%80%E9%AB%98%20%24175-success" alt="首日可得">
-  <img src="https://img.shields.io/badge/%E6%95%B0%E6%8D%AE%E6%9B%B4%E6%96%B0-2026--09--16%2009.11%20UTC-informational" alt="数据更新">
+  <img src="https://img.shields.io/badge/%E6%95%B0%E6%8D%AE%E6%9B%B4%E6%96%B0-2026--09--16%2021.18%20UTC-informational" alt="数据更新">
 </p>
 
 <p align="center">
   <a href="https://agentrouter.org/register?aff=aibw"><b>AgentRouter 注册</b></a> ·
-  <a href="https://github.com/Q-shuang-dot/gcmp-welfare-temp"><b>GCMP Gateway 注册</b></a> ·
   <a href="https://docode.cc/register?aff=1Qof"><b>DoCode 注册</b></a> ·
   <a href="https://api.justwoker.icu/register?aff=OIWh"><b>JustDoWork 注册</b></a> ·
   <a href="https://kktoken.cc/sign-up?aff=JMQC"><b>KKtoken AI 注册</b></a> ·
@@ -24,12 +23,131 @@
 
 ---
 
-## 🚀 一分钟上车
+## 🧭 这个仓库有两部分
+
+| 部分 | 是什么 | 入口 |
+| :-- | :-- | :-- |
+| 🛰 **GCMP Gateway** | 跑在你自己机器上的 AI 网关：多个逻辑模型、OpenAI / Anthropic / Responses 三协议全收、上游故障转移、配置热加载 | [部署文档](gcmp-gateway/README.md) · [详情页](https://q-shuang-dot.github.io/gcmp-welfare-temp/sites/gcmp-gateway/) |
+| 🎁 **福利站导航** | 7 个第三方公益站 / 中转站的注册额度与实测状态，CI 每 6 小时自动抓取 | 本文件下面两张表 |
+
+> 两件事互不依赖，只用其中一个也行；但把福利站领到的 key 填进网关，就能在一个地址里在 VS Code、Claude Code、Codex 之间换模型，不用各处改配置。
+
+## 🛰 我的网关：GCMP Gateway
+
+> 本地自托管 AI 网关 · 7 个逻辑模型，OpenAI / Anthropic / Responses 三协议全收，故障转移 + 热加载 + 本地管理页，没有额度焦虑
+
+<a href="gcmp-gateway/README.md"><img src="https://img.shields.io/badge/%E9%83%A8%E7%BD%B2%E6%96%87%E6%A1%A3-GCMP%20Gateway-blue?style=for-the-badge" alt="GCMP Gateway 部署文档"></a>
+
+**它和福利站不是一回事**：福利站是别人开的、你注册领额度；这个网关跑在你自己机器上，不发额度、没有邀请码、也不收你的钱——它把你手上（或上面那些站的）key 汇总成一个地址对外，一个逻辑模型挂多条上游，哪条挂了自动换下一条。
+
+**为什么值得自托管**
+
+- 你的网关你做主：部署在本机，没有注册链接、没有额度限制、没有账号被封的风险——上游 key 在你手里，随时换
+- 多上游故障转移：opus-5 / gpt-5.6 / glm-5.3 / deepseek / cheap 等 7 个逻辑模型，一条挂了自动切下一条，比只挂一家免费站稳得多
+- VS Code GCMP、Claude Code、Codex、OpenAI SDK 一套地址全搞定：/v1/chat/completions + /v1/responses + Anthropic /messages 三协议自带转换，不用自己写适配
+- config.json 热加载，管理页可看路由命中、上游健康、请求统计与一键测试；响应头自带 X-Gateway-Upstream / X-Gateway-Model，排障一眼看到实际命中的上游
+
+**7 个逻辑模型**（客户端只填逻辑模型名，具体走哪个上游由网关按路由与健康度决定）
+
+| 逻辑模型 | 支持的协议 |
+| :-- | :-- |
+| `opus-5` | OpenAI / Responses / Anthropic |
+| `opus-4-8` | OpenAI / Responses / Anthropic |
+| `sonnet-5` | OpenAI / Responses / Anthropic |
+| `gpt-5.6` | OpenAI / Responses |
+| `glm-5.3` | OpenAI / Responses / Anthropic |
+| `deepseek` | OpenAI / Responses / Anthropic |
+| `cheap` | OpenAI / Responses / Anthropic |
+
+**接入配置**（把 `127.0.0.1:15800` 换成你自己的监听地址）
+
+<details><summary><b>VS Code GCMP</b></summary>
+
+```json
+{
+  "gcmp.compatibleModels": [
+    "opus-5",
+    "opus-4-8",
+    "sonnet-5",
+    "gpt-5.6",
+    "glm-5.3",
+    "deepseek",
+    "cheap"
+  ],
+  "gcmp.baseUrl": "http://127.0.0.1:15800/v1"
+}
+```
+
+</details>
+<details><summary><b>Claude Code</b></summary>
+
+```bash
+# macOS / Linux
+export ANTHROPIC_BASE_URL=http://127.0.0.1:15800
+export ANTHROPIC_AUTH_TOKEN=你的 GCMP Key
+export ANTHROPIC_MODEL=glm-5.3
+claude
+```
+
+</details>
+<details><summary><b>Codex CLI</b></summary>
+
+```toml
+model = "gpt-5.6"
+model_provider = "gcmp"
+
+[model_providers.gcmp]
+name = "GCMP Gateway"
+base_url = "http://127.0.0.1:15800/v1"
+env_key = "GCMP_API_KEY"
+wire_api = "responses"
+```
+
+</details>
+<details><summary><b>OpenAI SDK</b></summary>
+
+```python
+from openai import OpenAI
+
+client = OpenAI(
+    api_key="你的 GCMP Key",
+    base_url="http://127.0.0.1:15800/v1",
+)
+resp = client.chat.completions.create(
+    model="glm-5.3",
+    messages=[{"role": "user", "content": "ping"}],
+)
+print(resp.choices[0].message.content)
+```
+
+</details>
+
+**部署步骤**
+
+1. clone 仓库并把 config.example.json 复制为 config.json
+2. 按你的上游平台填入 apiKey，必要时按站点说明补 User-Agent / chatPath / protocol 等字段
+3. 运行网关后浏览器打开 http://127.0.0.1:15800/admin 确认模型与路由状态
+4. 客户端 Base URL 填 http://127.0.0.1:15800/v1，模型名填逻辑模型名
+
+**⚠️ 使用前必读**
+
+- 服务只监听 127.0.0.1:15800，不会自动暴露到公网；想让局域网设备使用需要自行代理或改监听地址
+- 网关仅转发请求，模型质量、可用性与额度来自你配置的上游账号，不是这个仓库本身提供的
+- config.json 里若配置了中文上游名，需要网关对 HTTP 头做 latin-1 安全转义，旧版本直接写中文头会被 latin-1 编码打断
+
+**入口**
+
+[完整部署文档](gcmp-gateway/README.md) · [英文说明](gcmp-gateway/README.en.md) · [详情页](https://q-shuang-dot.github.io/gcmp-welfare-temp/sites/gcmp-gateway/) · 控制台 <http://127.0.0.1:15800/admin> · [仓库](https://github.com/Q-shuang-dot/gcmp-welfare-temp)
+
+---
+
+## 🚀 一分钟上车（福利站）
+
+> 下面两张表都是第三方站点，本仓库只做信息聚合；自己搭网关看上面那一节。
 
 | 站点 | 状态 | 首日可得 | 额度构成 | 之后每天 | 兼容协议 | 模型 | 注册 | 邀请码 |
 | :-- | :--: | :--: | :-- | :--: | :--: | :--: | :--: | :--: |
 | **AgentRouter** 🔥 | 🟢 在线 | **$175** | 注册 $100 + 本页邀请 $50 + 首签 $25 | $25/天 | Anthropic + OpenAI | 6 个可查 | [点此注册 →](https://agentrouter.org/register?aff=aibw) | — |
-| **GCMP Gateway** 🔥 | 🟢 在线 | 站内公示 | — | — | OpenAI / Anthropic / Responses | 7 个可查 | [点此注册 →](https://github.com/Q-shuang-dot/gcmp-welfare-temp) | — |
 | **DoCode** | 🟢 在线 | **300 站内刀** | 注册 50 站内刀 + 本页邀请 250 站内刀 | 无签到 | Anthropic + OpenAI | 需登录查看 | [点此注册 →](https://docode.cc/register?aff=1Qof) | `1Qof` |
 | **JustDoWork** | 🟢 在线 | **≈$92** | 注册 $70 + 首签 ≈$22 | ≈$22/天 | Anthropic + OpenAI | 需登录查看 | [GitHub 注册 →](https://api.justwoker.icu/register?aff=OIWh) | — |
 | **KKtoken AI** | 🟢 在线 | **$120** | 注册 $75 + 本页邀请 $25 + 首签 $20 | $20/天 | Anthropic + OpenAI | 需登录查看 | [GitHub 注册 →](https://kktoken.cc/sign-up?aff=JMQC) | — |
@@ -37,13 +155,13 @@
 | **SeekAi** | 🟢 在线 | 站内公示 | — | 支持签到 | OpenAI | 需登录查看 | [点此注册 →](https://seekai.cc/sign-up?aff=dDJy) | `dDJy` |
 | **TaBiAI** | 🟢 在线 | **$120** | 注册 $100 + 本页邀请 $20 | 支持签到 | Anthropic + OpenAI | 4 个可查 | [GitHub 注册 →](https://tabitoken.com/sign-up?aff=AfA4) | — |
 
-> 「首日可得」= 注册基础额度 + 本页邀请链接额度 + 当天能领的签到额度（每日重置额度池的站点按一天的池子算）；模型、价格、在线状态由脚本抓取站点公开接口自动生成，最后更新：`2026-09-16 09:11 UTC`。
+> 「首日可得」= 注册基础额度 + 本页邀请链接额度 + 当天能领的签到额度（每日重置额度池的站点按一天的池子算）；模型、价格、在线状态由脚本抓取站点公开接口自动生成，最后更新：`2026-09-16 21:18 UTC`。
 >
 > 「邀请码」列写了码的站（DoCode `1Qof`、SeekAi `dDJy`），注册表单里有一栏要**自己填**，漏填就只拿得到注册基础额度、事后补不上；其余站写 — 是因为邀请额度由链接自带，不用手打。
 >
 > 5 个按美元计价、且还收新用户的站全注册一遍，第一天手上大约有 **$507** 额度可用；DoCode 另发 300 站内刀，Matrix 另发 600 积分，都是各站自己的计价单位、与美元没有公开换算，未计入这个合计。
 >
-> 🟡 有 1 个站点已超过 48 小时没抓到接口数据，其明细为上一次成功抓取的快照；在线状态按注册页实际可访问性判断。
+> 🟡 有 2 个站点已超过 48 小时没抓到接口数据，其明细为上一次成功抓取的快照；在线状态按注册页实际可访问性判断。
 
 **只想快点用上 Claude Code？** 三步：
 
@@ -61,7 +179,7 @@ bash scripts/quickstart.sh
 powershell -ExecutionPolicy Bypass -File scripts/quickstart.ps1
 ```
 
-## 📚 站点详情
+## 📚 福利站详情
 
 
 ### 🟢 AgentRouter 🔥 首推
@@ -86,11 +204,12 @@ powershell -ExecutionPolicy Bypass -File scripts/quickstart.ps1
 
 **实时数据**（自动抓取站点公开接口）
 
+- ⚠ 接口已连续 55 小时没抓到新数据，下列信息为 `2026-09-15 01:48 UTC` 的快照
 - 站点名称：**Agent Router**
 - 面板版本：`init-20260915-25158da5`
 - 邀请他人可得：**$50**
 - 登录方式：GitHub / LinuxDO
-- 接口延迟：318 ms
+- 接口延迟：343 ms
 
 **镜像 / 备用入口**
 
@@ -203,66 +322,6 @@ curl -s https://agentrouter.org/v1/chat/completions \
 
 ---
 
-### 🟢 GCMP Gateway 🔥 首推
-
-> 本地自托管 AI 网关 · 7 个逻辑模型，OpenAI / Anthropic / Responses 三协议全收，故障转移 + 热加载 + 本地管理页，没有额度焦虑
-
-<a href="https://github.com/Q-shuang-dot/gcmp-welfare-temp"><img src="https://img.shields.io/badge/%E7%AB%8B%E5%8D%B3%E6%B3%A8%E5%86%8C-GCMP%20Gateway-brightgreen?style=for-the-badge" alt="注册 GCMP Gateway"></a>
-
-**为什么值得注册**
-
-- 你的网关你做主：部署在本机，没有注册链接、没有额度限制、没有账号被封的风险——上游 key 在你手里，随时换
-- 多上游故障转移：opus-5 / gpt-5.6 / glm-5.3 / deepseek / cheap 等 7 个逻辑模型，一条挂了自动切下一条，比只挂一家免费站稳得多
-- VS Code GCMP、Claude Code、Codex、OpenAI SDK 一套地址全搞定：/v1/chat/completions + /v1/responses + Anthropic /messages 三协议自带转换，不用自己写适配
-- config.json 热加载，管理页可看路由命中、上游健康、请求统计与一键测试；响应头自带 X-Gateway-Upstream / X-Gateway-Model，排障一眼看到实际命中的上游
-
-**实时数据**（自动抓取站点公开接口）
-
-
-
-**当前可用模型**
-
-| 模型 | 倍率 | 输入 / 1M tokens | 输出 / 1M tokens | 协议 |
-| :-- | :--: | :--: | :--: | :--: |
-| `opus-5` | — | — | — | OpenAI / Responses / Anthropic |
-| `opus-4-8` | — | — | — | OpenAI / Responses / Anthropic |
-| `sonnet-5` | — | — | — | OpenAI / Responses / Anthropic |
-| `gpt-5.6` | — | — | — | OpenAI / Responses |
-| `glm-5.3` | — | — | — | OpenAI / Responses / Anthropic |
-| `deepseek` | — | — | — | OpenAI / Responses / Anthropic |
-| `cheap` | — | — | — | OpenAI / Responses / Anthropic |
-
-<sub>倍率 1 ≈ $2 / 1M tokens，输出价 = 倍率 × 补全倍率 × $2；以站内实时价格为准。</sub>
-
-**注册要求**
-
-- 本页不是远程福利站，不提供注册链接与免费额度
-- 需要准备自己的上游 key，并遵守各上游平台条款
-
-**接入配置**
-
-> 这是一个跑在你本机的网关服务，不能远程注册；需要自己 clone 仓库、填入上游 key 并启动进程。
-
-1. clone 仓库并把 config.example.json 复制为 config.json
-2. 按你的上游平台填入 apiKey，必要时按站点说明补 User-Agent / chatPath / protocol 等字段
-3. 运行网关后浏览器打开 http://127.0.0.1:15800/admin 确认模型与路由状态
-4. 客户端 Base URL 填 http://127.0.0.1:15800/v1，模型名填逻辑模型名
-
-控制台入口：<http://127.0.0.1:15800/admin>
-
-**⚠️ 使用前必读**
-
-- 服务只监听 127.0.0.1:15800，不会自动暴露到公网；想让局域网设备使用需要自行代理或改监听地址
-- 网关仅转发请求，模型质量、可用性与额度来自你配置的上游账号，不是这个仓库本身提供的
-- config.json 里若配置了中文上游名，需要网关对 HTTP 头做 latin-1 安全转义，旧版本直接写中文头会被 latin-1 编码打断
-
-**官方渠道**
-
-- 仓库: https://github.com/Q-shuang-dot/gcmp-welfare-temp
-- 管理页: http://127.0.0.1:15800/admin
-
----
-
 ### 🟢 DoCode
 
 > New API 中转站 · 注册送 50 站内刀，注册时填邀请码 zMRe 再加 250，首日 300 刀，Claude 与 GPT 都在架上
@@ -290,7 +349,7 @@ curl -s https://agentrouter.org/v1/chat/completions \
 - 每日签到：❌
 - 开放注册：✅
 - 登录方式：账号密码
-- 接口延迟：818 ms
+- 接口延迟：764 ms
 
 **镜像 / 备用入口**
 
@@ -420,7 +479,7 @@ curl -s https://docode.cc/v1/chat/completions \
 - 开放注册：✅（站点关掉了邮箱密码注册，得用 GitHub 登录建号（防批量注册的常规做法）。）
 - 登录方式：GitHub / 账号密码
 - GitHub 账号需满 **365 天**
-- 接口延迟：1641 ms
+- 接口延迟：674 ms
 
 > 该站模型清单需登录后台查看，注册后在「模型价格」页确认。
 
@@ -531,7 +590,7 @@ curl -s https://api.justwoker.icu/v1/chat/completions \
 - 每日签到：✅
 - 开放注册：✅（站点关掉了邮箱密码注册，得用 GitHub 登录建号（防批量注册的常规做法）。）
 - 登录方式：GitHub / 账号密码
-- 接口延迟：1515 ms
+- 接口延迟：1393 ms
 
 > 该站把价格页设成了登录可见（`/api/pricing` 返回 401），本页不列模型表。站内公示的计价口径是输入 $1 / 百万 tokens、输出 $1 / 百万 tokens，按 token 而不是按次，注册后在控制台「模型价格」页确认实际清单与倍率。
 
@@ -637,7 +696,7 @@ curl -s https://kktoken.cc/v1/chat/completions \
 
 **实时数据**（自动抓取站点公开接口）
 
-- 接口延迟：1838 ms
+- 接口延迟：1598 ms
 
 > 模型清单与价格需登录后在控制台「模型列表」查看（按每百万 Tokens 计价，可按厂商 / 上下文窗口筛选），站点没有公开的模型与定价接口，本页不做承诺。
 
@@ -701,7 +760,7 @@ curl -s https://kktoken.cc/v1/chat/completions \
 - 每日签到：✅
 - 开放注册：✅
 - 登录方式：GitHub / Telegram / 账号密码
-- 接口延迟：5775 ms
+- 接口延迟：1270 ms
 
 **镜像 / 备用入口**
 
@@ -798,13 +857,13 @@ curl -s https://seekai.cc/v1/chat/completions \
 
 **实时数据**（自动抓取站点公开接口）
 
-- ⚠ 接口已连续 254 小时没抓到新数据，下列信息为 `2026-09-05 20:22 UTC` 的快照
+- ⚠ 接口已连续 277 小时没抓到新数据，下列信息为 `2026-09-05 20:22 UTC` 的快照
 - 站点名称：**TaBiAI**
 - 面板版本：`init-20260817-f880a343`
 - 每日签到：✅
 - 开放注册：✅（站点关掉了邮箱密码注册，得用 GitHub 登录建号（防批量注册的常规做法）。）
 - 登录方式：GitHub / 账号密码
-- 接口延迟：624 ms
+- 接口延迟：711 ms
 
 **当前可用模型**
 
@@ -901,7 +960,7 @@ curl -s https://tabitoken.com/v1/chat/completions \
 
 ## 🔔 额度变了，这里会通知你
 
-CI 每 6 小时抓一次各站接口，与上一次快照逐字段比对，目前已攒下 121 个样本、覆盖约 26 天。额度调整、掉线与恢复、模型上下线、价格变动都会自动记一条：
+CI 每 6 小时抓一次各站接口，与上一次快照逐字段比对，目前已攒下 124 个样本、覆盖约 26.5 天。额度调整、掉线与恢复、模型上下线、价格变动都会自动记一条：
 
 - 点仓库右上角 **Watch → Custom → Releases**：有重要变动时 GitHub 直接发邮件
 - 订阅 [Atom feed](https://q-shuang-dot.github.io/gcmp-welfare-temp/feed.xml)：RSS 阅读器 / Feedly / Telegram 机器人都能读
@@ -938,6 +997,7 @@ CI 每 6 小时抓一次各站接口，与上一次快照逐字段比对，目�
 | [`scripts/check.mjs`](scripts/check.mjs) | 链接与站点健康检查，失效即 CI 报警 |
 | [`scripts/test.mjs`](scripts/test.mjs) | 合并逻辑与额度口径的单测（零依赖，`npm test`） |
 | [`scripts/quickstart.sh`](scripts/quickstart.sh) / [`.ps1`](scripts/quickstart.ps1) | 交互式配置 Claude Code 环境变量 |
+| [`gcmp-gateway/`](gcmp-gateway/) | 自托管网关本体：单文件 Python 服务 + 本地管理页 + 部署文档，与福利站数据是两件事 |
 
 本地跑一遍：
 

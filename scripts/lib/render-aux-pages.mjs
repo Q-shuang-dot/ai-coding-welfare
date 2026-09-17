@@ -67,9 +67,11 @@ function compareRows(sites, byId) {
 export function renderComparePage({ meta, sites, live, css }) {
   const byId = new Map((live?.sites ?? []).map((s) => [s.id, s]));
   const url = `${meta.pagesUrl}compare/`;
+  // 这页只折算第三方福利站：自托管网关（panel=local）没有单价也没有「首日额度」，进表只会多一行「—」
+  const welfare = sites.filter((s) => s.panel !== 'local');
   // 「最划算」得是新用户真能注册上的站，否则这页给出的答案是个死链
-  const openSites = sites.filter((s) => acceptsNew(byId.get(s.id)));
-  const closedSites = sites.filter((s) => !acceptsNew(byId.get(s.id)));
+  const openSites = welfare.filter((s) => acceptsNew(byId.get(s.id)));
+  const closedSites = welfare.filter((s) => !acceptsNew(byId.get(s.id)));
   const ranked = openSites
     .map((s) => ({ s, est: estimateTurns(s, byId.get(s.id)) }))
     .filter((x) => x.est)
@@ -94,7 +96,7 @@ export function renderComparePage({ meta, sites, live, css }) {
     <h1>按次计费 vs 按量计费</h1>
     <p class="sub">同样送 $100，能跑多少次 Claude Code 差十倍。把所有站折算到同一个单位再比。</p>
     <div class="pills">
-      <span class="pill">收录 <b>${sites.length}</b> 站</span>
+      <span class="pill">收录 <b>${welfare.length}</b> 站</span>
       ${total > 0 ? `<span class="pill">美元站全注册约 <b>$${total}</b></span>` : ''}
       ${bestValue ? `<span class="pill">最耐用 <b>${esc(bestValue.s.name)}</b></span>` : ''}
       <span class="pill">数据更新 <b>${esc(fmt(live?.generatedAt))}</b></span>
@@ -108,7 +110,7 @@ export function renderComparePage({ meta, sites, live, css }) {
     )} / 输出 ${TURN.output.toLocaleString('en-US')} tokens 估算，取各站最便宜的 Claude 型号。</p>
     <div class="table-wrap"><table>
       <thead><tr><th>站点</th><th>计费方式</th><th>首日额度</th><th>单次成本</th><th>约能跑</th><th>折算所用模型</th></tr></thead>
-      <tbody>${compareRows(sites, byId).join('')}</tbody>
+      <tbody>${compareRows(welfare, byId).join('')}</tbody>
     </table></div>
     <p class="hint">每日重置额度池的站点，「约能跑」是每天的量，次日回满但不累积。积分站没有公开的积分—美元换算，不参与折算。${
       closedSites.length
@@ -137,8 +139,8 @@ export function renderComparePage({ meta, sites, live, css }) {
     live,
     base: '../',
     current: 'compare/',
-    title: `按次计费 vs 按量计费：${sites.length} 个 AI Coding 福利站折算横评 — ${meta.title}`,
-    desc: `把 ${sites.length} 个免费 AI Coding 中转站 / 公益站的首日额度折算成「能跑多少次 Claude Code 一问一答」，按次计费与按量计费同尺度对比，数据快照 ${fmt(
+    title: `按次计费 vs 按量计费：${welfare.length} 个 AI Coding 福利站折算横评 — ${meta.title}`,
+    desc: `把 ${welfare.length} 个免费 AI Coding 中转站 / 公益站的首日额度折算成「能跑多少次 Claude Code 一问一答」，按次计费与按量计费同尺度对比，数据快照 ${fmt(
       live?.generatedAt,
     )}。`,
     canonical: url,
@@ -170,7 +172,9 @@ export function renderStatusPage({ meta, sites, live, css, history }) {
   const byId = new Map((live?.sites ?? []).map((s) => [s.id, s]));
   const cov = coverage(history);
   const url = `${meta.pagesUrl}status/`;
-  const rows = sites.map((s) => {
+  // 这页探的是第三方福利站：自托管网关跑在读者自己的机器上，本仓库探不到，也没有可用性样本
+  const welfare = sites.filter((s) => s.panel !== 'local');
+  const rows = welfare.map((s) => {
     const snap = byId.get(s.id);
     const u7 = uptime(history, s.id, 7);
     const u30 = uptime(history, s.id, 30);
@@ -227,7 +231,7 @@ export function renderStatusPage({ meta, sites, live, css, history }) {
     base: '../',
     current: 'status/',
     title: `福利站可用性监控：哪个 AI Coding 中转站还活着 — ${meta.title}`,
-    desc: `${sites.length} 个免费 AI Coding 中转站 / 公益站的可用性历史，每 6 小时自动探测一次，含 7 天与 30 天在线率、WAF 拦截次数与接口延迟。最后探测 ${fmt(
+    desc: `${welfare.length} 个免费 AI Coding 中转站 / 公益站的可用性历史，每 6 小时自动探测一次，含 7 天与 30 天在线率、WAF 拦截次数与接口延迟。最后探测 ${fmt(
       live?.generatedAt,
     )}。`,
     canonical: url,

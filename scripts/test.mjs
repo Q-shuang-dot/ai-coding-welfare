@@ -1018,6 +1018,65 @@ test('首页把 6 个站点写进 ItemList，每项指向自己的详情页', ()
   assert.match(html, /href="sites\/demo\/"/);
 });
 
+console.log('网关归网关：自托管的 local 条目不许混进福利站口径');
+
+const GW_SITE = {
+  id: 'gcmp-gateway',
+  name: 'GCMP Gateway',
+  subtitle: '本地自托管 AI 网关',
+  recommended: true,
+  // panel=local 是「这不是别人开的站」的唯一判据，渲染器全靠它分流
+  panel: 'local',
+  signupUrl: 'https://github.com/Q-shuang-dot/gcmp-welfare-temp',
+  homeUrl: 'http://127.0.0.1:15800/admin',
+  credits: { signup: null, invite: null, dailyCheckin: null, approx: false, unit: 'local' },
+  highlights: ['自己搭的网关，key 在自己手里'],
+  caveats: ['只监听本机'],
+  setup: { client: '本地网关', port: 15800, note: '本机服务，不能远程注册', steps: ['clone 仓库', '填上游 key'], dashboardUrl: 'http://127.0.0.1:15800/admin' },
+  configBlocks: { vscode: { title: 'VS Code GCMP', language: 'json', code: '{ "gcmp.baseUrl": "http://127.0.0.1:15800/v1" }' } },
+};
+const GW_SNAP = { online: true, models: [{ name: 'glm-5.3', protocols: ['OpenAI', 'Anthropic'] }], defaults: { claude: 'glm-5.3' } };
+const GW_LIVE = { generatedAt: iso(0), sites: [FIXED_SNAP, GW_SNAP] };
+const BOTH = [SITE, GW_SITE];
+
+test('README：网关单独成章，排在福利站表格前面，不进福利站口径', () => {
+  const md = renderReadme({ meta: META, sites: BOTH, live: GW_LIVE, groups: GROUPS, history: HIST });
+  assert.match(md, /## 🛰 我的网关：GCMP Gateway/);
+  assert.ok(md.indexOf('## 🛰 我的网关') < md.indexOf('## 🚀 一分钟上车（福利站）'));
+  // 「一分钟上车」是福利站的表：网关不能有行，注册链接行与收录数也不带它
+  assert.ok(!/^\| \*\*GCMP Gateway\*\*/m.test(md));
+  assert.ok(!md.includes('GCMP Gateway 注册'));
+  assert.ok(!md.includes('收录站点'));
+  assert.match(md, /alt="收录福利站"/);
+  // 徽章里的中文被 URI 编码了，1%2F1 = 在线 1/1：把网关算进去就会变成 2/2
+  assert.ok(md.includes('1%2F1'), '在线徽章只数福利站');
+  assert.match(md, /^\| \*\*Demo 站\*\* 🔥 \|/m);
+  // 接入配置用的是站点自己的 configBlocks，不是猜出来的
+  assert.match(md, /gcmp\.baseUrl/);
+});
+
+test('落地页：网关一个独立区块，首屏按钮与卡片数只算福利站', () => {
+  const html = renderHtml({ meta: META, sites: BOTH, live: GW_LIVE, css: '', groups: GROUPS, history: HIST });
+  assert.match(html, /<section id="gateway">/);
+  assert.ok(html.indexOf('<section id="gateway">') < html.indexOf('<section id="welfare">'));
+  assert.match(html, /收录 <b>1<\/b> 站/);
+  assert.match(html, /在线 <b>1\/1<\/b>/);
+  // 首屏主按钮是去注册福利站，不能被推荐的网关抢走
+  assert.match(html, /立即免费注册 Demo 站/);
+  assert.ok(!/立即免费注册 GCMP Gateway/.test(html));
+  // 模型价格表只列福利站（网关没有单价，列进去全是「—」）
+  assert.ok(!/GCMP Gateway<\/td>/.test(html));
+  assert.equal(jsonLd(html)[0].find((x) => x['@type'] === 'ItemList').numberOfItems, 1);
+});
+
+test('折算页与可用性页不把自托管网关当站点', () => {
+  const cmp = renderComparePage({ meta: META, sites: BOTH, live: GW_LIVE, css: '' });
+  const st = renderStatusPage({ meta: META, sites: BOTH, live: GW_LIVE, css: '', history: HIST });
+  assert.ok(!cmp.includes('GCMP Gateway'));
+  assert.ok(!st.includes('GCMP Gateway'));
+  assert.match(cmp, /收录 <b>1<\/b> 站/);
+});
+
 console.log('停注：站点还在跑但不收新用户，页面不许继续吆喝额度');
 
 const SHUT_SNAP = { ...FIXED_SNAP, registerOpen: false, passwordRegister: false, loginMethods: ['GitHub'] };

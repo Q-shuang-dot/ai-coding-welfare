@@ -47,8 +47,7 @@ function overviewTable(sites, liveById) {
   // 有一栏「邀请码」要自己填，漏填就只拿注册额度。没有任何站需要手填时不出这一列。
   const hasCode = sites.some((s) => s.inviteCode);
   const rows = sites.map((s) => {
-    // 本地面板（panel=local）没有线上探测数据，直接从静态快照回退
-    const l = s.panel === 'local' ? (liveById.get(s.id) ?? GCMP_README_SNAP) : (liveById.get(s.id) ?? {});
+    const l = liveById.get(s.id) ?? {};
     const plan = creditPlan(s, l);
     const route = signupRoute(l);
     // 「在线」和「收不收新用户」是两件事：站点活得好好的但停注了，对新用户就是死路，
@@ -68,12 +67,11 @@ function overviewTable(sites, liveById) {
         : l.checkinEnabled === false
           ? '无签到'
           : '—');
-    const models = s.panel === 'local'
-      ? (l.models?.length ? `${l.models.length} 个可查` : '本地网关')
-      : (l.models?.length ? `${l.models.length} 个可查` : l.services?.length ? l.services.join(' / ') : '需登录查看');
-    const proto = s.panel === 'local'
-      ? 'OpenAI / Anthropic / Responses'
-      : ([s.endpoints?.anthropic && 'Anthropic', s.endpoints?.openai && 'OpenAI'].filter(Boolean).join(' + ') || s.setup?.client || '登录后台配置');
+    const models = l.models?.length ? `${l.models.length} 个可查` : l.services?.length ? l.services.join(' / ') : '需登录查看';
+    const proto =
+      [s.endpoints?.anthropic && 'Anthropic', s.endpoints?.openai && 'OpenAI'].filter(Boolean).join(' + ') ||
+      s.setup?.client ||
+      '登录后台配置';
     const cta =
       route.state === 'closed'
         ? `[已停注 · 仍可打开 →](${s.signupUrl})`
@@ -302,18 +300,109 @@ function codeBlocks(site, claude, openai) {
   return out.join('\n');
 }
 
+/** sites.json 里 configBlocks 的固定顺序：从「最常用来改配置的客户端」排到「最少用的」 */
+const CLIENT_KEYS = ['vscode', 'claudeCode', 'codex', 'openaiSdk'];
+
+/**
+ * 「这个仓库有两部分」的分工说明。
+ *
+ * README 第一屏全是福利站的额度与注册链接时，读者会以为整个仓库就是个导航站，
+ * 完全看不到自己那套网关——先把两件事摆平，再各自展开。
+ */
+function splitBlock({ welfareCount, gatewaySite, pages }) {
+  return [
+    '---',
+    '',
+    '## 🧭 这个仓库有两部分',
+    '',
+    '| 部分 | 是什么 | 入口 |',
+    '| :-- | :-- | :-- |',
+    `| 🛰 **${gatewaySite.name}** | 跑在你自己机器上的 AI 网关：多个逻辑模型、OpenAI / Anthropic / Responses 三协议全收、上游故障转移、配置热加载 | [部署文档](gcmp-gateway/README.md) · [详情页](${pages}sites/${gatewaySite.id}/) |`,
+    `| 🎁 **福利站导航** | ${welfareCount} 个第三方公益站 / 中转站的注册额度与实测状态，CI 每 6 小时自动抓取 | 本文件下面两张表 |`,
+    '',
+    '> 两件事互不依赖，只用其中一个也行；但把福利站领到的 key 填进网关，就能在一个地址里在 VS Code、Claude Code、Codex 之间换模型，不用各处改配置。',
+    '',
+  ];
+}
+
+/**
+ * 仓库的第二部分：自托管网关。
+ *
+ * 福利站那一整套口径（首日可得 / 邀请码 / 注册链接 / 停注 / 全注册约 $X）对它全是错的——
+ * 它不发额度、不能注册、也没有单价，所以从福利站的表里彻底摘出来单独成一章：
+ * 定位 → 逻辑模型 → 接入配置 → 部署步骤 → 必读。
+ */
+function gatewayBlock(site, snap, meta, pages) {
+  if (!site) return [];
+  const models = snap?.models ?? [];
+  const blocks = CLIENT_KEYS.map((k) => site.configBlocks?.[k])
+    .filter(Boolean)
+    .map((b) => `<details><summary><b>${b.title}</b></summary>\n\n${F}${b.language}\n${b.code}\n${F}\n\n</details>`);
+  const steps = site.setup?.steps ?? [];
+  const admin = site.setup?.dashboardUrl;
+
+  const out = [
+    `## 🛰 我的网关：${site.name}`,
+    '',
+    `> ${site.subtitle}`,
+    '',
+    `<a href="gcmp-gateway/README.md"><img src="${B('部署文档', site.name, 'blue?style=for-the-badge')}" alt="${site.name} 部署文档"></a>`,
+    '',
+    '**它和福利站不是一回事**：福利站是别人开的、你注册领额度；这个网关跑在你自己机器上，不发额度、没有邀请码、也不收你的钱——它把你手上（或上面那些站的）key 汇总成一个地址对外，一个逻辑模型挂多条上游，哪条挂了自动换下一条。',
+    '',
+    '**为什么值得自托管**',
+    '',
+    site.highlights.map((h) => `- ${h}`).join('\n'),
+    '',
+    `**${models.length} 个逻辑模型**（客户端只填逻辑模型名，具体走哪个上游由网关按路由与健康度决定）`,
+    '',
+    '| 逻辑模型 | 支持的协议 |',
+    '| :-- | :-- |',
+    ...models.map((m) => `| \`${m.name}\` | ${(m.protocols ?? []).join(' / ') || '—'} |`),
+  ];
+
+  if (blocks.length) {
+    out.push('', `**接入配置**（把 \`127.0.0.1:${site.setup?.port ?? '15800'}\` 换成你自己的监听地址）`, '', blocks.join('\n'));
+  }
+  if (steps.length) out.push('', '**部署步骤**', '', steps.map((t, i) => `${i + 1}. ${t}`).join('\n'));
+  if (site.caveats?.length) out.push('', '**⚠️ 使用前必读**', '', site.caveats.map((t) => `- ${t}`).join('\n'));
+
+  out.push(
+    '',
+    '**入口**',
+    '',
+    [
+      '[完整部署文档](gcmp-gateway/README.md)',
+      '[英文说明](gcmp-gateway/README.en.md)',
+      `[详情页](${pages}sites/${site.id}/)`,
+      admin ? `控制台 <${admin}>` : null,
+      `[仓库](${meta.repoUrl})`,
+    ]
+      .filter(Boolean)
+      .join(' · '),
+    '',
+    '---',
+    '',
+  );
+
+  return out;
+}
+
 export function renderReadme({ meta, sites, live, groups = [], history }) {
   const byId = new Map((live?.sites ?? []).map((s) => [s.id, s]));
   if (!byId.has('gcmp-gateway')) byId.set('gcmp-gateway', GCMP_README_SNAP);
-  const onlineCount = sites.filter((s) => byId.get(s.id)?.online).length;
-  const staleCount = sites.filter((s) => staleHours(byId.get(s.id))).length;
+  // 福利站 = 第三方站点；自托管网关（panel=local）单独成章，不进「收录站点 / 在线 / 可注册 / 首日可得」的口径
+  const welfare = sites.filter((s) => s.panel !== 'local');
+  const gatewaySite = sites.find((s) => s.panel === 'local') ?? null;
+  const onlineCount = welfare.filter((s) => byId.get(s.id)?.online).length;
+  const staleCount = welfare.filter((s) => staleHours(byId.get(s.id))).length;
   // 「全注册一遍能拿多少」这句话是对新用户说的，把停注的站点算进去就是虚报额度（详见 lib/signup.mjs）
-  const openSites = sites.filter((s) => acceptsNew(byId.get(s.id)));
-  const closedSites = sites.filter((s) => !acceptsNew(byId.get(s.id)));
+  const openSites = welfare.filter((s) => acceptsNew(byId.get(s.id)));
+  const closedSites = welfare.filter((s) => !acceptsNew(byId.get(s.id)));
   const plans = openSites.map((s) => creditPlan(s, byId.get(s.id)));
   // 合计只算美元站：积分与美元没有公开换算，混着加就是编数字（详见 lib/credits.mjs）
   const { count: usdCount, best, total, resetting, others } = usdTotals(plans);
-  const codeSites = sites.filter((s) => s.inviteCode);
+  const codeSites = welfare.filter((s) => s.inviteCode);
   const extra = othersNote(others);
   const scope = others.length ? `${usdCount} 个按美元计价、且还收新用户的站` : `${openSites.length} 个还收新用户的站`;
   const pages = (meta.pagesUrl ?? '').replace(/\/?$/, '/');
@@ -324,26 +413,28 @@ export function renderReadme({ meta, sites, live, groups = [], history }) {
     `<p align="center">${meta.tagline}</p>`,
     '',
     '<p align="center">',
-    `  <img src="${B('收录站点', `${sites.length} 个`, 'blue')}" alt="收录站点">`,
-    `  <img src="${B('在线', `${onlineCount}/${sites.length}`, onlineCount === sites.length ? 'brightgreen' : 'orange')}" alt="在线">`,
+    `  <img src="${B('收录福利站', `${welfare.length} 个`, 'blue')}" alt="收录福利站">`,
+    `  <img src="${B('在线', `${onlineCount}/${welfare.length}`, onlineCount === welfare.length ? 'brightgreen' : 'orange')}" alt="在线">`,
     closedSites.length
-      ? `  <img src="${B('可注册', `${openSites.length}/${sites.length}`, 'yellow')}" alt="可注册">`
+      ? `  <img src="${B('可注册', `${openSites.length}/${welfare.length}`, 'yellow')}" alt="可注册">`
       : null,
     best > 0 ? `  <img src="${B('首日可得', `最高 $${best}`, 'success')}" alt="首日可得">` : null,
     `  <img src="${B('数据更新', fmtDate(live?.generatedAt).replace(/:/g, '.'), 'informational')}" alt="数据更新">`,
     '</p>',
     '',
     '<p align="center">',
-    sites.map((s) => `  <a href="${s.signupUrl}"><b>${s.name} 注册</b></a>`).join(' ·\n'),
+    welfare.map((s) => `  <a href="${s.signupUrl}"><b>${s.name} 注册</b></a>`).join(' ·\n'),
     '</p>',
     '',
     `<p align="center"><a href="${pages}compare/">📊 按次 vs 按量折算横评</a> · <a href="${pages}status/">🩺 可用性历史</a> · <a href="${pages}changelog/">🗓 变动日志</a> · <a href="${pages}feed.xml">🔔 Atom 订阅</a></p>`,
     '',
-    '---',
+    ...(gatewaySite ? splitBlock({ welfareCount: welfare.length, gatewaySite, pages }) : ['---', '']),
+    ...gatewayBlock(gatewaySite, gatewaySite ? byId.get(gatewaySite.id) : null, meta, pages),
+    '## 🚀 一分钟上车（福利站）',
     '',
-    '## 🚀 一分钟上车',
+    '> 下面两张表都是第三方站点，本仓库只做信息聚合；自己搭网关看上面那一节。',
     '',
-    overviewTable(sites, byId),
+    overviewTable(welfare, byId),
     '',
     `> 「首日可得」= 注册基础额度 + 本页邀请链接额度 + 当天能领的签到额度（每日重置额度池的站点按一天的池子算）；模型、价格、在线状态由脚本抓取站点公开接口自动生成，最后更新：\`${fmtDate(live?.generatedAt)}\`。`,
     codeSites.length ? '>' : null,
@@ -386,11 +477,11 @@ export function renderReadme({ meta, sites, live, groups = [], history }) {
     'powershell -ExecutionPolicy Bypass -File scripts/quickstart.ps1',
     F,
     '',
-    '## 📚 站点详情',
+    '## 📚 福利站详情',
     '',
   ];
 
-  const body = sites.map((s) => siteSection(s, byId.get(s.id))).join('\n\n---\n\n');
+  const body = welfare.map((s) => siteSection(s, byId.get(s.id))).join('\n\n---\n\n');
   return [
     head.filter((l) => l !== null).join('\n'),
     body,
@@ -458,6 +549,7 @@ function tail(meta, sites, live) {
     '| [`scripts/check.mjs`](scripts/check.mjs) | 链接与站点健康检查，失效即 CI 报警 |',
     '| [`scripts/test.mjs`](scripts/test.mjs) | 合并逻辑与额度口径的单测（零依赖，`npm test`） |',
     '| [`scripts/quickstart.sh`](scripts/quickstart.sh) / [`.ps1`](scripts/quickstart.ps1) | 交互式配置 Claude Code 环境变量 |',
+    '| [`gcmp-gateway/`](gcmp-gateway/) | 自托管网关本体：单文件 Python 服务 + 本地管理页 + 部署文档，与福利站数据是两件事 |',
     '',
     '本地跑一遍：',
     '',

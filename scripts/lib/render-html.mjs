@@ -62,7 +62,7 @@ function siteCard(site, snap) {
       : snap?.checkinEnabled
         ? '每日签到'
         : snap?.checkinEnabled === false
-          ? '无签到'          npx serve docs -p 8080
+          ? '无签到'
           : '额度未知';
 
   const meta = [
@@ -75,7 +75,7 @@ function siteCard(site, snap) {
       <div class="row${site.recommended ? ' featured' : ''}${shut ? ' shut' : ''}">
         <div class="status">
           <span class="dot ${up ? 'up' : 'down'}" title="${up ? '在线' : '异常'}"></span>
-          <span>${esc(site.name)}${site.recommended ? ' <span class="tag">首推</span>' : ''}${shut ? ' <span class="tag warn">停注</span>' : ''}</span>
+          <span>${esc(site.name)}${site.recommended && !local ? ' <span class="tag">首推</span>' : ''}${shut ? ' <span class="tag warn">停注</span>' : ''}</span>
         </div>
         <div class="meta">
           <div>${esc(site.subtitle)}</div>
@@ -166,28 +166,48 @@ const FAQ = [
 export function renderHtml({ meta, sites, live, css, groups = [], history }) {
   const byId = new Map((live?.sites ?? []).map((s) => [s.id, s]));
   if (!byId.has('gcmp-gateway')) byId.set('gcmp-gateway', GCMP_SNAP);
-  const online = sites.filter((s) => byId.get(s.id)?.online).length;
+  // 福利站口径只算第三方站点：自托管网关（panel=local）单独一个区块，页数、在线数、注册数、模型表都不带它
+  const welfareSites = sites.filter((s) => s.panel !== 'local');
+  const localSites = sites.filter((s) => s.panel === 'local');
+  const online = welfareSites.filter((s) => byId.get(s.id)?.online).length;
   // 停注的站点不进「新用户能拿多少」的口径，也不当首屏主按钮（详见 lib/signup.mjs）
-  const openSites = sites.filter((s) => acceptsNew(byId.get(s.id)));
-  const closedSites = sites.filter((s) => !acceptsNew(byId.get(s.id)));
+  const openSites = welfareSites.filter((s) => acceptsNew(byId.get(s.id)));
+  const closedSites = welfareSites.filter((s) => !acceptsNew(byId.get(s.id)));
   const plans = openSites.map((s) => creditPlan(s, byId.get(s.id)));
   // 合计只算美元站：积分与美元没有公开换算，混着加就是编数字（详见 lib/credits.mjs）
   const { best, total, others } = usdTotals(plans);
   const extra = othersNote(others);
   const first = openSites.find((s) => s.recommended) ?? openSites[0] ?? null;
-  const welfareSites = sites.filter((s) => s.panel !== 'local');
-  const localSites = sites.filter((s) => s.panel === 'local');
-  const desc = `${meta.tagline}。当前收录 ${sites.length} 个站点，${online} 个在线${
+  const desc = `${meta.tagline}。当前收录 ${welfareSites.length} 个福利站，${online} 个在线${
     closedSites.length ? `、${openSites.length} 个还收新用户` : ''
-  }${best ? `，单站首日最高可得 $${best} 免费额度，还收新用户的美元站全注册约 $${total}` : ''}${extra ? `；${extra}` : ''}。`;
+  }${best ? `，单站首日最高可得 $${best} 免费额度，还收新用户的美元站全注册约 $${total}` : ''}${
+    extra ? `；${extra}` : ''
+  }。${localSites.length ? '另有一个自托管的 GCMP Gateway，7 个逻辑模型、OpenAI / Anthropic / Responses 三协议全收。' : ''}`;
+
+  const localSite = localSites[0] ?? null;
+  const localSnap = localSite ? byId.get(localSite.id) : null;
+  const gatewaySection = localSite
+    ? `
+  <section id="gateway">
+    <h2>🛰 ${esc(localSite.name)} · 自托管网关</h2>
+    <p class="hint">和下面的福利站不是一回事：福利站是别人开的、你注册领额度；这个网关跑在你自己机器上，不发额度、没有邀请码——它把你手上的 key 汇总成一个地址，${
+      localSnap?.models?.length ?? 0
+    } 个逻辑模型各挂多条上游，哪条挂了自动换下一条。<a href="sites/${esc(localSite.id)}/">部署方式与客户端配置 →</a></p>
+    <div class="rows">
+      <div class="row head"><div>站点</div><div>说明</div><div>额度 / 状态</div><div>操作</div></div>
+      ${localSites.map((s) => siteCard(s, byId.get(s.id))).join('')}
+    </div>
+  </section>
+`
+    : '';
 
   const body = `  <header class="hero">
     <h1>${esc(meta.title)}</h1>
     <p class="sub">${esc(meta.tagline)}</p>
     <div class="pills">
-      <span class="pill">收录 <b>${sites.length}</b> 站</span>
-      <span class="pill">在线 <b>${online}/${sites.length}</b></span>
-      ${closedSites.length ? `<span class="pill">可注册 <b>${openSites.length}/${sites.length}</b></span>` : ''}
+      <span class="pill">收录 <b>${welfareSites.length}</b> 站</span>
+      <span class="pill">在线 <b>${online}/${welfareSites.length}</b></span>
+      ${closedSites.length ? `<span class="pill">可注册 <b>${openSites.length}/${welfareSites.length}</b></span>` : ''}
       ${best ? `<span class="pill">首日最高 <b>$${best}</b></span>` : ''}
       ${total > best ? `<span class="pill">美元站全注册约 <b>$${total}</b></span>` : ''}
       <span class="pill">数据更新 <b>${esc(fmt(live?.generatedAt))}</b></span>
@@ -197,22 +217,14 @@ export function renderHtml({ meta, sites, live, css, groups = [], history }) {
         // 一个还收人的站都没有时，首屏主按钮不能继续喊「立即免费注册」——点进去也注册不了
         first
           ? `<a class="btn btn-primary" href="${esc(first.signupUrl)}" target="_blank" rel="noopener">立即免费注册 ${esc(first.name)} →</a>`
-          : `<a class="btn btn-primary" href="#sites">收录的站现在都停注了，看看各站状态 →</a>`
+          : `<a class="btn btn-primary" href="#welfare">收录的站现在都停注了，看看各站状态 →</a>`
       }
+      ${localSite ? `<a class="btn btn-ghost" href="#gateway">🛰 自托管网关 →</a>` : ''}
       <a class="btn btn-ghost" href="compare/">哪个站最耐用？按次 vs 按量 →</a>
       <a class="btn btn-ghost" href="${esc(meta.repoUrl)}" target="_blank" rel="noopener">GitHub 仓库 ⭐</a>
     </div>
   </header>
-
-  <section id="gateway">
-    <h2>本地网关</h2>
-    <p class="hint">自托管、无额度限制、多上游故障转移；以下是当前可用的本地网关实例。</p>
-    <div class="rows">
-      <div class="row head"><div>站点</div><div>说明</div><div>额度 / 状态</div><div>操作</div></div>
-      ${localSites.map((s) => siteCard(s, byId.get(s.id))).join('')}
-    </div>
-  </section>
-
+${gatewaySection}
   <section id="welfare">
     <h2>福利站总览</h2>
     <p class="hint">额度、模型、在线状态由脚本定时抓取站点公开接口自动更新。</p>
@@ -229,7 +241,7 @@ export function renderHtml({ meta, sites, live, css, groups = [], history }) {
       ${welfareSites.map((s) => siteCard(s, byId.get(s.id))).join('')}
     </div>
   </section>
-${modelsTable(sites, byId)}
+${modelsTable(welfareSites, byId)}
 ${recentSection(groups, history)}
   <section id="faq">
     <h2>常见问题</h2>
@@ -248,13 +260,14 @@ document.querySelectorAll('.copy').forEach(function (btn) {
 });
 </script>`;
 
-  // ItemList 让搜索引擎和 AI 抓取时知道这页是「N 个站点的清单」，每项指向各自的详情页
+  // ItemList 让搜索引擎和 AI 抓取时知道这页是「福利站的清单」，每项指向各自的详情页；
+  // 自托管网关不在这个清单里——它不是福利站，混进去会让这页的语义变成一个 8 站大杂烩
   const itemList = {
     '@context': 'https://schema.org',
     '@type': 'ItemList',
     name: meta.title,
-    numberOfItems: sites.length,
-    itemListElement: sites.map((s, i) => ({
+    numberOfItems: welfareSites.length,
+    itemListElement: welfareSites.map((s, i) => ({
       '@type': 'ListItem',
       position: i + 1,
       name: s.name,
