@@ -6,7 +6,7 @@
   <img src="https://img.shields.io/badge/%E6%94%B6%E5%BD%95%E7%A6%8F%E5%88%A9%E7%AB%99-10%20%E4%B8%AA-blue" alt="收录福利站">
   <img src="https://img.shields.io/badge/%E5%9C%A8%E7%BA%BF-10%2F10-brightgreen" alt="在线">
   <img src="https://img.shields.io/badge/%E9%A6%96%E6%97%A5%E5%8F%AF%E5%BE%97-%E6%9C%80%E9%AB%98%20%24175-success" alt="首日可得">
-  <img src="https://img.shields.io/badge/%E6%95%B0%E6%8D%AE%E6%9B%B4%E6%96%B0-2026--09--17%2016.59%20UTC-informational" alt="数据更新">
+  <img src="https://img.shields.io/badge/%E6%95%B0%E6%8D%AE%E6%9B%B4%E6%96%B0-2026--09--17%2021.22%20UTC-informational" alt="数据更新">
 </p>
 
 <p align="center">
@@ -161,7 +161,7 @@ print(resp.choices[0].message.content)
 | **新疆幻城网安** | 🟢 在线 | 站内公示 | — | 支持签到 | Anthropic + OpenAI | 需登录查看 | [点此注册 →](https://api.hcnsec.cn/sign-up?aff=3J8z) | `3J8z` |
 | **量界智算** | 🟢 在线 | 站内公示 | — | 支持签到 | Anthropic + OpenAI | 需登录查看 | [点此注册 →](https://liangjiewis.com/register?aff=m3C1) | `m3C1` |
 
-> 「首日可得」= 注册基础额度 + 本页邀请链接额度 + 当天能领的签到额度（每日重置额度池的站点按一天的池子算）；模型、价格、在线状态由脚本抓取站点公开接口自动生成，最后更新：`2026-09-17 16:59 UTC`。
+> 「首日可得」= 注册基础额度 + 本页邀请链接额度 + 当天能领的签到额度（每日重置额度池的站点按一天的池子算）；模型、价格、在线状态由脚本抓取站点公开接口自动生成，最后更新：`2026-09-17 21:22 UTC`。
 >
 > 「邀请码」列写了码的站（DoCode `1Qof`、SeekAi `dDJy`、Long的AI `ijFL`、新疆幻城网安 `3J8z`、量界智算 `m3C1`），注册表单里有一栏要**自己填**，漏填就只拿得到注册基础额度、事后补不上；其余站写 — 是因为邀请额度由链接自带，不用手打。
 >
@@ -210,12 +210,12 @@ powershell -ExecutionPolicy Bypass -File scripts/quickstart.ps1
 
 **实时数据**（自动抓取站点公开接口）
 
-- ⚠ 接口已连续 63 小时没抓到新数据，下列信息为 `2026-09-15 01:48 UTC` 的快照
+- ⚠ 接口已连续 68 小时没抓到新数据，下列信息为 `2026-09-15 01:48 UTC` 的快照
 - 站点名称：**Agent Router**
 - 面板版本：`init-20260915-25158da5`
 - 邀请他人可得：**$50**
 - 登录方式：GitHub / LinuxDO
-- 接口延迟：244 ms
+- 接口延迟：250 ms
 
 **镜像 / 备用入口**
 
@@ -355,7 +355,7 @@ curl -s https://agentrouter.org/v1/chat/completions \
 - 每日签到：❌
 - 开放注册：✅
 - 登录方式：账号密码
-- 接口延迟：710 ms
+- 接口延迟：954 ms
 
 **镜像 / 备用入口**
 
@@ -485,7 +485,7 @@ curl -s https://docode.cc/v1/chat/completions \
 - 开放注册：✅（站点关掉了邮箱密码注册，得用 GitHub 登录建号（防批量注册的常规做法）。）
 - 登录方式：GitHub / 账号密码
 - GitHub 账号需满 **365 天**
-- 接口延迟：990 ms
+- 接口延迟：1024 ms
 
 > 该站模型清单需登录后台查看，注册后在「模型价格」页确认。
 
@@ -596,7 +596,7 @@ curl -s https://api.justwoker.icu/v1/chat/completions \
 - 每日签到：✅
 - 开放注册：✅（站点关掉了邮箱密码注册，得用 GitHub 登录建号（防批量注册的常规做法）。）
 - 登录方式：GitHub / 账号密码
-- 接口延迟：1874 ms
+- 接口延迟：1684 ms
 
 > 该站把价格页设成了登录可见（`/api/pricing` 返回 401），本页不列模型表。站内公示的计价口径是输入 $1 / 百万 tokens、输出 $1 / 百万 tokens，按 token 而不是按次，注册后在控制台「模型价格」页确认实际清单与倍率。
 
@@ -702,7 +702,7 @@ curl -s https://kktoken.cc/v1/chat/completions \
 
 **实时数据**（自动抓取站点公开接口）
 
-- 接口延迟：1899 ms
+- 接口延迟：1990 ms
 
 > 模型清单与价格需登录后在控制台「模型列表」查看（按每百万 Tokens 计价，可按厂商 / 上下文窗口筛选），站点没有公开的模型与定价接口，本页不做承诺。
 
@@ -766,7 +766,7 @@ curl -s https://kktoken.cc/v1/chat/completions \
 - 每日签到：✅
 - 开放注册：✅
 - 登录方式：GitHub / Telegram / 账号密码
-- 接口延迟：1715 ms
+- 接口延迟：1604 ms
 
 **镜像 / 备用入口**
 
@@ -863,13 +863,13 @@ curl -s https://seekai.cc/v1/chat/completions \
 
 **实时数据**（自动抓取站点公开接口）
 
-- ⚠ 接口已连续 285 小时没抓到新数据，下列信息为 `2026-09-05 20:22 UTC` 的快照
+- ⚠ 接口已连续 289 小时没抓到新数据，下列信息为 `2026-09-05 20:22 UTC` 的快照
 - 站点名称：**TaBiAI**
 - 面板版本：`init-20260817-f880a343`
 - 每日签到：✅
 - 开放注册：✅（站点关掉了邮箱密码注册，得用 GitHub 登录建号（防批量注册的常规做法）。）
 - 登录方式：GitHub / 账号密码
-- 接口延迟：776 ms
+- 接口延迟：514 ms
 
 **当前可用模型**
 
@@ -983,7 +983,7 @@ curl -s https://tabitoken.com/v1/chat/completions \
 - 每日签到：❌
 - 开放注册：✅（站点关掉了邮箱密码注册，得用 GitHub 登录建号（防批量注册的常规做法）。）
 - 登录方式：GitHub
-- 接口延迟：1701 ms
+- 接口延迟：1674 ms
 
 > 站点的模型价格接口不公开（/api/pricing 匿名请求返回 401，要登录管理页才看得到），白嫖分组的模型来源公示在 https://aaawinn.xyz/public-pool；站方公告提到白嫖分组的 GPT 系模型只支持 Anthropic 协议对接，OpenAI 协议有兼容问题。
 
@@ -1105,7 +1105,7 @@ curl -s https://aaawinn.xyz/v1/chat/completions \
 - 每日签到：✅
 - 开放注册：✅
 - 登录方式：Passkey / 账号密码
-- 接口延迟：3620 ms
+- 接口延迟：2582 ms
 
 > 模型价格页需要登录（/api/pricing 匿名请求返回 401），不过站内公告里的名字可以直接抄：Qwen3.8-Flash-Next（0 元一次）、DeepSeek-V4.1-Flash 系（付费分组约 2 元一次，vision-exp 版本免费用户可用）、longcat-2.0（一次 1 元）、glm-5.3-flash、qwen3.8-27b、step 系、spark-x2.5、Qwen3.6-35B-A3B，站方还开源了 SparkMuse-4B 与 Qing-Sec-20B，均可在 ModelScope 搜到（hcnote/SparkMuse-4B）。
 
@@ -1227,7 +1227,7 @@ curl -s https://api.hcnsec.cn/v1/chat/completions \
 - 站点名称：**量界智算**
 - 面板版本：`v0.12.14`
 - 每日签到：✅
-- 接口延迟：2604 ms
+- 接口延迟：2231 ms
 
 **镜像 / 备用入口**
 
@@ -1335,7 +1335,7 @@ curl -s https://liangjiewis.com/v1/chat/completions \
 
 ## 🔔 额度变了，这里会通知你
 
-CI 每 6 小时抓一次各站接口，与上一次快照逐字段比对，目前已攒下 129 个样本、覆盖约 27.3 天。额度调整、掉线与恢复、模型上下线、价格变动都会自动记一条：
+CI 每 6 小时抓一次各站接口，与上一次快照逐字段比对，目前已攒下 130 个样本、覆盖约 27.5 天。额度调整、掉线与恢复、模型上下线、价格变动都会自动记一条：
 
 - 点仓库右上角 **Watch → Custom → Releases**：有重要变动时 GitHub 直接发邮件
 - 订阅 [Atom feed](https://q-shuang-dot.github.io/gcmp-welfare-temp/feed.xml)：RSS 阅读器 / Feedly / Telegram 机器人都能读
