@@ -35,7 +35,7 @@ if (-not $running) {
   $running = Test-NetConnection -ComputerName 127.0.0.1 -Port $port -InformationLevel Quiet -WarningAction SilentlyContinue
 }
 else {
-  Write-Host "[OK] 网关已在运行 -> $rootUrl" -ForegroundColor Green
+  Write-Host "[OK] Gateway is already running -> $rootUrl" -ForegroundColor Green
 }
 
 if ($running) {
