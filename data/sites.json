@@ -577,6 +577,216 @@
         "站点前面挂着 Cloudflare，机房 IP 容易被拦，本页的自动探测偶尔会标「被 WAF 拦下」，不代表站点对你不可用"
       ],
       "community": []
+    },
+    {
+      "id": "aaawinn",
+      "name": "Long的AI",
+      "subtitle": "New API 中转站 · 只能用满 120 天的 GitHub 账号注册，白嫖分组公告「永久免费」，GPT 系模型要用 Anthropic 协议对接",
+      "recommended": false,
+      "credits": {
+        "signup": null,
+        "invite": null,
+        "dailyCheckin": null,
+        "approx": false
+      },
+      "signupUrl": "https://aaawinn.xyz/sign-up?aff=ijFL",
+      "inviteCode": "ijFL",
+      "homeUrl": "https://aaawinn.xyz",
+      "docsUrl": "https://www.yuque.com/riyeqiaodaimadelong/bk54gx",
+      "statusApi": "https://aaawinn.xyz/api/status",
+      "pricingApi": null,
+      "mirrors": [],
+      "tags": [
+        "New API",
+        "公益站",
+        "免费额度",
+        "GitHub 注册",
+        "Claude Code",
+        "OpenAI 兼容"
+      ],
+      "highlights": [
+        "白嫖分组站方公告写明「永久免费」，2026-09-17 刚更新了 deepseek-v4 相关版本与 4.1，公告说后续 kimi3 会下架",
+        "注册只用 GitHub 授权，不用记密码，但要求 GitHub 账号注册时间满 120 天（站方防脚本刷号）",
+        "三种协议都活着：/v1/chat/completions、/v1/messages、/v1/responses 匿名请求返回 401 而不是 404（2026-09-17 实测）",
+        "白嫖分组的模型来源贴在公开池页面，站方称站点收入全部投进白嫖分组"
+      ],
+      "endpoints": {
+        "anthropic": "https://aaawinn.xyz",
+        "openai": "https://aaawinn.xyz/v1"
+      },
+      "modelsNote": "站点的模型价格接口不公开（/api/pricing 匿名请求返回 401，要登录管理页才看得到），白嫖分组的模型来源公示在 https://aaawinn.xyz/public-pool；站方公告提到白嫖分组的 GPT 系模型只支持 Anthropic 协议对接，OpenAI 协议有兼容问题。",
+      "register": {
+        "methods": [
+          "GitHub OAuth"
+        ],
+        "requirements": [
+          "务必从本页邀请链接进入注册（带 ?aff=ijFL），站方公告称带站内邀请码注册可白嫖站内 5 的额度（单位未写明）",
+          "新账号必须使用注册时间至少满 120 天的 GitHub 账号，注册时需同意用户协议与隐私政策",
+          "站点没有邮箱注册入口，也没有每日签到；OAuth 只有 GitHub 一条路"
+        ]
+      },
+      "earnMore": [
+        "白嫖分组本身就是长期免费的主力，公告原话是「白嫖的相关模型永久免费」",
+        "拉新时如果邀请额度没到账，可以联系站长（微信 SuperLong1129）手动下发——站方说是脚本刷号太多导致的",
+        "需要更强的模型时可以走付费分组：国模挪到了 0.2 倍率分组，站方称来源是 WorkBuddy"
+      ],
+      "caveats": [
+        "白嫖分组站方自己讲得很实在：「后续 kimi3 会下架」「白嫖分组模型不怎么维护」——能白嫖的模型会随公告变动，别指望长期跟进新模型",
+        "白嫖分组的 GPT 系模型只支持 Anthropic 协议对接（公告原话：OpenAI 协议有兼容问题），所以下面接入配置要按 Claude Code 的填法走 Anthropic 端点，用 OpenAI 端点接 GPT 会失败",
+        "面板 price=7（¥7 ≈ 站内 $1），但站方又公告「0.2 元等于平台 1 美元」，两处口径对不上；站内「美元」当站内刀看就行，本页不做美元折算",
+        "注册门槛是满 120 天的 GitHub 账号，新号直接被拦；站方一直在公告里抱怨脚本刷号，风控可能继续加码",
+        "站点很新（面板 start_time 是 2026-09-11），规则与稳定性都还在变，自己评估风险"
+      ],
+      "community": [
+        "微信: SuperLong1129（可领新用户体验额度）",
+        "QQ: 1171999840",
+        "模型来源公示: https://aaawinn.xyz/public-pool",
+        "文档: https://www.yuque.com/riyeqiaodaimadelong/bk54gx"
+      ]
+    },
+    {
+      "id": "hcnsec",
+      "name": "新疆幻城网安",
+      "subtitle": "New API 公益网关 · 系统名「新疆幻城网安科技公益大模型安全网关」，签到 + 任务 + 邀请都能拿额度，免费分组里有标价 0 元一次的模型",
+      "recommended": false,
+      "credits": {
+        "signup": null,
+        "invite": null,
+        "dailyCheckin": null,
+        "approx": false
+      },
+      "signupUrl": "https://api.hcnsec.cn/sign-up?aff=3J8z",
+      "inviteCode": "3J8z",
+      "homeUrl": "https://api.hcnsec.cn",
+      "docsUrl": "https://hcnote.cn/",
+      "statusApi": "https://api.hcnsec.cn/api/status",
+      "pricingApi": null,
+      "mirrors": [],
+      "tags": [
+        "New API",
+        "公益站",
+        "免费额度",
+        "每日签到",
+        "Claude Code",
+        "Codex",
+        "OpenAI 兼容"
+      ],
+      "highlights": [
+        "注册就送默认余额，站方 FAQ 说「新用户默认余额够随便用半年」（因为二次分发已经调低过一次默认额度）",
+        "每日签到、邀请、站内任务三条路都能拿额度，公告里还有「1 万额度兑 1 天 SVIP」这种兑换活动",
+        "免费分组确实有 0 元一次的模型：2026-09-12 上的 Qwen3.8-Flash-Next（站方自己标注「不太稳定」），deepseek-v4-flash-vision-exp 也对免费用户开放",
+        "三种协议都活着：/v1/chat/completions、/v1/messages、/v1/responses 匿名请求返回 401 而不是 404（2026-09-17 实测）",
+        "站方自己在公告里劝免费用户切 auto / step / qwen3.8-27b 这类小模型，预期管理做得比多数站诚实"
+      ],
+      "endpoints": {
+        "anthropic": "https://api.hcnsec.cn",
+        "openai": "https://api.hcnsec.cn/v1"
+      },
+      "modelsNote": "模型价格页需要登录（/api/pricing 匿名请求返回 401），不过站内公告里的名字可以直接抄：Qwen3.8-Flash-Next（0 元一次）、DeepSeek-V4.1-Flash 系（付费分组约 2 元一次，vision-exp 版本免费用户可用）、longcat-2.0（一次 1 元）、glm-5.3-flash、qwen3.8-27b、step 系、spark-x2.5、Qwen3.6-35B-A3B，站方还开源了 SparkMuse-4B 与 Qing-Sec-20B，均可在 ModelScope 搜到（hcnote/SparkMuse-4B）。",
+      "register": {
+        "methods": [
+          "邮箱 + 密码",
+          "Passkey"
+        ],
+        "requirements": [
+          "务必从本页邀请链接进入注册（带 ?aff=3J8z），邀请额度才会发放",
+          "注册需要邮箱验证码；登录可以用密码或 Passkey，站点没开 Turnstile 人机校验",
+          "站方 FAQ 重点提醒：不管买哪个套餐，都要新建一个密钥并把分组选成对应套餐的分组，否则调不通"
+        ]
+      },
+      "earnMore": [
+        "每日签到领额度（面板已开启），登录后台点一下就行",
+        "邀请他人注册：公告提醒邀请额度转钱包时金额填 49990，别填「5 万」，填错会失败",
+        "站内任务中心也能拿额度（enable_task 已开启）",
+        "公告里不定期有「1 万额度兑 1 天 SVIP」，用余额支付，每天不定时开放"
+      ],
+      "caveats": [
+        "免费用户走的是第三方低价上游，站方自己在公告里写「模型真实度有待考证」，还提到免费用户的 glm-5.3-flash 不能识图——别拿它跑生产关键任务",
+        "公告直接说免费用户的好模型可用率极低，建议切 auto / step / qwen3.8-27b 这类；免费通道的延迟与稳定性都随缘",
+        "面板 price=7.3（¥7.3 ≈ 站内 $1），额度按人民币口径显示，本页不做美元折算",
+        "备案主体是新疆幻城网安科技，与 SeekAi 共用同一备案主体和售后邮箱，两个站点在公告里互相导流，可能是同一家公司/同一个站长在运营",
+        "注册页与 API 都挂在 Cloudflare 后面，机房 IP 打注册页会被 403 拦（本页自动探测也是这个原因），家用宽带正常",
+        "站方公告明确「没有淘宝 / 闲鱼代售」，警惕第三方倒卖"
+      ],
+      "community": [
+        "邮箱: yangyuqi@xjhcit.cn",
+        "QQ群: 943554225",
+        "使用教程: https://hcnote.cn/2026/07/12/12831.html",
+        "白嫖导航: https://link.hcnsec.cn（站方标注为非本站链接）"
+      ]
+    },
+    {
+      "id": "liangjiewis",
+      "name": "量界智算",
+      "subtitle": "New API 中转站 · 125 个模型的倍率在公开接口就能查，签到给随机额度，另有备用域名与酒馆 / 绘图站",
+      "recommended": false,
+      "credits": {
+        "signup": null,
+        "invite": null,
+        "dailyCheckin": null,
+        "approx": false
+      },
+      "signupUrl": "https://liangjiewis.com/register?aff=m3C1",
+      "inviteCode": "m3C1",
+      "homeUrl": "https://liangjiewis.com",
+      "docsUrl": "https://liangjiewis.com/cfg/doc.html",
+      "statusApi": "https://liangjiewis.com/api/status",
+      "pricingApi": null,
+      "mirrors": [
+        {
+          "label": "备用站",
+          "homeUrl": "https://liangjiewis.ai",
+          "signupUrl": "https://liangjiewis.ai/register?aff=m3C1"
+        }
+      ],
+      "tags": [
+        "New API",
+        "中转站",
+        "免费额度",
+        "每日签到",
+        "Claude Code",
+        "OpenAI 兼容",
+        "多模型"
+      ],
+      "highlights": [
+        "125 个模型的倍率挂在公开接口上（/api/pricing 免登录可读，2026-09-17 实测），claude-opus-4 / 4-1 / 4-5 / 4-6 / 4-7、gpt-5 系、gpt-5-nano 都在架",
+        "面板 v0.12.14，签到与邀请奖励都开着，公告写的是「用户签到（随机额度）+ 邀请充值奖励」",
+        "有备用域名 liangjiewis.ai，主站不通时可以换，两边都是同一个面板（system_name 都是「量界智算」）",
+        "同一套账号还带酒馆（SillyTavern）入口和图片生成站，玩法比一般中转站多"
+      ],
+      "endpoints": {
+        "anthropic": "https://liangjiewis.com",
+        "openai": "https://liangjiewis.com/v1"
+      },
+      "modelsNote": "模型清单不用登录就能读（GET https://liangjiewis.com/api/pricing，125 个模型），但那边给出的「倍率」和本页其他站点「倍率 1 ≈ $2 / 1M tokens」的口径对不上（例如 claude-opus-4-20250514 标 350），硬换算出来的价格明显不合理，所以这张表没有搬进来；要看具体价格请去站点「模型广场」，或者直接 curl 上面那个接口。",
+      "register": {
+        "methods": [
+          "邮箱 + 密码"
+        ],
+        "requirements": [
+          "务必从本页邀请链接进入注册（带 ?aff=m3C1），邀请奖励才会结算",
+          "注册需要用户名、密码、邮箱与邮箱验证码；GitHub / LinuxDO / Discord / Telegram / 微信 等 OAuth 开关在面板里，但当前都是关着的",
+          "这个面板版本没有公开「是否开放注册」开关（/api/status 不返回 register_enabled），不过注册页 2026-09-17 实测可以正常打开"
+        ]
+      },
+      "earnMore": [
+        "每日签到给随机额度（2026-01-22 上线）",
+        "邀请他人注册、对方充值都有奖励",
+        "2026-03-29 站方因调价失误把签到奖励临时提升过 10 倍，说明签到额度是活的，具体以站内为准"
+      ],
+      "caveats": [
+        "面板公示 price=0.16，也就是「站内 $1 额度」的充值价约 ¥0.16（同页 usd_exchange_rate 却写 7.3，两个字段口径不一致）→ 站内「美元」是站内刀，不要当美元看，本页不做美元折算",
+        "站方 2026-03-25 公告承认长期亏损并调整过模型与倍率，模型清单和价格大概率还会变",
+        "2025-11-20 才把带宽升到 100M 并宣称支持 10 个以上并发，属于小站，热门时段人多了会挤",
+        "站点没有启用用户协议与隐私政策页面（面板开关都是关的），注册前自己心里有数",
+        "酒馆入口需要联系管理员开通账号，不是自助注册"
+      ],
+      "community": [
+        "主站: https://liangjiewis.com",
+        "文档: https://liangjiewis.com/cfg/doc.html",
+        "酒馆: https://st.liangjiewis.com/login",
+        "图片生成站: https://img-gen.liangjiewis.com"
+      ]
     }
   ]
 }

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-16T21:18:05.110Z",
+  "generatedAt": "2026-09-17T09:20:00.409Z",
   "sites": [
     {
       "id": "agentrouter",
@@ -194,7 +194,7 @@
     },
     {
       "id": "gcmp-gateway",
-      "checkedAt": "2026-09-16T21:17:52.376Z",
+      "checkedAt": "2026-09-17T09:19:53.561Z",
       "apiOk": true,
       "pricingOk": false,
       "latencyMs": null,
@@ -306,7 +306,7 @@
       "signup": {
         "status": 200,
         "ok": true,
-        "ms": 1185,
+        "ms": 1305,
         "attempts": 1
       },
       "mirrors": [],
@@ -317,10 +317,10 @@
     },
     {
       "id": "docode",
-      "checkedAt": "2026-09-16T21:17:53.178Z",
+      "checkedAt": "2026-09-17T09:19:54.373Z",
       "apiOk": true,
       "pricingOk": false,
-      "latencyMs": 764,
+      "latencyMs": 705,
       "error": null,
       "systemName": "DoCode",
       "version": "",
@@ -372,7 +372,7 @@
       "signup": {
         "status": 200,
         "ok": true,
-        "ms": 648,
+        "ms": 627,
         "attempts": 1
       },
       "mirrors": [
@@ -389,9 +389,9 @@
     },
     {
       "id": "justdowork",
-      "checkedAt": "2026-09-16T21:17:53.043Z",
+      "checkedAt": "2026-09-17T09:19:54.369Z",
       "online": true,
-      "latencyMs": 674,
+      "latencyMs": 826,
       "error": null,
       "systemName": "JustDoWork",
       "version": "v1.0.0-rc.23",
@@ -417,7 +417,7 @@
       "signup": {
         "status": 200,
         "ok": true,
-        "ms": 1488,
+        "ms": 1522,
         "attempts": 1
       },
       "mirrors": [],
@@ -431,11 +431,11 @@
     },
     {
       "id": "kktoken",
-      "checkedAt": "2026-09-16T21:17:53.763Z",
-      "apiOk": true,
+      "checkedAt": "2026-09-17T09:19:59.814Z",
+      "apiOk": false,
       "pricingOk": false,
-      "latencyMs": 1393,
-      "error": null,
+      "latencyMs": 269,
+      "error": "HTTP 403",
       "systemName": "KKtoken AI",
       "version": "v1.0.0-rc.25",
       "registerOpen": true,
@@ -459,24 +459,32 @@
         "openai": null
       },
       "signup": {
-        "status": 200,
-        "ok": true,
-        "ms": 979,
+        "status": 403,
+        "ok": false,
+        "ms": 1119,
         "attempts": 1
       },
       "mirrors": [],
-      "probeBlocked": false,
+      "probeBlocked": true,
       "online": true,
-      "dataStale": false,
-      "staleFrom": null,
-      "staleFields": []
+      "dataStale": true,
+      "staleFrom": "2026-09-16T21:17:53.763Z",
+      "staleFields": [
+        "systemName",
+        "version",
+        "registerOpen",
+        "passwordRegister",
+        "checkinEnabled",
+        "loginMethods",
+        "quotaPerUnit"
+      ]
     },
     {
       "id": "matrix",
-      "checkedAt": "2026-09-16T21:17:53.970Z",
+      "checkedAt": "2026-09-17T09:19:53.935Z",
       "apiOk": true,
       "pricingOk": false,
-      "latencyMs": 1598,
+      "latencyMs": 385,
       "error": null,
       "systemName": null,
       "version": null,
@@ -500,7 +508,7 @@
       "signup": {
         "status": 200,
         "ok": true,
-        "ms": 1661,
+        "ms": 461,
         "attempts": 1
       },
       "mirrors": [],
@@ -512,11 +520,11 @@
     },
     {
       "id": "seekai",
-      "checkedAt": "2026-09-16T21:17:53.644Z",
-      "apiOk": true,
+      "checkedAt": "2026-09-17T09:20:00.220Z",
+      "apiOk": false,
       "pricingOk": false,
-      "latencyMs": 1270,
-      "error": null,
+      "latencyMs": 188,
+      "error": "HTTP 403",
       "systemName": "SeekAi",
       "version": "v1.0.0-rc.25",
       "registerOpen": true,
@@ -541,9 +549,9 @@
         "openai": null
       },
       "signup": {
-        "status": 200,
-        "ok": true,
-        "ms": 1102,
+        "status": 403,
+        "ok": false,
+        "ms": 1230,
         "attempts": 1
       },
       "mirrors": [
@@ -552,19 +560,27 @@
           "online": true
         }
       ],
-      "probeBlocked": false,
+      "probeBlocked": true,
       "online": true,
-      "dataStale": false,
-      "staleFrom": null,
-      "staleFields": []
+      "dataStale": true,
+      "staleFrom": "2026-09-16T21:17:53.644Z",
+      "staleFields": [
+        "systemName",
+        "version",
+        "registerOpen",
+        "passwordRegister",
+        "checkinEnabled",
+        "loginMethods",
+        "quotaPerUnit"
+      ]
     },
     {
       "id": "tabitoken",
-      "checkedAt": "2026-09-16T21:17:55.742Z",
-      "apiOk": true,
-      "pricingOk": true,
-      "latencyMs": 711,
-      "error": null,
+      "checkedAt": "2026-09-17T09:19:59.786Z",
+      "apiOk": false,
+      "pricingOk": false,
+      "latencyMs": 255,
+      "error": "HTTP 403",
       "systemName": "TaBiAI",
       "version": "init-20260817-f880a343",
       "registerOpen": true,
@@ -655,18 +671,230 @@
       "signup": {
         "status": 403,
         "ok": false,
-        "ms": 1104,
+        "ms": 1220,
+        "attempts": 1
+      },
+      "mirrors": [],
+      "probeBlocked": false,
+      "online": false,
+      "dataStale": true,
+      "staleFrom": "2026-09-05T20:22:55.415Z",
+      "staleFields": [
+        "systemName",
+        "version",
+        "registerOpen",
+        "passwordRegister",
+        "checkinEnabled",
+        "loginMethods",
+        "quotaPerUnit",
+        "models",
+        "defaults"
+      ]
+    },
+    {
+      "id": "aaawinn",
+      "checkedAt": "2026-09-17T09:19:55.115Z",
+      "apiOk": true,
+      "pricingOk": false,
+      "latencyMs": 804,
+      "error": null,
+      "systemName": "Long的AI",
+      "version": "",
+      "registerOpen": true,
+      "passwordRegister": false,
+      "checkinEnabled": false,
+      "loginMethods": [
+        "GitHub"
+      ],
+      "githubMinAccountAgeDays": null,
+      "quotaPerUnit": 500000,
+      "inviteeBonusUsd": null,
+      "inviterBonusUsd": null,
+      "topupEnabled": null,
+      "services": [],
+      "announcements": [
+        {
+          "id": 15,
+          "date": "2026-09-17",
+          "text": "免费模型 deepseek-v4 相关版本 以及 4.1 已更新 后续 kimi3会下架"
+        },
+        {
+          "id": 14,
+          "date": "2026-09-11",
+          "text": "拉新卡住的小伙伴可以联系站长 手动下发一下 额度 ，因为目前 太多人进行脚本刷号了，希望理解一下，然后 白嫖的相关模型 也是永久给大家使用的"
+        },
+        {
+          "id": 13,
+          "date": "2026-09-10",
+          "text": "白嫖分组的gpt模型 只支持 anthropic 协议对接 ，测试下来 openai 协议会出现一些兼容行问题 模型来源 在https://aaawinn.xyz/public-pool 中 ，目前带着站内邀请码注册 可以白嫖站内5的额度 然后 本站得到的额度全部都会再 白嫖分组给大家使用呢"
+        },
+        {
+          "id": 12,
+          "date": "2026-09-09",
+          "text": "直接购买额度兑换码充值的小伙伴 可以连接站长 上tag ，付费用户的tag分组分组倍率是1 默认分组倍率较高，防白嫖"
+        },
+        {
+          "id": 11,
+          "date": "2026-09-08",
+          "text": "国模已移动到 0.2倍率 国模，模型来源于：WorkBuddy 白嫖分组模型 不怎么维护"
+        }
+      ],
+      "models": [],
+      "modelsSource": "login-required",
+      "defaults": {
+        "claude": null,
+        "openai": null
+      },
+      "signup": {
+        "status": 200,
+        "ok": true,
+        "ms": 1763,
         "attempts": 1
       },
       "mirrors": [],
       "probeBlocked": false,
       "online": true,
-      "dataStale": true,
-      "staleFrom": "2026-09-05T20:22:55.415Z",
-      "staleFields": [
-        "models",
-        "defaults"
-      ]
+      "dataStale": false,
+      "staleFrom": null,
+      "staleFields": []
+    },
+    {
+      "id": "hcnsec",
+      "checkedAt": "2026-09-17T09:19:54.075Z",
+      "apiOk": true,
+      "pricingOk": false,
+      "latencyMs": 518,
+      "error": null,
+      "systemName": "新疆幻城网安科技公益大模型安全网关",
+      "version": "",
+      "registerOpen": true,
+      "passwordRegister": true,
+      "checkinEnabled": true,
+      "loginMethods": [
+        "Passkey",
+        "账号密码"
+      ],
+      "githubMinAccountAgeDays": null,
+      "quotaPerUnit": 500000,
+      "inviteeBonusUsd": null,
+      "inviterBonusUsd": null,
+      "topupEnabled": null,
+      "services": [],
+      "announcements": [
+        {
+          "id": 49,
+          "date": "2026-09-15",
+          "text": "开源链接https://modelscope.cn/models/hcnote/SparkMuse-4B 实测酒馆，角色扮演，小说生成，能力比35b以内模型更强大，并且限制较低，欢迎本地部署（小白可以尝试直接链接丢给ai，让ai操作你电脑部署）"
+        },
+        {
+          "id": 48,
+          "date": "2026-09-12",
+          "text": "最新上线Qwen3.8-Flash-Next模型，由于目前不太稳定，故定价为0元一次，免费使用"
+        },
+        {
+          "id": 47,
+          "date": "2026-09-11",
+          "text": "开源链接：https://modelscope.cn/models/hcnote/Qing-Sec-20B-Qwen3.8-27B-Slim 基于Qwen3.8-27B进行剪枝并针对编码与网络安全领域持续训练微调欢迎体验"
+        },
+        {
+          "id": 46,
+          "date": "2026-09-10",
+          "text": "DeepSeek-V4.1-Flash正式上线付费分组，速度快，性能强价格便宜两块钱一次支持多模态，欢迎大家使用，同时deepseek-v4-flash-vision-exp模型已上线免费用户"
+        },
+        {
+          "id": 45,
+          "date": "2026-09-08",
+          "text": "近期我司已与火山引擎合作，欢迎通过链接绑定我司，企业用户量大可私聊我开折扣 https://partner.volcengine.com/partner/invite/HEPUTQDP0YV"
+        }
+      ],
+      "models": [],
+      "modelsSource": "login-required",
+      "defaults": {
+        "claude": null,
+        "openai": null
+      },
+      "signup": {
+        "status": 403,
+        "ok": false,
+        "ms": 473,
+        "attempts": 1
+      },
+      "mirrors": [],
+      "probeBlocked": false,
+      "online": true,
+      "dataStale": false,
+      "staleFrom": null,
+      "staleFields": []
+    },
+    {
+      "id": "liangjiewis",
+      "checkedAt": "2026-09-17T09:19:54.018Z",
+      "apiOk": true,
+      "pricingOk": false,
+      "latencyMs": 459,
+      "error": null,
+      "systemName": "量界智算",
+      "version": "v0.12.14",
+      "registerOpen": null,
+      "passwordRegister": null,
+      "checkinEnabled": true,
+      "loginMethods": [],
+      "githubMinAccountAgeDays": null,
+      "quotaPerUnit": 500000,
+      "inviteeBonusUsd": null,
+      "inviterBonusUsd": null,
+      "topupEnabled": null,
+      "services": [],
+      "announcements": [
+        {
+          "id": 6,
+          "date": "2026-03-29",
+          "text": "各位用户朋友，抱歉前两天因调价不当，给大家带来了困扰。 目前 Gemini、GPT、Claude、Grok 四类模型价格已恢复正常，可放心使用；其他模型也会在这两天内持续调整。 为表达歉意，平台签到奖励现提升 10倍，请前往个人设置完成签到，活动持续一周。 2026年4月4日 23:00 后恢复日常签到力度。"
+        },
+        {
+          "id": 5,
+          "date": "2026-03-25",
+          "text": "各位用户朋友： 很抱歉通知大家，因网站长期处于亏损经营状态，当前运营压力实在太大，我们已无法继续维持原有模式，所以对网站模型进行了调整。 这次调整确实是无奈之举，也可能会对大家的使用体验带来一些影响，在这里向大家表示歉意。 希望大家能够理解，也感谢大家一直以来的支持与陪伴。我们后续也会继续努力，把网站尽可能稳定地运营下去。"
+        },
+        {
+          "id": 4,
+          "date": "2026-01-22",
+          "text": "📢 系统升级公告 为提升平台稳定性与使用体验，我们将于**今晚 22:00 - 23:00**进行版本升级维护。 ✅ 升级内容： 1. 上线**用户签到**功能：每日签到可获得**随机额度奖励** 2. 上线**邀请充值奖励**：下级用户充值，上级可按比例获得奖励 3. 修复已知问题并进行功能优化"
+        },
+        {
+          "id": 3,
+          "date": "2025-11-20",
+          "text": "为了提供更稳定、更流畅的服务体验，我们已完成服务器带宽升级。 当前配置如下： 服务器带宽已升级至 100M 系统整体稳定性已大幅提升 支持 ≥10 个并发线程稳定运行 本次升级将显著提升访问速度、接口响应效率以及高并发处理能力。 感谢您的支持，我们将持续优化，为您带来更优质的使用体验。 如有疑问欢迎随时联系我们。 —— 量界智算团队"
+        },
+        {
+          "id": 2,
+          "date": "2025-11-14",
+          "text": "📢 系统升级公告 为进一步提升平台的稳定性和使用体验，本次已对服务器配置进行了升级优化。 升级期间可能出现的短暂波动现已恢复正常。 👏 感谢您的理解与支持，祝您使用愉快！"
+        }
+      ],
+      "models": [],
+      "modelsSource": "login-required",
+      "defaults": {
+        "claude": null,
+        "openai": null
+      },
+      "signup": {
+        "status": 200,
+        "ok": true,
+        "ms": 473,
+        "attempts": 1
+      },
+      "mirrors": [
+        {
+          "homeUrl": "https://liangjiewis.ai",
+          "online": true
+        }
+      ],
+      "probeBlocked": false,
+      "online": true,
+      "dataStale": false,
+      "staleFrom": null,
+      "staleFields": []
     }
   ]
 }
