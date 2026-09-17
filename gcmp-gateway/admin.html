@@ -217,9 +217,10 @@ main { min-width: 0; }
 .navlink.active .n { background: rgba(255,255,255,.22); }
 
 .sec { display: none; }
-.sec.active { display: block; animation: secIn .18s ease; }
+.sec.active { display: block; opacity: 1; animation: secIn .18s ease; }
 .sec > h2:first-child { margin-top: 0; }
-@keyframes secIn { from { opacity: 0; transform: translateY(5px); } to { opacity: 1; transform: none; } }
+/* 动画只位移不碰 opacity：display:none→block 切换时 opacity 动画会卡死在 0，导致内容透明看不见 */
+@keyframes secIn { from { transform: translateY(5px); } to { transform: none; } }
 
 @media (max-width: 980px) {
   .layout { grid-template-columns: 1fr; }
@@ -434,8 +435,6 @@ table.stats col.c-brk   { width: 10%; }
 }
 .site-links a:hover { border-color: var(--accent); background: rgba(96,165,250,.08); }
 
-.bridge { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; }
-
 .access-urls { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
 .access-urls .url-chip { display: inline-flex; align-items: center; gap: 6px; padding: 5px 10px; background: var(--panel-strong); border: 1px solid var(--border); border-radius: 10px; font-family: Consolas, monospace; font-size: 12px; }
 .access-urls .url-chip .mono { color: var(--fg); }
@@ -512,7 +511,6 @@ details summary { cursor: pointer; color: var(--muted); font-size: 12px; margin:
   <button onclick="queryAllBalances()" id="btn-bal-all">💰 查询全部余额</button>
   <button class="primary" id="btn-save" onclick="saveConfig()">💾 保存配置</button>
   <button onclick="syncToVSCode()" id="btn-sync">🔄 同步到 VS Code</button>
-  <button onclick="window.open('/learn/','_blank')">📚 学习</button>
   <button onclick="location.reload()">↺ 重新加载</button>
 </div>
 
@@ -568,20 +566,24 @@ details summary { cursor: pointer; color: var(--muted); font-size: 12px; margin:
 <div class="hint" id="access-hint"></div>
 <div class="access-configs" id="access-configs"></div>
 
+<h2>一键接入客户端</h2>
+<div class="card global">
+  <div>
+    <div><label>GPT / OpenAI 客户端</label><div class="hint">写入 $OPENAI_BASE_URL / OPENAI_API_KEY</div></div>
+    <button class="primary" onclick="setupClient(this,'openai')">⚡ GPT 客户端一键接入</button>
+  </div>
+  <div>
+    <div><label>Claude 客户端</label><div class="hint">写入 ~/.claude/config.json</div></div>
+    <button class="primary" onclick="setupClient(this,'claude')">⚡ Claude 客户端一键接入</button>
+  </div>
+  <div>
+    <div><label>VS Code ChatGPT/Codex 扩展</label><div class="hint">写入 ~/.codex/config.toml</div></div>
+    <button class="primary" onclick="setupClient(this,'vscode')">⚡ VS Code 一键接入</button>
+  </div>
+</div>
+
 <h2>签到入口 <span class="muted" style="font-size:12px">(点击在新标签打开)</span></h2>
 <div class="site-links" id="site-links"></div>
-
-<h2>codex 桥接 <span class="badge" id="bridge-badge">检查中…</span></h2>
-<div class="card bridge">
-  <label class="switch"><input type="checkbox" id="bridge-auto" onchange="toggleBridgeAuto()"><span></span></label>
-  <div>
-    <div>随网关自动启动</div>
-    <div class="hint" id="bridge-info">sharedchat 上游依赖它，开关状态保存在 config.json</div>
-  </div>
-  <div class="spacer" style="flex:1"></div>
-  <button onclick="bridgeAction('start')" id="btn-bridge-start">▶ 启动</button>
-  <button onclick="bridgeAction('stop')" id="btn-bridge-stop">■ 停止</button>
-</div>
 </section>
 
 <section class="sec" id="sec-upstreams">
@@ -625,7 +627,7 @@ details summary { cursor: pointer; color: var(--muted); font-size: 12px; margin:
 
 <script>
 let CFG = null, STICKY = {}, BREAKER = {}, STATS = {}, AUDIT = {}, SKILLS = [];
-let LAN_IPS = [], LISTEN_HOST = "127.0.0.1";
+let LISTEN_HOST = "127.0.0.1";
 const THEME_KEY = "gcmp-admin-theme";
 const NAV_KEY = "gcmp-admin-nav";
 
@@ -689,13 +691,25 @@ function toast(msg, ok = true) {
   setTimeout(() => t.className = "toast", 2600);
 }
 
-async function loadAll() {
+// 首屏只靠这一个请求，网关没回时 fetch 会一直挂着（页面永远停在「检查中…」），所以带超时 + 自动重试
+async function fetchConfig(timeoutMs = 8000) {
+  const ctrl = new AbortController();
+  const timer = setTimeout(() => ctrl.abort(), timeoutMs);
   try {
-    const r = await fetch("/admin/api/config");
-    const j = await r.json();
+    const r = await fetch("/admin/api/config", { signal: ctrl.signal, cache: "no-store" });
+    return await r.json();
+  } finally {
+    clearTimeout(timer);
+  }
+}
+
+async function loadAll(retry = 3) {
+  const s = document.getElementById("status");
+  try {
+    const j = await fetchConfig();
     CFG = j.config; STICKY = j.sticky || {}; BREAKER = j.breaker || {}; STATS = j.stats || {};
     SKILLS = Array.isArray(j.skills) ? j.skills : [];
-    LAN_IPS = j.lanIps || []; LISTEN_HOST = j.listenHost || "127.0.0.1";
+    LISTEN_HOST = j.listenHost || "127.0.0.1";
     document.getElementById("status").className = "badge ok";
     document.getElementById("status").textContent = `运行中 · ${Object.keys(CFG.upstreams).length} 上游 · ${CFG.models.length} 模型`;
     document.getElementById("endpoint").textContent =
@@ -706,11 +720,15 @@ async function loadAll() {
     document.getElementById("nav-up").textContent = Object.keys(CFG.upstreams).length;
     document.getElementById("nav-m").textContent = CFG.models.length;
     document.getElementById("nav-skills").textContent = SKILLS.length;
-    renderUpstreams(); renderModels(); renderSkills(); renderBridge(j.bridge); renderStats();
+    renderUpstreams(); renderModels(); renderSkills(); renderStats();
     renderAccess();
     applyAudit();   // 保留上一次审计结果，避免刷新后状态列全变回「待测」
   } catch (e) {
-    const s = document.getElementById("status");
+    if (retry > 0) {
+      s.className = "badge err"; s.textContent = "网关无响应，重试中…";
+      setTimeout(() => loadAll(retry - 1), 2000);
+      return;
+    }
     s.className = "badge err"; s.textContent = "网关未响应";
   }
 }
@@ -837,13 +855,21 @@ function renderUpstreams() {
           <input data-k="name" value="${esc(name)}" spellcheck="false"></div>
         <div class="fld"><label>Base URL</label>
           <input class="mono" data-k="baseUrl" value="${esc(up.baseUrl)}" spellcheck="false"></div>
+        <div class="fld"><label title="与上游通信的协议格式。Anthropic 原生 /v1/messages 对复杂工具（嵌套 schema、并行调用）支持最完整，也适合 /chat/completions 被 WAF 封或丢工具的站点">上游协议</label>
+          <select class="mono" data-k="protocol" onchange="syncProtocolUi(this)">
+            <option value="" ${!up.protocol ? "selected" : ""}>OpenAI（标准 /chat/completions）</option>
+            <option value="anthropic" ${up.protocol === "anthropic" ? "selected" : ""}>Anthropic（/v1/messages 原生）</option>
+          </select>
+        </div>
         <div class="fld"><label title="默认走 /chat/completions；该路径被 Cloudflare 等 WAF 封禁的站点（如 justwoker）换旧端点 /completions 可绕过">聊天端点（WAF 封禁时换旧端点）</label>
           <select class="mono" data-k="chatPath">
-            <option value="" ${!up.chatPath ? "selected" : ""}>默认 /chat/completions</option>
+            <option value="" ${!up.chatPath ? "selected" : ""}>${up.protocol === "anthropic" ? "默认 /messages（Anthropic）" : "默认 /chat/completions"}</option>
             <option value="/completions" ${up.chatPath === "/completions" ? "selected" : ""}>旧端点 /completions</option>
             ${up.chatPath && up.chatPath !== "/completions"
               ? `<option value="${esc(up.chatPath)}" selected>${esc(up.chatPath)}</option>` : ""}
-          </select></div>
+          </select>
+          <small style="color:#666;display:block;margin-top:4px">💡 Anthropic 协议自动发 <code>x-api-key</code> + <code>anthropic-version</code> 头并走 <code>/v1/messages</code>；网关内部转回 OpenAI 格式，故障转移/统计照常</small>
+        </div>
         <div class="fld"><label>站点地址（签到用，留空则按 Base URL 推导）</label>
           <div class="key-row">
             <input data-k="site" placeholder="${esc(siteOf(up))}" value="${esc(up.site || "")}" spellcheck="false">
@@ -946,38 +972,16 @@ function renderSiteLinks() {
     : `<span class="muted">暂无可打开的站点</span>`;
 }
 
-/* ---------- codex 桥接 ---------- */
-function renderBridge(b) {
-  if (!b) return;
-  CFG.bridge = Object.assign({}, CFG.bridge, { enabled: b.enabled, port: b.port });
-  document.getElementById("bridge-auto").checked = b.enabled;
-  const badge = document.getElementById("bridge-badge");
-  badge.className = "badge " + (b.running ? "ok" : "err");
-  badge.textContent = b.running ? `运行中 · 端口 ${b.port}` : "未运行";
-  document.getElementById("bridge-info").textContent = b.running && !b.managed
-    ? "当前这个桥是外部启动的，网关的「停止」按钮管不到它，需用 stop-bridge.bat"
-    : "sharedchat 上游依赖它，开关状态保存在 config.json";
-}
-
-async function toggleBridgeAuto() {
-  const on = document.getElementById("bridge-auto").checked;
-  CFG.bridge = Object.assign({}, CFG.bridge, { enabled: on });
-  await saveConfig();
-  if (on) await bridgeAction("start");
-}
-
-async function bridgeAction(action) {
-  const btn = document.getElementById(action === "start" ? "btn-bridge-start" : "btn-bridge-stop");
-  const old = btn.textContent; btn.disabled = true; btn.textContent = "…";
-  try {
-    const r = await fetch("/admin/api/bridge", { method: "POST",
-      headers: { "Content-Type": "application/json" }, body: JSON.stringify({ action }) });
-    const j = await r.json();
-    renderBridge(j.bridge);
-    toast((action === "start" ? "启动桥接: " : "停止桥接: ") + j.message, j.ok);
-  } catch (e) {
-    toast("请求失败: " + e.message, false);
-  } finally { btn.disabled = false; btn.textContent = old; }
+// 「聊天端点」的默认项文案是渲染期按协议算的，切协议时要手动同步，否则切到 Anthropic 仍显示 OpenAI 的默认路径
+function syncProtocolUi(sel) {
+  const card = sel.closest(".card");
+  const chat = card && card.querySelector('[data-k="chatPath"]');
+  if (!chat) return;
+  const anthropic = sel.value === "anthropic";
+  chat.options[0].textContent = anthropic ? "默认 /messages（Anthropic）" : "默认 /chat/completions";
+  const legacy = [...chat.options].find(o => o.value === "/completions");
+  if (legacy) { legacy.hidden = anthropic; legacy.disabled = anthropic; }
+  if (anthropic && chat.value === "/completions") chat.value = "";
 }
 
 function applyUpstream(card, name) {
@@ -986,6 +990,8 @@ function applyUpstream(card, name) {
   up.baseUrl = g("baseUrl").value.trim();
   up.apiKey = g("apiKey").value.trim();
   up.noProxy = g("noProxy").checked;
+  const protocol = g("protocol").value;
+  if (protocol) up.protocol = protocol; else delete up.protocol;
   const chatPath = g("chatPath").value;
   if (chatPath) up.chatPath = chatPath; else delete up.chatPath;
   const site = g("site").value.trim();
@@ -1059,7 +1065,7 @@ async function fetchModels(btn) {
     const r = await fetch("/admin/api/models", { method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ name, baseUrl: up.baseUrl, apiKey: up.apiKey,
-        headers: up.headers, noProxy: up.noProxy, chatPath: up.chatPath }) });
+        headers: up.headers, noProxy: up.noProxy, chatPath: up.chatPath, protocol: up.protocol }) });
     const j = await r.json();
     if (j.ok) {
       sel.innerHTML = '<option value="">— 选择模型以直接测试（' + j.count + ' 个）—</option>' +
@@ -1095,7 +1101,7 @@ async function testUp(btn) {
     const r = await fetch("/admin/api/test", { method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ name, model, baseUrl: up.baseUrl, apiKey: up.apiKey,
-        headers: up.headers, noProxy: up.noProxy, chatPath: up.chatPath }) });
+        headers: up.headers, noProxy: up.noProxy, chatPath: up.chatPath, protocol: up.protocol }) });
     const j = await r.json();
     res.className = "result " + (j.ok ? "ok" : "err");
     res.textContent = j.ok ? `✅ ${j.latency}s · ${j.snippet}` : `❌ ${j.latency}s · ${j.error}`;
@@ -1126,7 +1132,7 @@ async function queryBalance(btn, quiet) {
     const r = await fetch("/admin/api/balance", { method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ name, baseUrl: up.baseUrl, apiKey: up.apiKey,
-        headers: up.headers, noProxy: up.noProxy, chatPath: up.chatPath }) });
+        headers: up.headers, noProxy: up.noProxy, chatPath: up.chatPath, protocol: up.protocol }) });
     j = await r.json();
     res.className = "result " + (j.ok ? "ok" : "err");
     res.textContent = fmtBal(j);
@@ -1423,7 +1429,7 @@ async function testRoute(btn) {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ name: route.upstream, model: route.model, baseUrl: up.baseUrl, apiKey: up.apiKey,
-        headers: up.headers, noProxy: up.noProxy, chatPath: up.chatPath })
+        headers: up.headers, noProxy: up.noProxy, chatPath: up.chatPath, protocol: up.protocol })
     });
     const j = await r.json();
     const ok = !!j.ok;
@@ -1485,6 +1491,9 @@ async function auditRoutes() {
 // 把审计结果写回路由表的状态列（renderModels 之后调用）
 function applyAudit() {
   if (!Object.keys(AUDIT).length) return;
+  document.querySelectorAll("#models .card").forEach((c, i) =>
+    console.log(i, c.style, getComputedStyle(c).display, getComputedStyle(c).opacity)
+  );
   document.querySelectorAll("#models .card").forEach(card => {
     const id = card.querySelector('[data-f="id"]').value.trim();
     const m = CFG.models.find(x => x.id === id);
@@ -1537,7 +1546,7 @@ function fallbackCopy(txt, done) {
 
 function renderAccess() {
   const port = (CFG.listen || {}).port || 15800;
-  const hosts = ["127.0.0.1"].concat(LAN_IPS.filter(ip => ip && ip !== "127.0.0.1"));
+  const hosts = ["127.0.0.1"];   // 只列本机地址，局域网 IP 不再展示
   const isOpen = LISTEN_HOST === "0.0.0.0";
   const badge = document.getElementById("access-badge");
   badge.className = "badge " + (isOpen ? "ok" : "warn");
@@ -1568,7 +1577,7 @@ function renderAccess() {
       hint.textContent = `写 responses 协议 → 桌面端/CLI 走 ${defaultPick}`;
   }
   document.getElementById("access-hint").textContent = isOpen
-    ? "第三方平台填局域网地址 + 统一模型名 + 上面的接入密钥即可接入，不用把上游 Token 给别人。"
+    ? "第三方平台把下面的 127.0.0.1 换成本机局域网 IP（ipconfig 里查），再填统一模型名 + 接入密钥即可接入，不用把上游 Token 给别人。"
     : `当前仅本机可访问。要开放给局域网，请把 listen.host 改为 0.0.0.0 并重启网关（打开方式：config.json → 重启 start-gateway.bat）。`;
   const cfgOpenAI = `# OpenAI 兼容（VS Code / 各类 SDK）
 base_url = http://127.0.0.1:${port}/v1
@@ -1588,6 +1597,25 @@ export ANTHROPIC_MODEL=${aliasName}`;
       <pre id="cfg-anthropic">${esc(cfgAnthropic)}</pre>
     </div>`;
 }
+
+// ----- 一键写入客户端配置文件 -----
+async function setupClient(btn, kind) {
+  const old = btn.textContent;
+  if (!confirm(`确定要一键写入 ${kind} 客户端配置？原配置文件会备份为 .bak-gcmp`)) return;
+  btn.disabled = true; btn.textContent = "…";
+  const model = document.getElementById("codex-model").value || "";
+  try {
+    const r = await fetch("/admin/api/setup-client", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ kind, model })
+    });
+    const j = await r.json();
+    toast(j.ok ? j.msg : "失败: " + j.error, !j.ok);
+  } catch (e) { toast("失败: " + e.message, true); }
+  btn.disabled = false; btn.textContent = old;
+}
+
 function copyTextRaw(txt) {
   const done = () => toast("已复制 ✅");
   if (navigator.clipboard && window.isSecureContext) {
@@ -1716,7 +1744,6 @@ async function pollLogs() {
     const lines = (j.logs || []).slice().reverse();  // 最新的在最上面，省得每次滚到底
     document.getElementById("logs").textContent = lines.join("\n") || "暂无日志";
     if (CFG) {
-      renderBridge(j.bridge);
       BREAKER = j.breaker || {}; STATS = j.stats || {};
       renderStats();
     }

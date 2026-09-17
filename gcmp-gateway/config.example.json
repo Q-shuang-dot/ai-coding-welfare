@@ -25,379 +25,30 @@
     "cooldown": 300
   },
   "upstreams": {
-    "tokenbom": {
-      "baseUrl": "https://tokenbom.com/v1",
-      "apiKey": "sk-REPLACE_ME"
-    },
-    "justwoker": {
-      "baseUrl": "https://api.justwoker.icu/v1",
-      "apiKey": "sk-REPLACE_ME"
-    },
-    "tabitoken": {
-      "baseUrl": "https://tabitoken.com/v1",
-      "apiKey": "sk-REPLACE_ME",
-      "pricing": {
-        "type": "per_call",
-        "price": 0.8
-      }
-    },
-    "gorouter": {
-      "baseUrl": "https://gorouter.app/v1",
-      "apiKey": "sk-REPLACE_ME",
-      "pricing": {
-        "type": "per_call",
-        "price": 0.3
-      }
-    },
-    "seekai": {
-      "baseUrl": "https://seekai.cc/v1",
-      "apiKey": "sk-REPLACE_ME",
-      "headers": {
-        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
-      }
-    },
-    "seekai-ds": {
-      "baseUrl": "https://seekai.cc/v1",
-      "apiKey": "sk-REPLACE_ME",
-      "rateLimit": {
-        "limit": 5,
-        "window": 60
-      },
-      "headers": {
-        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
-      }
-    },
-    "kktoken": {
-      "baseUrl": "https://kktoken.cc/v1",
-      "apiKey": "sk-REPLACE_ME",
-      "pricing": {
-        "type": "per_call",
-        "price": 0.3
-      },
-      "headers": {
-        "User-Agent": "claude-cli/1.0.60 (external, cli)"
-      }
-    },
     "agentrouter": {
       "baseUrl": "https://agentrouter.org/v1",
       "apiKey": "sk-REPLACE_ME",
+      "headers": {
+        "User-Agent": "claude-cli/1.0.60 (external, cli)"
+      },
       "pricing": {
         "type": "per_token",
         "in": 2,
-        "out": 6,
-        "models": {
-          "claude-opus-5": {
-            "in": 8,
-            "out": 40
-          },
-          "claude-opus-4-8": {
-            "in": 8,
-            "out": 40
-          },
-          "glm-5.3": {
-            "in": 3,
-            "out": 12
-          },
-          "gpt-5.6-sol": {
-            "in": 3,
-            "out": 15
-          }
-        }
-      },
-      "headers": {
-        "User-Agent": "claude-cli/1.0.60 (external, cli)"
+        "out": 6
       }
-    },
-    "zhipu": {
-      "baseUrl": "https://open.bigmodel.cn/api/paas/v4",
-      "apiKey": "sk-REPLACE_ME",
-      "noProxy": true
-    },
-    "matrix": {
-      "baseUrl": "https://mzsjai.com/v1",
-      "apiKey": "sk-REPLACE_ME"
-    },
-    "hcnsec": {
-      "baseUrl": "https://api.hcnsec.cn/v1",
-      "apiKey": "sk-REPLACE_ME",
-      "noProxy": true,
-      "rateLimit": {
-        "limit": 10,
-        "window": 60
-      },
-      "headers": {
-        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
-      }
-    },
-    "sharedchat": {
-      "baseUrl": "http://127.0.0.1:15731/v1",
-      "noProxy": true
-    },
-    "anymodel": {
-      "baseUrl": "https://anymodel.org/v1",
-      "apiKey": "sk-REPLACE_ME",
-      "headers": {
-        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
-      }
-    },
-    "gorouter-friend": {
-      "baseUrl": "https://gorouter.app/v1",
-      "apiKey": "sk-REPLACE_ME",
-      "pricing": {
-        "type": "per_call",
-        "price": 0.3
-      },
-      "headers": {
-        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
-      }
-    },
-    "justwoker-friend": {
-      "baseUrl": "https://api.justwoker.icu/v1",
-      "apiKey": "sk-REPLACE_ME",
-      "headers": {
-        "User-Agent": "claude-cli/1.0.60 (external, cli)"
-      },
-      "noProxy": false
     }
   },
   "models": [
-    {
-      "id": "opus-5",
-      "name": "Opus-5",
-      "maxInputTokens": 200000,
-      "maxOutputTokens": 16384,
-      "route": [
-        {
-          "upstream": "justwoker-friend",
-          "model": "claude-opus-5"
-        },
-        {
-          "upstream": "justwoker",
-          "model": "claude-opus-5"
-        },
-        {
-          "upstream": "gorouter",
-          "model": "claude-opus-5"
-        },
-        {
-          "upstream": "kktoken",
-          "model": "claude-opus-5"
-        },
-        {
-          "upstream": "tokenbom",
-          "model": "claude-opus-5"
-        },
-        {
-          "upstream": "tabitoken",
-          "model": "claude-opus-5"
-        },
-        {
-          "upstream": "anymodel",
-          "model": "cc/claude-opus-5"
-        }
-      ],
-      "sticky": false
-    },
-    {
-      "id": "opus-5-1m",
-      "name": "Opus-5-1M",
-      "maxInputTokens": 1000000,
-      "maxOutputTokens": 16384,
-      "route": [
-        {
-          "upstream": "justwoker-friend",
-          "model": "claude-opus-5"
-        },
-        {
-          "upstream": "kktoken",
-          "model": "claude-opus-5"
-        },
-        {
-          "upstream": "gorouter",
-          "model": "claude-opus-5"
-        }
-      ],
-      "sticky": false
-    },
-    {
-      "id": "opus-4-8",
-      "name": "Opus-4-8",
-      "maxInputTokens": 200000,
-      "maxOutputTokens": 16384,
-      "route": [
-        {
-          "upstream": "anymodel",
-          "model": "cc/claude-opus-4-8"
-        },
-        {
-          "upstream": "anymodel",
-          "model": "cc/claude-opus-4-7"
-        },
-        {
-          "upstream": "anymodel",
-          "model": "cc/claude-opus-4-6"
-        }
-      ]
-    },
-    {
-      "id": "sonnet-5",
-      "name": "Sonnet-5",
-      "maxInputTokens": 200000,
-      "maxOutputTokens": 16384,
-      "route": [
-        {
-          "upstream": "anymodel",
-          "model": "cc/claude-sonnet-5"
-        },
-        {
-          "upstream": "tokenbom",
-          "model": "claude-4.6-sonnet"
-        },
-        {
-          "upstream": "anymodel",
-          "model": "ag/claude-sonnet-4-6"
-        },
-        {
-          "upstream": "anymodel",
-          "model": "cc/claude-sonnet-4-6"
-        }
-      ]
-    },
-    {
-      "id": "gpt-5.6",
-      "name": "GPT-5.6",
-      "maxInputTokens": 200000,
-      "maxOutputTokens": 16384,
-      "route": [
-        {
-          "upstream": "tokenbom",
-          "model": "gpt-5.6-terra",
-          "noStream": true
-        },
-        {
-          "upstream": "tokenbom",
-          "model": "gpt-5.6-luna",
-          "noStream": true
-        },
-        {
-          "upstream": "tokenbom",
-          "model": "gpt-5.6-sol",
-          "noStream": true
-        },
-        {
-          "upstream": "sharedchat",
-          "model": "gpt-5.6-terra",
-          "noStream": true,
-          "timeout": 180
-        },
-        {
-          "upstream": "anymodel",
-          "model": "cx/gpt-5.6-sol"
-        }
-      ]
-    },
-    {
-      "id": "glm-5.3",
-      "name": "GLM-5.3",
-      "maxInputTokens": 200000,
-      "maxOutputTokens": 16384,
-      "route": [
-        {
-          "upstream": "agentrouter",
-          "model": "glm-5.3"
-        },
-        {
-          "upstream": "tokenbom",
-          "model": "glm-5.3",
-          "timeout": 30
-        },
-        {
-          "upstream": "zhipu",
-          "model": "glm-5.3"
-        },
-        {
-          "upstream": "anymodel",
-          "model": "glm/glm-5.3"
-        }
-      ]
-    },
     {
       "id": "deepseek",
       "name": "DeepSeek-V4",
       "maxInputTokens": 128000,
       "maxOutputTokens": 8192,
-      "sticky": false,
       "route": [
-        {
-          "upstream": "tokenbom",
-          "model": "deepseek-v4-flash-vision-exp",
-          "vision": true
-        },
-        {
-          "upstream": "seekai-ds",
-          "model": "deepseek-v4-flash-vision-exp",
-          "vision": true
-        },
-        {
-          "upstream": "seekai-ds",
-          "model": "deepseek-v4-flash",
-          "vision": false
-        },
-        {
-          "upstream": "tokenbom",
-          "model": "deepseek-v4-flash",
-          "vision": false
-        },
         {
           "upstream": "agentrouter",
           "model": "deepseek-v4-flash",
           "vision": false
-        }
-      ]
-    },
-    {
-      "id": "cheap",
-      "name": "Cheap (GLM-Flash / Qwen)",
-      "maxInputTokens": 128000,
-      "maxOutputTokens": 8192,
-      "route": [
-        {
-          "upstream": "matrix",
-          "model": "qwen/qwen3.8-27b"
-        },
-        {
-          "upstream": "tokenbom",
-          "model": "qwen3.8-flash"
-        },
-        {
-          "upstream": "tokenbom",
-          "model": "glm-5.3-flash"
-        },
-        {
-          "upstream": "matrix",
-          "model": "qwen/qwen3.6-35b-a3b"
-        },
-        {
-          "upstream": "zhipu",
-          "model": "glm-5.3-flash"
-        },
-        {
-          "upstream": "hcnsec",
-          "model": "step-3.7-flash",
-          "timeout": 15
-        },
-        {
-          "upstream": "hcnsec",
-          "model": "step-explore",
-          "timeout": 15
-        },
-        {
-          "upstream": "anymodel",
-          "model": "glm/glm-5.3-flash"
-        },
-        {
-          "upstream": "anymodel",
-          "model": "am/minimax-m3"
         }
       ]
     }
@@ -406,5 +57,9 @@
     "enabled": false,
     "script": "codex-bridge\\bridge.py",
     "port": 15731
+  },
+  "examples": {
+    "add_upstream": "{\n  \"my-upstream\": {\n    \"baseUrl\": \"https://api.example.com/v1\",\n    \"apiKey\": \"sk-YOUR_KEY\"\n  }\n}",
+    "add_model": "{\n  \"id\": \"my-model\",\n  \"name\": \"My Model\",\n  \"maxInputTokens\": 128000,\n  \"maxOutputTokens\": 8192,\n  \"route\": [\n    {\n      \"upstream\": \"my-upstream\",\n      \"model\": \"actual-model-name\"\n    }\n  ]\n}"
   }
 }

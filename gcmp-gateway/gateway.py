@@ -148,7 +148,8 @@ def load_config():
     if m != CONFIG_MTIME or "CONFIG" not in globals():
         with CONFIG_LOCK:
             if m != CONFIG_MTIME or "CONFIG" not in globals():
-                with open(CONFIG_PATH, encoding="utf-8") as f:
+                # utf-8-sig：兼容记事本/PowerShell 保存时带的 BOM，无 BOM 也能正常读
+                with open(CONFIG_PATH, encoding="utf-8-sig") as f:
                     CONFIG = json.load(f)
                 CONFIG_MTIME = m
                 print(f"[cfg] 已加载配置 ({len(CONFIG.get('models', []))} 个逻辑模型)", flush=True)
@@ -441,14 +442,17 @@ def is_masked(k):
 
 
 def public_config(cfg):
-    """给管理页的配置：apiKey 掩码化；占位 key 的上游不展示，避免泄露模板供应商名。"""
+    """给管理页的配置：apiKey 掩码化；保留示例/占位配置以便开箱即用。"""
     keep = []
     for name, up in (cfg.get("upstreams") or {}).items():
-        key = (up.get("apiKey") or "").strip() if isinstance(up, dict) else ""
-        if key in ("sk-REPLACE_ME", "REPLACE_ME", ""):
+        if not isinstance(up, dict):
             continue
         u = dict(up)
-        u["apiKey"] = mask_key(u.get("apiKey", ""))
+        key = (u.get("apiKey") or "").strip()
+        if key:
+            u["apiKey"] = mask_key(key)
+        else:
+            u["apiKey"] = u.get("apiKey", "")
         keep.append((name, u))
     ups = {}
     for idx, (name, u) in enumerate(keep, start=1):
@@ -458,9 +462,6 @@ def public_config(cfg):
     if acc.get("apiKey"):
         acc["apiKey"] = mask_key(acc["apiKey"])
     out["access"] = acc
-    if not keep:
-        out["models"] = []
-        out["skills"] = []
     return out
 
 
@@ -629,10 +630,18 @@ def bridge_port_busy(port):
         return s.connect_ex(("127.0.0.1", port)) == 0
 
 
+_BRIDGE_PROBE = {"ts": 0.0, "busy": False}
+
+
 def bridge_status():
     b = bridge_cfg()
-    running = bridge_port_busy(b["port"])
     owned = BRIDGE_PROC is not None and BRIDGE_PROC.poll() is None
+    # 探端口最坏要等满 0.4s 超时，管理页每次刷新都调它，缓存 2 秒免得白等
+    now = time.time()
+    if now - _BRIDGE_PROBE["ts"] > 2:
+        _BRIDGE_PROBE["ts"] = now
+        _BRIDGE_PROBE["busy"] = bridge_port_busy(b["port"])
+    running = owned or _BRIDGE_PROBE["busy"]
     return {"enabled": b["enabled"], "port": b["port"], "running": running,
             "managed": owned, "script": b["script"]}
 
@@ -855,10 +864,18 @@ def build_request(up, body_bytes, stream):
         "User-Agent": "gcmp-gateway/1.0",
     }
     headers.update(up.get("headers") or {})
-    if up.get("apiKey"):
-        headers["Authorization"] = "Bearer " + up["apiKey"]
-    # 默认 /chat/completions；个别上游该路径被 WAF 封禁时可用 chatPath 覆盖
-    url = up["baseUrl"].rstrip("/") + (up.get("chatPath") or "/chat/completions")
+    if up.get("protocol") == "anthropic":
+        # Anthropic 原生端点：缺 anthropic-version 会被 Cloudflare 403
+        headers["anthropic-version"] = "2023-06-01"
+        if up.get("apiKey"):
+            headers["x-api-key"] = up["apiKey"]
+        # baseUrl 已含 /v1，默认端点 /messages
+        url = up["baseUrl"].rstrip("/") + (up.get("chatPath") or "/messages")
+    else:
+        if up.get("apiKey"):
+            headers["Authorization"] = "Bearer " + up["apiKey"]
+        # 默认 /chat/completions；个别上游该路径被 WAF 封禁时可用 chatPath 覆盖
+        url = up["baseUrl"].rstrip("/") + (up.get("chatPath") or "/chat/completions")
     return urllib.request.Request(url, data=body_bytes, headers=headers, method="POST")
 
 
@@ -1013,8 +1030,18 @@ def resolve_model(mid, cfg):
     return None
 
 
+_LAN_IPS = {"ts": 0.0, "ips": []}
+
+
 def lan_ips():
-    """列出本机局域网 IPv4（用于管理页展示接入地址）。"""
+    """列出本机局域网 IPv4（用于管理页展示接入地址）。
+
+    getaddrinfo 是阻塞调用，代理/VPN 异常时能卡几十秒，而管理页只发这一个请求，
+    卡住就等于整页空白，所以结果缓存 60 秒，查询失败时沿用上一次的值。
+    """
+    now = time.time()
+    if now - _LAN_IPS["ts"] < 60:
+        return _LAN_IPS["ips"]
     out = []
     try:
         s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
@@ -1028,7 +1055,9 @@ def lan_ips():
                                                     socket.AF_INET)
                 if i[4][0] not in out]
     except Exception:
-        pass
+        out = _LAN_IPS["ips"]  # DNS 挂了也别把管理页地址清空
+    _LAN_IPS["ts"] = now
+    _LAN_IPS["ips"] = out
     return out
 
 
@@ -1362,14 +1391,13 @@ def anthropic_to_openai(body):
         for t in tools:
             if not isinstance(t, dict):
                 continue
-            fn = t.get("function") or t
+            fn = (t.get("function") if isinstance(t, dict) else None) or t
             name = fn.get("name")
             if not name:
                 continue
-            ot.append({"type": "function",
-                       "function": {"name": name,
-                                    "description": fn.get("description") or "",
-                                    "parameters": t.get("input_schema") or fn.get("parameters") or {"type": "object", "properties": {}}}})
+            ot.append({"name": name,
+                       "description": fn.get("description") or "",
+                       "input_schema": fn.get("parameters") or {"type": "object", "properties": {}}})
         if ot:
             out["tools"] = ot
     return out
@@ -1428,6 +1456,306 @@ def anthropic_sse_events(msg):
                              "delta": {"stop_reason": msg.get("stop_reason"), "stop_sequence": None},
                              "usage": {"output_tokens": usage.get("output_tokens", 0)}})
     yield ("message_stop", {"type": "message_stop"})
+
+
+def openai_messages_to_anthropic(body):
+    """把内部 OpenAI chat 请求转成 Anthropic /v1/messages 请求体。
+
+    用于 protocol=anthropic 的上游（其 /chat/completions 被 WAF 封或频繁 400）。
+    system 消息并入顶层 system，tool_calls / tool 结果转 tool_use / tool_result 块。
+    """
+    system_parts = []
+    msgs = []
+    for m in body.get("messages") or []:
+        role = m.get("role")
+        content = m.get("content")
+        if role == "system":
+            if isinstance(content, str) and content:
+                system_parts.append(content)
+            elif isinstance(content, list):
+                system_parts += [p.get("text", "") for p in content
+                                 if isinstance(p, dict) and p.get("type") == "text"]
+            continue
+        if role == "tool":
+            msgs.append({"role": "user", "content": [{
+                "type": "tool_result", "tool_use_id": m.get("tool_call_id", ""),
+                "content": content if isinstance(content, str) else json.dumps(content, ensure_ascii=False)}]})
+            continue
+        if role == "assistant" and m.get("tool_calls"):
+            blocks = []
+            if isinstance(content, str) and content:
+                blocks.append({"type": "text", "text": content})
+            for tc in m["tool_calls"]:
+                fn = tc.get("function") or {}
+                try:
+                    inp = json.loads(fn.get("arguments") or "{}")
+                except Exception:
+                    inp = {}
+                blocks.append({"type": "tool_use", "id": tc.get("id", "toolu_" + os.urandom(6).hex()),
+                               "name": fn.get("name", ""), "input": inp})
+            msgs.append({"role": "assistant", "content": blocks})
+            continue
+        # 普通消息：content 可能是 str 或多模态数组
+        if isinstance(content, str):
+            msgs.append({"role": role, "content": content} if content else
+                        {"role": role, "content": [{"type": "text", "text": ""}]})
+        elif isinstance(content, list):
+            blocks = []
+            for p in content:
+                if not isinstance(p, dict):
+                    continue
+                t = p.get("type")
+                if t == "text":
+                    blocks.append({"type": "text", "text": p.get("text", "")})
+                elif t in ("image_url", "input_image", "image"):
+                    iu = p.get("image_url") or {}
+                    url = iu.get("url") if isinstance(iu, dict) else str(iu)
+                    url = url or p.get("url") or ""
+                    if url.startswith("data:image/"):
+                        head, _, b64 = url.partition(",")
+                        media = head[5:].split(";", 1)[0] or "image/png"
+                        blocks.append({"type": "image", "source": {
+                            "type": "base64", "media_type": media, "data": b64}})
+                    elif url:
+                        blocks.append({"type": "image", "source": {"type": "url", "url": url}})
+            msgs.append({"role": role, "content": blocks or [{"type": "text", "text": ""}]})
+        else:
+            msgs.append({"role": role, "content": [{"type": "text", "text": ""}]})
+    out = {"model": body.get("model"),
+           "max_tokens": int(body.get("max_tokens") or body.get("max_completion_tokens") or 4096),
+           "messages": msgs, "stream": bool(body.get("stream"))}
+    if system_parts:
+        out["system"] = "\n\n".join(system_parts)
+    for k in ("temperature", "top_p"):
+        if body.get(k) is not None:
+            out[k] = body[k]
+    tools = body.get("tools")
+    at = []
+    if isinstance(tools, list) and tools:
+        for t in tools:
+            fn = (t.get("function") if isinstance(t, dict) else None) or t
+            name = fn.get("name")
+            if not name:
+                continue
+            at.append({"name": name,
+                       "description": fn.get("description") or "",
+                       "input_schema": fn.get("parameters") or {"type": "object", "properties": {}}})
+    if at:
+        out["tools"] = at
+        tc = body.get("tool_choice")
+        if isinstance(tc, str):
+            out["tool_choice"] = {"required": {"type": "any"},
+                                  "none": {"type": "none"}}.get(tc, {"type": "auto"})
+        elif isinstance(tc, dict) and tc.get("type") == "function":
+            out["tool_choice"] = {"type": "tool",
+                                  "name": (tc.get("function") or {}).get("name") or tc.get("name", "")}
+    return out
+
+
+def anthropic_json_to_openai(msg):
+    """把 Anthropic message 响应转回内部 OpenAI chat 响应（protocol=anthropic 上游用）。"""
+    content = msg.get("content") or []
+    text_parts = [b.get("text", "") for b in content
+                  if isinstance(b, dict) and b.get("type") == "text"]
+    tool_calls = []
+    for b in content:
+        if isinstance(b, dict) and b.get("type") == "tool_use":
+            tool_calls.append({"id": b.get("id", "call_" + os.urandom(6).hex()),
+                               "type": "function",
+                               "function": {"name": b.get("name", ""),
+                                            "arguments": json.dumps(b.get("input") or {}, ensure_ascii=False)}})
+    reasoning = "".join(b.get("thinking", "") for b in content
+                        if isinstance(b, dict) and b.get("type") == "thinking")
+    message = {"role": "assistant", "content": "".join(text_parts)}
+    if tool_calls:
+        message["tool_calls"] = tool_calls
+    if reasoning:
+        message["reasoning_content"] = reasoning
+    stop = msg.get("stop_reason")
+    finish = {"end_turn": "stop", "stop_sequence": "stop", "max_tokens": "length",
+              "tool_use": "tool_calls", "tool_calls": "tool_calls"}.get(stop or "", "stop")
+    usage = msg.get("usage") or {}
+    return {"id": msg.get("id") or "chatcmpl-" + os.urandom(8).hex(),
+            "object": "chat.completion", "created": int(time.time()),
+            "model": msg.get("model"), "choices": [{
+                "index": 0, "message": message, "finish_reason": finish}],
+            "usage": {"prompt_tokens": usage.get("input_tokens", 0),
+                      "completion_tokens": usage.get("output_tokens", 0),
+                      "total_tokens": usage.get("input_tokens", 0) + usage.get("output_tokens", 0)}}
+
+
+def convert_upstream_request(up, body):
+    """内部 OpenAI chat 请求体 -> 该上游协议实际要发的请求体。"""
+    if (up or {}).get("protocol") == "anthropic":
+        return openai_messages_to_anthropic(body)
+    return body
+
+
+def convert_upstream_response(up, j, model=None):
+    """上游响应 JSON -> 内部 OpenAI chat 响应（非对应协议的原样返回）。"""
+    if not isinstance(j, dict):
+        return j
+    if (up or {}).get("protocol") == "anthropic" and j.get("type") == "message":
+        return anthropic_json_to_openai(j)
+    return j
+
+
+def iter_anthropic_sse(resp):
+    """逐行读取上游 Anthropic SSE，产出 (事件名, data 对象)。"""
+    event, data_lines = None, []
+    while True:
+        line = resp.readline()
+        if not line:
+            break
+        line = line.rstrip(b"\r\n")
+        if not line:
+            if data_lines:
+                yield event, _sse_json(b"\n".join(data_lines))
+            event, data_lines = None, []
+            continue
+        if line.startswith(b"event:"):
+            event = line[6:].strip().decode("utf-8", "replace")
+        elif line.startswith(b"data:"):
+            data_lines.append(line[5:].strip())
+        # id:/retry:/注释行直接忽略
+    if data_lines:
+        yield event, _sse_json(b"\n".join(data_lines))
+
+
+def _sse_json(raw):
+    try:
+        j = json.loads(raw)
+        return j if isinstance(j, dict) else {}
+    except Exception:
+        return {}
+
+
+class AnthropicStreamAssembler:
+    """上游 Anthropic SSE → OpenAI 流式 delta，同时累积出完整响应。
+
+    protocol=anthropic 的上游恒以 stream=true 请求：非流式要等整段生成完才吐
+    响应头（实测响应头 ≈ 总时长），大上下文必然撞 open 超时；流式则在首字节
+    就返回。同一份事件流既能实时转发给流式客户端，也能聚合成非流式 JSON
+    （capture 模式给 /v1/messages、/v1/responses 适配层用）。
+    """
+
+    def __init__(self, model):
+        self.model = model
+        self.id = None
+        self.text = []
+        self.thinking = []
+        self.tools = {}
+        self.blocks = {}
+        self.next_tool = 0
+        self.prompt_tokens = 0
+        self.completion_tokens = 0
+        self.stop_reason = None
+        self.done = False
+
+    def feed(self, event, data):
+        """消费一个 SSE 事件，返回要立刻下发的 OpenAI delta 列表。"""
+        kind = (data or {}).get("type") or event or ""
+        if kind == "message_start":
+            msg = data.get("message") or {}
+            self.id = msg.get("id") or self.id
+            self.model = msg.get("model") or self.model
+            usage = msg.get("usage") or {}
+            self.prompt_tokens = int(usage.get("input_tokens") or 0)
+            self.completion_tokens = int(usage.get("output_tokens") or 0)
+            return []
+        if kind == "content_block_start":
+            block = data.get("content_block") or {}
+            index = int(data.get("index") or 0)
+            btype = block.get("type") or "text"
+            if btype == "tool_use":
+                oi = self.next_tool
+                self.next_tool += 1
+                self.blocks[index] = ("tool", oi)
+                call = {"id": block.get("id") or "call_" + os.urandom(6).hex(),
+                        "name": block.get("name") or "", "args": []}
+                self.tools[oi] = call
+                args = ""
+                if block.get("input"):  # 少数上游把整个入参塞在 start 里
+                    args = json.dumps(block["input"], ensure_ascii=False)
+                    call["args"].append(args)
+                return [{"tool_calls": [{"index": oi, "type": "function", "id": call["id"],
+                                         "function": {"name": call["name"], "arguments": args}}]}]
+            self.blocks[index] = (btype, None)
+            seed = block.get("text") if btype == "text" else (
+                block.get("thinking") if btype == "thinking" else None)
+            return self._accumulate(btype, seed or "")
+        if kind == "content_block_delta":
+            delta = data.get("delta") or {}
+            dtype = delta.get("type")
+            if dtype == "text_delta":
+                return self._accumulate("text", delta.get("text") or "")
+            if dtype == "thinking_delta":
+                return self._accumulate("thinking", delta.get("thinking") or "")
+            if dtype == "input_json_delta":
+                _, oi = self.blocks.get(int(data.get("index") or 0), ("tool", None))
+                frag = delta.get("partial_json") or ""
+                if oi is None or not frag:
+                    return []
+                self.tools[oi]["args"].append(frag)
+                return [{"tool_calls": [{"index": oi, "function": {"arguments": frag}}]}]
+            return []
+        if kind == "message_delta":
+            delta = data.get("delta") or {}
+            if delta.get("stop_reason"):
+                self.stop_reason = delta["stop_reason"]
+            usage = data.get("usage") or {}
+            if usage.get("output_tokens") is not None:
+                self.completion_tokens = int(usage.get("output_tokens") or 0)
+            if usage.get("input_tokens") is not None:
+                self.prompt_tokens = int(usage.get("input_tokens") or 0)
+            return []
+        if kind == "message_stop":
+            self.done = True
+        return []
+
+    def _accumulate(self, kind, text):
+        if not text or kind not in ("text", "thinking"):
+            return []
+        if kind == "thinking":
+            self.thinking.append(text)
+            return [{"reasoning_content": text}]
+        self.text.append(text)
+        return [{"content": text}]
+
+    @property
+    def has_output(self):
+        return bool(self.text or self.thinking or self.tools)
+
+    def usage(self):
+        return {"prompt_tokens": self.prompt_tokens,
+                "completion_tokens": self.completion_tokens,
+                "total_tokens": self.prompt_tokens + self.completion_tokens}
+
+    def finish_reason(self):
+        if self.tools and self.stop_reason not in ("end_turn", "stop_sequence", "max_tokens"):
+            return "tool_calls"
+        return {"end_turn": "stop", "stop_sequence": "stop", "max_tokens": "length",
+                "tool_use": "tool_calls", "tool_calls": "tool_calls"}.get(
+                    self.stop_reason or "", "stop")
+
+    def to_openai(self):
+        message = {"role": "assistant", "content": "".join(self.text)}
+        if self.thinking:
+            message["reasoning_content"] = "".join(self.thinking)
+        if self.tools:
+            message["tool_calls"] = [
+                {"id": call["id"], "type": "function",
+                 "function": {"name": call["name"],
+                              "arguments": "".join(call["args"]) or "{}"}}
+                for _, call in sorted(self.tools.items())]
+            if not message["content"].strip():
+                message["content"] = None
+        return {"id": self.id or "chatcmpl-" + os.urandom(8).hex(),
+                "object": "chat.completion", "created": int(time.time()),
+                "model": self.model,
+                "choices": [{"index": 0, "message": message,
+                             "finish_reason": self.finish_reason()}],
+                "usage": self.usage()}
 
 
 def fix_max_completion_tokens(raw_body, resp_text):
@@ -1520,26 +1848,23 @@ def smooth_sse_event(event, target_parts=6):
 
 def test_upstream(up, model, prompt, timeout=60):
     """管理页用：同步测试单个上游+模型，返回结果摘要"""
-    body = json.dumps({
+    oai = {
         "model": model, "stream": False, "max_tokens": 64,
         "messages": [{"role": "user", "content": prompt or "只回复两个字：收到"}],
-    }).encode()
+    }
+    body = json.dumps(convert_upstream_request(up, oai)).encode()
     t0 = time.time()
     try:
-        headers = {"Content-Type": "application/json", "Accept": "application/json",
-                   "User-Agent": "gcmp-gateway/1.0"}
-        headers.update(up.get("headers") or {})
-        if up.get("apiKey"):
-            headers["Authorization"] = "Bearer " + up["apiKey"]
-        req = urllib.request.Request(up["baseUrl"].rstrip("/") + (up.get("chatPath") or "/chat/completions"),
-                                     data=body, headers=headers, method="POST")
+        req = build_request(up, body, False)
         opener = make_opener(up)
         resp = opener.open(req, timeout=timeout)
-        data = json.loads(resp.read())
+        data = convert_upstream_response(up, json.loads(resp.read()), model)
         content = ""
         for ch in data.get("choices", []):
             msg = ch.get("message") or {}
             content = msg.get("content") or msg.get("reasoning_content") or ""
+            if not content and msg.get("tool_calls"):
+                content = "(工具调用)"
             if content:
                 break
         return {"ok": True, "latency": round(time.time() - t0, 1),
@@ -2027,11 +2352,9 @@ class Handler(BaseHTTPRequestHandler):
                                "cooldown_left": max(0, round(v.get("open_until", 0) - now))}
                            for k, v in BREAK.items()}
             public = public_config(cfg)
-            public["models"] = []
             self._json(200, {"config": public, "sticky": sticky, "health": health,
                              "logs": RECENT_LOGS[-80:], "bridge": bridge_status(),
                              "breaker": breaker, "stats": stats_snapshot(),
-                             "skills": [],
                              "lanIps": lan_ips(),
                              "listenHost": (cfg.get("listen") or {}).get("host", "127.0.0.1")})
         elif path == "/admin/api/health":
@@ -2052,6 +2375,9 @@ class Handler(BaseHTTPRequestHandler):
                 return
             if path == "/admin/api/write-codex":
                 self._admin_write_codex()
+                return
+            if path == "/admin/api/setup-client":
+                self._admin_setup_client()
                 return
             if path == "/admin/api/test":
                 self._admin_test()
@@ -2369,6 +2695,129 @@ class Handler(BaseHTTPRequestHandler):
         log(f"[codex] 已写入配置：provider=gcmp model={default_model} key={'*' * 8 + key[-4:]}")
         self._json(200, {"ok": True, "model": default_model, "provider": "gcmp"})
 
+    def _admin_setup_client(self):
+        """通用一键配置客户端：openai (Cursor/Codex CLI) / claude (Claude Code) / vscode (Codex 扩展)。"""
+        cfg = load_config()
+        acc = cfg.get("access") or {}
+        key = acc.get("apiKey", "")
+        port = int((cfg.get("listen") or {}).get("port") or 15800)
+        base_url = f"http://127.0.0.1:{port}/v1"
+        try:
+            ln = int(self.headers.get("Content-Length") or 0)
+            body = json.loads(self.rfile.read(ln)) if ln else {}
+        except Exception:
+            body = {}
+        kind = body.get("kind", "openai")
+        model = body.get("model", "")
+        home = os.path.expanduser("~")
+        stamp = time.strftime("%Y%m%d_%H%M%S")
+        import shutil
+        try:
+            if kind == "openai":
+                if os.name == "nt":
+                    ps_profile = os.path.join(os.environ.get("USERPROFILE", home), "Documents", "WindowsPowerShell", "Microsoft.PowerShell_profile.ps1")
+                    os.makedirs(os.path.dirname(ps_profile), exist_ok=True)
+                    lines = []
+                    if os.path.exists(ps_profile):
+                        with open(ps_profile, encoding="utf-8") as f:
+                            lines = f.read().splitlines()
+                    lines = [l for l in lines if not l.startswith("# GCMP Gateway (openai)")]
+                    lines.append("# GCMP Gateway (openai)")
+                    lines.append(f'$env:OPENAI_BASE_URL = "{base_url}"')
+                    lines.append(f'$env:OPENAI_API_KEY = "{key}"')
+                    with open(ps_profile, "w", encoding="utf-8") as f:
+                        f.write("\n".join(lines) + "\n")
+                    msg = f"已写入 PowerShell Profile\n{ps_profile}"
+                else:
+                    shell_rc = os.path.join(home, ".zshrc" if os.path.exists(os.path.join(home, ".zshrc")) else ".bashrc")
+                    lines = []
+                    if os.path.exists(shell_rc):
+                        with open(shell_rc, encoding="utf-8") as f:
+                            lines = f.read().splitlines()
+                    lines = [l for l in lines if not l.startswith("# GCMP Gateway (openai)")]
+                    lines.append("# GCMP Gateway (openai)")
+                    lines.append(f'export OPENAI_BASE_URL="{base_url}"')
+                    lines.append(f'export OPENAI_API_KEY="{key}"')
+                    with open(shell_rc, "w", encoding="utf-8") as f:
+                        f.write("\n".join(lines) + "\n")
+                    msg = f"已写入 {shell_rc}"
+                log(f"[openai] 已配置 OPENAI_BASE_URL={base_url}")
+                self._json(200, {"ok": True, "msg": msg})
+            elif kind == "claude":
+                claude_home = os.path.join(home, ".claude")
+                os.makedirs(claude_home, exist_ok=True)
+                cfg_path = os.path.join(claude_home, "config.json")
+                if os.path.exists(cfg_path):
+                    bak = os.path.join(claude_home, f"config.json.bak-gcmp-{stamp}")
+                    if not os.path.exists(bak):
+                        shutil.copy2(cfg_path, bak)
+                claude_cfg = {}
+                if os.path.exists(cfg_path):
+                    try:
+                        with open(cfg_path, encoding="utf-8") as f:
+                            claude_cfg = json.load(f) or {}
+                    except Exception:
+                        pass
+                models = claude_cfg.get("models", {})
+                models["gcmp"] = {"type": "openai", "baseUrl": base_url, "apiKey": key}
+                claude_cfg["models"] = models
+                with open(cfg_path, "w", encoding="utf-8") as f:
+                    json.dump(claude_cfg, f, ensure_ascii=False, indent=2)
+                log(f"[claude] 已配置 models.gcmp -> {base_url}")
+                self._json(200, {"ok": True, "msg": f"已写入 {cfg_path}"})
+            elif kind == "vscode":
+                codex_home = os.path.join(home, ".codex")
+                os.makedirs(codex_home, exist_ok=True)
+                for fn in ("config.toml", "auth.json"):
+                    p = os.path.join(codex_home, fn)
+                    if os.path.exists(p):
+                        bak = os.path.join(codex_home, f"{fn}.bak-gcmp-{stamp}")
+                        if not os.path.exists(bak):
+                            shutil.copy2(p, bak)
+                existing_cfg = {}
+                cfg_path = os.path.join(codex_home, "config.toml")
+                if os.path.exists(cfg_path):
+                    try:
+                        with open(cfg_path, encoding="utf-8") as f:
+                            existing_cfg = dict(_parse_toml(f.read()) or {})
+                    except Exception:
+                        pass
+                models_cfg = cfg.get("models") or []
+                ids = [m.get("id") for m in models_cfg]
+                default_model = model if model in ids else (next((m for m in models_cfg if m.get("id") == "gpt-5.6"), None) or {}).get("id") or "gpt-5.6"
+                lines = [
+                    f'model_provider = "gcmp"',
+                    f'model = "{default_model}"',
+                ]
+                re_effort = existing_cfg.get("model_reasoning_effort")
+                if re_effort:
+                    lines.append(f'model_reasoning_effort = "{re_effort}"')
+                ds = existing_cfg.get("disable_response_storage")
+                if ds is not None:
+                    lines.append(f'disable_response_storage = {str(ds).lower()}')
+                lines += ['', '[model_providers.gcmp]', 'name = "GCMP Gateway"',
+                          f'base_url = "{base_url}"', 'wire_api = "responses"', 'requires_openai_auth = false']
+                with open(cfg_path, "w", encoding="utf-8") as f:
+                    f.write("\n".join(lines) + "\n")
+                auth_path = os.path.join(codex_home, "auth.json")
+                auth = {}
+                if os.path.exists(auth_path):
+                    try:
+                        with open(auth_path, encoding="utf-8") as f:
+                            auth = json.load(f) or {}
+                    except Exception:
+                        pass
+                auth["OPENAI_API_KEY"] = key
+                with open(auth_path, "w", encoding="utf-8") as f:
+                    json.dump(auth, f, ensure_ascii=False, indent=2)
+                log(f"[vscode] 已写入配置：provider=gcmp model={default_model}")
+                self._json(200, {"ok": True, "msg": f"已配置 VS Code Codex 扩展 (model={default_model})"})
+            else:
+                self._json(400, {"ok": False, "error": f"未知客户端类型：{kind}"})
+        except Exception as e:
+            log(f"[setup-client] 失败：{e}")
+            self._json(500, {"ok": False, "error": str(e)})
+
     def _admin_rotate_access(self):
         """重新生成接入密钥：写 config.json 并热加载。"""
         key = "gcmp-" + secrets.token_hex(12)
@@ -2497,7 +2946,7 @@ class Handler(BaseHTTPRequestHandler):
         log(f"[sync-vscode] 生成了 {len(compatible_models)} 个 VS Code 兼容配置")
 
         # 读取现有配置，对比是否有新增
-        existing = settings.get("gcmp.compatibleModels", [])
+        existing = settings.get("gcmp.compatibleModels", []) or []
         existing_ids = {m.get("id") for m in existing if isinstance(m, dict)}
         gw_ids = {m["id"] for m in compatible_models}
 
@@ -2601,6 +3050,7 @@ class Handler(BaseHTTPRequestHandler):
             "apiKey": key,
             "headers": payload.get("headers") or saved.get("headers") or {},
             "noProxy": bool(payload.get("noProxy") or saved.get("noProxy")),
+            "protocol": payload.get("protocol") or saved.get("protocol") or "",
         }
         # 页面没传时回退到 config 里保存的端点，管理页测试才不会走错路径
         chat_path = payload.get("chatPath") or saved.get("chatPath")
@@ -2792,7 +3242,12 @@ class Handler(BaseHTTPRequestHandler):
                 log(f"{tag}/{entry['model']} 不支持图片，已剥离 {dropped} 张图后转发")
         # noStream 上游不支持流式 → 向上游发非流式，成功后合成 SSE 返回客户端
         upstream_stream = client_stream and not entry.get("noStream")
+        if up.get("protocol") == "anthropic":
+            # 恒走流式：Anthropic 非流式要等整段生成完才返回响应头（实测响应头≈总时长），
+            # 大上下文必然撞上 open 超时；流式首字节即返回，转换在网关侧做
+            upstream_stream = True
         body_dict = build_upstream_body(req, entry, upstream_stream)
+        body_dict = convert_upstream_request(up, body_dict)
         to = CONFIG.get("timeouts", {})
         # open() 等待响应头的超时：慢上游(SeekAI 类 40s+)需要足够余量
         timeout = entry.get("timeout") or to.get("open", 90)
@@ -2844,7 +3299,15 @@ class Handler(BaseHTTPRequestHandler):
             return False
         try:
             ctype = resp.headers.get("Content-Type", "")
-            if upstream_stream and "event-stream" in ctype:
+            is_sse = "event-stream" in ctype
+            if up.get("protocol") == "anthropic":
+                if is_sse:
+                    return self._pump_anthropic_stream(resp, entry, req, client_stream,
+                                                       errors, capture)
+                # 上游无视 stream=true 返回整段 JSON，退回非流式处理
+                return self._pump_plain(resp, entry, req, client_stream, False,
+                                        errors, capture)
+            if upstream_stream and is_sse:
                 return self._pump_stream(resp, entry, errors)
             return self._pump_plain(resp, entry, req, client_stream, upstream_stream,
                                     errors, capture)
@@ -3029,6 +3492,78 @@ class Handler(BaseHTTPRequestHandler):
         if model_mismatch(entry["model"], served):
             log(f"[警告] {key} 实际返回模型是 {served}，上游可能静默替换了后端")
 
+    def _pump_anthropic_stream(self, resp, entry, req, client_stream, errors, capture):
+        """protocol=anthropic 上游：读 Anthropic SSE，实时转 OpenAI 流或聚合成整包。
+
+        上游恒以 stream=true 请求：非流式响应头要等整段生成完才吐，大上下文必撞
+        open 超时。提交响应头前先确认这一路真有内容，否则还能换上游。
+        """
+        key = getattr(self, "_route_key", entry["upstream"])
+        t0 = getattr(self, "_route_t0", time.time())
+        self._apply_read_timeout(resp)
+        model = req.get("model") or entry["model"]
+        asm = AnthropicStreamAssembler(entry["model"])
+        live = bool(client_stream) and not capture
+        pending, committed = [], False
+        try:
+            for event, data in iter_anthropic_sse(resp):
+                deltas = asm.feed(event, data)
+                if not live or not deltas:
+                    continue
+                if committed:
+                    self._flush_anthropic_deltas(deltas, asm, model)
+                    continue
+                pending += deltas
+                if asm.has_output:
+                    self._commit_headers(200, "text/event-stream")
+                    committed = True
+                    self._flush_anthropic_deltas(pending, asm, model, with_role=True)
+                    pending = []
+            if not asm.has_output:
+                errors.append(f"{entry['upstream']}:流式空回复")
+                breaker_fail(key, "流式空回复")
+                stats_record(key, False, time.time() - t0)
+                return False
+            self._note_served(key, entry, asm.model)
+            usage = asm.usage()
+            if live:
+                tail = {"id": asm.id or "chatcmpl-" + os.urandom(8).hex(),
+                        "object": "chat.completion.chunk", "created": int(time.time()),
+                        "model": model, "choices": [{"index": 0, "delta": {},
+                                                     "finish_reason": asm.finish_reason()}]}
+                self._write_chunk(b"data: " + json.dumps(tail, ensure_ascii=False).encode() + b"\n\n")
+                self._write_chunk(b"data: [DONE]\n\n")
+                result = True
+            elif capture:
+                result = (True, asm.to_openai())
+            else:
+                out = json.dumps(asm.to_openai(), ensure_ascii=False).encode()
+                self._commit_headers(200, "application/json", len(out))
+                self._write_chunk(out)
+                self._end_chunks()
+                result = True
+            breaker_ok(key)
+            stats_record(key, True, time.time() - t0, usage, asm.model,
+                         estimate_cost(getattr(self, "_up", None), usage, entry["model"]))
+            return result
+        finally:
+            self._safe_close(resp)
+            if committed:  # 流中途异常也要收尾，否则客户端会一直等 chunked 结束
+                try:
+                    self._end_chunks()
+                except Exception:
+                    pass
+
+    def _flush_anthropic_deltas(self, deltas, asm, model, with_role=False):
+        for i, delta in enumerate(deltas):
+            if with_role and i == 0:
+                delta = {"role": "assistant", **delta}
+            chunk = {"id": asm.id or "chatcmpl-" + os.urandom(8).hex(),
+                     "object": "chat.completion.chunk", "created": int(time.time()),
+                     "model": model,
+                     "choices": [{"index": 0, "finish_reason": None, "delta": delta}]}
+            self._write_chunk(b"data: " + json.dumps(chunk, ensure_ascii=False).encode() + b"\n\n")
+
     def _pump_plain(self, resp, entry, req, client_stream, upstream_stream, errors, capture=False):
         key = getattr(self, "_route_key", entry["upstream"])
         t0 = getattr(self, "_route_t0", time.time())
@@ -3060,6 +3595,11 @@ class Handler(BaseHTTPRequestHandler):
             breaker_fail(key, f"错误:{str(j['error'])[:60]}")
             stats_record(key, False, time.time() - t0)
             return False
+        converted = convert_upstream_response(getattr(self, "_up", None) or {},
+                                             j, entry["model"])
+        if converted is not j:
+            j = converted
+            body = json.dumps(j, ensure_ascii=False).encode()  # 非流式分支发的是 body，必须同步替换
         # 空回复必须换上游：hcnsec/auto、思考模型 max_tokens 烧光都会 200 + 空 content
         if isinstance(j, dict) and not response_text(j).strip():
             errors.append(f"{entry['upstream']}:空回复(HTTP200 无 content)")
@@ -3088,7 +3628,18 @@ class Handler(BaseHTTPRequestHandler):
 
 
 def main():
-    cfg = load_config()
+    if not os.path.exists(CONFIG_PATH):
+        print("[FAIL] 未找到 config.json（本目录只有 config.example.json 模板）", flush=True)
+        print("       首次使用请复制一份并填入自己的上游密钥后重新启动：", flush=True)
+        print("         copy config.example.json config.json", flush=True)
+        print("       然后编辑 config.json 里的上游地址与 apiKey，或启动后在管理页修改。", flush=True)
+        sys.exit(1)
+    try:
+        cfg = load_config()
+    except json.JSONDecodeError as e:
+        print(f"[FAIL] config.json 不是合法 JSON：{e}", flush=True)
+        print("       可复制 config.example.json 覆盖后重新填写。", flush=True)
+        sys.exit(1)
     host = cfg.get("listen", {}).get("host", "127.0.0.1")
     port = int(cfg.get("listen", {}).get("port", 15800))
     srv = ThreadingHTTPServer((host, port), Handler)

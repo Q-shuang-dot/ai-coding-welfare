@@ -101,7 +101,7 @@ start-gateway.bat
   ],
 
   "bridge": {
-    "enabled": true,                       // 网关启动时自动拉起 codex-bridge
+    "enabled": false,                      // 可选功能，本仓库不含 codex-bridge 脚本，自己准备时才开
     "script": "codex-bridge\\bridge.py",   // 相对路径基于项目根目录
     "port": 15731                          // 端口已在监听时不重复启动
   }
@@ -109,6 +109,8 @@ start-gateway.bat
 ```
 
 `config.json` 保存后自动热加载，不用重启。改 `gateway.py` 必须重启进程。
+
+没装 codex-bridge 就保持 `enabled: false`，否则启动时会打印一行「启动失败」的告警（不影响网关运行）。
 
 ## 管理页面
 
@@ -174,15 +176,19 @@ X-Gateway-Served-Model: nvidia/nemotron-3-ultra-550b-a55b   # 仅在上游偷换
 
 即便如此也不要把 `listen.host` 改成 `0.0.0.0`——脱敏只挡住了读取，局域网里任何人都还能改你的配置。
 
-## 测试
+## 自检
+
+本仓库不附带测试脚本，按下面两步确认网关是通的：
 
 ```bat
-python tools\test_gateway.py    :: 纯函数单测，不需要网关在运行
-python tools\test_failover.py   :: 起假上游 + 真 Handler，验证故障转移/熔断/统计
-python tools\smoke.py           :: 对运行中的网关跑 7 个逻辑模型冒烟（--stream 测流式）
+curl http://127.0.0.1:15800/health      :: {"ok":true, ...}
+curl http://127.0.0.1:15800/v1/models   :: OpenAI 兼容模型列表
 ```
+
+更直观的方式是打开管理页，用模型卡片的「⚡ 测试该模型」走一遍完整故障转移链路，或用「🔍 深度审计」逐条路由实测。
 
 ## 安全
 
 - `config.json` 含明文密钥，已在 `.gitignore` 中排除。提交前确认没有把它加进版本库
+- **把整个目录拷给别人或打成 ZIP 之前，先删掉 `config.json` 和 `stats.json`**——`.gitignore` 只挡 git，挡不住手动拷贝。对方拿到后用 `config.example.json` 复制一份填自己的 key
 - `config.example.json` 里的 key 全部是 `sk-REPLACE_ME` 占位符

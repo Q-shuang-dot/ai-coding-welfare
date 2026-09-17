@@ -29,9 +29,9 @@ $adminUrl = "http://127.0.0.1:$port/admin/"
 $c = Get-NetTCPConnection -LocalPort $port -State Listen -ErrorAction SilentlyContinue
 if ($c) {
   $c | ForEach-Object { Stop-Process -Id $_.OwningProcess -Force }
-  Write-Host "[OK] GCMP 网关已停止 (port $port)" -ForegroundColor Yellow
+  Write-Host "[OK] GCMP Gateway stopped (port $port)" -ForegroundColor Yellow
 }
 else {
-  Write-Host '[--] 网关未在运行（端口 $port）' -ForegroundColor Gray
+  Write-Host "[--] Gateway is not running on port $port" -ForegroundColor Gray
 }
 Start-Sleep -Seconds 2

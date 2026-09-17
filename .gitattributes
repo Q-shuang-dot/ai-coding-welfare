@@ -2,6 +2,9 @@
 * text=auto eol=lf
 *.sh text eol=lf
 *.ps1 text eol=crlf
+# cmd.exe 解析 LF-only 批处理会丢字符（尤其带 ^ 续行和中文注释时），必须 CRLF
+*.bat text eol=crlf
+*.cmd text eol=crlf
 *.png binary
 *.jpg binary
 *.ico binary
