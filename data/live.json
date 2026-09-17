@@ -3,9 +3,9 @@
   "sites": [
     {
       "id": "agentrouter",
-      "checkedAt": "2026-09-16T21:17:58.789Z",
+      "checkedAt": "2026-09-17T09:04:10.786Z",
       "online": true,
-      "latencyMs": 343,
+      "latencyMs": 269,
       "error": "invalid json",
       "systemName": "Agent Router",
       "version": "init-20260915-25158da5",
@@ -164,7 +164,7 @@
       "signup": {
         "status": 200,
         "ok": true,
-        "ms": 1285,
+        "ms": 1322,
         "attempts": 1
       },
       "mirrors": [
@@ -194,7 +194,7 @@
     },
     {
       "id": "gcmp-gateway",
-      "checkedAt": "2026-09-17T09:19:53.561Z",
+      "checkedAt": "2026-09-17T09:04:04.000Z",
       "apiOk": true,
       "pricingOk": false,
       "latencyMs": null,
@@ -306,7 +306,7 @@
       "signup": {
         "status": 200,
         "ok": true,
-        "ms": 1305,
+        "ms": 1219,
         "attempts": 1
       },
       "mirrors": [],
@@ -317,10 +317,10 @@
     },
     {
       "id": "docode",
-      "checkedAt": "2026-09-17T09:19:54.373Z",
+      "checkedAt": "2026-09-17T09:04:05.108Z",
       "apiOk": true,
       "pricingOk": false,
-      "latencyMs": 705,
+      "latencyMs": 1108,
       "error": null,
       "systemName": "DoCode",
       "version": "",
@@ -372,7 +372,7 @@
       "signup": {
         "status": 200,
         "ok": true,
-        "ms": 627,
+        "ms": 1015,
         "attempts": 1
       },
       "mirrors": [
@@ -389,9 +389,9 @@
     },
     {
       "id": "justdowork",
-      "checkedAt": "2026-09-17T09:19:54.369Z",
+      "checkedAt": "2026-09-17T09:04:05.055Z",
       "online": true,
-      "latencyMs": 826,
+      "latencyMs": 1054,
       "error": null,
       "systemName": "JustDoWork",
       "version": "v1.0.0-rc.23",
@@ -417,7 +417,7 @@
       "signup": {
         "status": 200,
         "ok": true,
-        "ms": 1522,
+        "ms": 1206,
         "attempts": 1
       },
       "mirrors": [],
@@ -431,11 +431,11 @@
     },
     {
       "id": "kktoken",
-      "checkedAt": "2026-09-17T09:19:59.814Z",
-      "apiOk": false,
+      "checkedAt": "2026-09-17T09:04:05.269Z",
+      "apiOk": true,
       "pricingOk": false,
-      "latencyMs": 269,
-      "error": "HTTP 403",
+      "latencyMs": 1275,
+      "error": null,
       "systemName": "KKtoken AI",
       "version": "v1.0.0-rc.25",
       "registerOpen": true,
@@ -459,32 +459,24 @@
         "openai": null
       },
       "signup": {
-        "status": 403,
-        "ok": false,
-        "ms": 1119,
+        "status": 200,
+        "ok": true,
+        "ms": 1247,
         "attempts": 1
       },
       "mirrors": [],
-      "probeBlocked": true,
+      "probeBlocked": false,
       "online": true,
-      "dataStale": true,
-      "staleFrom": "2026-09-16T21:17:53.763Z",
-      "staleFields": [
-        "systemName",
-        "version",
-        "registerOpen",
-        "passwordRegister",
-        "checkinEnabled",
-        "loginMethods",
-        "quotaPerUnit"
-      ]
+      "dataStale": false,
+      "staleFrom": null,
+      "staleFields": []
     },
     {
       "id": "matrix",
-      "checkedAt": "2026-09-17T09:19:53.935Z",
+      "checkedAt": "2026-09-17T09:04:05.950Z",
       "apiOk": true,
       "pricingOk": false,
-      "latencyMs": 385,
+      "latencyMs": 1954,
       "error": null,
       "systemName": null,
       "version": null,
@@ -508,7 +500,7 @@
       "signup": {
         "status": 200,
         "ok": true,
-        "ms": 461,
+        "ms": 2014,
         "attempts": 1
       },
       "mirrors": [],
@@ -520,11 +512,11 @@
     },
     {
       "id": "seekai",
-      "checkedAt": "2026-09-17T09:20:00.220Z",
-      "apiOk": false,
+      "checkedAt": "2026-09-17T09:04:05.560Z",
+      "apiOk": true,
       "pricingOk": false,
-      "latencyMs": 188,
-      "error": "HTTP 403",
+      "latencyMs": 1563,
+      "error": null,
       "systemName": "SeekAi",
       "version": "v1.0.0-rc.25",
       "registerOpen": true,
@@ -549,9 +541,9 @@
         "openai": null
       },
       "signup": {
-        "status": 403,
-        "ok": false,
-        "ms": 1230,
+        "status": 200,
+        "ok": true,
+        "ms": 1576,
         "attempts": 1
       },
       "mirrors": [
@@ -560,27 +552,19 @@
           "online": true
         }
       ],
-      "probeBlocked": true,
+      "probeBlocked": false,
       "online": true,
-      "dataStale": true,
-      "staleFrom": "2026-09-16T21:17:53.644Z",
-      "staleFields": [
-        "systemName",
-        "version",
-        "registerOpen",
-        "passwordRegister",
-        "checkinEnabled",
-        "loginMethods",
-        "quotaPerUnit"
-      ]
+      "dataStale": false,
+      "staleFrom": null,
+      "staleFields": []
     },
     {
       "id": "tabitoken",
-      "checkedAt": "2026-09-17T09:19:59.786Z",
-      "apiOk": false,
-      "pricingOk": false,
-      "latencyMs": 255,
-      "error": "HTTP 403",
+      "checkedAt": "2026-09-17T09:04:07.613Z",
+      "apiOk": true,
+      "pricingOk": true,
+      "latencyMs": 162,
+      "error": null,
       "systemName": "TaBiAI",
       "version": "init-20260817-f880a343",
       "registerOpen": true,
@@ -671,22 +655,15 @@
       "signup": {
         "status": 403,
         "ok": false,
-        "ms": 1220,
+        "ms": 1563,
         "attempts": 1
       },
       "mirrors": [],
       "probeBlocked": false,
-      "online": false,
+      "online": true,
       "dataStale": true,
       "staleFrom": "2026-09-05T20:22:55.415Z",
       "staleFields": [
-        "systemName",
-        "version",
-        "registerOpen",
-        "passwordRegister",
-        "checkinEnabled",
-        "loginMethods",
-        "quotaPerUnit",
         "models",
         "defaults"
       ]

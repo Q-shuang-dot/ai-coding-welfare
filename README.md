@@ -4,7 +4,7 @@
 
 <p align="center">
   <img src="https://img.shields.io/badge/%E6%94%B6%E5%BD%95%E7%A6%8F%E5%88%A9%E7%AB%99-10%20%E4%B8%AA-blue" alt="收录福利站">
-  <img src="https://img.shields.io/badge/%E5%9C%A8%E7%BA%BF-9%2F10-orange" alt="在线">
+  <img src="https://img.shields.io/badge/%E5%9C%A8%E7%BA%BF-10%2F10-brightgreen" alt="在线">
   <img src="https://img.shields.io/badge/%E9%A6%96%E6%97%A5%E5%8F%AF%E5%BE%97-%E6%9C%80%E9%AB%98%20%24175-success" alt="首日可得">
   <img src="https://img.shields.io/badge/%E6%95%B0%E6%8D%AE%E6%9B%B4%E6%96%B0-2026--09--17%2009.20%20UTC-informational" alt="数据更新">
 </p>
@@ -156,7 +156,7 @@ print(resp.choices[0].message.content)
 | **KKtoken AI** | 🟢 在线 | **$120** | 注册 $75 + 本页邀请 $25 + 首签 $20 | $20/天 | Anthropic + OpenAI | 需登录查看 | [GitHub 注册 →](https://kktoken.cc/sign-up?aff=JMQC) | — |
 | **Matrix** | 🟢 在线 | **600 积分** | 本页邀请 600 积分 | — | OpenAI 兼容 | 需登录查看 | [点此注册 →](https://matrix.mzsjai.com/login?redirect=%2Fapp%2Fgrowth%3FinviteCode%3DMX3CDVGATLJW) | — |
 | **SeekAi** | 🟢 在线 | 站内公示 | — | 支持签到 | OpenAI | 需登录查看 | [点此注册 →](https://seekai.cc/sign-up?aff=dDJy) | `dDJy` |
-| **TaBiAI** | 🔴 异常 | **$120** | 注册 $100 + 本页邀请 $20 | 支持签到 | Anthropic + OpenAI | 4 个可查 | [GitHub 注册 →](https://tabitoken.com/sign-up?aff=AfA4) | — |
+| **TaBiAI** | 🟢 在线 | **$120** | 注册 $100 + 本页邀请 $20 | 支持签到 | Anthropic + OpenAI | 4 个可查 | [GitHub 注册 →](https://tabitoken.com/sign-up?aff=AfA4) | — |
 | **Long的AI** | 🟢 在线 | 站内公示 | — | 无签到 | Anthropic + OpenAI | 需登录查看 | [GitHub 注册 →](https://aaawinn.xyz/sign-up?aff=ijFL) | `ijFL` |
 | **新疆幻城网安** | 🟢 在线 | 站内公示 | — | 支持签到 | Anthropic + OpenAI | 需登录查看 | [点此注册 →](https://api.hcnsec.cn/sign-up?aff=3J8z) | `3J8z` |
 | **量界智算** | 🟢 在线 | 站内公示 | — | 支持签到 | Anthropic + OpenAI | 需登录查看 | [点此注册 →](https://liangjiewis.com/register?aff=m3C1) | `m3C1` |
@@ -215,7 +215,7 @@ powershell -ExecutionPolicy Bypass -File scripts/quickstart.ps1
 - 面板版本：`init-20260915-25158da5`
 - 邀请他人可得：**$50**
 - 登录方式：GitHub / LinuxDO
-- 接口延迟：343 ms
+- 接口延迟：269 ms
 
 **镜像 / 备用入口**
 
@@ -355,7 +355,7 @@ curl -s https://agentrouter.org/v1/chat/completions \
 - 每日签到：❌
 - 开放注册：✅
 - 登录方式：账号密码
-- 接口延迟：705 ms
+- 接口延迟：1108 ms
 
 **镜像 / 备用入口**
 
@@ -485,7 +485,7 @@ curl -s https://docode.cc/v1/chat/completions \
 - 开放注册：✅（站点关掉了邮箱密码注册，得用 GitHub 登录建号（防批量注册的常规做法）。）
 - 登录方式：GitHub / 账号密码
 - GitHub 账号需满 **365 天**
-- 接口延迟：826 ms
+- 接口延迟：1054 ms
 
 > 该站模型清单需登录后台查看，注册后在「模型价格」页确认。
 
@@ -591,13 +591,12 @@ curl -s https://api.justwoker.icu/v1/chat/completions \
 
 **实时数据**（自动抓取站点公开接口）
 
-- ℹ️ 本次自动探测被站点 WAF 拦下（GitHub Actions 机房 IP 常见，家宽访问不受影响），状态与下列信息沿用 `2026-09-16 21:17 UTC` 的成功快照
 - 站点名称：**KKtoken AI**
 - 面板版本：`v1.0.0-rc.25`
 - 每日签到：✅
 - 开放注册：✅（站点关掉了邮箱密码注册，得用 GitHub 登录建号（防批量注册的常规做法）。）
 - 登录方式：GitHub / 账号密码
-- 接口延迟：269 ms
+- 接口延迟：1275 ms
 
 > 该站把价格页设成了登录可见（`/api/pricing` 返回 401），本页不列模型表。站内公示的计价口径是输入 $1 / 百万 tokens、输出 $1 / 百万 tokens，按 token 而不是按次，注册后在控制台「模型价格」页确认实际清单与倍率。
 
@@ -703,7 +702,7 @@ curl -s https://kktoken.cc/v1/chat/completions \
 
 **实时数据**（自动抓取站点公开接口）
 
-- 接口延迟：385 ms
+- 接口延迟：1954 ms
 
 > 模型清单与价格需登录后在控制台「模型列表」查看（按每百万 Tokens 计价，可按厂商 / 上下文窗口筛选），站点没有公开的模型与定价接口，本页不做承诺。
 
@@ -762,13 +761,12 @@ curl -s https://kktoken.cc/v1/chat/completions \
 
 **实时数据**（自动抓取站点公开接口）
 
-- ℹ️ 本次自动探测被站点 WAF 拦下（GitHub Actions 机房 IP 常见，家宽访问不受影响），状态与下列信息沿用 `2026-09-16 21:17 UTC` 的成功快照
 - 站点名称：**SeekAi**
 - 面板版本：`v1.0.0-rc.25`
 - 每日签到：✅
 - 开放注册：✅
 - 登录方式：GitHub / Telegram / 账号密码
-- 接口延迟：188 ms
+- 接口延迟：1563 ms
 
 **镜像 / 备用入口**
 
@@ -844,7 +842,7 @@ curl -s https://seekai.cc/v1/chat/completions \
 
 ---
 
-### 🔴 TaBiAI
+### 🟢 TaBiAI
 
 > New API 中转站 · 注册送 $100，本页邀请码再加 $20，专供 Claude Opus
 
@@ -871,7 +869,7 @@ curl -s https://seekai.cc/v1/chat/completions \
 - 每日签到：✅
 - 开放注册：✅（站点关掉了邮箱密码注册，得用 GitHub 登录建号（防批量注册的常规做法）。）
 - 登录方式：GitHub / 账号密码
-- 接口延迟：255 ms
+- 接口延迟：162 ms
 
 **当前可用模型**
 
@@ -1337,7 +1335,7 @@ curl -s https://liangjiewis.com/v1/chat/completions \
 
 ## 🔔 额度变了，这里会通知你
 
-CI 每 6 小时抓一次各站接口，与上一次快照逐字段比对，目前已攒下 125 个样本、覆盖约 27 天。额度调整、掉线与恢复、模型上下线、价格变动都会自动记一条：
+CI 每 6 小时抓一次各站接口，与上一次快照逐字段比对，目前已攒下 126 个样本、覆盖约 27 天。额度调整、掉线与恢复、模型上下线、价格变动都会自动记一条：
 
 - 点仓库右上角 **Watch → Custom → Releases**：有重要变动时 GitHub 直接发邮件
 - 订阅 [Atom feed](https://q-shuang-dot.github.io/gcmp-welfare-temp/feed.xml)：RSS 阅读器 / Feedly / Telegram 机器人都能读
@@ -1345,12 +1343,12 @@ CI 每 6 小时抓一次各站接口，与上一次快照逐字段比对，目�
 
 最近几条：
 
-- `2026-09-17` 🔴 TaBiAI 探测不到了：注册页与公开接口都没响应
 - `2026-09-17` 🆕 新收录 Long的AI
 - `2026-09-17` 🆕 新收录 新疆幻城网安
 - `2026-09-17` 🆕 新收录 量界智算
 - `2026-09-16` 🆕 新收录 GCMP Gateway
 - `2026-09-16` 📢 DoCode 发了公告：现在免费用户体验期，可用模型作出如下调整，下架gpt模型，新上架grok，如有使用问题请联系管理
+- `2026-09-16` 🆕 新收录 SeekAi
 
 完整记录见 [CHANGELOG.md](CHANGELOG.md)。
 
