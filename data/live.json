@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-09-17T21:22:38.687Z",
+  "generatedAt": "2026-09-18T02:05:50.017Z",
   "sites": [
     {
       "id": "agentrouter",
-      "checkedAt": "2026-09-17T21:22:32.744Z",
+      "checkedAt": "2026-09-18T02:05:44.314Z",
       "online": true,
-      "latencyMs": 250,
+      "latencyMs": 228,
       "error": "invalid json",
       "systemName": "Agent Router",
       "version": "init-20260915-25158da5",
@@ -164,7 +164,7 @@
       "signup": {
         "status": 200,
         "ok": true,
-        "ms": 1203,
+        "ms": 825,
         "attempts": 1
       },
       "mirrors": [
@@ -194,7 +194,7 @@
     },
     {
       "id": "gcmp-gateway",
-      "checkedAt": "2026-09-17T21:22:26.717Z",
+      "checkedAt": "2026-09-18T02:05:38.537Z",
       "apiOk": true,
       "pricingOk": false,
       "latencyMs": null,
@@ -306,7 +306,7 @@
       "signup": {
         "status": 200,
         "ok": true,
-        "ms": 1415,
+        "ms": 594,
         "attempts": 1
       },
       "mirrors": [],
@@ -317,10 +317,10 @@
     },
     {
       "id": "docode",
-      "checkedAt": "2026-09-17T21:22:27.668Z",
+      "checkedAt": "2026-09-18T02:05:39.020Z",
       "apiOk": true,
       "pricingOk": false,
-      "latencyMs": 954,
+      "latencyMs": 486,
       "error": null,
       "systemName": "DoCode",
       "version": "",
@@ -372,7 +372,7 @@
       "signup": {
         "status": 200,
         "ok": true,
-        "ms": 865,
+        "ms": 392,
         "attempts": 1
       },
       "mirrors": [
@@ -388,95 +388,11 @@
       "staleFields": []
     },
     {
-      "id": "justdowork",
-      "checkedAt": "2026-09-17T21:22:27.731Z",
-      "online": true,
-      "latencyMs": 1024,
-      "error": null,
-      "systemName": "JustDoWork",
-      "version": "v1.0.0-rc.23",
-      "registerOpen": true,
-      "passwordRegister": false,
-      "checkinEnabled": true,
-      "loginMethods": [
-        "GitHub",
-        "账号密码"
-      ],
-      "githubMinAccountAgeDays": 365,
-      "quotaPerUnit": 500000,
-      "inviteeBonusUsd": null,
-      "inviterBonusUsd": null,
-      "topupEnabled": null,
-      "announcements": [],
-      "models": [],
-      "modelsSource": "login-required",
-      "defaults": {
-        "claude": null,
-        "openai": null
-      },
-      "signup": {
-        "status": 200,
-        "ok": true,
-        "ms": 1173,
-        "attempts": 1
-      },
-      "mirrors": [],
-      "apiOk": true,
-      "pricingOk": false,
-      "dataStale": false,
-      "staleFrom": null,
-      "staleFields": [],
-      "services": [],
-      "probeBlocked": false
-    },
-    {
-      "id": "kktoken",
-      "checkedAt": "2026-09-17T21:22:28.393Z",
-      "apiOk": true,
-      "pricingOk": false,
-      "latencyMs": 1684,
-      "error": null,
-      "systemName": "KKtoken AI",
-      "version": "v1.0.0-rc.25",
-      "registerOpen": true,
-      "passwordRegister": false,
-      "checkinEnabled": true,
-      "loginMethods": [
-        "GitHub",
-        "账号密码"
-      ],
-      "githubMinAccountAgeDays": null,
-      "quotaPerUnit": 500000,
-      "inviteeBonusUsd": null,
-      "inviterBonusUsd": null,
-      "topupEnabled": null,
-      "services": [],
-      "announcements": [],
-      "models": [],
-      "modelsSource": "login-required",
-      "defaults": {
-        "claude": null,
-        "openai": null
-      },
-      "signup": {
-        "status": 200,
-        "ok": true,
-        "ms": 1676,
-        "attempts": 1
-      },
-      "mirrors": [],
-      "probeBlocked": false,
-      "online": true,
-      "dataStale": false,
-      "staleFrom": null,
-      "staleFields": []
-    },
-    {
       "id": "matrix",
-      "checkedAt": "2026-09-17T21:22:28.700Z",
+      "checkedAt": "2026-09-18T02:05:39.701Z",
       "apiOk": true,
       "pricingOk": false,
-      "latencyMs": 1990,
+      "latencyMs": 1173,
       "error": null,
       "systemName": null,
       "version": null,
@@ -500,7 +416,7 @@
       "signup": {
         "status": 200,
         "ok": true,
-        "ms": 2082,
+        "ms": 1227,
         "attempts": 1
       },
       "mirrors": [],
@@ -512,10 +428,10 @@
     },
     {
       "id": "seekai",
-      "checkedAt": "2026-09-17T21:22:28.316Z",
+      "checkedAt": "2026-09-18T02:05:39.329Z",
       "apiOk": true,
       "pricingOk": false,
-      "latencyMs": 1604,
+      "latencyMs": 799,
       "error": null,
       "systemName": "SeekAi",
       "version": "v1.0.0-rc.25",
@@ -543,7 +459,7 @@
       "signup": {
         "status": 200,
         "ok": true,
-        "ms": 1651,
+        "ms": 782,
         "attempts": 1
       },
       "mirrors": [
@@ -559,121 +475,11 @@
       "staleFields": []
     },
     {
-      "id": "tabitoken",
-      "checkedAt": "2026-09-17T21:22:30.338Z",
-      "apiOk": true,
-      "pricingOk": true,
-      "latencyMs": 514,
-      "error": null,
-      "systemName": "TaBiAI",
-      "version": "init-20260817-f880a343",
-      "registerOpen": true,
-      "passwordRegister": false,
-      "checkinEnabled": true,
-      "loginMethods": [
-        "GitHub",
-        "账号密码"
-      ],
-      "githubMinAccountAgeDays": null,
-      "quotaPerUnit": 500000,
-      "inviteeBonusUsd": null,
-      "inviterBonusUsd": null,
-      "topupEnabled": null,
-      "services": [],
-      "announcements": [],
-      "models": [
-        {
-          "name": "claude-opus-4-8",
-          "ratio": 0,
-          "completionRatio": 0,
-          "fixedPrice": 0.5,
-          "inputPerMTok": null,
-          "outputPerMTok": null,
-          "groups": [
-            "vip",
-            "default"
-          ],
-          "protocols": [
-            "anthropic",
-            "openai"
-          ]
-        },
-        {
-          "name": "claude-opus-4-8-thinking",
-          "ratio": 0,
-          "completionRatio": 0,
-          "fixedPrice": 0.5,
-          "inputPerMTok": null,
-          "outputPerMTok": null,
-          "groups": [
-            "vip",
-            "default"
-          ],
-          "protocols": [
-            "anthropic",
-            "openai"
-          ]
-        },
-        {
-          "name": "claude-opus-5",
-          "ratio": 0,
-          "completionRatio": 0,
-          "fixedPrice": 0.35,
-          "inputPerMTok": null,
-          "outputPerMTok": null,
-          "groups": [
-            "vip",
-            "default"
-          ],
-          "protocols": [
-            "anthropic",
-            "openai"
-          ]
-        },
-        {
-          "name": "claude-opus-5-thinking",
-          "ratio": 0,
-          "completionRatio": 0,
-          "fixedPrice": 0.4,
-          "inputPerMTok": null,
-          "outputPerMTok": null,
-          "groups": [
-            "default",
-            "vip"
-          ],
-          "protocols": [
-            "anthropic",
-            "openai"
-          ]
-        }
-      ],
-      "modelsSource": "cached",
-      "defaults": {
-        "claude": "claude-opus-5",
-        "openai": "claude-opus-5"
-      },
-      "signup": {
-        "status": 403,
-        "ok": false,
-        "ms": 1607,
-        "attempts": 1
-      },
-      "mirrors": [],
-      "probeBlocked": false,
-      "online": true,
-      "dataStale": true,
-      "staleFrom": "2026-09-05T20:22:55.415Z",
-      "staleFields": [
-        "models",
-        "defaults"
-      ]
-    },
-    {
       "id": "aaawinn",
-      "checkedAt": "2026-09-17T21:22:28.387Z",
+      "checkedAt": "2026-09-18T02:05:39.269Z",
       "apiOk": true,
       "pricingOk": false,
-      "latencyMs": 1674,
+      "latencyMs": 738,
       "error": null,
       "systemName": "Long的AI",
       "version": "",
@@ -725,7 +531,7 @@
       "signup": {
         "status": 200,
         "ok": true,
-        "ms": 1674,
+        "ms": 740,
         "attempts": 1
       },
       "mirrors": [],
@@ -737,7 +543,7 @@
     },
     {
       "id": "hcnsec",
-      "checkedAt": "2026-09-17T21:22:29.298Z",
+      "checkedAt": "2026-09-18T02:05:41.115Z",
       "apiOk": true,
       "pricingOk": false,
       "latencyMs": 2582,
@@ -793,7 +599,7 @@
       "signup": {
         "status": 200,
         "ok": true,
-        "ms": 3247,
+        "ms": 2561,
         "attempts": 1
       },
       "mirrors": [],
@@ -805,10 +611,10 @@
     },
     {
       "id": "liangjiewis",
-      "checkedAt": "2026-09-17T21:22:28.947Z",
+      "checkedAt": "2026-09-18T02:05:40.022Z",
       "apiOk": true,
       "pricingOk": false,
-      "latencyMs": 2231,
+      "latencyMs": 1488,
       "error": null,
       "systemName": "量界智算",
       "version": "v0.12.14",
@@ -858,7 +664,7 @@
       "signup": {
         "status": 200,
         "ok": true,
-        "ms": 2241,
+        "ms": 1483,
         "attempts": 1
       },
       "mirrors": [
@@ -867,6 +673,45 @@
           "online": true
         }
       ],
+      "probeBlocked": false,
+      "online": true,
+      "dataStale": false,
+      "staleFrom": null,
+      "staleFields": []
+    },
+    {
+      "id": "godrouter",
+      "checkedAt": "2026-09-18T02:05:38.535Z",
+      "apiOk": false,
+      "pricingOk": false,
+      "latencyMs": null,
+      "error": "no url",
+      "systemName": null,
+      "version": null,
+      "registerOpen": null,
+      "passwordRegister": null,
+      "checkinEnabled": null,
+      "loginMethods": [],
+      "githubMinAccountAgeDays": null,
+      "quotaPerUnit": null,
+      "inviteeBonusUsd": null,
+      "inviterBonusUsd": null,
+      "topupEnabled": null,
+      "services": [],
+      "announcements": [],
+      "models": [],
+      "modelsSource": "login-required",
+      "defaults": {
+        "claude": null,
+        "openai": null
+      },
+      "signup": {
+        "status": 200,
+        "ok": true,
+        "ms": 1114,
+        "attempts": 1
+      },
+      "mirrors": [],
       "probeBlocked": false,
       "online": true,
       "dataStale": false,
