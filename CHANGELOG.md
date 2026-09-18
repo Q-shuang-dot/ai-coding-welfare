@@ -9,7 +9,7 @@ AI Coding 福利站导航的自动变动记录：站点上下线、额度调整�
 ## 2026-09-18
 
 - 🗑️ 移除收录 gcmp-gateway <sub>02:11 UTC</sub>
-- 🆕 新收录 GodRouter：注册送 $80，每日签到 $10 <sub>02:05 UTC</sub>
+- 🆕 新收录 GodRouter：注册送 $80 <sub>02:05 UTC</sub>
 - 🗑️ 移除收录 justdowork <sub>02:05 UTC</sub>
 - 🗑️ 移除收录 kktoken <sub>02:05 UTC</sub>
 - 🗑️ 移除收录 tabitoken <sub>02:05 UTC</sub>
