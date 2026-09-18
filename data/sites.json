@@ -163,11 +163,11 @@
     {
       "id": "godrouter",
       "name": "GodRouter",
-      "subtitle": "AI Coding 中转站 · 注册送 $80 免费额度，签到持续续命",
+      "subtitle": "AI Coding 中转站 · 注册送 $80 免费额度",
       "recommended": true,
       "credits": {
         "signup": 80,
-        "dailyCheckin": 10,
+        "dailyCheckin": null,
         "approx": false
       },
       "signupUrl": "https://godrouter.cyou/sign-up?aff=LENb",
