@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-09-18T08:46:19.474Z",
+  "generatedAt": "2026-09-18T08:55:12.637Z",
   "sites": [
     {
       "id": "agentrouter",
-      "checkedAt": "2026-09-18T08:46:13.265Z",
+      "checkedAt": "2026-09-18T08:55:06.438Z",
       "online": true,
-      "latencyMs": 304,
+      "latencyMs": 302,
       "error": "invalid json",
       "systemName": "Agent Router",
       "version": "init-20260915-25158da5",
@@ -164,7 +164,7 @@
       "signup": {
         "status": 200,
         "ok": true,
-        "ms": 1331,
+        "ms": 1422,
         "attempts": 1
       },
       "mirrors": [
@@ -194,10 +194,10 @@
     },
     {
       "id": "docode",
-      "checkedAt": "2026-09-18T08:46:07.827Z",
+      "checkedAt": "2026-09-18T08:55:01.070Z",
       "apiOk": true,
       "pricingOk": false,
-      "latencyMs": 948,
+      "latencyMs": 991,
       "error": null,
       "systemName": "DoCode",
       "version": "",
@@ -266,7 +266,7 @@
     },
     {
       "id": "godrouter",
-      "checkedAt": "2026-09-18T08:46:06.843Z",
+      "checkedAt": "2026-09-18T08:55:00.022Z",
       "apiOk": false,
       "pricingOk": false,
       "latencyMs": null,
@@ -293,7 +293,49 @@
       "signup": {
         "status": 200,
         "ok": true,
-        "ms": 989,
+        "ms": 986,
+        "attempts": 1
+      },
+      "mirrors": [],
+      "probeBlocked": false,
+      "online": true,
+      "dataStale": false,
+      "staleFrom": null,
+      "staleFields": []
+    },
+    {
+      "id": "justwoker",
+      "checkedAt": "2026-09-18T08:55:00.746Z",
+      "apiOk": true,
+      "pricingOk": false,
+      "latencyMs": 728,
+      "error": null,
+      "systemName": "JustDoWork",
+      "version": "v1.0.0-rc.23",
+      "registerOpen": true,
+      "passwordRegister": false,
+      "checkinEnabled": true,
+      "loginMethods": [
+        "GitHub",
+        "账号密码"
+      ],
+      "githubMinAccountAgeDays": 365,
+      "quotaPerUnit": 500000,
+      "inviteeBonusUsd": null,
+      "inviterBonusUsd": null,
+      "topupEnabled": null,
+      "services": [],
+      "announcements": [],
+      "models": [],
+      "modelsSource": "login-required",
+      "defaults": {
+        "claude": null,
+        "openai": null
+      },
+      "signup": {
+        "status": 200,
+        "ok": true,
+        "ms": 1416,
         "attempts": 1
       },
       "mirrors": [],
@@ -305,10 +347,10 @@
     },
     {
       "id": "matrix",
-      "checkedAt": "2026-09-18T08:46:08.874Z",
+      "checkedAt": "2026-09-18T08:55:01.653Z",
       "apiOk": true,
       "pricingOk": false,
-      "latencyMs": 2041,
+      "latencyMs": 1638,
       "error": null,
       "systemName": null,
       "version": null,
@@ -332,7 +374,7 @@
       "signup": {
         "status": 200,
         "ok": true,
-        "ms": 2103,
+        "ms": 1719,
         "attempts": 1
       },
       "mirrors": [],
@@ -344,10 +386,10 @@
     },
     {
       "id": "seekai",
-      "checkedAt": "2026-09-18T08:46:08.436Z",
+      "checkedAt": "2026-09-18T08:55:01.234Z",
       "apiOk": true,
       "pricingOk": false,
-      "latencyMs": 1599,
+      "latencyMs": 1216,
       "error": null,
       "systemName": "SeekAi",
       "version": "v1.0.0-rc.25",
@@ -375,7 +417,7 @@
       "signup": {
         "status": 200,
         "ok": true,
-        "ms": 1599,
+        "ms": 1493,
         "attempts": 1
       },
       "mirrors": [
@@ -392,10 +434,10 @@
     },
     {
       "id": "aaawinn",
-      "checkedAt": "2026-09-18T08:46:08.590Z",
+      "checkedAt": "2026-09-18T08:55:01.348Z",
       "apiOk": true,
       "pricingOk": false,
-      "latencyMs": 1751,
+      "latencyMs": 1328,
       "error": null,
       "systemName": "Long的AI",
       "version": "",
@@ -447,7 +489,7 @@
       "signup": {
         "status": 200,
         "ok": true,
-        "ms": 1746,
+        "ms": 1332,
         "attempts": 1
       },
       "mirrors": [],
@@ -459,10 +501,10 @@
     },
     {
       "id": "hcnsec",
-      "checkedAt": "2026-09-18T08:46:10.328Z",
+      "checkedAt": "2026-09-18T08:55:03.424Z",
       "apiOk": true,
       "pricingOk": false,
-      "latencyMs": 3488,
+      "latencyMs": 3403,
       "error": null,
       "systemName": "新疆幻城网安科技公益大模型安全网关",
       "version": "",
@@ -515,7 +557,7 @@
       "signup": {
         "status": 200,
         "ok": true,
-        "ms": 3469,
+        "ms": 2740,
         "attempts": 1
       },
       "mirrors": [],
@@ -527,10 +569,10 @@
     },
     {
       "id": "liangjiewis",
-      "checkedAt": "2026-09-18T08:46:09.375Z",
+      "checkedAt": "2026-09-18T08:55:01.952Z",
       "apiOk": true,
       "pricingOk": false,
-      "latencyMs": 2535,
+      "latencyMs": 1931,
       "error": null,
       "systemName": "量界智算",
       "version": "v0.12.14",
@@ -580,7 +622,7 @@
       "signup": {
         "status": 200,
         "ok": true,
-        "ms": 2513,
+        "ms": 1904,
         "attempts": 1
       },
       "mirrors": [
@@ -589,48 +631,6 @@
           "online": true
         }
       ],
-      "probeBlocked": false,
-      "online": true,
-      "dataStale": false,
-      "staleFrom": null,
-      "staleFields": []
-    },
-    {
-      "id": "justwoker",
-      "checkedAt": "2026-09-18T08:46:09.474Z",
-      "apiOk": true,
-      "pricingOk": false,
-      "latencyMs": 2632,
-      "error": null,
-      "systemName": "JustDoWork",
-      "version": "v1.0.0-rc.23",
-      "registerOpen": true,
-      "passwordRegister": false,
-      "checkinEnabled": true,
-      "loginMethods": [
-        "GitHub",
-        "账号密码"
-      ],
-      "githubMinAccountAgeDays": 365,
-      "quotaPerUnit": 500000,
-      "inviteeBonusUsd": null,
-      "inviterBonusUsd": null,
-      "topupEnabled": null,
-      "services": [],
-      "announcements": [],
-      "models": [],
-      "modelsSource": "login-required",
-      "defaults": {
-        "claude": null,
-        "openai": null
-      },
-      "signup": {
-        "status": 200,
-        "ok": true,
-        "ms": 2219,
-        "attempts": 1
-      },
-      "mirrors": [],
       "probeBlocked": false,
       "online": true,
       "dataStale": false,
