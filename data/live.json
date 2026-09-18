@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-09-18T03:09:37.061Z",
+  "generatedAt": "2026-09-18T03:34:12.871Z",
   "sites": [
     {
       "id": "agentrouter",
-      "checkedAt": "2026-09-18T03:09:30.880Z",
+      "checkedAt": "2026-09-18T03:34:06.682Z",
       "online": true,
-      "latencyMs": 277,
+      "latencyMs": 303,
       "error": "invalid json",
       "systemName": "Agent Router",
       "version": "init-20260915-25158da5",
@@ -164,7 +164,7 @@
       "signup": {
         "status": 200,
         "ok": true,
-        "ms": 1158,
+        "ms": 1358,
         "attempts": 1
       },
       "mirrors": [
@@ -194,10 +194,10 @@
     },
     {
       "id": "docode",
-      "checkedAt": "2026-09-18T03:09:25.554Z",
+      "checkedAt": "2026-09-18T03:34:01.268Z",
       "apiOk": true,
       "pricingOk": false,
-      "latencyMs": 824,
+      "latencyMs": 970,
       "error": null,
       "systemName": "DoCode",
       "version": "",
@@ -249,7 +249,7 @@
       "signup": {
         "status": 200,
         "ok": true,
-        "ms": 740,
+        "ms": 875,
         "attempts": 1
       },
       "mirrors": [
@@ -266,7 +266,7 @@
     },
     {
       "id": "godrouter",
-      "checkedAt": "2026-09-18T03:09:24.688Z",
+      "checkedAt": "2026-09-18T03:34:00.249Z",
       "apiOk": false,
       "pricingOk": false,
       "latencyMs": null,
@@ -293,7 +293,7 @@
       "signup": {
         "status": 200,
         "ok": true,
-        "ms": 781,
+        "ms": 890,
         "attempts": 1
       },
       "mirrors": [],
@@ -305,10 +305,10 @@
     },
     {
       "id": "matrix",
-      "checkedAt": "2026-09-18T03:09:26.312Z",
+      "checkedAt": "2026-09-18T03:34:02.228Z",
       "apiOk": true,
       "pricingOk": false,
-      "latencyMs": 1629,
+      "latencyMs": 1986,
       "error": null,
       "systemName": null,
       "version": null,
@@ -332,7 +332,7 @@
       "signup": {
         "status": 200,
         "ok": true,
-        "ms": 1697,
+        "ms": 2602,
         "attempts": 1
       },
       "mirrors": [],
@@ -344,10 +344,10 @@
     },
     {
       "id": "seekai",
-      "checkedAt": "2026-09-18T03:09:25.966Z",
+      "checkedAt": "2026-09-18T03:34:01.870Z",
       "apiOk": true,
       "pricingOk": false,
-      "latencyMs": 1282,
+      "latencyMs": 1626,
       "error": null,
       "systemName": "SeekAi",
       "version": "v1.0.0-rc.25",
@@ -375,7 +375,7 @@
       "signup": {
         "status": 200,
         "ok": true,
-        "ms": 1317,
+        "ms": 1694,
         "attempts": 1
       },
       "mirrors": [
@@ -392,10 +392,10 @@
     },
     {
       "id": "aaawinn",
-      "checkedAt": "2026-09-18T03:09:25.955Z",
+      "checkedAt": "2026-09-18T03:34:02.049Z",
       "apiOk": true,
       "pricingOk": false,
-      "latencyMs": 1268,
+      "latencyMs": 1801,
       "error": null,
       "systemName": "Long的AI",
       "version": "",
@@ -447,7 +447,7 @@
       "signup": {
         "status": 200,
         "ok": true,
-        "ms": 1270,
+        "ms": 1807,
         "attempts": 1
       },
       "mirrors": [],
@@ -459,10 +459,10 @@
     },
     {
       "id": "hcnsec",
-      "checkedAt": "2026-09-18T03:09:27.712Z",
+      "checkedAt": "2026-09-18T03:34:03.766Z",
       "apiOk": true,
       "pricingOk": false,
-      "latencyMs": 3026,
+      "latencyMs": 3518,
       "error": null,
       "systemName": "新疆幻城网安科技公益大模型安全网关",
       "version": "",
@@ -515,7 +515,7 @@
       "signup": {
         "status": 200,
         "ok": true,
-        "ms": 2986,
+        "ms": 3478,
         "attempts": 1
       },
       "mirrors": [],
@@ -527,10 +527,10 @@
     },
     {
       "id": "liangjiewis",
-      "checkedAt": "2026-09-18T03:09:26.786Z",
+      "checkedAt": "2026-09-18T03:34:02.962Z",
       "apiOk": true,
       "pricingOk": false,
-      "latencyMs": 2098,
+      "latencyMs": 2713,
       "error": null,
       "systemName": "量界智算",
       "version": "v0.12.14",
@@ -580,7 +580,7 @@
       "signup": {
         "status": 200,
         "ok": true,
-        "ms": 2107,
+        "ms": 2716,
         "attempts": 1
       },
       "mirrors": [
