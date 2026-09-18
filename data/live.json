@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-09-18T02:05:50.017Z",
+  "generatedAt": "2026-09-18T02:11:19.358Z",
   "sites": [
     {
       "id": "agentrouter",
-      "checkedAt": "2026-09-18T02:05:44.314Z",
+      "checkedAt": "2026-09-18T02:11:13.098Z",
       "online": true,
-      "latencyMs": 228,
+      "latencyMs": 325,
       "error": "invalid json",
       "systemName": "Agent Router",
       "version": "init-20260915-25158da5",
@@ -164,7 +164,7 @@
       "signup": {
         "status": 200,
         "ok": true,
-        "ms": 825,
+        "ms": 1295,
         "attempts": 1
       },
       "mirrors": [
@@ -193,134 +193,11 @@
       "probeBlocked": false
     },
     {
-      "id": "gcmp-gateway",
-      "checkedAt": "2026-09-18T02:05:38.537Z",
-      "apiOk": true,
-      "pricingOk": false,
-      "latencyMs": null,
-      "error": null,
-      "systemName": null,
-      "version": null,
-      "registerOpen": null,
-      "passwordRegister": null,
-      "checkinEnabled": null,
-      "loginMethods": [],
-      "githubMinAccountAgeDays": null,
-      "quotaPerUnit": null,
-      "inviteeBonusUsd": null,
-      "inviterBonusUsd": null,
-      "topupEnabled": null,
-      "services": [],
-      "announcements": [],
-      "models": [
-        {
-          "name": "opus-5",
-          "fixedPrice": null,
-          "ratio": "—",
-          "inputPerMTok": null,
-          "outputPerMTok": null,
-          "protocols": [
-            "OpenAI",
-            "Responses",
-            "Anthropic"
-          ]
-        },
-        {
-          "name": "opus-4-8",
-          "fixedPrice": null,
-          "ratio": "—",
-          "inputPerMTok": null,
-          "outputPerMTok": null,
-          "protocols": [
-            "OpenAI",
-            "Responses",
-            "Anthropic"
-          ]
-        },
-        {
-          "name": "sonnet-5",
-          "fixedPrice": null,
-          "ratio": "—",
-          "inputPerMTok": null,
-          "outputPerMTok": null,
-          "protocols": [
-            "OpenAI",
-            "Responses",
-            "Anthropic"
-          ]
-        },
-        {
-          "name": "gpt-5.6",
-          "fixedPrice": null,
-          "ratio": "—",
-          "inputPerMTok": null,
-          "outputPerMTok": null,
-          "protocols": [
-            "OpenAI",
-            "Responses"
-          ]
-        },
-        {
-          "name": "glm-5.3",
-          "fixedPrice": null,
-          "ratio": "—",
-          "inputPerMTok": null,
-          "outputPerMTok": null,
-          "protocols": [
-            "OpenAI",
-            "Responses",
-            "Anthropic"
-          ]
-        },
-        {
-          "name": "deepseek",
-          "fixedPrice": null,
-          "ratio": "—",
-          "inputPerMTok": null,
-          "outputPerMTok": null,
-          "protocols": [
-            "OpenAI",
-            "Responses",
-            "Anthropic"
-          ]
-        },
-        {
-          "name": "cheap",
-          "fixedPrice": null,
-          "ratio": "—",
-          "inputPerMTok": null,
-          "outputPerMTok": null,
-          "protocols": [
-            "OpenAI",
-            "Responses",
-            "Anthropic"
-          ]
-        }
-      ],
-      "modelsSource": "public-api",
-      "defaults": {
-        "claude": null,
-        "openai": "gpt-5.6"
-      },
-      "online": true,
-      "signup": {
-        "status": 200,
-        "ok": true,
-        "ms": 594,
-        "attempts": 1
-      },
-      "mirrors": [],
-      "probeBlocked": false,
-      "dataStale": false,
-      "staleFrom": null,
-      "staleFields": []
-    },
-    {
       "id": "docode",
-      "checkedAt": "2026-09-18T02:05:39.020Z",
+      "checkedAt": "2026-09-18T02:11:07.760Z",
       "apiOk": true,
       "pricingOk": false,
-      "latencyMs": 486,
+      "latencyMs": 929,
       "error": null,
       "systemName": "DoCode",
       "version": "",
@@ -372,7 +249,7 @@
       "signup": {
         "status": 200,
         "ok": true,
-        "ms": 392,
+        "ms": 829,
         "attempts": 1
       },
       "mirrors": [
@@ -388,11 +265,50 @@
       "staleFields": []
     },
     {
+      "id": "godrouter",
+      "checkedAt": "2026-09-18T02:11:06.775Z",
+      "apiOk": false,
+      "pricingOk": false,
+      "latencyMs": null,
+      "error": "no url",
+      "systemName": null,
+      "version": null,
+      "registerOpen": null,
+      "passwordRegister": null,
+      "checkinEnabled": null,
+      "loginMethods": [],
+      "githubMinAccountAgeDays": null,
+      "quotaPerUnit": null,
+      "inviteeBonusUsd": null,
+      "inviterBonusUsd": null,
+      "topupEnabled": null,
+      "services": [],
+      "announcements": [],
+      "models": [],
+      "modelsSource": "login-required",
+      "defaults": {
+        "claude": null,
+        "openai": null
+      },
+      "signup": {
+        "status": 200,
+        "ok": true,
+        "ms": 752,
+        "attempts": 1
+      },
+      "mirrors": [],
+      "probeBlocked": false,
+      "online": true,
+      "dataStale": false,
+      "staleFrom": null,
+      "staleFields": []
+    },
+    {
       "id": "matrix",
-      "checkedAt": "2026-09-18T02:05:39.701Z",
+      "checkedAt": "2026-09-18T02:11:08.362Z",
       "apiOk": true,
       "pricingOk": false,
-      "latencyMs": 1173,
+      "latencyMs": 1596,
       "error": null,
       "systemName": null,
       "version": null,
@@ -416,7 +332,7 @@
       "signup": {
         "status": 200,
         "ok": true,
-        "ms": 1227,
+        "ms": 2871,
         "attempts": 1
       },
       "mirrors": [],
@@ -428,10 +344,10 @@
     },
     {
       "id": "seekai",
-      "checkedAt": "2026-09-18T02:05:39.329Z",
+      "checkedAt": "2026-09-18T02:11:08.283Z",
       "apiOk": true,
       "pricingOk": false,
-      "latencyMs": 799,
+      "latencyMs": 1514,
       "error": null,
       "systemName": "SeekAi",
       "version": "v1.0.0-rc.25",
@@ -459,7 +375,7 @@
       "signup": {
         "status": 200,
         "ok": true,
-        "ms": 782,
+        "ms": 1460,
         "attempts": 1
       },
       "mirrors": [
@@ -476,10 +392,10 @@
     },
     {
       "id": "aaawinn",
-      "checkedAt": "2026-09-18T02:05:39.269Z",
+      "checkedAt": "2026-09-18T02:11:08.175Z",
       "apiOk": true,
       "pricingOk": false,
-      "latencyMs": 738,
+      "latencyMs": 1403,
       "error": null,
       "systemName": "Long的AI",
       "version": "",
@@ -531,7 +447,7 @@
       "signup": {
         "status": 200,
         "ok": true,
-        "ms": 740,
+        "ms": 1413,
         "attempts": 1
       },
       "mirrors": [],
@@ -543,10 +459,10 @@
     },
     {
       "id": "hcnsec",
-      "checkedAt": "2026-09-18T02:05:41.115Z",
+      "checkedAt": "2026-09-18T02:11:08.871Z",
       "apiOk": true,
       "pricingOk": false,
-      "latencyMs": 2582,
+      "latencyMs": 2098,
       "error": null,
       "systemName": "新疆幻城网安科技公益大模型安全网关",
       "version": "",
@@ -599,7 +515,7 @@
       "signup": {
         "status": 200,
         "ok": true,
-        "ms": 2561,
+        "ms": 2821,
         "attempts": 1
       },
       "mirrors": [],
@@ -611,10 +527,10 @@
     },
     {
       "id": "liangjiewis",
-      "checkedAt": "2026-09-18T02:05:40.022Z",
+      "checkedAt": "2026-09-18T02:11:08.725Z",
       "apiOk": true,
       "pricingOk": false,
-      "latencyMs": 1488,
+      "latencyMs": 1950,
       "error": null,
       "systemName": "量界智算",
       "version": "v0.12.14",
@@ -664,7 +580,7 @@
       "signup": {
         "status": 200,
         "ok": true,
-        "ms": 1483,
+        "ms": 1952,
         "attempts": 1
       },
       "mirrors": [
@@ -673,45 +589,6 @@
           "online": true
         }
       ],
-      "probeBlocked": false,
-      "online": true,
-      "dataStale": false,
-      "staleFrom": null,
-      "staleFields": []
-    },
-    {
-      "id": "godrouter",
-      "checkedAt": "2026-09-18T02:05:38.535Z",
-      "apiOk": false,
-      "pricingOk": false,
-      "latencyMs": null,
-      "error": "no url",
-      "systemName": null,
-      "version": null,
-      "registerOpen": null,
-      "passwordRegister": null,
-      "checkinEnabled": null,
-      "loginMethods": [],
-      "githubMinAccountAgeDays": null,
-      "quotaPerUnit": null,
-      "inviteeBonusUsd": null,
-      "inviterBonusUsd": null,
-      "topupEnabled": null,
-      "services": [],
-      "announcements": [],
-      "models": [],
-      "modelsSource": "login-required",
-      "defaults": {
-        "claude": null,
-        "openai": null
-      },
-      "signup": {
-        "status": 200,
-        "ok": true,
-        "ms": 1114,
-        "attempts": 1
-      },
-      "mirrors": [],
       "probeBlocked": false,
       "online": true,
       "dataStale": false,
