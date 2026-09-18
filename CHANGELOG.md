@@ -8,6 +8,7 @@ AI Coding 福利站导航的自动变动记录：站点上下线、额度调整�
 
 ## 2026-09-18
 
+- 📢 DoCode 发了公告：免费期间，可选择gpt与grok模型，总量为2W额度，用完即止，次日9点恢复，如使用问题请进群联系管理. <sub>20:54 UTC</sub>
 - 🆕 新收录 JustDoWork <sub>08:29 UTC</sub>
 - 🗑️ 移除收录 gcmp-gateway <sub>02:11 UTC</sub>
 - 🆕 新收录 GodRouter：注册送 $80 <sub>02:05 UTC</sub>
