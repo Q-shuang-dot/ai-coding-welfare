@@ -148,11 +148,6 @@ function recentSection(groups, history) {
             } <span class="muted">${esc(String(e.at ?? '').slice(0, 10))}</span></li>`,
         )
         .join('')}</ul>
-      <div class="cta-row">
-        <a class="btn btn-ghost" href="changelog/">完整变动日志 →</a>
-        <a class="btn btn-ghost" href="feed.xml">Atom 订阅</a>
-        <a class="btn btn-ghost" href="status/">可用性历史 →</a>
-      </div>
     </section>`;
 }
 
@@ -219,12 +214,22 @@ export function renderHtml({ meta, sites, live, css, groups = [], history }) {
           ? `<a class="btn btn-primary" href="${esc(first.signupUrl)}" target="_blank" rel="noopener">立即免费注册 ${esc(first.name)} →</a>`
           : `<a class="btn btn-primary" href="#welfare">收录的站现在都停注了，看看各站状态 →</a>`
       }
-      ${localSite ? `<a class="btn btn-ghost" href="#gateway">🛰 自托管网关 →</a>` : ''}
-      <a class="btn btn-ghost" href="compare/">哪个站最耐用？按次 vs 按量 →</a>
+      <a class="btn btn-ghost" href="#gateway-start">🚀 本地网关启动 →</a>
       <a class="btn btn-ghost" href="${esc(meta.repoUrl)}" target="_blank" rel="noopener">GitHub 仓库 ⭐</a>
     </div>
   </header>
 ${gatewaySection}
+  <section id="gateway-start">
+    <h2>🚀 一分钟上车（本地网关）</h2>
+    <p class="hint">下面的福利站是别人开的，你注册领额度；这个网关跑在你自己机器上，要自己配置上游 key 才能用。</p>
+    <h3>快速启动</h3>
+    <pre><code>git clone https://github.com/Q-shuang-dot/gcmp-welfare-temp
+cd gcmp-welfare-temp
+# 编辑 gcmp-gateway/config.json，填入各中转站的 apiKey
+npm run gateway:start
+</code></pre>
+    <p class="hint">启动后访问 <code>http://127.0.0.1:15800/admin/</code> 查看管理页，访问 <a href="gcmp-gateway/README.md">部署文档 →</a> 了解更多选项。</p>
+  </section>
   <section id="welfare">
     <h2>福利站总览</h2>
     <p class="hint">额度、模型、在线状态由脚本定时抓取站点公开接口自动更新。</p>

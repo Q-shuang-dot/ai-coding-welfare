@@ -24,9 +24,6 @@ export function fmt(iso) {
 /** 站内导航：新页面只有被链接到才有 SEO 价值，六个页面互相链上 */
 export const NAV = [
   { href: '', label: '站点总览' },
-  { href: 'compare/', label: '按次 vs 按量' },
-  { href: 'status/', label: '可用性' },
-  { href: 'changelog/', label: '变动日志' },
 ];
 
 function navBar(base, current) {
@@ -35,8 +32,8 @@ function navBar(base, current) {
     return `<a class="navlink${active ? ' active' : ''}" href="${esc(base + n.href)}">${esc(n.label)}</a>`;
   });
   return `<nav class="nav"><div class="wrap navrow">${items.join('')}<span class="navspace"></span><a class="navlink" href="${esc(
-    `${base}feed.xml`,
-  )}">Atom 订阅</a></div></nav>`;
+    `${base}https://github.com/Q-shuang-dot/gcmp-welfare-temp`,
+  )}" target="_blank" rel="noopener">GitHub 仓库</a></div></nav>`;
 }
 
 /**
@@ -86,7 +83,7 @@ ${body}
     </ul>
     <p>数据快照时间：${esc(fmt(live?.generatedAt))} · 由 <a href="${esc(meta.repoUrl)}">${esc(
       meta.repoUrl.replace(/^https:\/\//, ''),
-    )}</a> 自动生成 · <a href="${esc(feed)}">Atom 订阅</a></p>
+    )}</a> 自动生成</p>
   </footer>
 </div>
 </body>

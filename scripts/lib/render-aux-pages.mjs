@@ -277,7 +277,6 @@ export function renderChangelogPage({ meta, groups, live, css, limitDays = 60 })
       <span class="pill">最后比对 <b>${esc(fmt(live?.generatedAt))}</b></span>
     </div>
     <div class="cta-row">
-      <a class="btn btn-primary" href="${esc(`${meta.pagesUrl}feed.xml`)}">Atom 订阅</a>
       <a class="btn btn-ghost" href="${esc(`${meta.repoUrl}/releases`)}" target="_blank" rel="noopener">GitHub Releases 邮件通知</a>
     </div>
     <p class="hint">想要额度变动第一时间知道：订阅 Atom，或在仓库点 Watch → Custom → Releases。</p>

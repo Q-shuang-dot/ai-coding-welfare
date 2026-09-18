@@ -426,8 +426,7 @@ export function renderReadme({ meta, sites, live, groups = [], history }) {
     welfare.map((s) => `  <a href="${s.signupUrl}"><b>${s.name} 注册</b></a>`).join(' ·\n'),
     '</p>',
     '',
-    `<p align="center"><a href="${pages}compare/">📊 按次 vs 按量折算横评</a> · <a href="${pages}status/">🩺 可用性历史</a> · <a href="${pages}changelog/">🗓 变动日志</a> · <a href="${pages}feed.xml">🔔 Atom 订阅</a></p>`,
-    '',
+
     ...(gatewaySite ? splitBlock({ welfareCount: welfare.length, gatewaySite, pages }) : ['---', '']),
     ...gatewayBlock(gatewaySite, gatewaySite ? byId.get(gatewaySite.id) : null, meta, pages),
     '## 🚀 一分钟上车（福利站）',
@@ -511,8 +510,6 @@ function changesBlock({ groups, history, pages }) {
     }。额度调整、掉线与恢复、模型上下线、价格变动都会自动记一条：`,
     '',
     '- 点仓库右上角 **Watch → Custom → Releases**：有重要变动时 GitHub 直接发邮件',
-    `- 订阅 [Atom feed](${pages}feed.xml)：RSS 阅读器 / Feedly / Telegram 机器人都能读`,
-    `- 在线看：[变动日志](${pages}changelog/) · [可用性历史](${pages}status/)`,
   ];
   if (events.length) {
     lines.push(
