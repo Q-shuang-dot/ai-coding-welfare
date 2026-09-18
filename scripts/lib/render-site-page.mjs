@@ -40,16 +40,6 @@ function factRows(site, snap) {
 
 function modelsTable(site, snap) {
   if (!snap?.models?.length) return '';
-  const local = site.panel === 'local';
-  // 自托管网关的逻辑模型没有「价格」这回事（成本来自你自己配的上游），
-  // 照搬福利站那张倍率 / 输入 / 输出表只会得到一列破折号，所以只列模型名与协议
-  if (local) {
-    return `<section><h2>支持的逻辑模型</h2><p class="hint">客户端里填逻辑模型名即可，具体走哪条上游由网关按 config.json 的路由与健康度决定。</p>
-    <div class="table-wrap"><table><thead><tr><th>逻辑模型</th><th>支持的协议</th></tr></thead>
-    <tbody>${snap.models
-      .map((m) => `<tr><td><code>${esc(m.name)}</code></td><td>${esc((m.protocols ?? []).join(' / '))}</td></tr>`)
-      .join('')}</tbody></table></div></section>`;
-  }
   if (snap.models.every((m) => m.fixedPrice == null && m.inputPerMTok == null)) return '';
   const fixedAny = snap.models.some((m) => m.fixedPrice != null);
   const rows = snap.models.map((m) => {
@@ -127,28 +117,6 @@ function uptimeBlock(site, history) {
     <p><a class="navlink" href="../../status/">看全部站点的可用性 →</a></p></section>`;
 }
 
-function localFactRows(site, snap) {
-  const rows = [
-    snap?.systemName ? ['站点名称', esc(snap.systemName)] : null,
-    snap?.version ? ['面板版本', `<code>${esc(snap.version)}</code>`] : null,
-    snap?.services?.length ? ['已开放服务', esc(snap.services.join(' / '))] : null,
-    snap?.models?.length ? ['逻辑模型', snap.models.map((m) => `<code>${esc(m.name)}</code>`).join('、')] : null,
-    snap?.defaults?.openai ? ['默认 OpenAI 模型', `<code>${esc(snap.defaults.openai)}</code>`] : null,
-    snap?.defaults?.claude ? ['默认 Claude 模型', `<code>${esc(snap.defaults.claude)}</code>`] : null,
-    snap?.latencyMs != null ? ['接口延迟', `${snap.latencyMs} ms`] : null,
-    ['协议支持', 'OpenAI / Anthropic / Responses'],
-    ['数据快照', esc(fmt(snap?.staleFrom ?? snap?.checkedAt))],
-  ].filter(Boolean);
-
-  if ((site.setup?.steps ?? []).length) {
-    rows.push(['部署步骤', `<ol class="hl">${site.setup.steps.map((t) => `<li>${esc(t)}</li>`).join('')}</ol>`]);
-  }
-  if (site.setup?.dashboardUrl) {
-    rows.push(['管理页', `<a class="btn btn-ghost" href="${esc(site.setup.dashboardUrl)}" target="_blank" rel="noopener">打开管理页</a>`]);
-  }
-  return rows;
-}
-
 function list(title, items, cls = 'hl') {
   if (!items?.length) return '';
   return `<section><h2>${esc(title)}</h2><ul class="${cls}">${items.map((t) => `<li>${esc(t)}</li>`).join('')}</ul></section>`;
@@ -171,26 +139,16 @@ export function renderSitePage({ meta, site, snap, live, css, history, siblings 
   const route = signupRoute(snap);
   const shut = route.state === 'closed';
   const url = `${meta.pagesUrl}sites/${site.id}/`;
-  const title = site.panel === 'local'
-    ? `${site.name} 自托管 AI 网关 · 部署与客户端配置 — ${meta.title}`
-    : `${site.name} 免费额度 / 邀请链接 / Claude Code 配置 — ${meta.title}`;
-  const desc = site.panel === 'local'
-    ? `${site.name}：${site.subtitle}。含部署步骤、逻辑模型清单、VS Code / Claude Code / Codex / OpenAI SDK 接入配置与排障要点，数据快照 ${fmt(snap?.checkedAt)}。`
-    : `${site.name}：${site.subtitle}${
-        shut ? '。⚠ 站点接口自报已暂停新用户注册' : p.firstDay != null ? `。首日可得 ${usd(p.firstDay, p.approx, p.unit)}${breakdown(p) ? `（${breakdown(p)}）` : ''}` : ''
-      }。含实时在线状态、模型价格、Claude Code / Codex 接入配置与踩坑清单，数据快照 ${fmt(snap?.checkedAt)}。`;
+  const title = `${site.name} 免费额度 / 邀请链接 / Claude Code 配置 — ${meta.title}`;
+  const desc = `${site.name}：${site.subtitle}${
+    shut ? '。⚠ 站点接口自报已暂停新用户注册' : p.firstDay != null ? `。首日可得 ${usd(p.firstDay, p.approx, p.unit)}${breakdown(p) ? `（${breakdown(p)}）` : ''}` : ''
+  }。含实时在线状态、模型价格、Claude Code / Codex 接入配置与踩坑清单，数据快照 ${fmt(snap?.checkedAt)}。`;
 
-  const faq = site.panel === 'local'
-    ? [
-        [`${site.name} 监听地址只有 127.0.0.1，别的机器怎么用？`, '默认只监听本机。想让局域网设备使用，需要你另外做反代或改成 0.0.0.0 并补防火墙规则。'],
-        ['为什么我直连上游 200，走网关却失败？', '先看响应头里的 X-Gateway-Upstream / X-Gateway-Model，再对照管理页路由命中；常见原因是上游 key、UA 或请求协议不匹配。'],
-        ['中文上游名为什么有时候会报错？', '旧版网关直接把中文上游名写进 HTTP 头时会被 latin-1 编码打断；当前版本会自动转义。'],
-      ]
-    : [
-        [`${site.name} 注册完为什么看不到额度？`, '公益站额度多在登录时结算，退出登录再重新登录一次通常就到账；余额短暂显示 $0 属于前端展示问题，稍后刷新即可。'],
-        [`${site.name} 的 Claude Code 报 401 怎么办？`, 'Anthropic 协议的 Base URL 不要带 /v1；再确认 Key 复制完整、模型名在站内可用清单里、客户端属于该站支持的类型。'],
-        ['从别的链接注册 ' + site.name + ' 有区别吗？', '有。' + (p.invite != null ? '邀请额度 ' + usd(p.invite, false, p.unit) + ' 是在注册那一刻结算的，走裸链拿不到，事后也补不上。' : '邀请额度在注册那一刻结算，走裸链拿不到，事后补不上。')],
-      ];
+  const faq = [
+    [`${site.name} 注册完为什么看不到额度？`, '公益站额度多在登录时结算，退出登录再重新登录一次通常就到账；余额短暂显示 $0 属于前端展示问题，稍后刷新即可。'],
+    [`${site.name} 的 Claude Code 报 401 怎么办？`, 'Anthropic 协议的 Base URL 不要带 /v1；再确认 Key 复制完整、模型名在站内可用清单里、客户端属于该站支持的类型。'],
+    ['从别的链接注册 ' + site.name + ' 有区别吗？', '有。' + (p.invite != null ? '邀请额度 ' + usd(p.invite, false, p.unit) + ' 是在注册那一刻结算的，走裸链拿不到，事后也补不上。' : '邀请额度在注册那一刻结算，走裸链拿不到，事后补不上。')],
+  ];
 
   const body = `  <header class="hero">
     <p class="crumb"><a href="../../">${esc(meta.title)}</a> › ${esc(site.name)}</p>
@@ -204,13 +162,9 @@ export function renderSitePage({ meta, site, snap, live, css, history, siblings 
       <span class="pill">数据更新 <b>${esc(fmt(snap?.checkedAt))}</b></span>
     </div>
     <div class="cta-row">
-      ${
-        site.panel === 'local'
-          ? `<a class="btn btn-primary" href="${esc(site.docsUrl || site.homeUrl || site.signupUrl)}" target="_blank" rel="noopener">查看部署文档 →</a>`
-          : `<a class="btn ${shut ? 'btn-ghost' : 'btn-primary'}" href="${esc(site.signupUrl)}" target="_blank" rel="noopener">${
-              shut ? `打开 ${esc(site.name)}（已停注）→` : `免费注册 ${esc(site.name)} →`
-            }</a>`
-      }
+      <a class="btn ${shut ? 'btn-ghost' : 'btn-primary'}" href="${esc(site.signupUrl)}" target="_blank" rel="noopener">${
+        shut ? `打开 ${esc(site.name)}（已停注）→` : `免费注册 ${esc(site.name)} →`
+      }</a>
       <a class="btn btn-ghost" href="#config">直接看接入配置</a>
     </div>
     ${route.note ? `<p class="notice">${esc(route.note)}${shut ? '　可以先看下面「同类站点」里还在收人的。' : ''}</p>` : ''}
@@ -221,19 +175,19 @@ export function renderSitePage({ meta, site, snap, live, css, history, siblings 
     }
   </header>
 
-  <section><h2>${site.panel === 'local' ? '部署方式' : '能拿多少额度'}</h2>
+  <section><h2>能拿多少额度</h2>
     <div class="rows"><div class="row head"><div>项目</div><div>数值</div></div>${
-      (site.panel === 'local' ? localFactRows(site, snap) : factRows(site, snap)).map(([k, v]) => `<div class="row"><div>${esc(k)}</div><div>${v}</div></div>`).join('')
+      factRows(site, snap).map(([k, v]) => `<div class="row"><div>${esc(k)}</div><div>${v}</div></div>`).join('')
     }</div>
   </section>
 
-  ${list(site.panel === 'local' ? '为什么值得自托管' : '为什么值得注册', site.highlights)}
+  ${list('为什么值得注册', site.highlights)}
   ${modelsTable(site, snap)}
-  ${list(site.panel === 'local' ? '前置要求' : '注册要求', site.register?.requirements)}
+  ${list('注册要求', site.register?.requirements)}
   ${configBlocks(site, snap)}
   ${list('如何继续拿额度', site.earnMore)}
   ${list('⚠️ 使用前必读', site.caveats)}
-  ${site.panel === 'local' ? '' : uptimeBlock(site, history)}
+  ${uptimeBlock(site, history)}
   ${
     (site.mirrors ?? []).length
       ? `<section><h2>镜像 / 备用入口</h2><ul class="hl">${site.mirrors
@@ -248,11 +202,7 @@ export function renderSitePage({ meta, site, snap, live, css, history, siblings 
   </section>
 
   <section><h2>其它福利站</h2>
-    <p class="hint">${
-      site.panel === 'local'
-        ? '网关自己不发额度——上游 key 可以自己买，也可以从下面这些还在收人的福利站领。两件事互不依赖。'
-        : '额度用完了就换一家，各站额度互不影响。'
-    }</p>
+    <p class="hint">额度用完了就换一家，各站额度互不影响。</p>
     <ul class="hl">${siblings
       .map((s) => `<li><a href="../${esc(s.id)}/">${esc(s.name)}</a> — ${esc(s.subtitle)}</li>`)
       .join('')}</ul>
@@ -267,7 +217,6 @@ ${COPY_JS}`;
     title,
     desc,
     canonical: url,
-    local: site.panel === 'local',
     jsonLd: [
       breadcrumb(meta, [
         { name: meta.title, url: meta.pagesUrl },

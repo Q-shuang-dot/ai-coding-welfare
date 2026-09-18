@@ -7,14 +7,12 @@ import { probeNewApi } from './newapi.mjs';
 import { probeVibeCode } from './vibecode.mjs';
 import { probeMatrix } from './matrix.mjs';
 import { probeRelay } from './relay.mjs';
-import { probeLocal } from './local.mjs';
 
 export const PANELS = {
   newapi: probeNewApi,
   vibecode: probeVibeCode,
   matrix: probeMatrix,
   relay: probeRelay,
-  local: probeLocal,
 };
 
 export const DEFAULT_PANEL = 'newapi';

@@ -5,20 +5,6 @@ import { signupRoute, acceptsNew } from './signup.mjs';
 import { icon } from './changelog.mjs';
 import { coverage } from './history.mjs';
 
-const GCMP_README_SNAP = {
-  online: true,
-  models: [
-    { name: 'opus-5', fixedPrice: null, ratio: '—', inputPerMTok: null, outputPerMTok: null, protocols: ['OpenAI', 'Responses', 'Anthropic'] },
-    { name: 'opus-4-8', fixedPrice: null, ratio: '—', inputPerMTok: null, outputPerMTok: null, protocols: ['OpenAI', 'Responses', 'Anthropic'] },
-    { name: 'sonnet-5', fixedPrice: null, ratio: '—', inputPerMTok: null, outputPerMTok: null, protocols: ['OpenAI', 'Responses', 'Anthropic'] },
-    { name: 'gpt-5.6', fixedPrice: null, ratio: '—', inputPerMTok: null, outputPerMTok: null, protocols: ['OpenAI', 'Responses'] },
-    { name: 'glm-5.3', fixedPrice: null, ratio: '—', inputPerMTok: null, outputPerMTok: null, protocols: ['OpenAI', 'Responses', 'Anthropic'] },
-    { name: 'deepseek', fixedPrice: null, ratio: '—', inputPerMTok: null, outputPerMTok: null, protocols: ['OpenAI', 'Responses', 'Anthropic'] },
-    { name: 'cheap', fixedPrice: null, ratio: '—', inputPerMTok: null, outputPerMTok: null, protocols: ['OpenAI', 'Responses', 'Anthropic'] },
-  ],
-  defaults: { claude: 'glm-5.3', openai: 'glm-5.3' },
-};
-
 /** shields.io 转义：- → --，_ → __，其余走 URI 编码 */
 const shield = (s) => encodeURIComponent(String(s).replace(/-/g, '--').replace(/_/g, '__'));
 const B = (label, msg, color) => `https://img.shields.io/badge/${shield(label)}-${shield(msg)}-${color}`;
@@ -303,100 +289,9 @@ function codeBlocks(site, claude, openai) {
   return out.join('\n');
 }
 
-/** sites.json 里 configBlocks 的固定顺序：从「最常用来改配置的客户端」排到「最少用的」 */
-const CLIENT_KEYS = ['vscode', 'claudeCode', 'codex', 'openaiSdk'];
-
-/**
- * 「这个仓库有两部分」的分工说明。
- *
- * README 第一屏全是福利站的额度与注册链接时，读者会以为整个仓库就是个导航站，
- * 完全看不到自己那套网关——先把两件事摆平，再各自展开。
- */
-function splitBlock({ welfareCount, gatewaySite, pages }) {
-  return [
-    '---',
-    '',
-    '## 🧭 这个仓库有两部分',
-    '',
-    '| 部分 | 是什么 | 入口 |',
-    '| :-- | :-- | :-- |',
-    `| 🛰 **${gatewaySite.name}** | 跑在你自己机器上的 AI 网关：多个逻辑模型、OpenAI / Anthropic / Responses 三协议全收、上游故障转移、配置热加载 | [部署文档](gcmp-gateway/README.md) · [详情页](${pages}sites/${gatewaySite.id}/) |`,
-    `| 🎁 **福利站导航** | ${welfareCount} 个第三方公益站 / 中转站的注册额度与实测状态，CI 每 6 小时自动抓取 | 本文件下面两张表 |`,
-    '',
-    '> 两件事互不依赖，只用其中一个也行；但把福利站领到的 key 填进网关，就能在一个地址里在 VS Code、Claude Code、Codex 之间换模型，不用各处改配置。',
-    '',
-  ];
-}
-
-/**
- * 仓库的第二部分：自托管网关。
- *
- * 福利站那一整套口径（首日可得 / 邀请码 / 注册链接 / 停注 / 全注册约 $X）对它全是错的——
- * 它不发额度、不能注册、也没有单价，所以从福利站的表里彻底摘出来单独成一章：
- * 定位 → 逻辑模型 → 接入配置 → 部署步骤 → 必读。
- */
-function gatewayBlock(site, snap, meta, pages) {
-  if (!site) return [];
-  const models = snap?.models ?? [];
-  const blocks = CLIENT_KEYS.map((k) => site.configBlocks?.[k])
-    .filter(Boolean)
-    .map((b) => `<details><summary><b>${b.title}</b></summary>\n\n${F}${b.language}\n${b.code}\n${F}\n\n</details>`);
-  const steps = site.setup?.steps ?? [];
-  const admin = site.setup?.dashboardUrl;
-
-  const out = [
-    `## 🛰 我的网关：${site.name}`,
-    '',
-    `> ${site.subtitle}`,
-    '',
-    `<a href="gcmp-gateway/README.md"><img src="${B('部署文档', site.name, 'blue?style=for-the-badge')}" alt="${site.name} 部署文档"></a>`,
-    '',
-    '**它和福利站不是一回事**：福利站是别人开的、你注册领额度；这个网关跑在你自己机器上，不发额度、没有邀请码、也不收你的钱——它把你手上（或上面那些站的）key 汇总成一个地址对外，一个逻辑模型挂多条上游，哪条挂了自动换下一条。',
-    '',
-    '**为什么值得自托管**',
-    '',
-    site.highlights.map((h) => `- ${h}`).join('\n'),
-    '',
-    `**${models.length} 个逻辑模型**（客户端只填逻辑模型名，具体走哪个上游由网关按路由与健康度决定）`,
-    '',
-    '| 逻辑模型 | 支持的协议 |',
-    '| :-- | :-- |',
-    ...models.map((m) => `| \`${m.name}\` | ${(m.protocols ?? []).join(' / ') || '—'} |`),
-  ];
-
-  if (blocks.length) {
-    out.push('', `**接入配置**（把 \`127.0.0.1:${site.setup?.port ?? '15800'}\` 换成你自己的监听地址）`, '', blocks.join('\n'));
-  }
-  if (steps.length) out.push('', '**部署步骤**', '', steps.map((t, i) => `${i + 1}. ${t}`).join('\n'));
-  if (site.caveats?.length) out.push('', '**⚠️ 使用前必读**', '', site.caveats.map((t) => `- ${t}`).join('\n'));
-
-  out.push(
-    '',
-    '**入口**',
-    '',
-    [
-      '[完整部署文档](gcmp-gateway/README.md)',
-      '[英文说明](gcmp-gateway/README.en.md)',
-      `[详情页](${pages}sites/${site.id}/)`,
-      admin ? `控制台 <${admin}>` : null,
-      `[仓库](${meta.repoUrl})`,
-    ]
-      .filter(Boolean)
-      .join(' · '),
-    '',
-    '---',
-    '',
-  );
-
-  return out;
-}
-
 export function renderReadme({ meta, sites, live, groups = [], history }) {
   const byId = new Map((live?.sites ?? []).map((s) => [s.id, s]));
-  if (!byId.has('gcmp-gateway')) byId.set('gcmp-gateway', GCMP_README_SNAP);
-  // 福利站 = 第三方站点；自托管网关（panel=local）单独成章，不进「收录站点 / 在线 / 可注册 / 首日可得」的口径
-  const welfare = sites.filter((s) => s.panel !== 'local');
-  const gatewaySite = sites.find((s) => s.panel === 'local') ?? null;
+  const welfare = sites;
   const onlineCount = welfare.filter((s) => byId.get(s.id)?.online).length;
   const staleCount = welfare.filter((s) => staleHours(byId.get(s.id))).length;
   // 「全注册一遍能拿多少」这句话是对新用户说的，把停注的站点算进去就是虚报额度（详见 lib/signup.mjs）
@@ -429,12 +324,11 @@ export function renderReadme({ meta, sites, live, groups = [], history }) {
     welfare.map((s) => `  <a href="${s.signupUrl}"><b>${s.name} 注册</b></a>`).join(' ·\n'),
     '</p>',
     '',
-
-    ...(gatewaySite ? splitBlock({ welfareCount: welfare.length, gatewaySite, pages }) : ['---', '']),
-    ...gatewayBlock(gatewaySite, gatewaySite ? byId.get(gatewaySite.id) : null, meta, pages),
+    '---',
+    '',
     '## 🚀 一分钟上车（福利站）',
     '',
-    '> 下面两张表都是第三方站点，本仓库只做信息聚合；自己搭网关看上面那一节。',
+    '> 下面两张表都是第三方站点，本仓库只做信息聚合。',
     '',
     overviewTable(welfare, byId),
     '',
@@ -549,7 +443,6 @@ function tail(meta, sites, live) {
     '| [`scripts/check.mjs`](scripts/check.mjs) | 链接与站点健康检查，失效即 CI 报警 |',
     '| [`scripts/test.mjs`](scripts/test.mjs) | 合并逻辑与额度口径的单测（零依赖，`npm test`） |',
     '| [`scripts/quickstart.sh`](scripts/quickstart.sh) / [`.ps1`](scripts/quickstart.ps1) | 交互式配置 Claude Code 环境变量 |',
-    '| [`gcmp-gateway/`](gcmp-gateway/) | 自托管网关本体：单文件 Python 服务 + 本地管理页 + 部署文档，与福利站数据是两件事 |',
     '',
     '本地跑一遍：',
     '',

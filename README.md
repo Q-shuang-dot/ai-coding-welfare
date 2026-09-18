@@ -25,7 +25,7 @@
 
 ## 🚀 一分钟上车（福利站）
 
-> 下面两张表都是第三方站点，本仓库只做信息聚合；自己搭网关看上面那一节。
+> 下面两张表都是第三方站点，本仓库只做信息聚合。
 
 | 站点 | 状态 | 首日可得 | 额度构成 | 之后每天 | 兼容协议 | 模型 | 注册 | 邀请码 |
 | :-- | :--: | :--: | :-- | :--: | :--: | :--: | :--: | :--: |
@@ -88,7 +88,7 @@ powershell -ExecutionPolicy Bypass -File scripts/quickstart.ps1
 
 **实时数据**（自动抓取站点公开接口）
 
-- ⚠ 接口已连续 79 小时没抓到新数据，下列信息为 `2026-09-15 01:48 UTC` 的快照
+- ⚠ 接口已连续 80 小时没抓到新数据，下列信息为 `2026-09-15 01:48 UTC` 的快照
 - 站点名称：**Agent Router**
 - 面板版本：`init-20260915-25158da5`
 - 邀请他人可得：**$50**
@@ -1090,7 +1090,6 @@ CI 每 6 小时抓一次各站接口，与上一次快照逐字段比对，目�
 | [`scripts/check.mjs`](scripts/check.mjs) | 链接与站点健康检查，失效即 CI 报警 |
 | [`scripts/test.mjs`](scripts/test.mjs) | 合并逻辑与额度口径的单测（零依赖，`npm test`） |
 | [`scripts/quickstart.sh`](scripts/quickstart.sh) / [`.ps1`](scripts/quickstart.ps1) | 交互式配置 Claude Code 环境变量 |
-| [`gcmp-gateway/`](gcmp-gateway/) | 自托管网关本体：单文件 Python 服务 + 本地管理页 + 部署文档，与福利站数据是两件事 |
 
 本地跑一遍：
 

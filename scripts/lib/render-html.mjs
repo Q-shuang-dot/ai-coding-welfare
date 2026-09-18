@@ -11,20 +11,6 @@ import { esc, fmt, pageShell, faqLd } from './layout.mjs';
 import { icon } from './changelog.mjs';
 import { coverage } from './history.mjs';
 
-const GCMP_SNAP = {
-  online: true,
-  models: [
-    { name: 'opus-5', fixedPrice: null, ratio: '—', inputPerMTok: null, outputPerMTok: null, protocols: ['OpenAI', 'Responses', 'Anthropic'] },
-    { name: 'opus-4-8', fixedPrice: null, ratio: '—', inputPerMTok: null, outputPerMTok: null, protocols: ['OpenAI', 'Responses', 'Anthropic'] },
-    { name: 'sonnet-5', fixedPrice: null, ratio: '—', inputPerMTok: null, outputPerMTok: null, protocols: ['OpenAI', 'Responses', 'Anthropic'] },
-    { name: 'gpt-5.6', fixedPrice: null, ratio: '—', inputPerMTok: null, outputPerMTok: null, protocols: ['OpenAI', 'Responses'] },
-    { name: 'glm-5.3', fixedPrice: null, ratio: '—', inputPerMTok: null, outputPerMTok: null, protocols: ['OpenAI', 'Responses', 'Anthropic'] },
-    { name: 'deepseek', fixedPrice: null, ratio: '—', inputPerMTok: null, outputPerMTok: null, protocols: ['OpenAI', 'Responses', 'Anthropic'] },
-    { name: 'cheap', fixedPrice: null, ratio: '—', inputPerMTok: null, outputPerMTok: null, protocols: ['OpenAI', 'Responses', 'Anthropic'] },
-  ],
-  defaults: { claude: 'glm-5.3', openai: 'glm-5.3' },
-};
-
 function claudeSnippet(site, snap) {
   const model = snap?.defaults?.claude ?? '在站内模型列表中选择';
   return [
@@ -53,20 +39,17 @@ function siteCard(site, snap) {
   const p = creditPlan(site, snap);
   const route = signupRoute(snap);
   const shut = route.state === 'closed';
-  const local = site.panel === 'local';
 
-  const credit = local
-    ? `自托管 / ${site.setup?.port ?? '15800'}`
-    : p.firstDay != null
-      ? `首日 <b${shut ? ' class="struck"' : ''}>${usd(p.firstDay, p.approx, p.unit)}</b>${p.daily != null ? ` / 每天 ${usd(p.daily, p.approx, p.unit)}` : ''}`
-      : snap?.checkinEnabled
-        ? '每日签到'
-        : snap?.checkinEnabled === false
-          ? '无签到'
-          : '额度未知';
+  const credit = p.firstDay != null
+    ? `首日 <b${shut ? ' class="struck"' : ''}>${usd(p.firstDay, p.approx, p.unit)}</b>${p.daily != null ? ` / 每天 ${usd(p.daily, p.approx, p.unit)}` : ''}`
+    : snap?.checkinEnabled
+      ? '每日签到'
+      : snap?.checkinEnabled === false
+        ? '无签到'
+        : '额度未知';
 
   const meta = [
-    route.short && !local ? `注册：${esc(route.short)}` : null,
+    route.short ? `注册：${esc(route.short)}` : null,
     snap?.latencyMs != null ? `${snap.latencyMs}ms` : null,
     snap?.models?.length ? `${snap.models.length} 模型` : null,
   ].filter(Boolean);
@@ -75,7 +58,7 @@ function siteCard(site, snap) {
       <div class="row${site.recommended ? ' featured' : ''}${shut ? ' shut' : ''}">
         <div class="status">
           <span class="dot ${up ? 'up' : 'down'}" title="${up ? '在线' : '异常'}"></span>
-          <span>${esc(site.name)}${site.recommended && !local ? ' <span class="tag">首推</span>' : ''}${shut ? ' <span class="tag warn">停注</span>' : ''}</span>
+          <span>${esc(site.name)}${site.recommended ? ' <span class="tag">首推</span>' : ''}${shut ? ' <span class="tag warn">停注</span>' : ''}</span>
         </div>
         <div class="meta">
           <div>${esc(site.subtitle)}</div>
@@ -84,13 +67,9 @@ function siteCard(site, snap) {
         </div>
         <div class="meta">${credit}</div>
         <div class="actions">
-          ${
-            site.panel === 'local'
-              ? `<a class="btn btn-primary" href="${esc(site.docsUrl || site.homeUrl || site.signupUrl)}" target="_blank" rel="noopener">部署文档 →</a>`
-              : `<a class="btn ${shut ? 'btn-ghost' : 'btn-primary'}" href="${esc(site.signupUrl)}" target="_blank" rel="noopener">${
-                  shut ? `打开 ${esc(site.name)} →` : `免费注册 →`
-                }</a>`
-          }
+          <a class="btn ${shut ? 'btn-ghost' : 'btn-primary'}" href="${esc(site.signupUrl)}" target="_blank" rel="noopener">${
+            shut ? `打开 ${esc(site.name)} →` : `免费注册 →`
+          }</a>
           <a class="btn btn-ghost" href="sites/${esc(site.id)}/">详情 →</a>
         </div>
       </div>`;
@@ -130,7 +109,7 @@ function modelsTable(sites, byId) {
 }
 
 /** 首页只放最近几条变动做「这站还活着」的信号，完整列表在 /changelog/ */
-function recentSection(groups, history) {
+function recentSection(groups, history, liveIds) {
   const events = groups.flatMap((g) => g.events).slice(0, 8);
   const cov = coverage(history);
   if (!events.length) return '';
@@ -144,7 +123,7 @@ function recentSection(groups, history) {
         .map(
           (e) =>
             `<li><span class="ev-ico">${icon(e.type)}</span><span>${esc(e.text)}</span>${
-              e.siteId ? ` <a class="ev-site" href="sites/${esc(e.siteId)}/">详情</a>` : ''
+              e.siteId && liveIds.has(e.siteId) ? ` <a class="ev-site" href="sites/${esc(e.siteId)}/">详情</a>` : ''
             } <span class="muted">${esc(String(e.at ?? '').slice(0, 10))}</span></li>`,
         )
         .join('')}</ul>
@@ -160,10 +139,7 @@ const FAQ = [
 
 export function renderHtml({ meta, sites, live, css, groups = [], history }) {
   const byId = new Map((live?.sites ?? []).map((s) => [s.id, s]));
-  if (!byId.has('gcmp-gateway')) byId.set('gcmp-gateway', GCMP_SNAP);
-  // 福利站口径只算第三方站点：自托管网关（panel=local）单独一个区块，页数、在线数、注册数、模型表都不带它
-  const welfareSites = sites.filter((s) => s.panel !== 'local');
-  const localSites = sites.filter((s) => s.panel === 'local');
+  const welfareSites = sites;
   const online = welfareSites.filter((s) => byId.get(s.id)?.online).length;
   // 停注的站点不进「新用户能拿多少」的口径，也不当首屏主按钮（详见 lib/signup.mjs）
   const openSites = welfareSites.filter((s) => acceptsNew(byId.get(s.id)));
@@ -177,24 +153,7 @@ export function renderHtml({ meta, sites, live, css, groups = [], history }) {
     closedSites.length ? `、${openSites.length} 个还收新用户` : ''
   }${best ? `，单站首日最高可得 $${best} 免费额度，还收新用户的美元站全注册约 $${total}` : ''}${
     extra ? `；${extra}` : ''
-  }。${localSites.length ? '另有一个自托管的 GCMP Gateway，7 个逻辑模型、OpenAI / Anthropic / Responses 三协议全收。' : ''}`;
-
-  const localSite = localSites[0] ?? null;
-  const localSnap = localSite ? byId.get(localSite.id) : null;
-  const gatewaySection = localSite
-    ? `
-  <section id="gateway">
-    <h2>🛰 ${esc(localSite.name)} · 自托管网关</h2>
-    <p class="hint">和下面的福利站不是一回事：福利站是别人开的、你注册领额度；这个网关跑在你自己机器上，不发额度、没有邀请码——它把你手上的 key 汇总成一个地址，${
-      localSnap?.models?.length ?? 0
-    } 个逻辑模型各挂多条上游，哪条挂了自动换下一条。<a href="sites/${esc(localSite.id)}/">部署方式与客户端配置 →</a></p>
-    <div class="rows">
-      <div class="row head"><div>站点</div><div>说明</div><div>额度 / 状态</div><div>操作</div></div>
-      ${localSites.map((s) => siteCard(s, byId.get(s.id))).join('')}
-    </div>
-  </section>
-`
-    : '';
+  }。`;
 
   const body = `  <header class="hero">
     <h1>${esc(meta.title)}</h1>
@@ -214,22 +173,9 @@ export function renderHtml({ meta, sites, live, css, groups = [], history }) {
           ? `<a class="btn btn-primary" href="${esc(first.signupUrl)}" target="_blank" rel="noopener">立即免费注册 ${esc(first.name)} →</a>`
           : `<a class="btn btn-primary" href="#welfare">收录的站现在都停注了，看看各站状态 →</a>`
       }
-      <a class="btn btn-ghost" href="#gateway-start">🚀 本地网关启动 →</a>
       <a class="btn btn-ghost" href="${esc(meta.repoUrl)}" target="_blank" rel="noopener">GitHub 仓库 ⭐</a>
     </div>
   </header>
-${gatewaySection}
-  <section id="gateway-start">
-    <h2>🚀 一分钟上车（本地网关）</h2>
-    <p class="hint">下面的福利站是别人开的，你注册领额度；这个网关跑在你自己机器上，要自己配置上游 key 才能用。</p>
-    <h3>快速启动</h3>
-    <pre><code>git clone https://github.com/Q-shuang-dot/gcmp-welfare-temp
-cd gcmp-welfare-temp
-# 编辑 gcmp-gateway/config.json，填入各中转站的 apiKey
-npm run gateway:start
-</code></pre>
-    <p class="hint">启动后访问 <code>http://127.0.0.1:15800/admin/</code> 查看管理页，访问 <a href="gcmp-gateway/README.md">部署文档 →</a> 了解更多选项。</p>
-  </section>
   <section id="welfare">
     <h2>福利站总览</h2>
     <p class="hint">额度、模型、在线状态由脚本定时抓取站点公开接口自动更新。</p>
@@ -247,7 +193,7 @@ npm run gateway:start
     </div>
   </section>
 ${modelsTable(welfareSites, byId)}
-${recentSection(groups, history)}
+${recentSection(groups, history, new Set(sites.map((s) => s.id)))}
   <section id="faq">
     <h2>常见问题</h2>
     <p class="hint">踩坑集中在这四个。</p>
@@ -265,8 +211,7 @@ document.querySelectorAll('.copy').forEach(function (btn) {
 });
 </script>`;
 
-  // ItemList 让搜索引擎和 AI 抓取时知道这页是「福利站的清单」，每项指向各自的详情页；
-  // 自托管网关不在这个清单里——它不是福利站，混进去会让这页的语义变成一个 8 站大杂烩
+  // ItemList 让搜索引擎和 AI 抓取时知道这页是「福利站的清单」，每项指向各自的详情页
   const itemList = {
     '@context': 'https://schema.org',
     '@type': 'ItemList',

@@ -49,16 +49,6 @@ await writeFile(p('README.md'), renderReadme({ meta, sites, live, groups, histor
 // 样式内联进 HTML：每一页都变成单文件，直接丢给别人打开、或转发到社群都不会掉样式
 const css = await readFile(p('docs', 'assets', 'style.css'), 'utf8');
 const byId = new Map((live.sites ?? []).map((s) => [s.id, s]));
-for (const s of sites) {
-  if (s.panel === 'local' && !byId.has(s.id)) {
-    try {
-      const snap = JSON.parse(await readFile(p('data', 'static-snaps', `${s.id}.json`), 'utf8'));
-      byId.set(s.id, snap);
-    } catch {
-      // keep undefined if no snapshot exists
-    }
-  }
-}
 
 const write = async (rel, content) => {
   await mkdir(path.dirname(p('docs', rel)), { recursive: true });
@@ -85,7 +75,7 @@ for (const site of sites) {
 
 await write('compare/index.html', renderComparePage({ meta, sites, live, css }));
 await write('status/index.html', renderStatusPage({ meta, sites, live, css, history }));
-await write('changelog/index.html', renderChangelogPage({ meta, groups, live, css }));
+await write('changelog/index.html', renderChangelogPage({ meta, sites, groups, live, css }));
 await write('feed.xml', renderAtom({ meta, groups, updated: changelog.updatedAt ?? live.generatedAt }));
 
 // 落地页要被搜到才有推广价值：robots + 把每一页都写进 sitemap

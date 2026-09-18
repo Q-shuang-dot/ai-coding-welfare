@@ -32,7 +32,6 @@ if (typeof globalThis.fetch === 'undefined') {
 async function probe(url) {
   const t = Date.now();
   // 和 lib/newapi.mjs 同一条口径：sites.json 里的 URL 只允许 https。
-  // 本地自托管站点（如 GCMP 管理页）天然是 http，单独跳过，不判死链。
   if (!isHttpsUrl(url)) {
     return {
       ok: false,
@@ -62,9 +61,7 @@ async function probe(url) {
 const targets = [];
 for (const s of sites) {
   targets.push({ site: s.name, kind: '注册链接', url: s.signupUrl, critical: true });
-  // GCMP 这类本地网关主页是 127.0.0.1 的 http 地址，不适合做外网检查。
-  const homeCritical = s.panel === 'local' ? false : true;
-  targets.push({ site: s.name, kind: '站点首页', url: s.homeUrl, critical: homeCritical, localPanel: s.panel === 'local' });
+  targets.push({ site: s.name, kind: '站点首页', url: s.homeUrl, critical: true });
   // relay 面板的 statusApi 是个「要鉴权的中转口」，不带 key 回 401 才是正常的（见 lib/relay.mjs）。
   // 不把这一类算进告警，否则每次 check 都固定挂一条噪音，久了就没人看告警了。
   if (s.statusApi) {
@@ -102,8 +99,7 @@ for (const r of results) {
     `${mark} ${r.site.padEnd(13)} ${r.kind.padEnd(10)} HTTP ${String(r.res.status).padEnd(4)} ` +
       `${String(r.res.ms).padStart(5)}ms  ${r.url}${r.res.error ? `  (${r.res.error})` : ''}` +
       `${needsKey ? '  ← 中转口要鉴权，401 是预期答案' : ''}` +
-      `${filtered ? '  ← 被 WAF 拦（本机 IP 的问题，不算死链）' : ''}` +
-      `${skipped && r.localPanel ? '  ← 本地网关，跳过外网检查' : ''}`,
+      `${filtered ? '  ← 被 WAF 拦（本机 IP 的问题，不算死链）' : ''}`,
   );
 }
 

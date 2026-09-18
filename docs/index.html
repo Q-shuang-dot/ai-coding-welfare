@@ -215,12 +215,6 @@ tr.shut td { color: var(--fg-dim); }
   line-height: 1.6;
 }
 
-#gateway {
-  background: linear-gradient(180deg, rgba(59, 130, 246, 0.06), rgba(124, 58, 237, 0.06));
-  border-top: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
-}
-
 @media (max-width: 860px) {
   .row { grid-template-columns: 1fr; gap: 10px; padding: 16px; }
   .row .actions { justify-content: flex-start; }
@@ -249,22 +243,9 @@ tr.shut td { color: var(--fg-dim); }
     </div>
     <div class="cta-row">
       <a class="btn btn-primary" href="https://agentrouter.org/register?aff=aibw" target="_blank" rel="noopener">立即免费注册 AgentRouter →</a>
-      <a class="btn btn-ghost" href="#gateway-start">🚀 本地网关启动 →</a>
       <a class="btn btn-ghost" href="https://github.com/Q-shuang-dot/gcmp-welfare-temp" target="_blank" rel="noopener">GitHub 仓库 ⭐</a>
     </div>
   </header>
-
-  <section id="gateway-start">
-    <h2>🚀 一分钟上车（本地网关）</h2>
-    <p class="hint">下面的福利站是别人开的，你注册领额度；这个网关跑在你自己机器上，要自己配置上游 key 才能用。</p>
-    <h3>快速启动</h3>
-    <pre><code>git clone https://github.com/Q-shuang-dot/gcmp-welfare-temp
-cd gcmp-welfare-temp
-# 编辑 gcmp-gateway/config.json，填入各中转站的 apiKey
-npm run gateway:start
-</code></pre>
-    <p class="hint">启动后访问 <code>http://127.0.0.1:15800/admin/</code> 查看管理页，访问 <a href="gcmp-gateway/README.md">部署文档 →</a> 了解更多选项。</p>
-  </section>
   <section id="welfare">
     <h2>福利站总览</h2>
     <p class="hint">额度、模型、在线状态由脚本定时抓取站点公开接口自动更新。</p>
@@ -434,7 +415,7 @@ npm run gateway:start
     <section id="changes">
       <h2>最近变动</h2>
       <p class="hint">CI 每 6 小时比对一次各站快照，已攒下 139 个样本、覆盖约 28 天。额度调整、掉线恢复、模型上下线都会自动记一条。</p>
-      <ul class="events"><li><span class="ev-ico">🆕</span><span>新收录 JustDoWork</span> <a class="ev-site" href="sites/justwoker/">详情</a> <span class="muted">2026-09-18</span></li><li><span class="ev-ico">🗑️</span><span>移除收录 gcmp-gateway</span> <a class="ev-site" href="sites/gcmp-gateway/">详情</a> <span class="muted">2026-09-18</span></li><li><span class="ev-ico">🆕</span><span>新收录 GodRouter：注册送 $80</span> <a class="ev-site" href="sites/godrouter/">详情</a> <span class="muted">2026-09-18</span></li><li><span class="ev-ico">🗑️</span><span>移除收录 justdowork</span> <a class="ev-site" href="sites/justdowork/">详情</a> <span class="muted">2026-09-18</span></li><li><span class="ev-ico">🗑️</span><span>移除收录 kktoken</span> <a class="ev-site" href="sites/kktoken/">详情</a> <span class="muted">2026-09-18</span></li><li><span class="ev-ico">🗑️</span><span>移除收录 tabitoken</span> <a class="ev-site" href="sites/tabitoken/">详情</a> <span class="muted">2026-09-18</span></li><li><span class="ev-ico">🆕</span><span>新收录 Long的AI</span> <a class="ev-site" href="sites/aaawinn/">详情</a> <span class="muted">2026-09-17</span></li><li><span class="ev-ico">🆕</span><span>新收录 新疆幻城网安</span> <a class="ev-site" href="sites/hcnsec/">详情</a> <span class="muted">2026-09-17</span></li></ul>
+      <ul class="events"><li><span class="ev-ico">🆕</span><span>新收录 JustDoWork</span> <a class="ev-site" href="sites/justwoker/">详情</a> <span class="muted">2026-09-18</span></li><li><span class="ev-ico">🗑️</span><span>移除收录 gcmp-gateway</span> <span class="muted">2026-09-18</span></li><li><span class="ev-ico">🆕</span><span>新收录 GodRouter：注册送 $80</span> <a class="ev-site" href="sites/godrouter/">详情</a> <span class="muted">2026-09-18</span></li><li><span class="ev-ico">🗑️</span><span>移除收录 justdowork</span> <span class="muted">2026-09-18</span></li><li><span class="ev-ico">🗑️</span><span>移除收录 kktoken</span> <span class="muted">2026-09-18</span></li><li><span class="ev-ico">🗑️</span><span>移除收录 tabitoken</span> <span class="muted">2026-09-18</span></li><li><span class="ev-ico">🆕</span><span>新收录 Long的AI</span> <a class="ev-site" href="sites/aaawinn/">详情</a> <span class="muted">2026-09-17</span></li><li><span class="ev-ico">🆕</span><span>新收录 新疆幻城网安</span> <a class="ev-site" href="sites/hcnsec/">详情</a> <span class="muted">2026-09-17</span></li></ul>
     </section>
   <section id="faq">
     <h2>常见问题</h2>

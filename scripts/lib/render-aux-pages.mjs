@@ -67,8 +67,7 @@ function compareRows(sites, byId) {
 export function renderComparePage({ meta, sites, live, css }) {
   const byId = new Map((live?.sites ?? []).map((s) => [s.id, s]));
   const url = `${meta.pagesUrl}compare/`;
-  // 这页只折算第三方福利站：自托管网关（panel=local）没有单价也没有「首日额度」，进表只会多一行「—」
-  const welfare = sites.filter((s) => s.panel !== 'local');
+  const welfare = sites;
   // 「最划算」得是新用户真能注册上的站，否则这页给出的答案是个死链
   const openSites = welfare.filter((s) => acceptsNew(byId.get(s.id)));
   const closedSites = welfare.filter((s) => !acceptsNew(byId.get(s.id)));
@@ -172,8 +171,7 @@ export function renderStatusPage({ meta, sites, live, css, history }) {
   const byId = new Map((live?.sites ?? []).map((s) => [s.id, s]));
   const cov = coverage(history);
   const url = `${meta.pagesUrl}status/`;
-  // 这页探的是第三方福利站：自托管网关跑在读者自己的机器上，本仓库探不到，也没有可用性样本
-  const welfare = sites.filter((s) => s.panel !== 'local');
+  const welfare = sites;
   const rows = welfare.map((s) => {
     const snap = byId.get(s.id);
     const u7 = uptime(history, s.id, 7);
@@ -246,8 +244,9 @@ export function renderStatusPage({ meta, sites, live, css, history }) {
   });
 }
 
-export function renderChangelogPage({ meta, groups, live, css, limitDays = 60 }) {
+export function renderChangelogPage({ meta, sites = [], groups, live, css, limitDays = 60 }) {
   const url = `${meta.pagesUrl}changelog/`;
+  const liveIds = new Set(sites.map((s) => s.id));
   const shown = groups.slice(0, limitDays);
   const count = shown.reduce((n, g) => n + g.events.length, 0);
 
@@ -259,7 +258,7 @@ export function renderChangelogPage({ meta, groups, live, css, limitDays = 60 })
         .map(
           (e) =>
             `<li><span class="ev-ico">${icon(e.type)}</span><span>${esc(e.text)}</span>${
-              e.siteId ? ` <a class="ev-site" href="../sites/${esc(e.siteId)}/">详情</a>` : ''
+              e.siteId && liveIds.has(e.siteId) ? ` <a class="ev-site" href="../sites/${esc(e.siteId)}/">详情</a>` : ''
             }</li>`,
         )
         .join('')}</ul>
