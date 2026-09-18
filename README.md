@@ -28,14 +28,14 @@
 
 | 站点 | 状态 | 首日可得 | 额度构成 | 之后每天 | 兼容协议 | 模型 | 注册 | 邀请码 |
 | :-- | :--: | :--: | :-- | :--: | :--: | :--: | :--: | :--: |
-| **AgentRouter** 🔥 | 🟢 在线 | **$175** | 注册 $100 + 本页邀请 $50 + 首签 $25 | $25/天 | Anthropic + OpenAI | 6 个可查 | [点此注册 →](https://agentrouter.org/register?aff=aibw) | — |
-| **DoCode** | 🟢 在线 | **300 站内刀** | 注册 50 站内刀 + 本页邀请 250 站内刀 | 无签到 | Anthropic + OpenAI | 需登录查看 | [点此注册 →](https://docode.cc/register?aff=1Qof) | `1Qof` |
-| **GodRouter** 🔥 | 🟢 在线 | **$90** | 注册 $80 + 首签 $10 | $10/天 | OpenAI | 需登录查看 | [点此注册 →](https://godrouter.cyou/sign-up?aff=LENb) | — |
-| **Matrix** | 🟢 在线 | **600 积分** | 本页邀请 600 积分 | — | OpenAI 兼容 | 需登录查看 | [点此注册 →](https://matrix.mzsjai.com/login?redirect=%2Fapp%2Fgrowth%3FinviteCode%3DMX3CDVGATLJW) | — |
-| **SeekAi** | 🟢 在线 | 站内公示 | — | 支持签到 | OpenAI | 需登录查看 | [点此注册 →](https://seekai.cc/sign-up?aff=dDJy) | `dDJy` |
-| **Long的AI** | 🟢 在线 | 站内公示 | — | 无签到 | Anthropic + OpenAI | 需登录查看 | [GitHub 注册 →](https://aaawinn.xyz/sign-up?aff=ijFL) | `ijFL` |
-| **新疆幻城网安** | 🟢 在线 | 站内公示 | — | 支持签到 | Anthropic + OpenAI | 需登录查看 | [点此注册 →](https://api.hcnsec.cn/sign-up?aff=3J8z) | `3J8z` |
-| **量界智算** | 🟢 在线 | 站内公示 | — | 支持签到 | Anthropic + OpenAI | 需登录查看 | [点此注册 →](https://liangjiewis.com/register?aff=m3C1) | `m3C1` |
+| **AgentRouter** 🔥 | 🟢 在线 | **$175** | 注册 $100 + 本页邀请 $50 + 首签 $25 | $25/天 | Anthropic + OpenAI | 6 个可查 | <a href="https://agentrouter.org/register?aff=aibw" target="_blank" rel="noopener">点此注册 →</a> | — |
+| **DoCode** | 🟢 在线 | **300 站内刀** | 注册 50 站内刀 + 本页邀请 250 站内刀 | 无签到 | Anthropic + OpenAI | 需登录查看 | <a href="https://docode.cc/register?aff=1Qof" target="_blank" rel="noopener">点此注册 →</a> | `1Qof` |
+| **GodRouter** 🔥 | 🟢 在线 | **$90** | 注册 $80 + 首签 $10 | $10/天 | OpenAI | 需登录查看 | <a href="https://godrouter.cyou/sign-up?aff=LENb" target="_blank" rel="noopener">点此注册 →</a> | — |
+| **Matrix** | 🟢 在线 | **600 积分** | 本页邀请 600 积分 | — | OpenAI 兼容 | 需登录查看 | <a href="https://matrix.mzsjai.com/login?redirect=%2Fapp%2Fgrowth%3FinviteCode%3DMX3CDVGATLJW" target="_blank" rel="noopener">点此注册 →</a> | — |
+| **SeekAi** | 🟢 在线 | 站内公示 | — | 支持签到 | OpenAI | 需登录查看 | <a href="https://seekai.cc/sign-up?aff=dDJy" target="_blank" rel="noopener">点此注册 →</a> | `dDJy` |
+| **Long的AI** | 🟢 在线 | 站内公示 | — | 无签到 | Anthropic + OpenAI | 需登录查看 | <a href="https://aaawinn.xyz/sign-up?aff=ijFL" target="_blank" rel="noopener">GitHub 注册 →</a> | `ijFL` |
+| **新疆幻城网安** | 🟢 在线 | 站内公示 | — | 支持签到 | Anthropic + OpenAI | 需登录查看 | <a href="https://api.hcnsec.cn/sign-up?aff=3J8z" target="_blank" rel="noopener">点此注册 →</a> | `3J8z` |
+| **量界智算** | 🟢 在线 | 站内公示 | — | 支持签到 | Anthropic + OpenAI | 需登录查看 | <a href="https://liangjiewis.com/register?aff=m3C1" target="_blank" rel="noopener">点此注册 →</a> | `m3C1` |
 
 > 「首日可得」= 注册基础额度 + 本页邀请链接额度 + 当天能领的签到额度（每日重置额度池的站点按一天的池子算）；模型、价格、在线状态由脚本抓取站点公开接口自动生成，最后更新：`2026-09-18 02:11 UTC`。
 >
@@ -68,7 +68,7 @@ powershell -ExecutionPolicy Bypass -File scripts/quickstart.ps1
 
 > AI Coding 公益站 · 注册即送额度，签到每日续命
 
-<a href="https://agentrouter.org/register?aff=aibw"><img src="https://img.shields.io/badge/%E7%AB%8B%E5%8D%B3%E6%B3%A8%E5%86%8C-AgentRouter-brightgreen?style=for-the-badge" alt="注册 AgentRouter"></a>
+<a href="https://agentrouter.org/register?aff=aibw" target="_blank" rel="noopener"><img src="https://img.shields.io/badge/%E7%AB%8B%E5%8D%B3%E6%B3%A8%E5%86%8C-AgentRouter-brightgreen?style=for-the-badge" alt="注册 AgentRouter"></a>
 
 **为什么值得注册**
 
@@ -86,7 +86,7 @@ powershell -ExecutionPolicy Bypass -File scripts/quickstart.ps1
 
 **实时数据**（自动抓取站点公开接口）
 
-- ⚠ 接口已连续 73 小时没抓到新数据，下列信息为 `2026-09-15 01:48 UTC` 的快照
+- ⚠ 接口已连续 74 小时没抓到新数据，下列信息为 `2026-09-15 01:48 UTC` 的快照
 - 站点名称：**Agent Router**
 - 面板版本：`init-20260915-25158da5`
 - 邀请他人可得：**$50**
@@ -95,7 +95,7 @@ powershell -ExecutionPolicy Bypass -File scripts/quickstart.ps1
 
 **镜像 / 备用入口**
 
-- 大陆备用域名：<https://ps.air-outer.com> · [从备用域名注册](https://ps.air-outer.com/register?aff=szt3)
+- 大陆备用域名：<https://ps.air-outer.com> · <a href="https://ps.air-outer.com/register?aff=szt3" target="_blank" rel="noopener">从备用域名注册</a>
 
 **当前可用模型**
 
@@ -208,7 +208,7 @@ curl -s https://agentrouter.org/v1/chat/completions \
 
 > New API 中转站 · 注册送 50 站内刀，注册时填邀请码 zMRe 再加 250，首日 300 刀，Claude 与 GPT 都在架上
 
-<a href="https://docode.cc/register?aff=1Qof"><img src="https://img.shields.io/badge/%E7%AB%8B%E5%8D%B3%E6%B3%A8%E5%86%8C-DoCode-brightgreen?style=for-the-badge" alt="注册 DoCode"></a>
+<a href="https://docode.cc/register?aff=1Qof" target="_blank" rel="noopener"><img src="https://img.shields.io/badge/%E7%AB%8B%E5%8D%B3%E6%B3%A8%E5%86%8C-DoCode-brightgreen?style=for-the-badge" alt="注册 DoCode"></a>
 
 **为什么值得注册**
 
@@ -235,7 +235,7 @@ curl -s https://agentrouter.org/v1/chat/completions \
 
 **镜像 / 备用入口**
 
-- 直连美国：<https://api.docode.cc> · [从备用域名注册](https://api.docode.cc/register?aff=zMRe)
+- 直连美国：<https://api.docode.cc> · <a href="https://api.docode.cc/register?aff=zMRe" target="_blank" rel="noopener">从备用域名注册</a>
 
 > 该站把定价页设成了登录可见（`/api/pricing` 返回 401，站点自己的导航配置里 pricing.requireAuth = true），本页不列模型表。站内公告点名在售的有 Claude（cc / cc-kiro 分组，sonnet-5 与按次计费的 opus4.6）、GPT pro / plus、Grok、Gemini、fable-5，另有独立的生图入口 img.docode.cc；完整清单、分组与倍率注册后在控制台「定价」页确认。
 
@@ -337,7 +337,7 @@ curl -s https://docode.cc/v1/chat/completions \
 
 > AI Coding 中转站 · 注册送 $80 免费额度，签到持续续命
 
-<a href="https://godrouter.cyou/sign-up?aff=LENb"><img src="https://img.shields.io/badge/%E7%AB%8B%E5%8D%B3%E6%B3%A8%E5%86%8C-GodRouter-brightgreen?style=for-the-badge" alt="注册 GodRouter"></a>
+<a href="https://godrouter.cyou/sign-up?aff=LENb" target="_blank" rel="noopener"><img src="https://img.shields.io/badge/%E7%AB%8B%E5%8D%B3%E6%B3%A8%E5%86%8C-GodRouter-brightgreen?style=for-the-badge" alt="注册 GodRouter"></a>
 
 **为什么值得注册**
 
@@ -421,7 +421,7 @@ curl -s https://godrouter.cyou/v1/chat/completions \
 
 > 统一 API 网关 + 开源应用商店 · 邀请注册送 600 积分，实名再送 2000
 
-<a href="https://matrix.mzsjai.com/login?redirect=%2Fapp%2Fgrowth%3FinviteCode%3DMX3CDVGATLJW"><img src="https://img.shields.io/badge/%E7%AB%8B%E5%8D%B3%E6%B3%A8%E5%86%8C-Matrix-brightgreen?style=for-the-badge" alt="注册 Matrix"></a>
+<a href="https://matrix.mzsjai.com/login?redirect=%2Fapp%2Fgrowth%3FinviteCode%3DMX3CDVGATLJW" target="_blank" rel="noopener"><img src="https://img.shields.io/badge/%E7%AB%8B%E5%8D%B3%E6%B3%A8%E5%86%8C-Matrix-brightgreen?style=for-the-badge" alt="注册 Matrix"></a>
 
 **为什么值得注册**
 
@@ -485,7 +485,7 @@ curl -s https://godrouter.cyou/v1/chat/completions \
 
 > New API 中转站 · 注册送额度，签到与邀请持续续命，支持 Claude Code / Codex / Cursor
 
-<a href="https://seekai.cc/sign-up?aff=dDJy"><img src="https://img.shields.io/badge/%E7%AB%8B%E5%8D%B3%E6%B3%A8%E5%86%8C-SeekAi-brightgreen?style=for-the-badge" alt="注册 SeekAi"></a>
+<a href="https://seekai.cc/sign-up?aff=dDJy" target="_blank" rel="noopener"><img src="https://img.shields.io/badge/%E7%AB%8B%E5%8D%B3%E6%B3%A8%E5%86%8C-SeekAi-brightgreen?style=for-the-badge" alt="注册 SeekAi"></a>
 
 **为什么值得注册**
 
@@ -505,7 +505,7 @@ curl -s https://godrouter.cyou/v1/chat/completions \
 
 **镜像 / 备用入口**
 
-- API 域名：<https://api.hcnsec.cn> · [从备用域名注册](https://api.hcnsec.cn/sign-up?aff=3J8z)
+- API 域名：<https://api.hcnsec.cn> · <a href="https://api.hcnsec.cn/sign-up?aff=3J8z" target="_blank" rel="noopener">从备用域名注册</a>
 
 > 模型清单与价格需登录后在控制台「模型广场」查看，公开接口不暴露具体模型与定价；站内公告提到 Claude / DeepSeek / GPT / Gemini / Step 等多类模型。
 
@@ -581,7 +581,7 @@ curl -s https://seekai.cc/v1/chat/completions \
 
 > New API 中转站 · 只能用满 120 天的 GitHub 账号注册，白嫖分组公告「永久免费」，GPT 系模型要用 Anthropic 协议对接
 
-<a href="https://aaawinn.xyz/sign-up?aff=ijFL"><img src="https://img.shields.io/badge/%E7%AB%8B%E5%8D%B3%E6%B3%A8%E5%86%8C-Long%E7%9A%84AI-brightgreen?style=for-the-badge" alt="注册 Long的AI"></a>
+<a href="https://aaawinn.xyz/sign-up?aff=ijFL" target="_blank" rel="noopener"><img src="https://img.shields.io/badge/%E7%AB%8B%E5%8D%B3%E6%B3%A8%E5%86%8C-Long%E7%9A%84AI-brightgreen?style=for-the-badge" alt="注册 Long的AI"></a>
 
 **为什么值得注册**
 
@@ -702,7 +702,7 @@ curl -s https://aaawinn.xyz/v1/chat/completions \
 
 > New API 公益网关 · 系统名「新疆幻城网安科技公益大模型安全网关」，签到 + 任务 + 邀请都能拿额度，免费分组里有标价 0 元一次的模型
 
-<a href="https://api.hcnsec.cn/sign-up?aff=3J8z"><img src="https://img.shields.io/badge/%E7%AB%8B%E5%8D%B3%E6%B3%A8%E5%86%8C-%E6%96%B0%E7%96%86%E5%B9%BB%E5%9F%8E%E7%BD%91%E5%AE%89-brightgreen?style=for-the-badge" alt="注册 新疆幻城网安"></a>
+<a href="https://api.hcnsec.cn/sign-up?aff=3J8z" target="_blank" rel="noopener"><img src="https://img.shields.io/badge/%E7%AB%8B%E5%8D%B3%E6%B3%A8%E5%86%8C-%E6%96%B0%E7%96%86%E5%B9%BB%E5%9F%8E%E7%BD%91%E5%AE%89-brightgreen?style=for-the-badge" alt="注册 新疆幻城网安"></a>
 
 **为什么值得注册**
 
@@ -826,7 +826,7 @@ curl -s https://api.hcnsec.cn/v1/chat/completions \
 
 > New API 中转站 · 125 个模型的倍率在公开接口就能查，签到给随机额度，另有备用域名与酒馆 / 绘图站
 
-<a href="https://liangjiewis.com/register?aff=m3C1"><img src="https://img.shields.io/badge/%E7%AB%8B%E5%8D%B3%E6%B3%A8%E5%86%8C-%E9%87%8F%E7%95%8C%E6%99%BA%E7%AE%97-brightgreen?style=for-the-badge" alt="注册 量界智算"></a>
+<a href="https://liangjiewis.com/register?aff=m3C1" target="_blank" rel="noopener"><img src="https://img.shields.io/badge/%E7%AB%8B%E5%8D%B3%E6%B3%A8%E5%86%8C-%E9%87%8F%E7%95%8C%E6%99%BA%E7%AE%97-brightgreen?style=for-the-badge" alt="注册 量界智算"></a>
 
 **为什么值得注册**
 
@@ -844,7 +844,7 @@ curl -s https://api.hcnsec.cn/v1/chat/completions \
 
 **镜像 / 备用入口**
 
-- 备用站：<https://liangjiewis.ai> · [从备用域名注册](https://liangjiewis.ai/register?aff=m3C1)
+- 备用站：<https://liangjiewis.ai> · <a href="https://liangjiewis.ai/register?aff=m3C1" target="_blank" rel="noopener">从备用域名注册</a>
 
 > 模型清单不用登录就能读（GET https://liangjiewis.com/api/pricing，125 个模型），但那边给出的「倍率」和本页其他站点「倍率 1 ≈ $2 / 1M tokens」的口径对不上（例如 claude-opus-4-20250514 标 350），硬换算出来的价格明显不合理，所以这张表没有搬进来；要看具体价格请去站点「模型广场」，或者直接 curl 上面那个接口。
 

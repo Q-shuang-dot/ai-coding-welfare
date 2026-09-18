@@ -25,6 +25,9 @@ const B = (label, msg, color) => `https://img.shields.io/badge/${shield(label)}-
 
 const yes = (v) => (v === true ? '✅' : v === false ? '❌' : '—');
 
+/** 站外链接一律写原始 <a>：markdown 链接的 target 会被 GitHub 丢掉，点了就从 README 跳走 */
+const ext = (text, href) => `<a href="${href}" target="_blank" rel="noopener">${text}</a>`;
+
 function fmtDate(iso) {
   if (!iso) return '未知';
   const d = new Date(iso);
@@ -74,10 +77,10 @@ function overviewTable(sites, liveById) {
       '登录后台配置';
     const cta =
       route.state === 'closed'
-        ? `[已停注 · 仍可打开 →](${s.signupUrl})`
+        ? ext('已停注 · 仍可打开 →', s.signupUrl)
         : route.state === 'oauth'
-          ? `[${route.oauth[0]} 注册 →](${s.signupUrl})`
-          : `[点此注册 →](${s.signupUrl})`;
+          ? ext(`${route.oauth[0]} 注册 →`, s.signupUrl)
+          : ext('点此注册 →', s.signupUrl);
     const code = s.inviteCode ? ` \`${s.inviteCode}\` |` : ' — |';
     return (
       `| **${s.name}**${s.recommended ? ' 🔥' : ''} | ${state} | ${first} | ${detail} | ${checkin} | ${proto} | ${models} | ${cta} |` +
@@ -154,7 +157,7 @@ function siteSection(site, snap) {
   const om = openaiModel(snap);
   const models = modelTable(snap);
   const mirror = (site.mirrors ?? [])
-    .map((m) => `- ${m.label ?? '备用域名'}：<${m.homeUrl}> · [从备用域名注册](${m.signupUrl})`)
+    .map((m) => `- ${m.label ?? '备用域名'}：<${m.homeUrl}> · ${ext('从备用域名注册', m.signupUrl)}`)
     .join('\n');
 
   const parts = [
@@ -162,7 +165,7 @@ function siteSection(site, snap) {
     '',
     `> ${site.subtitle}`,
     '',
-    `<a href="${site.signupUrl}"><img src="${B('立即注册', site.name, 'brightgreen?style=for-the-badge')}" alt="注册 ${site.name}"></a>`,
+    ext(`<img src="${B('立即注册', site.name, 'brightgreen?style=for-the-badge')}" alt="注册 ${site.name}">`, site.signupUrl),
     '',
     `**为什么值得注册**`,
     '',
