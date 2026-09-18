@@ -13,12 +13,12 @@
   <a href="https://agentrouter.org/register?aff=aibw"><b>AgentRouter 注册</b></a> ·
   <a href="https://docode.cc/register?aff=1Qof"><b>DoCode 注册</b></a> ·
   <a href="https://godrouter.cyou/sign-up?aff=LENb"><b>GodRouter 注册</b></a> ·
+  <a href="https://api.justwoker.icu/register?aff=OIWh"><b>JustDoWork 注册</b></a> ·
   <a href="https://matrix.mzsjai.com/login?redirect=%2Fapp%2Fgrowth%3FinviteCode%3DMX3CDVGATLJW"><b>Matrix 注册</b></a> ·
   <a href="https://seekai.cc/sign-up?aff=dDJy"><b>SeekAi 注册</b></a> ·
   <a href="https://aaawinn.xyz/sign-up?aff=ijFL"><b>Long的AI 注册</b></a> ·
   <a href="https://api.hcnsec.cn/sign-up?aff=3J8z"><b>新疆幻城网安 注册</b></a> ·
-  <a href="https://liangjiewis.com/register?aff=m3C1"><b>量界智算 注册</b></a> ·
-  <a href="https://api.justwoker.icu/register?aff=OIWh"><b>JustDoWork 注册</b></a>
+  <a href="https://liangjiewis.com/register?aff=m3C1"><b>量界智算 注册</b></a>
 </p>
 
 ---
@@ -32,16 +32,16 @@
 | **AgentRouter** 🔥 | 🟢 在线 | **$175** | 注册 $100 + 本页邀请 $50 + 首签 $25 | $25/天 | Anthropic + OpenAI | 6 个可查 | <a href="https://agentrouter.org/register?aff=aibw" target="_blank" rel="noopener">点此注册 →</a> | — |
 | **DoCode** | 🟢 在线 | **300 站内刀** | 注册 50 站内刀 + 本页邀请 250 站内刀 | 无签到 | Anthropic + OpenAI | 需登录查看 | <a href="https://docode.cc/register?aff=1Qof" target="_blank" rel="noopener">点此注册 →</a> | `1Qof` |
 | **GodRouter** 🔥 | 🟢 在线 | **$80** | 注册 $80 | — | OpenAI | 需登录查看 | <a href="https://godrouter.cyou/sign-up?aff=LENb" target="_blank" rel="noopener">点此注册 →</a> | — |
+| **JustDoWork** | 🟢 在线 | 站内公示 | — | 支持签到 | Anthropic + OpenAI | 需登录查看 | <a href="https://api.justwoker.icu/register?aff=OIWh" target="_blank" rel="noopener">GitHub 注册 →</a> | `OIWh` |
 | **Matrix** | 🟢 在线 | **600 积分** | 本页邀请 600 积分 | — | OpenAI 兼容 | 需登录查看 | <a href="https://matrix.mzsjai.com/login?redirect=%2Fapp%2Fgrowth%3FinviteCode%3DMX3CDVGATLJW" target="_blank" rel="noopener">点此注册 →</a> | — |
 | **SeekAi** | 🟢 在线 | 站内公示 | — | 支持签到 | OpenAI | 需登录查看 | <a href="https://seekai.cc/sign-up?aff=dDJy" target="_blank" rel="noopener">点此注册 →</a> | `dDJy` |
 | **Long的AI** | 🟢 在线 | 站内公示 | — | 无签到 | Anthropic + OpenAI | 需登录查看 | <a href="https://aaawinn.xyz/sign-up?aff=ijFL" target="_blank" rel="noopener">GitHub 注册 →</a> | `ijFL` |
 | **新疆幻城网安** | 🟢 在线 | 站内公示 | — | 支持签到 | Anthropic + OpenAI | 需登录查看 | <a href="https://api.hcnsec.cn/sign-up?aff=3J8z" target="_blank" rel="noopener">点此注册 →</a> | `3J8z` |
 | **量界智算** | 🟢 在线 | 站内公示 | — | 支持签到 | Anthropic + OpenAI | 需登录查看 | <a href="https://liangjiewis.com/register?aff=m3C1" target="_blank" rel="noopener">点此注册 →</a> | `m3C1` |
-| **JustDoWork** | 🟢 在线 | 站内公示 | — | 支持签到 | Anthropic + OpenAI | 需登录查看 | <a href="https://api.justwoker.icu/register?aff=OIWh" target="_blank" rel="noopener">GitHub 注册 →</a> | `OIWh` |
 
 > 「首日可得」= 注册基础额度 + 本页邀请链接额度 + 当天能领的签到额度（每日重置额度池的站点按一天的池子算）；模型、价格、在线状态由脚本抓取站点公开接口自动生成，最后更新：`2026-09-18 08:29 UTC`。
 >
-> 「邀请码」列写了码的站（DoCode `1Qof`、SeekAi `dDJy`、Long的AI `ijFL`、新疆幻城网安 `3J8z`、量界智算 `m3C1`、JustDoWork `OIWh`），注册表单里有一栏要**自己填**，漏填就只拿得到注册基础额度、事后补不上；其余站写 — 是因为邀请额度由链接自带，不用手打。
+> 「邀请码」列写了码的站（DoCode `1Qof`、JustDoWork `OIWh`、SeekAi `dDJy`、Long的AI `ijFL`、新疆幻城网安 `3J8z`、量界智算 `m3C1`），注册表单里有一栏要**自己填**，漏填就只拿得到注册基础额度、事后补不上；其余站写 — 是因为邀请额度由链接自带，不用手打。
 >
 > 7 个按美元计价、且还收新用户的站全注册一遍，第一天手上大约有 **$255** 额度可用；DoCode 另发 300 站内刀，Matrix 另发 600 积分，都是各站自己的计价单位、与美元没有公开换算，未计入这个合计。
 >
@@ -413,6 +413,114 @@ curl -s https://godrouter.cyou/v1/chat/completions \
 - 额度数字以站内实际公示为准，本页登记的是注册送 $80 的口径
 - 中转站上游随时可能调整，请以站内实际可用模型与价格为准
 - 新站运营时间较短，稳定性待验证
+
+---
+
+### 🟢 JustDoWork
+
+> New API 中转站 · 只用 GitHub 登录，主打 gpt-5.6 系模型，签到 + 任务持续拿额度，Anthropic 原生协议直连 Claude Code / Codex
+
+<a href="https://api.justwoker.icu/register?aff=OIWh" target="_blank" rel="noopener"><img src="https://img.shields.io/badge/%E7%AB%8B%E5%8D%B3%E6%B3%A8%E5%86%8C-JustDoWork-brightgreen?style=for-the-badge" alt="注册 JustDoWork"></a>
+
+**为什么值得注册**
+
+- 只用 GitHub 授权登录，不用记密码、不用邮箱验证码（面板 email_verification = false），注册流程干净
+- 每日签到与站内任务都开着（checkin_enabled / enable_task 均为 true），登录后台点一下就能持续拿额度
+- 主打 gpt-5.6 系模型（gpt-5.6-luna / sol / terra），实测支持 function calling，能跑 Claude Code / Codex 的工具调用
+- Anthropic 原生协议在架：Claude Code 填 Base URL 直连 /v1/messages，OpenAI 兼容路由走 /v1，Codex CLI 也能对接
+
+**实时数据**（自动抓取站点公开接口）
+
+- 站点名称：**JustDoWork**
+- 面板版本：`v1.0.0-rc.23`
+- 每日签到：✅
+- 开放注册：✅（站点关掉了邮箱密码注册，得用 GitHub 登录建号（防批量注册的常规做法）。）
+- 登录方式：GitHub / 账号密码
+- GitHub 账号需满 **365 天**
+- 接口延迟：1283 ms
+
+> 模型定价页需要登录（/api/pricing 匿名请求返回 401，面板 pricing.requireAuth = true），本页不列模型表。实测主力是 gpt-5.6 系（gpt-5.6-luna / sol / terra），每次请求会带约 2000 tokens 的固定隐藏提示词；完整清单与倍率请登录控制台「定价」页确认。
+
+**注册要求**
+
+- 务必从本页邀请链接进入注册（带 ?aff=OIWh），邀请额度才会发放
+- 只能用 GitHub 授权登录：面板里邮箱 / LinuxDO / Telegram / 微信 / OIDC 登录开关都是关的，没有邮箱密码注册入口
+- 注册开着 Cloudflare Turnstile 人机校验，注册页与 API 都在 Cloudflare 后面，机房 IP 可能被 403 拦，家用宽带正常
+
+**接入配置**
+
+<details open><summary><b>Claude Code</b>（Anthropic 兼容，Base URL 不带 <code>/v1</code>）</summary>
+
+```bash
+# macOS / Linux
+export ANTHROPIC_BASE_URL=https://api.justwoker.icu
+export ANTHROPIC_AUTH_TOKEN=你在站点后台创建的 Key
+export ANTHROPIC_MODEL=<登录后台查看可用模型名>
+npm install -g @anthropic-ai/claude-code@latest && claude
+```
+
+```powershell
+# Windows PowerShell
+$env:ANTHROPIC_BASE_URL = "https://api.justwoker.icu"
+$env:ANTHROPIC_AUTH_TOKEN = "你在站点后台创建的 Key"
+$env:ANTHROPIC_MODEL = "<登录后台查看可用模型名>"
+claude
+```
+
+</details>
+
+<details><summary><b>Codex CLI</b>（OpenAI 兼容，写入 <code>~/.codex/config.toml</code>）</summary>
+
+```toml
+model = "<登录后台查看可用模型名>"
+model_provider = "justwoker"
+
+[model_providers.justwoker]
+name = "JustDoWork"
+base_url = "https://api.justwoker.icu/v1"
+env_key = "JUSTWOKER_API_KEY"
+wire_api = "chat"
+```
+
+</details>
+
+<details><summary><b>OpenAI SDK / Cherry Studio / Cursor 等通用客户端</b></summary>
+
+```python
+from openai import OpenAI
+
+client = OpenAI(api_key="你的 Key", base_url="https://api.justwoker.icu/v1")
+resp = client.chat.completions.create(model="<登录后台查看可用模型名>", messages=[{"role": "user", "content": "ping"}])
+print(resp.choices[0].message.content)
+```
+
+通用客户端只需填两项：**Base URL** = `https://api.justwoker.icu/v1`，**API Key** = 站点后台创建的 Key。
+
+</details>
+
+<details><summary><b>连通性自测</b></summary>
+
+```bash
+curl -s https://api.justwoker.icu/v1/chat/completions \
+  -H "Authorization: Bearer $KEY" -H "Content-Type: application/json" \
+  -d '{"model":"<登录后台查看可用模型名>","messages":[{"role":"user","content":"只回复 OK"}]}'
+```
+
+</details>
+
+**如何继续拿额度**
+
+- 每日签到领额度（面板已开启），登录后台点一下就行
+- 站内任务中心也能拿额度（enable_task 已开启）
+- 邀请他人注册，邀请人可获得额度
+
+**⚠️ 使用前必读**
+
+- 额度数字站点公开接口不暴露（/api/status 里 quota_for_new_user / quota_for_invitee 均为空），注册后进后台核对实际到账
+- 面板 price = 7.3（¥7.3 ≈ 站内 $1），额度按人民币口径显示，本页不做美元折算
+- 站点挂在 Cloudflare 后面，/chat/completions 等端点匿名探测会被 WAF 返回 403，属正常防护，不代表接口不可用
+- 上游为第三方中转，gpt-5.6 系模型在大上下文 / 高并发时可能出现超时或断流，别当稳定生产通道用
+- 模型可用性与价格随上游调整，以控制台实时页面为准
 
 ---
 
@@ -943,114 +1051,6 @@ curl -s https://liangjiewis.com/v1/chat/completions \
 - `2026-01-22` 📢 系统升级公告 为提升平台稳定性与使用体验，我们将于**今晚 22:00 - 23:00**进行版本升级维护。 ✅ 升级内容： 1. 上线**用户签到**功能：每日签到可获得**随机额度奖励** 2. 上线**邀请充值奖励**：下级用户充值，上级可按比例获得奖励 3. 修复已知问题并进行功能优化
 
 </details>
-
----
-
-### 🟢 JustDoWork
-
-> New API 中转站 · 只用 GitHub 登录，主打 gpt-5.6 系模型，签到 + 任务持续拿额度，Anthropic 原生协议直连 Claude Code / Codex
-
-<a href="https://api.justwoker.icu/register?aff=OIWh" target="_blank" rel="noopener"><img src="https://img.shields.io/badge/%E7%AB%8B%E5%8D%B3%E6%B3%A8%E5%86%8C-JustDoWork-brightgreen?style=for-the-badge" alt="注册 JustDoWork"></a>
-
-**为什么值得注册**
-
-- 只用 GitHub 授权登录，不用记密码、不用邮箱验证码（面板 email_verification = false），注册流程干净
-- 每日签到与站内任务都开着（checkin_enabled / enable_task 均为 true），登录后台点一下就能持续拿额度
-- 主打 gpt-5.6 系模型（gpt-5.6-luna / sol / terra），实测支持 function calling，能跑 Claude Code / Codex 的工具调用
-- Anthropic 原生协议在架：Claude Code 填 Base URL 直连 /v1/messages，OpenAI 兼容路由走 /v1，Codex CLI 也能对接
-
-**实时数据**（自动抓取站点公开接口）
-
-- 站点名称：**JustDoWork**
-- 面板版本：`v1.0.0-rc.23`
-- 每日签到：✅
-- 开放注册：✅（站点关掉了邮箱密码注册，得用 GitHub 登录建号（防批量注册的常规做法）。）
-- 登录方式：GitHub / 账号密码
-- GitHub 账号需满 **365 天**
-- 接口延迟：1283 ms
-
-> 模型定价页需要登录（/api/pricing 匿名请求返回 401，面板 pricing.requireAuth = true），本页不列模型表。实测主力是 gpt-5.6 系（gpt-5.6-luna / sol / terra），每次请求会带约 2000 tokens 的固定隐藏提示词；完整清单与倍率请登录控制台「定价」页确认。
-
-**注册要求**
-
-- 务必从本页邀请链接进入注册（带 ?aff=OIWh），邀请额度才会发放
-- 只能用 GitHub 授权登录：面板里邮箱 / LinuxDO / Telegram / 微信 / OIDC 登录开关都是关的，没有邮箱密码注册入口
-- 注册开着 Cloudflare Turnstile 人机校验，注册页与 API 都在 Cloudflare 后面，机房 IP 可能被 403 拦，家用宽带正常
-
-**接入配置**
-
-<details open><summary><b>Claude Code</b>（Anthropic 兼容，Base URL 不带 <code>/v1</code>）</summary>
-
-```bash
-# macOS / Linux
-export ANTHROPIC_BASE_URL=https://api.justwoker.icu
-export ANTHROPIC_AUTH_TOKEN=你在站点后台创建的 Key
-export ANTHROPIC_MODEL=<登录后台查看可用模型名>
-npm install -g @anthropic-ai/claude-code@latest && claude
-```
-
-```powershell
-# Windows PowerShell
-$env:ANTHROPIC_BASE_URL = "https://api.justwoker.icu"
-$env:ANTHROPIC_AUTH_TOKEN = "你在站点后台创建的 Key"
-$env:ANTHROPIC_MODEL = "<登录后台查看可用模型名>"
-claude
-```
-
-</details>
-
-<details><summary><b>Codex CLI</b>（OpenAI 兼容，写入 <code>~/.codex/config.toml</code>）</summary>
-
-```toml
-model = "<登录后台查看可用模型名>"
-model_provider = "justwoker"
-
-[model_providers.justwoker]
-name = "JustDoWork"
-base_url = "https://api.justwoker.icu/v1"
-env_key = "JUSTWOKER_API_KEY"
-wire_api = "chat"
-```
-
-</details>
-
-<details><summary><b>OpenAI SDK / Cherry Studio / Cursor 等通用客户端</b></summary>
-
-```python
-from openai import OpenAI
-
-client = OpenAI(api_key="你的 Key", base_url="https://api.justwoker.icu/v1")
-resp = client.chat.completions.create(model="<登录后台查看可用模型名>", messages=[{"role": "user", "content": "ping"}])
-print(resp.choices[0].message.content)
-```
-
-通用客户端只需填两项：**Base URL** = `https://api.justwoker.icu/v1`，**API Key** = 站点后台创建的 Key。
-
-</details>
-
-<details><summary><b>连通性自测</b></summary>
-
-```bash
-curl -s https://api.justwoker.icu/v1/chat/completions \
-  -H "Authorization: Bearer $KEY" -H "Content-Type: application/json" \
-  -d '{"model":"<登录后台查看可用模型名>","messages":[{"role":"user","content":"只回复 OK"}]}'
-```
-
-</details>
-
-**如何继续拿额度**
-
-- 每日签到领额度（面板已开启），登录后台点一下就行
-- 站内任务中心也能拿额度（enable_task 已开启）
-- 邀请他人注册，邀请人可获得额度
-
-**⚠️ 使用前必读**
-
-- 额度数字站点公开接口不暴露（/api/status 里 quota_for_new_user / quota_for_invitee 均为空），注册后进后台核对实际到账
-- 面板 price = 7.3（¥7.3 ≈ 站内 $1），额度按人民币口径显示，本页不做美元折算
-- 站点挂在 Cloudflare 后面，/chat/completions 等端点匿名探测会被 WAF 返回 403，属正常防护，不代表接口不可用
-- 上游为第三方中转，gpt-5.6 系模型在大上下文 / 高并发时可能出现超时或断流，别当稳定生产通道用
-- 模型可用性与价格随上游调整，以控制台实时页面为准
 
 ---
 
