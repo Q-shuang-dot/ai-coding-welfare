@@ -569,6 +569,70 @@
         "酒馆: https://st.liangjiewis.com/login",
         "图片生成站: https://img-gen.liangjiewis.com"
       ]
+    },
+    {
+      "id": "justwoker",
+      "name": "JustDoWork",
+      "subtitle": "New API 中转站 · 只用 GitHub 登录，主打 gpt-5.6 系模型，签到 + 任务持续拿额度，Anthropic 原生协议直连 Claude Code / Codex",
+      "recommended": false,
+      "credits": {
+        "signup": null,
+        "invite": null,
+        "dailyCheckin": null,
+        "approx": false
+      },
+      "signupUrl": "https://api.justwoker.icu/register?aff=OIWh",
+      "inviteCode": "OIWh",
+      "homeUrl": "https://api.justwoker.icu",
+      "docsUrl": null,
+      "statusApi": "https://api.justwoker.icu/api/status",
+      "pricingApi": null,
+      "mirrors": [],
+      "tags": [
+        "New API",
+        "中转站",
+        "免费额度",
+        "每日签到",
+        "GitHub 注册",
+        "Claude Code",
+        "Codex",
+        "Anthropic 兼容",
+        "OpenAI 兼容"
+      ],
+      "highlights": [
+        "只用 GitHub 授权登录，不用记密码、不用邮箱验证码（面板 email_verification = false），注册流程干净",
+        "每日签到与站内任务都开着（checkin_enabled / enable_task 均为 true），登录后台点一下就能持续拿额度",
+        "主打 gpt-5.6 系模型（gpt-5.6-luna / sol / terra），实测支持 function calling，能跑 Claude Code / Codex 的工具调用",
+        "Anthropic 原生协议在架：Claude Code 填 Base URL 直连 /v1/messages，OpenAI 兼容路由走 /v1，Codex CLI 也能对接"
+      ],
+      "endpoints": {
+        "anthropic": "https://api.justwoker.icu",
+        "openai": "https://api.justwoker.icu/v1"
+      },
+      "modelsNote": "模型定价页需要登录（/api/pricing 匿名请求返回 401，面板 pricing.requireAuth = true），本页不列模型表。实测主力是 gpt-5.6 系（gpt-5.6-luna / sol / terra），每次请求会带约 2000 tokens 的固定隐藏提示词；完整清单与倍率请登录控制台「定价」页确认。",
+      "register": {
+        "methods": [
+          "GitHub OAuth"
+        ],
+        "requirements": [
+          "务必从本页邀请链接进入注册（带 ?aff=OIWh），邀请额度才会发放",
+          "只能用 GitHub 授权登录：面板里邮箱 / LinuxDO / Telegram / 微信 / OIDC 登录开关都是关的，没有邮箱密码注册入口",
+          "注册开着 Cloudflare Turnstile 人机校验，注册页与 API 都在 Cloudflare 后面，机房 IP 可能被 403 拦，家用宽带正常"
+        ]
+      },
+      "earnMore": [
+        "每日签到领额度（面板已开启），登录后台点一下就行",
+        "站内任务中心也能拿额度（enable_task 已开启）",
+        "邀请他人注册，邀请人可获得额度"
+      ],
+      "caveats": [
+        "额度数字站点公开接口不暴露（/api/status 里 quota_for_new_user / quota_for_invitee 均为空），注册后进后台核对实际到账",
+        "面板 price = 7.3（¥7.3 ≈ 站内 $1），额度按人民币口径显示，本页不做美元折算",
+        "站点挂在 Cloudflare 后面，/chat/completions 等端点匿名探测会被 WAF 返回 403，属正常防护，不代表接口不可用",
+        "上游为第三方中转，gpt-5.6 系模型在大上下文 / 高并发时可能出现超时或断流，别当稳定生产通道用",
+        "模型可用性与价格随上游调整，以控制台实时页面为准"
+      ],
+      "community": []
     }
   ]
 }
