@@ -12,133 +12,15 @@
 <p align="center">
   <a href="https://agentrouter.org/register?aff=aibw"><b>AgentRouter 注册</b></a> ·
   <a href="https://docode.cc/register?aff=1Qof"><b>DoCode 注册</b></a> ·
+  <a href="https://godrouter.cyou/sign-up?aff=LENb"><b>GodRouter 注册</b></a> ·
   <a href="https://matrix.mzsjai.com/login?redirect=%2Fapp%2Fgrowth%3FinviteCode%3DMX3CDVGATLJW"><b>Matrix 注册</b></a> ·
   <a href="https://seekai.cc/sign-up?aff=dDJy"><b>SeekAi 注册</b></a> ·
   <a href="https://aaawinn.xyz/sign-up?aff=ijFL"><b>Long的AI 注册</b></a> ·
   <a href="https://api.hcnsec.cn/sign-up?aff=3J8z"><b>新疆幻城网安 注册</b></a> ·
-  <a href="https://liangjiewis.com/register?aff=m3C1"><b>量界智算 注册</b></a> ·
-  <a href="https://godrouter.cyou/sign-up?aff=LENb"><b>GodRouter 注册</b></a>
+  <a href="https://liangjiewis.com/register?aff=m3C1"><b>量界智算 注册</b></a>
 </p>
 
 <p align="center"><a href="https://q-shuang-dot.github.io/gcmp-welfare-temp/compare/">📊 按次 vs 按量折算横评</a> · <a href="https://q-shuang-dot.github.io/gcmp-welfare-temp/status/">🩺 可用性历史</a> · <a href="https://q-shuang-dot.github.io/gcmp-welfare-temp/changelog/">🗓 变动日志</a> · <a href="https://q-shuang-dot.github.io/gcmp-welfare-temp/feed.xml">🔔 Atom 订阅</a></p>
-
----
-
-## 🧭 这个仓库有两部分
-
-| 部分 | 是什么 | 入口 |
-| :-- | :-- | :-- |
-| 🛰 **GCMP Gateway** | 跑在你自己机器上的 AI 网关：多个逻辑模型、OpenAI / Anthropic / Responses 三协议全收、上游故障转移、配置热加载 | [部署文档](gcmp-gateway/README.md) · [详情页](https://q-shuang-dot.github.io/gcmp-welfare-temp/sites/gcmp-gateway/) |
-| 🎁 **福利站导航** | 8 个第三方公益站 / 中转站的注册额度与实测状态，CI 每 6 小时自动抓取 | 本文件下面两张表 |
-
-> 两件事互不依赖，只用其中一个也行；但把福利站领到的 key 填进网关，就能在一个地址里在 VS Code、Claude Code、Codex 之间换模型，不用各处改配置。
-
-## 🛰 我的网关：GCMP Gateway
-
-> 本地自托管 AI 网关 · 7 个逻辑模型，OpenAI / Anthropic / Responses 三协议全收，故障转移 + 热加载 + 本地管理页，没有额度焦虑
-
-<a href="gcmp-gateway/README.md"><img src="https://img.shields.io/badge/%E9%83%A8%E7%BD%B2%E6%96%87%E6%A1%A3-GCMP%20Gateway-blue?style=for-the-badge" alt="GCMP Gateway 部署文档"></a>
-
-**它和福利站不是一回事**：福利站是别人开的、你注册领额度；这个网关跑在你自己机器上，不发额度、没有邀请码、也不收你的钱——它把你手上（或上面那些站的）key 汇总成一个地址对外，一个逻辑模型挂多条上游，哪条挂了自动换下一条。
-
-**为什么值得自托管**
-
-- 你的网关你做主：部署在本机，没有注册链接、没有额度限制、没有账号被封的风险——上游 key 在你手里，随时换
-- 多上游故障转移：opus-5 / gpt-5.6 / glm-5.3 / deepseek / cheap 等 7 个逻辑模型，一条挂了自动切下一条，比只挂一家免费站稳得多
-- VS Code GCMP、Claude Code、Codex、OpenAI SDK 一套地址全搞定：/v1/chat/completions + /v1/responses + Anthropic /messages 三协议自带转换，不用自己写适配
-- config.json 热加载，管理页可看路由命中、上游健康、请求统计与一键测试；响应头自带 X-Gateway-Upstream / X-Gateway-Model，排障一眼看到实际命中的上游
-
-**7 个逻辑模型**（客户端只填逻辑模型名，具体走哪个上游由网关按路由与健康度决定）
-
-| 逻辑模型 | 支持的协议 |
-| :-- | :-- |
-| `opus-5` | OpenAI / Responses / Anthropic |
-| `opus-4-8` | OpenAI / Responses / Anthropic |
-| `sonnet-5` | OpenAI / Responses / Anthropic |
-| `gpt-5.6` | OpenAI / Responses |
-| `glm-5.3` | OpenAI / Responses / Anthropic |
-| `deepseek` | OpenAI / Responses / Anthropic |
-| `cheap` | OpenAI / Responses / Anthropic |
-
-**接入配置**（把 `127.0.0.1:15800` 换成你自己的监听地址）
-
-<details><summary><b>VS Code GCMP</b></summary>
-
-```json
-{
-  "gcmp.compatibleModels": [
-    "opus-5",
-    "opus-4-8",
-    "sonnet-5",
-    "gpt-5.6",
-    "glm-5.3",
-    "deepseek",
-    "cheap"
-  ],
-  "gcmp.baseUrl": "http://127.0.0.1:15800/v1"
-}
-```
-
-</details>
-<details><summary><b>Claude Code</b></summary>
-
-```bash
-# macOS / Linux
-export ANTHROPIC_BASE_URL=http://127.0.0.1:15800
-export ANTHROPIC_AUTH_TOKEN=你的 GCMP Key
-export ANTHROPIC_MODEL=glm-5.3
-claude
-```
-
-</details>
-<details><summary><b>Codex CLI</b></summary>
-
-```toml
-model = "gpt-5.6"
-model_provider = "gcmp"
-
-[model_providers.gcmp]
-name = "GCMP Gateway"
-base_url = "http://127.0.0.1:15800/v1"
-env_key = "GCMP_API_KEY"
-wire_api = "responses"
-```
-
-</details>
-<details><summary><b>OpenAI SDK</b></summary>
-
-```python
-from openai import OpenAI
-
-client = OpenAI(
-    api_key="你的 GCMP Key",
-    base_url="http://127.0.0.1:15800/v1",
-)
-resp = client.chat.completions.create(
-    model="glm-5.3",
-    messages=[{"role": "user", "content": "ping"}],
-)
-print(resp.choices[0].message.content)
-```
-
-</details>
-
-**部署步骤**
-
-1. clone 仓库并把 config.example.json 复制为 config.json
-2. 按你的上游平台填入 apiKey，必要时按站点说明补 User-Agent / chatPath / protocol 等字段
-3. 运行网关后浏览器打开 http://127.0.0.1:15800/admin 确认模型与路由状态
-4. 客户端 Base URL 填 http://127.0.0.1:15800/v1，模型名填逻辑模型名
-
-**⚠️ 使用前必读**
-
-- 服务只监听 127.0.0.1:15800，不会自动暴露到公网；想让局域网设备使用需要自行代理或改监听地址
-- 网关仅转发请求，模型质量、可用性与额度来自你配置的上游账号，不是这个仓库本身提供的
-- config.json 里若配置了中文上游名，需要网关对 HTTP 头做 latin-1 安全转义，旧版本直接写中文头会被 latin-1 编码打断
-
-**入口**
-
-[完整部署文档](gcmp-gateway/README.md) · [英文说明](gcmp-gateway/README.en.md) · [详情页](https://q-shuang-dot.github.io/gcmp-welfare-temp/sites/gcmp-gateway/) · 控制台 <http://127.0.0.1:15800/admin> · [仓库](https://github.com/Q-shuang-dot/gcmp-welfare-temp)
 
 ---
 
@@ -150,12 +32,12 @@ print(resp.choices[0].message.content)
 | :-- | :--: | :--: | :-- | :--: | :--: | :--: | :--: | :--: |
 | **AgentRouter** 🔥 | 🟢 在线 | **$175** | 注册 $100 + 本页邀请 $50 + 首签 $25 | $25/天 | Anthropic + OpenAI | 6 个可查 | [点此注册 →](https://agentrouter.org/register?aff=aibw) | — |
 | **DoCode** | 🟢 在线 | **300 站内刀** | 注册 50 站内刀 + 本页邀请 250 站内刀 | 无签到 | Anthropic + OpenAI | 需登录查看 | [点此注册 →](https://docode.cc/register?aff=1Qof) | `1Qof` |
+| **GodRouter** 🔥 | 🟢 在线 | **$90** | 注册 $80 + 首签 $10 | $10/天 | OpenAI | 需登录查看 | [点此注册 →](https://godrouter.cyou/sign-up?aff=LENb) | — |
 | **Matrix** | 🟢 在线 | **600 积分** | 本页邀请 600 积分 | — | OpenAI 兼容 | 需登录查看 | [点此注册 →](https://matrix.mzsjai.com/login?redirect=%2Fapp%2Fgrowth%3FinviteCode%3DMX3CDVGATLJW) | — |
 | **SeekAi** | 🟢 在线 | 站内公示 | — | 支持签到 | OpenAI | 需登录查看 | [点此注册 →](https://seekai.cc/sign-up?aff=dDJy) | `dDJy` |
 | **Long的AI** | 🟢 在线 | 站内公示 | — | 无签到 | Anthropic + OpenAI | 需登录查看 | [GitHub 注册 →](https://aaawinn.xyz/sign-up?aff=ijFL) | `ijFL` |
 | **新疆幻城网安** | 🟢 在线 | 站内公示 | — | 支持签到 | Anthropic + OpenAI | 需登录查看 | [点此注册 →](https://api.hcnsec.cn/sign-up?aff=3J8z) | `3J8z` |
 | **量界智算** | 🟢 在线 | 站内公示 | — | 支持签到 | Anthropic + OpenAI | 需登录查看 | [点此注册 →](https://liangjiewis.com/register?aff=m3C1) | `m3C1` |
-| **GodRouter** 🔥 | 🟢 在线 | **$90** | 注册 $80 + 首签 $10 | $10/天 | OpenAI | 需登录查看 | [点此注册 →](https://godrouter.cyou/sign-up?aff=LENb) | — |
 
 > 「首日可得」= 注册基础额度 + 本页邀请链接额度 + 当天能领的签到额度（每日重置额度池的站点按一天的池子算）；模型、价格、在线状态由脚本抓取站点公开接口自动生成，最后更新：`2026-09-18 02:05 UTC`。
 >
@@ -450,6 +332,90 @@ curl -s https://docode.cc/v1/chat/completions \
 - `2026-09-10` 今天openai炸了，gpt全线都不太行，推荐用grok或者cc特殊分组
 
 </details>
+
+---
+
+### 🟢 GodRouter 🔥 首推
+
+> AI Coding 中转站 · 注册送 $80 免费额度，签到持续续命
+
+<a href="https://godrouter.cyou/sign-up?aff=LENb"><img src="https://img.shields.io/badge/%E7%AB%8B%E5%8D%B3%E6%B3%A8%E5%86%8C-GodRouter-brightgreen?style=for-the-badge" alt="注册 GodRouter"></a>
+
+**为什么值得注册**
+
+- 注册送 $80 免费额度，从本页邀请链接进入额外加成
+- 每日签到可续命，长期白嫖不断供
+- OpenAI 兼容协议，支持 Claude Code / Codex / VS Code 等主流客户端
+- 面板简洁、注册流程简单
+
+**能拿多少额度**
+
+- 注册即送：**$80**
+- 每日签到：**$10/天**（长期续命的关键）
+- 首日合计：**$90**　（注册 $80 + 首签 $10）
+
+**实时数据**（自动抓取站点公开接口）
+
+
+
+> 该站模型清单需登录后台查看，注册后在「模型价格」页确认。
+
+**注册要求**
+
+- 务必从本页邀请链接进入注册（带 ?aff=LENb），否则拿不到注册送的 $80 额度
+- 注册成功后检查后台余额确认到账
+
+**接入配置**
+
+<details><summary><b>Codex CLI</b>（OpenAI 兼容，写入 <code>~/.codex/config.toml</code>）</summary>
+
+```toml
+model = "<登录后台查看可用模型名>"
+model_provider = "godrouter"
+
+[model_providers.godrouter]
+name = "GodRouter"
+base_url = "https://godrouter.cyou/v1"
+env_key = "GODROUTER_API_KEY"
+wire_api = "chat"
+```
+
+</details>
+
+<details><summary><b>OpenAI SDK / Cherry Studio / Cursor 等通用客户端</b></summary>
+
+```python
+from openai import OpenAI
+
+client = OpenAI(api_key="你的 Key", base_url="https://godrouter.cyou/v1")
+resp = client.chat.completions.create(model="<登录后台查看可用模型名>", messages=[{"role": "user", "content": "ping"}])
+print(resp.choices[0].message.content)
+```
+
+通用客户端只需填两项：**Base URL** = `https://godrouter.cyou/v1`，**API Key** = 站点后台创建的 Key。
+
+</details>
+
+<details><summary><b>连通性自测</b></summary>
+
+```bash
+curl -s https://godrouter.cyou/v1/chat/completions \
+  -H "Authorization: Bearer $KEY" -H "Content-Type: application/json" \
+  -d '{"model":"<登录后台查看可用模型名>","messages":[{"role":"user","content":"只回复 OK"}]}'
+```
+
+</details>
+
+**如何继续拿额度**
+
+- 每日签到领额度
+- 邀请好友注册双方都有奖励
+
+**⚠️ 使用前必读**
+
+- 额度数字以站内实际公示为准，本页登记的是注册送 $80 的口径
+- 中转站上游随时可能调整，请以站内实际可用模型与价格为准
+- 新站运营时间较短，稳定性待验证
 
 ---
 
@@ -979,90 +945,6 @@ curl -s https://liangjiewis.com/v1/chat/completions \
 - `2026-01-22` 📢 系统升级公告 为提升平台稳定性与使用体验，我们将于**今晚 22:00 - 23:00**进行版本升级维护。 ✅ 升级内容： 1. 上线**用户签到**功能：每日签到可获得**随机额度奖励** 2. 上线**邀请充值奖励**：下级用户充值，上级可按比例获得奖励 3. 修复已知问题并进行功能优化
 
 </details>
-
----
-
-### 🟢 GodRouter 🔥 首推
-
-> AI Coding 中转站 · 注册送 $80 免费额度，签到持续续命
-
-<a href="https://godrouter.cyou/sign-up?aff=LENb"><img src="https://img.shields.io/badge/%E7%AB%8B%E5%8D%B3%E6%B3%A8%E5%86%8C-GodRouter-brightgreen?style=for-the-badge" alt="注册 GodRouter"></a>
-
-**为什么值得注册**
-
-- 注册送 $80 免费额度，从本页邀请链接进入额外加成
-- 每日签到可续命，长期白嫖不断供
-- OpenAI 兼容协议，支持 Claude Code / Codex / VS Code 等主流客户端
-- 面板简洁、注册流程简单
-
-**能拿多少额度**
-
-- 注册即送：**$80**
-- 每日签到：**$10/天**（长期续命的关键）
-- 首日合计：**$90**　（注册 $80 + 首签 $10）
-
-**实时数据**（自动抓取站点公开接口）
-
-
-
-> 该站模型清单需登录后台查看，注册后在「模型价格」页确认。
-
-**注册要求**
-
-- 务必从本页邀请链接进入注册（带 ?aff=LENb），否则拿不到注册送的 $80 额度
-- 注册成功后检查后台余额确认到账
-
-**接入配置**
-
-<details><summary><b>Codex CLI</b>（OpenAI 兼容，写入 <code>~/.codex/config.toml</code>）</summary>
-
-```toml
-model = "<登录后台查看可用模型名>"
-model_provider = "godrouter"
-
-[model_providers.godrouter]
-name = "GodRouter"
-base_url = "https://godrouter.cyou/v1"
-env_key = "GODROUTER_API_KEY"
-wire_api = "chat"
-```
-
-</details>
-
-<details><summary><b>OpenAI SDK / Cherry Studio / Cursor 等通用客户端</b></summary>
-
-```python
-from openai import OpenAI
-
-client = OpenAI(api_key="你的 Key", base_url="https://godrouter.cyou/v1")
-resp = client.chat.completions.create(model="<登录后台查看可用模型名>", messages=[{"role": "user", "content": "ping"}])
-print(resp.choices[0].message.content)
-```
-
-通用客户端只需填两项：**Base URL** = `https://godrouter.cyou/v1`，**API Key** = 站点后台创建的 Key。
-
-</details>
-
-<details><summary><b>连通性自测</b></summary>
-
-```bash
-curl -s https://godrouter.cyou/v1/chat/completions \
-  -H "Authorization: Bearer $KEY" -H "Content-Type: application/json" \
-  -d '{"model":"<登录后台查看可用模型名>","messages":[{"role":"user","content":"只回复 OK"}]}'
-```
-
-</details>
-
-**如何继续拿额度**
-
-- 每日签到领额度
-- 邀请好友注册双方都有奖励
-
-**⚠️ 使用前必读**
-
-- 额度数字以站内实际公示为准，本页登记的是注册送 $80 的口径
-- 中转站上游随时可能调整，请以站内实际可用模型与价格为准
-- 新站运营时间较短，稳定性待验证
 
 ---
 

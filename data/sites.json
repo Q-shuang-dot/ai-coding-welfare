@@ -89,100 +89,6 @@
       ]
     },
     {
-      "id": "gcmp-gateway",
-      "name": "GCMP Gateway",
-      "subtitle": "本地自托管 AI 网关 · 7 个逻辑模型，OpenAI / Anthropic / Responses 三协议全收，故障转移 + 热加载 + 本地管理页，没有额度焦虑",
-      "recommended": true,
-      "panel": "local",
-      "credits": {
-        "signup": null,
-        "invite": null,
-        "dailyCheckin": null,
-        "approx": false,
-        "unit": "local"
-      },
-      "signupUrl": "https://github.com/Q-shuang-dot/gcmp-welfare-temp",
-      "homeUrl": "http://127.0.0.1:15800/admin",
-      "docsUrl": "https://github.com/Q-shuang-dot/gcmp-welfare-temp",
-      "statusApi": null,
-      "pricingApi": null,
-      "mirrors": [],
-      "tags": [
-        "本地网关",
-        "自托管",
-        "无额度限制",
-        "故障转移",
-        "OpenAI 兼容",
-        "Anthropic 兼容",
-        "Codex",
-        "Claude Code"
-      ],
-      "highlights": [
-        "你的网关你做主：部署在本机，没有注册链接、没有额度限制、没有账号被封的风险——上游 key 在你手里，随时换",
-        "多上游故障转移：opus-5 / gpt-5.6 / glm-5.3 / deepseek / cheap 等 7 个逻辑模型，一条挂了自动切下一条，比只挂一家免费站稳得多",
-        "VS Code GCMP、Claude Code、Codex、OpenAI SDK 一套地址全搞定：/v1/chat/completions + /v1/responses + Anthropic /messages 三协议自带转换，不用自己写适配",
-        "config.json 热加载，管理页可看路由命中、上游健康、请求统计与一键测试；响应头自带 X-Gateway-Upstream / X-Gateway-Model，排障一眼看到实际命中的上游"
-      ],
-      "endpoints": {
-        "anthropic": null,
-        "openai": null
-      },
-      "setup": {
-        "client": "本地网关",
-        "port": 15800,
-        "note": "这是一个跑在你本机的网关服务，不能远程注册；需要自己 clone 仓库、填入上游 key 并启动进程。",
-        "steps": [
-          "clone 仓库并把 config.example.json 复制为 config.json",
-          "按你的上游平台填入 apiKey，必要时按站点说明补 User-Agent / chatPath / protocol 等字段",
-          "运行网关后浏览器打开 http://127.0.0.1:15800/admin 确认模型与路由状态",
-          "客户端 Base URL 填 http://127.0.0.1:15800/v1，模型名填逻辑模型名"
-        ],
-        "dashboardUrl": "http://127.0.0.1:15800/admin"
-      },
-      "modelsNote": "本页收录 7 个逻辑模型：opus-5 / opus-4-8 / sonnet-5 / gpt-5.6 / glm-5.3 / deepseek / cheap；实际命中哪个上游由网关按路由与健康度决定。",
-      "register": {
-        "methods": [
-          "自行部署"
-        ],
-        "requirements": [
-          "本页不是远程福利站，不提供注册链接与免费额度",
-          "需要准备自己的上游 key，并遵守各上游平台条款"
-        ]
-      },
-      "earnMore": [],
-      "caveats": [
-        "服务只监听 127.0.0.1:15800，不会自动暴露到公网；想让局域网设备使用需要自行代理或改监听地址",
-        "网关仅转发请求，模型质量、可用性与额度来自你配置的上游账号，不是这个仓库本身提供的",
-        "config.json 里若配置了中文上游名，需要网关对 HTTP 头做 latin-1 安全转义，旧版本直接写中文头会被 latin-1 编码打断"
-      ],
-      "community": [
-        "仓库: https://github.com/Q-shuang-dot/gcmp-welfare-temp",
-        "管理页: http://127.0.0.1:15800/admin"
-      ],
-      "configBlocks": {
-        "vscode": {
-          "title": "VS Code GCMP",
-          "language": "json",
-          "code": "{\n  \"gcmp.compatibleModels\": [\n    \"opus-5\",\n    \"opus-4-8\",\n    \"sonnet-5\",\n    \"gpt-5.6\",\n    \"glm-5.3\",\n    \"deepseek\",\n    \"cheap\"\n  ],\n  \"gcmp.baseUrl\": \"http://127.0.0.1:15800/v1\"\n}"
-        },
-        "claudeCode": {
-          "title": "Claude Code",
-          "language": "bash",
-          "code": "# macOS / Linux\nexport ANTHROPIC_BASE_URL=http://127.0.0.1:15800\nexport ANTHROPIC_AUTH_TOKEN=你的 GCMP Key\nexport ANTHROPIC_MODEL=glm-5.3\nclaude"
-        },
-        "codex": {
-          "title": "Codex CLI",
-          "language": "toml",
-          "code": "model = \"gpt-5.6\"\nmodel_provider = \"gcmp\"\n\n[model_providers.gcmp]\nname = \"GCMP Gateway\"\nbase_url = \"http://127.0.0.1:15800/v1\"\nenv_key = \"GCMP_API_KEY\"\nwire_api = \"responses\""
-        },
-        "openaiSdk": {
-          "title": "OpenAI SDK",
-          "language": "python",
-          "code": "from openai import OpenAI\n\nclient = OpenAI(\n    api_key=\"你的 GCMP Key\",\n    base_url=\"http://127.0.0.1:15800/v1\",\n)\nresp = client.chat.completions.create(\n    model=\"glm-5.3\",\n    messages=[{\"role\": \"user\", \"content\": \"ping\"}],\n)\nprint(resp.choices[0].message.content)"
-        }
-      }
-    },
-    {
       "id": "docode",
       "name": "DoCode",
       "subtitle": "New API 中转站 · 注册送 50 站内刀，注册时填邀请码 zMRe 再加 250，首日 300 刀，Claude 与 GPT 都在架上",
@@ -252,6 +158,58 @@
         "这是付费中转站不是公益站：后台开着在线充值（Stripe 单价 ¥8），公告里大半是充值送额度与倍率涨跌，免费额度用完要付费才能续",
         "站内 FAQ 公示的备用域名 ai.docode.pro / ai.docode.life 与公告里的 hk.docode.cc 目前 HTTPS 都连不上（前两个的证书只签了 docode.cc、域名对不上，hk 直接 TLS 握手失败），本页只登记实测可用的 api.docode.cc",
         "上游波动写在公告里：GPT plus「全面阵亡」后又「暂时复活」、gpt-5.4 已彻底下架、9 月 10 日还在说「openai 炸了，gpt 全线都不太行」，别当稳定生产通道用"
+      ],
+      "community": []
+    },
+    {
+      "id": "godrouter",
+      "name": "GodRouter",
+      "subtitle": "AI Coding 中转站 · 注册送 $80 免费额度，签到持续续命",
+      "recommended": true,
+      "credits": {
+        "signup": 80,
+        "dailyCheckin": 10,
+        "approx": false
+      },
+      "signupUrl": "https://godrouter.cyou/sign-up?aff=LENb",
+      "homeUrl": "https://godrouter.cyou",
+      "docsUrl": null,
+      "statusApi": null,
+      "pricingApi": null,
+      "mirrors": [],
+      "tags": [
+        "中转站",
+        "免费额度",
+        "签到",
+        "OpenAI 兼容"
+      ],
+      "highlights": [
+        "注册送 $80 免费额度，从本页邀请链接进入额外加成",
+        "每日签到可续命，长期白嫖不断供",
+        "OpenAI 兼容协议，支持 Claude Code / Codex / VS Code 等主流客户端",
+        "面板简洁、注册流程简单"
+      ],
+      "endpoints": {
+        "anthropic": null,
+        "openai": "https://godrouter.cyou/v1"
+      },
+      "register": {
+        "methods": [
+          "邮箱 + 密码"
+        ],
+        "requirements": [
+          "务必从本页邀请链接进入注册（带 ?aff=LENb），否则拿不到注册送的 $80 额度",
+          "注册成功后检查后台余额确认到账"
+        ]
+      },
+      "earnMore": [
+        "每日签到领额度",
+        "邀请好友注册双方都有奖励"
+      ],
+      "caveats": [
+        "额度数字以站内实际公示为准，本页登记的是注册送 $80 的口径",
+        "中转站上游随时可能调整，请以站内实际可用模型与价格为准",
+        "新站运营时间较短，稳定性待验证"
       ],
       "community": []
     },
@@ -615,58 +573,6 @@
         "酒馆: https://st.liangjiewis.com/login",
         "图片生成站: https://img-gen.liangjiewis.com"
       ]
-    },
-    {
-      "id": "godrouter",
-      "name": "GodRouter",
-      "subtitle": "AI Coding 中转站 · 注册送 $80 免费额度，签到持续续命",
-      "recommended": true,
-      "credits": {
-        "signup": 80,
-        "dailyCheckin": 10,
-        "approx": false
-      },
-      "signupUrl": "https://godrouter.cyou/sign-up?aff=LENb",
-      "homeUrl": "https://godrouter.cyou",
-      "docsUrl": null,
-      "statusApi": null,
-      "pricingApi": null,
-      "mirrors": [],
-      "tags": [
-        "中转站",
-        "免费额度",
-        "签到",
-        "OpenAI 兼容"
-      ],
-      "highlights": [
-        "注册送 $80 免费额度，从本页邀请链接进入额外加成",
-        "每日签到可续命，长期白嫖不断供",
-        "OpenAI 兼容协议，支持 Claude Code / Codex / VS Code 等主流客户端",
-        "面板简洁、注册流程简单"
-      ],
-      "endpoints": {
-        "anthropic": null,
-        "openai": "https://godrouter.cyou/v1"
-      },
-      "register": {
-        "methods": [
-          "邮箱 + 密码"
-        ],
-        "requirements": [
-          "务必从本页邀请链接进入注册（带 ?aff=LENb），否则拿不到注册送的 $80 额度",
-          "注册成功后检查后台余额确认到账"
-        ]
-      },
-      "earnMore": [
-        "每日签到领额度",
-        "邀请好友注册双方都有奖励"
-      ],
-      "caveats": [
-        "额度数字以站内实际公示为准，本页登记的是注册送 $80 的口径",
-        "中转站上游随时可能调整，请以站内实际可用模型与价格为准",
-        "新站运营时间较短，稳定性待验证"
-      ],
-      "community": []
     }
   ]
 }
