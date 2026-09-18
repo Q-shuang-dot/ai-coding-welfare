@@ -256,121 +256,6 @@
       "community": []
     },
     {
-      "id": "justdowork",
-      "name": "JustDoWork",
-      "subtitle": "New API 中转站 · GitHub 一键登录，支持签到与绘图",
-      "recommended": false,
-      "credits": {
-        "signup": 70,
-        "invite": null,
-        "dailyCheckin": 22,
-        "approx": true
-      },
-      "signupUrl": "https://api.justwoker.icu/register?aff=OIWh",
-      "homeUrl": "https://api.justwoker.icu",
-      "docsUrl": "https://api.justwoker.icu/dashboard/overview",
-      "statusApi": "https://api.justwoker.icu/api/status",
-      "pricingApi": null,
-      "mirrors": [],
-      "tags": [
-        "New API",
-        "免费额度",
-        "签到",
-        "绘图",
-        "OpenAI 兼容"
-      ],
-      "highlights": [
-        "注册即得约 $70 额度，GitHub 一键登录，不用充值",
-        "基于开源 New API 面板，控制台熟悉、日志与用量一目了然",
-        "每日签到再领约 $22，首日合计约 $92",
-        "支持对话之外的绘图 / 异步任务接口",
-        "一键把 Key 推送到 Cherry Studio、DeepChat、CC Switch 等客户端"
-      ],
-      "endpoints": {
-        "anthropic": "https://api.justwoker.icu",
-        "openai": "https://api.justwoker.icu/v1"
-      },
-      "register": {
-        "methods": [
-          "GitHub OAuth"
-        ],
-        "requirements": [
-          "已关闭账号密码注册，只能用 GitHub 授权登录",
-          "GitHub 账号注册满 365 天才允许绑定，小号会被拒绝",
-          "注册页有 Turnstile 人机校验，需要能正常加载 Cloudflare 脚本",
-          "务必从本页邀请链接进入，注册后邀请额度才会算到位"
-        ]
-      },
-      "earnMore": [
-        "每日签到领约 $22",
-        "关注站点公告获取活动兑换码"
-      ],
-      "caveats": [
-        "模型清单与价格需要登录后台才能查看，本页不做承诺",
-        "中转站上游随时可能调整，请以站内实际价格与可用模型为准"
-      ],
-      "community": []
-    },
-    {
-      "id": "kktoken",
-      "name": "KKtoken AI",
-      "subtitle": "New API 中转站 · 注册送 $75，本页邀请码再加 $25，按 token 计费输入输出各 $1/M",
-      "recommended": false,
-      "credits": {
-        "signup": 75,
-        "invite": 25,
-        "dailyCheckin": 20,
-        "approx": false
-      },
-      "signupUrl": "https://kktoken.cc/sign-up?aff=JMQC",
-      "homeUrl": "https://kktoken.cc",
-      "docsUrl": "https://kktoken.cc/dashboard/overview",
-      "statusApi": "https://kktoken.cc/api/status",
-      "pricingApi": null,
-      "mirrors": [],
-      "tags": [
-        "New API",
-        "免费额度",
-        "签到",
-        "按 token 计费",
-        "Anthropic 兼容",
-        "OpenAI 兼容"
-      ],
-      "highlights": [
-        "注册送 $75，从本页邀请链接进入再加 $25，每日签到再领 $20，首日合计 $120",
-        "按 token 计费：输入 $1 / 百万 tokens、输出 $1 / 百万 tokens，和本页那几个「每次 $0.3」的按次站不是一套口径，长对话更划算",
-        "Anthropic 与 OpenAI 两条原生路由都开着（未鉴权探测 /v1/messages 与 /v1/chat/completions 都已就位），Claude Code 填个 Base URL 就能直连——具体上了哪些模型要登录后台确认",
-        "面板开着每日签到、绘图与异步任务接口，控制台就是熟悉的 New API（站点自报 KKtoken AI v1.0.0-rc.25）"
-      ],
-      "endpoints": {
-        "anthropic": "https://kktoken.cc",
-        "openai": "https://kktoken.cc/v1"
-      },
-      "modelsNote": "该站把价格页设成了登录可见（`/api/pricing` 返回 401），本页不列模型表。站内公示的计价口径是输入 $1 / 百万 tokens、输出 $1 / 百万 tokens，按 token 而不是按次，注册后在控制台「模型价格」页确认实际清单与倍率。",
-      "register": {
-        "methods": [
-          "GitHub OAuth"
-        ],
-        "requirements": [
-          "务必从本页邀请链接进入注册（带 ?aff=MzG9），$25 在注册那一刻结算，事后补不上",
-          "GitHub 账号注册满 1 年（365 天）才允许绑定，小号会被拒绝",
-          "已关闭账号密码注册，只能用 GitHub 授权；注册完成后可以再设密码用于登录",
-          "注册页有 Cloudflare Turnstile 人机校验，需要能正常加载 Cloudflare 脚本"
-        ]
-      },
-      "earnMore": [
-        "每日签到领 $20（登录后台点签到）",
-        "邀请他人注册也有奖励，金额站点公开接口没公示，登录后台「邀请」页确认"
-      ],
-      "caveats": [
-        "额度数字（注册 $75 / 邀请 $25 / 签到 $20）站点公开接口没有暴露——它的 /api/status 里既没有 quota_for_new_user 也没有 quota_for_invitee，本页登记的是站内公示口径，进后台核对一下再算账",
-        "模型清单与价格要登录才能看（/api/pricing 返回 401），$1/M 的输入输出价同样以站内为准，本页不做承诺",
-        "站点支持在线充值（站内公示 $1 ≈ ¥7.3，Stripe 通道 ¥8），是中转站不是纯公益站，免费额度用完要付费才能续",
-        "站点前面挂着 Cloudflare，机房 IP 容易被拦，本页的自动探测偶尔会标「被 WAF 拦下」，不代表站点对你不可用"
-      ],
-      "community": []
-    },
-    {
       "id": "matrix",
       "name": "Matrix",
       "subtitle": "统一 API 网关 + 开源应用商店 · 邀请注册送 600 积分，实名再送 2000",
@@ -520,63 +405,6 @@
         "邮箱: yangyuqi@xjhcit.cn",
         "QQ群: 94355225"
       ]
-    },
-    {
-      "id": "tabitoken",
-      "name": "TaBiAI",
-      "subtitle": "New API 中转站 · 注册送 $100，本页邀请码再加 $20，专供 Claude Opus",
-      "recommended": false,
-      "credits": {
-        "signup": 100,
-        "invite": 20,
-        "dailyCheckin": null,
-        "approx": false
-      },
-      "signupUrl": "https://tabitoken.com/sign-up?aff=AfA4",
-      "homeUrl": "https://tabitoken.com",
-      "docsUrl": null,
-      "statusApi": "https://tabitoken.com/api/status",
-      "pricingApi": "https://tabitoken.com/api/pricing",
-      "mirrors": [],
-      "tags": [
-        "New API",
-        "免费额度",
-        "Claude Code",
-        "Anthropic 兼容",
-        "按次计费"
-      ],
-      "highlights": [
-        "新用户注册送 $100，从本页邀请链接进入再加 $20，首日 $120（2026-08-30 实测到账）",
-        "Anthropic 与 OpenAI 两种协议都开着，Claude Code 填个 Base URL 就能直连",
-        "只放 Claude Opus 四个型号（opus-5 / opus-5-thinking / opus-4-8 / 4-8-thinking），定价接口公开可查",
-        "面板开着每日签到，可以持续领额度"
-      ],
-      "endpoints": {
-        "anthropic": "https://tabitoken.com",
-        "openai": "https://tabitoken.com/v1"
-      },
-      "register": {
-        "methods": [
-          "GitHub OAuth"
-        ],
-        "requirements": [
-          "务必从本页邀请链接进入注册（带 ?aff=EQIT），$20 在注册那一刻结算，事后补不上",
-          "已关闭账号密码注册，只能用 GitHub 授权；注册完成后可以再设密码用于登录",
-          "注册页有 Cloudflare Turnstile 人机校验，需要能正常加载 Cloudflare 脚本"
-        ]
-      },
-      "earnMore": [
-        "面板已开启每日签到，登录后台点签到即可（每次给多少站点没公示，以站内为准）",
-        "邀请他人注册也有奖励，金额站点未公开，登录后台「邀请」页确认"
-      ],
-      "caveats": [
-        "按次计费而不是按 token：claude-opus-5 / -thinking 每次 $0.8，claude-opus-4-8 系每次 $0.5。首日 $120 约等于 150 次 opus-5 请求，Claude Code 里一问一答就算一次，比按 token 的站消耗快得多",
-        "只有 Claude Opus 四个模型，没有 GPT / Gemini；OpenAI 兼容协议虽然开着，但能填的模型名只有 claude-*（下面 Codex CLI 示例就是这么配的），想拿它跑 GPT / Codex 原生模型是不行的",
-        "站点支持在线充值（站内公示 $1 ≈ ¥7.3，Stripe 通道 ¥8），是中转站不是纯公益站，免费额度用完要付费才能续",
-        "模型分 default / vip 两个分组，同一模型在不同分组的可用性可能不同，以站内为准",
-        "站点前面挂着 Cloudflare，机房 IP 容易被拦，本页的自动探测偶尔会标「被 WAF 拦下」，不代表站点对你不可用"
-      ],
-      "community": []
     },
     {
       "id": "aaawinn",
@@ -787,6 +615,58 @@
         "酒馆: https://st.liangjiewis.com/login",
         "图片生成站: https://img-gen.liangjiewis.com"
       ]
+    },
+    {
+      "id": "godrouter",
+      "name": "GodRouter",
+      "subtitle": "AI Coding 中转站 · 注册送 $80 免费额度，签到持续续命",
+      "recommended": true,
+      "credits": {
+        "signup": 80,
+        "dailyCheckin": 10,
+        "approx": false
+      },
+      "signupUrl": "https://godrouter.cyou/sign-up?aff=LENb",
+      "homeUrl": "https://godrouter.cyou",
+      "docsUrl": null,
+      "statusApi": null,
+      "pricingApi": null,
+      "mirrors": [],
+      "tags": [
+        "中转站",
+        "免费额度",
+        "签到",
+        "OpenAI 兼容"
+      ],
+      "highlights": [
+        "注册送 $80 免费额度，从本页邀请链接进入额外加成",
+        "每日签到可续命，长期白嫖不断供",
+        "OpenAI 兼容协议，支持 Claude Code / Codex / VS Code 等主流客户端",
+        "面板简洁、注册流程简单"
+      ],
+      "endpoints": {
+        "anthropic": null,
+        "openai": "https://godrouter.cyou/v1"
+      },
+      "register": {
+        "methods": [
+          "邮箱 + 密码"
+        ],
+        "requirements": [
+          "务必从本页邀请链接进入注册（带 ?aff=LENb），否则拿不到注册送的 $80 额度",
+          "注册成功后检查后台余额确认到账"
+        ]
+      },
+      "earnMore": [
+        "每日签到领额度",
+        "邀请好友注册双方都有奖励"
+      ],
+      "caveats": [
+        "额度数字以站内实际公示为准，本页登记的是注册送 $80 的口径",
+        "中转站上游随时可能调整，请以站内实际可用模型与价格为准",
+        "新站运营时间较短，稳定性待验证"
+      ],
+      "community": []
     }
   ]
 }

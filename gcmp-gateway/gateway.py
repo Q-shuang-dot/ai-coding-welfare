@@ -455,8 +455,8 @@ def public_config(cfg):
             u["apiKey"] = u.get("apiKey", "")
         keep.append((name, u))
     ups = {}
-    for idx, (name, u) in enumerate(keep, start=1):
-        ups[f"{idx:02d}_{name}"] = u
+    for name, u in keep:
+        ups[name] = u
     out = {**cfg, "upstreams": ups}
     acc = dict(cfg.get("access") or {})
     if acc.get("apiKey"):
@@ -2858,12 +2858,26 @@ class Handler(BaseHTTPRequestHandler):
                     for name in skills)):
                 self._json(400, {"ok": False, "error": f"模型 {m.get('id')} 的 skills 无效"})
                 return
+        # 去除 public_config 添加的排序前缀（如 01_），在验证前处理
+        new_cfg = unmask_keys(new_cfg, load_config())
+        if isinstance(new_cfg.get("upstreams"), dict):
+            clean_upstreams = {}
+            for up_name, up_val in new_cfg["upstreams"].items():
+                real_name = up_name.split("_", 1)[1] if up_name[:2].isdigit() else up_name
+                clean_upstreams[real_name] = up_val
+            new_cfg["upstreams"] = clean_upstreams
+            for m in new_cfg.get("models", []):
+                for r in m.get("route", []):
+                    if r.get("upstream") and r["upstream"] not in clean_upstreams:
+                        up_val = r["upstream"]
+                        orig = up_val.split("_", 1)[1] if up_val[:2].isdigit() else up_val
+                        if orig in clean_upstreams:
+                            r["upstream"] = orig
         for e in (r for m in new_cfg["models"] for r in m["route"]):
             if e.get("upstream") not in new_cfg["upstreams"]:
                 self._json(400, {"ok": False,
                                  "error": f"路由引用了不存在的上游: {e.get('upstream')}"})
                 return
-        new_cfg = unmask_keys(new_cfg, load_config())
         import shutil
         if os.path.exists(CONFIG_PATH):
             shutil.copy2(CONFIG_PATH, CONFIG_PATH + ".bak")

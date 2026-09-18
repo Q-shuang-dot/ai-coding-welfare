@@ -469,28 +469,6 @@ table.stats col.c-brk   { width: 10%; }
 #models .card {
   background: linear-gradient(180deg, var(--panel-soft), var(--panel));
 }
-.skill-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 14px; }
-.skill-card { display: flex; flex-direction: column; }
-.skill-card .skill-name {
-  font-size: 16px; font-weight: 700; letter-spacing: .02em; line-height: 1.4;
-  border-left: 3px solid var(--accent); padding-left: 10px;
-}
-.skill-card .skill-id { display: flex; align-items: baseline; gap: 6px; margin-top: 8px; font-size: 11px; color: var(--muted); }
-.skill-card .skill-intro { margin-top: 10px; font-size: 13px; line-height: 1.75; flex: 1; }
-.skill-card .skill-meta { margin-top: 12px; padding-top: 10px; border-top: 1px dashed var(--border); }
-.skill-card .skill-path { font-size: 11px; color: var(--muted); }
-.skill-card .skill-hint { margin-top: 8px; font-size: 12px; color: var(--muted); display: flex; flex-wrap: wrap; align-items: center; gap: 5px; }
-.skill-card .skill-hint .chip {
-  padding: 1px 8px; border-radius: 999px; font-size: 11px; font-weight: 600;
-  background: rgba(96,165,250,.12); color: var(--accent); border: 1px solid rgba(96,165,250,.22);
-}
-.skill-picks { display: flex; flex-wrap: wrap; gap: 8px; margin: 10px 0 14px; }
-.skill-picks label { display: inline-flex; align-items: center; gap: 6px; padding: 7px 10px; font-size: 12px;
-  border: 1px solid var(--border); border-radius: 8px; background: var(--panel-soft); cursor: pointer;
-  transition: border-color .15s ease, background .15s ease; }
-.skill-picks label:hover { border-color: var(--accent); }
-.skill-picks label:has(input:checked) { border-color: var(--accent); background: rgba(96,165,250,.08); color: var(--accent); }
-.skill-picks input { width: auto; margin: 0; }
 details summary { cursor: pointer; color: var(--muted); font-size: 12px; margin: 6px 0; }
 </style>
 </head>
@@ -521,7 +499,6 @@ details summary { cursor: pointer; color: var(--muted); font-size: 12px; margin:
   <button class="navlink active" data-sec="sec-overview"><span class="ico">🏠</span><span class="txt">总览设置</span></button>
   <button class="navlink" data-sec="sec-upstreams"><span class="ico">🔌</span><span class="txt">上游供应商</span><span class="n" id="nav-up">0</span></button>
   <button class="navlink" data-sec="sec-models"><span class="ico">🧠</span><span class="txt">逻辑模型</span><span class="n" id="nav-m">0</span></button>
-  <button class="navlink" data-sec="sec-skills"><span class="ico">🧩</span><span class="txt">Skills</span><span class="n" id="nav-skills">0</span></button>
   <button class="navlink" data-sec="sec-stats"><span class="ico">📊</span><span class="txt">调用统计</span></button>
   <button class="navlink" data-sec="sec-logs"><span class="ico">📜</span><span class="txt">实时日志</span></button>
 </nav>
@@ -550,11 +527,11 @@ details summary { cursor: pointer; color: var(--muted); font-size: 12px; margin:
       <button onclick="copyText('access-key')">复制</button>
       <button onclick="rotateAccessKey()">重新生成</button>
     </div></div>
-  <div><label>统一模型名 → 实际逻辑模型</label>
+  <div><label>统一模型名（外部客户端填这个）</label>
     <div class="access-keyrow">
-      <input id="access-alias-name" class="mono" value="claude-sonnet-4-5" spellcheck="false" readonly>
-      <span class="muted">→</span>
-      <select id="access-alias-target" onchange="onAliasTarget()"></select>
+      <select id="access-alias-name" class="mono" onchange="onAliasNameChange()">
+        <option value="">（不暴露统一模型名）</option>
+      </select>
     </div></div>
   <div><label>一键接入 GPT 客户端 <span class="muted" style="font-size:12px">写入 ~/.codex/config.toml + auth.json（ChatGPT 桌面端 / Codex CLI 共用），下次启动即走本网关</span></label>
     <div class="access-keyrow">
@@ -602,15 +579,6 @@ details summary { cursor: pointer; color: var(--muted); font-size: 12px; margin:
 <div class="grid" id="models"></div>
 </section>
 
-<section class="sec" id="sec-skills">
-<h2>Skills <span class="count" id="skill-count"></span></h2>
-<div class="card">
-  <div>自动发现项目目录 <span class="mono">.github/skills/&lt;name&gt;/SKILL.md</span>。</div>
-  <div class="hint">Skill 仅对已绑定的逻辑模型生效，并作为系统消息注入；会增加输入 token 与调用成本。保存配置后热生效。</div>
-</div>
-<div class="skill-grid" id="skills"></div>
-</section>
-
 <section class="sec" id="sec-stats">
 <h2>调用统计 <span class="muted" style="font-size:12px" id="stats-sum"></span>
   <button onclick="resetStats()">清空</button></h2>
@@ -626,7 +594,7 @@ details summary { cursor: pointer; color: var(--muted); font-size: 12px; margin:
 </div>
 
 <script>
-let CFG = null, STICKY = {}, BREAKER = {}, STATS = {}, AUDIT = {}, SKILLS = [];
+let CFG = null, STICKY = {}, BREAKER = {}, STATS = {}, AUDIT = {};
 let LISTEN_HOST = "127.0.0.1";
 const THEME_KEY = "gcmp-admin-theme";
 const NAV_KEY = "gcmp-admin-nav";
@@ -708,7 +676,6 @@ async function loadAll(retry = 3) {
   try {
     const j = await fetchConfig();
     CFG = j.config; STICKY = j.sticky || {}; BREAKER = j.breaker || {}; STATS = j.stats || {};
-    SKILLS = Array.isArray(j.skills) ? j.skills : [];
     LISTEN_HOST = j.listenHost || "127.0.0.1";
     document.getElementById("status").className = "badge ok";
     document.getElementById("status").textContent = `运行中 · ${Object.keys(CFG.upstreams).length} 上游 · ${CFG.models.length} 模型`;
@@ -719,8 +686,7 @@ async function loadAll(retry = 3) {
     document.getElementById("g-read").value = (CFG.timeouts || {}).read ?? 300;
     document.getElementById("nav-up").textContent = Object.keys(CFG.upstreams).length;
     document.getElementById("nav-m").textContent = CFG.models.length;
-    document.getElementById("nav-skills").textContent = SKILLS.length;
-    renderUpstreams(); renderModels(); renderSkills(); renderStats();
+    renderUpstreams(); renderModels(); renderStats();
     renderAccess();
     applyAudit();   // 保留上一次审计结果，避免刷新后状态列全变回「待测」
   } catch (e) {
@@ -1156,29 +1122,63 @@ async function queryAllBalances() {
 }
 
 /* ---------- 模型 ---------- */
-function renderSkills() {
-  const wrap = document.getElementById("skills");
-  document.getElementById("skill-count").textContent = `${SKILLS.length} 个可用`;
-  if (!SKILLS.length) {
-    wrap.innerHTML = `<div class="card muted">未发现有效 Skill，请检查项目的 .github/skills 目录。</div>`;
-    return;
-  }
-  wrap.innerHTML = SKILLS.map(skill => {
-    const models = CFG.models.filter(m => (m.skills || []).includes(skill.name)).map(m => m.id);
-    return `<div class="card skill-card">
-      <div class="skill-name">${esc(skill.display_name || skill.name)}</div>
-      <div class="skill-id"><span>机器标识：</span><span class="mono">${esc(skill.name)}</span></div>
-      <div class="skill-intro">${esc(skill.display_description || skill.description || "无备注介绍")}</div>
-      <div class="skill-meta">
-        <div class="skill-path mono">.github/skills/${esc(skill.name)}/SKILL.md · ${Math.ceil((skill.size || 0) / 1024)} KB</div>
-        <div class="skill-hint">${models.length
-          ? `已绑定：${models.map(m => `<span class="chip">${esc(m)}</span>`).join("")}`
-          : "尚未绑定任何逻辑模型"}</div>
-      </div>
-    </div>`;
-  }).join("");
+// 每个 (upstream, model) 组合维护一份缓存列表，key = upstream + "::" + model
+const MODEL_CACHE = {};
+
+function modelOpts(upName, currentModel) {
+  const key = upName + "::" + (currentModel || "");
+  const cached = MODEL_CACHE[key] || [];
+  if (cached.length === 0) return `<option value="${esc(currentModel)}" selected>${esc(currentModel || "")}</option>`;
+  const curVal = currentModel || "";
+  return `<option value="" ${(curVal === "") ? "selected" : ""}>— 选取模型 —</option>` +
+    cached.map(m => `<option value="${esc(m)}" ${m === curVal ? "selected" : ""}>${esc(m)}</option>`).join("");
 }
 
+async function fetchRouteModels(btn, rowIdx) {
+  const tr = btn.closest("tr");
+  const sel = tr.querySelector(`select[data-i="${rowIdx}"][data-f="model"]`);
+  const upName = tr.querySelector('[data-f="upstream"]').value;
+  const currentModel = sel ? sel.value : "";
+  const key = upName + "::" + (currentModel || "");
+
+  // 已在缓存则直接刷新下拉，不再发请求
+  if (MODEL_CACHE[key] && MODEL_CACHE[key].length > 0) {
+    const opts = MODEL_CACHE[key].map(m =>
+      `<option value="${esc(m)}" ${m === (currentModel || "") ? "selected" : ""}>${esc(m)}</option>`
+    ).join("");
+    sel.innerHTML = `<option value="" ${(currentModel || "") === "" ? "selected" : ""}>— 选取模型 —</option>` + opts;
+    return;
+  }
+
+  const up = CFG.upstreams[upName];
+  if (!up || !up.baseUrl) { toast("上游未配置 Base URL", false); return; }
+  btn.disabled = true; btn.textContent = "⏳";
+  sel.disabled = true;
+  try {
+    const r = await fetch("/admin/api/models", { method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ name: upName, baseUrl: up.baseUrl, apiKey: up.apiKey,
+        headers: up.headers, noProxy: up.noProxy, chatPath: up.chatPath, protocol: up.protocol }) });
+    const j = await r.json();
+    if (j.ok && j.models) {
+      MODEL_CACHE[key] = j.models;
+      const opts = j.models.map(m =>
+        `<option value="${esc(m)}" ${m === (currentModel || "") ? "selected" : ""}>${esc(m)}</option>`
+      ).join("");
+      sel.innerHTML = `<option value="" ${(currentModel || "") === "" ? "selected" : ""}>— 选取模型 —</option>` + opts;
+      toast(`${upName} 获取到 ${j.count} 个模型`, true);
+    } else {
+      sel.innerHTML = `<option value="${esc(currentModel)}" selected>${esc(currentModel || "")}</option>`;
+      toast((j.error || "获取失败"), false);
+    }
+  } catch (e) {
+    sel.innerHTML = `<option value="${esc(currentModel)}" selected>${esc(currentModel || "")}</option>`;
+    toast(e.message, false);
+  } finally {
+    btn.disabled = false; btn.textContent = "📋";
+    sel.disabled = false;
+  }
+}
 function renderModels() {
   const wrap = document.getElementById("models");
   document.getElementById("m-count").textContent = CFG.models.length;
@@ -1196,7 +1196,12 @@ function renderModels() {
           </select>
           <button class="icon-btn" onclick="topRoute(this)" title="置顶：直接把这个供应商放到第 1 位">置顶</button>
         </div></td>
-        <td><input data-i="${i}" data-f="model" value="${esc(r.model)}" spellcheck="false"></td>
+        <td><div style="display:flex;gap:4px;align-items:center;min-width:0">
+          <select data-i="${i}" data-f="model" style="flex:1;min-width:0" title="从已获取的模型列表中选取，或手动输入">
+            ${modelOpts(r.upstream, r.model)}
+          </select>
+          <button class="icon-btn" onclick="fetchRouteModels(this,${i})" title="从该上游获取可用模型列表" style="flex:0 0 auto">📋</button>
+        </div></td>
         <td style="width:86px; text-align:center"><select data-i="${i}" data-f="vision" style="width:100%">
           <option value="" ${r.vision === undefined ? "selected" : ""}>通用</option>
           <option value="1" ${r.vision === true ? "selected" : ""}>仅图片</option>
@@ -1246,13 +1251,6 @@ function renderModels() {
         <label style="margin:0; cursor:pointer; display:flex; align-items:center; gap:6px">
           <input type="checkbox" data-f="sticky" ${m.sticky === false ? "" : "checked"} style="width:auto">
           <span class="muted" style="font-size:12px">关闭=严格按下表顺序</span></label></div></div>
-      <div><label>自动注入 Skills</label>
-        <div class="skill-picks">
-          ${SKILLS.length ? SKILLS.map(skill => `<label title="${esc(skill.display_description || skill.description || skill.name)}">
-            <input type="checkbox" data-skill="${esc(skill.name)}" ${(m.skills || []).includes(skill.name) ? "checked" : ""}>
-            <span>${esc(skill.display_name || skill.name)}</span></label>`).join("")
-            : `<span class="muted">未发现可用 Skill</span>`}
-        </div></div>
       <div class="routes-scroll"><table class="routes">
           <tr><th>优先</th><th>上游</th><th>上游模型名</th><th>图片</th><th>无工具</th><th>非流式</th><th>超时</th><th>状态</th><th>近期 / 建议</th><th>排序</th></tr>
           ${rows}
@@ -1276,12 +1274,23 @@ function renderModels() {
       else if (f === "noTools") { if (el.checked) r.noTools = true; else delete r.noTools; }
       else if (f === "vision") { if (el.value === "") delete r.vision; else r.vision = el.value === "1"; }
       else r[f] = f === "model" ? el.value.trim() : el.value;
-    }));
-    card.querySelectorAll("[data-skill]").forEach(el => el.addEventListener("change", () => {
-      const selected = new Set(Array.isArray(m.skills) ? m.skills : []);
-      if (el.checked) selected.add(el.dataset.skill); else selected.delete(el.dataset.skill);
-      if (selected.size) m.skills = [...selected]; else delete m.skills;
-      renderSkills();
+      // 上游切换时清除该行的模型缓存，下次点「📋」重新拉取
+      if (f === "upstream") {
+        // 重新生成该行模型选择器的选项
+        const tr = el.closest("tr");
+        const sel = tr.querySelector(`select[data-i="${el.dataset.i}"][data-f="model"]`);
+        const curModel = sel ? sel.value : "";
+        if (sel) {
+          const key = el.value + "::" + curModel;
+          const cached = MODEL_CACHE[key] || [];
+          if (cached.length > 0) {
+            sel.innerHTML = `<option value="" ${(curModel || "") === "" ? "selected" : ""}>— 选取模型 —</option>` +
+              cached.map(m => `<option value="${esc(m)}" ${m === curModel ? "selected" : ""}>${esc(m)}</option>`).join("");
+          } else {
+            sel.innerHTML = `<option value="${esc(curModel)}" selected>${esc(curModel || "")}</option>`;
+          }
+        }
+      }
     }));
     wrap.appendChild(card);
   }
@@ -1557,13 +1566,15 @@ function renderAccess() {
       <button class="icon-btn" onclick="copyTextRaw('http://${esc(h)}:${port}')" title="复制地址">复制</button></span>`).join("");
   const keyEl = document.getElementById("access-key");
   keyEl.value = (CFG.access || {}).apiKey || "（未启用）";
-  const target = document.getElementById("access-alias-target");
-  const alias = CFG.alias || {};
-  const aliasName = document.getElementById("access-alias-name").value;
-  const cur = alias[aliasName] || CFG.models[0]?.id || "";
-  target.innerHTML = CFG.models.map(m =>
-    `<option value="${esc(m.id)}" ${m.id === cur ? "selected" : ""}>${esc(m.name || m.id)} (${esc(m.id)})</option>`).join("") ||
-    `<option value="">无模型</option>`;
+  // 填充统一模型名下拉框（直接用逻辑模型 id）
+  const aliasNameSel = document.getElementById("access-alias-name");
+  if (aliasNameSel && CFG.models) {
+    const curAlias = CFG.alias ? Object.keys(CFG.alias)[0] || "" : "";
+    aliasNameSel.innerHTML = `<option value="">（不暴露统一模型名）</option>` +
+      CFG.models.map(m =>
+        `<option value="${esc(m.id)}" ${m.id === curAlias ? "selected" : ""}>${esc(m.id)}</option>`).join("");
+  }
+  const aliasName = aliasNameSel ? aliasNameSel.value : "";
   // 一键接入 GPT 客户端：默认选健康模型（gpt-5.6 优先），避免选到 claude 系死路由
   const cm = document.getElementById("codex-model");
   if (cm && CFG.models && CFG.models.length) {
@@ -1622,10 +1633,13 @@ function copyTextRaw(txt) {
     navigator.clipboard.writeText(txt).then(done).catch(() => fallbackCopy(txt, done));
   } else fallbackCopy(txt, done);
 }
-function onAliasTarget() {
+function onAliasNameChange() {
   const aliasName = document.getElementById("access-alias-name").value;
-  const t = document.getElementById("access-alias-target").value;
-  CFG.alias = Object.assign({}, CFG.alias, { [aliasName]: t });
+  if (aliasName) {
+    CFG.alias = Object.assign({}, CFG.alias, { [aliasName]: aliasName });
+  } else {
+    CFG.alias = {};
+  }
   renderAccess();  // 刷新复制块里的模型名
 }
 async function rotateAccessKey() {
@@ -1679,9 +1693,9 @@ async function saveConfig() {
     CFG.access = Object.assign({}, CFG.access || {}, { enabled: !!key, apiKey: key });
   }
   const aliasName = document.getElementById("access-alias-name");
-  const aliasTarget = document.getElementById("access-alias-target");
-  if (aliasName && aliasTarget) {
-    CFG.alias = Object.assign({}, CFG.alias || {}, { [aliasName.value]: aliasTarget.value });
+  if (aliasName) {
+    const n = aliasName.value;
+    CFG.alias = n ? { [n]: n } : {};
   }
   const clean = JSON.parse(JSON.stringify(CFG, (k, v) => v === undefined ? undefined : v));
   const btn = document.getElementById("btn-save");
