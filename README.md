@@ -30,7 +30,7 @@
 | :-- | :--: | :--: | :-- | :--: | :--: | :--: | :--: | :--: |
 | **AgentRouter** 🔥 | 🟢 在线 | **$175** | 注册 $100 + 本页邀请 $50 + 首签 $25 | $25/天 | Anthropic + OpenAI | 6 个可查 | <a href="https://agentrouter.org/register?aff=aibw" target="_blank" rel="noopener">点此注册 →</a> | — |
 | **DoCode** | 🟢 在线 | **300 站内刀** | 注册 50 站内刀 + 本页邀请 250 站内刀 | 无签到 | Anthropic + OpenAI | 需登录查看 | <a href="https://docode.cc/register?aff=1Qof" target="_blank" rel="noopener">点此注册 →</a> | `1Qof` |
-| **GodRouter** 🔥 | 🟢 在线 | **$90** | 注册 $80 + 首签 $10 | $10/天 | OpenAI | 需登录查看 | <a href="https://godrouter.cyou/sign-up?aff=LENb" target="_blank" rel="noopener">点此注册 →</a> | — |
+| **GodRouter** 🔥 | 🟢 在线 | **$80** | 注册 $80 | — | OpenAI | 需登录查看 | <a href="https://godrouter.cyou/sign-up?aff=LENb" target="_blank" rel="noopener">点此注册 →</a> | — |
 | **Matrix** | 🟢 在线 | **600 积分** | 本页邀请 600 积分 | — | OpenAI 兼容 | 需登录查看 | <a href="https://matrix.mzsjai.com/login?redirect=%2Fapp%2Fgrowth%3FinviteCode%3DMX3CDVGATLJW" target="_blank" rel="noopener">点此注册 →</a> | — |
 | **SeekAi** | 🟢 在线 | 站内公示 | — | 支持签到 | OpenAI | 需登录查看 | <a href="https://seekai.cc/sign-up?aff=dDJy" target="_blank" rel="noopener">点此注册 →</a> | `dDJy` |
 | **Long的AI** | 🟢 在线 | 站内公示 | — | 无签到 | Anthropic + OpenAI | 需登录查看 | <a href="https://aaawinn.xyz/sign-up?aff=ijFL" target="_blank" rel="noopener">GitHub 注册 →</a> | `ijFL` |
@@ -41,7 +41,7 @@
 >
 > 「邀请码」列写了码的站（DoCode `1Qof`、SeekAi `dDJy`、Long的AI `ijFL`、新疆幻城网安 `3J8z`、量界智算 `m3C1`），注册表单里有一栏要**自己填**，漏填就只拿得到注册基础额度、事后补不上；其余站写 — 是因为邀请额度由链接自带，不用手打。
 >
-> 6 个按美元计价、且还收新用户的站全注册一遍，第一天手上大约有 **$265** 额度可用；DoCode 另发 300 站内刀，Matrix 另发 600 积分，都是各站自己的计价单位、与美元没有公开换算，未计入这个合计。
+> 6 个按美元计价、且还收新用户的站全注册一遍，第一天手上大约有 **$255** 额度可用；DoCode 另发 300 站内刀，Matrix 另发 600 积分，都是各站自己的计价单位、与美元没有公开换算，未计入这个合计。
 >
 > 🟡 有 1 个站点已超过 48 小时没抓到接口数据，其明细为上一次成功抓取的快照；在线状态按注册页实际可访问性判断。
 
@@ -335,22 +335,20 @@ curl -s https://docode.cc/v1/chat/completions \
 
 ### 🟢 GodRouter 🔥 首推
 
-> AI Coding 中转站 · 注册送 $80 免费额度，签到持续续命
+> AI Coding 中转站 · 注册送 $80 免费额度
 
 <a href="https://godrouter.cyou/sign-up?aff=LENb" target="_blank" rel="noopener"><img src="https://img.shields.io/badge/%E7%AB%8B%E5%8D%B3%E6%B3%A8%E5%86%8C-GodRouter-brightgreen?style=for-the-badge" alt="注册 GodRouter"></a>
 
 **为什么值得注册**
 
 - 注册送 $80 免费额度，从本页邀请链接进入额外加成
-- 每日签到可续命，长期白嫖不断供
 - OpenAI 兼容协议，支持 Claude Code / Codex / VS Code 等主流客户端
 - 面板简洁、注册流程简单
 
 **能拿多少额度**
 
 - 注册即送：**$80**
-- 每日签到：**$10/天**（长期续命的关键）
-- 首日合计：**$90**　（注册 $80 + 首签 $10）
+- 首日合计：**$80**
 
 **实时数据**（自动抓取站点公开接口）
 
@@ -406,7 +404,6 @@ curl -s https://godrouter.cyou/v1/chat/completions \
 
 **如何继续拿额度**
 
-- 每日签到领额度
 - 邀请好友注册双方都有奖励
 
 **⚠️ 使用前必读**
@@ -955,7 +952,7 @@ CI 每 6 小时抓一次各站接口，与上一次快照逐字段比对，目�
 最近几条：
 
 - `2026-09-18` 🗑️ 移除收录 gcmp-gateway
-- `2026-09-18` 🆕 新收录 GodRouter：注册送 $80，每日签到 $10
+- `2026-09-18` 🆕 新收录 GodRouter：注册送 $80
 - `2026-09-18` 🗑️ 移除收录 justdowork
 - `2026-09-18` 🗑️ 移除收录 kktoken
 - `2026-09-18` 🗑️ 移除收录 tabitoken
