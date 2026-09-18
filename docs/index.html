@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>AI Coding 福利站导航 — 免费额度 · 白嫖 Claude Code / Codex / Cursor 的中转与公益站合集</title>
 <meta name="description" content="免费额度 · 白嫖 Claude Code / Codex / Cursor 的中转与公益站合集。当前收录 8 个福利站，8 个在线，单站首日最高可得 $175 免费额度，还收新用户的美元站全注册约 $265；DoCode 另发 300 站内刀，Matrix 另发 600 积分。">
-<meta name="keywords" content="Claude Code 免费,Claude Code 中转,Codex 中转,Codex 公益站,AI API 中转站,公益站,免费 API 额度,每日免费额度,claude-opus-5 API,New API,AgentRouter,TaBiAI,GPT-5.6 Sol 中转,claude-opus-5 按次计费">
+<meta name="keywords" content="Claude Code 免费,Claude Code 中转,Codex 中转,Codex 公益站,AI API 中转站,公益站,免费 API 额度,每日免费额度,claude-opus-5 API,New API,AgentRouter,GPT-5.6 Sol 中转,claude-opus-5 按次计费">
 <meta property="og:type" content="website">
 <meta property="og:title" content="AI Coding 福利站导航 — 免费额度 · 白嫖 Claude Code / Codex / Cursor 的中转与公益站合集">
 <meta property="og:description" content="免费额度 · 白嫖 Claude Code / Codex / Cursor 的中转与公益站合集。当前收录 8 个福利站，8 个在线，单站首日最高可得 $175 免费额度，还收新用户的美元站全注册约 $265；DoCode 另发 300 站内刀，Matrix 另发 600 积分。">
@@ -234,7 +234,7 @@ tr.shut td { color: var(--fg-dim); }
 </head>
 <body>
 <div class="topbar-stripe"></div>
-<nav class="nav"><div class="wrap navrow"><a class="navlink active" href="">站点总览</a><a class="navlink" href="compare/">按次 vs 按量</a><a class="navlink" href="status/">可用性</a><a class="navlink" href="changelog/">变动日志</a><span class="navspace"></span><a class="navlink" href="feed.xml">Atom 订阅</a></div></nav>
+<nav class="nav"><div class="wrap navrow"><a class="navlink active" href="">站点总览</a><span class="navspace"></span><a class="navlink" href="https://github.com/Q-shuang-dot/gcmp-welfare-temp" target="_blank" rel="noopener">GitHub 仓库</a></div></nav>
 <div class="wrap">
   <header class="hero">
     <h1>AI Coding 福利站导航</h1>
@@ -249,12 +249,22 @@ tr.shut td { color: var(--fg-dim); }
     </div>
     <div class="cta-row">
       <a class="btn btn-primary" href="https://agentrouter.org/register?aff=aibw" target="_blank" rel="noopener">立即免费注册 AgentRouter →</a>
-      
-      <a class="btn btn-ghost" href="compare/">哪个站最耐用？按次 vs 按量 →</a>
+      <a class="btn btn-ghost" href="#gateway-start">🚀 本地网关启动 →</a>
       <a class="btn btn-ghost" href="https://github.com/Q-shuang-dot/gcmp-welfare-temp" target="_blank" rel="noopener">GitHub 仓库 ⭐</a>
     </div>
   </header>
 
+  <section id="gateway-start">
+    <h2>🚀 一分钟上车（本地网关）</h2>
+    <p class="hint">下面的福利站是别人开的，你注册领额度；这个网关跑在你自己机器上，要自己配置上游 key 才能用。</p>
+    <h3>快速启动</h3>
+    <pre><code>git clone https://github.com/Q-shuang-dot/gcmp-welfare-temp
+cd gcmp-welfare-temp
+# 编辑 gcmp-gateway/config.json，填入各中转站的 apiKey
+npm run gateway:start
+</code></pre>
+    <p class="hint">启动后访问 <code>http://127.0.0.1:15800/admin/</code> 查看管理页，访问 <a href="gcmp-gateway/README.md">部署文档 →</a> 了解更多选项。</p>
+  </section>
   <section id="welfare">
     <h2>福利站总览</h2>
     <p class="hint">额度、模型、在线状态由脚本定时抓取站点公开接口自动更新。</p>
@@ -409,11 +419,6 @@ tr.shut td { color: var(--fg-dim); }
       <h2>最近变动</h2>
       <p class="hint">CI 每 6 小时比对一次各站快照，已攒下 131 个样本、覆盖约 27.7 天。额度调整、掉线恢复、模型上下线都会自动记一条。</p>
       <ul class="events"><li><span class="ev-ico">🆕</span><span>新收录 GodRouter：注册送 $80，每日签到 $10</span> <a class="ev-site" href="sites/godrouter/">详情</a> <span class="muted">2026-09-18</span></li><li><span class="ev-ico">🗑️</span><span>移除收录 justdowork</span> <a class="ev-site" href="sites/justdowork/">详情</a> <span class="muted">2026-09-18</span></li><li><span class="ev-ico">🗑️</span><span>移除收录 kktoken</span> <a class="ev-site" href="sites/kktoken/">详情</a> <span class="muted">2026-09-18</span></li><li><span class="ev-ico">🗑️</span><span>移除收录 tabitoken</span> <a class="ev-site" href="sites/tabitoken/">详情</a> <span class="muted">2026-09-18</span></li><li><span class="ev-ico">🆕</span><span>新收录 Long的AI</span> <a class="ev-site" href="sites/aaawinn/">详情</a> <span class="muted">2026-09-17</span></li><li><span class="ev-ico">🆕</span><span>新收录 新疆幻城网安</span> <a class="ev-site" href="sites/hcnsec/">详情</a> <span class="muted">2026-09-17</span></li><li><span class="ev-ico">🆕</span><span>新收录 量界智算</span> <a class="ev-site" href="sites/liangjiewis/">详情</a> <span class="muted">2026-09-17</span></li><li><span class="ev-ico">🆕</span><span>新收录 GCMP Gateway</span> <a class="ev-site" href="sites/gcmp-gateway/">详情</a> <span class="muted">2026-09-16</span></li></ul>
-      <div class="cta-row">
-        <a class="btn btn-ghost" href="changelog/">完整变动日志 →</a>
-        <a class="btn btn-ghost" href="feed.xml">Atom 订阅</a>
-        <a class="btn btn-ghost" href="status/">可用性历史 →</a>
-      </div>
     </section>
   <section id="faq">
     <h2>常见问题</h2>
@@ -441,7 +446,7 @@ document.querySelectorAll('.copy').forEach(function (btn) {
       <li>请勿把生产密钥、隐私数据、企业代码交给来源不明的中转服务；重要项目请使用官方 API。</li>
       <li>请遵守各站点与上游服务商条款，禁止批量注册、刷量、转售额度。</li>
     </ul>
-    <p>数据快照时间：2026-09-18 02:05 UTC · 由 <a href="https://github.com/Q-shuang-dot/gcmp-welfare-temp">github.com/Q-shuang-dot/gcmp-welfare-temp</a> 自动生成 · <a href="https://q-shuang-dot.github.io/gcmp-welfare-temp/feed.xml">Atom 订阅</a></p>
+    <p>数据快照时间：2026-09-18 02:05 UTC · 由 <a href="https://github.com/Q-shuang-dot/gcmp-welfare-temp">github.com/Q-shuang-dot/gcmp-welfare-temp</a> 自动生成</p>
   </footer>
 </div>
 </body>

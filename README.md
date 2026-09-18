@@ -20,8 +20,6 @@
   <a href="https://liangjiewis.com/register?aff=m3C1"><b>量界智算 注册</b></a>
 </p>
 
-<p align="center"><a href="https://q-shuang-dot.github.io/gcmp-welfare-temp/compare/">📊 按次 vs 按量折算横评</a> · <a href="https://q-shuang-dot.github.io/gcmp-welfare-temp/status/">🩺 可用性历史</a> · <a href="https://q-shuang-dot.github.io/gcmp-welfare-temp/changelog/">🗓 变动日志</a> · <a href="https://q-shuang-dot.github.io/gcmp-welfare-temp/feed.xml">🔔 Atom 订阅</a></p>
-
 ---
 
 ## 🚀 一分钟上车（福利站）
@@ -88,7 +86,7 @@ powershell -ExecutionPolicy Bypass -File scripts/quickstart.ps1
 
 **实时数据**（自动抓取站点公开接口）
 
-- ⚠ 接口已连续 72 小时没抓到新数据，下列信息为 `2026-09-15 01:48 UTC` 的快照
+- ⚠ 接口已连续 73 小时没抓到新数据，下列信息为 `2026-09-15 01:48 UTC` 的快照
 - 站点名称：**Agent Router**
 - 面板版本：`init-20260915-25158da5`
 - 邀请他人可得：**$50**
@@ -953,8 +951,6 @@ curl -s https://liangjiewis.com/v1/chat/completions \
 CI 每 6 小时抓一次各站接口，与上一次快照逐字段比对，目前已攒下 131 个样本、覆盖约 27.7 天。额度调整、掉线与恢复、模型上下线、价格变动都会自动记一条：
 
 - 点仓库右上角 **Watch → Custom → Releases**：有重要变动时 GitHub 直接发邮件
-- 订阅 [Atom feed](https://q-shuang-dot.github.io/gcmp-welfare-temp/feed.xml)：RSS 阅读器 / Feedly / Telegram 机器人都能读
-- 在线看：[变动日志](https://q-shuang-dot.github.io/gcmp-welfare-temp/changelog/) · [可用性历史](https://q-shuang-dot.github.io/gcmp-welfare-temp/status/)
 
 最近几条：
 
@@ -1054,6 +1050,6 @@ npm run check     # 校验链接是否还活着
 
 <p align="center"><b>觉得有用点个 ⭐ Star</b>，福利站有变动时这里会自动更新。</p>
 
-<sub>关键词：Claude Code 免费 · Claude Code 中转 · Codex 中转 · Codex 公益站 · AI API 中转站 · 公益站 · 免费 API 额度 · 每日免费额度 · claude-opus-5 API · New API · AgentRouter · TaBiAI · GPT-5.6 Sol 中转 · claude-opus-5 按次计费</sub>
+<sub>关键词：Claude Code 免费 · Claude Code 中转 · Codex 中转 · Codex 公益站 · AI API 中转站 · 公益站 · 免费 API 额度 · 每日免费额度 · claude-opus-5 API · New API · AgentRouter · GPT-5.6 Sol 中转 · claude-opus-5 按次计费</sub>
 
 <!-- 本文件由 scripts/build.mjs 自动生成，请修改 data/sites.json 或 scripts/lib/render-readme.mjs -->
