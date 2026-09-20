@@ -878,7 +878,7 @@ test('没这个站的历史时不报错，返回空口径', () => {
 console.log('changelog / Atom：订阅出口');
 
 const META = {
-  title: 'AI Coding 福利站导航',
+  title: 'AI 福利站 · Claude Code / Codex 免费额度白嫖导航',
   tagline: '免费额度合集',
   keywords: ['claude code'],
   repoUrl: 'https://github.com/Q-shuang-dot/gcmp-welfare-temp',

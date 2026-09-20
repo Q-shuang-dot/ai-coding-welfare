@@ -2,7 +2,7 @@
   "name": "gcmp-welfare-temp",
   "version": "1.0.0",
   "private": true,
-  "description": "AI Coding 福利站导航：免费额度中转站 / 公益站合集，README 与落地页由脚本自动生成",
+  "description": "AI 福利站：免费额度中转站 / 公益站合集，README 与落地页由脚本自动生成",
   "type": "module",
   "engines": {
     "node": ">=18"
