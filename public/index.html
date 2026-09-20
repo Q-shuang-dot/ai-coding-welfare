@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>新增平台 - AI Coding 福利站</title>
+<style>
+  :root {
+    font-family: -apple-system, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+    background: #f6f8fb;
+    color: #1f2937;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; min-height: 100vh; display: flex; justify-content: center; padding: 24px; }
+  .shell { width: 100%; max-width: 960px; }
+  header { margin-bottom: 16px; }
+  header h1 { font-size: 20px; margin: 0 0 6px; }
+  header p { margin: 0; color: #6b7280; font-size: 14px; }
+  .card {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 18px;
+    margin-bottom: 16px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+  }
+  .card h2 { font-size: 15px; margin: 0 0 12px; color: #111827; }
+  .grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+  .field { display: flex; flex-direction: column; gap: 6px; }
+  .field.full { grid-column: 1 / -1; }
+  label { font-size: 13px; font-weight: 600; color: #374151; }
+  label .req { color: #dc2626; }
+  input, textarea, select {
+    font: inherit;
+    padding: 10px 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    background: #fff;
+    color: #111827;
+  }
+  input:focus, textarea:focus, select:focus {
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37,99,235,0.12);
+  }
+  textarea { min-height: 88px; resize: vertical; }
+  .row { display: flex; gap: 12px; align-items: flex-end; }
+  .row .field { flex: 1; }
+  .hint { font-size: 12px; color: #6b7280; margin-top: 2px; }
+  .chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 6px; }
+  .chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 10px;
+    border: 1px solid #e5e7eb;
+    border-radius: 999px;
+    background: #f9fafb;
+    font-size: 13px;
+  }
+  .chip button {
+    border: none;
+    background: transparent;
+    color: #6b7280;
+    cursor: pointer;
+    font-size: 14px;
+    line-height: 1;
+  }
+  .chip button:hover { color: #dc2626; }
+  .add-row {
+    margin-top: 10px;
+    display: flex;
+    gap: 8px;
+  }
+  .add-row input { flex: 1; }
+  button.secondary {
+    padding: 10px 14px;
+    border: 1px solid #d1d5db;
+    background: #fff;
+    color: #374151;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+  }
+  button.primary {
+    padding: 10px 16px;
+    border: none;
+    background: #2563eb;
+    color: #fff;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+  }
+  button.primary:hover { background: #1d4ed8; }
+  .actions { display: flex; justify-content: flex-end; gap: 10px; margin-top: 4px; }
+  .status {
+    margin-top: 12px;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 14px;
+    line-height: 1.6;
+    white-space: pre-wrap;
+    display: none;
+  }
+  .status.ok { display: block; background: #ecfdf5; color: #065f46; border: 1px solid #a7f3d0; }
+  .status.err { display: block; background: #fef2f2; color: #991b1b; border: 1px solid #fecaca; }
+  .badge {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 999px;
+    background: #eef2ff;
+    color: #3730a3;
+    font-size: 12px;
+    font-weight: 600;
+  }
+</style>
+</head>
+<body>
+<div class="shell">
+  <header>
+    <h1>新增平台</h1>
+    <p>只填 <span class="badge">★ 4 个必填项</span> 即可提交；其余字段选填，探测脚本会自动补全。</p>
+  </header>
+
+  <form id="siteForm" novalidate>
+    <div class="card">
+      <h2>基本信息 ★</h2>
+      <div class="grid">
+        <div class="field">
+          <label><span class="req">★</span> ID</label>
+          <input name="id" placeholder="mysite" required />
+          <div class="hint">英文短 id，小写字母/数字/连字符</div>
+        </div>
+        <div class="field">
+          <label><span class="req">★</span> 站点名称</label>
+          <input name="name" placeholder="某某中转站" required />
+        </div>
+        <div class="field full">
+          <label><span class="req">★</span> 邀请注册链接</label>
+          <input name="signupUrl" placeholder="https://example.com/register?aff=你的邀请码" required />
+          <div class="hint">填完整 https 链接，邀请码会自动提取</div>
+        </div>
+        <div class="field full">
+          <label><span class="req">★</span> 一句话卖点</label>
+          <input name="subtitle" placeholder="注册送额度、签到续命、支持 Claude Code" required />
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>额度信息（选填）</h2>
+      <div class="grid">
+        <div class="field">
+          <label>注册送</label>
+          <input name="credits_signup" type="number" min="0" placeholder="如 100" />
+        </div>
+        <div class="field">
+          <label>邀请额外送</label>
+          <input name="credits_invite" type="number" min="0" placeholder="如 50" />
+        </div>
+        <div class="field">
+          <label>每日签到</label>
+          <input name="credits_dailyCheckin" type="number" min="0" placeholder="如 25" />
+        </div>
+        <div class="field">
+          <label>额度单位</label>
+          <select name="credits_unit">
+            <option value="">默认（usd）</option>
+            <option value="usd">usd</option>
+            <option value="point">积分</option>
+            <option value="site-usd">站内刀</option>
+            <option value="free">完全免费</option>
+          </select>
+        </div>
+      </div>
+      <div class="hint" style="margin-top:10px;">不知道就留空，页面会显示「站内公示」；整站免费请选「完全免费」。</div>
+    </div>
+
+    <div class="card">
+      <h2>卖点 / 亮点（选填）</h2>
+      <div class="field full">
+        <label>亮点列表</label>
+        <div id="highlights" class="chips"></div>
+        <div class="add-row">
+          <input id="highlightInput" placeholder="输入一条亮点，回车添加" />
+          <button type="button" class="secondary" data-action="add-highlight">添加</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>更多信息（选填）</h2>
+      <div class="grid">
+        <div class="field">
+          <label>文档地址</label>
+          <input name="docsUrl" placeholder="https://example.com/docs" />
+        </div>
+        <div class="field">
+          <label>模型说明</label>
+          <input name="modelsNote" placeholder="补充说明" />
+        </div>
+      </div>
+    </div>
+
+    <div class="actions">
+      <button type="button" class="secondary" id="resetBtn">重置</button>
+      <button type="submit" class="primary">提交并导入</button>
+    </div>
+  </form>
+
+  <div id="status" class="status"></div>
+</div>
+
+<script>
+  const form = document.getElementById('siteForm');
+  const status = document.getElementById('status');
+  const highlightsEl = document.getElementById('highlights');
+  const highlightInput = document.getElementById('highlightInput');
+  const resetBtn = document.getElementById('resetBtn');
+
+  let highlights = [];
+
+  function renderHighlights() {
+    highlightsEl.innerHTML = '';
+    highlights.forEach((text, index) => {
+      const chip = document.createElement('div');
+      chip.className = 'chip';
+      chip.innerHTML = `${escapeHtml(text)} <button type="button" data-index="${index}">×</button>`;
+      highlightsEl.appendChild(chip);
+    });
+  }
+
+  function escapeHtml(str) {
+    return str
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;');
+  }
+
+  highlightInput.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') {
+      e.preventDefault();
+      const value = highlightInput.value.trim();
+      if (value) {
+        highlights.push(value);
+        highlightInput.value = '';
+        renderHighlights();
+      }
+    }
+  });
+
+  document.querySelector('[data-action="add-highlight"]').addEventListener('click', () => {
+    const value = highlightInput.value.trim();
+    if (value) {
+      highlights.push(value);
+      highlightInput.value = '';
+      renderHighlights();
+    }
+  });
+
+  highlightsEl.addEventListener('click', (e) => {
+    const btn = e.target.closest('button');
+    if (!btn) return;
+    const index = Number(btn.dataset.index);
+    highlights.splice(index, 1);
+    renderHighlights();
+  });
+
+  resetBtn.addEventListener('click', () => {
+    form.reset();
+    highlights = [];
+    renderHighlights();
+    status.className = 'status';
+    status.textContent = '';
+  });
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    status.className = 'status';
+    status.textContent = '提交中...';
+
+    const fd = new FormData(form);
+    const data = {
+      id: String(fd.get('id') || '').trim(),
+      name: String(fd.get('name') || '').trim(),
+      signupUrl: String(fd.get('signupUrl') || '').trim(),
+      subtitle: String(fd.get('subtitle') || '').trim(),
+      credits: {
+        signup: fd.get('credits_signup') ? Number(fd.get('credits_signup')) : null,
+        invite: fd.get('credits_invite') ? Number(fd.get('credits_invite')) : null,
+        dailyCheckin: fd.get('credits_dailyCheckin') ? Number(fd.get('credits_dailyCheckin')) : null,
+        unit: String(fd.get('credits_unit') || ''),
+        ...(String(fd.get('credits_unit') || '') === 'free' ? { free: true } : {}),
+      },
+      highlights,
+      docsUrl: String(fd.get('docsUrl') || '').trim() || null,
+      modelsNote: String(fd.get('modelsNote') || '').trim() || null,
+    };
+
+    if (!data.credits.unit) delete data.credits.unit;
+
+    try {
+      const res = await fetch('/api/import', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data),
+      });
+      const text = await res.text();
+      status.className = res.ok ? 'status ok' : 'status err';
+      status.textContent = text;
+    } catch (error) {
+      status.className = 'status err';
+      status.textContent = `✘ 网络错误：${error.message}`;
+    }
+  });
+</script>
+</body>
+</html>

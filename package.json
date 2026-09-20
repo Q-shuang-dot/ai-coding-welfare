@@ -12,6 +12,8 @@
     "history": "node scripts/history.mjs",
     "backfill": "node scripts/history.mjs --backfill",
     "build": "node scripts/build.mjs",
+    "add": "node scripts/add.mjs",
+    "add:web": "node scripts/server.mjs",
     "check": "node scripts/check.mjs",
     "notify": "node scripts/notify.mjs",
     "test": "node scripts/test.mjs",
