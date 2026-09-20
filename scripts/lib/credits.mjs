@@ -23,11 +23,8 @@ const num = (v) => (Number.isFinite(Number(v)) && Number(v) > 0 ? Number(v) : nu
 const UNITS = {
   usd: { prefix: '$', suffix: '' },
   point: { prefix: '', suffix: ' 积分' },
-  // 也有站点用「刀」计价，但那个刀不是美元：New API 面板的 price 字段是充值比例，
-  // 本页多数站是 7.3（¥7.3 ≈ $1），DoCode 是 0.02（1 元 = 50 刀），差两个数量级，
-  // 扣费时还要再乘站内倍率。把它和美元站加在一起同样是编数字，所以单列一个单位，
-  // 由 usdTotals 排除在跨站合计之外、页面上按「站内刀」如实显示。
   'site-usd': { prefix: '', suffix: ' 站内刀' },
+  free: { prefix: '', suffix: '' },
 };
 
 export const DEFAULT_UNIT = 'usd';
@@ -45,20 +42,29 @@ export function creditPlan(site, snap) {
   const pool = num(c.dailyQuota);
   const approx = Boolean(c.approx);
   const unit = c.unit ?? DEFAULT_UNIT;
+  const free = Boolean(c.free);
 
   // 一个站点只会是「签到累积」或「每日重置」中的一种；两个都填时以签到为准，交给 auditCredits 告警
   const daily = checkin ?? pool;
   const resets = checkin == null && pool != null;
 
-  const parts = [signup, invite].filter((n) => n != null);
-  const base = parts.length ? parts.reduce((a, b) => a + b, 0) : null;
-  const firstDay = base != null || daily != null ? (base ?? 0) + (realNameBonus ?? 0) + (daily ?? 0) : null;
-  // 首日额度由几笔钱凑出来的：只有一笔时渲染器就别再重复一遍构成，那是废话
-  const sources = [signup, invite, realNameBonus, daily].filter((n) => n != null).length;
+  let firstDay, firstUnit, sources, base;
+  if (free) {
+    firstDay = 0;
+    firstUnit = 'free';
+    sources = 1;
+    base = null;
+  } else {
+    const parts = [signup, invite].filter((n) => n != null);
+    base = parts.length ? parts.reduce((a, b) => a + b, 0) : null;
+    firstDay = base != null || daily != null ? (base ?? 0) + (realNameBonus ?? 0) + (daily ?? 0) : null;
+    firstUnit = unit;
+    sources = [signup, invite, realNameBonus, daily].filter((n) => n != null).length;
+  }
 
   return {
     name: site?.name ?? null,
-    unit,
+    unit: firstUnit,
     signup,
     invite,
     realNameBonus,
@@ -74,9 +80,10 @@ export function creditPlan(site, snap) {
   };
 }
 
-/** $175 / ≈$92 / 600 积分 / null */
+/** $175 / ≈$92 / 600 积分 / 免费 */
 export function usd(n, approx = false, unit = DEFAULT_UNIT) {
   if (n == null) return null;
+  if (unit === 'free') return '免费';
   const { prefix, suffix } = unitStyle(unit);
   return `${approx ? '≈' : ''}${prefix}${n}${suffix}`;
 }

@@ -43,11 +43,13 @@ function overviewTable(sites, liveById) {
     // 状态栏必须说出来，否则下面那个「首日可得 $120」是在骗人点链接
     const state = l.online ? (route.state === 'closed' ? '🟡 停注' : '🟢 在线') : '🔴 异常';
     const first =
-      plan.firstDay != null
-        ? route.state === 'closed'
-          ? `~~${usd(plan.firstDay, plan.approx, plan.unit)}~~`
-          : `**${usd(plan.firstDay, plan.approx, plan.unit)}**`
-        : '站内公示';
+      plan.unit === 'free'
+        ? '免费'
+        : plan.firstDay != null
+          ? route.state === 'closed'
+            ? `~~${usd(plan.firstDay, plan.approx, plan.unit)}~~`
+            : `**${usd(plan.firstDay, plan.approx, plan.unit)}**`
+          : '站内公示';
     const detail = breakdown(plan) ?? '—';
     const checkin =
       perDay(plan) ??

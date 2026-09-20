@@ -18,9 +18,11 @@ function factRows(site, snap) {
   const route = signupRoute(snap);
   const shut = route.state === 'closed';
   return [
-    p.firstDay != null
-      ? ['首日可得', `<b${shut ? ' class="struck"' : ''}>${usd(p.firstDay, p.approx, p.unit)}</b>${shut ? '<small> 站点停注中，新号拿不到</small>' : ''}`]
-      : null,
+    p.unit === 'free'
+      ? ['首日可得', '免费']
+      : p.firstDay != null
+        ? ['首日可得', `<b${shut ? ' class="struck"' : ''}>${usd(p.firstDay, p.approx, p.unit)}</b>${shut ? '<small> 站点停注中，新号拿不到</small>' : ''}`]
+        : null,
     p.sources > 1 && breakdown(p) ? ['额度构成', esc(breakdown(p))] : null,
     p.daily != null
       ? ['之后每天', p.resets ? `重置额度池 ${usd(p.daily, p.approx, p.unit)}（不累积）` : `签到 ${usd(p.daily, p.approx, p.unit)}`]
@@ -141,7 +143,7 @@ export function renderSitePage({ meta, site, snap, live, css, history, siblings 
   const url = `${meta.pagesUrl}sites/${site.id}/`;
   const title = `${site.name} 免费额度 / 邀请链接 / Claude Code 配置 — ${meta.title}`;
   const desc = `${site.name}：${site.subtitle}${
-    shut ? '。⚠ 站点接口自报已暂停新用户注册' : p.firstDay != null ? `。首日可得 ${usd(p.firstDay, p.approx, p.unit)}${breakdown(p) ? `（${breakdown(p)}）` : ''}` : ''
+    shut ? '。⚠ 站点接口自报已暂停新用户注册' : p.unit === 'free' ? '。首日可得 免费' : p.firstDay != null ? `。首日可得 ${usd(p.firstDay, p.approx, p.unit)}${breakdown(p) ? `（${breakdown(p)}）` : ''}` : ''
   }。含实时在线状态、模型价格、Claude Code / Codex 接入配置与踩坑清单，数据快照 ${fmt(snap?.checkedAt)}。`;
 
   const faq = [
@@ -157,7 +159,7 @@ export function renderSitePage({ meta, site, snap, live, css, history, siblings 
     <div class="pills">
       <span class="pill"><span class="dot ${up ? 'up' : 'down'}"></span> ${up ? '在线' : '探测异常'}</span>
       ${shut ? '<span class="pill warn">暂停注册</span>' : ''}
-      ${p.firstDay != null ? `<span class="pill">首日可得 <b>${usd(p.firstDay, p.approx, p.unit)}</b></span>` : ''}
+      ${p.unit === 'free' ? `<span class="pill">首日可得 <b>免费</b></span>` : p.firstDay != null ? `<span class="pill">首日可得 <b>${usd(p.firstDay, p.approx, p.unit)}</b></span>` : ''}
       ${snap?.models?.length ? `<span class="pill">可查模型 <b>${snap.models.length}</b> 个</span>` : ''}
       <span class="pill">数据更新 <b>${esc(fmt(snap?.checkedAt))}</b></span>
     </div>

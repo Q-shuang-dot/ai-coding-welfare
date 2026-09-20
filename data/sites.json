@@ -467,7 +467,8 @@
         "signup": null,
         "invite": null,
         "dailyCheckin": null,
-        "approx": false
+        "approx": false,
+        "free": true
       },
       "signupUrl": "https://aaawinn.xyz/sign-up?aff=ijFL",
       "inviteCode": "ijFL",
