@@ -881,8 +881,8 @@ const META = {
   title: 'AI 福利站 · Claude Code / Codex 免费额度白嫖导航',
   tagline: '免费额度合集',
   keywords: ['claude code'],
-  repoUrl: 'https://github.com/Q-shuang-dot/gcmp-welfare-temp',
-  pagesUrl: 'https://panxunying.github.io/ai-coding-welfare/',
+  repoUrl: 'https://github.com/Q-shuang-dot/ai-coding-welfare',
+  pagesUrl: 'https://q-shuang-dot.github.io/ai-coding-welfare/',
 };
 const EVENTS = [
   { at: '2026-08-30T08:56:00.000Z', siteId: 'rawchat', type: 'online', severity: 'major', text: 'RawChat 恢复在线' },
@@ -899,7 +899,7 @@ test('Atom 一天一条 entry，不是一条事件一条推送（6 小时一次�
   const xml = renderAtom({ meta: META, groups: GROUPS, updated: EVENTS[0].at });
   assert.equal(xml.match(/<entry>/g).length, 2);
   assert.match(xml, /<title>2026-08-30 · 1 项变动<\/title>/);
-  assert.match(xml, /<id>tag:panxunying\.github\.io,2026-08-30:changelog<\/id>/);
+  assert.match(xml, /<id>tag:q-shuang-dot\.github\.io,2026-08-30:changelog<\/id>/);
 });
 test('Atom 正文里的 HTML 必须转义，否则 feed 是坏的 XML', () => {
   const xml = renderAtom({ meta: META, groups: GROUPS, updated: EVENTS[1].at });

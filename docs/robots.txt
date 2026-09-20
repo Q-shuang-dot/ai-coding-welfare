@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://q-shuang-dot.github.io/gcmp-welfare-temp/sitemap.xml
+Sitemap: https://q-shuang-dot.github.io/ai-coding-welfare/sitemap.xml

@@ -26,13 +26,13 @@ export const NAV = [
   { href: '', label: '站点总览' },
 ];
 
-function navBar(base, current) {
+function navBar(base, current, repoUrl) {
   const items = NAV.map((n) => {
     const active = n.href === current;
     return `<a class="navlink${active ? ' active' : ''}" href="${esc(base + n.href)}">${esc(n.label)}</a>`;
   });
   return `<nav class="nav"><div class="wrap navrow">${items.join('')}<span class="navspace"></span><a class="navlink" href="${esc(
-    `${base}https://github.com/Q-shuang-dot/gcmp-welfare-temp`,
+    repoUrl,
   )}" target="_blank" rel="noopener">GitHub 仓库</a></div></nav>`;
 }
 
@@ -66,7 +66,7 @@ ${css ? `<style>\n${css}</style>` : `<link rel="stylesheet" href="${esc(base)}as
 </head>
 <body>
 <div class="topbar-stripe"></div>
-${navBar(base, current)}
+${navBar(base, current, meta.repoUrl)}
 <div class="wrap">
 ${body}
   <footer>

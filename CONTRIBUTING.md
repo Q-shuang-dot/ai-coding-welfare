@@ -112,7 +112,7 @@ npm run check     # 确认新链接可访问
 2. 建好空仓库后推上去：
 
 ```bash
-git remote add origin https://github.com/Q-shuang-dot/gcmp-welfare-temp.git
+git remote add origin https://github.com/Q-shuang-dot/ai-coding-welfare.git
 git branch -M main
 git push -u origin main
 ```

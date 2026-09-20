@@ -88,7 +88,7 @@ powershell -ExecutionPolicy Bypass -File scripts/quickstart.ps1
 
 **实时数据**（自动抓取站点公开接口）
 
-- ⚠ 接口已连续 122 小时没抓到新数据，下列信息为 `2026-09-15 01:48 UTC` 的快照
+- ⚠ 接口已连续 123 小时没抓到新数据，下列信息为 `2026-09-15 01:48 UTC` 的快照
 - 站点名称：**Agent Router**
 - 面板版本：`init-20260915-25158da5`
 - 邀请他人可得：**$50**
@@ -1198,7 +1198,7 @@ npm run check     # 校验链接是否还活着
 
 发现好用的公益站 / 中转站？两种方式：
 
-- 提 [Issue](https://github.com/Q-shuang-dot/gcmp-welfare-temp/issues/new?template=new-site.yml) 填个表单，我来收录
+- 提 [Issue](https://github.com/Q-shuang-dot/ai-coding-welfare/issues/new?template=new-site.yml) 填个表单，我来收录
 - 或者直接 PR：往 `data/sites.json` 加一条，跑 `npm run refresh && npm run build` 后提交
 
 收录标准：**能免费拿到额度**、注册流程不套娃、站点公开接口可探测。
