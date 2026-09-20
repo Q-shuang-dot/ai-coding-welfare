@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-09-20T04:54:11.787Z",
+  "generatedAt": "2026-09-20T05:12:50.089Z",
   "sites": [
     {
       "id": "agentrouter",
-      "checkedAt": "2026-09-20T04:54:05.533Z",
+      "checkedAt": "2026-09-20T05:12:43.896Z",
       "online": true,
-      "latencyMs": 304,
+      "latencyMs": 329,
       "error": "invalid json",
       "systemName": "Agent Router",
       "version": "init-20260915-25158da5",
@@ -164,7 +164,7 @@
       "signup": {
         "status": 200,
         "ok": true,
-        "ms": 1393,
+        "ms": 1294,
         "attempts": 1
       },
       "mirrors": [
@@ -194,10 +194,10 @@
     },
     {
       "id": "docode",
-      "checkedAt": "2026-09-20T04:54:00.181Z",
+      "checkedAt": "2026-09-20T05:12:38.435Z",
       "apiOk": true,
       "pricingOk": false,
-      "latencyMs": 991,
+      "latencyMs": 851,
       "error": null,
       "systemName": "DoCode",
       "version": "",
@@ -249,7 +249,7 @@
       "signup": {
         "status": 200,
         "ok": true,
-        "ms": 878,
+        "ms": 752,
         "attempts": 1
       },
       "mirrors": [
@@ -266,10 +266,10 @@
     },
     {
       "id": "aipm",
-      "checkedAt": "2026-09-20T04:54:03.574Z",
+      "checkedAt": "2026-09-20T05:12:38.349Z",
       "apiOk": true,
       "pricingOk": true,
-      "latencyMs": 4422,
+      "latencyMs": 814,
       "error": null,
       "systemName": "AIPM",
       "version": "",
@@ -359,10 +359,10 @@
           "inputPerMTok": 3,
           "outputPerMTok": 15,
           "groups": [
-            "default",
             "agent",
             "vip",
-            "svip"
+            "svip",
+            "default"
           ],
           "protocols": [
             "openai",
@@ -377,10 +377,10 @@
           "inputPerMTok": 3,
           "outputPerMTok": 15,
           "groups": [
+            "default",
             "vip",
             "agent",
-            "svip",
-            "default"
+            "svip"
           ],
           "protocols": [
             "anthropic",
@@ -429,10 +429,10 @@
           "inputPerMTok": 3,
           "outputPerMTok": 15,
           "groups": [
-            "agent",
-            "default",
             "vip",
-            "svip"
+            "svip",
+            "agent",
+            "default"
           ],
           "protocols": [
             "openai"
@@ -464,7 +464,7 @@
       "signup": {
         "status": 200,
         "ok": true,
-        "ms": 4409,
+        "ms": 684,
         "attempts": 1
       },
       "mirrors": [
@@ -489,10 +489,10 @@
     },
     {
       "id": "justwoker",
-      "checkedAt": "2026-09-20T04:53:59.935Z",
+      "checkedAt": "2026-09-20T05:12:38.158Z",
       "apiOk": true,
       "pricingOk": false,
-      "latencyMs": 781,
+      "latencyMs": 634,
       "error": null,
       "systemName": "JustDoWork",
       "version": "v1.0.0-rc.23",
@@ -519,7 +519,7 @@
       "signup": {
         "status": 200,
         "ok": true,
-        "ms": 1482,
+        "ms": 1340,
         "attempts": 1
       },
       "mirrors": [],
@@ -531,10 +531,10 @@
     },
     {
       "id": "matrix",
-      "checkedAt": "2026-09-20T04:54:01.224Z",
+      "checkedAt": "2026-09-20T05:12:39.169Z",
       "apiOk": true,
       "pricingOk": false,
-      "latencyMs": 2085,
+      "latencyMs": 1646,
       "error": null,
       "systemName": null,
       "version": null,
@@ -558,7 +558,7 @@
       "signup": {
         "status": 200,
         "ok": true,
-        "ms": 2147,
+        "ms": 1704,
         "attempts": 1
       },
       "mirrors": [],
@@ -570,10 +570,10 @@
     },
     {
       "id": "seekai",
-      "checkedAt": "2026-09-20T04:54:00.758Z",
+      "checkedAt": "2026-09-20T05:12:38.825Z",
       "apiOk": true,
       "pricingOk": false,
-      "latencyMs": 1617,
+      "latencyMs": 1301,
       "error": null,
       "systemName": "SeekAi",
       "version": "v1.0.0-rc.25",
@@ -601,7 +601,7 @@
       "signup": {
         "status": 200,
         "ok": true,
-        "ms": 1679,
+        "ms": 1282,
         "attempts": 1
       },
       "mirrors": [
@@ -618,10 +618,10 @@
     },
     {
       "id": "aaawinn",
-      "checkedAt": "2026-09-20T04:54:00.817Z",
+      "checkedAt": "2026-09-20T05:12:39.009Z",
       "apiOk": true,
       "pricingOk": false,
-      "latencyMs": 1675,
+      "latencyMs": 1484,
       "error": null,
       "systemName": "Long的AI",
       "version": "",
@@ -673,7 +673,7 @@
       "signup": {
         "status": 200,
         "ok": true,
-        "ms": 1677,
+        "ms": 1480,
         "attempts": 1
       },
       "mirrors": [],
@@ -685,10 +685,10 @@
     },
     {
       "id": "hcnsec",
-      "checkedAt": "2026-09-20T04:54:01.746Z",
+      "checkedAt": "2026-09-20T05:12:40.489Z",
       "apiOk": true,
       "pricingOk": false,
-      "latencyMs": 2603,
+      "latencyMs": 2963,
       "error": null,
       "systemName": "新疆幻城网安科技公益大模型安全网关",
       "version": "",
@@ -741,7 +741,7 @@
       "signup": {
         "status": 200,
         "ok": true,
-        "ms": 4312,
+        "ms": 3872,
         "attempts": 1
       },
       "mirrors": [],
@@ -753,10 +753,10 @@
     },
     {
       "id": "liangjiewis",
-      "checkedAt": "2026-09-20T04:54:01.590Z",
+      "checkedAt": "2026-09-20T05:12:39.684Z",
       "apiOk": true,
       "pricingOk": false,
-      "latencyMs": 2447,
+      "latencyMs": 2157,
       "error": null,
       "systemName": "量界智算",
       "version": "v0.12.14",
@@ -806,7 +806,7 @@
       "signup": {
         "status": 200,
         "ok": true,
-        "ms": 2436,
+        "ms": 2160,
         "attempts": 1
       },
       "mirrors": [
