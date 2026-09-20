@@ -1,6 +1,6 @@
 # 变动日志
 
-AI Coding 福利站导航的自动变动记录：站点上下线、额度调整、模型与价格变化，由 CI 每 6 小时对比一次快照生成。
+AI 福利站 · Claude Code / Codex 免费额度白嫖导航的自动变动记录：站点上下线、额度调整、模型与价格变化，由 CI 每 6 小时对比一次快照生成。
 
 订阅方式：[Atom feed](https://q-shuang-dot.github.io/gcmp-welfare-temp/feed.xml) · [Watch → Custom → Releases](https://github.com/Q-shuang-dot/gcmp-welfare-temp/watchers) · 网页版 [变动日志](https://q-shuang-dot.github.io/gcmp-welfare-temp/changelog/)
 
@@ -8,6 +8,7 @@ AI Coding 福利站导航的自动变动记录：站点上下线、额度调整�
 
 ## 2026-09-20
 
+- 📢 新疆幻城网安 发了公告：step-5-preview我站已上线，支持多模态，亲测能力与glm-5.2持平，免费用户可用速度快 <sub>03:37 UTC</sub>
 - 🆕 新收录 AIPM <sub>00:34 UTC</sub>
 - 🗑️ 移除收录 godrouter <sub>00:34 UTC</sub>
 
