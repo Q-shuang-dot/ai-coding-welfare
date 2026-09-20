@@ -744,13 +744,13 @@ curl -s https://seekai.cc/v1/chat/completions \
 
 ### 🟢 Long的AI
 
-> New API 中转站 · 只能用满 120 天的 GitHub 账号注册，白嫖分组公告「永久免费」，GPT 系模型要用 Anthropic 协议对接
+> New API 中转站 · 白嫖分组全部免费、费用 0 元，GitHub 账号满 120 天可注册，GPT 系模型走 Anthropic 协议
 
 <a href="https://aaawinn.xyz/sign-up?aff=ijFL" target="_blank" rel="noopener"><img src="https://img.shields.io/badge/%E7%AB%8B%E5%8D%B3%E6%B3%A8%E5%86%8C-Long%E7%9A%84AI-brightgreen?style=for-the-badge" alt="注册 Long的AI"></a>
 
 **为什么值得注册**
 
-- 白嫖分组站方公告写明「永久免费」，2026-09-17 刚更新了 deepseek-v4 相关版本与 4.1，公告说后续 kimi3 会下架
+- 白嫖分组站方公告写明「永久免费」，费用 0 元，2026-09-17 刚更新了 deepseek-v4 相关版本与 4.1，公告说后续 kimi3 会下架
 - 注册只用 GitHub 授权，不用记密码，但要求 GitHub 账号注册时间满 120 天（站方防脚本刷号）
 - 三种协议都活着：/v1/chat/completions、/v1/messages、/v1/responses 匿名请求返回 401 而不是 404（2026-09-17 实测）
 - 白嫖分组的模型来源贴在公开池页面，站方称站点收入全部投进白嫖分组
