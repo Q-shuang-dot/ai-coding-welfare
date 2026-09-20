@@ -168,6 +168,69 @@
       "community": []
     },
     {
+      "id": "supxh",
+      "name": "肖恩AI",
+      "subtitle": "免费大模型API · 注册送5000额度，每日签到1000~3000，邀请双方各得2000",
+      "recommended": false,
+      "credits": {
+        "signup": 7000,
+        "invite": 5000,
+        "dailyCheckin": 2000,
+        "approx": true,
+        "unit": "point"
+      },
+      "signupUrl": "https://free.supxh.xin/register?code=MVU8GX",
+      "inviteCode": "MVU8GX",
+      "homeUrl": "https://free.supxh.xin",
+      "docsUrl": null,
+      "statusApi": "https://free.supxh.xin/api/status",
+      "pricingApi": "https://free.supxh.xin/api/models/pricing",
+      "mirrors": [],
+      "tags": [
+        "New API",
+        "中转站",
+        "免费额度",
+        "每日签到",
+        "Claude Code",
+        "Codex",
+        "Anthropic 兼容",
+        "OpenAI 兼容"
+      ],
+      "highlights": [
+        "从本页邀请链接注册即得 7000~10000 额度；邀请码 MVU8GX 可再得 5000，首日理论最高 15000 点",
+        "站内不定期开放限时额外领取 15000 额度的活动，登录后台查看当前是否有可领任务",
+        "支持每日签到（页面文案为 1000~3000），长期白嫖有续命来源",
+        "定价页免登录可读（/api/models/pricing 公开返回 191 个模型），本页可直接列出可用模型",
+        "注册方式为 QQ 邮箱 + 邮箱验证码，邀请码字段选填但建议填上拿满额度"
+      ],
+      "endpoints": {
+        "anthropic": "https://free.supxh.xin",
+        "openai": "https://free.supxh.xin/v1"
+      },
+      "modelsNote": "2026-09-20 公开定价页返回 191 个模型，含 stepfun、deepseek-v4.1-flash、gpt-5.5、gemini-2.5-flash、claude-sonnet-4-6、kimi-k2.5 等。注意返回里同时混有大量免费与付费条目，模型可用性与倍率以控制台为准。",
+      "register": {
+        "methods": [
+          "QQ 邮箱 + 密码"
+        ],
+        "requirements": [
+          "仅支持 QQ 邮箱注册，需要邮箱验证码",
+          "邀请码选填，但从本页链接进入并填写 MVU8GX 可额外得 5000 额度",
+          "注册页有人机校验，遇到拦截属于正常防护"
+        ]
+      },
+      "earnMore": [
+        "每日签到可领额度（登录后台操作）",
+        "邀请他人注册，邀请双方各得 5000 额度",
+        "额度类型为积分，可用于兑换模型调用"
+      ],
+      "caveats": [
+        "积分点数和人民币/美元折算未在公开接口暴露，本页按站点公示登记，入账以后台为准",
+        "模型列表虽可公开读取，但免费/付费线路、模型上下架、倍率调整均可能随时变化",
+        "该站为新收录站点，稳定性与可用性尚待长期观察"
+      ],
+      "community": []
+    },
+    {
       "id": "aipm",
       "name": "AIPM",
       "subtitle": "New API 中转站 · 只做 Claude 4.6（含 thinking），default 分组倍率低到 0.025，只能用 GitHub / LinuxDO 登录，正在迁移域名",
