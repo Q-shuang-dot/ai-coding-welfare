@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-09-20T00:34:06.575Z",
+  "generatedAt": "2026-09-20T01:11:47.295Z",
   "sites": [
     {
       "id": "agentrouter",
-      "checkedAt": "2026-09-19T20:40:59.311Z",
+      "checkedAt": "2026-09-20T01:11:40.993Z",
       "online": true,
-      "latencyMs": 319,
+      "latencyMs": 311,
       "error": "invalid json",
       "systemName": "Agent Router",
       "version": "init-20260915-25158da5",
@@ -164,13 +164,13 @@
       "signup": {
         "status": 200,
         "ok": true,
-        "ms": 1601,
+        "ms": 1095,
         "attempts": 1
       },
       "mirrors": [
         {
           "homeUrl": "https://ps.air-outer.com",
-          "online": true
+          "online": false
         }
       ],
       "staleFrom": "2026-09-15T01:48:59.261Z",
@@ -194,10 +194,10 @@
     },
     {
       "id": "docode",
-      "checkedAt": "2026-09-20T00:33:30.076Z",
+      "checkedAt": "2026-09-20T01:11:35.728Z",
       "apiOk": true,
       "pricingOk": false,
-      "latencyMs": 725,
+      "latencyMs": 885,
       "error": null,
       "systemName": "DoCode",
       "version": "",
@@ -249,7 +249,7 @@
       "signup": {
         "status": 200,
         "ok": true,
-        "ms": 620,
+        "ms": 800,
         "attempts": 1
       },
       "mirrors": [
@@ -266,10 +266,10 @@
     },
     {
       "id": "aipm",
-      "checkedAt": "2026-09-20T00:33:30.730Z",
+      "checkedAt": "2026-09-20T01:11:35.733Z",
       "apiOk": true,
       "pricingOk": true,
-      "latencyMs": 1348,
+      "latencyMs": 923,
       "error": null,
       "systemName": "AIPM",
       "version": "",
@@ -377,10 +377,10 @@
           "inputPerMTok": 3,
           "outputPerMTok": 15,
           "groups": [
+            "default",
             "vip",
             "agent",
-            "svip",
-            "default"
+            "svip"
           ],
           "protocols": [
             "anthropic",
@@ -446,10 +446,10 @@
           "inputPerMTok": 3,
           "outputPerMTok": 15,
           "groups": [
-            "agent",
             "default",
             "vip",
-            "svip"
+            "svip",
+            "agent"
           ],
           "protocols": [
             "openai"
@@ -464,7 +464,7 @@
       "signup": {
         "status": 200,
         "ok": true,
-        "ms": 2530,
+        "ms": 908,
         "attempts": 1
       },
       "mirrors": [
@@ -489,10 +489,10 @@
     },
     {
       "id": "justwoker",
-      "checkedAt": "2026-09-20T00:33:30.137Z",
+      "checkedAt": "2026-09-20T01:11:35.761Z",
       "apiOk": true,
       "pricingOk": false,
-      "latencyMs": 897,
+      "latencyMs": 949,
       "error": null,
       "systemName": "JustDoWork",
       "version": "v1.0.0-rc.23",
@@ -519,7 +519,7 @@
       "signup": {
         "status": 200,
         "ok": true,
-        "ms": 1247,
+        "ms": 1488,
         "attempts": 1
       },
       "mirrors": [],
@@ -531,10 +531,10 @@
     },
     {
       "id": "matrix",
-      "checkedAt": "2026-09-20T00:33:29.595Z",
+      "checkedAt": "2026-09-20T01:11:36.593Z",
       "apiOk": true,
       "pricingOk": false,
-      "latencyMs": 347,
+      "latencyMs": 1779,
       "error": null,
       "systemName": null,
       "version": null,
@@ -558,7 +558,7 @@
       "signup": {
         "status": 200,
         "ok": true,
-        "ms": 379,
+        "ms": 1866,
         "attempts": 1
       },
       "mirrors": [],
@@ -570,11 +570,11 @@
     },
     {
       "id": "seekai",
-      "checkedAt": "2026-09-20T00:33:35.376Z",
-      "apiOk": false,
+      "checkedAt": "2026-09-20T01:11:36.254Z",
+      "apiOk": true,
       "pricingOk": false,
-      "latencyMs": 222,
-      "error": "HTTP 403",
+      "latencyMs": 1438,
+      "error": null,
       "systemName": "SeekAi",
       "version": "v1.0.0-rc.25",
       "registerOpen": true,
@@ -599,9 +599,9 @@
         "openai": null
       },
       "signup": {
-        "status": 403,
-        "ok": false,
-        "ms": 874,
+        "status": 200,
+        "ok": true,
+        "ms": 1510,
         "attempts": 1
       },
       "mirrors": [
@@ -610,26 +610,18 @@
           "online": true
         }
       ],
-      "probeBlocked": true,
+      "probeBlocked": false,
       "online": true,
-      "dataStale": true,
-      "staleFrom": "2026-09-19T20:40:54.239Z",
-      "staleFields": [
-        "systemName",
-        "version",
-        "registerOpen",
-        "passwordRegister",
-        "checkinEnabled",
-        "loginMethods",
-        "quotaPerUnit"
-      ]
+      "dataStale": false,
+      "staleFrom": null,
+      "staleFields": []
     },
     {
       "id": "aaawinn",
-      "checkedAt": "2026-09-20T00:33:30.084Z",
+      "checkedAt": "2026-09-20T01:11:36.146Z",
       "apiOk": true,
       "pricingOk": false,
-      "latencyMs": 828,
+      "latencyMs": 1329,
       "error": null,
       "systemName": "Long的AI",
       "version": "",
@@ -681,7 +673,7 @@
       "signup": {
         "status": 200,
         "ok": true,
-        "ms": 855,
+        "ms": 1331,
         "attempts": 1
       },
       "mirrors": [],
@@ -693,10 +685,10 @@
     },
     {
       "id": "hcnsec",
-      "checkedAt": "2026-09-20T00:33:29.747Z",
+      "checkedAt": "2026-09-20T01:11:37.940Z",
       "apiOk": true,
       "pricingOk": false,
-      "latencyMs": 480,
+      "latencyMs": 3123,
       "error": null,
       "systemName": "新疆幻城网安科技公益大模型安全网关",
       "version": "",
@@ -749,7 +741,7 @@
       "signup": {
         "status": 200,
         "ok": true,
-        "ms": 510,
+        "ms": 3068,
         "attempts": 1
       },
       "mirrors": [],
@@ -761,10 +753,10 @@
     },
     {
       "id": "liangjiewis",
-      "checkedAt": "2026-09-20T00:33:29.879Z",
+      "checkedAt": "2026-09-20T01:11:36.881Z",
       "apiOk": true,
       "pricingOk": false,
-      "latencyMs": 615,
+      "latencyMs": 2062,
       "error": null,
       "systemName": "量界智算",
       "version": "v0.12.14",
@@ -814,7 +806,7 @@
       "signup": {
         "status": 200,
         "ok": true,
-        "ms": 585,
+        "ms": 2065,
         "attempts": 1
       },
       "mirrors": [
