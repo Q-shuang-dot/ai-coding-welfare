@@ -50,7 +50,7 @@ function overviewTable(sites, liveById) {
             ? `~~${usd(plan.firstDay, plan.approx, plan.unit)}~~`
             : `**${usd(plan.firstDay, plan.approx, plan.unit)}**`
           : '站内公示';
-    const detail = breakdown(plan) ?? '—';
+    const detail = plan.unit === 'free' ? '白嫖分组免费' : breakdown(plan) ?? '—';
     const checkin =
       perDay(plan) ??
       (l.checkinEnabled
