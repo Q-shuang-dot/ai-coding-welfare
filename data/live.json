@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-19T20:41:05.618Z",
+  "generatedAt": "2026-09-20T00:34:06.575Z",
   "sites": [
     {
       "id": "agentrouter",
@@ -170,7 +170,7 @@
       "mirrors": [
         {
           "homeUrl": "https://ps.air-outer.com",
-          "online": false
+          "online": true
         }
       ],
       "staleFrom": "2026-09-15T01:48:59.261Z",
@@ -194,10 +194,10 @@
     },
     {
       "id": "docode",
-      "checkedAt": "2026-09-19T20:40:53.900Z",
+      "checkedAt": "2026-09-20T00:33:30.076Z",
       "apiOk": true,
       "pricingOk": false,
-      "latencyMs": 1146,
+      "latencyMs": 725,
       "error": null,
       "systemName": "DoCode",
       "version": "",
@@ -249,7 +249,7 @@
       "signup": {
         "status": 200,
         "ok": true,
-        "ms": 1053,
+        "ms": 620,
         "attempts": 1
       },
       "mirrors": [
@@ -265,50 +265,234 @@
       "staleFields": []
     },
     {
-      "id": "godrouter",
-      "checkedAt": "2026-09-19T20:40:52.708Z",
-      "apiOk": false,
-      "pricingOk": false,
-      "latencyMs": null,
-      "error": "no url",
-      "systemName": null,
-      "version": null,
-      "registerOpen": null,
-      "passwordRegister": null,
-      "checkinEnabled": null,
-      "loginMethods": [],
+      "id": "aipm",
+      "checkedAt": "2026-09-20T00:33:30.730Z",
+      "apiOk": true,
+      "pricingOk": true,
+      "latencyMs": 1348,
+      "error": null,
+      "systemName": "AIPM",
+      "version": "",
+      "registerOpen": true,
+      "passwordRegister": false,
+      "checkinEnabled": false,
+      "loginMethods": [
+        "GitHub",
+        "LinuxDO",
+        "账号密码"
+      ],
       "githubMinAccountAgeDays": null,
-      "quotaPerUnit": null,
+      "quotaPerUnit": 500000,
       "inviteeBonusUsd": null,
       "inviterBonusUsd": null,
       "topupEnabled": null,
       "services": [],
-      "announcements": [],
-      "models": [],
-      "modelsSource": "login-required",
+      "announcements": [
+        {
+          "id": 32,
+          "date": "2026-09-17",
+          "text": "【域名过渡期延长通知】 ⭐新域名：https://emtf.aipm9527.site 先用新域名过渡几天，没问题的话，再放弃老域名（https://emtf.aipm9527.online/） ⭐备用url：仅支持API调用 https://emtf.aipm9527.xyz ⭐备用url：仅支持API调用 https://aipm9527.ccwu.cc"
+        },
+        {
+          "id": 31,
+          "date": "2026-09-17",
+          "text": "周六（2026.9.19）清理僵尸用户，同时满足三条以下将会被清理： 1、总额度在3刀内 2、近30天未登录过账号 3、近30天未调用过模型API"
+        },
+        {
+          "id": 30,
+          "date": "2026-09-13",
+          "text": "欢迎大家入群一起交流沟通，获取最新消息，谢谢大家~ 扣群：387281193 加群时需备注【网站账号id】"
+        },
+        {
+          "id": 29,
+          "date": "2026-08-31",
+          "text": "【0.01】倍率开启 限时：2026.8.31朝九晚九"
+        },
+        {
+          "id": 28,
+          "date": "2026-08-30",
+          "text": "⭐新域名，过渡期（8.31~9.5），【暂时】仅支持API调用 https://emtf.aipm9527.xyz ⭐旧域名，【当前】登录网站、模型api调用均可使用这个 https://emtf.aipm9527.online ⭐备用url：仅支持API调用 https://aipm9527.ccwu.cc"
+        }
+      ],
+      "models": [
+        {
+          "name": "anthropic/claude-opus-4-6",
+          "ratio": 2.5,
+          "completionRatio": 5,
+          "fixedPrice": null,
+          "inputPerMTok": 5,
+          "outputPerMTok": 25,
+          "groups": [
+            "vip",
+            "svip",
+            "default",
+            "agent"
+          ],
+          "protocols": [
+            "openai",
+            "anthropic"
+          ]
+        },
+        {
+          "name": "anthropic/claude-opus-4-6-thinking",
+          "ratio": 2.5,
+          "completionRatio": 5,
+          "fixedPrice": null,
+          "inputPerMTok": 5,
+          "outputPerMTok": 25,
+          "groups": [
+            "default",
+            "agent",
+            "vip",
+            "svip"
+          ],
+          "protocols": [
+            "openai",
+            "anthropic"
+          ]
+        },
+        {
+          "name": "anthropic/claude-sonnet-4-6",
+          "ratio": 1.5,
+          "completionRatio": 5,
+          "fixedPrice": null,
+          "inputPerMTok": 3,
+          "outputPerMTok": 15,
+          "groups": [
+            "default",
+            "agent",
+            "vip",
+            "svip"
+          ],
+          "protocols": [
+            "openai",
+            "anthropic"
+          ]
+        },
+        {
+          "name": "anthropic/claude-sonnet-4-6-thinking",
+          "ratio": 1.5,
+          "completionRatio": 5,
+          "fixedPrice": null,
+          "inputPerMTok": 3,
+          "outputPerMTok": 15,
+          "groups": [
+            "vip",
+            "agent",
+            "svip",
+            "default"
+          ],
+          "protocols": [
+            "anthropic",
+            "openai"
+          ]
+        },
+        {
+          "name": "claude-opus-4-6",
+          "ratio": 2.5,
+          "completionRatio": 5,
+          "fixedPrice": null,
+          "inputPerMTok": 5,
+          "outputPerMTok": 25,
+          "groups": [
+            "agent",
+            "default",
+            "vip",
+            "svip"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "claude-opus-4-6-thinking",
+          "ratio": 2.5,
+          "completionRatio": 5,
+          "fixedPrice": null,
+          "inputPerMTok": 5,
+          "outputPerMTok": 25,
+          "groups": [
+            "svip",
+            "default",
+            "vip",
+            "agent"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "claude-sonnet-4-6",
+          "ratio": 1.5,
+          "completionRatio": 5,
+          "fixedPrice": null,
+          "inputPerMTok": 3,
+          "outputPerMTok": 15,
+          "groups": [
+            "agent",
+            "default",
+            "vip",
+            "svip"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "claude-sonnet-4-6-thinking",
+          "ratio": 1.5,
+          "completionRatio": 5,
+          "fixedPrice": null,
+          "inputPerMTok": 3,
+          "outputPerMTok": 15,
+          "groups": [
+            "agent",
+            "default",
+            "vip",
+            "svip"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        }
+      ],
+      "modelsSource": "public-api",
       "defaults": {
-        "claude": null,
-        "openai": null
+        "claude": "claude-opus-4-6",
+        "openai": "anthropic/claude-opus-4-6"
       },
       "signup": {
-        "status": 404,
-        "ok": false,
-        "ms": 1129,
+        "status": 200,
+        "ok": true,
+        "ms": 2530,
         "attempts": 1
       },
-      "mirrors": [],
+      "mirrors": [
+        {
+          "homeUrl": "https://emtf.aipm9527.site",
+          "online": true
+        },
+        {
+          "homeUrl": "https://emtf.aipm9527.xyz",
+          "online": true
+        },
+        {
+          "homeUrl": "https://aipm9527.ccwu.cc",
+          "online": true
+        }
+      ],
       "probeBlocked": false,
-      "online": false,
+      "online": true,
       "dataStale": false,
       "staleFrom": null,
       "staleFields": []
     },
     {
       "id": "justwoker",
-      "checkedAt": "2026-09-19T20:40:53.615Z",
+      "checkedAt": "2026-09-20T00:33:30.137Z",
       "apiOk": true,
       "pricingOk": false,
-      "latencyMs": 912,
+      "latencyMs": 897,
       "error": null,
       "systemName": "JustDoWork",
       "version": "v1.0.0-rc.23",
@@ -335,7 +519,7 @@
       "signup": {
         "status": 200,
         "ok": true,
-        "ms": 1601,
+        "ms": 1247,
         "attempts": 1
       },
       "mirrors": [],
@@ -347,10 +531,10 @@
     },
     {
       "id": "matrix",
-      "checkedAt": "2026-09-19T20:40:55.009Z",
+      "checkedAt": "2026-09-20T00:33:29.595Z",
       "apiOk": true,
       "pricingOk": false,
-      "latencyMs": 2309,
+      "latencyMs": 347,
       "error": null,
       "systemName": null,
       "version": null,
@@ -374,7 +558,7 @@
       "signup": {
         "status": 200,
         "ok": true,
-        "ms": 2118,
+        "ms": 379,
         "attempts": 1
       },
       "mirrors": [],
@@ -386,11 +570,11 @@
     },
     {
       "id": "seekai",
-      "checkedAt": "2026-09-19T20:40:54.239Z",
-      "apiOk": true,
+      "checkedAt": "2026-09-20T00:33:35.376Z",
+      "apiOk": false,
       "pricingOk": false,
-      "latencyMs": 1535,
-      "error": null,
+      "latencyMs": 222,
+      "error": "HTTP 403",
       "systemName": "SeekAi",
       "version": "v1.0.0-rc.25",
       "registerOpen": true,
@@ -415,9 +599,9 @@
         "openai": null
       },
       "signup": {
-        "status": 200,
-        "ok": true,
-        "ms": 1526,
+        "status": 403,
+        "ok": false,
+        "ms": 874,
         "attempts": 1
       },
       "mirrors": [
@@ -426,18 +610,26 @@
           "online": true
         }
       ],
-      "probeBlocked": false,
+      "probeBlocked": true,
       "online": true,
-      "dataStale": false,
-      "staleFrom": null,
-      "staleFields": []
+      "dataStale": true,
+      "staleFrom": "2026-09-19T20:40:54.239Z",
+      "staleFields": [
+        "systemName",
+        "version",
+        "registerOpen",
+        "passwordRegister",
+        "checkinEnabled",
+        "loginMethods",
+        "quotaPerUnit"
+      ]
     },
     {
       "id": "aaawinn",
-      "checkedAt": "2026-09-19T20:40:54.202Z",
+      "checkedAt": "2026-09-20T00:33:30.084Z",
       "apiOk": true,
       "pricingOk": false,
-      "latencyMs": 1496,
+      "latencyMs": 828,
       "error": null,
       "systemName": "Long的AI",
       "version": "",
@@ -489,7 +681,7 @@
       "signup": {
         "status": 200,
         "ok": true,
-        "ms": 1498,
+        "ms": 855,
         "attempts": 1
       },
       "mirrors": [],
@@ -501,10 +693,10 @@
     },
     {
       "id": "hcnsec",
-      "checkedAt": "2026-09-19T20:40:55.678Z",
+      "checkedAt": "2026-09-20T00:33:29.747Z",
       "apiOk": true,
       "pricingOk": false,
-      "latencyMs": 2954,
+      "latencyMs": 480,
       "error": null,
       "systemName": "新疆幻城网安科技公益大模型安全网关",
       "version": "",
@@ -557,7 +749,7 @@
       "signup": {
         "status": 200,
         "ok": true,
-        "ms": 2908,
+        "ms": 510,
         "attempts": 1
       },
       "mirrors": [],
@@ -569,10 +761,10 @@
     },
     {
       "id": "liangjiewis",
-      "checkedAt": "2026-09-19T20:40:54.845Z",
+      "checkedAt": "2026-09-20T00:33:29.879Z",
       "apiOk": true,
       "pricingOk": false,
-      "latencyMs": 2138,
+      "latencyMs": 615,
       "error": null,
       "systemName": "量界智算",
       "version": "v0.12.14",
@@ -622,7 +814,7 @@
       "signup": {
         "status": 200,
         "ok": true,
-        "ms": 2135,
+        "ms": 585,
         "attempts": 1
       },
       "mirrors": [

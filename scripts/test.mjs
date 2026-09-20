@@ -291,21 +291,21 @@ test('没填 credits 的站点不炸，只告警', () => {
 });
 
 console.log('计价单位：积分站不能被当成美元站');
-const MX = { id: 'matrix', name: 'Matrix', credits: { signup: null, invite: 600, dailyCheckin: null, approx: false, unit: 'point' } };
+const MX = { id: 'matrix', name: 'Matrix', credits: { signup: null, invite: 600, realNameBonus: 2000, dailyCheckin: null, approx: false, unit: 'point' } };
 
 test('Matrix：600 积分按积分显示，绝不擅自加 $', () => {
   const p = creditPlan(MX, null);
   assert.equal(p.unit, 'point');
-  assert.equal(p.firstDay, 600);
-  assert.equal(usd(p.firstDay, p.approx, p.unit), '600 积分');
-  assert.equal(breakdown(p), '本页邀请 600 积分');
+  assert.equal(p.firstDay, 2600);
+  assert.equal(usd(p.firstDay, p.approx, p.unit), '2600 积分');
+  assert.equal(breakdown(p), '本页邀请 600 积分 + 实名认证 2000 积分');
   assert.equal(perDay(p), null); // 没有签到、也没有每日额度池
 });
 test('sources 数出首日额度由几笔钱凑成，只有一笔时页面不重复说构成', () => {
   assert.equal(creditPlan(AR, OLD_GOOD).sources, 3);
   assert.equal(creditPlan(JD, null).sources, 2);
   assert.equal(creditPlan(RC, null).sources, 1);
-  assert.equal(creditPlan(MX, null).sources, 1);
+  assert.equal(creditPlan(MX, null).sources, 2);
   assert.equal(creditPlan({ id: 'x', name: 'X' }, null).sources, 0);
 });
 test('跨站合计只算美元站，积分站单独说一句', () => {
@@ -316,7 +316,7 @@ test('跨站合计只算美元站，积分站单独说一句', () => {
   assert.equal(t.total, 175 + 92 + 50);
   assert.equal(t.resetting, true);
   assert.equal(t.others.length, 1);
-  assert.equal(othersNote(t.others), 'Matrix 另发 600 积分');
+  assert.equal(othersNote(t.others), 'Matrix 另发 2600 积分');
   assert.equal(othersNote([]), null);
 });
 test('积分站不拿接口的美元邀请额度对账，避免误报', () => {

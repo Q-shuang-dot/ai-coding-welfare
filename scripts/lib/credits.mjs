@@ -40,6 +40,7 @@ export function creditPlan(site, snap) {
   const c = site?.credits ?? {};
   const signup = num(c.signup);
   const invite = num(c.invite);
+  const realNameBonus = num(c.realNameBonus);
   const checkin = num(c.dailyCheckin);
   const pool = num(c.dailyQuota);
   const approx = Boolean(c.approx);
@@ -51,15 +52,16 @@ export function creditPlan(site, snap) {
 
   const parts = [signup, invite].filter((n) => n != null);
   const base = parts.length ? parts.reduce((a, b) => a + b, 0) : null;
-  const firstDay = base != null || daily != null ? (base ?? 0) + (daily ?? 0) : null;
+  const firstDay = base != null || daily != null ? (base ?? 0) + (realNameBonus ?? 0) + (daily ?? 0) : null;
   // 首日额度由几笔钱凑出来的：只有一笔时渲染器就别再重复一遍构成，那是废话
-  const sources = [signup, invite, daily].filter((n) => n != null).length;
+  const sources = [signup, invite, realNameBonus, daily].filter((n) => n != null).length;
 
   return {
     name: site?.name ?? null,
     unit,
     signup,
     invite,
+    realNameBonus,
     daily,
     resets,
     approx,
@@ -90,6 +92,7 @@ export function breakdown(plan) {
   const items = [
     plan.signup != null ? `注册 ${usd(plan.signup, false, plan.unit)}` : null,
     plan.invite != null ? `本页邀请 ${usd(plan.invite, false, plan.unit)}` : null,
+    plan.realNameBonus != null ? `实名认证 ${usd(plan.realNameBonus, false, plan.unit)}` : null,
     plan.daily != null ? `${plan.resets ? '每日额度池' : '首签'} ${usd(plan.daily, plan.approx, plan.unit)}` : null,
   ].filter(Boolean);
   if (items.length > 1) return items.join(' + ');
