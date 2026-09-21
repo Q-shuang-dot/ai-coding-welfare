@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-09-20T20:49:13.843Z",
+  "generatedAt": "2026-09-21T01:17:11.177Z",
   "sites": [
     {
       "id": "agentrouter",
-      "checkedAt": "2026-09-20T20:49:07.934Z",
+      "checkedAt": "2026-09-21T01:17:04.523Z",
       "online": true,
-      "latencyMs": 250,
+      "latencyMs": 318,
       "error": "invalid json",
       "systemName": "Agent Router",
       "version": "init-20260915-25158da5",
@@ -164,7 +164,7 @@
       "signup": {
         "status": 200,
         "ok": true,
-        "ms": 1202,
+        "ms": 1624,
         "attempts": 1
       },
       "mirrors": [
@@ -194,10 +194,10 @@
     },
     {
       "id": "docode",
-      "checkedAt": "2026-09-20T20:49:02.887Z",
+      "checkedAt": "2026-09-21T01:16:58.886Z",
       "apiOk": true,
       "pricingOk": false,
-      "latencyMs": 1130,
+      "latencyMs": 802,
       "error": null,
       "systemName": "DoCode",
       "version": "",
@@ -249,7 +249,7 @@
       "signup": {
         "status": 200,
         "ok": true,
-        "ms": 1033,
+        "ms": 705,
         "attempts": 1
       },
       "mirrors": [
@@ -266,10 +266,10 @@
     },
     {
       "id": "supxh",
-      "checkedAt": "2026-09-20T20:49:03.145Z",
+      "checkedAt": "2026-09-21T01:16:59.122Z",
       "apiOk": true,
       "pricingOk": true,
-      "latencyMs": 1386,
+      "latencyMs": 1027,
       "error": null,
       "systemName": null,
       "version": null,
@@ -293,7 +293,67 @@
       "signup": {
         "status": 200,
         "ok": true,
-        "ms": 1396,
+        "ms": 1083,
+        "attempts": 1
+      },
+      "mirrors": [],
+      "probeBlocked": false,
+      "online": true,
+      "dataStale": false,
+      "staleFrom": null,
+      "staleFields": []
+    },
+    {
+      "id": "api456",
+      "checkedAt": "2026-09-21T01:16:59.005Z",
+      "apiOk": true,
+      "pricingOk": false,
+      "latencyMs": 966,
+      "error": null,
+      "systemName": "可萌中转站",
+      "version": "",
+      "registerOpen": null,
+      "passwordRegister": null,
+      "checkinEnabled": true,
+      "loginMethods": [],
+      "githubMinAccountAgeDays": null,
+      "quotaPerUnit": 500000,
+      "inviteeBonusUsd": null,
+      "inviterBonusUsd": null,
+      "topupEnabled": null,
+      "services": [],
+      "announcements": [
+        {
+          "id": 4,
+          "date": "2026-04-29",
+          "text": "gpt-5.5 已上新，支持工具调用，可用于编程开发和自动化工作流。"
+        },
+        {
+          "id": 1,
+          "date": "2026-04-10",
+          "text": "**可萌中转站开放签到**。本服务为通用大模型 API 接口服务，适用于知识问答、文本创作、编程开发与自动化工作流等场景。使用本服务需合法合规。"
+        },
+        {
+          "id": 2,
+          "date": "2026-04-03",
+          "text": "邀请好友注册，双方都会获得 15 个硬币，可用于大模型调用体验。"
+        },
+        {
+          "id": 3,
+          "date": "2025-11-10",
+          "text": "庆祝开站半年，限时特价分组 0.1 倍率，三天。"
+        }
+      ],
+      "models": [],
+      "modelsSource": "login-required",
+      "defaults": {
+        "claude": null,
+        "openai": null
+      },
+      "signup": {
+        "status": 200,
+        "ok": true,
+        "ms": 1072,
         "attempts": 1
       },
       "mirrors": [],
@@ -305,10 +365,10 @@
     },
     {
       "id": "justwoker",
-      "checkedAt": "2026-09-20T20:49:03.116Z",
+      "checkedAt": "2026-09-21T01:16:58.992Z",
       "apiOk": true,
       "pricingOk": false,
-      "latencyMs": 1354,
+      "latencyMs": 950,
       "error": null,
       "systemName": "JustDoWork",
       "version": "v1.0.0-rc.23",
@@ -335,7 +395,7 @@
       "signup": {
         "status": 200,
         "ok": true,
-        "ms": 1539,
+        "ms": 1139,
         "attempts": 1
       },
       "mirrors": [],
@@ -347,10 +407,10 @@
     },
     {
       "id": "matrix",
-      "checkedAt": "2026-09-20T20:49:04.128Z",
+      "checkedAt": "2026-09-21T01:17:00.127Z",
       "apiOk": true,
       "pricingOk": false,
-      "latencyMs": 2366,
+      "latencyMs": 2085,
       "error": null,
       "systemName": null,
       "version": null,
@@ -374,7 +434,7 @@
       "signup": {
         "status": 200,
         "ok": true,
-        "ms": 2403,
+        "ms": 2170,
         "attempts": 1
       },
       "mirrors": [],
@@ -386,10 +446,10 @@
     },
     {
       "id": "seekai",
-      "checkedAt": "2026-09-20T20:49:03.664Z",
+      "checkedAt": "2026-09-21T01:16:59.658Z",
       "apiOk": true,
       "pricingOk": false,
-      "latencyMs": 1901,
+      "latencyMs": 1615,
       "error": null,
       "systemName": "SeekAi",
       "version": "v1.0.0-rc.25",
@@ -417,7 +477,7 @@
       "signup": {
         "status": 200,
         "ok": true,
-        "ms": 1943,
+        "ms": 1651,
         "attempts": 1
       },
       "mirrors": [
@@ -434,10 +494,10 @@
     },
     {
       "id": "aaawinn",
-      "checkedAt": "2026-09-20T20:49:03.651Z",
+      "checkedAt": "2026-09-21T01:16:59.689Z",
       "apiOk": true,
       "pricingOk": false,
-      "latencyMs": 1887,
+      "latencyMs": 1645,
       "error": null,
       "systemName": "Long的AI",
       "version": "",
@@ -489,7 +549,7 @@
       "signup": {
         "status": 200,
         "ok": true,
-        "ms": 1889,
+        "ms": 1652,
         "attempts": 1
       },
       "mirrors": [],
@@ -501,10 +561,10 @@
     },
     {
       "id": "hcnsec",
-      "checkedAt": "2026-09-20T20:49:07.988Z",
+      "checkedAt": "2026-09-21T01:17:01.141Z",
       "apiOk": true,
       "pricingOk": false,
-      "latencyMs": 6222,
+      "latencyMs": 3096,
       "error": null,
       "systemName": "新疆幻城网安科技公益大模型安全网关",
       "version": "",
@@ -557,7 +617,7 @@
       "signup": {
         "status": 200,
         "ok": true,
-        "ms": 4399,
+        "ms": 3091,
         "attempts": 1
       },
       "mirrors": [],
@@ -569,10 +629,10 @@
     },
     {
       "id": "liangjiewis",
-      "checkedAt": "2026-09-20T20:49:05.066Z",
+      "checkedAt": "2026-09-21T01:17:00.197Z",
       "apiOk": true,
       "pricingOk": false,
-      "latencyMs": 3300,
+      "latencyMs": 2151,
       "error": null,
       "systemName": "量界智算",
       "version": "v0.12.14",
@@ -622,7 +682,7 @@
       "signup": {
         "status": 200,
         "ok": true,
-        "ms": 3321,
+        "ms": 2153,
         "attempts": 1
       },
       "mirrors": [
