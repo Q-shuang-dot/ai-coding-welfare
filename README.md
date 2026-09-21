@@ -3,9 +3,9 @@
 <p align="center">免费额度 · 白嫖 Claude Code / Codex / Cursor 的中转与公益站合集 · 每日签到领福利</p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/%E6%94%B6%E5%BD%95%E7%A6%8F%E5%88%A9%E7%AB%99-10%20%E4%B8%AA-blue" alt="收录福利站">
-  <img src="https://img.shields.io/badge/%E5%9C%A8%E7%BA%BF-10%2F10-brightgreen" alt="在线">
-  <img src="https://img.shields.io/badge/%E9%A6%96%E6%97%A5%E5%8F%AF%E5%BE%97-%E6%9C%80%E9%AB%98%20%24175-success" alt="首日可得">
+  <img src="https://img.shields.io/badge/%E6%94%B6%E5%BD%95%E7%A6%8F%E5%88%A9%E7%AB%99-11%20%E4%B8%AA-blue" alt="收录福利站">
+  <img src="https://img.shields.io/badge/%E5%9C%A8%E7%BA%BF-11%2F11-brightgreen" alt="在线">
+  <img src="https://img.shields.io/badge/%E9%A6%96%E6%97%A5%E5%8F%AF%E5%BE%97-%E6%9C%80%E9%AB%98%20%24195-success" alt="首日可得">
   <img src="https://img.shields.io/badge/%E6%95%B0%E6%8D%AE%E6%9B%B4%E6%96%B0-2026--09--20%2020.49%20UTC-informational" alt="数据更新">
 </p>
 
@@ -13,6 +13,7 @@
   <a href="https://agentrouter.org/register?aff=aibw"><b>AgentRouter 注册</b></a> ·
   <a href="https://docode.cc/register?aff=1Qof"><b>DoCode 注册</b></a> ·
   <a href="https://free.supxh.xin/register?code=MVU8GX"><b>肖恩AI 注册</b></a> ·
+  <a href="https://api456.me/register?aff=zmza"><b>api456.me 注册</b></a> ·
   <a href="https://emtf.aipm9527.online/sign-up?aff=0WUF"><b>AIPM 注册</b></a> ·
   <a href="https://api.justwoker.icu/register?aff=OIWh"><b>JustDoWork 注册</b></a> ·
   <a href="https://matrix.mzsjai.com/login?redirect=%2Fapp%2Fgrowth%3FinviteCode%3DMX3CDVGATLJW"><b>Matrix 注册</b></a> ·
@@ -33,6 +34,7 @@
 | **AgentRouter** 🔥 | 🟢 在线 | **$175** | 注册 $100 + 本页邀请 $50 + 首签 $25 | $25/天 | Anthropic + OpenAI | 6 个可查 | <a href="https://agentrouter.org/register?aff=aibw" target="_blank" rel="noopener">点此注册 →</a> | — |
 | **DoCode** | 🟢 在线 | **300 站内刀** | 注册 50 站内刀 + 本页邀请 250 站内刀 | 无签到 | Anthropic + OpenAI | 需登录查看 | <a href="https://docode.cc/register?aff=1Qof" target="_blank" rel="noopener">点此注册 →</a> | `1Qof` |
 | **肖恩AI** | 🟢 在线 | **≈14000 积分** | 注册 7000 积分 + 本页邀请 5000 积分 + 首签 ≈2000 积分 | ≈2000 积分/天 | Anthropic + OpenAI | 需登录查看 | <a href="https://free.supxh.xin/register?code=MVU8GX" target="_blank" rel="noopener">点此注册 →</a> | `MVU8GX` |
+| **api456.me** | 🟢 在线 | **$20** | 注册 $20 + 本页邀请 $20 + 首签 $10 | $10/天 | OpenAI | 需要实名认证才能获得额度 | <a href="https://api456.me/register?aff=zmza" target="_blank" rel="noopener">GitHub 注册 →</a> | `zmza` |
 | **AIPM** | 🟢 在线 | 站内公示 | — | 无签到 | Anthropic + OpenAI | 8 个可查 | <a href="https://emtf.aipm9527.online/sign-up?aff=0WUF" target="_blank" rel="noopener">GitHub 注册 →</a> | `0WUF` |
 | **JustDoWork** | 🟢 在线 | 站内公示 | — | 支持签到 | Anthropic + OpenAI | 需登录查看 | <a href="https://api.justwoker.icu/register?aff=OIWh" target="_blank" rel="noopener">GitHub 注册 →</a> | `OIWh` |
 | **Matrix** | 🟢 在线 | **2600 积分** | 本页邀请 600 积分 + 实名认证 2000 积分 | — | OpenAI 兼容 | 需登录查看 | <a href="https://matrix.mzsjai.com/login?redirect=%2Fapp%2Fgrowth%3FinviteCode%3DMX3CDVGATLJW" target="_blank" rel="noopener">点此注册 →</a> | — |
@@ -43,9 +45,9 @@
 
 > 「首日可得」= 注册基础额度 + 本页邀请链接额度 + 当天能领的签到额度（每日重置额度池的站点按一天的池子算）；模型、价格、在线状态由脚本抓取站点公开接口自动生成，最后更新：`2026-09-20 20:49 UTC`。
 >
-> 「邀请码」列写了码的站（DoCode `1Qof`、肖恩AI `MVU8GX`、AIPM `0WUF`、JustDoWork `OIWh`、SeekAi `dDJy`、Long的AI `ijFL`、新疆幻城网安 `3J8z`、量界智算 `m3C1`），注册表单里有一栏要**自己填**，漏填就只拿得到注册基础额度、事后补不上；其余站写 — 是因为邀请额度由链接自带，不用手打。
+> 「邀请码」列写了码的站（DoCode `1Qof`、肖恩AI `MVU8GX`、AIPM `0WUF`、JustDoWork `OIWh`、SeekAi `dDJy`、Long的AI `ijFL`、新疆幻城网安 `3J8z`、量界智算 `m3C1`、api456.me `zmza`），注册表单里有一栏要**自己填**，漏填就只拿得到注册基础额度、事后补不上；其余站写 — 是因为邀请额度由链接自带，不用手打。
 >
-> 5 个按美元计价、且还收新用户的站全注册一遍，第一天手上大约有 **$175** 额度可用；DoCode 另发 300 站内刀，肖恩AI 另发 ≈14000 积分，Matrix 另发 2600 积分，Long的AI 另发 免费，新疆幻城网安 另发 30000 站内刀，都是各站自己的计价单位、与美元没有公开换算，未计入这个合计。
+> 5 个按美元计价、且还收新用户的站全注册一遍，第一天手上大约有 **$195** 额度可用；DoCode 另发 300 站内刀，肖恩AI 另发 ≈14000 积分，Matrix 另发 2600 积分，api456.me 另发 $20，Long的AI 另发 免费，新疆幻城网安 另发 30000 站内刀，都是各站自己的计价单位、与美元没有公开换算，未计入这个合计。
 >
 > 🟡 有 1 个站点已超过 48 小时没抓到接口数据，其明细为上一次成功抓取的快照；在线状态按注册页实际可访问性判断。
 
