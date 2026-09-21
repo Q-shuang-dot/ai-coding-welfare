@@ -231,86 +231,61 @@
       "community": []
     },
     {
-      "id": "aipm",
-      "name": "AIPM",
-      "subtitle": "New API 中转站 · 只做 Claude 4.6（含 thinking），default 分组倍率低到 0.025，只能用 GitHub / LinuxDO 登录，正在迁移域名",
+      "id": "api456",
+      "name": "api456.me",
+      "subtitle": "New API 中转站 · 注册送$20，每日签到，支持 OpenAI 协议",
       "recommended": false,
       "credits": {
-        "signup": null,
-        "invite": null,
-        "dailyCheckin": null,
+        "signup": 20,
+        "invite": 20,
+        "dailyCheckin": 10,
         "approx": false
       },
-      "signupUrl": "https://emtf.aipm9527.online/sign-up?aff=0WUF",
-      "inviteCode": "0WUF",
-      "homeUrl": "https://emtf.aipm9527.online",
+      "signupUrl": "https://api456.me/register?aff=zmza",
+      "inviteCode": "zmza",
+      "homeUrl": "https://api456.me",
       "docsUrl": null,
-      "statusApi": "https://emtf.aipm9527.online/api/status",
-      "pricingApi": "https://emtf.aipm9527.online/api/pricing",
-      "mirrors": [
-        {
-          "label": "新域名（过渡中，登录 + API）",
-          "homeUrl": "https://emtf.aipm9527.site",
-          "signupUrl": "https://emtf.aipm9527.site/sign-up?aff=0WUF"
-        },
-        {
-          "label": "备用域名（仅 API 调用）",
-          "homeUrl": "https://emtf.aipm9527.xyz",
-          "signupUrl": "https://emtf.aipm9527.xyz"
-        },
-        {
-          "label": "备用域名（仅 API 调用）",
-          "homeUrl": "https://aipm9527.ccwu.cc",
-          "signupUrl": "https://aipm9527.ccwu.cc"
-        }
-      ],
+      "statusApi": "https://api456.me/api/status",
+      "pricingApi": null,
+      "mirrors": [],
       "tags": [
         "New API",
         "中转站",
         "免费额度",
-        "Claude Code",
-        "Codex",
-        "Anthropic 兼容",
+        "每日签到",
         "OpenAI 兼容"
       ],
       "highlights": [
-        "从本页邀请链接注册，站方推广公告写「受邀请人获得 800 万额度（注册 + aff 合计）」，按面板 quota_per_unit=500000 折算约站内 $16——本页把它当站内刀，不并入跨站美元合计",
-        "定价页公开可读（/api/pricing 免登录），default 分组倍率只有 0.025，是本页少见的低倍率站",
-        "三种协议都活着：/v1/chat/completions、/v1/messages、/v1/responses 匿名请求都返回 401 而不是 404（2026-09-20 实测），Claude Code / Codex / Cursor 都能直连",
-        "站内任务与生图入口都开着（enable_task / enable_drawing 均为 true），只是没有每日签到"
+        "从本页邀请链接注册即得 $20 额度，邀请码 zmza 可再得 $20，首日合计 $30",
+        "每日签到支持，长期白嫖有续命来源",
+        "OpenAI 兼容协议，Claude Code / Codex / Cursor 都能直连",
+        "定价页免登录可读（/api/pricing 公开返回）"
       ],
       "endpoints": {
-        "anthropic": "https://emtf.aipm9527.online",
-        "openai": "https://emtf.aipm9527.online/v1"
+        "anthropic": null,
+        "openai": "https://api456.me/v1"
       },
-      "modelsNote": "定价页免登录就能读（GET https://emtf.aipm9527.online/api/pricing），当前只上了 Claude 4.6 一个系列，共 8 个条目：claude-sonnet-4-6、claude-opus-4-6 以及各自的 -thinking 版本，另有 anthropic/ 前缀的等价别名。按量倍率计费（quota_type=0）：sonnet 模型倍率 1.5、opus 倍率 2.5，补全倍率均为 5；叠加 default 分组倍率 0.025 后价格很低（New API 口径倍率 1 = $2 / 百万 tokens，站内刀）。default / vip / svip / agent 四个分组都能用这些模型。",
+      "modelsNote": "模型清单与价格需登录后在控制台查看（/api/pricing 匿名请求需登录），本页不列模型表。",
       "register": {
         "methods": [
-          "GitHub OAuth",
-          "LinuxDO OAuth"
+          "GitHub OAuth"
         ],
         "requirements": [
-          "务必从本页邀请链接进入注册（带 ?aff=0WUF），邀请额度才会发放",
-          "只能用 GitHub 或 LinuxDO 授权登录：面板 password_register_enabled = false，没有邮箱密码注册入口；LinuxDO 要求信任等级 ≥ 1",
-          "注册不需要邮箱验证码、也没开 Cloudflare Turnstile 人机校验（email_verification / turnstile_check 均为 false）"
+          "从本页邀请链接进入注册（带 ?aff=zmza），邀请额度才会发放",
+          "只能用 GitHub 授权登录",
+          "注册需要邮箱验证码并有人机校验"
         ]
       },
       "earnMore": [
-        "站内任务中心可以拿额度（enable_task 已开启），登录后台查看",
-        "邀请他人注册，邀请人可获得额度（推广公告口径为原邀请者 2000 万额度）",
-        "站方不定期开限时低倍率活动（公告里出现过 claude 4.6 的 0.01 / 0.018 倍率限时）"
+        "每日签到领额度（登录后台操作）",
+        "邀请他人注册，邀请双方各得 $20"
       ],
       "caveats": [
-        "default 分组硬性规定「禁止破甲 / NSFW，破甲即封号」（面板 usable_group 里写死），别拿它跑违规内容",
-        "站点正在迁移域名：本页登记的 emtf.aipm9527.online 是旧域名，站方公告称后续会废弃（时间另行通知），迁到 emtf.aipm9527.site；旧域名失效时请换新域名，账号与额度不变",
-        "没有每日签到（checkin_enabled = false），额度靠注册 / 邀请 / 任务和充值，不像 AgentRouter 那样能每天续命",
-        "面板 price=7.3（¥7.3 ≈ 站内 $1），额度按站内刀显示，本页不做美元折算",
-        "只上了 Claude 4.6 一个系列，没有 GPT / Gemini / 国产模型；上游为第三方中转，模型与倍率随公告频繁调整，别当稳定生产通道用",
-        "站方会定期清理僵尸用户（公告：总额度 3 刀内 + 30 天未登录 + 30 天未调用 API，三条同时满足即清理），长期不用会被回收"
+        "额度数字站点公开接口不暴露，注册后进后台核对实际到账",
+        "站点挂在 Cloudflare 后面，匿名探测可能被 WAF 拦，属正常防护",
+        "上游为第三方中转，模型与倍率随公告调整，别当稳定生产通道用"
       ],
-      "community": [
-        "QQ群: 387281193（加群备注网站账号 id）"
-      ]
+      "community": []
     },
     {
       "id": "justwoker",

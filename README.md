@@ -3,9 +3,9 @@
 <p align="center">免费额度 · 白嫖 Claude Code / Codex / Cursor 的中转与公益站合集 · 每日签到领福利</p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/%E6%94%B6%E5%BD%95%E7%A6%8F%E5%88%A9%E7%AB%99-11%20%E4%B8%AA-blue" alt="收录福利站">
-  <img src="https://img.shields.io/badge/%E5%9C%A8%E7%BA%BF-11%2F11-brightgreen" alt="在线">
-  <img src="https://img.shields.io/badge/%E9%A6%96%E6%97%A5%E5%8F%AF%E5%BE%97-%E6%9C%80%E9%AB%98%20%24195-success" alt="首日可得">
+  <img src="https://img.shields.io/badge/%E6%94%B6%E5%BD%95%E7%A6%8F%E5%88%A9%E7%AB%99-10%20%E4%B8%AA-blue" alt="收录福利站">
+  <img src="https://img.shields.io/badge/%E5%9C%A8%E7%BA%BF-9%2F10-orange" alt="在线">
+  <img src="https://img.shields.io/badge/%E9%A6%96%E6%97%A5%E5%8F%AF%E5%BE%97-%E6%9C%80%E9%AB%98%20%24175-success" alt="首日可得">
   <img src="https://img.shields.io/badge/%E6%95%B0%E6%8D%AE%E6%9B%B4%E6%96%B0-2026--09--20%2020.49%20UTC-informational" alt="数据更新">
 </p>
 
@@ -14,7 +14,6 @@
   <a href="https://docode.cc/register?aff=1Qof"><b>DoCode 注册</b></a> ·
   <a href="https://free.supxh.xin/register?code=MVU8GX"><b>肖恩AI 注册</b></a> ·
   <a href="https://api456.me/register?aff=zmza"><b>api456.me 注册</b></a> ·
-  <a href="https://emtf.aipm9527.online/sign-up?aff=0WUF"><b>AIPM 注册</b></a> ·
   <a href="https://api.justwoker.icu/register?aff=OIWh"><b>JustDoWork 注册</b></a> ·
   <a href="https://matrix.mzsjai.com/login?redirect=%2Fapp%2Fgrowth%3FinviteCode%3DMX3CDVGATLJW"><b>Matrix 注册</b></a> ·
   <a href="https://seekai.cc/sign-up?aff=dDJy"><b>SeekAi 注册</b></a> ·
@@ -34,8 +33,7 @@
 | **AgentRouter** 🔥 | 🟢 在线 | **$175** | 注册 $100 + 本页邀请 $50 + 首签 $25 | $25/天 | Anthropic + OpenAI | 6 个可查 | <a href="https://agentrouter.org/register?aff=aibw" target="_blank" rel="noopener">点此注册 →</a> | — |
 | **DoCode** | 🟢 在线 | **300 站内刀** | 注册 50 站内刀 + 本页邀请 250 站内刀 | 无签到 | Anthropic + OpenAI | 需登录查看 | <a href="https://docode.cc/register?aff=1Qof" target="_blank" rel="noopener">点此注册 →</a> | `1Qof` |
 | **肖恩AI** | 🟢 在线 | **≈14000 积分** | 注册 7000 积分 + 本页邀请 5000 积分 + 首签 ≈2000 积分 | ≈2000 积分/天 | Anthropic + OpenAI | 需登录查看 | <a href="https://free.supxh.xin/register?code=MVU8GX" target="_blank" rel="noopener">点此注册 →</a> | `MVU8GX` |
-| **api456.me** | 🟢 在线 | **$20** | 注册 $20 + 本页邀请 $20 + 首签 $10 | 支持签到 | OpenAI | 需登录查看 | <a href="https://api456.me/register?aff=zmza" target="_blank" rel="noopener">GitHub 注册 →</a> | `zmza` |
-| **AIPM** | 🟢 在线 | 站内公示 | — | 无签到 | Anthropic + OpenAI | 8 个可查 | <a href="https://emtf.aipm9527.online/sign-up?aff=0WUF" target="_blank" rel="noopener">GitHub 注册 →</a> | `0WUF` |
+| **api456.me** | 🔴 异常 | **$50** | 注册 $20 + 本页邀请 $20 + 首签 $10 | $10/天 | OpenAI | 需登录查看 | <a href="https://api456.me/register?aff=zmza" target="_blank" rel="noopener">点此注册 →</a> | `zmza` |
 | **JustDoWork** | 🟢 在线 | 站内公示 | — | 支持签到 | Anthropic + OpenAI | 需登录查看 | <a href="https://api.justwoker.icu/register?aff=OIWh" target="_blank" rel="noopener">GitHub 注册 →</a> | `OIWh` |
 | **Matrix** | 🟢 在线 | **2600 积分** | 本页邀请 600 积分 + 实名认证 2000 积分 | — | OpenAI 兼容 | 需登录查看 | <a href="https://matrix.mzsjai.com/login?redirect=%2Fapp%2Fgrowth%3FinviteCode%3DMX3CDVGATLJW" target="_blank" rel="noopener">点此注册 →</a> | — |
 | **SeekAi** | 🟢 在线 | 站内公示 | — | 支持签到 | OpenAI | 需登录查看 | <a href="https://seekai.cc/sign-up?aff=dDJy" target="_blank" rel="noopener">点此注册 →</a> | `dDJy` |
@@ -45,9 +43,9 @@
 
 > 「首日可得」= 注册基础额度 + 本页邀请链接额度 + 当天能领的签到额度（每日重置额度池的站点按一天的池子算）；模型、价格、在线状态由脚本抓取站点公开接口自动生成，最后更新：`2026-09-20 20:49 UTC`。
 >
-> 「邀请码」列写了码的站（DoCode `1Qof`、肖恩AI `MVU8GX`、AIPM `0WUF`、JustDoWork `OIWh`、SeekAi `dDJy`、Long的AI `ijFL`、新疆幻城网安 `3J8z`、量界智算 `m3C1`、api456.me `zmza`），注册表单里有一栏要**自己填**，漏填就只拿得到注册基础额度、事后补不上；其余站写 — 是因为邀请额度由链接自带，不用手打。
+> 「邀请码」列写了码的站（DoCode `1Qof`、肖恩AI `MVU8GX`、api456.me `zmza`、JustDoWork `OIWh`、SeekAi `dDJy`、Long的AI `ijFL`、新疆幻城网安 `3J8z`、量界智算 `m3C1`），注册表单里有一栏要**自己填**，漏填就只拿得到注册基础额度、事后补不上；其余站写 — 是因为邀请额度由链接自带，不用手打。
 >
-> 5 个按美元计价、且还收新用户的站全注册一遍，第一天手上大约有 **$195** 额度可用；DoCode 另发 300 站内刀，肖恩AI 另发 ≈14000 积分，Matrix 另发 2600 积分，api456.me 另发 $20，Long的AI 另发 免费，新疆幻城网安 另发 30000 站内刀，都是各站自己的计价单位、与美元没有公开换算，未计入这个合计。
+> 5 个按美元计价、且还收新用户的站全注册一遍，第一天手上大约有 **$225** 额度可用；DoCode 另发 300 站内刀，肖恩AI 另发 ≈14000 积分，Matrix 另发 2600 积分，Long的AI 另发 免费，新疆幻城网安 另发 30000 站内刀，都是各站自己的计价单位、与美元没有公开换算，未计入这个合计。
 >
 > 🟡 有 1 个站点已超过 48 小时没抓到接口数据，其明细为上一次成功抓取的快照；在线状态按注册页实际可访问性判断。
 
@@ -92,7 +90,7 @@ powershell -ExecutionPolicy Bypass -File scripts/quickstart.ps1
 
 **实时数据**（自动抓取站点公开接口）
 
-- ⚠ 接口已连续 139 小时没抓到新数据，下列信息为 `2026-09-15 01:48 UTC` 的快照
+- ⚠ 接口已连续 143 小时没抓到新数据，下列信息为 `2026-09-15 01:48 UTC` 的快照
 - 站点名称：**Agent Router**
 - 面板版本：`init-20260915-25158da5`
 - 邀请他人可得：**$50**
@@ -447,86 +445,50 @@ curl -s https://free.supxh.xin/v1/chat/completions \
 
 ---
 
-### 🟢 AIPM
+### 🔴 api456.me
 
-> New API 中转站 · 只做 Claude 4.6（含 thinking），default 分组倍率低到 0.025，只能用 GitHub / LinuxDO 登录，正在迁移域名
+> New API 中转站 · 注册送$20，每日签到，支持 OpenAI 协议
 
-<a href="https://emtf.aipm9527.online/sign-up?aff=0WUF" target="_blank" rel="noopener"><img src="https://img.shields.io/badge/%E7%AB%8B%E5%8D%B3%E6%B3%A8%E5%86%8C-AIPM-brightgreen?style=for-the-badge" alt="注册 AIPM"></a>
+<a href="https://api456.me/register?aff=zmza" target="_blank" rel="noopener"><img src="https://img.shields.io/badge/%E7%AB%8B%E5%8D%B3%E6%B3%A8%E5%86%8C-api456.me-brightgreen?style=for-the-badge" alt="注册 api456.me"></a>
 
 **为什么值得注册**
 
-- 从本页邀请链接注册，站方推广公告写「受邀请人获得 800 万额度（注册 + aff 合计）」，按面板 quota_per_unit=500000 折算约站内 $16——本页把它当站内刀，不并入跨站美元合计
-- 定价页公开可读（/api/pricing 免登录），default 分组倍率只有 0.025，是本页少见的低倍率站
-- 三种协议都活着：/v1/chat/completions、/v1/messages、/v1/responses 匿名请求都返回 401 而不是 404（2026-09-20 实测），Claude Code / Codex / Cursor 都能直连
-- 站内任务与生图入口都开着（enable_task / enable_drawing 均为 true），只是没有每日签到
+- 从本页邀请链接注册即得 $20 额度，邀请码 zmza 可再得 $20，首日合计 $30
+- 每日签到支持，长期白嫖有续命来源
+- OpenAI 兼容协议，Claude Code / Codex / Cursor 都能直连
+- 定价页免登录可读（/api/pricing 公开返回）
+
+**能拿多少额度**
+
+- 注册即送：**$20**
+- 从本页邀请链接注册额外：**$20**
+- 每日签到：**$10/天**（长期续命的关键）
+- 首日合计：**$50**　（注册 $20 + 本页邀请 $20 + 首签 $10）
 
 **实时数据**（自动抓取站点公开接口）
 
-- 站点名称：**AIPM**
-- 每日签到：❌
-- 开放注册：✅（站点关掉了邮箱密码注册，得用 GitHub / LinuxDO 登录建号（防批量注册的常规做法）。）
-- 登录方式：GitHub / LinuxDO / 账号密码
-- 接口延迟：2189 ms
+_暂无实时数据_
 
-**镜像 / 备用入口**
-
-- 新域名（过渡中，登录 + API）：<https://emtf.aipm9527.site> · <a href="https://emtf.aipm9527.site/sign-up?aff=0WUF" target="_blank" rel="noopener">从备用域名注册</a>
-- 备用域名（仅 API 调用）：<https://emtf.aipm9527.xyz> · <a href="https://emtf.aipm9527.xyz" target="_blank" rel="noopener">从备用域名注册</a>
-- 备用域名（仅 API 调用）：<https://aipm9527.ccwu.cc> · <a href="https://aipm9527.ccwu.cc" target="_blank" rel="noopener">从备用域名注册</a>
-
-**当前可用模型**
-
-| 模型 | 倍率 | 输入 / 1M tokens | 输出 / 1M tokens | 协议 |
-| :-- | :--: | :--: | :--: | :--: |
-| `anthropic/claude-opus-4-6` | 2.5 | $5 | $25 | openai / anthropic |
-| `anthropic/claude-opus-4-6-thinking` | 2.5 | $5 | $25 | openai / anthropic |
-| `anthropic/claude-sonnet-4-6` | 1.5 | $3 | $15 | openai / anthropic |
-| `anthropic/claude-sonnet-4-6-thinking` | 1.5 | $3 | $15 | anthropic / openai |
-| `claude-opus-4-6` | 2.5 | $5 | $25 | openai |
-| `claude-opus-4-6-thinking` | 2.5 | $5 | $25 | openai |
-| `claude-sonnet-4-6` | 1.5 | $3 | $15 | openai |
-| `claude-sonnet-4-6-thinking` | 1.5 | $3 | $15 | openai |
-
-<sub>倍率 1 ≈ $2 / 1M tokens，输出价 = 倍率 × 补全倍率 × $2；以站内实时价格为准。</sub>
+> 模型清单与价格需登录后在控制台查看（/api/pricing 匿名请求需登录），本页不列模型表。
 
 **注册要求**
 
-- 务必从本页邀请链接进入注册（带 ?aff=0WUF），邀请额度才会发放
-- 只能用 GitHub 或 LinuxDO 授权登录：面板 password_register_enabled = false，没有邮箱密码注册入口；LinuxDO 要求信任等级 ≥ 1
-- 注册不需要邮箱验证码、也没开 Cloudflare Turnstile 人机校验（email_verification / turnstile_check 均为 false）
+- 从本页邀请链接进入注册（带 ?aff=zmza），邀请额度才会发放
+- 只能用 GitHub 授权登录
+- 注册需要邮箱验证码并有人机校验
 
 **接入配置**
-
-<details open><summary><b>Claude Code</b>（Anthropic 兼容，Base URL 不带 <code>/v1</code>）</summary>
-
-```bash
-# macOS / Linux
-export ANTHROPIC_BASE_URL=https://emtf.aipm9527.online
-export ANTHROPIC_AUTH_TOKEN=你在站点后台创建的 Key
-export ANTHROPIC_MODEL=claude-opus-4-6
-npm install -g @anthropic-ai/claude-code@latest && claude
-```
-
-```powershell
-# Windows PowerShell
-$env:ANTHROPIC_BASE_URL = "https://emtf.aipm9527.online"
-$env:ANTHROPIC_AUTH_TOKEN = "你在站点后台创建的 Key"
-$env:ANTHROPIC_MODEL = "claude-opus-4-6"
-claude
-```
-
-</details>
 
 <details><summary><b>Codex CLI</b>（OpenAI 兼容，写入 <code>~/.codex/config.toml</code>）</summary>
 
 ```toml
-model = "anthropic/claude-opus-4-6"
-model_provider = "aipm"
+model = "<登录后台查看可用模型名>"
+model_provider = "api456"
 
-[model_providers.aipm]
-name = "AIPM"
-base_url = "https://emtf.aipm9527.online/v1"
-env_key = "AIPM_API_KEY"
+[model_providers.api456]
+name = "api456.me"
+base_url = "https://api456.me/v1"
+env_key = "API456_API_KEY"
 wire_api = "chat"
 ```
 
@@ -537,51 +499,35 @@ wire_api = "chat"
 ```python
 from openai import OpenAI
 
-client = OpenAI(api_key="你的 Key", base_url="https://emtf.aipm9527.online/v1")
-resp = client.chat.completions.create(model="anthropic/claude-opus-4-6", messages=[{"role": "user", "content": "ping"}])
+client = OpenAI(api_key="你的 Key", base_url="https://api456.me/v1")
+resp = client.chat.completions.create(model="<登录后台查看可用模型名>", messages=[{"role": "user", "content": "ping"}])
 print(resp.choices[0].message.content)
 ```
 
-通用客户端只需填两项：**Base URL** = `https://emtf.aipm9527.online/v1`，**API Key** = 站点后台创建的 Key。
+通用客户端只需填两项：**Base URL** = `https://api456.me/v1`，**API Key** = 站点后台创建的 Key。
 
 </details>
 
 <details><summary><b>连通性自测</b></summary>
 
 ```bash
-curl -s https://emtf.aipm9527.online/v1/chat/completions \
+curl -s https://api456.me/v1/chat/completions \
   -H "Authorization: Bearer $KEY" -H "Content-Type: application/json" \
-  -d '{"model":"anthropic/claude-opus-4-6","messages":[{"role":"user","content":"只回复 OK"}]}'
+  -d '{"model":"<登录后台查看可用模型名>","messages":[{"role":"user","content":"只回复 OK"}]}'
 ```
 
 </details>
 
 **如何继续拿额度**
 
-- 站内任务中心可以拿额度（enable_task 已开启），登录后台查看
-- 邀请他人注册，邀请人可获得额度（推广公告口径为原邀请者 2000 万额度）
-- 站方不定期开限时低倍率活动（公告里出现过 claude 4.6 的 0.01 / 0.018 倍率限时）
+- 每日签到领额度（登录后台操作）
+- 邀请他人注册，邀请双方各得 $20
 
 **⚠️ 使用前必读**
 
-- default 分组硬性规定「禁止破甲 / NSFW，破甲即封号」（面板 usable_group 里写死），别拿它跑违规内容
-- 站点正在迁移域名：本页登记的 emtf.aipm9527.online 是旧域名，站方公告称后续会废弃（时间另行通知），迁到 emtf.aipm9527.site；旧域名失效时请换新域名，账号与额度不变
-- 没有每日签到（checkin_enabled = false），额度靠注册 / 邀请 / 任务和充值，不像 AgentRouter 那样能每天续命
-- 面板 price=7.3（¥7.3 ≈ 站内 $1），额度按站内刀显示，本页不做美元折算
-- 只上了 Claude 4.6 一个系列，没有 GPT / Gemini / 国产模型；上游为第三方中转，模型与倍率随公告频繁调整，别当稳定生产通道用
-- 站方会定期清理僵尸用户（公告：总额度 3 刀内 + 30 天未登录 + 30 天未调用 API，三条同时满足即清理），长期不用会被回收
-
-**官方渠道**
-
-- QQ群: 387281193（加群备注网站账号 id）
-
-<details><summary><b>站点最新公告</b>（自动同步）</summary>
-
-- `2026-09-17` 【域名过渡期延长通知】 ⭐新域名：https://emtf.aipm9527.site 先用新域名过渡几天，没问题的话，再放弃老域名（https://emtf.aipm9527.online/） ⭐备用url：仅支持API调用 https://emtf.aipm9527.xyz ⭐备用url：仅支持API调用 https://aipm9527.ccwu.cc
-- `2026-09-17` 周六（2026.9.19）清理僵尸用户，同时满足三条以下将会被清理： 1、总额度在3刀内 2、近30天未登录过账号 3、近30天未调用过模型API
-- `2026-09-13` 欢迎大家入群一起交流沟通，获取最新消息，谢谢大家~ 扣群：387281193 加群时需备注【网站账号id】
-
-</details>
+- 额度数字站点公开接口不暴露，注册后进后台核对实际到账
+- 站点挂在 Cloudflare 后面，匿名探测可能被 WAF 拦，属正常防护
+- 上游为第三方中转，模型与倍率随公告调整，别当稳定生产通道用
 
 ---
 
