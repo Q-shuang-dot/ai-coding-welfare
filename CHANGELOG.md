@@ -8,6 +8,8 @@ AI 福利站 · Claude Code / Codex 免费额度白嫖导航的自动变动记�
 
 ## 2026-09-22
 
+- 🟢 AgentRouter 恢复在线 <sub>07:36 UTC</sub>
+- 🟢 SeekAi 恢复在线 <sub>07:36 UTC</sub>
 - 🔴 AgentRouter 探测不到了：注册页与公开接口都没响应 <sub>07:36 UTC</sub>
 - 📢 DoCode 发了公告：中秋节活动预告：中秋节当天凡是 vip500，赠送 1500 额度；vip1000，赠送 3000 额度，；vip2000，赠送 5000 额度。中秋节三天，充值加赠 5-20%。 <sub>07:36 UTC</sub>
 - 🔴 SeekAi 探测不到了：注册页与公开接口都没响应 <sub>07:36 UTC</sub>

@@ -13,7 +13,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="canonical" href="https://q-shuang-dot.github.io/ai-coding-welfare/status/">
 <link rel="alternate" type="application/atom+xml" title="变动日志" href="https://q-shuang-dot.github.io/ai-coding-welfare/feed.xml">
-<script type="application/ld+json">[{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"AI 福利站 · Claude Code / Codex 免费额度白嫖导航","item":"https://q-shuang-dot.github.io/ai-coding-welfare/"},{"@type":"ListItem","position":2,"name":"可用性","item":"https://q-shuang-dot.github.io/ai-coding-welfare/status/"}]},{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"可用性是怎么测的？","acceptedAnswer":{"@type":"Answer","text":"CI 每 6 小时探一次各站的注册页与公开接口，结果压进仓库里的 data/history.json。目前已记录 1 个样本，覆盖约 0 天。"}},{"@type":"Question","name":"为什么有的站显示「探测被拦下」？","acceptedAnswer":{"@type":"Answer","text":"公益站前面普遍挂 Cloudflare，GitHub Actions 的机房 IP 容易吃到挑战页。这种情况不算掉线，状态沿用上一次成功探测的结果，并单独计入「被拦次数」——家宽访问通常不受影响。"}},{"@type":"Question","name":"显示异常的站还能用吗？","acceptedAnswer":{"@type":"Answer","text":"可能能。本页只代表自动探测视角：注册页与公开接口都没响应就标异常。真要用请自己开一下站点，或看该站详情页里的备用域名。"}},{"@type":"Question","name":"标了「停注」是什么意思？","acceptedAnswer":{"@type":"Answer","text":"站点自己的接口报 register_enabled=false，也就是不收新用户了；站点本身还在跑，老用户不受影响。重新开放会自动记进变动日志。"}}]}]</script>
+<script type="application/ld+json">[{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"AI 福利站 · Claude Code / Codex 免费额度白嫖导航","item":"https://q-shuang-dot.github.io/ai-coding-welfare/"},{"@type":"ListItem","position":2,"name":"可用性","item":"https://q-shuang-dot.github.io/ai-coding-welfare/status/"}]},{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"可用性是怎么测的？","acceptedAnswer":{"@type":"Answer","text":"CI 每 6 小时探一次各站的注册页与公开接口，结果压进仓库里的 data/history.json。目前已记录 2 个样本，覆盖约 0 天。"}},{"@type":"Question","name":"为什么有的站显示「探测被拦下」？","acceptedAnswer":{"@type":"Answer","text":"公益站前面普遍挂 Cloudflare，GitHub Actions 的机房 IP 容易吃到挑战页。这种情况不算掉线，状态沿用上一次成功探测的结果，并单独计入「被拦次数」——家宽访问通常不受影响。"}},{"@type":"Question","name":"显示异常的站还能用吗？","acceptedAnswer":{"@type":"Answer","text":"可能能。本页只代表自动探测视角：注册页与公开接口都没响应就标异常。真要用请自己开一下站点，或看该站详情页里的备用域名。"}},{"@type":"Question","name":"标了「停注」是什么意思？","acceptedAnswer":{"@type":"Answer","text":"站点自己的接口报 register_enabled=false，也就是不收新用户了；站点本身还在跑，老用户不受影响。重新开放会自动记进变动日志。"}}]}]</script>
 <style>
 /* AI 福利站 — 落地页样式（手写，非生成物） */
 :root {
@@ -235,7 +235,7 @@ tr.shut td { color: var(--fg-dim); }
     <h1>福利站可用性</h1>
     <p class="sub">每 6 小时自动探一次，历史存在仓库里。哪个站还活着，看这页。</p>
     <div class="pills">
-      <span class="pill">样本 <b>1</b> 个</span>
+      <span class="pill">样本 <b>2</b> 个</span>
       <span class="pill">覆盖 <b>0</b> 天</span>
       <span class="pill">最后探测 <b>2026-09-22 07:36 UTC</b></span>
     </div>
@@ -248,91 +248,91 @@ tr.shut td { color: var(--fg-dim); }
       <thead><tr><th>站点</th><th>现在</th><th>最近 7 天</th><th>7 天可用</th><th>30 天可用</th><th>被 WAF 拦</th><th>延迟</th></tr></thead>
       <tbody><tr>
       <td><a href="../sites/agentrouter/">AgentRouter</a></td>
-      <td><span class="dot down"></span> 异常</td>
-      <td><div class="bars" role="img" aria-label="最近 7 天可用性"><i class="bar nodata" title="2026-09-16 无样本"></i><i class="bar nodata" title="2026-09-17 无样本"></i><i class="bar nodata" title="2026-09-18 无样本"></i><i class="bar nodata" title="2026-09-19 无样本"></i><i class="bar nodata" title="2026-09-20 无样本"></i><i class="bar nodata" title="2026-09-21 无样本"></i><i class="bar bad" title="2026-09-22 0/1 次在线"></i></div></td>
-      <td>样本不足（1 次）</td>
-      <td>样本不足（1 次）</td>
+      <td><span class="dot up"></span> 在线</td>
+      <td><div class="bars" role="img" aria-label="最近 7 天可用性"><i class="bar nodata" title="2026-09-16 无样本"></i><i class="bar nodata" title="2026-09-17 无样本"></i><i class="bar nodata" title="2026-09-18 无样本"></i><i class="bar nodata" title="2026-09-19 无样本"></i><i class="bar nodata" title="2026-09-20 无样本"></i><i class="bar nodata" title="2026-09-21 无样本"></i><i class="bar part" title="2026-09-22 1/2 次在线"></i></div></td>
+      <td>样本不足（2 次）</td>
+      <td>样本不足（2 次）</td>
       <td>0</td>
-      <td>246 ms</td>
+      <td>325 ms</td>
     </tr><tr>
       <td><a href="../sites/docode/">DoCode</a></td>
       <td><span class="dot up"></span> 在线</td>
-      <td><div class="bars" role="img" aria-label="最近 7 天可用性"><i class="bar nodata" title="2026-09-16 无样本"></i><i class="bar nodata" title="2026-09-17 无样本"></i><i class="bar nodata" title="2026-09-18 无样本"></i><i class="bar nodata" title="2026-09-19 无样本"></i><i class="bar nodata" title="2026-09-20 无样本"></i><i class="bar nodata" title="2026-09-21 无样本"></i><i class="bar ok" title="2026-09-22 1/1 次在线"></i></div></td>
-      <td>样本不足（1 次）</td>
-      <td>样本不足（1 次）</td>
+      <td><div class="bars" role="img" aria-label="最近 7 天可用性"><i class="bar nodata" title="2026-09-16 无样本"></i><i class="bar nodata" title="2026-09-17 无样本"></i><i class="bar nodata" title="2026-09-18 无样本"></i><i class="bar nodata" title="2026-09-19 无样本"></i><i class="bar nodata" title="2026-09-20 无样本"></i><i class="bar nodata" title="2026-09-21 无样本"></i><i class="bar ok" title="2026-09-22 2/2 次在线"></i></div></td>
+      <td>样本不足（2 次）</td>
+      <td>样本不足（2 次）</td>
       <td>0</td>
-      <td>640 ms</td>
+      <td>856 ms</td>
     </tr><tr>
       <td><a href="../sites/supxh/">肖恩AI</a></td>
       <td><span class="dot up"></span> 在线</td>
-      <td><div class="bars" role="img" aria-label="最近 7 天可用性"><i class="bar nodata" title="2026-09-16 无样本"></i><i class="bar nodata" title="2026-09-17 无样本"></i><i class="bar nodata" title="2026-09-18 无样本"></i><i class="bar nodata" title="2026-09-19 无样本"></i><i class="bar nodata" title="2026-09-20 无样本"></i><i class="bar nodata" title="2026-09-21 无样本"></i><i class="bar ok" title="2026-09-22 1/1 次在线"></i></div></td>
-      <td>样本不足（1 次）</td>
-      <td>样本不足（1 次）</td>
+      <td><div class="bars" role="img" aria-label="最近 7 天可用性"><i class="bar nodata" title="2026-09-16 无样本"></i><i class="bar nodata" title="2026-09-17 无样本"></i><i class="bar nodata" title="2026-09-18 无样本"></i><i class="bar nodata" title="2026-09-19 无样本"></i><i class="bar nodata" title="2026-09-20 无样本"></i><i class="bar nodata" title="2026-09-21 无样本"></i><i class="bar ok" title="2026-09-22 2/2 次在线"></i></div></td>
+      <td>样本不足（2 次）</td>
+      <td>样本不足（2 次）</td>
       <td>0</td>
-      <td>703 ms</td>
+      <td>925 ms</td>
     </tr><tr>
       <td><a href="../sites/api456/">api456.me</a></td>
       <td><span class="dot up"></span> 在线</td>
-      <td><div class="bars" role="img" aria-label="最近 7 天可用性"><i class="bar nodata" title="2026-09-16 无样本"></i><i class="bar nodata" title="2026-09-17 无样本"></i><i class="bar nodata" title="2026-09-18 无样本"></i><i class="bar nodata" title="2026-09-19 无样本"></i><i class="bar nodata" title="2026-09-20 无样本"></i><i class="bar nodata" title="2026-09-21 无样本"></i><i class="bar ok" title="2026-09-22 1/1 次在线"></i></div></td>
-      <td>样本不足（1 次）</td>
-      <td>样本不足（1 次）</td>
+      <td><div class="bars" role="img" aria-label="最近 7 天可用性"><i class="bar nodata" title="2026-09-16 无样本"></i><i class="bar nodata" title="2026-09-17 无样本"></i><i class="bar nodata" title="2026-09-18 无样本"></i><i class="bar nodata" title="2026-09-19 无样本"></i><i class="bar nodata" title="2026-09-20 无样本"></i><i class="bar nodata" title="2026-09-21 无样本"></i><i class="bar ok" title="2026-09-22 2/2 次在线"></i></div></td>
+      <td>样本不足（2 次）</td>
+      <td>样本不足（2 次）</td>
       <td>0</td>
-      <td>1344 ms</td>
+      <td>1053 ms</td>
     </tr><tr>
       <td><a href="../sites/justwoker/">JustDoWork</a></td>
       <td><span class="dot up"></span> 在线</td>
-      <td><div class="bars" role="img" aria-label="最近 7 天可用性"><i class="bar nodata" title="2026-09-16 无样本"></i><i class="bar nodata" title="2026-09-17 无样本"></i><i class="bar nodata" title="2026-09-18 无样本"></i><i class="bar nodata" title="2026-09-19 无样本"></i><i class="bar nodata" title="2026-09-20 无样本"></i><i class="bar nodata" title="2026-09-21 无样本"></i><i class="bar ok" title="2026-09-22 1/1 次在线"></i></div></td>
-      <td>样本不足（1 次）</td>
-      <td>样本不足（1 次）</td>
+      <td><div class="bars" role="img" aria-label="最近 7 天可用性"><i class="bar nodata" title="2026-09-16 无样本"></i><i class="bar nodata" title="2026-09-17 无样本"></i><i class="bar nodata" title="2026-09-18 无样本"></i><i class="bar nodata" title="2026-09-19 无样本"></i><i class="bar nodata" title="2026-09-20 无样本"></i><i class="bar nodata" title="2026-09-21 无样本"></i><i class="bar ok" title="2026-09-22 2/2 次在线"></i></div></td>
+      <td>样本不足（2 次）</td>
+      <td>样本不足（2 次）</td>
       <td>0</td>
-      <td>697 ms</td>
+      <td>938 ms</td>
     </tr><tr>
       <td><a href="../sites/matrix/">Matrix</a></td>
       <td><span class="dot up"></span> 在线</td>
-      <td><div class="bars" role="img" aria-label="最近 7 天可用性"><i class="bar nodata" title="2026-09-16 无样本"></i><i class="bar nodata" title="2026-09-17 无样本"></i><i class="bar nodata" title="2026-09-18 无样本"></i><i class="bar nodata" title="2026-09-19 无样本"></i><i class="bar nodata" title="2026-09-20 无样本"></i><i class="bar nodata" title="2026-09-21 无样本"></i><i class="bar ok" title="2026-09-22 1/1 次在线"></i></div></td>
-      <td>样本不足（1 次）</td>
-      <td>样本不足（1 次）</td>
+      <td><div class="bars" role="img" aria-label="最近 7 天可用性"><i class="bar nodata" title="2026-09-16 无样本"></i><i class="bar nodata" title="2026-09-17 无样本"></i><i class="bar nodata" title="2026-09-18 无样本"></i><i class="bar nodata" title="2026-09-19 无样本"></i><i class="bar nodata" title="2026-09-20 无样本"></i><i class="bar nodata" title="2026-09-21 无样本"></i><i class="bar ok" title="2026-09-22 2/2 次在线"></i></div></td>
+      <td>样本不足（2 次）</td>
+      <td>样本不足（2 次）</td>
       <td>0</td>
-      <td>148 ms</td>
+      <td>2000 ms</td>
     </tr><tr>
       <td><a href="../sites/seekai/">SeekAi</a></td>
-      <td><span class="dot down"></span> 异常</td>
-      <td><div class="bars" role="img" aria-label="最近 7 天可用性"><i class="bar nodata" title="2026-09-16 无样本"></i><i class="bar nodata" title="2026-09-17 无样本"></i><i class="bar nodata" title="2026-09-18 无样本"></i><i class="bar nodata" title="2026-09-19 无样本"></i><i class="bar nodata" title="2026-09-20 无样本"></i><i class="bar nodata" title="2026-09-21 无样本"></i><i class="bar bad" title="2026-09-22 0/1 次在线"></i></div></td>
-      <td>样本不足（1 次）</td>
-      <td>样本不足（1 次）</td>
+      <td><span class="dot up"></span> 在线</td>
+      <td><div class="bars" role="img" aria-label="最近 7 天可用性"><i class="bar nodata" title="2026-09-16 无样本"></i><i class="bar nodata" title="2026-09-17 无样本"></i><i class="bar nodata" title="2026-09-18 无样本"></i><i class="bar nodata" title="2026-09-19 无样本"></i><i class="bar nodata" title="2026-09-20 无样本"></i><i class="bar nodata" title="2026-09-21 无样本"></i><i class="bar part" title="2026-09-22 1/2 次在线"></i></div></td>
+      <td>样本不足（2 次）</td>
+      <td>样本不足（2 次）</td>
       <td>0</td>
-      <td>226 ms</td>
+      <td>1604 ms</td>
     </tr><tr>
       <td><a href="../sites/aaawinn/">Long的AI</a></td>
       <td><span class="dot up"></span> 在线</td>
-      <td><div class="bars" role="img" aria-label="最近 7 天可用性"><i class="bar nodata" title="2026-09-16 无样本"></i><i class="bar nodata" title="2026-09-17 无样本"></i><i class="bar nodata" title="2026-09-18 无样本"></i><i class="bar nodata" title="2026-09-19 无样本"></i><i class="bar nodata" title="2026-09-20 无样本"></i><i class="bar nodata" title="2026-09-21 无样本"></i><i class="bar ok" title="2026-09-22 1/1 次在线"></i></div></td>
-      <td>样本不足（1 次）</td>
-      <td>样本不足（1 次）</td>
+      <td><div class="bars" role="img" aria-label="最近 7 天可用性"><i class="bar nodata" title="2026-09-16 无样本"></i><i class="bar nodata" title="2026-09-17 无样本"></i><i class="bar nodata" title="2026-09-18 无样本"></i><i class="bar nodata" title="2026-09-19 无样本"></i><i class="bar nodata" title="2026-09-20 无样本"></i><i class="bar nodata" title="2026-09-21 无样本"></i><i class="bar ok" title="2026-09-22 2/2 次在线"></i></div></td>
+      <td>样本不足（2 次）</td>
+      <td>样本不足（2 次）</td>
       <td>0</td>
-      <td>596 ms</td>
+      <td>1629 ms</td>
     </tr><tr>
       <td><a href="../sites/hcnsec/">新疆幻城网安</a></td>
       <td><span class="dot up"></span> 在线</td>
-      <td><div class="bars" role="img" aria-label="最近 7 天可用性"><i class="bar nodata" title="2026-09-16 无样本"></i><i class="bar nodata" title="2026-09-17 无样本"></i><i class="bar nodata" title="2026-09-18 无样本"></i><i class="bar nodata" title="2026-09-19 无样本"></i><i class="bar nodata" title="2026-09-20 无样本"></i><i class="bar nodata" title="2026-09-21 无样本"></i><i class="bar ok" title="2026-09-22 1/1 次在线"></i></div></td>
-      <td>样本不足（1 次）</td>
-      <td>样本不足（1 次）</td>
+      <td><div class="bars" role="img" aria-label="最近 7 天可用性"><i class="bar nodata" title="2026-09-16 无样本"></i><i class="bar nodata" title="2026-09-17 无样本"></i><i class="bar nodata" title="2026-09-18 无样本"></i><i class="bar nodata" title="2026-09-19 无样本"></i><i class="bar nodata" title="2026-09-20 无样本"></i><i class="bar nodata" title="2026-09-21 无样本"></i><i class="bar ok" title="2026-09-22 2/2 次在线"></i></div></td>
+      <td>样本不足（2 次）</td>
+      <td>样本不足（2 次）</td>
       <td>0</td>
-      <td>184 ms</td>
+      <td>4194 ms</td>
     </tr><tr>
       <td><a href="../sites/liangjiewis/">量界智算</a></td>
       <td><span class="dot up"></span> 在线</td>
-      <td><div class="bars" role="img" aria-label="最近 7 天可用性"><i class="bar nodata" title="2026-09-16 无样本"></i><i class="bar nodata" title="2026-09-17 无样本"></i><i class="bar nodata" title="2026-09-18 无样本"></i><i class="bar nodata" title="2026-09-19 无样本"></i><i class="bar nodata" title="2026-09-20 无样本"></i><i class="bar nodata" title="2026-09-21 无样本"></i><i class="bar ok" title="2026-09-22 1/1 次在线"></i></div></td>
-      <td>样本不足（1 次）</td>
-      <td>样本不足（1 次）</td>
+      <td><div class="bars" role="img" aria-label="最近 7 天可用性"><i class="bar nodata" title="2026-09-16 无样本"></i><i class="bar nodata" title="2026-09-17 无样本"></i><i class="bar nodata" title="2026-09-18 无样本"></i><i class="bar nodata" title="2026-09-19 无样本"></i><i class="bar nodata" title="2026-09-20 无样本"></i><i class="bar nodata" title="2026-09-21 无样本"></i><i class="bar ok" title="2026-09-22 2/2 次在线"></i></div></td>
+      <td>样本不足（2 次）</td>
+      <td>样本不足（2 次）</td>
       <td>0</td>
-      <td>196 ms</td>
+      <td>2191 ms</td>
     </tr></tbody>
     </table></div>
     <p class="hint">⚠ 历史只攒了约 0 天，30 天口径要等样本够了才有意义。</p>
   </section>
 
   <section><h2>常见问题</h2>
-    <details><summary>可用性是怎么测的？</summary><p>CI 每 6 小时探一次各站的注册页与公开接口，结果压进仓库里的 data/history.json。目前已记录 1 个样本，覆盖约 0 天。</p></details>
+    <details><summary>可用性是怎么测的？</summary><p>CI 每 6 小时探一次各站的注册页与公开接口，结果压进仓库里的 data/history.json。目前已记录 2 个样本，覆盖约 0 天。</p></details>
     <details><summary>为什么有的站显示「探测被拦下」？</summary><p>公益站前面普遍挂 Cloudflare，GitHub Actions 的机房 IP 容易吃到挑战页。这种情况不算掉线，状态沿用上一次成功探测的结果，并单独计入「被拦次数」——家宽访问通常不受影响。</p></details>
     <details><summary>显示异常的站还能用吗？</summary><p>可能能。本页只代表自动探测视角：注册页与公开接口都没响应就标异常。真要用请自己开一下站点，或看该站详情页里的备用域名。</p></details>
     <details><summary>标了「停注」是什么意思？</summary><p>站点自己的接口报 register_enabled=false，也就是不收新用户了；站点本身还在跑，老用户不受影响。重新开放会自动记进变动日志。</p></details>
