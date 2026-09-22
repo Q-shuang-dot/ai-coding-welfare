@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-09-22T16:57:44.970Z",
+  "generatedAt": "2026-09-22T21:19:05.019Z",
   "sites": [
     {
       "id": "agentrouter",
-      "checkedAt": "2026-09-22T16:57:38.650Z",
+      "checkedAt": "2026-09-22T21:18:58.482Z",
       "apiOk": false,
       "pricingOk": false,
-      "latencyMs": 313,
+      "latencyMs": 314,
       "error": "invalid json",
       "systemName": null,
       "version": null,
@@ -30,7 +30,7 @@
       "signup": {
         "status": 200,
         "ok": true,
-        "ms": 1572,
+        "ms": 1233,
         "attempts": 1
       },
       "mirrors": [
@@ -47,10 +47,10 @@
     },
     {
       "id": "docode",
-      "checkedAt": "2026-09-22T16:57:34.280Z",
+      "checkedAt": "2026-09-22T21:18:53.475Z",
       "apiOk": true,
       "pricingOk": false,
-      "latencyMs": 2245,
+      "latencyMs": 1501,
       "error": null,
       "systemName": "DoCode",
       "version": "",
@@ -102,7 +102,7 @@
       "signup": {
         "status": 200,
         "ok": true,
-        "ms": 1083,
+        "ms": 1305,
         "attempts": 1
       },
       "mirrors": [
@@ -119,10 +119,10 @@
     },
     {
       "id": "supxh",
-      "checkedAt": "2026-09-22T16:57:33.629Z",
+      "checkedAt": "2026-09-22T21:18:54.275Z",
       "apiOk": true,
       "pricingOk": true,
-      "latencyMs": 1582,
+      "latencyMs": 1634,
       "error": null,
       "systemName": null,
       "version": null,
@@ -146,7 +146,7 @@
       "signup": {
         "status": 200,
         "ok": true,
-        "ms": 1581,
+        "ms": 1645,
         "attempts": 1
       },
       "mirrors": [],
@@ -158,10 +158,10 @@
     },
     {
       "id": "api456",
-      "checkedAt": "2026-09-22T16:57:32.962Z",
+      "checkedAt": "2026-09-22T21:18:53.616Z",
       "apiOk": true,
       "pricingOk": false,
-      "latencyMs": 923,
+      "latencyMs": 1721,
       "error": null,
       "systemName": "可萌中转站",
       "version": "",
@@ -206,7 +206,7 @@
       "signup": {
         "status": 200,
         "ok": true,
-        "ms": 934,
+        "ms": 1669,
         "attempts": 1
       },
       "mirrors": [],
@@ -218,10 +218,10 @@
     },
     {
       "id": "justwoker",
-      "checkedAt": "2026-09-22T16:57:32.961Z",
+      "checkedAt": "2026-09-22T21:18:53.545Z",
       "apiOk": true,
       "pricingOk": false,
-      "latencyMs": 918,
+      "latencyMs": 1647,
       "error": null,
       "systemName": "JustDoWork",
       "version": "v1.0.0-rc.23",
@@ -248,7 +248,7 @@
       "signup": {
         "status": 200,
         "ok": true,
-        "ms": 1174,
+        "ms": 2267,
         "attempts": 1
       },
       "mirrors": [],
@@ -260,10 +260,10 @@
     },
     {
       "id": "matrix",
-      "checkedAt": "2026-09-22T16:57:34.978Z",
+      "checkedAt": "2026-09-22T21:18:54.691Z",
       "apiOk": true,
       "pricingOk": false,
-      "latencyMs": 2939,
+      "latencyMs": 2793,
       "error": null,
       "systemName": null,
       "version": null,
@@ -287,7 +287,7 @@
       "signup": {
         "status": 200,
         "ok": true,
-        "ms": 2177,
+        "ms": 2881,
         "attempts": 1
       },
       "mirrors": [],
@@ -299,10 +299,10 @@
     },
     {
       "id": "seekai",
-      "checkedAt": "2026-09-22T16:57:33.668Z",
+      "checkedAt": "2026-09-22T21:18:54.549Z",
       "apiOk": true,
       "pricingOk": false,
-      "latencyMs": 1628,
+      "latencyMs": 2649,
       "error": null,
       "systemName": "SeekAi",
       "version": "v1.0.0-rc.25",
@@ -330,7 +330,7 @@
       "signup": {
         "status": 200,
         "ok": true,
-        "ms": 1641,
+        "ms": 2710,
         "attempts": 1
       },
       "mirrors": [
@@ -347,10 +347,10 @@
     },
     {
       "id": "aaawinn",
-      "checkedAt": "2026-09-22T16:57:33.652Z",
+      "checkedAt": "2026-09-22T21:18:54.220Z",
       "apiOk": true,
       "pricingOk": false,
-      "latencyMs": 1612,
+      "latencyMs": 2320,
       "error": null,
       "systemName": "Long的AI",
       "version": "",
@@ -402,7 +402,7 @@
       "signup": {
         "status": 200,
         "ok": true,
-        "ms": 1608,
+        "ms": 2322,
         "attempts": 1
       },
       "mirrors": [],
@@ -414,13 +414,13 @@
     },
     {
       "id": "hcnsec",
-      "checkedAt": "2026-09-22T16:57:35.031Z",
+      "checkedAt": "2026-09-22T21:18:57.944Z",
       "apiOk": true,
       "pricingOk": false,
-      "latencyMs": 2989,
+      "latencyMs": 6042,
       "error": null,
       "systemName": "新疆幻城网安科技公益大模型安全网关",
-      "version": "",
+      "version": "v1.0.0-rc.40-hc1",
       "registerOpen": true,
       "passwordRegister": true,
       "checkinEnabled": true,
@@ -470,7 +470,7 @@
       "signup": {
         "status": 200,
         "ok": true,
-        "ms": 2977,
+        "ms": 3977,
         "attempts": 1
       },
       "mirrors": [],
@@ -482,10 +482,10 @@
     },
     {
       "id": "liangjiewis",
-      "checkedAt": "2026-09-22T16:57:34.222Z",
+      "checkedAt": "2026-09-22T21:18:55.011Z",
       "apiOk": true,
       "pricingOk": false,
-      "latencyMs": 2179,
+      "latencyMs": 3109,
       "error": null,
       "systemName": "量界智算",
       "version": "v0.12.14",
@@ -535,7 +535,7 @@
       "signup": {
         "status": 200,
         "ok": true,
-        "ms": 2173,
+        "ms": 3104,
         "attempts": 1
       },
       "mirrors": [
