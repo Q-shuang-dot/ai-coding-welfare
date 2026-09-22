@@ -168,6 +168,76 @@
       "community": []
     },
     {
+      "id": "modelshare",
+      "name": "ModelShare",
+      "subtitle": "多模型 API 聚合 + 账号共享平台 · 一个 Key 直连多款主流大模型，注册送体验余额，邀请双方拿奖励",
+      "recommended": false,
+      "panel": "relay",
+      "credits": {
+        "signup": null,
+        "invite": null,
+        "dailyCheckin": null,
+        "approx": false
+      },
+      "signupUrl": "https://modelshare.cc/?ref=M2TGP9JB&lang=zh",
+      "inviteCode": "M2TGP9JB",
+      "homeUrl": "https://modelshare.cc",
+      "docsUrl": null,
+      "statusApi": "https://user.modelshare.cc/api/public/branding",
+      "pricingApi": null,
+      "mirrors": [
+        {
+          "label": "控制台",
+          "homeUrl": "https://user.modelshare.cc",
+          "signupUrl": "https://user.modelshare.cc/?lang=zh&ref=M2TGP9JB"
+        }
+      ],
+      "tags": [
+        "账号共享",
+        "API 聚合",
+        "免费额度",
+        "按量计费",
+        "Claude Code",
+        "Codex",
+        "Anthropic 兼容",
+        "OpenAI 兼容"
+      ],
+      "highlights": [
+        "一个 API Key 直连多款主流大模型（含 Claude / GPT 系），按分组灵活放开、模型可自由映射，Claude Code / Codex / Cline / Cursor 都能对接",
+        "注册即送体验余额，开箱可用不用先充值；按量计费、用多少扣多少，站点自报以「微积分」精确记账、小额零头不丢",
+        "四种协议原生在架：Anthropic（/v1/messages）、OpenAI Chat（/v1/chat/completions）、OpenAI Responses（/v1/responses）与 Gemini，按渠道选主协议，平台探活确认后才派流量",
+        "自带实时网关：站点首页公示 128+ 在线账号池、自动巡检、故障转移与负载均衡，平均延迟约 1s",
+        "闲置账号可托管到共享池按真实用量分润，邀请码 M2TGP9JB 注册后你我都能拿奖励，多邀多得"
+      ],
+      "endpoints": {
+        "anthropic": "https://modelshare.cc",
+        "openai": "https://modelshare.cc/v1"
+      },
+      "modelsNote": "该平台是账号共享聚合网关，不是 New API 系，模型清单与分组要登录控制台（user.modelshare.cc）后在「渠道 / 密钥」页查看，公开接口不暴露。站点首页宣称覆盖多款主流大模型（Claude / GPT 等），推理可用性约 93%、多模态约 77%；调用地址（Base URL）与主协议在后台新建密钥时下发，本页不列模型表，具体清单与倍率以控制台实时页面为准。",
+      "register": {
+        "methods": [
+          "邮箱 + 密码"
+        ],
+        "requirements": [
+          "务必从本页邀请链接进入注册（带 ?ref=M2TGP9JB），邀请奖励才会发放，事后补填无效",
+          "邮箱注册开着验证码（emailVerifyEnabled = true）且限白名单域名：gmail.com / qq.com / 163.com / foxmail.com，其它邮箱注册不了",
+          "注册开着 Cloudflare Turnstile 人机校验；注册与控制台入口都在 user.modelshare.cc"
+        ]
+      },
+      "earnMore": [
+        "邀请他人注册，邀请人与被邀请人双方都能拿奖励，多邀多得（登录后台「邀请」页看具体金额）",
+        "把闲置的大模型账号托管到共享池，按真实用量自动分润，收益 / 抽成 / 结算在后台可查"
+      ],
+      "caveats": [
+        "注册送的体验余额、邀请奖励的具体数额站点公开接口不暴露，页面不登记数字，以注册后控制台「钱包 / 余额」页实际到账为准",
+        "这是按量计费的付费聚合平台，不是公益站：送的体验余额用完需要充值才能续，没有每日签到续命",
+        "账号共享模式下模型可用性随共享池波动，站点自报在线通用约 93% / 多模态约 77%，别当稳定生产通道用",
+        "调用走账号共享池，注意不要在请求里放敏感数据；商用与合规风险自行评估",
+        "API 网关地址（api.modelshare.cc 等）不对匿名开放，Base URL 需登录后台新建密钥时获取"
+      ],
+      "community": []
+    },
+    {
       "id": "supxh",
       "name": "肖恩AI",
       "subtitle": "免费大模型API · 注册送5000额度，每日签到1000~3000，邀请双方各得2000",
