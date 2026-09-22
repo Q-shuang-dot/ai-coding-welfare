@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-09-22T06:14:13.480Z",
+  "generatedAt": "2026-09-22T07:36:10.996Z",
   "sites": [
     {
       "id": "agentrouter",
-      "checkedAt": "2026-09-22T06:14:07.348Z",
+      "checkedAt": "2026-09-22T07:36:10.304Z",
       "apiOk": false,
       "pricingOk": false,
-      "latencyMs": 295,
-      "error": "invalid json",
+      "latencyMs": 246,
+      "error": "fetch failed",
       "systemName": null,
       "version": null,
       "registerOpen": null,
@@ -28,29 +28,30 @@
         "openai": null
       },
       "signup": {
-        "status": 200,
-        "ok": true,
-        "ms": 1206,
-        "attempts": 1
+        "status": 0,
+        "ok": false,
+        "ms": 59,
+        "error": "fetch failed",
+        "attempts": 3
       },
       "mirrors": [
         {
           "homeUrl": "https://ps.air-outer.com",
-          "online": false
+          "online": true
         }
       ],
       "probeBlocked": false,
-      "online": true,
+      "online": false,
       "dataStale": false,
       "staleFrom": null,
       "staleFields": []
     },
     {
       "id": "docode",
-      "checkedAt": "2026-09-22T06:14:01.842Z",
+      "checkedAt": "2026-09-22T07:36:05.753Z",
       "apiOk": true,
       "pricingOk": false,
-      "latencyMs": 689,
+      "latencyMs": 640,
       "error": null,
       "systemName": "DoCode",
       "version": "",
@@ -67,6 +68,11 @@
       "topupEnabled": null,
       "services": [],
       "announcements": [
+        {
+          "id": 32,
+          "date": "2026-09-22",
+          "text": "中秋节活动预告：中秋节当天凡是 vip500，赠送 1500 额度；vip1000，赠送 3000 额度，；vip2000，赠送 5000 额度。中秋节三天，充值加赠 5-20%。"
+        },
         {
           "id": 31,
           "date": "2026-09-21",
@@ -86,11 +92,6 @@
           "id": 27,
           "date": "2026-09-10",
           "text": "今天openai炸了，gpt全线都不太行，推荐用grok或者cc特殊分组"
-        },
-        {
-          "id": 26,
-          "date": "2026-08-29",
-          "text": "已上架按次收费的分组，有gemini和opus4.6，价格详情可以查看定价页面。"
         }
       ],
       "models": [],
@@ -102,7 +103,7 @@
       "signup": {
         "status": 200,
         "ok": true,
-        "ms": 611,
+        "ms": 548,
         "attempts": 1
       },
       "mirrors": [
@@ -118,55 +119,11 @@
       "staleFields": []
     },
     {
-      "id": "modelshare",
-      "checkedAt": "2026-09-22T06:14:02.502Z",
-      "apiOk": true,
-      "pricingOk": false,
-      "latencyMs": 1396,
-      "error": null,
-      "systemName": null,
-      "version": null,
-      "registerOpen": null,
-      "passwordRegister": null,
-      "checkinEnabled": null,
-      "loginMethods": [],
-      "githubMinAccountAgeDays": null,
-      "quotaPerUnit": null,
-      "inviteeBonusUsd": null,
-      "inviterBonusUsd": null,
-      "topupEnabled": null,
-      "services": [],
-      "announcements": [],
-      "models": [],
-      "modelsSource": "login-required",
-      "defaults": {
-        "claude": null,
-        "openai": null
-      },
-      "signup": {
-        "status": 200,
-        "ok": true,
-        "ms": 1697,
-        "attempts": 1
-      },
-      "mirrors": [
-        {
-          "homeUrl": "https://user.modelshare.cc",
-          "online": false
-        }
-      ],
-      "probeBlocked": false,
-      "online": true,
-      "dataStale": false,
-      "staleFrom": null,
-      "staleFields": []
-    },
-    {
       "id": "supxh",
-      "checkedAt": "2026-09-22T06:14:02.004Z",
+      "checkedAt": "2026-09-22T07:36:06.037Z",
       "apiOk": true,
       "pricingOk": true,
-      "latencyMs": 885,
+      "latencyMs": 703,
       "error": null,
       "systemName": null,
       "version": null,
@@ -190,7 +147,7 @@
       "signup": {
         "status": 200,
         "ok": true,
-        "ms": 898,
+        "ms": 788,
         "attempts": 1
       },
       "mirrors": [],
@@ -202,10 +159,10 @@
     },
     {
       "id": "api456",
-      "checkedAt": "2026-09-22T06:14:02.148Z",
+      "checkedAt": "2026-09-22T07:36:06.390Z",
       "apiOk": true,
       "pricingOk": false,
-      "latencyMs": 1038,
+      "latencyMs": 1344,
       "error": null,
       "systemName": "可萌中转站",
       "version": "",
@@ -250,7 +207,7 @@
       "signup": {
         "status": 200,
         "ok": true,
-        "ms": 1017,
+        "ms": 1036,
         "attempts": 1
       },
       "mirrors": [],
@@ -262,10 +219,10 @@
     },
     {
       "id": "justwoker",
-      "checkedAt": "2026-09-22T06:14:02.053Z",
+      "checkedAt": "2026-09-22T07:36:05.752Z",
       "apiOk": true,
       "pricingOk": false,
-      "latencyMs": 943,
+      "latencyMs": 697,
       "error": null,
       "systemName": "JustDoWork",
       "version": "v1.0.0-rc.23",
@@ -292,7 +249,7 @@
       "signup": {
         "status": 200,
         "ok": true,
-        "ms": 1151,
+        "ms": 925,
         "attempts": 1
       },
       "mirrors": [],
@@ -304,10 +261,10 @@
     },
     {
       "id": "matrix",
-      "checkedAt": "2026-09-22T06:14:03.279Z",
+      "checkedAt": "2026-09-22T07:36:05.203Z",
       "apiOk": true,
       "pricingOk": false,
-      "latencyMs": 2168,
+      "latencyMs": 148,
       "error": null,
       "systemName": null,
       "version": null,
@@ -331,7 +288,7 @@
       "signup": {
         "status": 200,
         "ok": true,
-        "ms": 2266,
+        "ms": 196,
         "attempts": 1
       },
       "mirrors": [],
@@ -343,23 +300,19 @@
     },
     {
       "id": "seekai",
-      "checkedAt": "2026-09-22T06:14:03.130Z",
-      "apiOk": true,
+      "checkedAt": "2026-09-22T07:36:10.718Z",
+      "apiOk": false,
       "pricingOk": false,
-      "latencyMs": 2018,
-      "error": null,
-      "systemName": "SeekAi",
-      "version": "v1.0.0-rc.25",
-      "registerOpen": true,
-      "passwordRegister": true,
-      "checkinEnabled": true,
-      "loginMethods": [
-        "GitHub",
-        "Telegram",
-        "账号密码"
-      ],
+      "latencyMs": 226,
+      "error": "HTTP 403",
+      "systemName": null,
+      "version": null,
+      "registerOpen": null,
+      "passwordRegister": null,
+      "checkinEnabled": null,
+      "loginMethods": [],
       "githubMinAccountAgeDays": null,
-      "quotaPerUnit": 500000,
+      "quotaPerUnit": null,
       "inviteeBonusUsd": null,
       "inviterBonusUsd": null,
       "topupEnabled": null,
@@ -372,9 +325,9 @@
         "openai": null
       },
       "signup": {
-        "status": 200,
-        "ok": true,
-        "ms": 1755,
+        "status": 403,
+        "ok": false,
+        "ms": 701,
         "attempts": 1
       },
       "mirrors": [
@@ -384,17 +337,17 @@
         }
       ],
       "probeBlocked": false,
-      "online": true,
+      "online": false,
       "dataStale": false,
       "staleFrom": null,
       "staleFields": []
     },
     {
       "id": "aaawinn",
-      "checkedAt": "2026-09-22T06:14:02.983Z",
+      "checkedAt": "2026-09-22T07:36:05.654Z",
       "apiOk": true,
       "pricingOk": false,
-      "latencyMs": 1871,
+      "latencyMs": 596,
       "error": null,
       "systemName": "Long的AI",
       "version": "",
@@ -446,7 +399,7 @@
       "signup": {
         "status": 200,
         "ok": true,
-        "ms": 1873,
+        "ms": 569,
         "attempts": 1
       },
       "mirrors": [],
@@ -458,10 +411,10 @@
     },
     {
       "id": "hcnsec",
-      "checkedAt": "2026-09-22T06:14:04.747Z",
+      "checkedAt": "2026-09-22T07:36:05.252Z",
       "apiOk": true,
       "pricingOk": false,
-      "latencyMs": 3635,
+      "latencyMs": 184,
       "error": null,
       "systemName": "新疆幻城网安科技公益大模型安全网关",
       "version": "",
@@ -514,7 +467,7 @@
       "signup": {
         "status": 200,
         "ok": true,
-        "ms": 2961,
+        "ms": 199,
         "attempts": 1
       },
       "mirrors": [],
@@ -526,10 +479,10 @@
     },
     {
       "id": "liangjiewis",
-      "checkedAt": "2026-09-22T06:14:03.787Z",
+      "checkedAt": "2026-09-22T07:36:05.259Z",
       "apiOk": true,
       "pricingOk": false,
-      "latencyMs": 2674,
+      "latencyMs": 196,
       "error": null,
       "systemName": "量界智算",
       "version": "v0.12.14",
@@ -579,7 +532,7 @@
       "signup": {
         "status": 200,
         "ok": true,
-        "ms": 2662,
+        "ms": 197,
         "attempts": 1
       },
       "mirrors": [
