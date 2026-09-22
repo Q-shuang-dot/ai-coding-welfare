@@ -8,6 +8,8 @@ AI 福利站 · Claude Code / Codex 免费额度白嫖导航的自动变动记�
 
 ## 2026-09-22
 
+- 🟢 AgentRouter 恢复在线 <sub>06:14 UTC</sub>
+- 🟢 SeekAi 恢复在线 <sub>06:14 UTC</sub>
 - ➖ AgentRouter 下线模型：claude-opus-4-8、claude-opus-5、deepseek-v4-flash、glm-5.3 等 6 个 <sub>06:12 UTC</sub>
 - 🔴 SeekAi 探测不到了：注册页与公开接口都没响应 <sub>06:12 UTC</sub>
 
