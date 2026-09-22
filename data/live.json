@@ -1,204 +1,57 @@
 {
-  "generatedAt": "2026-09-22T06:06:19.745Z",
+  "generatedAt": "2026-09-22T06:12:37.245Z",
   "sites": [
     {
       "id": "agentrouter",
-      "checkedAt": "2026-09-22T06:06:14.385Z",
-      "online": false,
-      "latencyMs": 50,
+      "checkedAt": "2026-09-22T06:12:32.330Z",
+      "apiOk": false,
+      "pricingOk": false,
+      "latencyMs": 69,
       "error": "fetch failed",
-      "systemName": "Agent Router",
-      "version": "init-20260915-25158da5",
+      "systemName": null,
+      "version": null,
       "registerOpen": null,
       "passwordRegister": null,
       "checkinEnabled": null,
-      "loginMethods": [
-        "GitHub",
-        "LinuxDO"
-      ],
+      "loginMethods": [],
       "githubMinAccountAgeDays": null,
-      "quotaPerUnit": 500000,
-      "inviteeBonusUsd": 50,
-      "inviterBonusUsd": 50,
-      "topupEnabled": false,
-      "announcements": [
-        {
-          "id": 16,
-          "date": "2026-08-28",
-          "text": "为保障服务长期运行，Claude 和 GPT 模型已调整为限量供应，每日分批次发放，用完即止。目前暂定每日两批：北京时间 07:00 和 19:00（UTC 23:00 和 11:00），后续可能调整。 额度用完后会报错“402 Budget pool quota has been exhausted.”，等待下一批或切换至 DeepSeek / GLM 即可继续使用。"
-        },
-        {
-          "id": 15,
-          "date": "2026-07-28",
-          "text": "📢 备用域名正式上线 为进一步提升服务可用性，本站现已推出备用域名：🔗 https://ps.air-outer.com 访问不了原域名的中国大陆用户可使用此域名，备用域名支持 API 接口调用 与 官网访问，与原域名功能完全一致。 原域名 https://agentrouter.org 可继续使用。"
-        },
-        {
-          "id": 14,
-          "date": "2026-07-16",
-          "text": "🎁 官方社区平台汇总 欢迎加入或关注以下官方渠道，获取最新动态与支持： 📱 QQ 群（会定期清人，没进多试几次） · 1群：1054950616 · 2群：1091388133 · 3群：700583832 💬 Discord（有中文交流频道） https://discord.gg/HgekCyHJqB 🐦 X（Twitter） https://x.com/AgentRouter_0"
-        },
-        {
-          "id": 13,
-          "date": "2026-06-30",
-          "text": "📢 不当使用行为封禁说明 为维护服务公平，平台禁止以下不当行为： · 批量注册/获取额度 · 自动化刷量套利 · 转售、共享账号及额度 · 虚假邀请欺诈 · 恶意绕过限制、干扰服务 违规账号将封禁，名单见 Discord 🚫blocked-history 频道。 申诉请联系：agent_router_org@163.com"
-        },
-        {
-          "id": 12,
-          "date": "2026-05-14",
-          "text": "因受到恶意举报影响，近期服务稳定性遇到巨大挑战，导致Claude系列模型大规模停用。 为保障后续提升服务质量、及时同步信息，我们已启用新的官方 Discord，并在新的官方X更新动态。 为避免走失，请大家有序移步： 新的 Discord： 👉 https://discord.gg/aYq5B4RW3 官方 X： 👉 @AgentRouter_0 https://x.com/AgentRouter_0 且用且珍惜"
-        }
-      ],
-      "models": [
-        {
-          "name": "claude-opus-4-8",
-          "ratio": 4,
-          "completionRatio": 5,
-          "fixedPrice": null,
-          "inputPerMTok": 8,
-          "outputPerMTok": 40,
-          "groups": [
-            "core",
-            "default",
-            "svip",
-            "test"
-          ],
-          "protocols": [
-            "anthropic",
-            "openai"
-          ]
-        },
-        {
-          "name": "claude-opus-5",
-          "ratio": 4,
-          "completionRatio": 5,
-          "fixedPrice": null,
-          "inputPerMTok": 8,
-          "outputPerMTok": 40,
-          "groups": [
-            "svip",
-            "test",
-            "core",
-            "default"
-          ],
-          "protocols": [
-            "anthropic",
-            "openai"
-          ]
-        },
-        {
-          "name": "deepseek-v4-flash",
-          "ratio": 2,
-          "completionRatio": 3,
-          "fixedPrice": null,
-          "inputPerMTok": 4,
-          "outputPerMTok": 12,
-          "groups": [
-            "test",
-            "core",
-            "default",
-            "svip"
-          ],
-          "protocols": [
-            "openai",
-            "anthropic"
-          ]
-        },
-        {
-          "name": "glm-5.3",
-          "ratio": 2.5,
-          "completionRatio": 5,
-          "fixedPrice": null,
-          "inputPerMTok": 5,
-          "outputPerMTok": 25,
-          "groups": [
-            "core",
-            "default",
-            "svip",
-            "test"
-          ],
-          "protocols": [
-            "anthropic",
-            "openai"
-          ]
-        },
-        {
-          "name": "gpt-5.6-sol",
-          "ratio": 1.5,
-          "completionRatio": 5,
-          "fixedPrice": null,
-          "inputPerMTok": 3,
-          "outputPerMTok": 15,
-          "groups": [
-            "test",
-            "core",
-            "default",
-            "svip"
-          ],
-          "protocols": [
-            "openai"
-          ]
-        },
-        {
-          "name": "gpt-6-astra",
-          "ratio": 1.5,
-          "completionRatio": 5,
-          "fixedPrice": null,
-          "inputPerMTok": 3,
-          "outputPerMTok": 15,
-          "groups": [
-            "core",
-            "default",
-            "svip",
-            "test"
-          ],
-          "protocols": [
-            "openai"
-          ]
-        }
-      ],
-      "modelsSource": "cached",
+      "quotaPerUnit": null,
+      "inviteeBonusUsd": null,
+      "inviterBonusUsd": null,
+      "topupEnabled": null,
+      "services": [],
+      "announcements": [],
+      "models": [],
+      "modelsSource": "login-required",
       "defaults": {
-        "claude": "claude-opus-5",
-        "openai": "gpt-6-astra"
+        "claude": null,
+        "openai": null
       },
       "signup": {
         "status": 0,
         "ok": false,
-        "ms": 51,
+        "ms": 86,
         "error": "fetch failed",
         "attempts": 3
       },
       "mirrors": [
         {
           "homeUrl": "https://ps.air-outer.com",
-          "online": true
+          "online": false
         }
       ],
-      "staleFrom": "2026-09-15T01:48:59.261Z",
-      "apiOk": false,
-      "pricingOk": false,
-      "dataStale": true,
-      "staleFields": [
-        "systemName",
-        "version",
-        "loginMethods",
-        "quotaPerUnit",
-        "inviteeBonusUsd",
-        "inviterBonusUsd",
-        "topupEnabled",
-        "announcements",
-        "models",
-        "defaults"
-      ],
-      "services": [],
-      "probeBlocked": false
+      "probeBlocked": false,
+      "online": false,
+      "dataStale": false,
+      "staleFrom": null,
+      "staleFields": []
     },
     {
       "id": "docode",
-      "checkedAt": "2026-09-22T06:06:09.913Z",
+      "checkedAt": "2026-09-22T06:12:28.027Z",
       "apiOk": true,
       "pricingOk": false,
-      "latencyMs": 720,
+      "latencyMs": 696,
       "error": null,
       "systemName": "DoCode",
       "version": "",
@@ -250,7 +103,7 @@
       "signup": {
         "status": 200,
         "ok": true,
-        "ms": 614,
+        "ms": 616,
         "attempts": 1
       },
       "mirrors": [
@@ -267,10 +120,10 @@
     },
     {
       "id": "modelshare",
-      "checkedAt": "2026-09-22T06:06:10.631Z",
+      "checkedAt": "2026-09-22T06:12:28.543Z",
       "apiOk": true,
       "pricingOk": false,
-      "latencyMs": 1569,
+      "latencyMs": 1332,
       "error": null,
       "systemName": null,
       "version": null,
@@ -294,7 +147,7 @@
       "signup": {
         "status": 200,
         "ok": true,
-        "ms": 1479,
+        "ms": 1257,
         "attempts": 1
       },
       "mirrors": [
@@ -311,10 +164,10 @@
     },
     {
       "id": "supxh",
-      "checkedAt": "2026-09-22T06:06:10.374Z",
+      "checkedAt": "2026-09-22T06:12:28.282Z",
       "apiOk": true,
       "pricingOk": true,
-      "latencyMs": 1052,
+      "latencyMs": 801,
       "error": null,
       "systemName": null,
       "version": null,
@@ -338,7 +191,7 @@
       "signup": {
         "status": 200,
         "ok": true,
-        "ms": 1070,
+        "ms": 798,
         "attempts": 1
       },
       "mirrors": [],
@@ -350,10 +203,10 @@
     },
     {
       "id": "api456",
-      "checkedAt": "2026-09-22T06:06:10.296Z",
+      "checkedAt": "2026-09-22T06:12:28.115Z",
       "apiOk": true,
       "pricingOk": false,
-      "latencyMs": 1224,
+      "latencyMs": 893,
       "error": null,
       "systemName": "可萌中转站",
       "version": "",
@@ -398,7 +251,7 @@
       "signup": {
         "status": 200,
         "ok": true,
-        "ms": 1423,
+        "ms": 753,
         "attempts": 1
       },
       "mirrors": [],
@@ -410,10 +263,10 @@
     },
     {
       "id": "justwoker",
-      "checkedAt": "2026-09-22T06:06:10.207Z",
+      "checkedAt": "2026-09-22T06:12:27.854Z",
       "apiOk": true,
       "pricingOk": false,
-      "latencyMs": 1133,
+      "latencyMs": 629,
       "error": null,
       "systemName": "JustDoWork",
       "version": "v1.0.0-rc.23",
@@ -440,7 +293,7 @@
       "signup": {
         "status": 200,
         "ok": true,
-        "ms": 1361,
+        "ms": 941,
         "attempts": 1
       },
       "mirrors": [],
@@ -452,10 +305,10 @@
     },
     {
       "id": "matrix",
-      "checkedAt": "2026-09-22T06:06:09.700Z",
+      "checkedAt": "2026-09-22T06:12:27.414Z",
       "apiOk": true,
       "pricingOk": false,
-      "latencyMs": 623,
+      "latencyMs": 186,
       "error": null,
       "systemName": null,
       "version": null,
@@ -479,7 +332,7 @@
       "signup": {
         "status": 200,
         "ok": true,
-        "ms": 689,
+        "ms": 268,
         "attempts": 1
       },
       "mirrors": [],
@@ -491,23 +344,19 @@
     },
     {
       "id": "seekai",
-      "checkedAt": "2026-09-22T06:06:15.496Z",
+      "checkedAt": "2026-09-22T06:12:33.237Z",
       "apiOk": false,
       "pricingOk": false,
-      "latencyMs": 225,
+      "latencyMs": 229,
       "error": "HTTP 403",
-      "systemName": "SeekAi",
-      "version": "v1.0.0-rc.25",
-      "registerOpen": true,
-      "passwordRegister": true,
-      "checkinEnabled": true,
-      "loginMethods": [
-        "GitHub",
-        "Telegram",
-        "账号密码"
-      ],
+      "systemName": null,
+      "version": null,
+      "registerOpen": null,
+      "passwordRegister": null,
+      "checkinEnabled": null,
+      "loginMethods": [],
       "githubMinAccountAgeDays": null,
-      "quotaPerUnit": 500000,
+      "quotaPerUnit": null,
       "inviteeBonusUsd": null,
       "inviterBonusUsd": null,
       "topupEnabled": null,
@@ -522,7 +371,7 @@
       "signup": {
         "status": 403,
         "ok": false,
-        "ms": 1213,
+        "ms": 660,
         "attempts": 1
       },
       "mirrors": [
@@ -531,26 +380,18 @@
           "online": true
         }
       ],
-      "probeBlocked": true,
-      "online": true,
-      "dataStale": true,
-      "staleFrom": "2026-09-21T21:58:40.715Z",
-      "staleFields": [
-        "systemName",
-        "version",
-        "registerOpen",
-        "passwordRegister",
-        "checkinEnabled",
-        "loginMethods",
-        "quotaPerUnit"
-      ]
+      "probeBlocked": false,
+      "online": false,
+      "dataStale": false,
+      "staleFrom": null,
+      "staleFields": []
     },
     {
       "id": "aaawinn",
-      "checkedAt": "2026-09-22T06:06:11.215Z",
+      "checkedAt": "2026-09-22T06:12:27.858Z",
       "apiOk": true,
       "pricingOk": false,
-      "latencyMs": 2135,
+      "latencyMs": 626,
       "error": null,
       "systemName": "Long的AI",
       "version": "",
@@ -602,7 +443,7 @@
       "signup": {
         "status": 200,
         "ok": true,
-        "ms": 1169,
+        "ms": 872,
         "attempts": 1
       },
       "mirrors": [],
@@ -614,10 +455,10 @@
     },
     {
       "id": "hcnsec",
-      "checkedAt": "2026-09-22T06:06:09.849Z",
+      "checkedAt": "2026-09-22T06:12:27.504Z",
       "apiOk": true,
       "pricingOk": false,
-      "latencyMs": 766,
+      "latencyMs": 268,
       "error": null,
       "systemName": "新疆幻城网安科技公益大模型安全网关",
       "version": "",
@@ -670,7 +511,7 @@
       "signup": {
         "status": 200,
         "ok": true,
-        "ms": 784,
+        "ms": 285,
         "attempts": 1
       },
       "mirrors": [],
@@ -682,10 +523,10 @@
     },
     {
       "id": "liangjiewis",
-      "checkedAt": "2026-09-22T06:06:10.180Z",
+      "checkedAt": "2026-09-22T06:12:27.484Z",
       "apiOk": true,
       "pricingOk": false,
-      "latencyMs": 1096,
+      "latencyMs": 242,
       "error": null,
       "systemName": "量界智算",
       "version": "v0.12.14",
@@ -735,7 +576,7 @@
       "signup": {
         "status": 200,
         "ok": true,
-        "ms": 1096,
+        "ms": 238,
         "attempts": 1
       },
       "mirrors": [

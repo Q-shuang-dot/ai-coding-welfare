@@ -6,6 +6,11 @@ AI 福利站 · Claude Code / Codex 免费额度白嫖导航的自动变动记�
 
 > 只记录会影响「值不值得注册」的字段。探测被站点 WAF 拦下时不记在线状态变化，避免机房 IP 被拦被误报成掉线。
 
+## 2026-09-22
+
+- ➖ AgentRouter 下线模型：claude-opus-4-8、claude-opus-5、deepseek-v4-flash、glm-5.3 等 6 个 <sub>06:12 UTC</sub>
+- 🔴 SeekAi 探测不到了：注册页与公开接口都没响应 <sub>06:12 UTC</sub>
+
 ## 2026-09-21
 
 - 📢 DoCode 发了公告：gptpro+分组即将下线，请及时切换至其他分组，推荐gpt不降智分组！！！ <sub>12:48 UTC</sub>
