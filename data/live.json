@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-09-24T11:46:03.456Z",
+  "generatedAt": "2026-09-24T17:11:08.044Z",
   "sites": [
     {
       "id": "agentrouter",
-      "checkedAt": "2026-09-24T11:45:57.225Z",
+      "checkedAt": "2026-09-24T17:11:01.848Z",
       "apiOk": false,
       "pricingOk": false,
-      "latencyMs": 300,
+      "latencyMs": 304,
       "error": "invalid json",
       "systemName": null,
       "version": null,
@@ -30,7 +30,7 @@
       "signup": {
         "status": 200,
         "ok": true,
-        "ms": 1208,
+        "ms": 1225,
         "attempts": 1
       },
       "mirrors": [
@@ -47,10 +47,10 @@
     },
     {
       "id": "docode",
-      "checkedAt": "2026-09-24T11:45:51.829Z",
+      "checkedAt": "2026-09-24T17:10:56.492Z",
       "apiOk": true,
       "pricingOk": false,
-      "latencyMs": 783,
+      "latencyMs": 825,
       "error": null,
       "systemName": "DoCode",
       "version": "",
@@ -102,7 +102,7 @@
       "signup": {
         "status": 200,
         "ok": true,
-        "ms": 714,
+        "ms": 747,
         "attempts": 1
       },
       "mirrors": [
@@ -119,10 +119,10 @@
     },
     {
       "id": "nianhua",
-      "checkedAt": "2026-09-24T11:45:51.837Z",
+      "checkedAt": "2026-09-24T17:10:56.527Z",
       "apiOk": true,
       "pricingOk": true,
-      "latencyMs": 838,
+      "latencyMs": 910,
       "error": null,
       "systemName": "年华 API 中转站",
       "version": "1.0.0-rc.22-nianhua-bba9838",
@@ -202,10 +202,10 @@
           "inputPerMTok": 10,
           "outputPerMTok": 50,
           "groups": [
+            "福利（可用群内会通知）",
             "CCMax支持外接",
             "Claude满血福利",
-            "default",
-            "福利（可用群内会通知）"
+            "default"
           ],
           "protocols": [
             "anthropic",
@@ -314,10 +314,10 @@
           "inputPerMTok": 5,
           "outputPerMTok": 25,
           "groups": [
-            "CCMax支持外接",
             "Claude满血福利",
             "default",
-            "kiro"
+            "kiro",
+            "CCMax支持外接"
           ],
           "protocols": [
             "anthropic",
@@ -332,10 +332,10 @@
           "inputPerMTok": 5,
           "outputPerMTok": 25,
           "groups": [
-            "kiro",
-            "CCMax支持外接",
             "Claude满血福利",
-            "default"
+            "default",
+            "kiro",
+            "CCMax支持外接"
           ],
           "protocols": [
             "anthropic",
@@ -511,8 +511,8 @@
           "inputPerMTok": 0.5,
           "outputPerMTok": 3,
           "groups": [
-            "Gemini",
-            "Gemini-特惠-残将"
+            "Gemini-特惠-残将",
+            "Gemini"
           ],
           "protocols": [
             "openai",
@@ -876,11 +876,11 @@
           "inputPerMTok": 1.75,
           "outputPerMTok": 14,
           "groups": [
+            "企业Pro",
             "福利（可用群内会通知）",
             "GPT",
             "GPTPro",
-            "GPT纯Plus低价分组",
-            "企业Pro"
+            "GPT纯Plus低价分组"
           ],
           "protocols": [
             "openai"
@@ -926,10 +926,10 @@
           "inputPerMTok": 0.75,
           "outputPerMTok": 4.5,
           "groups": [
+            "福利（可用群内会通知）",
             "GPT",
             "GPTPro",
-            "GPT纯Plus低价分组",
-            "福利（可用群内会通知）"
+            "GPT纯Plus低价分组"
           ],
           "protocols": [
             "openai"
@@ -960,12 +960,12 @@
           "inputPerMTok": 5,
           "outputPerMTok": 30,
           "groups": [
+            "GPT纯Plus低价分组",
             "企业Pro",
             "福利（可用群内会通知）",
             "GPT",
             "GPTPro",
-            "GPT官转",
-            "GPT纯Plus低价分组"
+            "GPT官转"
           ],
           "protocols": [
             "openai"
@@ -1010,11 +1010,11 @@
           "inputPerMTok": 75,
           "outputPerMTok": 450,
           "groups": [
-            "GPT",
-            "GPTPro",
             "GPT纯Plus低价分组",
             "企业Pro",
-            "福利（可用群内会通知）"
+            "福利（可用群内会通知）",
+            "GPT",
+            "GPTPro"
           ],
           "protocols": [
             "openai"
@@ -1028,12 +1028,12 @@
           "inputPerMTok": 5,
           "outputPerMTok": 30,
           "groups": [
+            "企业Pro",
+            "福利（可用群内会通知）",
             "GPT",
             "GPTPro",
             "GPT官转",
-            "GPT纯Plus低价分组",
-            "企业Pro",
-            "福利（可用群内会通知）"
+            "GPT纯Plus低价分组"
           ],
           "protocols": [
             "openai"
@@ -1047,11 +1047,11 @@
           "inputPerMTok": 75,
           "outputPerMTok": 450,
           "groups": [
+            "福利（可用群内会通知）",
             "GPT",
             "GPTPro",
             "GPT纯Plus低价分组",
-            "企业Pro",
-            "福利（可用群内会通知）"
+            "企业Pro"
           ],
           "protocols": [
             "openai"
@@ -1081,9 +1081,9 @@
           "inputPerMTok": 75,
           "outputPerMTok": 150,
           "groups": [
-            "企业Pro",
             "GPT",
-            "GPTPro"
+            "GPTPro",
+            "企业Pro"
           ],
           "protocols": [
             "openai"
@@ -1097,8 +1097,8 @@
           "inputPerMTok": 75,
           "outputPerMTok": 150,
           "groups": [
-            "企业Pro",
-            "GPT"
+            "GPT",
+            "企业Pro"
           ],
           "protocols": [
             "openai"
@@ -1112,9 +1112,9 @@
           "inputPerMTok": 75,
           "outputPerMTok": 150,
           "groups": [
+            "企业Pro",
             "GPT",
-            "GPTPro",
-            "企业Pro"
+            "GPTPro"
           ],
           "protocols": [
             "openai"
@@ -1158,11 +1158,11 @@
           "inputPerMTok": null,
           "outputPerMTok": null,
           "groups": [
-            "福利（可用群内会通知）",
             "ALL",
             "GPT",
             "GPT-Image",
-            "GPTPro"
+            "GPTPro",
+            "福利（可用群内会通知）"
           ],
           "protocols": [
             "openai"
@@ -1176,10 +1176,10 @@
           "inputPerMTok": null,
           "outputPerMTok": null,
           "groups": [
+            "GPTPro",
             "企业Pro",
             "GPT",
-            "GPT-Image",
-            "GPTPro"
+            "GPT-Image"
           ],
           "protocols": [
             "openai"
@@ -1193,10 +1193,10 @@
           "inputPerMTok": null,
           "outputPerMTok": null,
           "groups": [
-            "GPTPro",
-            "企业Pro",
             "GPT",
-            "GPT-Image"
+            "GPT-Image",
+            "GPTPro",
+            "企业Pro"
           ],
           "protocols": [
             "openai"
@@ -1204,6 +1204,23 @@
         },
         {
           "name": "gpt-image-2.5",
+          "ratio": 0,
+          "completionRatio": 0,
+          "fixedPrice": 0.16,
+          "inputPerMTok": null,
+          "outputPerMTok": null,
+          "groups": [
+            "GPT-Image",
+            "GPTPro",
+            "ALL",
+            "GPT"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "gpt-image-2.5-flare",
           "ratio": 0,
           "completionRatio": 0,
           "fixedPrice": 0.16,
@@ -1220,23 +1237,6 @@
           ]
         },
         {
-          "name": "gpt-image-2.5-flare",
-          "ratio": 0,
-          "completionRatio": 0,
-          "fixedPrice": 0.16,
-          "inputPerMTok": null,
-          "outputPerMTok": null,
-          "groups": [
-            "GPTPro",
-            "ALL",
-            "GPT",
-            "GPT-Image"
-          ],
-          "protocols": [
-            "openai"
-          ]
-        },
-        {
           "name": "gpt-image-2.5-sunburst",
           "ratio": 0,
           "completionRatio": 0,
@@ -1244,10 +1244,10 @@
           "inputPerMTok": null,
           "outputPerMTok": null,
           "groups": [
+            "ALL",
             "GPT",
             "GPT-Image",
-            "GPTPro",
-            "ALL"
+            "GPTPro"
           ],
           "protocols": [
             "openai"
@@ -1561,7 +1561,7 @@
       "signup": {
         "status": 200,
         "ok": true,
-        "ms": 1117,
+        "ms": 1139,
         "attempts": 1
       },
       "mirrors": [],
@@ -1573,10 +1573,10 @@
     },
     {
       "id": "supxh",
-      "checkedAt": "2026-09-24T11:45:52.400Z",
+      "checkedAt": "2026-09-24T17:10:57.035Z",
       "apiOk": true,
       "pricingOk": true,
-      "latencyMs": 1257,
+      "latencyMs": 1277,
       "error": null,
       "systemName": null,
       "version": null,
@@ -1600,7 +1600,7 @@
       "signup": {
         "status": 200,
         "ok": true,
-        "ms": 1414,
+        "ms": 1350,
         "attempts": 1
       },
       "mirrors": [],
@@ -1612,10 +1612,10 @@
     },
     {
       "id": "api456",
-      "checkedAt": "2026-09-24T11:45:52.146Z",
+      "checkedAt": "2026-09-24T17:10:56.794Z",
       "apiOk": true,
       "pricingOk": false,
-      "latencyMs": 1151,
+      "latencyMs": 1179,
       "error": null,
       "systemName": "可萌中转站",
       "version": "",
@@ -1660,7 +1660,7 @@
       "signup": {
         "status": 200,
         "ok": true,
-        "ms": 1156,
+        "ms": 1180,
         "attempts": 1
       },
       "mirrors": [],
@@ -1672,10 +1672,10 @@
     },
     {
       "id": "justwoker",
-      "checkedAt": "2026-09-24T11:45:52.152Z",
+      "checkedAt": "2026-09-24T17:10:56.736Z",
       "apiOk": true,
       "pricingOk": false,
-      "latencyMs": 1155,
+      "latencyMs": 1120,
       "error": null,
       "systemName": "JustDoWork",
       "version": "v1.0.0-rc.23",
@@ -1702,7 +1702,7 @@
       "signup": {
         "status": 200,
         "ok": true,
-        "ms": 1398,
+        "ms": 1413,
         "attempts": 1
       },
       "mirrors": [],
@@ -1714,10 +1714,10 @@
     },
     {
       "id": "matrix",
-      "checkedAt": "2026-09-24T11:45:53.335Z",
+      "checkedAt": "2026-09-24T17:10:58.107Z",
       "apiOk": true,
       "pricingOk": false,
-      "latencyMs": 2339,
+      "latencyMs": 2491,
       "error": null,
       "systemName": null,
       "version": null,
@@ -1741,7 +1741,7 @@
       "signup": {
         "status": 200,
         "ok": true,
-        "ms": 2388,
+        "ms": 2568,
         "attempts": 1
       },
       "mirrors": [],
@@ -1753,10 +1753,10 @@
     },
     {
       "id": "seekai",
-      "checkedAt": "2026-09-24T11:45:52.829Z",
+      "checkedAt": "2026-09-24T17:10:57.796Z",
       "apiOk": true,
       "pricingOk": false,
-      "latencyMs": 1831,
+      "latencyMs": 2178,
       "error": null,
       "systemName": "SeekAi",
       "version": "v1.0.0-rc.25",
@@ -1784,7 +1784,7 @@
       "signup": {
         "status": 200,
         "ok": true,
-        "ms": 1840,
+        "ms": 2159,
         "attempts": 1
       },
       "mirrors": [
@@ -1801,10 +1801,10 @@
     },
     {
       "id": "aaawinn",
-      "checkedAt": "2026-09-24T11:45:52.905Z",
+      "checkedAt": "2026-09-24T17:10:57.609Z",
       "apiOk": true,
       "pricingOk": false,
-      "latencyMs": 1906,
+      "latencyMs": 1990,
       "error": null,
       "systemName": "Long的AI",
       "version": "",
@@ -1856,7 +1856,7 @@
       "signup": {
         "status": 200,
         "ok": true,
-        "ms": 1902,
+        "ms": 1993,
         "attempts": 1
       },
       "mirrors": [],
@@ -1868,10 +1868,10 @@
     },
     {
       "id": "hcnsec",
-      "checkedAt": "2026-09-24T11:45:54.618Z",
+      "checkedAt": "2026-09-24T17:10:59.631Z",
       "apiOk": true,
       "pricingOk": false,
-      "latencyMs": 3618,
+      "latencyMs": 4011,
       "error": null,
       "systemName": "新疆幻城网安科技公益大模型安全网关",
       "version": "v1.0.0-rc.40-hc2",
@@ -1924,7 +1924,7 @@
       "signup": {
         "status": 200,
         "ok": true,
-        "ms": 3634,
+        "ms": 4069,
         "attempts": 1
       },
       "mirrors": [],
@@ -1936,10 +1936,10 @@
     },
     {
       "id": "liangjiewis",
-      "checkedAt": "2026-09-24T11:45:53.798Z",
+      "checkedAt": "2026-09-24T17:10:58.477Z",
       "apiOk": true,
       "pricingOk": false,
-      "latencyMs": 2796,
+      "latencyMs": 2857,
       "error": null,
       "systemName": "量界智算",
       "version": "v0.12.14",
@@ -1989,7 +1989,7 @@
       "signup": {
         "status": 200,
         "ok": true,
-        "ms": 2800,
+        "ms": 2858,
         "attempts": 1
       },
       "mirrors": [
