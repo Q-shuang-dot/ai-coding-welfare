@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-09-24T04:50:55.002Z",
+  "generatedAt": "2026-09-24T05:58:45.353Z",
   "sites": [
     {
       "id": "agentrouter",
-      "checkedAt": "2026-09-24T04:50:48.768Z",
+      "checkedAt": "2026-09-24T05:58:14.054Z",
       "apiOk": false,
       "pricingOk": false,
-      "latencyMs": 330,
-      "error": "invalid json",
+      "latencyMs": 52,
+      "error": "fetch failed",
       "systemName": null,
       "version": null,
       "registerOpen": null,
@@ -28,10 +28,11 @@
         "openai": null
       },
       "signup": {
-        "status": 200,
-        "ok": true,
-        "ms": 1157,
-        "attempts": 1
+        "status": 0,
+        "ok": false,
+        "ms": 246,
+        "error": "fetch failed",
+        "attempts": 3
       },
       "mirrors": [
         {
@@ -40,17 +41,17 @@
         }
       ],
       "probeBlocked": false,
-      "online": true,
+      "online": false,
       "dataStale": false,
       "staleFrom": null,
       "staleFields": []
     },
     {
       "id": "docode",
-      "checkedAt": "2026-09-24T04:50:43.481Z",
+      "checkedAt": "2026-09-24T05:58:09.767Z",
       "apiOk": true,
       "pricingOk": false,
-      "latencyMs": 977,
+      "latencyMs": 762,
       "error": null,
       "systemName": "DoCode",
       "version": "",
@@ -102,7 +103,7 @@
       "signup": {
         "status": 200,
         "ok": true,
-        "ms": 879,
+        "ms": 646,
         "attempts": 1
       },
       "mirrors": [
@@ -118,12 +119,1466 @@
       "staleFields": []
     },
     {
-      "id": "supxh",
-      "checkedAt": "2026-09-24T04:50:43.756Z",
+      "id": "nianhua",
+      "checkedAt": "2026-09-24T05:58:10.813Z",
       "apiOk": true,
       "pricingOk": true,
-      "latencyMs": 1259,
+      "latencyMs": 907,
       "error": null,
+      "systemName": "年华 API 中转站",
+      "version": "1.0.0-rc.22-nianhua-bba9838",
+      "registerOpen": true,
+      "passwordRegister": true,
+      "checkinEnabled": true,
+      "loginMethods": [
+        "账号密码"
+      ],
+      "githubMinAccountAgeDays": null,
+      "quotaPerUnit": 500000,
+      "inviteeBonusUsd": null,
+      "inviterBonusUsd": null,
+      "topupEnabled": null,
+      "services": [],
+      "announcements": [
+        {
+          "id": 17,
+          "date": "2026-07-05",
+          "text": "adobe4k image2更新 k12 活动0.01(svip）gpt分组几乎免费可爽登"
+        },
+        {
+          "id": 16,
+          "date": "2026-06-29",
+          "text": "gpt,claude均通过sub2api调度提高稳定性，kiro聚合 原本的anti-claude/gemini改了分组名称，svip免费使用 公益分组不可用模型移除，保留gpt，支持联网搜索，但是不支持工具调用,保留agnes模型，支持支持完整工具调用 更新gemini分组 gpt-image-2生图newapi单独服务器避免高并发生图影响 新增无期限套餐（7.12日结束）"
+        },
+        {
+          "id": 15,
+          "date": "2026-06-19",
+          "text": "添加US-1大带宽优化节点，尽快放弃日本节点"
+        },
+        {
+          "id": 14,
+          "date": "2026-06-09",
+          "text": "添加测试ClaudeCode Max号池 支持claude-fable-5 使用量低会下架 免费分组改为公益分组，几乎免费的倍率 下调GPT价格 新增部分Claude分组"
+        },
+        {
+          "id": 13,
+          "date": "2026-06-07",
+          "text": "修复了部分套餐计费问题 超额部分进行了50%折扣额度抵扣 新的福利套餐已添加"
+        }
+      ],
+      "models": [
+        {
+          "name": "agnes-1.5-flash",
+          "ratio": 0,
+          "completionRatio": 0,
+          "fixedPrice": 1,
+          "inputPerMTok": null,
+          "outputPerMTok": null,
+          "groups": [
+            "公益"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "agnes-2.0-flash",
+          "ratio": 0,
+          "completionRatio": 0,
+          "fixedPrice": 1,
+          "inputPerMTok": null,
+          "outputPerMTok": null,
+          "groups": [
+            "公益"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "claude-fable-5",
+          "ratio": 5,
+          "completionRatio": 5,
+          "fixedPrice": null,
+          "inputPerMTok": 10,
+          "outputPerMTok": 50,
+          "groups": [
+            "default",
+            "福利（可用群内会通知）",
+            "CCMax支持外接",
+            "Claude满血福利"
+          ],
+          "protocols": [
+            "anthropic",
+            "openai"
+          ]
+        },
+        {
+          "name": "claude-fable-5-1",
+          "ratio": 5,
+          "completionRatio": 5,
+          "fixedPrice": null,
+          "inputPerMTok": 10,
+          "outputPerMTok": 50,
+          "groups": [
+            "CCMax支持外接"
+          ],
+          "protocols": [
+            "anthropic",
+            "openai"
+          ]
+        },
+        {
+          "name": "claude-haiku-4-5",
+          "ratio": 0.5,
+          "completionRatio": 5,
+          "fixedPrice": null,
+          "inputPerMTok": 1,
+          "outputPerMTok": 5,
+          "groups": [
+            "kiro"
+          ],
+          "protocols": [
+            "anthropic",
+            "openai"
+          ]
+        },
+        {
+          "name": "claude-haiku-4-5-20251001",
+          "ratio": 0.5,
+          "completionRatio": 5,
+          "fixedPrice": null,
+          "inputPerMTok": 1,
+          "outputPerMTok": 5,
+          "groups": [
+            "CCMax支持外接",
+            "kiro"
+          ],
+          "protocols": [
+            "anthropic",
+            "openai"
+          ]
+        },
+        {
+          "name": "claude-opus-4-5-20251101",
+          "ratio": 2.5,
+          "completionRatio": 5,
+          "fixedPrice": null,
+          "inputPerMTok": 5,
+          "outputPerMTok": 25,
+          "groups": [
+            "CCMax支持外接"
+          ],
+          "protocols": [
+            "anthropic",
+            "openai"
+          ]
+        },
+        {
+          "name": "claude-opus-4-6",
+          "ratio": 2.5,
+          "completionRatio": 5,
+          "fixedPrice": null,
+          "inputPerMTok": 5,
+          "outputPerMTok": 25,
+          "groups": [
+            "CCMax支持外接",
+            "Claude满血福利",
+            "default",
+            "kiro"
+          ],
+          "protocols": [
+            "anthropic",
+            "openai"
+          ]
+        },
+        {
+          "name": "claude-opus-4-6-thinking",
+          "ratio": 2.5,
+          "completionRatio": 5,
+          "fixedPrice": null,
+          "inputPerMTok": 5,
+          "outputPerMTok": 25,
+          "groups": [
+            "Anti-Claude-残将"
+          ],
+          "protocols": [
+            "anthropic",
+            "openai"
+          ]
+        },
+        {
+          "name": "claude-opus-4-7",
+          "ratio": 2.5,
+          "completionRatio": 5,
+          "fixedPrice": null,
+          "inputPerMTok": 5,
+          "outputPerMTok": 25,
+          "groups": [
+            "CCMax支持外接",
+            "Claude满血福利",
+            "default",
+            "kiro"
+          ],
+          "protocols": [
+            "anthropic",
+            "openai"
+          ]
+        },
+        {
+          "name": "claude-opus-4-8",
+          "ratio": 2.5,
+          "completionRatio": 5,
+          "fixedPrice": null,
+          "inputPerMTok": 5,
+          "outputPerMTok": 25,
+          "groups": [
+            "kiro",
+            "CCMax支持外接",
+            "Claude满血福利",
+            "default"
+          ],
+          "protocols": [
+            "anthropic",
+            "openai"
+          ]
+        },
+        {
+          "name": "claude-opus-5",
+          "ratio": 2.5,
+          "completionRatio": 5,
+          "fixedPrice": null,
+          "inputPerMTok": 5,
+          "outputPerMTok": 25,
+          "groups": [
+            "CCMax支持外接",
+            "kiro",
+            "福利（可用群内会通知）"
+          ],
+          "protocols": [
+            "anthropic",
+            "openai"
+          ]
+        },
+        {
+          "name": "claude-opus-5-5",
+          "ratio": 2,
+          "completionRatio": 5,
+          "fixedPrice": null,
+          "inputPerMTok": 4,
+          "outputPerMTok": 20,
+          "groups": [
+            "CCMax支持外接"
+          ],
+          "protocols": [
+            "anthropic",
+            "openai"
+          ]
+        },
+        {
+          "name": "claude-sonnet-4-6",
+          "ratio": 1.5,
+          "completionRatio": 5,
+          "fixedPrice": null,
+          "inputPerMTok": 3,
+          "outputPerMTok": 15,
+          "groups": [
+            "default",
+            "kiro",
+            "CCMax支持外接",
+            "Claude满血福利"
+          ],
+          "protocols": [
+            "anthropic",
+            "openai"
+          ]
+        },
+        {
+          "name": "claude-sonnet-4-6-thinking",
+          "ratio": 2.5,
+          "completionRatio": 5,
+          "fixedPrice": null,
+          "inputPerMTok": 5,
+          "outputPerMTok": 25,
+          "groups": [
+            "Anti-Claude-残将"
+          ],
+          "protocols": [
+            "anthropic",
+            "openai"
+          ]
+        },
+        {
+          "name": "claude-sonnet-5",
+          "ratio": 1.5,
+          "completionRatio": 1,
+          "fixedPrice": null,
+          "inputPerMTok": 3,
+          "outputPerMTok": 3,
+          "groups": [
+            "CCMax支持外接",
+            "kiro"
+          ],
+          "protocols": [
+            "anthropic",
+            "openai"
+          ]
+        },
+        {
+          "name": "codex-auto-review",
+          "ratio": 1.25,
+          "completionRatio": 6,
+          "fixedPrice": null,
+          "inputPerMTok": 2.5,
+          "outputPerMTok": 15,
+          "groups": [
+            "GPTPro",
+            "GPT纯Plus低价分组",
+            "企业Pro",
+            "福利（可用群内会通知）",
+            "GPT"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "codex-gpt-image-2",
+          "ratio": 0,
+          "completionRatio": 0,
+          "fixedPrice": 0.3,
+          "inputPerMTok": null,
+          "outputPerMTok": null,
+          "groups": [
+            "企业Pro",
+            "GPT",
+            "GPT-Image",
+            "GPTPro"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "gemini-2.5-flash",
+          "ratio": 0.15,
+          "completionRatio": 8.333333333333334,
+          "fixedPrice": null,
+          "inputPerMTok": 0.3,
+          "outputPerMTok": 2.5,
+          "groups": [
+            "Gemini-特惠-残将"
+          ],
+          "protocols": [
+            "gemini",
+            "openai"
+          ]
+        },
+        {
+          "name": "gemini-2.5-flash-lite",
+          "ratio": 0.05,
+          "completionRatio": 4,
+          "fixedPrice": null,
+          "inputPerMTok": 0.1,
+          "outputPerMTok": 0.4,
+          "groups": [
+            "Gemini-特惠-残将"
+          ],
+          "protocols": [
+            "gemini",
+            "openai"
+          ]
+        },
+        {
+          "name": "gemini-2.5-pro",
+          "ratio": 0.625,
+          "completionRatio": 8,
+          "fixedPrice": null,
+          "inputPerMTok": 1.25,
+          "outputPerMTok": 10,
+          "groups": [
+            "Gemini-特惠-残将"
+          ],
+          "protocols": [
+            "gemini",
+            "openai"
+          ]
+        },
+        {
+          "name": "gemini-3-flash",
+          "ratio": 0.25,
+          "completionRatio": 6,
+          "fixedPrice": null,
+          "inputPerMTok": 0.5,
+          "outputPerMTok": 3,
+          "groups": [
+            "Gemini",
+            "Gemini-特惠-残将"
+          ],
+          "protocols": [
+            "openai",
+            "gemini"
+          ]
+        },
+        {
+          "name": "gemini-3-flash-agent",
+          "ratio": 0.125,
+          "completionRatio": 6,
+          "fixedPrice": null,
+          "inputPerMTok": 0.25,
+          "outputPerMTok": 1.5,
+          "groups": [
+            "Gemini-特惠-残将"
+          ],
+          "protocols": [
+            "gemini",
+            "openai"
+          ]
+        },
+        {
+          "name": "gemini-3-flash-preview",
+          "ratio": 0.25,
+          "completionRatio": 6,
+          "fixedPrice": null,
+          "inputPerMTok": 0.5,
+          "outputPerMTok": 3,
+          "groups": [
+            "Gemini-特惠-残将"
+          ],
+          "protocols": [
+            "gemini",
+            "openai"
+          ]
+        },
+        {
+          "name": "gemini-3-pro-high",
+          "ratio": 2,
+          "completionRatio": 4.5,
+          "fixedPrice": null,
+          "inputPerMTok": 4,
+          "outputPerMTok": 18,
+          "groups": [
+            "Gemini",
+            "Gemini-特惠-残将"
+          ],
+          "protocols": [
+            "openai",
+            "gemini"
+          ]
+        },
+        {
+          "name": "gemini-3-pro-low",
+          "ratio": 1,
+          "completionRatio": 6,
+          "fixedPrice": null,
+          "inputPerMTok": 2,
+          "outputPerMTok": 12,
+          "groups": [
+            "Gemini-特惠-残将"
+          ],
+          "protocols": [
+            "gemini",
+            "openai"
+          ]
+        },
+        {
+          "name": "gemini-3.1-flash-image",
+          "ratio": 0,
+          "completionRatio": 0,
+          "fixedPrice": 0.5,
+          "inputPerMTok": null,
+          "outputPerMTok": null,
+          "groups": [
+            "Gemini-特惠-残将"
+          ],
+          "protocols": [
+            "gemini",
+            "openai"
+          ]
+        },
+        {
+          "name": "gemini-3.1-flash-lite",
+          "ratio": 0.125,
+          "completionRatio": 6,
+          "fixedPrice": null,
+          "inputPerMTok": 0.25,
+          "outputPerMTok": 1.5,
+          "groups": [
+            "Gemini-特惠-残将"
+          ],
+          "protocols": [
+            "gemini",
+            "openai"
+          ]
+        },
+        {
+          "name": "gemini-3.1-flash-lite-preview",
+          "ratio": 0.125,
+          "completionRatio": 6,
+          "fixedPrice": null,
+          "inputPerMTok": 0.25,
+          "outputPerMTok": 1.5,
+          "groups": [
+            "Gemini-特惠-残将"
+          ],
+          "protocols": [
+            "gemini",
+            "openai"
+          ]
+        },
+        {
+          "name": "gemini-3.1-pro",
+          "ratio": 2,
+          "completionRatio": 4.5,
+          "fixedPrice": null,
+          "inputPerMTok": 4,
+          "outputPerMTok": 18,
+          "groups": [
+            "Gemini",
+            "Gemini-特惠-残将"
+          ],
+          "protocols": [
+            "openai",
+            "gemini"
+          ]
+        },
+        {
+          "name": "gemini-3.1-pro-low",
+          "ratio": 1,
+          "completionRatio": 6,
+          "fixedPrice": null,
+          "inputPerMTok": 2,
+          "outputPerMTok": 12,
+          "groups": [
+            "Gemini-特惠-残将"
+          ],
+          "protocols": [
+            "gemini",
+            "openai"
+          ]
+        },
+        {
+          "name": "gemini-3.5-flash",
+          "ratio": 0.25,
+          "completionRatio": 6,
+          "fixedPrice": null,
+          "inputPerMTok": 0.5,
+          "outputPerMTok": 3,
+          "groups": [
+            "Gemini"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "gemini-3.5-flash-low",
+          "ratio": 0.125,
+          "completionRatio": 6,
+          "fixedPrice": null,
+          "inputPerMTok": 0.25,
+          "outputPerMTok": 1.5,
+          "groups": [
+            "Gemini-特惠-残将"
+          ],
+          "protocols": [
+            "gemini",
+            "openai"
+          ]
+        },
+        {
+          "name": "gemini-pro-agent",
+          "ratio": 2,
+          "completionRatio": 4.5,
+          "fixedPrice": null,
+          "inputPerMTok": 4,
+          "outputPerMTok": 18,
+          "groups": [
+            "Gemini-特惠-残将"
+          ],
+          "protocols": [
+            "gemini",
+            "openai"
+          ]
+        },
+        {
+          "name": "gpt-4o-audio-preview",
+          "ratio": 1.25,
+          "completionRatio": 4,
+          "fixedPrice": null,
+          "inputPerMTok": 2.5,
+          "outputPerMTok": 10,
+          "groups": [
+            "福利（可用群内会通知）"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "gpt-4o-realtime-preview",
+          "ratio": 2.5,
+          "completionRatio": 4,
+          "fixedPrice": null,
+          "inputPerMTok": 5,
+          "outputPerMTok": 20,
+          "groups": [
+            "福利（可用群内会通知）"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "gpt-5-3",
+          "ratio": 0.875,
+          "completionRatio": 8,
+          "fixedPrice": null,
+          "inputPerMTok": 1.75,
+          "outputPerMTok": 14,
+          "groups": [
+            "公益"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "gpt-5-3-mini",
+          "ratio": 0.875,
+          "completionRatio": 8,
+          "fixedPrice": null,
+          "inputPerMTok": 1.75,
+          "outputPerMTok": 14,
+          "groups": [
+            "公益"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "gpt-5-5",
+          "ratio": 0.5,
+          "completionRatio": 8,
+          "fixedPrice": null,
+          "inputPerMTok": 1,
+          "outputPerMTok": 8,
+          "groups": [
+            "公益"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "gpt-5-5-mini",
+          "ratio": 37.5,
+          "completionRatio": 8,
+          "fixedPrice": null,
+          "inputPerMTok": 75,
+          "outputPerMTok": 600,
+          "groups": [
+            "公益"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "gpt-5-mini",
+          "ratio": 0.125,
+          "completionRatio": 8,
+          "fixedPrice": null,
+          "inputPerMTok": 0.25,
+          "outputPerMTok": 2,
+          "groups": [
+            "公益"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "gpt-5.2",
+          "ratio": 0.875,
+          "completionRatio": 8,
+          "fixedPrice": null,
+          "inputPerMTok": 1.75,
+          "outputPerMTok": 14,
+          "groups": [
+            "福利（可用群内会通知）"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "gpt-5.2-2025-12-11",
+          "ratio": 37.5,
+          "completionRatio": 6,
+          "fixedPrice": null,
+          "inputPerMTok": 75,
+          "outputPerMTok": 450,
+          "groups": [
+            "福利（可用群内会通知）"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "gpt-5.2-chat-latest",
+          "ratio": 37.5,
+          "completionRatio": 6,
+          "fixedPrice": null,
+          "inputPerMTok": 75,
+          "outputPerMTok": 450,
+          "groups": [
+            "福利（可用群内会通知）"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "gpt-5.2-pro",
+          "ratio": 37.5,
+          "completionRatio": 6,
+          "fixedPrice": null,
+          "inputPerMTok": 75,
+          "outputPerMTok": 450,
+          "groups": [
+            "福利（可用群内会通知）"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "gpt-5.2-pro-2025-12-11",
+          "ratio": 37.5,
+          "completionRatio": 6,
+          "fixedPrice": null,
+          "inputPerMTok": 75,
+          "outputPerMTok": 450,
+          "groups": [
+            "福利（可用群内会通知）"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "gpt-5.3-codex-spark",
+          "ratio": 0.875,
+          "completionRatio": 8,
+          "fixedPrice": null,
+          "inputPerMTok": 1.75,
+          "outputPerMTok": 14,
+          "groups": [
+            "GPTPro",
+            "GPT纯Plus低价分组",
+            "企业Pro",
+            "福利（可用群内会通知）",
+            "GPT"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "gpt-5.4",
+          "ratio": 1.25,
+          "completionRatio": 6,
+          "fixedPrice": null,
+          "inputPerMTok": 2.5,
+          "outputPerMTok": 15,
+          "groups": [
+            "GPT纯Plus低价分组",
+            "企业Pro",
+            "福利（可用群内会通知）",
+            "GPT",
+            "GPTPro"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "gpt-5.4-2026-03-05",
+          "ratio": 37.5,
+          "completionRatio": 6,
+          "fixedPrice": null,
+          "inputPerMTok": 75,
+          "outputPerMTok": 450,
+          "groups": [
+            "福利（可用群内会通知）"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "gpt-5.4-mini",
+          "ratio": 0.375,
+          "completionRatio": 6,
+          "fixedPrice": null,
+          "inputPerMTok": 0.75,
+          "outputPerMTok": 4.5,
+          "groups": [
+            "GPT",
+            "GPTPro",
+            "GPT纯Plus低价分组",
+            "福利（可用群内会通知）"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "gpt-5.4-openai-compact",
+          "ratio": 2.5,
+          "completionRatio": 6,
+          "fixedPrice": null,
+          "inputPerMTok": 5,
+          "outputPerMTok": 30,
+          "groups": [
+            "GPT",
+            "GPTPro",
+            "GPT纯Plus低价分组",
+            "企业Pro"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "gpt-5.5",
+          "ratio": 2.5,
+          "completionRatio": 6,
+          "fixedPrice": null,
+          "inputPerMTok": 5,
+          "outputPerMTok": 30,
+          "groups": [
+            "GPT",
+            "GPTPro",
+            "GPT官转",
+            "GPT纯Plus低价分组",
+            "企业Pro",
+            "福利（可用群内会通知）"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "gpt-5.5-openai-compact",
+          "ratio": 2.5,
+          "completionRatio": 6,
+          "fixedPrice": null,
+          "inputPerMTok": 5,
+          "outputPerMTok": 30,
+          "groups": [
+            "GPT",
+            "GPTPro",
+            "GPT纯Plus低价分组",
+            "企业Pro"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "gpt-5.6",
+          "ratio": 2,
+          "completionRatio": 5,
+          "fixedPrice": null,
+          "inputPerMTok": 4,
+          "outputPerMTok": 20,
+          "groups": [
+            "福利（可用群内会通知）"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "gpt-5.6-luna",
+          "ratio": 37.5,
+          "completionRatio": 6,
+          "fixedPrice": null,
+          "inputPerMTok": 75,
+          "outputPerMTok": 450,
+          "groups": [
+            "GPT",
+            "GPTPro",
+            "GPT纯Plus低价分组",
+            "企业Pro",
+            "福利（可用群内会通知）"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "gpt-5.6-sol",
+          "ratio": 2.5,
+          "completionRatio": 6,
+          "fixedPrice": null,
+          "inputPerMTok": 5,
+          "outputPerMTok": 30,
+          "groups": [
+            "GPT",
+            "GPTPro",
+            "GPT官转",
+            "GPT纯Plus低价分组",
+            "企业Pro",
+            "福利（可用群内会通知）"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "gpt-5.6-terra",
+          "ratio": 37.5,
+          "completionRatio": 6,
+          "fixedPrice": null,
+          "inputPerMTok": 75,
+          "outputPerMTok": 450,
+          "groups": [
+            "GPT纯Plus低价分组",
+            "企业Pro",
+            "福利（可用群内会通知）",
+            "GPT",
+            "GPTPro"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "gpt-6",
+          "ratio": 37.5,
+          "completionRatio": 2,
+          "fixedPrice": null,
+          "inputPerMTok": 75,
+          "outputPerMTok": 150,
+          "groups": [
+            "GPT",
+            "GPTPro",
+            "企业Pro"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "gpt-6-astra",
+          "ratio": 37.5,
+          "completionRatio": 2,
+          "fixedPrice": null,
+          "inputPerMTok": 75,
+          "outputPerMTok": 150,
+          "groups": [
+            "GPT",
+            "GPTPro",
+            "企业Pro"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "gpt-6-luna",
+          "ratio": 37.5,
+          "completionRatio": 2,
+          "fixedPrice": null,
+          "inputPerMTok": 75,
+          "outputPerMTok": 150,
+          "groups": [
+            "GPT",
+            "企业Pro"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "gpt-6-sol",
+          "ratio": 37.5,
+          "completionRatio": 2,
+          "fixedPrice": null,
+          "inputPerMTok": 75,
+          "outputPerMTok": 150,
+          "groups": [
+            "GPT",
+            "GPTPro",
+            "企业Pro"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "gpt-image-1",
+          "ratio": 2.5,
+          "completionRatio": 8,
+          "fixedPrice": null,
+          "inputPerMTok": 5,
+          "outputPerMTok": 40,
+          "groups": [
+            "福利（可用群内会通知）"
+          ],
+          "protocols": [
+            "image-generation",
+            "openai"
+          ]
+        },
+        {
+          "name": "gpt-image-1.5",
+          "ratio": 0,
+          "completionRatio": 0,
+          "fixedPrice": 0.16,
+          "inputPerMTok": null,
+          "outputPerMTok": null,
+          "groups": [
+            "福利（可用群内会通知）"
+          ],
+          "protocols": [
+            "image-generation",
+            "openai"
+          ]
+        },
+        {
+          "name": "gpt-image-2",
+          "ratio": 0,
+          "completionRatio": 0,
+          "fixedPrice": 0.16,
+          "inputPerMTok": null,
+          "outputPerMTok": null,
+          "groups": [
+            "GPTPro",
+            "福利（可用群内会通知）",
+            "ALL",
+            "GPT",
+            "GPT-Image"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "gpt-image-2-4k",
+          "ratio": 0,
+          "completionRatio": 0,
+          "fixedPrice": 0.45,
+          "inputPerMTok": null,
+          "outputPerMTok": null,
+          "groups": [
+            "GPT",
+            "GPT-Image",
+            "GPTPro",
+            "企业Pro"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "gpt-image-2-max",
+          "ratio": 0,
+          "completionRatio": 0,
+          "fixedPrice": 0.2,
+          "inputPerMTok": null,
+          "outputPerMTok": null,
+          "groups": [
+            "GPT",
+            "GPT-Image",
+            "GPTPro",
+            "企业Pro"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "gpt-image-2.5",
+          "ratio": 0,
+          "completionRatio": 0,
+          "fixedPrice": 0.16,
+          "inputPerMTok": null,
+          "outputPerMTok": null,
+          "groups": [
+            "ALL",
+            "GPT",
+            "GPT-Image",
+            "GPTPro"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "gpt-image-2.5-flare",
+          "ratio": 0,
+          "completionRatio": 0,
+          "fixedPrice": 0.16,
+          "inputPerMTok": null,
+          "outputPerMTok": null,
+          "groups": [
+            "GPTPro",
+            "ALL",
+            "GPT",
+            "GPT-Image"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "gpt-image-2.5-sunburst",
+          "ratio": 0,
+          "completionRatio": 0,
+          "fixedPrice": 0.16,
+          "inputPerMTok": null,
+          "outputPerMTok": null,
+          "groups": [
+            "ALL",
+            "GPT",
+            "GPT-Image",
+            "GPTPro"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "grok-3-mini",
+          "ratio": 1.25,
+          "completionRatio": 2,
+          "fixedPrice": null,
+          "inputPerMTok": 2.5,
+          "outputPerMTok": 5,
+          "groups": [
+            "Grok"
+          ],
+          "protocols": [
+            "openai",
+            "openai-response"
+          ]
+        },
+        {
+          "name": "grok-3-mini-fast",
+          "ratio": 1.25,
+          "completionRatio": 2,
+          "fixedPrice": null,
+          "inputPerMTok": 2.5,
+          "outputPerMTok": 5,
+          "groups": [
+            "Grok"
+          ],
+          "protocols": [
+            "openai",
+            "openai-response"
+          ]
+        },
+        {
+          "name": "grok-4.20-0309-reasoning",
+          "ratio": 1.25,
+          "completionRatio": 2,
+          "fixedPrice": null,
+          "inputPerMTok": 2.5,
+          "outputPerMTok": 5,
+          "groups": [
+            "Grok"
+          ],
+          "protocols": [
+            "openai",
+            "openai-response"
+          ]
+        },
+        {
+          "name": "grok-4.20-multi-agent-0309",
+          "ratio": 1.25,
+          "completionRatio": 2,
+          "fixedPrice": null,
+          "inputPerMTok": 2.5,
+          "outputPerMTok": 5,
+          "groups": [
+            "Grok"
+          ],
+          "protocols": [
+            "openai",
+            "openai-response"
+          ]
+        },
+        {
+          "name": "grok-4.3",
+          "ratio": 1.25,
+          "completionRatio": 2,
+          "fixedPrice": null,
+          "inputPerMTok": 2.5,
+          "outputPerMTok": 5,
+          "groups": [
+            "Grok"
+          ],
+          "protocols": [
+            "openai",
+            "openai-response"
+          ]
+        },
+        {
+          "name": "grok-4.5",
+          "ratio": 1,
+          "completionRatio": 3,
+          "fixedPrice": null,
+          "inputPerMTok": 2,
+          "outputPerMTok": 6,
+          "groups": [
+            "Grok"
+          ],
+          "protocols": [
+            "openai",
+            "openai-response"
+          ]
+        },
+        {
+          "name": "grok-4.6",
+          "ratio": 1,
+          "completionRatio": 3,
+          "fixedPrice": null,
+          "inputPerMTok": 2,
+          "outputPerMTok": 6,
+          "groups": [
+            "Grok"
+          ],
+          "protocols": [
+            "openai",
+            "openai-response"
+          ]
+        },
+        {
+          "name": "grok-build",
+          "ratio": 1,
+          "completionRatio": 3,
+          "fixedPrice": null,
+          "inputPerMTok": 2,
+          "outputPerMTok": 6,
+          "groups": [
+            "Grok"
+          ],
+          "protocols": [
+            "openai",
+            "openai-response"
+          ]
+        },
+        {
+          "name": "grok-build-0.1",
+          "ratio": 1,
+          "completionRatio": 2,
+          "fixedPrice": null,
+          "inputPerMTok": 2,
+          "outputPerMTok": 4,
+          "groups": [
+            "Grok"
+          ],
+          "protocols": [
+            "openai",
+            "openai-response"
+          ]
+        },
+        {
+          "name": "grok-imagine",
+          "ratio": 0,
+          "completionRatio": 0,
+          "fixedPrice": 0.2,
+          "inputPerMTok": null,
+          "outputPerMTok": null,
+          "groups": [
+            "Grok"
+          ],
+          "protocols": [
+            "openai",
+            "openai-response"
+          ]
+        },
+        {
+          "name": "grok-imagine-image",
+          "ratio": 0,
+          "completionRatio": 0,
+          "fixedPrice": 0.3,
+          "inputPerMTok": null,
+          "outputPerMTok": null,
+          "groups": [
+            "Grok"
+          ],
+          "protocols": [
+            "openai",
+            "openai-response"
+          ]
+        },
+        {
+          "name": "grok-imagine-image-quality",
+          "ratio": 0,
+          "completionRatio": 0,
+          "fixedPrice": 0.4,
+          "inputPerMTok": null,
+          "outputPerMTok": null,
+          "groups": [
+            "Grok"
+          ],
+          "protocols": [
+            "openai",
+            "openai-response"
+          ]
+        },
+        {
+          "name": "grok-imagine-video",
+          "ratio": 0,
+          "completionRatio": 0,
+          "fixedPrice": 6,
+          "inputPerMTok": null,
+          "outputPerMTok": null,
+          "groups": [
+            "Grok"
+          ],
+          "protocols": [
+            "openai",
+            "openai-response"
+          ]
+        },
+        {
+          "name": "grok-imagine-video-1.5",
+          "ratio": 0,
+          "completionRatio": 0,
+          "fixedPrice": 10,
+          "inputPerMTok": null,
+          "outputPerMTok": null,
+          "groups": [
+            "Grok"
+          ],
+          "protocols": [
+            "openai",
+            "openai-response"
+          ]
+        },
+        {
+          "name": "grok-imagine-video-1.5-preview",
+          "ratio": 0,
+          "completionRatio": 0,
+          "fixedPrice": 17.5,
+          "inputPerMTok": null,
+          "outputPerMTok": null,
+          "groups": [
+            "Grok"
+          ],
+          "protocols": [
+            "openai",
+            "openai-response"
+          ]
+        },
+        {
+          "name": "mimo-v2.5-asr",
+          "ratio": 0.14,
+          "completionRatio": 2,
+          "fixedPrice": null,
+          "inputPerMTok": 0.28,
+          "outputPerMTok": 0.56,
+          "groups": [
+            "GPT-Image",
+            "公益"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "mimo-v2.5-tts",
+          "ratio": 0,
+          "completionRatio": 0,
+          "fixedPrice": null,
+          "inputPerMTok": 0,
+          "outputPerMTok": 0,
+          "groups": [
+            "GPT-Image",
+            "公益"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "mimo-v2.5-tts-voiceclone",
+          "ratio": 0,
+          "completionRatio": 0,
+          "fixedPrice": null,
+          "inputPerMTok": 0,
+          "outputPerMTok": 0,
+          "groups": [
+            "GPT-Image",
+            "公益"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "mimo-v2.5-tts-voicedesign",
+          "ratio": 0,
+          "completionRatio": 0,
+          "fixedPrice": null,
+          "inputPerMTok": 0,
+          "outputPerMTok": 0,
+          "groups": [
+            "GPT-Image",
+            "公益"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "nano-banana-2",
+          "ratio": 0,
+          "completionRatio": 0,
+          "fixedPrice": 0.3,
+          "inputPerMTok": null,
+          "outputPerMTok": null,
+          "groups": [
+            "Gemini"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        }
+      ],
+      "modelsSource": "public-api",
+      "defaults": {
+        "claude": "claude-opus-5-5",
+        "openai": "gpt-6"
+      },
+      "signup": {
+        "status": 200,
+        "ok": true,
+        "ms": 824,
+        "attempts": 1
+      },
+      "mirrors": [],
+      "probeBlocked": false,
+      "online": true,
+      "dataStale": false,
+      "staleFrom": null,
+      "staleFields": []
+    },
+    {
+      "id": "supxh",
+      "checkedAt": "2026-09-24T05:58:45.350Z",
+      "apiOk": false,
+      "pricingOk": false,
+      "latencyMs": 10677,
+      "error": "fetch failed",
       "systemName": null,
       "version": null,
       "registerOpen": null,
@@ -138,30 +1593,31 @@
       "services": [],
       "announcements": [],
       "models": [],
-      "modelsSource": "public-api",
+      "modelsSource": "login-required",
       "defaults": {
         "claude": null,
         "openai": null
       },
       "signup": {
-        "status": 200,
-        "ok": true,
-        "ms": 1257,
-        "attempts": 1
+        "status": 0,
+        "ok": false,
+        "ms": 10675,
+        "error": "fetch failed",
+        "attempts": 3
       },
       "mirrors": [],
       "probeBlocked": false,
-      "online": true,
+      "online": false,
       "dataStale": false,
       "staleFrom": null,
       "staleFields": []
     },
     {
       "id": "api456",
-      "checkedAt": "2026-09-24T04:50:43.885Z",
+      "checkedAt": "2026-09-24T05:58:11.321Z",
       "apiOk": true,
       "pricingOk": false,
-      "latencyMs": 1412,
+      "latencyMs": 1316,
       "error": null,
       "systemName": "可萌中转站",
       "version": "",
@@ -206,7 +1662,7 @@
       "signup": {
         "status": 200,
         "ok": true,
-        "ms": 1531,
+        "ms": 998,
         "attempts": 1
       },
       "mirrors": [],
@@ -218,10 +1674,10 @@
     },
     {
       "id": "justwoker",
-      "checkedAt": "2026-09-24T04:50:44.040Z",
+      "checkedAt": "2026-09-24T05:58:10.205Z",
       "apiOk": true,
       "pricingOk": false,
-      "latencyMs": 1566,
+      "latencyMs": 1315,
       "error": null,
       "systemName": "JustDoWork",
       "version": "v1.0.0-rc.23",
@@ -248,7 +1704,7 @@
       "signup": {
         "status": 200,
         "ok": true,
-        "ms": 2163,
+        "ms": 1510,
         "attempts": 1
       },
       "mirrors": [],
@@ -260,10 +1716,10 @@
     },
     {
       "id": "matrix",
-      "checkedAt": "2026-09-24T04:50:45.257Z",
+      "checkedAt": "2026-09-24T05:58:09.329Z",
       "apiOk": true,
       "pricingOk": false,
-      "latencyMs": 2781,
+      "latencyMs": 437,
       "error": null,
       "systemName": null,
       "version": null,
@@ -287,7 +1743,7 @@
       "signup": {
         "status": 200,
         "ok": true,
-        "ms": 2855,
+        "ms": 492,
         "attempts": 1
       },
       "mirrors": [],
@@ -299,11 +1755,11 @@
     },
     {
       "id": "seekai",
-      "checkedAt": "2026-09-24T04:50:45.851Z",
-      "apiOk": true,
+      "checkedAt": "2026-09-24T05:58:14.890Z",
+      "apiOk": false,
       "pricingOk": false,
-      "latencyMs": 3375,
-      "error": null,
+      "latencyMs": 225,
+      "error": "HTTP 403",
       "systemName": "SeekAi",
       "version": "v1.0.0-rc.25",
       "registerOpen": true,
@@ -328,9 +1784,9 @@
         "openai": null
       },
       "signup": {
-        "status": 200,
-        "ok": true,
-        "ms": 3348,
+        "status": 403,
+        "ok": false,
+        "ms": 1423,
         "attempts": 1
       },
       "mirrors": [
@@ -339,18 +1795,26 @@
           "online": true
         }
       ],
-      "probeBlocked": false,
+      "probeBlocked": true,
       "online": true,
-      "dataStale": false,
-      "staleFrom": null,
-      "staleFields": []
+      "dataStale": true,
+      "staleFrom": "2026-09-24T04:50:45.851Z",
+      "staleFields": [
+        "systemName",
+        "version",
+        "registerOpen",
+        "passwordRegister",
+        "checkinEnabled",
+        "loginMethods",
+        "quotaPerUnit"
+      ]
     },
     {
       "id": "aaawinn",
-      "checkedAt": "2026-09-24T04:50:44.794Z",
+      "checkedAt": "2026-09-24T05:58:09.981Z",
       "apiOk": true,
       "pricingOk": false,
-      "latencyMs": 2316,
+      "latencyMs": 1087,
       "error": null,
       "systemName": "Long的AI",
       "version": "",
@@ -402,7 +1866,7 @@
       "signup": {
         "status": 200,
         "ok": true,
-        "ms": 2321,
+        "ms": 1098,
         "attempts": 1
       },
       "mirrors": [],
@@ -414,10 +1878,10 @@
     },
     {
       "id": "hcnsec",
-      "checkedAt": "2026-09-24T04:50:46.548Z",
+      "checkedAt": "2026-09-24T05:58:09.460Z",
       "apiOk": true,
       "pricingOk": false,
-      "latencyMs": 4069,
+      "latencyMs": 563,
       "error": null,
       "systemName": "新疆幻城网安科技公益大模型安全网关",
       "version": "v1.0.0-rc.40-hc2",
@@ -435,6 +1899,11 @@
       "topupEnabled": null,
       "services": [],
       "announcements": [
+        {
+          "id": 51,
+          "date": "2026-09-24",
+          "text": "MiMo-V2.6-Flash模型已上架，限制0元，稳定性目前尚不清楚，同时svip的MiniMax-M3模型限时0元调用"
+        },
         {
           "id": 50,
           "date": "2026-09-20",
@@ -454,11 +1923,6 @@
           "id": 47,
           "date": "2026-09-11",
           "text": "开源链接：https://modelscope.cn/models/hcnote/Qing-Sec-20B-Qwen3.8-27B-Slim 基于Qwen3.8-27B进行剪枝并针对编码与网络安全领域持续训练微调欢迎体验"
-        },
-        {
-          "id": 46,
-          "date": "2026-09-10",
-          "text": "DeepSeek-V4.1-Flash正式上线付费分组，速度快，性能强价格便宜两块钱一次支持多模态，欢迎大家使用，同时deepseek-v4-flash-vision-exp模型已上线免费用户"
         }
       ],
       "models": [],
@@ -470,7 +1934,7 @@
       "signup": {
         "status": 200,
         "ok": true,
-        "ms": 4802,
+        "ms": 566,
         "attempts": 1
       },
       "mirrors": [],
@@ -482,10 +1946,10 @@
     },
     {
       "id": "liangjiewis",
-      "checkedAt": "2026-09-24T04:50:45.523Z",
+      "checkedAt": "2026-09-24T05:58:09.567Z",
       "apiOk": true,
       "pricingOk": false,
-      "latencyMs": 3044,
+      "latencyMs": 670,
       "error": null,
       "systemName": "量界智算",
       "version": "v0.12.14",
@@ -535,7 +1999,7 @@
       "signup": {
         "status": 200,
         "ok": true,
-        "ms": 3041,
+        "ms": 639,
         "attempts": 1
       },
       "mirrors": [

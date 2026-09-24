@@ -168,6 +168,81 @@
       "community": []
     },
     {
+      "id": "nianhua",
+      "name": "年华 API",
+      "subtitle": "New API 定制版中转站 · 倍率公开可查（89 模型 / 16 分组），签到领随机额度，公益分组 0.05 倍率、另有 0 元一次的多模态模型",
+      "recommended": false,
+      "credits": {
+        "signup": null,
+        "invite": null,
+        "dailyCheckin": null,
+        "approx": false
+      },
+      "signupUrl": "https://us-3.nianhuaapi.com/sign-up?aff=aonj",
+      "inviteCode": "aonj",
+      "homeUrl": "https://us-3.nianhuaapi.com",
+      "docsUrl": "https://us-3.nianhuaapi.com/docs/",
+      "statusApi": "https://us-3.nianhuaapi.com/api/status",
+      "pricingApi": "https://us-3.nianhuaapi.com/api/pricing",
+      "mirrors": [],
+      "tags": [
+        "New API",
+        "中转站",
+        "免费额度",
+        "每日签到",
+        "Claude Code",
+        "Codex",
+        "Anthropic 兼容",
+        "OpenAI 兼容"
+      ],
+      "highlights": [
+        "89 个模型、16 个分组的倍率都挂在公开接口上（/api/pricing 免登录可读，2026-09-24 实测），Claude 侧有 opus-5 / opus-5-5 / opus-4-8 / sonnet-5 / fable-5-1，GPT 侧有 gpt-6 系与 gpt-5.6 系，Grok 4.3~4.6、Gemini 3.x、kiro 分组都在架",
+        "「公益」分组组倍率 0.05，是站内最便宜的计价分组（11 个模型，含 gpt-5-5 / gpt-5-3 / gpt-5-mini / agnes 系，面板分组说明写「svip 免费」），另有 3 个标价 0 元的 MiMo 语音模型（mimo-v2.5-tts / -voiceclone / -voicedesign）",
+        "每日签到已开启（面板 checkin_enabled = true），奖励是随机额度，长期白嫖有续命来源",
+        "四套端点都活着：/v1/chat/completions、/v1/messages、/v1/responses、/v1/images/generations 匿名请求返回 401 而不是 404（2026-09-24 实测），另有 Gemini 原生路径与 /v1/embeddings，Claude Code / Codex / Gemini CLI 都能对接",
+        "站方文档把三条线路讲清楚了：US3 是唯一 Web 前端与默认 API 入口，US1 与原主节点只作 API 备用线路，「所有活动节点共享账号、令牌、余额和模型权限」，换线路不用重新注册",
+        "客户端填法官方文档直接给表：Claude Code 填 https://us-3.nianhuaapi.com（Messages 路径 /v1/messages），Codex / Cherry Studio / Open WebUI 填 https://us-3.nianhuaapi.com/v1；面板 FAQ 还写了 CC Switch 一键导入（令牌管理页「更多 → CC Switch」）"
+      ],
+      "endpoints": {
+        "anthropic": "https://us-3.nianhuaapi.com",
+        "openai": "https://us-3.nianhuaapi.com/v1"
+      },
+      "modelsNote": "价格接口免登录可读（GET /api/pricing，2026-09-24 返回 89 个模型、16 个分组），本页不逐条搬模型表，只记要点：Claude 侧有 claude-opus-5 / opus-5-5 / opus-4-8 / opus-4-7 / opus-4-6、claude-sonnet-5 / 4-6、claude-haiku-4-5、claude-fable-5(-1)；GPT 侧有 gpt-6 / gpt-6-astra / gpt-6-luna / gpt-6-sol、gpt-5.6(-luna/-sol/-terra)、gpt-5.5、gpt-5.4、gpt-5-3、gpt-image-2 系；Grok 侧有 grok-4.3 / 4.5 / 4.6 / 4.20 与 grok-imagine 生图生视频；Gemini 侧有 gemini-3.1-pro、gemini-3.5-flash、gemini-3-flash；另有 MiMo v2.5（含 3 个 0 元语音模型）与 agnes-1.5 / 2.0-flash。分组倍率（group_ratio）：公益 0.05、Gemini-特惠-残将 0.6、国产 0.9、GPT 1.2、GPT-Image 1、GPT低价分组 1、Anti-Claude-残将 1、福利 1、kiro 2、GPTPro 2.2、Gemini 3、企业Pro 3.2、Grok 4.2、GPT官转 5、default 6、CCMax支持外接 11。实际价格 = 模型倍率 × 分组倍率，以控制台「模型价格 / 分组倍率」页为准。",
+      "register": {
+        "methods": [
+          "邮箱 + 密码"
+        ],
+        "requirements": [
+          "务必从本页邀请链接进入注册（带 ?aff=aonj），邀请额度才会结算",
+          "只能用邮箱 + 密码建号：面板里 GitHub / LinuxDO / Discord / Telegram / 微信 / OIDC / Passkey 的开关全是关的，没有第三方登录入口（password_register_enabled = true）",
+          "注册要邮箱验证码（email_verification = true），并且开着 Cloudflare Turnstile 人机校验（turnstile_check = true）",
+          "站点是付费中转站，注册不强制付费，但免费额度只有签到（随机）与公益分组，别当纯公益站用"
+        ]
+      },
+      "earnMore": [
+        "每日签到领随机额度（面板已开启），登录后台点一下就行",
+        "邀请他人注册（面板有 Invitation Code / Invitation Quota / Invitee Reward 一整套邀请机制），额度数字进后台核对",
+        "公益分组 0.05 倍率几乎不要钱，svip 用户在公益分组免费；另有 3 个 0 元 MiMo 语音模型与 agnes 系可以直接白跑",
+        "面板开着订阅套餐与兑换码（enable_task / 促销代码入口都有），公告里不定期放活动价"
+      ],
+      "caveats": [
+        "这是付费中转站不是公益站：后台开着在线充值（Stripe 单价 ¥8），FAQ 里大半篇幅在讲套餐与倍率，站方公告自己说「因为成本过高移除 max 分组」「取消要求新用户免费送额度机制（遭不住了）」——免费额度只有签到与公益分组",
+        "站内「刀」不是美元：面板 price = 1（约 ¥1 ≈ 站内 1 刀），和多数站「¥7.3 ≈ $1」差 7 倍，FAQ 里又写「套餐 0.05~0.24 元一美元额度」、「普通用户 0.8x / 套餐用户 0.6x」，口径互相对不上；本页不把它并进跨站美元合计，一切以控制台实时倍率为准",
+        "公益分组的 GPT 系模型站方公告写明「支持联网搜索，但是不支持工具调用」，要在公益分组里跑工具调用得用 agnes 系（公告原话「保留 agnes 模型，支持支持完整工具调用」）；想跑 Claude Code / Codex 得换到 kiro / CCMax / GPT 等分组",
+        "带连字符的模型名是简版：FAQ 说 gpt-5-5「只支持文字对话，不支持图片以及任何其他调用」，gpt-5.5 才是完整模型；image2 只支持默认分辨率生图、image2-max 才支持 4K——挑模型时别只看名字像",
+        "面板的自动分组（auto_groups）里没有「公益」：默认列的是 GPT / GPTPro / 企业Pro / Grok / Gemini / kiro / CCMax支持外接 / GPT官转 / GPT-Image，新令牌走自动分组不会自动落到公益分组，得在令牌里手动选",
+        "本页没有登记注册 / 签到 / 邀请的具体额度数字：公开接口里既没有 quota_for_new_user 也没有 quota_for_invitee，站方 2026-06-03 公告又说取消了新用户免费送额度、把拉新额度挪到备用站 api.nianhua.store（该站当前连不上），网上流传的数字与公告对不上，就不猜了，注册后自己进后台核对",
+        "站点有过一次数据丢失事故：2026-05-16 公告原话「中转站因为IDC服务器厂家跑路导致数据丢失，340 后面用户需要重新注册，付费用户可以在QQ群内发送付款记录恢复额度」",
+        "站方公示的另外两条线路（US1 三网 CMI、原主节点 newapi.makelove.cloud）在当前网络下连不上，文档自己也标注「部分中国网络不可达」；本页只登记实测可用的 US3，备用线路请自行验证",
+        "注册页与 API 都挂在 Cloudflare 后面，机房 IP 打开注册页可能被 403 拦（家用宽带正常），注册还要过 Turnstile 人机校验；站点上游为多渠道聚合（公告说是 sub2api 调度 + kiro / anti 号池），同一模型的实际质量随分组走，别当稳定生产通道用"
+      ],
+      "community": [
+        "QQ群: 1093317048（面板公告 id 1 公示的交流群）",
+        "服务器监控: https://vps.makelove.cloud（页脚公示）",
+        "文档: https://us-3.nianhuaapi.com/docs/"
+      ]
+    },
+    {
       "id": "supxh",
       "name": "肖恩AI",
       "subtitle": "免费大模型API · 注册送5000额度，每日签到1000~3000，邀请双方各得2000",
