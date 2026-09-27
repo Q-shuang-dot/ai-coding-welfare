@@ -5,8 +5,16 @@
   <link rel="self" href="https://q-shuang-dot.github.io/ai-coding-welfare/feed.xml"/>
   <link href="https://q-shuang-dot.github.io/ai-coding-welfare/"/>
   <id>https://q-shuang-dot.github.io/ai-coding-welfare/</id>
-  <updated>2026-09-27T12:02:24.880Z</updated>
+  <updated>2026-09-27T16:58:08.511Z</updated>
   <author><name>AI 福利站 · Claude Code / Codex 免费额度白嫖导航</name></author>
+  <entry>
+    <title>2026-09-27 · 1 项变动</title>
+    <link href="https://q-shuang-dot.github.io/ai-coding-welfare/changelog/#2026-09-27"/>
+    <id>tag:q-shuang-dot.github.io,2026-09-27:changelog</id>
+    <updated>2026-09-27T16:58:08.511Z</updated>
+    <summary>新疆幻城网安 发了公告：应广大用户的呼声，今天本站正式全方面支持codex的/v1/responses接口，接下来codex内接入本站只需要直接填写https://api.hcnsec.cn/v1 不再需要二次使用工具进行转</summary>
+    <content type="html">&lt;ul&gt;&lt;li&gt;📢 新疆幻城网安 发了公告：应广大用户的呼声，今天本站正式全方面支持codex的/v1/responses接口，接下来codex内接入本站只需要直接填写https://api.hcnsec.cn/v1 不再需要二次使用工具进行转&lt;/li&gt;&lt;/ul&gt;</content>
+  </entry>
   <entry>
     <title>2026-09-24 · 2 项变动</title>
     <link href="https://q-shuang-dot.github.io/ai-coding-welfare/changelog/#2026-09-24"/>
