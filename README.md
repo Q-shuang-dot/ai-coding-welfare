@@ -3,8 +3,8 @@
 <p align="center">免费额度 · 白嫖 Claude Code / Codex / Cursor 的中转与公益站合集 · 每日签到领福利</p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/%E6%94%B6%E5%BD%95%E7%A6%8F%E5%88%A9%E7%AB%99-11%20%E4%B8%AA-blue" alt="收录福利站">
-  <img src="https://img.shields.io/badge/%E5%9C%A8%E7%BA%BF-11%2F11-brightgreen" alt="在线">
+  <img src="https://img.shields.io/badge/%E6%94%B6%E5%BD%95%E7%A6%8F%E5%88%A9%E7%AB%99-10%20%E4%B8%AA-blue" alt="收录福利站">
+  <img src="https://img.shields.io/badge/%E5%9C%A8%E7%BA%BF-10%2F10-brightgreen" alt="在线">
   <img src="https://img.shields.io/badge/%E9%A6%96%E6%97%A5%E5%8F%AF%E5%BE%97-%E6%9C%80%E9%AB%98%20%24175-success" alt="首日可得">
   <img src="https://img.shields.io/badge/%E6%95%B0%E6%8D%AE%E6%9B%B4%E6%96%B0-2026--10--08%2006.03%20UTC-informational" alt="数据更新">
 </p>
@@ -19,8 +19,7 @@
   <a href="https://matrix.mzsjai.com/login?redirect=%2Fapp%2Fgrowth%3FinviteCode%3DMX3CDVGATLJW"><b>Matrix 注册</b></a> ·
   <a href="https://seekai.cc/sign-up?aff=dDJy"><b>SeekAi 注册</b></a> ·
   <a href="https://aaawinn.xyz/sign-up?aff=ijFL"><b>Long的AI 注册</b></a> ·
-  <a href="https://api.hcnsec.cn/sign-up?aff=3J8z"><b>新疆幻城网安 注册</b></a> ·
-  <a href="https://liangjiewis.com/register?aff=m3C1"><b>量界智算 注册</b></a>
+  <a href="https://api.hcnsec.cn/sign-up?aff=3J8z"><b>新疆幻城网安 注册</b></a>
 </p>
 
 ---
@@ -41,13 +40,12 @@
 | **SeekAi** | 🟢 在线 | 站内公示 | — | 支持签到 | OpenAI | 需登录查看 | <a href="https://seekai.cc/sign-up?aff=dDJy" target="_blank" rel="noopener">点此注册 →</a> | `dDJy` |
 | **Long的AI** | 🟢 在线 | 免费 | 白嫖分组免费 | 无签到 | Anthropic + OpenAI | 需登录查看 | <a href="https://aaawinn.xyz/sign-up?aff=ijFL" target="_blank" rel="noopener">GitHub 注册 →</a> | `ijFL` |
 | **新疆幻城网安** | 🟢 在线 | **30000 站内刀** | 注册 30000 站内刀 | 支持签到 | Anthropic + OpenAI | 需登录查看 | <a href="https://api.hcnsec.cn/sign-up?aff=3J8z" target="_blank" rel="noopener">点此注册 →</a> | `3J8z` |
-| **量界智算** | 🟢 在线 | 站内公示 | — | 无签到 | Anthropic + OpenAI | 需登录查看 | <a href="https://liangjiewis.com/register?aff=m3C1" target="_blank" rel="noopener">点此注册 →</a> | `m3C1` |
 
 > 「首日可得」= 注册基础额度 + 本页邀请链接额度 + 当天能领的签到额度（每日重置额度池的站点按一天的池子算）；模型、价格、在线状态由脚本抓取站点公开接口自动生成，最后更新：`2026-10-08 06:03 UTC`。
 >
-> 「邀请码」列写了码的站（DoCode `1Qof`、年华 API `aonj`、肖恩AI `MVU8GX`、api456.me `zmza`、JustDoWork `OIWh`、SeekAi `dDJy`、Long的AI `ijFL`、新疆幻城网安 `3J8z`、量界智算 `m3C1`），注册表单里有一栏要**自己填**，漏填就只拿得到注册基础额度、事后补不上；其余站写 — 是因为邀请额度由链接自带，不用手打。
+> 「邀请码」列写了码的站（DoCode `1Qof`、年华 API `aonj`、肖恩AI `MVU8GX`、api456.me `zmza`、JustDoWork `OIWh`、SeekAi `dDJy`、Long的AI `ijFL`、新疆幻城网安 `3J8z`），注册表单里有一栏要**自己填**，漏填就只拿得到注册基础额度、事后补不上；其余站写 — 是因为邀请额度由链接自带，不用手打。
 >
-> 6 个按美元计价、且还收新用户的站全注册一遍，第一天手上大约有 **$225** 额度可用；DoCode 另发 300 站内刀，肖恩AI 另发 ≈14000 积分，Matrix 另发 2600 积分，Long的AI 另发 免费，新疆幻城网安 另发 30000 站内刀，都是各站自己的计价单位、与美元没有公开换算，未计入这个合计。
+> 5 个按美元计价、且还收新用户的站全注册一遍，第一天手上大约有 **$225** 额度可用；DoCode 另发 300 站内刀，肖恩AI 另发 ≈14000 积分，Matrix 另发 2600 积分，Long的AI 另发 免费，新疆幻城网安 另发 30000 站内刀，都是各站自己的计价单位、与美元没有公开换算，未计入这个合计。
 
 **只想快点用上 Claude Code？** 三步：
 
@@ -1261,130 +1259,6 @@ curl -s https://api.hcnsec.cn/v1/chat/completions \
 - `2026-10-07` 我在用 LongCat AI 开放平台，体验LongCat最新模型，编程、推理、Agent 工具调用能力持续进化！该平台不计入缓存token，缓存不算token，用量比实际大通过我的链接完成实名认证，你我各得 1000 万 Tokens（叠加平台新人礼包最高可得 2000 万）；首购下单即可返实付金额 5%！立即体验： https://longcat.chat/platform/product?inviteCode=EOMQYYGE 邀
 - `2026-10-07` 由于9月30日宽带爆满导致稳定性下降，本站暂停注册了一段时间，今天已升级宽带，欢迎新用户继续注册，老用户也可以继续通过邀请获取余额
 - `2026-10-03` 觉得模型不好用？其实挑对方法很简单：点开模型详情，优先选可用率高、延迟低的；或者看看每天动态刷新的排行榜，跟着大多数用户的选择走；如果实在拿不定主意，直接开启 Auto 自动路由，系统会自动为你匹配当前最好用的模型，省心又高效。
-
-</details>
-
----
-
-### 🟢 量界智算
-
-> New API 中转站 · 125 个模型的倍率在公开接口就能查，签到给随机额度，另有备用域名与酒馆 / 绘图站
-
-<a href="https://liangjiewis.com/register?aff=m3C1" target="_blank" rel="noopener"><img src="https://img.shields.io/badge/%E7%AB%8B%E5%8D%B3%E6%B3%A8%E5%86%8C-%E9%87%8F%E7%95%8C%E6%99%BA%E7%AE%97-brightgreen?style=for-the-badge" alt="注册 量界智算"></a>
-
-**为什么值得注册**
-
-- 125 个模型的倍率挂在公开接口上（/api/pricing 免登录可读，2026-09-17 实测），claude-opus-4 / 4-1 / 4-5 / 4-6 / 4-7、gpt-5 系、gpt-5-nano 都在架
-- 面板 v0.12.14，签到与邀请奖励都开着，公告写的是「用户签到（随机额度）+ 邀请充值奖励」
-- 有备用域名 liangjiewis.ai，主站不通时可以换，两边都是同一个面板（system_name 都是「量界智算」）
-- 同一套账号还带酒馆（SillyTavern）入口和图片生成站，玩法比一般中转站多
-
-**实时数据**（自动抓取站点公开接口）
-
-- 站点名称：**量界智算**
-- 面板版本：`v0.12.14`
-- 每日签到：❌
-- 接口延迟：3243 ms
-
-**镜像 / 备用入口**
-
-- 备用站：<https://liangjiewis.ai> · <a href="https://liangjiewis.ai/register?aff=m3C1" target="_blank" rel="noopener">从备用域名注册</a>
-
-> 模型清单不用登录就能读（GET https://liangjiewis.com/api/pricing，125 个模型），但那边给出的「倍率」和本页其他站点「倍率 1 ≈ $2 / 1M tokens」的口径对不上（例如 claude-opus-4-20250514 标 350），硬换算出来的价格明显不合理，所以这张表没有搬进来；要看具体价格请去站点「模型广场」，或者直接 curl 上面那个接口。
-
-**注册要求**
-
-- 务必从本页邀请链接进入注册（带 ?aff=m3C1），邀请奖励才会结算
-- 注册需要用户名、密码、邮箱与邮箱验证码；GitHub / LinuxDO / Discord / Telegram / 微信 等 OAuth 开关在面板里，但当前都是关着的
-- 这个面板版本没有公开「是否开放注册」开关（/api/status 不返回 register_enabled），不过注册页 2026-09-17 实测可以正常打开
-
-**接入配置**
-
-<details open><summary><b>Claude Code</b>（Anthropic 兼容，Base URL 不带 <code>/v1</code>）</summary>
-
-```bash
-# macOS / Linux
-export ANTHROPIC_BASE_URL=https://liangjiewis.com
-export ANTHROPIC_AUTH_TOKEN=你在站点后台创建的 Key
-export ANTHROPIC_MODEL=<登录后台查看可用模型名>
-npm install -g @anthropic-ai/claude-code@latest && claude
-```
-
-```powershell
-# Windows PowerShell
-$env:ANTHROPIC_BASE_URL = "https://liangjiewis.com"
-$env:ANTHROPIC_AUTH_TOKEN = "你在站点后台创建的 Key"
-$env:ANTHROPIC_MODEL = "<登录后台查看可用模型名>"
-claude
-```
-
-</details>
-
-<details><summary><b>Codex CLI</b>（OpenAI 兼容，写入 <code>~/.codex/config.toml</code>）</summary>
-
-```toml
-model = "<登录后台查看可用模型名>"
-model_provider = "liangjiewis"
-
-[model_providers.liangjiewis]
-name = "量界智算"
-base_url = "https://liangjiewis.com/v1"
-env_key = "LIANGJIEWIS_API_KEY"
-wire_api = "chat"
-```
-
-</details>
-
-<details><summary><b>OpenAI SDK / Cherry Studio / Cursor 等通用客户端</b></summary>
-
-```python
-from openai import OpenAI
-
-client = OpenAI(api_key="你的 Key", base_url="https://liangjiewis.com/v1")
-resp = client.chat.completions.create(model="<登录后台查看可用模型名>", messages=[{"role": "user", "content": "ping"}])
-print(resp.choices[0].message.content)
-```
-
-通用客户端只需填两项：**Base URL** = `https://liangjiewis.com/v1`，**API Key** = 站点后台创建的 Key。
-
-</details>
-
-<details><summary><b>连通性自测</b></summary>
-
-```bash
-curl -s https://liangjiewis.com/v1/chat/completions \
-  -H "Authorization: Bearer $KEY" -H "Content-Type: application/json" \
-  -d '{"model":"<登录后台查看可用模型名>","messages":[{"role":"user","content":"只回复 OK"}]}'
-```
-
-</details>
-
-**如何继续拿额度**
-
-- 每日签到给随机额度（2026-01-22 上线）
-- 邀请他人注册、对方充值都有奖励
-- 2026-03-29 站方因调价失误把签到奖励临时提升过 10 倍，说明签到额度是活的，具体以站内为准
-
-**⚠️ 使用前必读**
-
-- 面板公示 price=0.16，也就是「站内 $1 额度」的充值价约 ¥0.16（同页 usd_exchange_rate 却写 7.3，两个字段口径不一致）→ 站内「美元」是站内刀，不要当美元看，本页不做美元折算
-- 站方 2026-03-25 公告承认长期亏损并调整过模型与倍率，模型清单和价格大概率还会变
-- 2025-11-20 才把带宽升到 100M 并宣称支持 10 个以上并发，属于小站，热门时段人多了会挤
-- 站点没有启用用户协议与隐私政策页面（面板开关都是关的），注册前自己心里有数
-- 酒馆入口需要联系管理员开通账号，不是自助注册
-
-**官方渠道**
-
-- 主站: https://liangjiewis.com
-- 文档: https://liangjiewis.com/cfg/doc.html
-- 酒馆: https://st.liangjiewis.com/login
-- 图片生成站: https://img-gen.liangjiewis.com
-
-<details><summary><b>站点最新公告</b>（自动同步）</summary>
-
-- `2026-03-29` 各位用户朋友，抱歉前两天因调价不当，给大家带来了困扰。 目前 Gemini、GPT、Claude、Grok 四类模型价格已恢复正常，可放心使用；其他模型也会在这两天内持续调整。 为表达歉意，平台签到奖励现提升 10倍，请前往个人设置完成签到，活动持续一周。 2026年4月4日 23:00 后恢复日常签到力度。
-- `2026-03-25` 各位用户朋友： 很抱歉通知大家，因网站长期处于亏损经营状态，当前运营压力实在太大，我们已无法继续维持原有模式，所以对网站模型进行了调整。 这次调整确实是无奈之举，也可能会对大家的使用体验带来一些影响，在这里向大家表示歉意。 希望大家能够理解，也感谢大家一直以来的支持与陪伴。我们后续也会继续努力，把网站尽可能稳定地运营下去。
-- `2026-01-22` 📢 系统升级公告 为提升平台稳定性与使用体验，我们将于**今晚 22:00 - 23:00**进行版本升级维护。 ✅ 升级内容： 1. 上线**用户签到**功能：每日签到可获得**随机额度奖励** 2. 上线**邀请充值奖励**：下级用户充值，上级可按比例获得奖励 3. 修复已知问题并进行功能优化
 
 </details>
 
