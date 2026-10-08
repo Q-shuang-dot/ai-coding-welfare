@@ -11,3 +11,6 @@ check.log
 .tmp/
 # 发帖底稿（自己用的推广话术，没必要公开在仓库里）
 promo/
+
+# 本地手工备份，不入库
+data/sites.json.bak-*
