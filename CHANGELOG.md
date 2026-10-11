@@ -8,6 +8,7 @@ AI 福利站 · Claude Code / Codex 免费额度白嫖导航的自动变动记�
 
 ## 2026-10-11
 
+- 📢 新疆幻城网安 发了公告：We are excited to announce that our platform now supports Waffo Pancake to facilitate international payments for our overseas users. To make <sub>12:49 UTC</sub>
 - 📢 新疆幻城网安 发了公告：针对此前按次计费规则中"小请求也按次扣费、性价比不高"的问题，我们本周将对计费方式进行调整：降低小额请求的费用，同时提高超长上下文请求的扣费标准。具体细则请查看各模型的详情页，欢迎大家关注。 <sub>05:46 UTC</sub>
 
 ## 2026-10-09
