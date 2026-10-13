@@ -8,6 +8,7 @@ AI 福利站 · Claude Code / Codex 免费额度白嫖导航的自动变动记�
 
 ## 2026-10-13
 
+- 📢 新疆幻城网安 发了公告：活动链接：https://zcode.z.ai/invite/JEGSSGVA 下载绑定glm账号，即可领取三亿token，具体大家自己看吧 <sub>22:44 UTC</sub>
 - ➕ 年华 API 上线模型：gpt-5.1-codex、gpt-5.3-codex <sub>14:11 UTC</sub>
 
 ## 2026-10-12
