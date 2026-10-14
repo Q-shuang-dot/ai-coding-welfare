@@ -6,6 +6,10 @@ AI 福利站 · Claude Code / Codex 免费额度白嫖导航的自动变动记�
 
 > 只记录会影响「值不值得注册」的字段。探测被站点 WAF 拦下时不记在线状态变化，避免机房 IP 被拦被误报成掉线。
 
+## 2026-10-14
+
+- ➕ 年华 API 上线模型：gemini-3.7-flash、gemini-3.8-flash、gemini-4-argon <sub>11:51 UTC</sub>
+
 ## 2026-10-13
 
 - 📢 新疆幻城网安 发了公告：活动链接：https://zcode.z.ai/invite/JEGSSGVA 下载绑定glm账号，即可领取三亿token，具体大家自己看吧 <sub>22:44 UTC</sub>
