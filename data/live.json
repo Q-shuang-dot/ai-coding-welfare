@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-10-15T11:28:43.010Z",
+  "generatedAt": "2026-10-15T17:00:46.619Z",
   "sites": [
     {
       "id": "agentrouter",
-      "checkedAt": "2026-10-15T11:28:37.277Z",
+      "checkedAt": "2026-10-15T17:00:40.822Z",
       "apiOk": false,
       "pricingOk": false,
-      "latencyMs": 226,
+      "latencyMs": 228,
       "error": "invalid json",
       "systemName": "Agent Router",
       "version": "init-20261009-3d8bb4d7",
@@ -135,7 +135,7 @@
       "signup": {
         "status": 200,
         "ok": true,
-        "ms": 754,
+        "ms": 826,
         "attempts": 1
       },
       "mirrors": [
@@ -163,10 +163,10 @@
     },
     {
       "id": "docode",
-      "checkedAt": "2026-10-15T11:28:32.004Z",
+      "checkedAt": "2026-10-15T17:00:35.543Z",
       "apiOk": true,
       "pricingOk": false,
-      "latencyMs": 404,
+      "latencyMs": 503,
       "error": null,
       "systemName": "DoCode",
       "version": "",
@@ -186,7 +186,7 @@
         {
           "id": 35,
           "date": "2026-10-15",
-          "text": "生图功能暂时不可用，原因为 OpenAI 官方协议变更。 预计这两天修复好"
+          "text": "-已修复好！ 生图功能暂时不可用，原因为 OpenAI 官方协议变更。 预计这两天修复好"
         },
         {
           "id": 34,
@@ -218,7 +218,7 @@
       "signup": {
         "status": 200,
         "ok": true,
-        "ms": 320,
+        "ms": 407,
         "attempts": 1
       },
       "mirrors": [
@@ -235,10 +235,10 @@
     },
     {
       "id": "nianhua",
-      "checkedAt": "2026-10-15T11:28:32.264Z",
+      "checkedAt": "2026-10-15T17:00:35.997Z",
       "apiOk": true,
       "pricingOk": true,
-      "latencyMs": 666,
+      "latencyMs": 948,
       "error": null,
       "systemName": "年华 API 中转站",
       "version": "1.0.0-rc.22-nianhua-bba9838-payguard-20261015",
@@ -311,12 +311,40 @@
           ]
         },
         {
-          "name": "big-pickle",
-          "ratio": 37.5,
+          "name": "bge-m3",
+          "ratio": 0,
           "completionRatio": 1,
           "fixedPrice": null,
-          "inputPerMTok": 75,
-          "outputPerMTok": 75,
+          "inputPerMTok": 0,
+          "outputPerMTok": 0,
+          "groups": [
+            "公益"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "bge-multilingual-gemma2",
+          "ratio": 0,
+          "completionRatio": 1,
+          "fixedPrice": null,
+          "inputPerMTok": 0,
+          "outputPerMTok": 0,
+          "groups": [
+            "公益"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "big-pickle",
+          "ratio": 0,
+          "completionRatio": 1,
+          "fixedPrice": null,
+          "inputPerMTok": 0,
+          "outputPerMTok": 0,
           "groups": [
             "公益"
           ],
@@ -326,11 +354,11 @@
         },
         {
           "name": "cat-jam-free",
-          "ratio": 37.5,
+          "ratio": 0,
           "completionRatio": 1,
           "fixedPrice": null,
-          "inputPerMTok": 75,
-          "outputPerMTok": 75,
+          "inputPerMTok": 0,
+          "outputPerMTok": 0,
           "groups": [
             "公益"
           ],
@@ -426,10 +454,10 @@
           "inputPerMTok": 5,
           "outputPerMTok": 25,
           "groups": [
-            "CCMax支持外接",
-            "Claude满血福利",
             "default",
-            "kiro"
+            "kiro",
+            "CCMax支持外接",
+            "Claude满血福利"
           ],
           "protocols": [
             "anthropic",
@@ -459,10 +487,10 @@
           "inputPerMTok": 5,
           "outputPerMTok": 25,
           "groups": [
-            "CCMax支持外接",
-            "Claude满血福利",
             "default",
-            "kiro"
+            "kiro",
+            "CCMax支持外接",
+            "Claude满血福利"
           ],
           "protocols": [
             "anthropic",
@@ -495,9 +523,9 @@
           "inputPerMTok": 5,
           "outputPerMTok": 25,
           "groups": [
-            "福利（可用群内会通知）",
             "CCMax支持外接",
-            "kiro"
+            "kiro",
+            "福利（可用群内会通知）"
           ],
           "protocols": [
             "anthropic",
@@ -592,12 +620,12 @@
           "inputPerMTok": 2.5,
           "outputPerMTok": 15,
           "groups": [
-            "福利（可用群内会通知）",
             "GPT",
             "GPT-Pro-不降智",
             "GPTPro",
             "GPT纯Plus低价分组",
-            "企业Pro"
+            "企业Pro",
+            "福利（可用群内会通知）"
           ],
           "protocols": [
             "openai"
@@ -611,10 +639,38 @@
           "inputPerMTok": null,
           "outputPerMTok": null,
           "groups": [
-            "企业Pro",
             "GPT",
             "GPT-Image",
-            "GPTPro"
+            "GPTPro",
+            "企业Pro"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "cohere/north-mini-code:free",
+          "ratio": 0,
+          "completionRatio": 1,
+          "fixedPrice": null,
+          "inputPerMTok": 0,
+          "outputPerMTok": 0,
+          "groups": [
+            "公益"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "DeepSeek-V4-Flash-0731",
+          "ratio": 1.5,
+          "completionRatio": 3,
+          "fixedPrice": null,
+          "inputPerMTok": 3,
+          "outputPerMTok": 9,
+          "groups": [
+            "公益"
           ],
           "protocols": [
             "openai"
@@ -622,11 +678,25 @@
         },
         {
           "name": "deepseek-v4.1-flash-free",
-          "ratio": 37.5,
+          "ratio": 1,
+          "completionRatio": 4,
+          "fixedPrice": null,
+          "inputPerMTok": 2,
+          "outputPerMTok": 8,
+          "groups": [
+            "公益"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "dots-studio/dots-3-note-preview:free",
+          "ratio": 0,
           "completionRatio": 1,
           "fixedPrice": null,
-          "inputPerMTok": 75,
-          "outputPerMTok": 75,
+          "inputPerMTok": 0,
+          "outputPerMTok": 0,
           "groups": [
             "公益"
           ],
@@ -687,8 +757,8 @@
           "inputPerMTok": 0.5,
           "outputPerMTok": 3,
           "groups": [
-            "Gemini",
-            "Gemini-特惠-残将"
+            "Gemini-特惠-残将",
+            "Gemini"
           ],
           "protocols": [
             "gemini",
@@ -923,6 +993,20 @@
           ]
         },
         {
+          "name": "GLM-5.3-Flash",
+          "ratio": 0.4,
+          "completionRatio": 3.5,
+          "fixedPrice": null,
+          "inputPerMTok": 0.8,
+          "outputPerMTok": 2.8,
+          "groups": [
+            "公益"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
           "name": "gpt-4o-audio-preview",
           "ratio": 1.25,
           "completionRatio": 4,
@@ -994,11 +1078,11 @@
         },
         {
           "name": "gpt-5-5-mini",
-          "ratio": 37.5,
+          "ratio": 0,
           "completionRatio": 8,
           "fixedPrice": null,
-          "inputPerMTok": 75,
-          "outputPerMTok": 600,
+          "inputPerMTok": 0,
+          "outputPerMTok": 0,
           "groups": [
             "公益"
           ],
@@ -1022,11 +1106,11 @@
         },
         {
           "name": "gpt-5.1-codex",
-          "ratio": 37.5,
-          "completionRatio": 6,
+          "ratio": 0.625,
+          "completionRatio": 8,
           "fixedPrice": null,
-          "inputPerMTok": 75,
-          "outputPerMTok": 450,
+          "inputPerMTok": 1.25,
+          "outputPerMTok": 10,
           "groups": [
             "GPT官转"
           ],
@@ -1050,11 +1134,11 @@
         },
         {
           "name": "gpt-5.2-2025-12-11",
-          "ratio": 37.5,
-          "completionRatio": 6,
+          "ratio": 0.875,
+          "completionRatio": 8,
           "fixedPrice": null,
-          "inputPerMTok": 75,
-          "outputPerMTok": 450,
+          "inputPerMTok": 1.75,
+          "outputPerMTok": 14,
           "groups": [
             "福利（可用群内会通知）"
           ],
@@ -1064,11 +1148,11 @@
         },
         {
           "name": "gpt-5.2-chat-latest",
-          "ratio": 37.5,
-          "completionRatio": 6,
+          "ratio": 0.875,
+          "completionRatio": 8,
           "fixedPrice": null,
-          "inputPerMTok": 75,
-          "outputPerMTok": 450,
+          "inputPerMTok": 1.75,
+          "outputPerMTok": 14,
           "groups": [
             "福利（可用群内会通知）"
           ],
@@ -1078,11 +1162,11 @@
         },
         {
           "name": "gpt-5.2-pro",
-          "ratio": 37.5,
-          "completionRatio": 6,
+          "ratio": 10.5,
+          "completionRatio": 8,
           "fixedPrice": null,
-          "inputPerMTok": 75,
-          "outputPerMTok": 450,
+          "inputPerMTok": 21,
+          "outputPerMTok": 168,
           "groups": [
             "福利（可用群内会通知）"
           ],
@@ -1092,11 +1176,11 @@
         },
         {
           "name": "gpt-5.2-pro-2025-12-11",
-          "ratio": 37.5,
-          "completionRatio": 6,
+          "ratio": 10.5,
+          "completionRatio": 8,
           "fixedPrice": null,
-          "inputPerMTok": 75,
-          "outputPerMTok": 450,
+          "inputPerMTok": 21,
+          "outputPerMTok": 168,
           "groups": [
             "福利（可用群内会通知）"
           ],
@@ -1126,11 +1210,11 @@
           "inputPerMTok": 1.75,
           "outputPerMTok": 14,
           "groups": [
+            "GPT",
+            "GPTPro",
             "GPT纯Plus低价分组",
             "企业Pro",
-            "福利（可用群内会通知）",
-            "GPT",
-            "GPTPro"
+            "福利（可用群内会通知）"
           ],
           "protocols": [
             "openai"
@@ -1156,11 +1240,11 @@
         },
         {
           "name": "gpt-5.4-2026-03-05",
-          "ratio": 37.5,
+          "ratio": 1.25,
           "completionRatio": 6,
           "fixedPrice": null,
-          "inputPerMTok": 75,
-          "outputPerMTok": 450,
+          "inputPerMTok": 2.5,
+          "outputPerMTok": 15,
           "groups": [
             "福利（可用群内会通知）"
           ],
@@ -1176,10 +1260,10 @@
           "inputPerMTok": 0.75,
           "outputPerMTok": 4.5,
           "groups": [
-            "GPT",
-            "GPTPro",
             "GPT纯Plus低价分组",
-            "福利（可用群内会通知）"
+            "福利（可用群内会通知）",
+            "GPT",
+            "GPTPro"
           ],
           "protocols": [
             "openai"
@@ -1210,13 +1294,13 @@
           "inputPerMTok": 5,
           "outputPerMTok": 30,
           "groups": [
+            "GPT-Pro-不降智",
             "GPTPro",
             "GPT官转",
             "GPT纯Plus低价分组",
             "企业Pro",
             "福利（可用群内会通知）",
-            "GPT",
-            "GPT-Pro-不降智"
+            "GPT"
           ],
           "protocols": [
             "openai"
@@ -1230,10 +1314,10 @@
           "inputPerMTok": 5,
           "outputPerMTok": 30,
           "groups": [
-            "GPT",
             "GPTPro",
             "GPT纯Plus低价分组",
-            "企业Pro"
+            "企业Pro",
+            "GPT"
           ],
           "protocols": [
             "openai"
@@ -1247,9 +1331,9 @@
           "inputPerMTok": 4,
           "outputPerMTok": 20,
           "groups": [
-            "GPT-Pro-不降智",
             "GPT官转",
-            "福利（可用群内会通知）"
+            "福利（可用群内会通知）",
+            "GPT-Pro-不降智"
           ],
           "protocols": [
             "openai"
@@ -1281,13 +1365,13 @@
           "inputPerMTok": 5,
           "outputPerMTok": 30,
           "groups": [
-            "GPT",
             "GPT-Pro-不降智",
             "GPTPro",
             "GPT官转",
             "GPT纯Plus低价分组",
             "企业Pro",
-            "福利（可用群内会通知）"
+            "福利（可用群内会通知）",
+            "GPT"
           ],
           "protocols": [
             "openai"
@@ -1301,13 +1385,13 @@
           "inputPerMTok": 75,
           "outputPerMTok": 450,
           "groups": [
-            "福利（可用群内会通知）",
             "GPT",
             "GPT-Pro-不降智",
             "GPTPro",
             "GPT官转",
             "GPT纯Plus低价分组",
-            "企业Pro"
+            "企业Pro",
+            "福利（可用群内会通知）"
           ],
           "protocols": [
             "openai"
@@ -1321,11 +1405,11 @@
           "inputPerMTok": 75,
           "outputPerMTok": 150,
           "groups": [
-            "GPT官转",
-            "企业Pro",
             "GPT",
             "GPT-Pro-不降智",
-            "GPTPro"
+            "GPTPro",
+            "GPT官转",
+            "企业Pro"
           ],
           "protocols": [
             "openai"
@@ -1373,11 +1457,11 @@
           "inputPerMTok": 75,
           "outputPerMTok": 150,
           "groups": [
-            "GPT",
-            "GPT-Pro-不降智",
             "GPTPro",
             "GPT官转",
-            "企业Pro"
+            "企业Pro",
+            "GPT",
+            "GPT-Pro-不降智"
           ],
           "protocols": [
             "openai"
@@ -1439,11 +1523,11 @@
           "inputPerMTok": null,
           "outputPerMTok": null,
           "groups": [
+            "ALL",
             "GPT",
             "GPT-Image",
             "GPTPro",
-            "福利（可用群内会通知）",
-            "ALL"
+            "福利（可用群内会通知）"
           ],
           "protocols": [
             "openai"
@@ -1474,10 +1558,10 @@
           "inputPerMTok": null,
           "outputPerMTok": null,
           "groups": [
-            "GPT",
-            "GPT-Image",
             "GPTPro",
-            "企业Pro"
+            "企业Pro",
+            "GPT",
+            "GPT-Image"
           ],
           "protocols": [
             "openai"
@@ -1491,10 +1575,10 @@
           "inputPerMTok": null,
           "outputPerMTok": null,
           "groups": [
+            "ALL",
             "GPT",
             "GPT-Image",
-            "GPTPro",
-            "ALL"
+            "GPTPro"
           ],
           "protocols": [
             "openai"
@@ -1525,10 +1609,66 @@
           "inputPerMTok": null,
           "outputPerMTok": null,
           "groups": [
-            "GPTPro",
             "ALL",
             "GPT",
-            "GPT-Image"
+            "GPT-Image",
+            "GPTPro"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "gpt-oss-120b",
+          "ratio": 0.075,
+          "completionRatio": 4,
+          "fixedPrice": null,
+          "inputPerMTok": 0.15,
+          "outputPerMTok": 0.6,
+          "groups": [
+            "公益"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "gpt-oss:20b-llm7",
+          "ratio": 0.0375,
+          "completionRatio": 4,
+          "fixedPrice": null,
+          "inputPerMTok": 0.075,
+          "outputPerMTok": 0.3,
+          "groups": [
+            "公益"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "gpt-oss:20b-ovh",
+          "ratio": 0.0375,
+          "completionRatio": 4,
+          "fixedPrice": null,
+          "inputPerMTok": 0.075,
+          "outputPerMTok": 0.3,
+          "groups": [
+            "公益"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "gpt-oss:20b-pollinations",
+          "ratio": 0.0375,
+          "completionRatio": 4,
+          "fixedPrice": null,
+          "inputPerMTok": 0.075,
+          "outputPerMTok": 0.3,
+          "groups": [
+            "公益"
           ],
           "protocols": [
             "openai"
@@ -1774,12 +1914,54 @@
           ]
         },
         {
-          "name": "longcat-2.5-preview-free",
-          "ratio": 37.5,
+          "name": "kilo-auto/free",
+          "ratio": 0,
           "completionRatio": 1,
           "fixedPrice": null,
-          "inputPerMTok": 75,
-          "outputPerMTok": 75,
+          "inputPerMTok": 0,
+          "outputPerMTok": 0,
+          "groups": [
+            "公益"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "liquid/lfm-2.5-2.6b:free",
+          "ratio": 0,
+          "completionRatio": 1,
+          "fixedPrice": null,
+          "inputPerMTok": 0,
+          "outputPerMTok": 0,
+          "groups": [
+            "公益"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "longcat-2.5-preview-free",
+          "ratio": 0,
+          "completionRatio": 1,
+          "fixedPrice": null,
+          "inputPerMTok": 0,
+          "outputPerMTok": 0,
+          "groups": [
+            "公益"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "Meta-Llama-3_3-70B-Instruct",
+          "ratio": 0.37,
+          "completionRatio": 1,
+          "fixedPrice": null,
+          "inputPerMTok": 0.74,
+          "outputPerMTok": 0.74,
           "groups": [
             "公益"
           ],
@@ -1825,8 +2007,8 @@
           "inputPerMTok": 0,
           "outputPerMTok": 0,
           "groups": [
-            "公益",
-            "GPT-Image"
+            "GPT-Image",
+            "公益"
           ],
           "protocols": [
             "openai"
@@ -1849,11 +2031,67 @@
         },
         {
           "name": "mimo-v2.6-flash-free",
-          "ratio": 37.5,
+          "ratio": 0.5,
+          "completionRatio": 2,
+          "fixedPrice": null,
+          "inputPerMTok": 1,
+          "outputPerMTok": 2,
+          "groups": [
+            "公益"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "minimax-m2.7",
+          "ratio": 0.3,
+          "completionRatio": 4,
+          "fixedPrice": null,
+          "inputPerMTok": 0.6,
+          "outputPerMTok": 2.4,
+          "groups": [
+            "公益"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "Mistral-7B-Instruct-v0.3",
+          "ratio": 0.055,
           "completionRatio": 1,
           "fixedPrice": null,
-          "inputPerMTok": 75,
-          "outputPerMTok": 75,
+          "inputPerMTok": 0.11,
+          "outputPerMTok": 0.11,
+          "groups": [
+            "公益"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "Mistral-Nemo-Instruct-2407",
+          "ratio": 0,
+          "completionRatio": 1,
+          "fixedPrice": null,
+          "inputPerMTok": 0,
+          "outputPerMTok": 0,
+          "groups": [
+            "公益"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "Mistral-Small-3.2-24B-Instruct-2506",
+          "ratio": 0.05,
+          "completionRatio": 3.1,
+          "fixedPrice": null,
+          "inputPerMTok": 0.1,
+          "outputPerMTok": 0.31,
           "groups": [
             "公益"
           ],
@@ -1863,11 +2101,11 @@
         },
         {
           "name": "muse-spark-1.2-contributor-free",
-          "ratio": 37.5,
+          "ratio": 0,
           "completionRatio": 1,
           "fixedPrice": null,
-          "inputPerMTok": 75,
-          "outputPerMTok": 75,
+          "inputPerMTok": 0,
+          "outputPerMTok": 0,
           "groups": [
             "公益"
           ],
@@ -1877,11 +2115,11 @@
         },
         {
           "name": "muse-spark-1.3-contributor-free",
-          "ratio": 37.5,
+          "ratio": 0,
           "completionRatio": 1,
           "fixedPrice": null,
-          "inputPerMTok": 75,
-          "outputPerMTok": 75,
+          "inputPerMTok": 0,
+          "outputPerMTok": 0,
           "groups": [
             "公益"
           ],
@@ -1905,12 +2143,208 @@
           ]
         },
         {
-          "name": "nemotron-3.5-lightning-free",
-          "ratio": 37.5,
+          "name": "nemotron-3-nano:30b",
+          "ratio": 0,
           "completionRatio": 1,
           "fixedPrice": null,
-          "inputPerMTok": 75,
-          "outputPerMTok": 75,
+          "inputPerMTok": 0,
+          "outputPerMTok": 0,
+          "groups": [
+            "公益"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "nemotron-3.5-lightning-free-kilo",
+          "ratio": 0,
+          "completionRatio": 1,
+          "fixedPrice": null,
+          "inputPerMTok": 0,
+          "outputPerMTok": 0,
+          "groups": [
+            "公益"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "nemotron-3.5-lightning-free-opencode",
+          "ratio": 0,
+          "completionRatio": 1,
+          "fixedPrice": null,
+          "inputPerMTok": 0,
+          "outputPerMTok": 0,
+          "groups": [
+            "公益"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+          "ratio": 0,
+          "completionRatio": 1,
+          "fixedPrice": null,
+          "inputPerMTok": 0,
+          "outputPerMTok": 0,
+          "groups": [
+            "公益"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "nvidia/nemotron-3-super-120b-a12b:free",
+          "ratio": 0,
+          "completionRatio": 1,
+          "fixedPrice": null,
+          "inputPerMTok": 0,
+          "outputPerMTok": 0,
+          "groups": [
+            "公益"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "nvidia/nemotron-3-ultra-550b-a55b:free",
+          "ratio": 0,
+          "completionRatio": 1,
+          "fixedPrice": null,
+          "inputPerMTok": 0,
+          "outputPerMTok": 0,
+          "groups": [
+            "公益"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "openrouter/free",
+          "ratio": 0,
+          "completionRatio": 1,
+          "fixedPrice": null,
+          "inputPerMTok": 0,
+          "outputPerMTok": 0,
+          "groups": [
+            "公益"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "poolside/laguna-s-2.1:free",
+          "ratio": 0,
+          "completionRatio": 1,
+          "fixedPrice": null,
+          "inputPerMTok": 0,
+          "outputPerMTok": 0,
+          "groups": [
+            "公益"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "poolside/laguna-xs-2.1:free",
+          "ratio": 0,
+          "completionRatio": 1,
+          "fixedPrice": null,
+          "inputPerMTok": 0,
+          "outputPerMTok": 0,
+          "groups": [
+            "公益"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "Qwen2.5-VL-72B-Instruct",
+          "ratio": 0,
+          "completionRatio": 1,
+          "fixedPrice": null,
+          "inputPerMTok": 0,
+          "outputPerMTok": 0,
+          "groups": [
+            "公益"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "Qwen3-Embedding-8B",
+          "ratio": 0,
+          "completionRatio": 1,
+          "fixedPrice": null,
+          "inputPerMTok": 0,
+          "outputPerMTok": 0,
+          "groups": [
+            "公益"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "Qwen3.5-397B-A17B",
+          "ratio": 0.6,
+          "completionRatio": 6,
+          "fixedPrice": null,
+          "inputPerMTok": 1.2,
+          "outputPerMTok": 7.2,
+          "groups": [
+            "公益"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "Qwen3.5-9B",
+          "ratio": 0,
+          "completionRatio": 1,
+          "fixedPrice": null,
+          "inputPerMTok": 0,
+          "outputPerMTok": 0,
+          "groups": [
+            "公益"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "Qwen3.6-27B",
+          "ratio": 1.5,
+          "completionRatio": 6,
+          "fixedPrice": null,
+          "inputPerMTok": 3,
+          "outputPerMTok": 18,
+          "groups": [
+            "公益"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "Qwen3.8-27B",
+          "ratio": 1.5,
+          "completionRatio": 4,
+          "fixedPrice": null,
+          "inputPerMTok": 3,
+          "outputPerMTok": 12,
           "groups": [
             "公益"
           ],
@@ -1920,11 +2354,11 @@
         },
         {
           "name": "space-bunny-free",
-          "ratio": 37.5,
+          "ratio": 0,
           "completionRatio": 1,
           "fixedPrice": null,
-          "inputPerMTok": 75,
-          "outputPerMTok": 75,
+          "inputPerMTok": 0,
+          "outputPerMTok": 0,
           "groups": [
             "公益"
           ],
@@ -1933,12 +2367,82 @@
           ]
         },
         {
-          "name": "step-5-preview-free",
-          "ratio": 37.5,
+          "name": "stable-diffusion-xl-base-v10",
+          "ratio": 0,
+          "completionRatio": 0,
+          "fixedPrice": null,
+          "inputPerMTok": 0,
+          "outputPerMTok": 0,
+          "groups": [
+            "公益"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "step-5-preview-free-kilo",
+          "ratio": 3.5,
+          "completionRatio": 2.857142857142857,
+          "fixedPrice": null,
+          "inputPerMTok": 7,
+          "outputPerMTok": 20,
+          "groups": [
+            "公益"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "step-5-preview-free-opencode",
+          "ratio": 3.5,
+          "completionRatio": 2.857142857142857,
+          "fixedPrice": null,
+          "inputPerMTok": 7,
+          "outputPerMTok": 20,
+          "groups": [
+            "公益"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "thinkingmachines/inkling-small:free",
+          "ratio": 0,
           "completionRatio": 1,
           "fixedPrice": null,
-          "inputPerMTok": 75,
-          "outputPerMTok": 75,
+          "inputPerMTok": 0,
+          "outputPerMTok": 0,
+          "groups": [
+            "公益"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "whisper-large-v3",
+          "ratio": 1.3583333333333334,
+          "completionRatio": 0,
+          "fixedPrice": null,
+          "inputPerMTok": 2.717,
+          "outputPerMTok": 0,
+          "groups": [
+            "公益"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "whisper-large-v3-turbo",
+          "ratio": 0.425,
+          "completionRatio": 0,
+          "fixedPrice": null,
+          "inputPerMTok": 0.85,
+          "outputPerMTok": 0,
           "groups": [
             "公益"
           ],
@@ -1950,12 +2454,12 @@
       "modelsSource": "public-api",
       "defaults": {
         "claude": "claude-opus-5-5",
-        "openai": "gpt-6.1-sol"
+        "openai": "gpt-oss-120b"
       },
       "signup": {
         "status": 200,
         "ok": true,
-        "ms": 851,
+        "ms": 1129,
         "attempts": 1
       },
       "mirrors": [],
@@ -1967,10 +2471,10 @@
     },
     {
       "id": "orbelis",
-      "checkedAt": "2026-10-15T11:28:32.347Z",
+      "checkedAt": "2026-10-15T17:00:36.601Z",
       "apiOk": true,
       "pricingOk": true,
-      "latencyMs": 747,
+      "latencyMs": 1563,
       "error": null,
       "systemName": "Orbelis",
       "version": "v1.0.0-rc.41",
@@ -1990,29 +2494,29 @@
       "services": [],
       "announcements": [
         {
+          "id": 14,
+          "date": "2026-10-15",
+          "text": "目前GPT的情况除了官Key和官转以外都不建议使用"
+        },
+        {
+          "id": 13,
+          "date": "2026-10-15",
+          "text": "渠道名字和API密钥有点散乱，所以已经全部更新整理"
+        },
+        {
           "id": 12,
           "date": "2026-09-29",
           "text": "codex俩个福利渠道是Pro5X的team轮转车，封号很快，自动补号速度跟不上的，稳定性只能说没封之前很稳定，封的时候很炸"
         },
         {
-          "id": 11,
-          "date": "2026-09-29",
-          "text": "渠道名字有点乱，已经重新整理，如发现无法使用请重新更新渠道分组"
+          "id": 4,
+          "date": "2026-09-06",
+          "text": "试用订阅用户分组请选择专用的试用分组"
         },
         {
-          "id": 10,
-          "date": "2026-09-27",
-          "text": "已上线AZ生图分组1/2/4K统一8分 已上线豆包视频/minimax-h3视频/grok视频"
-        },
-        {
-          "id": 9,
-          "date": "2026-09-23",
-          "text": "已上线不降智分组-------------0.24倍率"
-        },
-        {
-          "id": 7,
-          "date": "2026-09-15",
-          "text": "Plus高速节点切分为俩个渠道，同样的号池同样的渠道倍率也是相同的"
+          "id": 2,
+          "date": "2026-08-19",
+          "text": "充值有USDT卡网和链动小铺卡网俩种 建议走USDT卡网没有充值手续费截止9月31日前 兑换比例为1：7 相当于你充值10USDT仅需要67就可以获取70U的额度"
         }
       ],
       "models": [
@@ -2159,9 +2663,9 @@
           "groups": [
             "Claude·华强北节点【请随意---国内某大厂渠道】",
             "CCMAX·蒸馏节点-微注入",
+            "CCMAX·不可外接节点【不可破限不可蒸馏】",
             "CCMAX·可外接节点【不可破限不可蒸馏】",
-            "CCMAX·满血高性能特价",
-            "CCMAX·不可外接节点【不可破限不可蒸馏】"
+            "CCMAX·满血高性能特价"
           ],
           "protocols": [
             "anthropic",
@@ -2176,10 +2680,10 @@
           "inputPerMTok": 10,
           "outputPerMTok": 50,
           "groups": [
-            "Claude·华强北节点【请随意---国内某大厂渠道】",
-            "CCMAX·蒸馏节点-微注入",
             "CCMAX·可外接节点【不可破限不可蒸馏】",
             "CCMAX·满血高性能特价",
+            "Claude·华强北节点【请随意---国内某大厂渠道】",
+            "CCMAX·蒸馏节点-微注入",
             "CCMAX·不可外接节点【不可破限不可蒸馏】"
           ],
           "protocols": [
@@ -2195,9 +2699,10 @@
           "inputPerMTok": 10,
           "outputPerMTok": 50,
           "groups": [
-            "Claude--kiro·正价直冲节点",
-            "Claude·企业级kiro【智商一定程度较高】",
-            "Claude·稳定节点"
+            "Claude--kiro·稳定高缓渠道",
+            "Claude--kiro·Pro+正价渠道",
+            "Claude--kiro·兜底高缓渠道",
+            "Claude--kiro·Power【企业级kiro智商较高】"
           ],
           "protocols": [
             "anthropic",
@@ -2212,11 +2717,11 @@
           "inputPerMTok": 1,
           "outputPerMTok": 5,
           "groups": [
+            "Claude--kiro·Pro+正价渠道",
+            "Claude--kiro·兜底高缓渠道",
             "CCMAX·可外接节点【不可破限不可蒸馏】",
-            "Claude--kiro·正价直冲节点",
             "Claude·AWSB节点【不可破限不可蒸馏】",
-            "CCMAX·不可外接节点【不可破限不可蒸馏】",
-            "Claude·稳定节点"
+            "Claude--kiro·稳定高缓渠道"
           ],
           "protocols": [
             "anthropic",
@@ -2231,18 +2736,34 @@
           "inputPerMTok": 5,
           "outputPerMTok": 25,
           "groups": [
-            "CCMAX·蒸馏节点-微注入",
-            "Claude·AWSB节点【不可破限不可蒸馏】",
-            "Claude·稳定节点",
+            "Claude--kiro·稳定高缓渠道",
+            "Claude--kiro·Pro+正价渠道",
             "Claude·华强北节点【请随意---国内某大厂渠道】",
+            "CCMAX·蒸馏节点-微注入",
+            "CCMAX·不可外接节点【不可破限不可蒸馏】",
             "CCMAX·可外接节点【不可破限不可蒸馏】",
-            "CCMAX·满血高性能特价",
-            "Claude--kiro·正价直冲节点",
-            "Claude·企业级kiro【智商一定程度较高】",
-            "CCMAX·不可外接节点【不可破限不可蒸馏】"
+            "Claude·AWSB节点【不可破限不可蒸馏】",
+            "Claude--kiro·Power【企业级kiro智商较高】",
+            "Claude--kiro·兜底高缓渠道",
+            "CCMAX·满血高性能特价"
           ],
           "protocols": [
             "anthropic",
+            "openai"
+          ]
+        },
+        {
+          "name": "claude-opus-4-6-thinking",
+          "ratio": 2.5,
+          "completionRatio": 5,
+          "fixedPrice": null,
+          "inputPerMTok": 5,
+          "outputPerMTok": 25,
+          "groups": [
+            "Gemini 反重力渠道"
+          ],
+          "protocols": [
+            "gemini",
             "openai"
           ]
         },
@@ -2254,15 +2775,16 @@
           "inputPerMTok": 5,
           "outputPerMTok": 25,
           "groups": [
-            "Claude·华强北节点【请随意---国内某大厂渠道】",
-            "CCMAX·满血高性能特价",
-            "CCMAX·不可外接节点【不可破限不可蒸馏】",
-            "Claude·稳定节点",
+            "Claude--kiro·Pro+正价渠道",
             "CCMAX·蒸馏节点-微注入",
+            "Claude--kiro·兜底高缓渠道",
             "CCMAX·可外接节点【不可破限不可蒸馏】",
-            "Claude--kiro·正价直冲节点",
             "Claude·AWSB节点【不可破限不可蒸馏】",
-            "Claude·企业级kiro【智商一定程度较高】"
+            "Claude--kiro·Power【企业级kiro智商较高】",
+            "Claude--kiro·稳定高缓渠道",
+            "Claude·华强北节点【请随意---国内某大厂渠道】",
+            "CCMAX·不可外接节点【不可破限不可蒸馏】",
+            "CCMAX·满血高性能特价"
           ],
           "protocols": [
             "anthropic",
@@ -2277,15 +2799,16 @@
           "inputPerMTok": 5,
           "outputPerMTok": 25,
           "groups": [
-            "CCMAX·可外接节点【不可破限不可蒸馏】",
             "CCMAX·满血高性能特价",
             "Claude·AWSB节点【不可破限不可蒸馏】",
-            "Claude·企业级kiro【智商一定程度较高】",
-            "Claude·稳定节点",
             "CCMAX·蒸馏节点-微注入",
-            "Claude--kiro·正价直冲节点",
             "CCMAX·不可外接节点【不可破限不可蒸馏】",
-            "Claude·华强北节点【请随意---国内某大厂渠道】"
+            "CCMAX·可外接节点【不可破限不可蒸馏】",
+            "Claude--kiro·Power【企业级kiro智商较高】",
+            "Claude--kiro·稳定高缓渠道",
+            "Claude·华强北节点【请随意---国内某大厂渠道】",
+            "Claude--kiro·Pro+正价渠道",
+            "Claude--kiro·兜底高缓渠道"
           ],
           "protocols": [
             "anthropic",
@@ -2300,15 +2823,16 @@
           "inputPerMTok": 5,
           "outputPerMTok": 25,
           "groups": [
-            "Claude·华强北节点【请随意---国内某大厂渠道】",
-            "CCMAX·可外接节点【不可破限不可蒸馏】",
-            "CCMAX·满血高性能特价",
+            "Claude--kiro·Pro+正价渠道",
             "CCMAX·不可外接节点【不可破限不可蒸馏】",
-            "Claude·稳定节点",
-            "CCMAX·蒸馏节点-微注入",
-            "Claude--kiro·正价直冲节点",
+            "CCMAX·可外接节点【不可破限不可蒸馏】",
             "Claude·AWSB节点【不可破限不可蒸馏】",
-            "Claude·企业级kiro【智商一定程度较高】"
+            "Claude--kiro·稳定高缓渠道",
+            "CCMAX·蒸馏节点-微注入",
+            "Claude--kiro·兜底高缓渠道",
+            "Claude·华强北节点【请随意---国内某大厂渠道】",
+            "CCMAX·满血高性能特价",
+            "Claude--kiro·Power【企业级kiro智商较高】"
           ],
           "protocols": [
             "anthropic",
@@ -2323,15 +2847,46 @@
           "inputPerMTok": 75,
           "outputPerMTok": 75,
           "groups": [
-            "CCMAX·蒸馏节点-微注入",
             "CCMAX·可外接节点【不可破限不可蒸馏】",
-            "Claude·AWSB节点【不可破限不可蒸馏】",
-            "Claude·企业级kiro【智商一定程度较高】",
-            "Claude·稳定节点",
-            "Claude·华强北节点【请随意---国内某大厂渠道】",
             "CCMAX·满血高性能特价",
-            "Claude--kiro·正价直冲节点",
-            "CCMAX·不可外接节点【不可破限不可蒸馏】"
+            "Claude--kiro·稳定高缓渠道",
+            "CCMAX·蒸馏节点-微注入",
+            "Claude--kiro·Pro+正价渠道",
+            "Claude--kiro·兜底高缓渠道",
+            "Claude·华强北节点【请随意---国内某大厂渠道】",
+            "CCMAX·不可外接节点【不可破限不可蒸馏】",
+            "Claude·AWSB节点【不可破限不可蒸馏】",
+            "Claude--kiro·Power【企业级kiro智商较高】"
+          ],
+          "protocols": [
+            "anthropic",
+            "openai"
+          ]
+        },
+        {
+          "name": "claude-opus-5-5-high",
+          "ratio": 37.5,
+          "completionRatio": 1,
+          "fixedPrice": null,
+          "inputPerMTok": 75,
+          "outputPerMTok": 75,
+          "groups": [
+            "Gemini 反重力渠道"
+          ],
+          "protocols": [
+            "gemini",
+            "openai"
+          ]
+        },
+        {
+          "name": "claude-sonnet-4-5",
+          "ratio": 37.5,
+          "completionRatio": 5,
+          "fixedPrice": null,
+          "inputPerMTok": 75,
+          "outputPerMTok": 375,
+          "groups": [
+            "Claude--kiro·兜底高缓渠道"
           ],
           "protocols": [
             "anthropic",
@@ -2346,7 +2901,7 @@
           "inputPerMTok": 3,
           "outputPerMTok": 15,
           "groups": [
-            "Claude--kiro·正价直冲节点"
+            "Claude--kiro·Pro+正价渠道"
           ],
           "protocols": [
             "anthropic",
@@ -2361,19 +2916,22 @@
           "inputPerMTok": 3,
           "outputPerMTok": 15,
           "groups": [
-            "Claude·企业级kiro【智商一定程度较高】",
+            "Gemini 反重力渠道",
+            "Claude--kiro·Pro+正价渠道",
             "CCMAX·蒸馏节点-微注入",
-            "Claude·华强北节点【请随意---国内某大厂渠道】",
-            "CCMAX·可外接节点【不可破限不可蒸馏】",
-            "Claude·AWSB节点【不可破限不可蒸馏】",
             "CCMAX·不可外接节点【不可破限不可蒸馏】",
-            "Claude·稳定节点",
+            "CCMAX·可外接节点【不可破限不可蒸馏】",
             "CCMAX·满血高性能特价",
-            "Claude--kiro·正价直冲节点"
+            "Claude--kiro·Power【企业级kiro智商较高】",
+            "Claude--kiro·兜底高缓渠道",
+            "Claude·华强北节点【请随意---国内某大厂渠道】",
+            "Claude·AWSB节点【不可破限不可蒸馏】",
+            "Claude--kiro·稳定高缓渠道"
           ],
           "protocols": [
             "anthropic",
-            "openai"
+            "openai",
+            "gemini"
           ]
         },
         {
@@ -2384,15 +2942,16 @@
           "inputPerMTok": 3,
           "outputPerMTok": 15,
           "groups": [
-            "CCMAX·蒸馏节点-微注入",
-            "CCMAX·满血高性能特价",
-            "Claude--kiro·正价直冲节点",
+            "Claude--kiro·Pro+正价渠道",
+            "Claude--kiro·兜底高缓渠道",
             "CCMAX·不可外接节点【不可破限不可蒸馏】",
-            "Claude·华强北节点【请随意---国内某大厂渠道】",
             "CCMAX·可外接节点【不可破限不可蒸馏】",
+            "CCMAX·满血高性能特价",
             "Claude·AWSB节点【不可破限不可蒸馏】",
-            "Claude·企业级kiro【智商一定程度较高】",
-            "Claude·稳定节点"
+            "Claude--kiro·Power【企业级kiro智商较高】",
+            "Claude--kiro·稳定高缓渠道",
+            "CCMAX·蒸馏节点-微注入",
+            "Claude·华强北节点【请随意---国内某大厂渠道】"
           ],
           "protocols": [
             "anthropic",
@@ -2408,14 +2967,30 @@
           "outputPerMTok": 75,
           "groups": [
             "CCMAX·蒸馏节点-微注入",
-            "Claude·稳定节点",
+            "Claude--kiro·兜底高缓渠道",
+            "CCMAX·不可外接节点【不可破限不可蒸馏】",
             "CCMAX·可外接节点【不可破限不可蒸馏】",
             "Claude·AWSB节点【不可破限不可蒸馏】",
-            "Claude·企业级kiro【智商一定程度较高】",
-            "CCMAX·不可外接节点【不可破限不可蒸馏】"
+            "Claude--kiro·Power【企业级kiro智商较高】",
+            "Claude--kiro·稳定高缓渠道"
           ],
           "protocols": [
             "anthropic",
+            "openai"
+          ]
+        },
+        {
+          "name": "claude-sonnet-5-5-high",
+          "ratio": 37.5,
+          "completionRatio": 1,
+          "fixedPrice": null,
+          "inputPerMTok": 75,
+          "outputPerMTok": 75,
+          "groups": [
+            "Gemini 反重力渠道"
+          ],
+          "protocols": [
+            "gemini",
             "openai"
           ]
         },
@@ -2428,22 +3003,10 @@
           "outputPerMTok": 1.2,
           "groups": [
             "企业专用专线",
+            "Codex·高缓高稳定渠道【用于兜底分组】",
+            "GPT·破限渠道",
             "Pro·不降智高缓分组",
             "Codex·高速节点二渠道"
-          ],
-          "protocols": [
-            "openai"
-          ]
-        },
-        {
-          "name": "deepseek-v4-flash",
-          "ratio": 1.5,
-          "completionRatio": 5,
-          "fixedPrice": null,
-          "inputPerMTok": 3,
-          "outputPerMTok": 15,
-          "groups": [
-            "国产特惠反代渠道"
           ],
           "protocols": [
             "openai"
@@ -2485,7 +3048,6 @@
           "inputPerMTok": 3,
           "outputPerMTok": 15,
           "groups": [
-            "Orbelis福利国模反代渠道",
             "国产特惠反代渠道",
             "百炼官key聚合渠道"
           ],
@@ -2501,7 +3063,6 @@
           "inputPerMTok": 75,
           "outputPerMTok": 75,
           "groups": [
-            "Orbelis福利国模反代渠道",
             "国产特惠反代渠道",
             "百炼官key聚合渠道"
           ],
@@ -2518,7 +3079,6 @@
           "outputPerMTok": 4,
           "groups": [
             "国产福利渠道--------仅可使用deepseek",
-            "Orbelis福利国模反代渠道",
             "国产特惠反代渠道",
             "百炼官key聚合渠道"
           ],
@@ -2556,6 +3116,21 @@
           ]
         },
         {
+          "name": "gemini-3-flash",
+          "ratio": 37.5,
+          "completionRatio": 4,
+          "fixedPrice": null,
+          "inputPerMTok": 75,
+          "outputPerMTok": 300,
+          "groups": [
+            "Gemini 反重力渠道"
+          ],
+          "protocols": [
+            "gemini",
+            "openai"
+          ]
+        },
+        {
           "name": "gemini-3-pro-image-preview",
           "ratio": 0,
           "completionRatio": 0,
@@ -2586,6 +3161,66 @@
           ]
         },
         {
+          "name": "gemini-3.1-flash-lite",
+          "ratio": 37.5,
+          "completionRatio": 4,
+          "fixedPrice": null,
+          "inputPerMTok": 75,
+          "outputPerMTok": 300,
+          "groups": [
+            "Gemini 反重力渠道"
+          ],
+          "protocols": [
+            "gemini",
+            "openai"
+          ]
+        },
+        {
+          "name": "gemini-3.5-flash-lite",
+          "ratio": 37.5,
+          "completionRatio": 4,
+          "fixedPrice": null,
+          "inputPerMTok": 75,
+          "outputPerMTok": 300,
+          "groups": [
+            "Gemini 反重力渠道"
+          ],
+          "protocols": [
+            "gemini",
+            "openai"
+          ]
+        },
+        {
+          "name": "gemini-3.8-flash-high",
+          "ratio": 37.5,
+          "completionRatio": 4,
+          "fixedPrice": null,
+          "inputPerMTok": 75,
+          "outputPerMTok": 300,
+          "groups": [
+            "Gemini 反重力渠道"
+          ],
+          "protocols": [
+            "gemini",
+            "openai"
+          ]
+        },
+        {
+          "name": "gemini-4-argon-high",
+          "ratio": 37.5,
+          "completionRatio": 4,
+          "fixedPrice": null,
+          "inputPerMTok": 75,
+          "outputPerMTok": 300,
+          "groups": [
+            "Gemini 反重力渠道"
+          ],
+          "protocols": [
+            "gemini",
+            "openai"
+          ]
+        },
+        {
           "name": "glm-5.1",
           "ratio": 37.5,
           "completionRatio": 1,
@@ -2607,7 +3242,6 @@
           "inputPerMTok": 8,
           "outputPerMTok": 28,
           "groups": [
-            "国产特惠反代渠道",
             "百炼官key聚合渠道"
           ],
           "protocols": [
@@ -2636,7 +3270,6 @@
           "inputPerMTok": 8,
           "outputPerMTok": 28,
           "groups": [
-            "Orbelis福利国模反代渠道",
             "国产特惠反代渠道",
             "百炼官key聚合渠道"
           ],
@@ -2694,7 +3327,7 @@
           "inputPerMTok": 75,
           "outputPerMTok": 150,
           "groups": [
-            "GPT·官key节点-高级版"
+            "GPT·官key渠道"
           ],
           "protocols": [
             "openai"
@@ -2708,7 +3341,7 @@
           "inputPerMTok": 75,
           "outputPerMTok": 150,
           "groups": [
-            "GPT·官key节点-高级版"
+            "GPT·官key渠道"
           ],
           "protocols": [
             "openai"
@@ -2722,7 +3355,7 @@
           "inputPerMTok": 75,
           "outputPerMTok": 300,
           "groups": [
-            "GPT·官key节点-高级版"
+            "GPT·官key渠道"
           ],
           "protocols": [
             "openai"
@@ -2736,7 +3369,7 @@
           "inputPerMTok": 75,
           "outputPerMTok": 300,
           "groups": [
-            "GPT·官key节点-高级版"
+            "GPT·官key渠道"
           ],
           "protocols": [
             "openai"
@@ -2750,7 +3383,7 @@
           "inputPerMTok": 75,
           "outputPerMTok": 450,
           "groups": [
-            "GPT·官key节点-高级版"
+            "GPT·官key渠道"
           ],
           "protocols": [
             "openai"
@@ -2764,7 +3397,7 @@
           "inputPerMTok": 75,
           "outputPerMTok": 450,
           "groups": [
-            "GPT·官key节点-高级版"
+            "GPT·官key渠道"
           ],
           "protocols": [
             "openai"
@@ -2778,7 +3411,21 @@
           "inputPerMTok": 75,
           "outputPerMTok": 450,
           "groups": [
-            "GPT·官key节点-高级版"
+            "GPT·官key渠道"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "gpt-5.3-codex-spark",
+          "ratio": 0.875,
+          "completionRatio": 8,
+          "fixedPrice": null,
+          "inputPerMTok": 1.75,
+          "outputPerMTok": 14,
+          "groups": [
+            "Codex·高缓高稳定渠道【用于兜底分组】"
           ],
           "protocols": [
             "openai"
@@ -2792,7 +3439,7 @@
           "inputPerMTok": 2.5,
           "outputPerMTok": 15,
           "groups": [
-            "GPT·官key节点-高级版"
+            "GPT·官key渠道"
           ],
           "protocols": [
             "openai"
@@ -2806,7 +3453,7 @@
           "inputPerMTok": 75,
           "outputPerMTok": 468.75,
           "groups": [
-            "GPT·官key节点-高级版"
+            "GPT·官key渠道"
           ],
           "protocols": [
             "openai"
@@ -2820,7 +3467,7 @@
           "inputPerMTok": 75,
           "outputPerMTok": 450,
           "groups": [
-            "GPT·官key节点-高级版"
+            "GPT·官key渠道"
           ],
           "protocols": [
             "openai"
@@ -2834,7 +3481,7 @@
           "inputPerMTok": 75,
           "outputPerMTok": 450,
           "groups": [
-            "GPT·官key节点-高级版"
+            "GPT·官key渠道"
           ],
           "protocols": [
             "openai"
@@ -2848,20 +3495,21 @@
           "inputPerMTok": 5,
           "outputPerMTok": 30,
           "groups": [
+            "Pro·不降智高缓分组",
+            "试用用户专用分组",
+            "Codex福利节点二渠道",
+            "Codex·高速节点不降智渠道",
             "Pro·不降智高缓兜底分组",
-            "Pro·旗舰节点",
             "Codex·高缓高稳定渠道【用于兜底分组】",
-            "GPT·官key节点-高级版",
+            "GPT·官转渠道",
+            "GPT·破限渠道",
+            "Codex·高速节点一渠道",
+            "GPT·官key渠道",
+            "Codex·高速节点二渠道",
             "Codex福利节点一渠道",
             "企业专用专线",
-            "Pro·不降智高缓分组",
-            "GPT·官key节点-普通版",
             "Pro·企业专线节点",
-            "试用用户专用分组",
-            "Codex·高速节点一渠道",
-            "Codex·高速节点二渠道",
-            "Codex福利节点二渠道",
-            "Codex·高速节点不降智渠道"
+            "Pro·旗舰节点"
           ],
           "protocols": [
             "openai"
@@ -2875,19 +3523,20 @@
           "inputPerMTok": 2.5,
           "outputPerMTok": 15,
           "groups": [
-            "GPT·官key节点-普通版",
-            "GPT·官key节点-高级版",
-            "试用用户专用分组",
-            "Codex·高速节点一渠道",
-            "gptfree节点（只支持5.5）",
-            "Pro·不降智高缓兜底分组",
-            "Pro·企业专线节点",
+            "GPT·官key渠道",
             "Codex·高速节点二渠道",
-            "Codex福利节点二渠道",
-            "Codex福利节点一渠道",
             "企业专用专线",
             "Pro·不降智高缓分组",
-            "Codex·高缓高稳定渠道【用于兜底分组】"
+            "试用用户专用分组",
+            "GPT·官转渠道",
+            "Codex福利节点二渠道",
+            "Codex福利节点一渠道",
+            "Pro·不降智高缓兜底分组",
+            "Codex·高缓高稳定渠道【用于兜底分组】",
+            "GPT·破限渠道",
+            "Codex·高速节点一渠道",
+            "Pro·企业专线节点",
+            "Gpt-Free渠道"
           ],
           "protocols": [
             "openai"
@@ -2901,21 +3550,22 @@
           "inputPerMTok": 10,
           "outputPerMTok": 50,
           "groups": [
+            "GPT·官转渠道",
+            "Pro·不降智高缓兜底分组",
+            "Pro·旗舰节点",
             "Pro·不降智高缓分组",
             "试用用户专用分组",
             "Codex·高速节点二渠道",
-            "Codex福利节点一渠道",
-            "企业专用专线",
-            "Pro·企业专线节点",
-            "Codex·高速节点一渠道",
-            "GPT-6Astra不降智分组",
-            "Codex·高速节点不降智渠道",
-            "Codex·高缓高稳定渠道【用于兜底分组】",
-            "GPT·官key节点-普通版",
-            "GPT·官key节点-高级版",
             "Codex福利节点二渠道",
-            "Pro·不降智高缓兜底分组",
-            "Pro·旗舰节点"
+            "Codex·高速节点不降智渠道",
+            "企业专用专线",
+            "GPT·破限渠道",
+            "GPT·官key渠道",
+            "GPT-6Astra不降智分组",
+            "Codex福利节点一渠道",
+            "Codex·高缓高稳定渠道【用于兜底分组】",
+            "Pro·企业专线节点",
+            "Codex·高速节点一渠道"
           ],
           "protocols": [
             "openai"
@@ -2929,19 +3579,20 @@
           "inputPerMTok": 2,
           "outputPerMTok": 10,
           "groups": [
-            "企业专用专线",
-            "Pro·旗舰节点",
-            "GPT·官key节点-普通版",
-            "GPT·官key节点-高级版",
-            "试用用户专用分组",
+            "GPT·官key渠道",
             "Codex·高速节点二渠道",
             "Codex福利节点二渠道",
-            "Codex福利节点一渠道",
-            "Codex·高速节点不降智渠道",
-            "Pro·不降智高缓兜底分组",
-            "Pro·不降智高缓分组",
             "Codex·高缓高稳定渠道【用于兜底分组】",
             "Pro·企业专线节点",
+            "试用用户专用分组",
+            "GPT·官转渠道",
+            "GPT·破限渠道",
+            "Codex福利节点一渠道",
+            "Pro·不降智高缓兜底分组",
+            "企业专用专线",
+            "Codex·高速节点不降智渠道",
+            "Pro·旗舰节点",
+            "Pro·不降智高缓分组",
             "Codex·高速节点一渠道"
           ],
           "protocols": [
@@ -2956,18 +3607,18 @@
           "inputPerMTok": 75,
           "outputPerMTok": 150,
           "groups": [
-            "GPT·官key节点-普通版",
-            "GPT·官key节点-高级版",
+            "Codex·高速节点二渠道",
+            "GPT·官转渠道",
+            "Codex福利节点二渠道",
+            "Codex·高速节点不降智渠道",
             "Pro·不降智高缓兜底分组",
             "Pro·旗舰节点",
+            "企业专用专线",
             "Codex·高缓高稳定渠道【用于兜底分组】",
             "Pro·不降智高缓分组",
             "试用用户专用分组",
             "Codex·高速节点一渠道",
-            "Codex·高速节点二渠道",
-            "Codex福利节点二渠道",
-            "企业专用专线",
-            "Codex·高速节点不降智渠道"
+            "GPT·官key渠道"
           ],
           "protocols": [
             "openai"
@@ -3019,6 +3670,21 @@
           ]
         },
         {
+          "name": "gpt-oss-120b-medium",
+          "ratio": 37.5,
+          "completionRatio": 2,
+          "fixedPrice": null,
+          "inputPerMTok": 75,
+          "outputPerMTok": 150,
+          "groups": [
+            "Gemini 反重力渠道"
+          ],
+          "protocols": [
+            "gemini",
+            "openai"
+          ]
+        },
+        {
           "name": "grok-4.20-0309-non-reasoning",
           "ratio": 0.625,
           "completionRatio": 2,
@@ -3026,6 +3692,7 @@
           "inputPerMTok": 1.25,
           "outputPerMTok": 2.5,
           "groups": [
+            "grok·Ultra节点",
             "grok·heavy节点",
             "Grok·Super节点"
           ],
@@ -3042,6 +3709,7 @@
           "inputPerMTok": 1.25,
           "outputPerMTok": 2.5,
           "groups": [
+            "grok·Ultra节点",
             "grok·heavy节点",
             "Grok·Super节点"
           ],
@@ -3059,7 +3727,8 @@
           "outputPerMTok": 2.5,
           "groups": [
             "grok·heavy节点",
-            "Grok·Super节点"
+            "Grok·Super节点",
+            "grok·Ultra节点"
           ],
           "protocols": [
             "openai",
@@ -3074,8 +3743,9 @@
           "inputPerMTok": 2,
           "outputPerMTok": 6,
           "groups": [
-            "grok·heavy节点",
-            "Grok·Super节点"
+            "Grok·Super节点",
+            "grok·Ultra节点",
+            "grok·heavy节点"
           ],
           "protocols": [
             "openai",
@@ -3090,6 +3760,7 @@
           "inputPerMTok": 2,
           "outputPerMTok": 6,
           "groups": [
+            "grok·Ultra节点",
             "grok·heavy节点",
             "Grok·Super节点"
           ],
@@ -3106,9 +3777,10 @@
           "inputPerMTok": 75,
           "outputPerMTok": 75,
           "groups": [
-            "Grok·福利节点",
+            "grok·Ultra节点",
             "grok·heavy节点",
-            "Grok·Super节点"
+            "Grok·Super节点",
+            "Grok·福利节点"
           ],
           "protocols": [
             "openai",
@@ -3123,6 +3795,7 @@
           "inputPerMTok": 75,
           "outputPerMTok": 75,
           "groups": [
+            "grok·Ultra节点",
             "grok·heavy节点",
             "Grok·Super节点"
           ],
@@ -3139,8 +3812,9 @@
           "inputPerMTok": 1,
           "outputPerMTok": 2,
           "groups": [
-            "grok·heavy节点",
-            "Grok·Super节点"
+            "Grok·Super节点",
+            "grok·Ultra节点",
+            "grok·heavy节点"
           ],
           "protocols": [
             "openai",
@@ -3327,7 +4001,6 @@
           "inputPerMTok": 20,
           "outputPerMTok": 100,
           "groups": [
-            "Orbelis福利国模反代渠道",
             "国产特惠反代渠道",
             "百炼官key聚合渠道"
           ],
@@ -3567,8 +4240,8 @@
           "inputPerMTok": 12,
           "outputPerMTok": 36,
           "groups": [
-            "百炼官key聚合渠道",
-            "Orbelis福利国模反代渠道"
+            "国产特惠反代渠道",
+            "百炼官key聚合渠道"
           ],
           "protocols": [
             "openai"
@@ -3844,12 +4517,12 @@
       "modelsSource": "public-api",
       "defaults": {
         "claude": "claude-opus-5-5",
-        "openai": "qwen-8b"
+        "openai": "gpt-oss-120b-medium"
       },
       "signup": {
         "status": 200,
         "ok": true,
-        "ms": 581,
+        "ms": 1283,
         "attempts": 1
       },
       "mirrors": [],
@@ -3861,10 +4534,10 @@
     },
     {
       "id": "supxh",
-      "checkedAt": "2026-10-15T11:28:32.483Z",
+      "checkedAt": "2026-10-15T17:00:36.152Z",
       "apiOk": true,
       "pricingOk": true,
-      "latencyMs": 884,
+      "latencyMs": 1103,
       "error": null,
       "systemName": null,
       "version": null,
@@ -3888,7 +4561,7 @@
       "signup": {
         "status": 200,
         "ok": true,
-        "ms": 883,
+        "ms": 1223,
         "attempts": 1
       },
       "mirrors": [],
@@ -3900,10 +4573,10 @@
     },
     {
       "id": "api456",
-      "checkedAt": "2026-10-15T11:28:32.475Z",
+      "checkedAt": "2026-10-15T17:00:36.681Z",
       "apiOk": true,
       "pricingOk": false,
-      "latencyMs": 875,
+      "latencyMs": 1638,
       "error": null,
       "systemName": "可萌中转站",
       "version": "",
@@ -3948,7 +4621,7 @@
       "signup": {
         "status": 200,
         "ok": true,
-        "ms": 850,
+        "ms": 1514,
         "attempts": 1
       },
       "mirrors": [],
@@ -3960,10 +4633,10 @@
     },
     {
       "id": "justwoker",
-      "checkedAt": "2026-10-15T11:28:32.396Z",
+      "checkedAt": "2026-10-15T17:00:36.355Z",
       "apiOk": true,
       "pricingOk": false,
-      "latencyMs": 795,
+      "latencyMs": 1309,
       "error": null,
       "systemName": "JustDoWork",
       "version": "v1.0.0-rc.23",
@@ -3990,7 +4663,7 @@
       "signup": {
         "status": 200,
         "ok": true,
-        "ms": 961,
+        "ms": 1586,
         "attempts": 1
       },
       "mirrors": [],
@@ -4002,10 +4675,10 @@
     },
     {
       "id": "matrix",
-      "checkedAt": "2026-10-15T11:28:33.179Z",
+      "checkedAt": "2026-10-15T17:00:37.293Z",
       "apiOk": true,
       "pricingOk": false,
-      "latencyMs": 1578,
+      "latencyMs": 2248,
       "error": null,
       "systemName": null,
       "version": null,
@@ -4029,7 +4702,7 @@
       "signup": {
         "status": 200,
         "ok": true,
-        "ms": 1641,
+        "ms": 2316,
         "attempts": 1
       },
       "mirrors": [],
@@ -4041,10 +4714,10 @@
     },
     {
       "id": "seekai",
-      "checkedAt": "2026-10-15T11:28:32.655Z",
+      "checkedAt": "2026-10-15T17:00:37.265Z",
       "apiOk": true,
       "pricingOk": false,
-      "latencyMs": 1052,
+      "latencyMs": 2218,
       "error": null,
       "systemName": "SeekAi",
       "version": "v1.0.0-rc.25",
@@ -4072,7 +4745,7 @@
       "signup": {
         "status": 200,
         "ok": true,
-        "ms": 1199,
+        "ms": 2217,
         "attempts": 1
       },
       "mirrors": [
@@ -4089,10 +4762,10 @@
     },
     {
       "id": "aaawinn",
-      "checkedAt": "2026-10-15T11:28:32.620Z",
+      "checkedAt": "2026-10-15T17:00:36.727Z",
       "apiOk": true,
       "pricingOk": false,
-      "latencyMs": 1016,
+      "latencyMs": 1680,
       "error": null,
       "systemName": "Long的AI",
       "version": "",
@@ -4144,7 +4817,7 @@
       "signup": {
         "status": 200,
         "ok": true,
-        "ms": 1012,
+        "ms": 1676,
         "attempts": 1
       },
       "mirrors": [],
@@ -4156,10 +4829,10 @@
     },
     {
       "id": "hcnsec",
-      "checkedAt": "2026-10-15T11:28:34.870Z",
+      "checkedAt": "2026-10-15T17:00:38.990Z",
       "apiOk": true,
       "pricingOk": false,
-      "latencyMs": 2962,
+      "latencyMs": 3941,
       "error": null,
       "systemName": "新疆幻城网安科技公益大模型安全网关",
       "version": "v1.0.0-rc.40-hc2",
@@ -4178,9 +4851,14 @@
       "services": [],
       "announcements": [
         {
+          "id": 63,
+          "date": "2026-10-15",
+          "text": "step-5-preview限时补充用量，并且限时免费调用（200k上下文以内0元调用）"
+        },
+        {
           "id": 62,
           "date": "2026-10-15",
-          "text": "小程序名字：《重生之这一世我要好好学人工智能》直接微信搜索然后进去答题，获取兑换码权限，获取兑换码，然后就可以在我站钱包界面填写兑换码兑换额度，一天能答题十次，十次能换一万余额，现阶段正处于内测阶段，有问题大家及时反馈"
+          "text": "小程序名字：《重生之这一世我要好好学人工智能》直接微信搜索然后进去答题，获取兑换码权限，获取兑换码，然后就可以在我站钱包界面填写兑换码兑换一千额度，一天能答题十次，十次能换一万余额，现阶段正处于内测阶段，有问题大家及时反馈，另外我站开放余额兑换会员活动，点开钱包就可以去兑换"
         },
         {
           "id": 61,
@@ -4196,11 +4874,6 @@
           "id": 59,
           "date": "2026-10-11",
           "text": "针对此前按次计费规则中\"小请求也按次扣费、性价比不高\"的问题，我们本周将对计费方式进行调整：降低小额请求的费用，同时提高超长上下文请求的扣费标准。具体细则请查看各模型的详情页，欢迎大家关注。"
-        },
-        {
-          "id": 58,
-          "date": "2026-10-07",
-          "text": "我在用 LongCat AI 开放平台，体验LongCat最新模型，编程、推理、Agent 工具调用能力持续进化！该平台不计入缓存token，缓存不算token，用量比实际大通过我的链接完成实名认证，你我各得 1000 万 Tokens（叠加平台新人礼包最高可得 2000 万）；首购下单即可返实付金额 5%！立即体验： https://longcat.chat/platform/product?inviteCode=EOMQYYGE 邀"
         }
       ],
       "models": [],
@@ -4212,7 +4885,7 @@
       "signup": {
         "status": 200,
         "ok": true,
-        "ms": 3652,
+        "ms": 2868,
         "attempts": 1
       },
       "mirrors": [],

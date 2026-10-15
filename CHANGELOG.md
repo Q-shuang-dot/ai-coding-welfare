@@ -8,6 +8,30 @@ AI 福利站 · Claude Code / Codex 免费额度白嫖导航的自动变动记�
 
 ## 2026-10-15
 
+- ➕ 年华 API 上线模型：bge-m3、bge-multilingual-gemma2、cohere/north-mini-code:free、DeepSeek-V4-Flash-0731 等 38 个 <sub>17:00 UTC</sub>
+- ➖ 年华 API 下线模型：nemotron-3.5-lightning-free、step-5-preview-free <sub>17:00 UTC</sub>
+- 🏷️ 年华 API big-pickle 价格 $75 入 / $75 出（每 1M） → $0 入 / $0 出（每 1M） <sub>17:00 UTC</sub>
+- 🏷️ 年华 API cat-jam-free 价格 $75 入 / $75 出（每 1M） → $0 入 / $0 出（每 1M） <sub>17:00 UTC</sub>
+- 🏷️ 年华 API deepseek-v4.1-flash-free 价格 $75 入 / $75 出（每 1M） → $2 入 / $8 出（每 1M） <sub>17:00 UTC</sub>
+- 🏷️ 年华 API gpt-5-5-mini 价格 $75 入 / $600 出（每 1M） → $0 入 / $0 出（每 1M） <sub>17:00 UTC</sub>
+- 🏷️ 年华 API gpt-5.1-codex 价格 $75 入 / $450 出（每 1M） → $1.25 入 / $10 出（每 1M） <sub>17:00 UTC</sub>
+- 🏷️ 年华 API gpt-5.2-2025-12-11 价格 $75 入 / $450 出（每 1M） → $1.75 入 / $14 出（每 1M） <sub>17:00 UTC</sub>
+- 🏷️ 年华 API gpt-5.2-chat-latest 价格 $75 入 / $450 出（每 1M） → $1.75 入 / $14 出（每 1M） <sub>17:00 UTC</sub>
+- 🏷️ 年华 API gpt-5.2-pro 价格 $75 入 / $450 出（每 1M） → $21 入 / $168 出（每 1M） <sub>17:00 UTC</sub>
+- 🏷️ 年华 API gpt-5.2-pro-2025-12-11 价格 $75 入 / $450 出（每 1M） → $21 入 / $168 出（每 1M） <sub>17:00 UTC</sub>
+- 🏷️ 年华 API gpt-5.4-2026-03-05 价格 $75 入 / $450 出（每 1M） → $2.5 入 / $15 出（每 1M） <sub>17:00 UTC</sub>
+- 🏷️ 年华 API longcat-2.5-preview-free 价格 $75 入 / $75 出（每 1M） → $0 入 / $0 出（每 1M） <sub>17:00 UTC</sub>
+- 🏷️ 年华 API mimo-v2.6-flash-free 价格 $75 入 / $75 出（每 1M） → $1 入 / $2 出（每 1M） <sub>17:00 UTC</sub>
+- 🏷️ 年华 API muse-spark-1.2-contributor-free 价格 $75 入 / $75 出（每 1M） → $0 入 / $0 出（每 1M） <sub>17:00 UTC</sub>
+- 🏷️ 年华 API muse-spark-1.3-contributor-free 价格 $75 入 / $75 出（每 1M） → $0 入 / $0 出（每 1M） <sub>17:00 UTC</sub>
+- 🏷️ 年华 API space-bunny-free 价格 $75 入 / $75 出（每 1M） → $0 入 / $0 出（每 1M） <sub>17:00 UTC</sub>
+- ➕ Orbelis 上线模型：claude-opus-4-6-thinking、claude-opus-5-5-high、claude-sonnet-4-5、claude-sonnet-5-5-high 等 11 个 <sub>17:00 UTC</sub>
+- ➖ Orbelis 下线模型：deepseek-v4-flash <sub>17:00 UTC</sub>
+- 📢 Orbelis 发了公告：目前GPT的情况除了官Key和官转以外都不建议使用 <sub>17:00 UTC</sub>
+- 📢 Orbelis 发了公告：渠道名字和API密钥有点散乱，所以已经全部更新整理 <sub>17:00 UTC</sub>
+- 📢 Orbelis 发了公告：试用订阅用户分组请选择专用的试用分组 <sub>17:00 UTC</sub>
+- 📢 Orbelis 发了公告：充值有USDT卡网和链动小铺卡网俩种 建议走USDT卡网没有充值手续费截止9月31日前 兑换比例为1：7 相当于你充值10USDT仅需要67就可以获取70U的额度 <sub>17:00 UTC</sub>
+- 📢 新疆幻城网安 发了公告：step-5-preview限时补充用量，并且限时免费调用（200k上下文以内0元调用） <sub>17:00 UTC</sub>
 - ➕ 年华 API 上线模型：big-pickle、cat-jam-free、deepseek-v4.1-flash-free、longcat-2.5-preview-free 等 10 个 <sub>11:28 UTC</sub>
 - ➖ Orbelis 下线模型：gpt-5.5 <sub>11:28 UTC</sub>
 - 📢 新疆幻城网安 发了公告：小程序名字：《重生之这一世我要好好学人工智能》直接微信搜索然后进去答题，获取兑换码权限，获取兑换码，然后就可以在我站钱包界面填写兑换码兑换额度，一天能答题十次，十次能换一万余额，现阶段正处于内测阶段，有问题大家及时反馈 <sub>11:28 UTC</sub>
