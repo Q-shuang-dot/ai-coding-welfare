@@ -243,6 +243,86 @@
       ]
     },
     {
+      "id": "orbelis",
+      "name": "Orbelis",
+      "subtitle": "New API 定制版中转站 · 117 模型 / 47 分组，国产英伟达分组 0.0001 倍率、gptfree 0.04，AFF 双方各得 1U，主站禁止大陆直连需自备代理",
+      "recommended": false,
+      "credits": {
+        "signup": null,
+        "invite": 1,
+        "dailyCheckin": null,
+        "approx": false,
+        "unit": "site-usd"
+      },
+      "signupUrl": "https://nova.vcrauo.com/sign-up?aff=0hvb",
+      "inviteCode": "0hvb",
+      "homeUrl": "https://nova.vcrauo.com",
+      "docsUrl": "https://nova.vcrauo.com/docs",
+      "statusApi": "https://nova.vcrauo.com/api/status",
+      "pricingApi": "https://nova.vcrauo.com/api/pricing",
+      "mirrors": [],
+      "tags": [
+        "New API",
+        "中转站",
+        "免费额度",
+        "每日签到",
+        "Claude Code",
+        "Codex",
+        "Anthropic 兼容",
+        "OpenAI 兼容",
+        "需代理"
+      ],
+      "highlights": [
+        "⚠ 主站面板禁止 CN / HK / MO / TW 直连：国内 IP 打开 nova.vcrauo.com 一律拿到 403 unsupported_region（注册页 / docs / 面板都一样），注册必须自备非受限地区代理；但站方另外挂了两条只跑 API 的线路 —— api.vcrauo.lat（直连无加速）与 fast.vcrauo.lat（三网优化加速大带宽），国内 IP 直连请求返回的是 401 Invalid token 而不是 403 区域拦截（2026-10-15 实测），所以是「注册要代理、调用不必」",
+        "模型阵容大：/api/pricing 免登录可读，2026-10-15 返回 117 个模型、47 个计价分组。Claude 侧 claude-opus-5 / opus-5-5 / opus-4-8 / opus-4-7 / opus-4-6 / sonnet-5 / sonnet-5-5 / sonnet-4-6 / haiku-4-5 / fable-5 / fable-5.1 全在架，GPT 侧 gpt-6-sol / gpt-6.1-sol / gpt-6-astra / gpt-5.6-sol / gpt-5.6-terra / gpt-5.5(-pro) / gpt-5.3-codex，另有 grok-4.7（含 build-fast）、kimi-k3、deepseek-v4-pro、glm-5.3-prime、qwen3.8-max，以及 gemini 生图、grok 视频、minimax-h3 / seedance2.5 视频等 24 个按次计费的多模态模型",
+        "分组里有一批 0.1 倍率以下的福利组：国产英伟达免费分组 0.0001、gptfree 节点 0.04（只支持 gpt-5.5）、Codex 福利节点一 / 二渠道各 0.05、Jev 官 key 0.05、国产福利渠道 0.05（仅 deepseek）、Grok 福利节点 0.06、Claude 稳定节点 0.09、Codex 高速节点一 / 二各 0.1，另有站方 2026-09-23 公告的「不降智分组」（公告写 0.24 倍率）与 Pro 不降智高缓分组 0.2",
+        "注册福利：公告写明「使用 AFF 注册双方各得 1U 额度」，进站方的 QQ / TG / DC 通知群还能再领一次 10U 试用周卡（「试用卡仅可使用试用分组」，同一 ID 仅限一次）；邀请返利是被邀请人充值后前 20 笔金额的 5%，可提现或一键划转",
+        "每日签到开着（checkin_enabled = true），充值优惠改成了抽奖转盘（recharge_lottery_enabled = true）；三个通知群每满 300 / 500 人抽奖，奖品是 1 / 2 / 5 / 10 / 20U 兑换券",
+        "三套协议都在架：/v1/chat/completions、/v1/messages（13 个模型支持 Anthropic 原生端点）、/v1/responses 匿名请求都返回 401 而不是 404（2026-10-15 实测），Claude Code / Codex CLI / Cline 都能对接；面板还给了 Cherry Studio / CC Switch / AionUI / DeepChat 等客户端的跳转配置"
+      ],
+      "endpoints": {
+        "anthropic": "https://fast.vcrauo.lat",
+        "openai": "https://fast.vcrauo.lat/v1"
+      },
+      "modelsNote": "定价接口免登录可读（GET /api/pricing，2026-10-15 返回 117 个模型、47 个计价分组），本页不逐条搬模型表，只记要点：Claude 侧有 claude-opus-5 / opus-5-5 / opus-4-8 / opus-4-7 / opus-4-6、claude-sonnet-5 / sonnet-5-5 / sonnet-4-6 / sonnet-4-5、claude-haiku-4-5、claude-fable-5 / fable-5.1（13 个支持 Anthropic 原生端点）；GPT 侧有 gpt-6-sol / gpt-6.1-sol / gpt-6-astra / gpt-5.6-sol / gpt-5.6-terra / gpt-5.5(-pro) / gpt-5.4(-pro/-nano) / gpt-5.3-codex / gpt-5.2(-pro) / gpt-image-2 系；Grok 侧有 grok-4.7(-build-fast) / 4.6 / 4.5 / 4.3 / 4.20 与 grok-imagine 生图生视频；另有 Gemini 图像预览系、kimi-k3 / k2.7-code / k2.6 / k2.5、deepseek-v4-pro / v4-flash / v4.1-flash、glm-5.3(-prime/-flash) / 5.2 / 5.1、qwen3.8-max(-0902) / qwen3.7-max / plus、minimax-h3 与 seedance2.5 视频系。其中 24 个模型是按次计费（model_price > 0），实际价格 = 模型倍率 × 分组倍率，以控制台「模型价格 / 分组倍率」页为准。",
+      "register": {
+        "methods": [
+          "邮箱 + 密码（公告称仅 QQ 邮箱）",
+          "GitHub OAuth",
+          "LinuxDO OAuth"
+        ],
+        "requirements": [
+          "务必从本页邀请链接进入注册（带 ?aff=0hvb），公告写明「使用 AFF 注册双方各得 1U 额度」",
+          "只有三种注册方式：QQ 邮箱 + 密码、GitHub OAuth、LinuxDO OAuth（公告 id 1 原话「注册仅支持QQ邮箱 / 注册仅支持GitHub / 注册仅支持Linuxdo」），Discord / Telegram / 微信 / OIDC / Passkey 的开关全是关的",
+          "⚠ 国内 IP 直连打不开注册页：主站对 CN / HK / MO / TW 一律返回 403 unsupported_region，必须自备非受限地区代理；站方 FAQ 建议用 V2Ray，用 Clash 要开虚拟网卡（原文「如无法使用一般都是代理软件实际出口 IP 为以上地区」）",
+          "注册要过 Cloudflare Turnstile 人机校验（turnstile_check = true），邮箱验证也开着（email_verification = true）",
+          "别刷小号：公告写明「不要自邀请小号，平台有 IP + 浏览器指纹和设备指纹风控 + 人工审核」"
+        ]
+      },
+      "earnMore": [
+        "每日签到领随机额度（面板已开启），登录后台点一下；充值优惠也改成了抽奖转盘",
+        "进站方 QQ（1085125870）/ TG / DC 通知群领一次 10U 试用周卡（公告写明「试用卡仅可使用试用分组」）",
+        "邀请返利：被邀请人充值后，前 20 笔充值金额的 5% 可提现或一键划转",
+        "三个通知群每满 300 / 500 人抽一次奖，奖品是 1 / 2 / 5 / 10 / 20U 兑换券，同一账号只计一次",
+        "充值走 USDT 卡网（无手续费）或链动小铺，公告写过兑换比例 1 : 7、10 USDT ≈ 70U 额度"
+      ],
+      "caveats": [
+        "⚠ 主站面板禁止 CN / HK / MO / TW 直连（403 unsupported_region）：注册、看文档、改令牌、签到都要走代理；只有两条 API 线路（api.vcrauo.lat / fast.vcrauo.lat）对国内 IP 放行，所以本页示例配置里的 Base URL 用的是 fast.vcrauo.lat，不是主站域名 —— 你如果本来就有代理，把域名换回 nova.vcrauo.com 也一样用",
+        "站内「U」不是美元口径：面板 price = 1（¥1 ≈ 站内 1U），与多数站「¥7.3 ≈ $1」差 7 倍，公告里的充值比例也是 1 : 7 —— 本页按站内单位登记、不并入美元合计，一切以控制台实时倍率为准",
+        "公告自己说 Codex 两个福利渠道是「Pro5X 的 team 轮转车，封号很快，自动补号速度跟不上的，稳定性只能说没封之前很稳定，封的时候很炸」，追求稳定要用 0.1 倍率以上的分组",
+        "gpt-6 与 Grok 有风控降智（公告原话「目前 gpt6 存在和 Grok 类似的风控降智情况」），站方还警告「不要对 gpt6 进行频繁测活以及其他蒸馏行为，多次发现干扰号池智商水平的账号会禁用该模型权限」",
+        "国产英伟达免费分组（0.0001 倍率）站方自评「垃圾英伟达渠道，可用性看脸」；另一个 0.01 的英伟达福利分组公告写明「不允许探测，机器人扫描探测就会封号」，别拿探测脚本扫它",
+        "站点很新：面板 start_time 显示 2026-10-14、fork 版本 orbelis-20261007，而公告历史最早到 2026-07-25 —— 中途换过面板 / 迁移过，规则与稳定性都还在变，自己评估风险",
+        "上游是第三方号池聚合（CCMAX / kiro / Pro20X / 官 key 等渠道混排），同一模型的实际质量随分组走，别当稳定生产通道用；额度与倍率随公告调整，以控制台实时公示为准"
+      ],
+      "community": [
+        "QQ通知群: 1085125870",
+        "TG通知群: https://t.me/+BjepRc4vnEY1YWNl",
+        "DC通知群: https://discord.gg/awqKu3wStA",
+        "文档: https://nova.vcrauo.com/docs（国内需代理）"
+      ]
+    },
+    {
       "id": "supxh",
       "name": "肖恩AI",
       "subtitle": "免费大模型API · 注册送5000额度，每日签到1000~3000，邀请双方各得2000",

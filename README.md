@@ -3,16 +3,17 @@
 <p align="center">免费额度 · 白嫖 Claude Code / Codex / Cursor 的中转与公益站合集 · 每日签到领福利</p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/%E6%94%B6%E5%BD%95%E7%A6%8F%E5%88%A9%E7%AB%99-10%20%E4%B8%AA-blue" alt="收录福利站">
-  <img src="https://img.shields.io/badge/%E5%9C%A8%E7%BA%BF-10%2F10-brightgreen" alt="在线">
+  <img src="https://img.shields.io/badge/%E6%94%B6%E5%BD%95%E7%A6%8F%E5%88%A9%E7%AB%99-11%20%E4%B8%AA-blue" alt="收录福利站">
+  <img src="https://img.shields.io/badge/%E5%9C%A8%E7%BA%BF-11%2F11-brightgreen" alt="在线">
   <img src="https://img.shields.io/badge/%E9%A6%96%E6%97%A5%E5%8F%AF%E5%BE%97-%E6%9C%80%E9%AB%98%20%24175-success" alt="首日可得">
-  <img src="https://img.shields.io/badge/%E6%95%B0%E6%8D%AE%E6%9B%B4%E6%96%B0-2026--10--14%2021.41%20UTC-informational" alt="数据更新">
+  <img src="https://img.shields.io/badge/%E6%95%B0%E6%8D%AE%E6%9B%B4%E6%96%B0-2026--10--15%2003.05%20UTC-informational" alt="数据更新">
 </p>
 
 <p align="center">
   <a href="https://agentrouter.org/register?aff=aibw"><b>AgentRouter 注册</b></a> ·
   <a href="https://docode.cc/register?aff=1Qof"><b>DoCode 注册</b></a> ·
   <a href="https://us-3.nianhuaapi.com/sign-up?aff=aonj"><b>年华 API 注册</b></a> ·
+  <a href="https://nova.vcrauo.com/sign-up?aff=0hvb"><b>Orbelis 注册</b></a> ·
   <a href="https://free.supxh.xin/register?code=MVU8GX"><b>肖恩AI 注册</b></a> ·
   <a href="https://api456.me/register?aff=zmza"><b>api456.me 注册</b></a> ·
   <a href="https://api.justwoker.icu/register?aff=OIWh"><b>JustDoWork 注册</b></a> ·
@@ -30,9 +31,10 @@
 
 | 站点 | 状态 | 首日可得 | 额度构成 | 之后每天 | 兼容协议 | 模型 | 注册 | 邀请码 |
 | :-- | :--: | :--: | :-- | :--: | :--: | :--: | :--: | :--: |
-| **AgentRouter** 🔥 | 🟢 在线 | **$175** | 注册 $100 + 本页邀请 $50 + 首签 $25 | $25/天 | Anthropic + OpenAI | 需登录查看 | <a href="https://agentrouter.org/register?aff=aibw" target="_blank" rel="noopener">点此注册 →</a> | — |
+| **AgentRouter** 🔥 | 🟢 在线 | **$175** | 注册 $100 + 本页邀请 $50 + 首签 $25 | $25/天 | Anthropic + OpenAI | 4 个可查 | <a href="https://agentrouter.org/register?aff=aibw" target="_blank" rel="noopener">点此注册 →</a> | — |
 | **DoCode** | 🟢 在线 | **300 站内刀** | 注册 50 站内刀 + 本页邀请 250 站内刀 | 无签到 | Anthropic + OpenAI | 需登录查看 | <a href="https://docode.cc/register?aff=1Qof" target="_blank" rel="noopener">点此注册 →</a> | `1Qof` |
 | **年华 API** | 🟢 在线 | 站内公示 | — | 支持签到 | Anthropic + OpenAI | 97 个可查 | <a href="https://us-3.nianhuaapi.com/sign-up?aff=aonj" target="_blank" rel="noopener">点此注册 →</a> | `aonj` |
+| **Orbelis** | 🟢 在线 | **1 站内刀** | 本页邀请 1 站内刀 | 支持签到 | Anthropic + OpenAI | 117 个可查 | <a href="https://nova.vcrauo.com/sign-up?aff=0hvb" target="_blank" rel="noopener">点此注册 →</a> | `0hvb` |
 | **肖恩AI** | 🟢 在线 | **≈14000 积分** | 注册 7000 积分 + 本页邀请 5000 积分 + 首签 ≈2000 积分 | ≈2000 积分/天 | Anthropic + OpenAI | 需登录查看 | <a href="https://free.supxh.xin/register?code=MVU8GX" target="_blank" rel="noopener">点此注册 →</a> | `MVU8GX` |
 | **api456.me** | 🟢 在线 | **$50** | 注册 $20 + 本页邀请 $20 + 首签 $10 | $10/天 | OpenAI | 需登录查看 | <a href="https://api456.me/register?aff=zmza" target="_blank" rel="noopener">点此注册 →</a> | `zmza` |
 | **JustDoWork** | 🟢 在线 | 站内公示 | — | 支持签到 | Anthropic + OpenAI | 需登录查看 | <a href="https://api.justwoker.icu/register?aff=OIWh" target="_blank" rel="noopener">GitHub 注册 →</a> | `OIWh` |
@@ -41,11 +43,11 @@
 | **Long的AI** | 🟢 在线 | 免费 | 白嫖分组免费 | 无签到 | Anthropic + OpenAI | 需登录查看 | <a href="https://aaawinn.xyz/sign-up?aff=ijFL" target="_blank" rel="noopener">GitHub 注册 →</a> | `ijFL` |
 | **新疆幻城网安** | 🟢 在线 | **30000 站内刀** | 注册 30000 站内刀 | 支持签到 | Anthropic + OpenAI | 需登录查看 | <a href="https://api.hcnsec.cn/sign-up?aff=3J8z" target="_blank" rel="noopener">点此注册 →</a> | `3J8z` |
 
-> 「首日可得」= 注册基础额度 + 本页邀请链接额度 + 当天能领的签到额度（每日重置额度池的站点按一天的池子算）；模型、价格、在线状态由脚本抓取站点公开接口自动生成，最后更新：`2026-10-14 21:41 UTC`。
+> 「首日可得」= 注册基础额度 + 本页邀请链接额度 + 当天能领的签到额度（每日重置额度池的站点按一天的池子算）；模型、价格、在线状态由脚本抓取站点公开接口自动生成，最后更新：`2026-10-15 03:05 UTC`。
 >
-> 「邀请码」列写了码的站（DoCode `1Qof`、年华 API `aonj`、肖恩AI `MVU8GX`、api456.me `zmza`、JustDoWork `OIWh`、SeekAi `dDJy`、Long的AI `ijFL`、新疆幻城网安 `3J8z`），注册表单里有一栏要**自己填**，漏填就只拿得到注册基础额度、事后补不上；其余站写 — 是因为邀请额度由链接自带，不用手打。
+> 「邀请码」列写了码的站（DoCode `1Qof`、年华 API `aonj`、Orbelis `0hvb`、肖恩AI `MVU8GX`、api456.me `zmza`、JustDoWork `OIWh`、SeekAi `dDJy`、Long的AI `ijFL`、新疆幻城网安 `3J8z`），注册表单里有一栏要**自己填**，漏填就只拿得到注册基础额度、事后补不上；其余站写 — 是因为邀请额度由链接自带，不用手打。
 >
-> 5 个按美元计价、且还收新用户的站全注册一遍，第一天手上大约有 **$225** 额度可用；DoCode 另发 300 站内刀，肖恩AI 另发 ≈14000 积分，Matrix 另发 2600 积分，Long的AI 另发 免费，新疆幻城网安 另发 30000 站内刀，都是各站自己的计价单位、与美元没有公开换算，未计入这个合计。
+> 5 个按美元计价、且还收新用户的站全注册一遍，第一天手上大约有 **$225** 额度可用；DoCode 另发 300 站内刀，Orbelis 另发 1 站内刀，肖恩AI 另发 ≈14000 积分，Matrix 另发 2600 积分，Long的AI 另发 免费，新疆幻城网安 另发 30000 站内刀，都是各站自己的计价单位、与美元没有公开换算，未计入这个合计。
 >
 > 🟡 有 1 个站点已超过 48 小时没抓到接口数据，其明细为上一次成功抓取的快照；在线状态按注册页实际可访问性判断。
 
@@ -84,19 +86,32 @@ powershell -ExecutionPolicy Bypass -File scripts/quickstart.ps1
 **能拿多少额度**
 
 - 注册即送：**$100**
-- 从本页邀请链接注册额外：**$50**
+- 从本页邀请链接注册额外：**$50**（站点接口实测一致）
 - 每日签到：**$25/天**（长期续命的关键）
 - 首日合计：**$175**　（注册 $100 + 本页邀请 $50 + 首签 $25）
 
 **实时数据**（自动抓取站点公开接口）
 
-- 接口延迟：316 ms
+- 站点名称：**Agent Router**
+- 面板版本：`init-20261009-3d8bb4d7`
+- 邀请他人可得：**$50**
+- 登录方式：GitHub / LinuxDO
+- 接口延迟：1808 ms
 
 **镜像 / 备用入口**
 
 - 大陆备用域名：<https://ps.air-outer.com> · <a href="https://ps.air-outer.com/register?aff=szt3" target="_blank" rel="noopener">从备用域名注册</a>
 
-> 该站模型清单需登录后台查看，注册后在「模型价格」页确认。
+**当前可用模型**
+
+| 模型 | 倍率 | 输入 / 1M tokens | 输出 / 1M tokens | 协议 |
+| :-- | :--: | :--: | :--: | :--: |
+| `claude-opus-4-8` | 4 | $8 | $40 | anthropic / openai |
+| `claude-opus-5` | 4 | $8 | $40 | anthropic / openai |
+| `deepseek-v4-flash` | 2 | $4 | $12 | openai / anthropic |
+| `gpt-6-astra` | 3 | $6 | $30 | openai |
+
+<sub>倍率 1 ≈ $2 / 1M tokens，输出价 = 倍率 × 补全倍率 × $2；以站内实时价格为准。</sub>
 
 **注册要求**
 
@@ -111,7 +126,7 @@ powershell -ExecutionPolicy Bypass -File scripts/quickstart.ps1
 # macOS / Linux
 export ANTHROPIC_BASE_URL=https://agentrouter.org
 export ANTHROPIC_AUTH_TOKEN=你在站点后台创建的 Key
-export ANTHROPIC_MODEL=<登录后台查看可用模型名>
+export ANTHROPIC_MODEL=claude-opus-5
 npm install -g @anthropic-ai/claude-code@latest && claude
 ```
 
@@ -119,7 +134,7 @@ npm install -g @anthropic-ai/claude-code@latest && claude
 # Windows PowerShell
 $env:ANTHROPIC_BASE_URL = "https://agentrouter.org"
 $env:ANTHROPIC_AUTH_TOKEN = "你在站点后台创建的 Key"
-$env:ANTHROPIC_MODEL = "<登录后台查看可用模型名>"
+$env:ANTHROPIC_MODEL = "claude-opus-5"
 claude
 ```
 
@@ -128,7 +143,7 @@ claude
 <details><summary><b>Codex CLI</b>（OpenAI 兼容，写入 <code>~/.codex/config.toml</code>）</summary>
 
 ```toml
-model = "<登录后台查看可用模型名>"
+model = "gpt-6-astra"
 model_provider = "agentrouter"
 
 [model_providers.agentrouter]
@@ -146,7 +161,7 @@ wire_api = "chat"
 from openai import OpenAI
 
 client = OpenAI(api_key="你的 Key", base_url="https://agentrouter.org/v1")
-resp = client.chat.completions.create(model="<登录后台查看可用模型名>", messages=[{"role": "user", "content": "ping"}])
+resp = client.chat.completions.create(model="gpt-6-astra", messages=[{"role": "user", "content": "ping"}])
 print(resp.choices[0].message.content)
 ```
 
@@ -159,7 +174,7 @@ print(resp.choices[0].message.content)
 ```bash
 curl -s https://agentrouter.org/v1/chat/completions \
   -H "Authorization: Bearer $KEY" -H "Content-Type: application/json" \
-  -d '{"model":"<登录后台查看可用模型名>","messages":[{"role":"user","content":"只回复 OK"}]}'
+  -d '{"model":"gpt-6-astra","messages":[{"role":"user","content":"只回复 OK"}]}'
 ```
 
 </details>
@@ -181,6 +196,14 @@ curl -s https://agentrouter.org/v1/chat/completions \
 - Discord: https://discord.gg/aYq5B4RW3
 - X: https://x.com/AgentRouter_0
 - 邮箱: agent_router_org@163.com
+
+<details><summary><b>站点最新公告</b>（自动同步）</summary>
+
+- `2026-08-28` 为保障服务长期运行，Claude 和 GPT 模型已调整为限量供应，每日分批次发放，用完即止。新的投放时间为🕙北京时间10:00和19:00（对应UTC时间02:00和11:00），请大家注意时间变更，避免跑空。🕙 额度用完后会报错“402 Budget pool quota has been exhausted.”，等待下一批或切换至 DeepSeek / GLM 即可继续使用。
+- `2026-07-28` 📢 备用域名正式上线 为进一步提升服务可用性，本站现已推出备用域名：🔗 https://ps.air-outer.com 访问不了原域名的中国大陆用户可使用此域名，备用域名支持 API 接口调用 与 官网访问，与原域名功能完全一致。 原域名 https://agentrouter.org 可继续使用。
+- `2026-07-16` 🎁 官方社区平台汇总 欢迎加入或关注以下官方渠道，获取最新动态与支持： 📱 QQ 群（会定期清人，没进多试几次） · 1群：1054950616 · 2群：1091388133 · 3群：700583832 💬 Discord（有中文交流频道） https://discord.gg/HgekCyHJqB 🐦 X（Twitter） https://x.com/AgentRouter_0
+
+</details>
 
 ---
 
@@ -211,7 +234,7 @@ curl -s https://agentrouter.org/v1/chat/completions \
 - 每日签到：❌
 - 开放注册：✅
 - 登录方式：账号密码
-- 接口延迟：796 ms
+- 接口延迟：1041 ms
 
 **镜像 / 备用入口**
 
@@ -305,9 +328,9 @@ curl -s https://docode.cc/v1/chat/completions \
 
 <details><summary><b>站点最新公告</b>（自动同步）</summary>
 
+- `2026-10-15` 生图功能暂时不可用，原因为 OpenAI 官方协议变更。 预计这两天修复好
 - `2026-10-09` gpt 全系已大幅下调倍率，gptpro 最低 7 倍，不降智最低 15 倍，官 key 最低 24 倍。
 - `2026-10-04` 最近上线模型：gpt-6.1-sol、claude-opus-5-5、claude-sonnet-5-5
-- `2026-09-22` 中秋节活动预告：中秋节当天凡是 vip500，赠送 1500 额度；vip1000，赠送 3000 额度，；vip2000，赠送 5000 额度。中秋节三天，充值加赠 5-20%。
 
 </details>
 
@@ -331,11 +354,11 @@ curl -s https://docode.cc/v1/chat/completions \
 **实时数据**（自动抓取站点公开接口）
 
 - 站点名称：**年华 API 中转站**
-- 面板版本：`1.0.0-rc.22-nianhua-bba9838`
+- 面板版本：`1.0.0-rc.22-nianhua-bba9838-payguard-20261015`
 - 每日签到：✅
 - 开放注册：✅
 - 登录方式：账号密码
-- 接口延迟：938 ms
+- 接口延迟：1117 ms
 
 **当前可用模型**
 
@@ -544,6 +567,263 @@ curl -s https://us-3.nianhuaapi.com/v1/chat/completions \
 
 ---
 
+### 🟢 Orbelis
+
+> New API 定制版中转站 · 117 模型 / 47 分组，国产英伟达分组 0.0001 倍率、gptfree 0.04，AFF 双方各得 1U，主站禁止大陆直连需自备代理
+
+<a href="https://nova.vcrauo.com/sign-up?aff=0hvb" target="_blank" rel="noopener"><img src="https://img.shields.io/badge/%E7%AB%8B%E5%8D%B3%E6%B3%A8%E5%86%8C-Orbelis-brightgreen?style=for-the-badge" alt="注册 Orbelis"></a>
+
+**为什么值得注册**
+
+- ⚠ 主站面板禁止 CN / HK / MO / TW 直连：国内 IP 打开 nova.vcrauo.com 一律拿到 403 unsupported_region（注册页 / docs / 面板都一样），注册必须自备非受限地区代理；但站方另外挂了两条只跑 API 的线路 —— api.vcrauo.lat（直连无加速）与 fast.vcrauo.lat（三网优化加速大带宽），国内 IP 直连请求返回的是 401 Invalid token 而不是 403 区域拦截（2026-10-15 实测），所以是「注册要代理、调用不必」
+- 模型阵容大：/api/pricing 免登录可读，2026-10-15 返回 117 个模型、47 个计价分组。Claude 侧 claude-opus-5 / opus-5-5 / opus-4-8 / opus-4-7 / opus-4-6 / sonnet-5 / sonnet-5-5 / sonnet-4-6 / haiku-4-5 / fable-5 / fable-5.1 全在架，GPT 侧 gpt-6-sol / gpt-6.1-sol / gpt-6-astra / gpt-5.6-sol / gpt-5.6-terra / gpt-5.5(-pro) / gpt-5.3-codex，另有 grok-4.7（含 build-fast）、kimi-k3、deepseek-v4-pro、glm-5.3-prime、qwen3.8-max，以及 gemini 生图、grok 视频、minimax-h3 / seedance2.5 视频等 24 个按次计费的多模态模型
+- 分组里有一批 0.1 倍率以下的福利组：国产英伟达免费分组 0.0001、gptfree 节点 0.04（只支持 gpt-5.5）、Codex 福利节点一 / 二渠道各 0.05、Jev 官 key 0.05、国产福利渠道 0.05（仅 deepseek）、Grok 福利节点 0.06、Claude 稳定节点 0.09、Codex 高速节点一 / 二各 0.1，另有站方 2026-09-23 公告的「不降智分组」（公告写 0.24 倍率）与 Pro 不降智高缓分组 0.2
+- 注册福利：公告写明「使用 AFF 注册双方各得 1U 额度」，进站方的 QQ / TG / DC 通知群还能再领一次 10U 试用周卡（「试用卡仅可使用试用分组」，同一 ID 仅限一次）；邀请返利是被邀请人充值后前 20 笔金额的 5%，可提现或一键划转
+- 每日签到开着（checkin_enabled = true），充值优惠改成了抽奖转盘（recharge_lottery_enabled = true）；三个通知群每满 300 / 500 人抽奖，奖品是 1 / 2 / 5 / 10 / 20U 兑换券
+- 三套协议都在架：/v1/chat/completions、/v1/messages（13 个模型支持 Anthropic 原生端点）、/v1/responses 匿名请求都返回 401 而不是 404（2026-10-15 实测），Claude Code / Codex CLI / Cline 都能对接；面板还给了 Cherry Studio / CC Switch / AionUI / DeepChat 等客户端的跳转配置
+
+**能拿多少额度**
+
+- 从本页邀请链接注册额外：**1 站内刀**
+- 首日合计：**1 站内刀**
+
+**实时数据**（自动抓取站点公开接口）
+
+- 站点名称：**Orbelis**
+- 面板版本：`v1.0.0-rc.41`
+- 每日签到：✅
+- 开放注册：✅
+- 登录方式：GitHub / LinuxDO / 账号密码
+- 接口延迟：1168 ms
+
+**当前可用模型**
+
+| 模型 | 倍率 | 输入 / 1M tokens | 输出 / 1M tokens | 协议 |
+| :-- | :--: | :--: | :--: | :--: |
+| `a-2.0-720p-v1` | 37.5 | $75 | $75 | openai |
+| `a-2.5-hs-1080p` | 37.5 | $75 | $75 | openai |
+| `Adobe-gpt-image-2` | 37.5 | $75 | $75 | image-generation / openai |
+| `Adobe-gpt-image-2.5-flare` | 37.5 | $75 | $75 | image-generation / openai |
+| `Adobe-gpt-image-2.5-sunburst` | 37.5 | $75 | $75 | image-generation / openai |
+| `Adobe-gpt-image-medium` | 37.5 | $75 | $75 | image-generation / openai |
+| `AZ-gpt-image-2` | 按次 | **$0.08 / 次** | — | image-generation / openai |
+| `AZ-gpt-image-2.5-flare` | 按次 | **$0.08 / 次** | — | image-generation / openai |
+| `AZ-gpt-image-2.5-sunburst` | 按次 | **$0.08 / 次** | — | image-generation / openai |
+| `claude-fable-5` | 5 | $10 | $50 | anthropic / openai |
+| `claude-fable-5-1` | 5 | $10 | $50 | anthropic / openai |
+| `claude-fable-5.1` | 5 | $10 | $50 | anthropic / openai |
+| `claude-haiku-4-5-20251001` | 0.5 | $1 | $5 | anthropic / openai |
+| `claude-opus-4-6` | 2.5 | $5 | $25 | anthropic / openai |
+| `claude-opus-4-7` | 2.5 | $5 | $25 | anthropic / openai |
+| `claude-opus-4-8` | 2.5 | $5 | $25 | anthropic / openai |
+| `claude-opus-5` | 2.5 | $5 | $25 | anthropic / openai |
+| `claude-opus-5-5` | 37.5 | $75 | $75 | anthropic / openai |
+| `claude-sonnet-4-5-20250929` | 1.5 | $3 | $15 | anthropic / openai |
+| `claude-sonnet-4-6` | 1.5 | $3 | $15 | anthropic / openai |
+| `claude-sonnet-5` | 1.5 | $3 | $15 | anthropic / openai |
+| `claude-sonnet-5-5` | 37.5 | $75 | $75 | anthropic / openai |
+| `codex-auto-review` | 0.1 | $0.2 | $1.2 | openai |
+| `deepseek-v4-flash` | 1.5 | $3 | $15 | openai |
+| `deepseek-v4-flash-0731` | 37.5 | $75 | $75 | openai |
+| `DeepSeek-V4-Flash[free]` | 按次 | **$0.01 / 次** | — | openai |
+| `deepseek-v4-pro` | 1.5 | $3 | $15 | openai |
+| `deepseek-v4-pro-0813` | 37.5 | $75 | $75 | openai |
+| `deepseek-v4.1-flash` | 0.5 | $1 | $4 | openai |
+| `deepseek/deepseek-v4-flash-0731:free` | 0.5 | $1 | $4 | openai |
+| `gemini-2.5-flash-image` | 按次 | **$0.08 / 次** | — | gemini / openai |
+| `gemini-3-pro-image-preview` | 按次 | **$0.12 / 次** | — | gemini / openai |
+| `gemini-3.1-flash-image-preview` | 按次 | **$0.08 / 次** | — | gemini / openai |
+| `glm-5.1` | 37.5 | $75 | $75 | openai |
+| `glm-5.2` | 4 | $8 | $28 | openai |
+| `glm-5.2-fast-preview` | 8 | $16 | $56 | openai |
+| `glm-5.3` | 4 | $8 | $28 | openai |
+| `glm-5.3-flash` | 0.4 | $0.8 | $2.8 | openai |
+| `glm-5.3-prime` | 1.4 | $2.8 | $8.8 | openai |
+| `google/gemma-4-31b-it` | 按次 | **$0.01 / 次** | — | openai |
+| `gpt-4.1` | 37.5 | $75 | $150 | openai |
+| `gpt-4.1-mini` | 37.5 | $75 | $150 | openai |
+| `gpt-4o` | 37.5 | $75 | $300 | openai |
+| `gpt-4o-mini` | 37.5 | $75 | $300 | openai |
+| `gpt-5.2` | 37.5 | $75 | $450 | openai |
+| `gpt-5.2-pro` | 37.5 | $75 | $450 | openai |
+| `gpt-5.3-codex` | 37.5 | $75 | $450 | openai |
+| `gpt-5.4` | 1.25 | $2.5 | $15 | openai |
+| `gpt-5.4-nano` | 37.5 | $75 | $468.75 | openai |
+| `gpt-5.4-pro` | 37.5 | $75 | $450 | openai |
+| `gpt-5.5` | 2.5 | $5 | $30 | openai |
+| `gpt-5.5-pro` | 37.5 | $75 | $450 | openai |
+| `gpt-5.6-sol` | 2.5 | $5 | $30 | openai |
+| `gpt-5.6-terra` | 1.25 | $2.5 | $15 | openai |
+| `gpt-6-astra` | 5 | $10 | $50 | openai |
+| `gpt-6-sol` | 1 | $2 | $10 | openai |
+| `gpt-6.1-sol` | 37.5 | $75 | $150 | openai |
+| `gpt-image-2` | 37.5 | $75 | $150 | image-generation / openai |
+| `gpt-image-2.5-flare` | 37.5 | $75 | $150 | image-generation / openai |
+| `gpt-image-2.5-sunburst` | 37.5 | $75 | $150 | image-generation / openai |
+| `grok-4.20-0309-non-reasoning` | 0.625 | $1.25 | $2.5 | openai / openai-response |
+| `grok-4.20-0309-reasoning` | 0.625 | $1.25 | $2.5 | openai / openai-response |
+| `grok-4.3` | 0.625 | $1.25 | $2.5 | openai / openai-response |
+| `grok-4.5` | 1 | $2 | $6 | openai / openai-response |
+| `grok-4.6` | 1 | $2 | $6 | openai / openai-response |
+| `grok-4.7` | 37.5 | $75 | $75 | openai / openai-response |
+| `grok-4.7-build-fast` | 37.5 | $75 | $75 | openai / openai-response |
+| `grok-build-0.1` | 0.5 | $1 | $2 | openai / openai-response |
+| `grok-imagine` | 按次 | **$0.12 / 次** | — | openai / openai-response |
+| `grok-imagine-image` | 按次 | **$0.12 / 次** | — | openai / openai-response |
+| `grok-imagine-image-2.0` | 37.5 | $75 | $75 | openai / openai-response |
+| `grok-imagine-image-quality` | 按次 | **$0.12 / 次** | — | openai / openai-response |
+| `grok-imagine-video` | 按次 | **$0.85 / 次** | — | openai |
+| `grok-imagine-video-1.5` | 按次 | **$0.85 / 次** | — | openai |
+| `grok-imagine-video-1.5-preview` | 37.5 | $75 | $75 | openai |
+| `jimeng-seedance-2.5-480` | 37.5 | $75 | $75 | openai |
+| `jimeng-seedance-2.5-720` | 37.5 | $75 | $75 | openai |
+| `kimi-k2.5` | 2 | $4 | $21 | openai |
+| `kimi-k2.6` | 3.25 | $6.5 | $27 | openai |
+| `kimi-k2.7-code` | 3.25 | $6.5 | $27 | openai |
+| `kimi-k3` | 10 | $20 | $100 | openai |
+| `minimax-h3-comic-768p` | 37.5 | $75 | $75 | openai |
+| `minimax-h3-comic-cf-2k` | 37.5 | $75 | $75 | openai |
+| `minimax-h3-comic-cf-4k` | 按次 | **$1 / 次** | — | openai |
+| `minimax-h3-original-1080p` | 按次 | **$0.23 / 次** | — | openai |
+| `minimax-h3-original-768p` | 按次 | **$0.2 / 次** | — | openai |
+| `minimax-h3-original-cf-2k` | 37.5 | $75 | $75 | openai |
+| `minimax-h3-original-cf-4k` | 37.5 | $75 | $75 | openai |
+| `minimax-h3-quantized-768p` | 37.5 | $75 | $75 | openai |
+| `minimax/minimax-m3:free` | 按次 | **$0.01 / 次** | — | openai |
+| `qwen-8b` | 按次 | **$0.01 / 次** | — | openai |
+| `qwen/qwen3.8-27b:free` | 按次 | **$0.01 / 次** | — | openai |
+| `qwen3.6-flash` | 0.6 | $1.2 | $7.2 | openai |
+| `qwen3.7-flash` | 0.1 | $0.2 | $0.8 | openai |
+| `qwen3.7-max` | 3 | $6 | $18 | openai |
+| `qwen3.7-plus` | 0.8 | $1.6 | $6.4 | openai |
+| `qwen3.8-flash` | 0.4 | $0.8 | $2.7 | openai |
+| `qwen3.8-max` | 6 | $12 | $36 | openai |
+| `qwen3.8-max-0902` | 6 | $12 | $36 | openai |
+| `sd-2.5-M-720p-v3` | 37.5 | $75 | $75 | openai |
+| `seedance-2.5-pro-720p` | 37.5 | $75 | $75 | openai |
+| `seedance2.0` | 按次 | **$3.5 / 次** | — | openai |
+| `seedance2.0fast` | 按次 | **$3 / 次** | — | openai |
+| `seedance2.0mini` | 按次 | **$3 / 次** | — | openai |
+| `seedance2.5` | 按次 | **$4 / 次** | — | openai |
+| `sh-2.5-720p` | 37.5 | $75 | $75 | openai |
+| `x-2.5-1080p` | 37.5 | $75 | $75 | openai |
+| `x-2.5-480p` | 37.5 | $75 | $75 | openai |
+| `x-2.5-720p` | 37.5 | $75 | $75 | openai |
+| `xin-seedance-2.0-fast` | 37.5 | $75 | $75 | openai |
+| `xinghe-2.0s` | 37.5 | $75 | $75 | openai |
+| `xinyao-2.0-720p-TJ` | 37.5 | $75 | $75 | openai |
+| `xj-2.0-m-480p` | 37.5 | $75 | $75 | openai |
+| `xj-2.0-m-720p` | 37.5 | $75 | $75 | openai |
+| `xx-2.0-t-720p` | 37.5 | $75 | $75 | openai |
+| `xx-2.0-t-720p-v1` | 37.5 | $75 | $75 | openai |
+| `z-ai/glm-5.2:free` | 按次 | **$0.01 / 次** | — | openai |
+
+<sub>标「按次」的模型按请求次数计费，与 tokens 用量无关；其余倍率 1 ≈ $2 / 1M tokens。以站内实时价格为准。</sub>
+
+**注册要求**
+
+- 务必从本页邀请链接进入注册（带 ?aff=0hvb），公告写明「使用 AFF 注册双方各得 1U 额度」
+- 只有三种注册方式：QQ 邮箱 + 密码、GitHub OAuth、LinuxDO OAuth（公告 id 1 原话「注册仅支持QQ邮箱 / 注册仅支持GitHub / 注册仅支持Linuxdo」），Discord / Telegram / 微信 / OIDC / Passkey 的开关全是关的
+- ⚠ 国内 IP 直连打不开注册页：主站对 CN / HK / MO / TW 一律返回 403 unsupported_region，必须自备非受限地区代理；站方 FAQ 建议用 V2Ray，用 Clash 要开虚拟网卡（原文「如无法使用一般都是代理软件实际出口 IP 为以上地区」）
+- 注册要过 Cloudflare Turnstile 人机校验（turnstile_check = true），邮箱验证也开着（email_verification = true）
+- 别刷小号：公告写明「不要自邀请小号，平台有 IP + 浏览器指纹和设备指纹风控 + 人工审核」
+
+**接入配置**
+
+<details open><summary><b>Claude Code</b>（Anthropic 兼容，Base URL 不带 <code>/v1</code>）</summary>
+
+```bash
+# macOS / Linux
+export ANTHROPIC_BASE_URL=https://fast.vcrauo.lat
+export ANTHROPIC_AUTH_TOKEN=你在站点后台创建的 Key
+export ANTHROPIC_MODEL=claude-opus-5-5
+npm install -g @anthropic-ai/claude-code@latest && claude
+```
+
+```powershell
+# Windows PowerShell
+$env:ANTHROPIC_BASE_URL = "https://fast.vcrauo.lat"
+$env:ANTHROPIC_AUTH_TOKEN = "你在站点后台创建的 Key"
+$env:ANTHROPIC_MODEL = "claude-opus-5-5"
+claude
+```
+
+</details>
+
+<details><summary><b>Codex CLI</b>（OpenAI 兼容，写入 <code>~/.codex/config.toml</code>）</summary>
+
+```toml
+model = "qwen-8b"
+model_provider = "orbelis"
+
+[model_providers.orbelis]
+name = "Orbelis"
+base_url = "https://fast.vcrauo.lat/v1"
+env_key = "ORBELIS_API_KEY"
+wire_api = "chat"
+```
+
+</details>
+
+<details><summary><b>OpenAI SDK / Cherry Studio / Cursor 等通用客户端</b></summary>
+
+```python
+from openai import OpenAI
+
+client = OpenAI(api_key="你的 Key", base_url="https://fast.vcrauo.lat/v1")
+resp = client.chat.completions.create(model="qwen-8b", messages=[{"role": "user", "content": "ping"}])
+print(resp.choices[0].message.content)
+```
+
+通用客户端只需填两项：**Base URL** = `https://fast.vcrauo.lat/v1`，**API Key** = 站点后台创建的 Key。
+
+</details>
+
+<details><summary><b>连通性自测</b></summary>
+
+```bash
+curl -s https://fast.vcrauo.lat/v1/chat/completions \
+  -H "Authorization: Bearer $KEY" -H "Content-Type: application/json" \
+  -d '{"model":"qwen-8b","messages":[{"role":"user","content":"只回复 OK"}]}'
+```
+
+</details>
+
+**如何继续拿额度**
+
+- 每日签到领随机额度（面板已开启），登录后台点一下；充值优惠也改成了抽奖转盘
+- 进站方 QQ（1085125870）/ TG / DC 通知群领一次 10U 试用周卡（公告写明「试用卡仅可使用试用分组」）
+- 邀请返利：被邀请人充值后，前 20 笔充值金额的 5% 可提现或一键划转
+- 三个通知群每满 300 / 500 人抽一次奖，奖品是 1 / 2 / 5 / 10 / 20U 兑换券，同一账号只计一次
+- 充值走 USDT 卡网（无手续费）或链动小铺，公告写过兑换比例 1 : 7、10 USDT ≈ 70U 额度
+
+**⚠️ 使用前必读**
+
+- ⚠ 主站面板禁止 CN / HK / MO / TW 直连（403 unsupported_region）：注册、看文档、改令牌、签到都要走代理；只有两条 API 线路（api.vcrauo.lat / fast.vcrauo.lat）对国内 IP 放行，所以本页示例配置里的 Base URL 用的是 fast.vcrauo.lat，不是主站域名 —— 你如果本来就有代理，把域名换回 nova.vcrauo.com 也一样用
+- 站内「U」不是美元口径：面板 price = 1（¥1 ≈ 站内 1U），与多数站「¥7.3 ≈ $1」差 7 倍，公告里的充值比例也是 1 : 7 —— 本页按站内单位登记、不并入美元合计，一切以控制台实时倍率为准
+- 公告自己说 Codex 两个福利渠道是「Pro5X 的 team 轮转车，封号很快，自动补号速度跟不上的，稳定性只能说没封之前很稳定，封的时候很炸」，追求稳定要用 0.1 倍率以上的分组
+- gpt-6 与 Grok 有风控降智（公告原话「目前 gpt6 存在和 Grok 类似的风控降智情况」），站方还警告「不要对 gpt6 进行频繁测活以及其他蒸馏行为，多次发现干扰号池智商水平的账号会禁用该模型权限」
+- 国产英伟达免费分组（0.0001 倍率）站方自评「垃圾英伟达渠道，可用性看脸」；另一个 0.01 的英伟达福利分组公告写明「不允许探测，机器人扫描探测就会封号」，别拿探测脚本扫它
+- 站点很新：面板 start_time 显示 2026-10-14、fork 版本 orbelis-20261007，而公告历史最早到 2026-07-25 —— 中途换过面板 / 迁移过，规则与稳定性都还在变，自己评估风险
+- 上游是第三方号池聚合（CCMAX / kiro / Pro20X / 官 key 等渠道混排），同一模型的实际质量随分组走，别当稳定生产通道用；额度与倍率随公告调整，以控制台实时公示为准
+
+**官方渠道**
+
+- QQ通知群: 1085125870
+- TG通知群: https://t.me/+BjepRc4vnEY1YWNl
+- DC通知群: https://discord.gg/awqKu3wStA
+- 文档: https://nova.vcrauo.com/docs（国内需代理）
+
+<details><summary><b>站点最新公告</b>（自动同步）</summary>
+
+- `2026-09-29` codex俩个福利渠道是Pro5X的team轮转车，封号很快，自动补号速度跟不上的，稳定性只能说没封之前很稳定，封的时候很炸
+- `2026-09-29` 渠道名字有点乱，已经重新整理，如发现无法使用请重新更新渠道分组
+- `2026-09-27` 已上线AZ生图分组1/2/4K统一8分 已上线豆包视频/minimax-h3视频/grok视频
+
+</details>
+
+---
+
 ### 🟢 肖恩AI
 
 > 免费大模型API · 注册送5000额度，每日签到1000~3000，邀请双方各得2000
@@ -567,7 +847,7 @@ curl -s https://us-3.nianhuaapi.com/v1/chat/completions \
 
 **实时数据**（自动抓取站点公开接口）
 
-- 接口延迟：1260 ms
+- 接口延迟：1573 ms
 
 > 2026-09-20 公开定价页返回 191 个模型，含 stepfun、deepseek-v4.1-flash、gpt-5.5、gemini-2.5-flash、claude-sonnet-4-6、kimi-k2.5 等。注意返回里同时混有大量免费与付费条目，模型可用性与倍率以控制台为准。
 
@@ -676,7 +956,7 @@ curl -s https://free.supxh.xin/v1/chat/completions \
 
 - 站点名称：**可萌中转站**
 - 每日签到：✅
-- 接口延迟：1606 ms
+- 接口延迟：841 ms
 
 > 模型清单与价格需登录后在控制台查看（/api/pricing 匿名请求需登录），本页不列模型表。
 
@@ -769,7 +1049,7 @@ curl -s https://api456.me/v1/chat/completions \
 - 开放注册：✅（站点关掉了邮箱密码注册，得用 GitHub 登录建号（防批量注册的常规做法）。）
 - 登录方式：GitHub / 账号密码
 - GitHub 账号需满 **365 天**
-- 接口延迟：1656 ms
+- 接口延迟：842 ms
 
 > 模型定价页需要登录（/api/pricing 匿名请求返回 401，面板 pricing.requireAuth = true），本页不列模型表。实测主力是 gpt-5.6 系（gpt-5.6-luna / sol / terra），每次请求会带约 2000 tokens 的固定隐藏提示词；完整清单与倍率请登录控制台「定价」页确认。
 
@@ -876,7 +1156,7 @@ curl -s https://api.justwoker.icu/v1/chat/completions \
 
 **实时数据**（自动抓取站点公开接口）
 
-- 接口延迟：2532 ms
+- 接口延迟：417 ms
 
 > 模型清单与价格需登录后在控制台「模型列表」查看（按每百万 Tokens 计价，可按厂商 / 上下文窗口筛选），站点没有公开的模型与定价接口，本页不做承诺。
 
@@ -940,7 +1220,7 @@ curl -s https://api.justwoker.icu/v1/chat/completions \
 - 每日签到：✅
 - 开放注册：✅
 - 登录方式：GitHub / Telegram / 账号密码
-- 接口延迟：2198 ms
+- 接口延迟：975 ms
 
 **镜像 / 备用入口**
 
@@ -1039,7 +1319,7 @@ curl -s https://seekai.cc/v1/chat/completions \
 - 每日签到：❌
 - 开放注册：✅（站点关掉了邮箱密码注册，得用 GitHub 登录建号（防批量注册的常规做法）。）
 - 登录方式：GitHub
-- 接口延迟：2213 ms
+- 接口延迟：1112 ms
 
 > 站点的模型价格接口不公开（/api/pricing 匿名请求返回 401，要登录管理页才看得到），白嫖分组的模型来源公示在 https://aaawinn.xyz/public-pool；站方公告提到白嫖分组的 GPT 系模型只支持 Anthropic 协议对接，OpenAI 协议有兼容问题。
 
@@ -1163,13 +1443,13 @@ curl -s https://aaawinn.xyz/v1/chat/completions \
 
 **实时数据**（自动抓取站点公开接口）
 
-- ⚠ 接口已连续 128 小时没抓到新数据，下列信息为 `2026-10-09 13:16 UTC` 的快照
+- ⚠ 接口已连续 134 小时没抓到新数据，下列信息为 `2026-10-09 13:16 UTC` 的快照
 - 站点名称：**新疆幻城网安科技公益大模型安全网关**
 - 面板版本：`v1.0.0-rc.40-hc2`
 - 每日签到：✅
 - 开放注册：✅
 - 登录方式：Passkey / 账号密码
-- 接口延迟：6097 ms
+- 接口延迟：529 ms
 
 > 模型价格页需要登录（/api/pricing 匿名请求返回 401），不过站内公告里的名字可以直接抄：Qwen3.8-Flash-Next（0 元一次）、DeepSeek-V4.1-Flash 系（付费分组约 2 元一次，vision-exp 版本免费用户可用）、longcat-2.0（一次 1 元）、glm-5.3-flash、qwen3.8-27b、step 系、spark-x2.5、Qwen3.6-35B-A3B，站方还开源了 SparkMuse-4B 与 Qing-Sec-20B，均可在 ModelScope 搜到（hcnote/SparkMuse-4B）。
 
@@ -1275,18 +1555,18 @@ curl -s https://api.hcnsec.cn/v1/chat/completions \
 
 ## 🔔 额度变了，这里会通知你
 
-CI 每 6 小时抓一次各站接口，与上一次快照逐字段比对，目前已攒下 79 个样本、覆盖约 22.6 天。额度调整、掉线与恢复、模型上下线、价格变动都会自动记一条：
+CI 每 6 小时抓一次各站接口，与上一次快照逐字段比对，目前已攒下 80 个样本、覆盖约 22.8 天。额度调整、掉线与恢复、模型上下线、价格变动都会自动记一条：
 
 - 点仓库右上角 **Watch → Custom → Releases**：有重要变动时 GitHub 直接发邮件
 
 最近几条：
 
-- `2026-10-14` ➕ 年华 API 上线模型：gemini-3.7-flash、gemini-3.8-flash、gemini-4-argon
-- `2026-10-13` 📢 新疆幻城网安 发了公告：活动链接：https://zcode.z.ai/invite/JEGSSGVA 下载绑定glm账号，即可领取三亿token，具体大家自己看吧
-- `2026-10-13` ➕ 年华 API 上线模型：gpt-5.1-codex、gpt-5.3-codex
-- `2026-10-12` ➕ 年华 API 上线模型：gpt-reserve
-- `2026-10-11` 📢 新疆幻城网安 发了公告：We are excited to announce that our platform now supports Waffo Pancake to facilitate international payments for our overseas users. To make
-- `2026-10-11` 📢 新疆幻城网安 发了公告：针对此前按次计费规则中"小请求也按次扣费、性价比不高"的问题，我们本周将对计费方式进行调整：降低小额请求的费用，同时提高超长上下文请求的扣费标准。具体细则请查看各模型的详情页，欢迎大家关注。
+- `2026-10-15` ➕ AgentRouter 上线模型：claude-opus-4-8、claude-opus-5、deepseek-v4-flash、gpt-6-astra
+- `2026-10-15` 📢 AgentRouter 发了公告：为保障服务长期运行，Claude 和 GPT 模型已调整为限量供应，每日分批次发放，用完即止。新的投放时间为🕙北京时间10:00和19:00（对应UTC时间02:00和11:00），请大家注意时间变更，避免跑空。🕙 额度用完后会报错“402 Budget pool quota
+- `2026-10-15` 📢 AgentRouter 发了公告：📢 备用域名正式上线 为进一步提升服务可用性，本站现已推出备用域名：🔗 https://ps.air-outer.com 访问不了原域名的中国大陆用户可使用此域名，备用域名支持 API 接口调用 与 官网访问，与原域名功能完全一致。 原域名 https://agentrout
+- `2026-10-15` 📢 AgentRouter 发了公告：🎁 官方社区平台汇总 欢迎加入或关注以下官方渠道，获取最新动态与支持： 📱 QQ 群（会定期清人，没进多试几次） · 1群：1054950616 · 2群：1091388133 · 3群：700583832 💬 Discord（有中文交流频道） https://discor
+- `2026-10-15` 📢 AgentRouter 发了公告：📢 不当使用行为封禁说明 为维护服务公平，平台禁止以下不当行为： · 批量注册/获取额度 · 自动化刷量套利 · 转售、共享账号及额度 · 虚假邀请欺诈 · 恶意绕过限制、干扰服务 违规账号将封禁，名单见 Discord 🚫blocked-history 频道。 申诉请联系：
+- `2026-10-15` 📢 AgentRouter 发了公告：因受到恶意举报影响，近期服务稳定性遇到巨大挑战，导致Claude系列模型大规模停用。 为保障后续提升服务质量、及时同步信息，我们已启用新的官方 Discord，并在新的官方X更新动态。 为避免走失，请大家有序移步： 新的 Discord： 👉 https://discord.g
 
 完整记录见 [CHANGELOG.md](CHANGELOG.md)。
 
