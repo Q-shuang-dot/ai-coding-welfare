@@ -8,6 +8,9 @@ AI 福利站 · Claude Code / Codex 免费额度白嫖导航的自动变动记�
 
 ## 2026-10-15
 
+- ➕ 年华 API 上线模型：big-pickle、cat-jam-free、deepseek-v4.1-flash-free、longcat-2.5-preview-free 等 10 个 <sub>11:28 UTC</sub>
+- ➖ Orbelis 下线模型：gpt-5.5 <sub>11:28 UTC</sub>
+- 📢 新疆幻城网安 发了公告：小程序名字：《重生之这一世我要好好学人工智能》直接微信搜索然后进去答题，获取兑换码权限，获取兑换码，然后就可以在我站钱包界面填写兑换码兑换额度，一天能答题十次，十次能换一万余额，现阶段正处于内测阶段，有问题大家及时反馈 <sub>11:28 UTC</sub>
 - ➕ AgentRouter 上线模型：claude-opus-4-8、claude-opus-5、deepseek-v4-flash、gpt-6-astra <sub>03:05 UTC</sub>
 - 📢 AgentRouter 发了公告：为保障服务长期运行，Claude 和 GPT 模型已调整为限量供应，每日分批次发放，用完即止。新的投放时间为🕙北京时间10:00和19:00（对应UTC时间02:00和11:00），请大家注意时间变更，避免跑空。🕙 额度用完后会报错“402 Budget pool quota <sub>03:05 UTC</sub>
 - 📢 AgentRouter 发了公告：📢 备用域名正式上线 为进一步提升服务可用性，本站现已推出备用域名：🔗 https://ps.air-outer.com 访问不了原域名的中国大陆用户可使用此域名，备用域名支持 API 接口调用 与 官网访问，与原域名功能完全一致。 原域名 https://agentrout <sub>03:05 UTC</sub>

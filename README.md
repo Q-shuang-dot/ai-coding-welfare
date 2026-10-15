@@ -6,7 +6,7 @@
   <img src="https://img.shields.io/badge/%E6%94%B6%E5%BD%95%E7%A6%8F%E5%88%A9%E7%AB%99-11%20%E4%B8%AA-blue" alt="收录福利站">
   <img src="https://img.shields.io/badge/%E5%9C%A8%E7%BA%BF-11%2F11-brightgreen" alt="在线">
   <img src="https://img.shields.io/badge/%E9%A6%96%E6%97%A5%E5%8F%AF%E5%BE%97-%E6%9C%80%E9%AB%98%20%24175-success" alt="首日可得">
-  <img src="https://img.shields.io/badge/%E6%95%B0%E6%8D%AE%E6%9B%B4%E6%96%B0-2026--10--15%2004.38%20UTC-informational" alt="数据更新">
+  <img src="https://img.shields.io/badge/%E6%95%B0%E6%8D%AE%E6%9B%B4%E6%96%B0-2026--10--15%2011.28%20UTC-informational" alt="数据更新">
 </p>
 
 <p align="center">
@@ -33,8 +33,8 @@
 | :-- | :--: | :--: | :-- | :--: | :--: | :--: | :--: | :--: |
 | **AgentRouter** 🔥 | 🟢 在线 | **$175** | 注册 $100 + 本页邀请 $50 + 首签 $25 | $25/天 | Anthropic + OpenAI | 4 个可查 | <a href="https://agentrouter.org/register?aff=aibw" target="_blank" rel="noopener">点此注册 →</a> | — |
 | **DoCode** | 🟢 在线 | **300 站内刀** | 注册 50 站内刀 + 本页邀请 250 站内刀 | 无签到 | Anthropic + OpenAI | 需登录查看 | <a href="https://docode.cc/register?aff=1Qof" target="_blank" rel="noopener">点此注册 →</a> | `1Qof` |
-| **年华 API** | 🟢 在线 | 站内公示 | — | 支持签到 | Anthropic + OpenAI | 97 个可查 | <a href="https://us-3.nianhuaapi.com/sign-up?aff=aonj" target="_blank" rel="noopener">点此注册 →</a> | `aonj` |
-| **Orbelis** | 🟢 在线 | **1 站内刀** | 本页邀请 1 站内刀 | 支持签到 | Anthropic + OpenAI | 117 个可查 | <a href="https://nova.vcrauo.com/sign-up?aff=0hvb" target="_blank" rel="noopener">点此注册 →</a> | `0hvb` |
+| **年华 API** | 🟢 在线 | 站内公示 | — | 支持签到 | Anthropic + OpenAI | 107 个可查 | <a href="https://us-3.nianhuaapi.com/sign-up?aff=aonj" target="_blank" rel="noopener">点此注册 →</a> | `aonj` |
+| **Orbelis** | 🟢 在线 | **1 站内刀** | 本页邀请 1 站内刀 | 支持签到 | Anthropic + OpenAI | 116 个可查 | <a href="https://nova.vcrauo.com/sign-up?aff=0hvb" target="_blank" rel="noopener">点此注册 →</a> | `0hvb` |
 | **肖恩AI** | 🟢 在线 | **≈14000 积分** | 注册 7000 积分 + 本页邀请 5000 积分 + 首签 ≈2000 积分 | ≈2000 积分/天 | Anthropic + OpenAI | 需登录查看 | <a href="https://free.supxh.xin/register?code=MVU8GX" target="_blank" rel="noopener">点此注册 →</a> | `MVU8GX` |
 | **api456.me** | 🟢 在线 | **$50** | 注册 $20 + 本页邀请 $20 + 首签 $10 | $10/天 | OpenAI | 需登录查看 | <a href="https://api456.me/register?aff=zmza" target="_blank" rel="noopener">点此注册 →</a> | `zmza` |
 | **JustDoWork** | 🟢 在线 | 站内公示 | — | 支持签到 | Anthropic + OpenAI | 需登录查看 | <a href="https://api.justwoker.icu/register?aff=OIWh" target="_blank" rel="noopener">GitHub 注册 →</a> | `OIWh` |
@@ -43,7 +43,7 @@
 | **Long的AI** | 🟢 在线 | 免费 | 白嫖分组免费 | 无签到 | Anthropic + OpenAI | 需登录查看 | <a href="https://aaawinn.xyz/sign-up?aff=ijFL" target="_blank" rel="noopener">GitHub 注册 →</a> | `ijFL` |
 | **新疆幻城网安** | 🟢 在线 | **30000 站内刀** | 注册 30000 站内刀 | 支持签到 | Anthropic + OpenAI | 需登录查看 | <a href="https://api.hcnsec.cn/sign-up?aff=3J8z" target="_blank" rel="noopener">点此注册 →</a> | `3J8z` |
 
-> 「首日可得」= 注册基础额度 + 本页邀请链接额度 + 当天能领的签到额度（每日重置额度池的站点按一天的池子算）；模型、价格、在线状态由脚本抓取站点公开接口自动生成，最后更新：`2026-10-15 04:38 UTC`。
+> 「首日可得」= 注册基础额度 + 本页邀请链接额度 + 当天能领的签到额度（每日重置额度池的站点按一天的池子算）；模型、价格、在线状态由脚本抓取站点公开接口自动生成，最后更新：`2026-10-15 11:28 UTC`。
 >
 > 「邀请码」列写了码的站（DoCode `1Qof`、年华 API `aonj`、Orbelis `0hvb`、肖恩AI `MVU8GX`、api456.me `zmza`、JustDoWork `OIWh`、SeekAi `dDJy`、Long的AI `ijFL`、新疆幻城网安 `3J8z`），注册表单里有一栏要**自己填**，漏填就只拿得到注册基础额度、事后补不上；其余站写 — 是因为邀请额度由链接自带，不用手打。
 >
@@ -96,7 +96,7 @@ powershell -ExecutionPolicy Bypass -File scripts/quickstart.ps1
 - 面板版本：`init-20261009-3d8bb4d7`
 - 邀请他人可得：**$50**
 - 登录方式：GitHub / LinuxDO
-- 接口延迟：313 ms
+- 接口延迟：226 ms
 
 **镜像 / 备用入口**
 
@@ -234,7 +234,7 @@ curl -s https://agentrouter.org/v1/chat/completions \
 - 每日签到：❌
 - 开放注册：✅
 - 登录方式：账号密码
-- 接口延迟：966 ms
+- 接口延迟：404 ms
 
 **镜像 / 备用入口**
 
@@ -358,7 +358,7 @@ curl -s https://docode.cc/v1/chat/completions \
 - 每日签到：✅
 - 开放注册：✅
 - 登录方式：账号密码
-- 接口延迟：1228 ms
+- 接口延迟：666 ms
 
 **当前可用模型**
 
@@ -366,6 +366,8 @@ curl -s https://docode.cc/v1/chat/completions \
 | :-- | :--: | :--: | :--: | :--: |
 | `agnes-1.5-flash` | 按次 | **$1 / 次** | — | openai |
 | `agnes-2.0-flash` | 按次 | **$1 / 次** | — | openai |
+| `big-pickle` | 37.5 | $75 | $75 | openai |
+| `cat-jam-free` | 37.5 | $75 | $75 | openai |
 | `claude-fable-5` | 5 | $10 | $50 | anthropic / openai |
 | `claude-fable-5-1` | 5 | $10 | $50 | anthropic / openai |
 | `claude-haiku-4-5` | 0.5 | $1 | $5 | anthropic / openai |
@@ -383,6 +385,7 @@ curl -s https://docode.cc/v1/chat/completions \
 | `claude-sonnet-5-5` | 37.5 | $75 | $75 | anthropic / openai |
 | `codex-auto-review` | 1.25 | $2.5 | $15 | openai |
 | `codex-gpt-image-2` | 按次 | **$0.3 / 次** | — | openai |
+| `deepseek-v4.1-flash-free` | 37.5 | $75 | $75 | openai |
 | `gemini-2.5-flash` | 0.15 | $0.3 | $2.5 | gemini / openai |
 | `gemini-2.5-flash-lite` | 0.05 | $0.1 | $0.4 | gemini / openai |
 | `gemini-2.5-pro` | 0.625 | $1.25 | $10 | gemini / openai |
@@ -456,11 +459,18 @@ curl -s https://docode.cc/v1/chat/completions \
 | `grok-imagine-video` | 按次 | **$6 / 次** | — | openai / openai-response |
 | `grok-imagine-video-1.5` | 按次 | **$10 / 次** | — | openai / openai-response |
 | `grok-imagine-video-1.5-preview` | 按次 | **$17.5 / 次** | — | openai / openai-response |
+| `longcat-2.5-preview-free` | 37.5 | $75 | $75 | openai |
 | `mimo-v2.5-asr` | 0.14 | $0.28 | $0.56 | openai |
 | `mimo-v2.5-tts` | 0 | $0 | $0 | openai |
 | `mimo-v2.5-tts-voiceclone` | 0 | $0 | $0 | openai |
 | `mimo-v2.5-tts-voicedesign` | 0 | $0 | $0 | openai |
+| `mimo-v2.6-flash-free` | 37.5 | $75 | $75 | openai |
+| `muse-spark-1.2-contributor-free` | 37.5 | $75 | $75 | openai |
+| `muse-spark-1.3-contributor-free` | 37.5 | $75 | $75 | openai |
 | `nano-banana-2` | 按次 | **$0.3 / 次** | — | gemini / openai |
+| `nemotron-3.5-lightning-free` | 37.5 | $75 | $75 | openai |
+| `space-bunny-free` | 37.5 | $75 | $75 | openai |
+| `step-5-preview-free` | 37.5 | $75 | $75 | openai |
 
 <sub>标「按次」的模型按请求次数计费，与 tokens 用量无关；其余倍率 1 ≈ $2 / 1M tokens。以站内实时价格为准。</sub>
 
@@ -594,7 +604,7 @@ curl -s https://us-3.nianhuaapi.com/v1/chat/completions \
 - 每日签到：✅
 - 开放注册：✅
 - 登录方式：GitHub / LinuxDO / 账号密码
-- 接口延迟：1385 ms
+- 接口延迟：747 ms
 
 **当前可用模型**
 
@@ -650,7 +660,6 @@ curl -s https://us-3.nianhuaapi.com/v1/chat/completions \
 | `gpt-5.4` | 1.25 | $2.5 | $15 | openai |
 | `gpt-5.4-nano` | 37.5 | $75 | $468.75 | openai |
 | `gpt-5.4-pro` | 37.5 | $75 | $450 | openai |
-| `gpt-5.5` | 2.5 | $5 | $30 | openai |
 | `gpt-5.5-pro` | 37.5 | $75 | $450 | openai |
 | `gpt-5.6-sol` | 2.5 | $5 | $30 | openai |
 | `gpt-5.6-terra` | 1.25 | $2.5 | $15 | openai |
@@ -847,7 +856,7 @@ curl -s https://fast.vcrauo.lat/v1/chat/completions \
 
 **实时数据**（自动抓取站点公开接口）
 
-- 接口延迟：1661 ms
+- 接口延迟：884 ms
 
 > 2026-09-20 公开定价页返回 191 个模型，含 stepfun、deepseek-v4.1-flash、gpt-5.5、gemini-2.5-flash、claude-sonnet-4-6、kimi-k2.5 等。注意返回里同时混有大量免费与付费条目，模型可用性与倍率以控制台为准。
 
@@ -956,7 +965,7 @@ curl -s https://free.supxh.xin/v1/chat/completions \
 
 - 站点名称：**可萌中转站**
 - 每日签到：✅
-- 接口延迟：1946 ms
+- 接口延迟：875 ms
 
 > 模型清单与价格需登录后在控制台查看（/api/pricing 匿名请求需登录），本页不列模型表。
 
@@ -1049,7 +1058,7 @@ curl -s https://api456.me/v1/chat/completions \
 - 开放注册：✅（站点关掉了邮箱密码注册，得用 GitHub 登录建号（防批量注册的常规做法）。）
 - 登录方式：GitHub / 账号密码
 - GitHub 账号需满 **365 天**
-- 接口延迟：1899 ms
+- 接口延迟：795 ms
 
 > 模型定价页需要登录（/api/pricing 匿名请求返回 401，面板 pricing.requireAuth = true），本页不列模型表。实测主力是 gpt-5.6 系（gpt-5.6-luna / sol / terra），每次请求会带约 2000 tokens 的固定隐藏提示词；完整清单与倍率请登录控制台「定价」页确认。
 
@@ -1156,7 +1165,7 @@ curl -s https://api.justwoker.icu/v1/chat/completions \
 
 **实时数据**（自动抓取站点公开接口）
 
-- 接口延迟：2816 ms
+- 接口延迟：1578 ms
 
 > 模型清单与价格需登录后在控制台「模型列表」查看（按每百万 Tokens 计价，可按厂商 / 上下文窗口筛选），站点没有公开的模型与定价接口，本页不做承诺。
 
@@ -1220,7 +1229,7 @@ curl -s https://api.justwoker.icu/v1/chat/completions \
 - 每日签到：✅
 - 开放注册：✅
 - 登录方式：GitHub / Telegram / 账号密码
-- 接口延迟：2400 ms
+- 接口延迟：1052 ms
 
 **镜像 / 备用入口**
 
@@ -1319,7 +1328,7 @@ curl -s https://seekai.cc/v1/chat/completions \
 - 每日签到：❌
 - 开放注册：✅（站点关掉了邮箱密码注册，得用 GitHub 登录建号（防批量注册的常规做法）。）
 - 登录方式：GitHub
-- 接口延迟：2498 ms
+- 接口延迟：1016 ms
 
 > 站点的模型价格接口不公开（/api/pricing 匿名请求返回 401，要登录管理页才看得到），白嫖分组的模型来源公示在 https://aaawinn.xyz/public-pool；站方公告提到白嫖分组的 GPT 系模型只支持 Anthropic 协议对接，OpenAI 协议有兼容问题。
 
@@ -1443,13 +1452,13 @@ curl -s https://aaawinn.xyz/v1/chat/completions \
 
 **实时数据**（自动抓取站点公开接口）
 
-- ⚠ 接口已连续 135 小时没抓到新数据，下列信息为 `2026-10-09 13:16 UTC` 的快照
+- ⚠ 接口已连续 142 小时没抓到新数据，下列信息为 `2026-10-09 13:16 UTC` 的快照
 - 站点名称：**新疆幻城网安科技公益大模型安全网关**
 - 面板版本：`v1.0.0-rc.40-hc2`
 - 每日签到：✅
 - 开放注册：✅
 - 登录方式：Passkey / 账号密码
-- 接口延迟：4704 ms
+- 接口延迟：2962 ms
 
 > 模型价格页需要登录（/api/pricing 匿名请求返回 401），不过站内公告里的名字可以直接抄：Qwen3.8-Flash-Next（0 元一次）、DeepSeek-V4.1-Flash 系（付费分组约 2 元一次，vision-exp 版本免费用户可用）、longcat-2.0（一次 1 元）、glm-5.3-flash、qwen3.8-27b、step 系、spark-x2.5、Qwen3.6-35B-A3B，站方还开源了 SparkMuse-4B 与 Qing-Sec-20B，均可在 ModelScope 搜到（hcnote/SparkMuse-4B）。
 
@@ -1545,9 +1554,9 @@ curl -s https://api.hcnsec.cn/v1/chat/completions \
 
 <details><summary><b>站点最新公告</b>（自动同步）</summary>
 
+- `2026-10-15` 小程序名字：《重生之这一世我要好好学人工智能》直接微信搜索然后进去答题，获取兑换码权限，获取兑换码，然后就可以在我站钱包界面填写兑换码兑换额度，一天能答题十次，十次能换一万余额，现阶段正处于内测阶段，有问题大家及时反馈
 - `2026-10-13` 活动链接：https://zcode.z.ai/invite/JEGSSGVA 下载绑定glm账号，即可领取三亿token，具体大家自己看吧
 - `2026-10-11` We are excited to announce that our platform now supports Waffo Pancake to facilitate international payments for our overseas users. To make a purchase, simply go to your Wallet, select your desired package, and choose W
-- `2026-10-11` 针对此前按次计费规则中"小请求也按次扣费、性价比不高"的问题，我们本周将对计费方式进行调整：降低小额请求的费用，同时提高超长上下文请求的扣费标准。具体细则请查看各模型的详情页，欢迎大家关注。
 
 </details>
 
@@ -1555,18 +1564,18 @@ curl -s https://api.hcnsec.cn/v1/chat/completions \
 
 ## 🔔 额度变了，这里会通知你
 
-CI 每 6 小时抓一次各站接口，与上一次快照逐字段比对，目前已攒下 82 个样本、覆盖约 22.9 天。额度调整、掉线与恢复、模型上下线、价格变动都会自动记一条：
+CI 每 6 小时抓一次各站接口，与上一次快照逐字段比对，目前已攒下 83 个样本、覆盖约 23.2 天。额度调整、掉线与恢复、模型上下线、价格变动都会自动记一条：
 
 - 点仓库右上角 **Watch → Custom → Releases**：有重要变动时 GitHub 直接发邮件
 
 最近几条：
 
+- `2026-10-15` ➕ 年华 API 上线模型：big-pickle、cat-jam-free、deepseek-v4.1-flash-free、longcat-2.5-preview-free 等 10 个
+- `2026-10-15` ➖ Orbelis 下线模型：gpt-5.5
+- `2026-10-15` 📢 新疆幻城网安 发了公告：小程序名字：《重生之这一世我要好好学人工智能》直接微信搜索然后进去答题，获取兑换码权限，获取兑换码，然后就可以在我站钱包界面填写兑换码兑换额度，一天能答题十次，十次能换一万余额，现阶段正处于内测阶段，有问题大家及时反馈
 - `2026-10-15` ➕ AgentRouter 上线模型：claude-opus-4-8、claude-opus-5、deepseek-v4-flash、gpt-6-astra
 - `2026-10-15` 📢 AgentRouter 发了公告：为保障服务长期运行，Claude 和 GPT 模型已调整为限量供应，每日分批次发放，用完即止。新的投放时间为🕙北京时间10:00和19:00（对应UTC时间02:00和11:00），请大家注意时间变更，避免跑空。🕙 额度用完后会报错“402 Budget pool quota
 - `2026-10-15` 📢 AgentRouter 发了公告：📢 备用域名正式上线 为进一步提升服务可用性，本站现已推出备用域名：🔗 https://ps.air-outer.com 访问不了原域名的中国大陆用户可使用此域名，备用域名支持 API 接口调用 与 官网访问，与原域名功能完全一致。 原域名 https://agentrout
-- `2026-10-15` 📢 AgentRouter 发了公告：🎁 官方社区平台汇总 欢迎加入或关注以下官方渠道，获取最新动态与支持： 📱 QQ 群（会定期清人，没进多试几次） · 1群：1054950616 · 2群：1091388133 · 3群：700583832 💬 Discord（有中文交流频道） https://discor
-- `2026-10-15` 📢 AgentRouter 发了公告：📢 不当使用行为封禁说明 为维护服务公平，平台禁止以下不当行为： · 批量注册/获取额度 · 自动化刷量套利 · 转售、共享账号及额度 · 虚假邀请欺诈 · 恶意绕过限制、干扰服务 违规账号将封禁，名单见 Discord 🚫blocked-history 频道。 申诉请联系：
-- `2026-10-15` 📢 AgentRouter 发了公告：因受到恶意举报影响，近期服务稳定性遇到巨大挑战，导致Claude系列模型大规模停用。 为保障后续提升服务质量、及时同步信息，我们已启用新的官方 Discord，并在新的官方X更新动态。 为避免走失，请大家有序移步： 新的 Discord： 👉 https://discord.g
 
 完整记录见 [CHANGELOG.md](CHANGELOG.md)。
 
