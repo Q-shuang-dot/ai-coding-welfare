@@ -10,11 +10,14 @@
  *   docs/status/index.html     可用性历史
  *   docs/changelog/index.html  变动日志
  *   docs/feed.xml              Atom 订阅
+ *   README.md                  中文（主版本）
+ *   README.en.md               英文（模板全翻，站点文案取 sites.json 的 en 块）
  */
 import { readFile, writeFile, mkdir } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
 import path from 'node:path';
 import { renderReadme } from './lib/render-readme.mjs';
+import { LANGS, readmeFile } from './lib/i18n.mjs';
 import { renderHtml } from './lib/render-html.mjs';
 import { renderSitePage } from './lib/render-site-page.mjs';
 import { renderComparePage, renderStatusPage, renderChangelogPage } from './lib/render-aux-pages.mjs';
@@ -44,7 +47,12 @@ const groups = groupByDay(changelog.events ?? []);
 // 额度是手工登记的，站点改政策时不会自己变；和接口实测值对不上就提醒一声
 for (const w of auditCredits(sites, live)) console.warn(`⚠ ${w}`);
 
-await writeFile(p('README.md'), renderReadme({ meta, sites, live, groups, history }), 'utf8');
+// 每个语言产出一份 README：中文是主版本（README.md），其余是 README.<lang>.md。
+// 站点没写 en 覆盖块时对应段落会跳过、不会退化成中文，所以无翻译也照样出文件。
+for (const lang of LANGS) {
+  await writeFile(p(readmeFile(lang)), renderReadme({ meta, sites, live, groups, history, lang }), 'utf8');
+  console.log(`✔ ${readmeFile(lang)} 已生成（${sites.length} 个站点）`);
+}
 
 // 样式内联进 HTML：每一页都变成单文件，直接丢给别人打开、或转发到社群都不会掉样式
 const css = await readFile(p('docs', 'assets', 'style.css'), 'utf8');
@@ -108,5 +116,4 @@ if (/USERNAME/.test(`${meta.repoUrl}${meta.pagesUrl}`)) {
   console.warn('⚠ data/sites.json 的 meta.repoUrl / meta.pagesUrl 还是占位的 USERNAME，推到 GitHub 前记得改成你的用户名。');
 }
 
-console.log(`✔ README.md 已生成（${sites.length} 个站点）`);
 console.log(`✔ docs/ 已生成 ${urls.length} 个页面 + feed.xml + sitemap.xml`);

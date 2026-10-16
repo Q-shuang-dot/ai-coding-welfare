@@ -55,7 +55,7 @@ jobs:
           fi
           git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add README.md CHANGELOG.md docs data/live.json data/history.json data/changelog.json
+          git add README.md README.en.md CHANGELOG.md docs data/live.json data/history.json data/changelog.json
           git commit -m "chore: 自动刷新福利站数据 $(date -u '+%Y-%m-%d %H:%M UTC')"
           # 带重试地推：本次跑到一半时 main 可能已经被别人推动过（合 PR、手动推、
           # 上一轮 refresh），直接 git push 会吃 "! [rejected] (fetch first)" 然后整个

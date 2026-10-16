@@ -1,6 +1,6 @@
 # 贡献指南
 
-这个仓库只有一条铁律：**README.md 和 docs/index.html 是生成物，不要手改。**
+这个仓库只有一条铁律：**README.md / README.en.md 和 docs/index.html 是生成物，不要手改。**
 所有内容都来自 `data/sites.json`，改完跑一遍脚本即可。
 
 ## 加一个新站点
@@ -49,20 +49,42 @@
   "register": { "methods": ["GitHub OAuth"], "requirements": ["注意事项"] },
   "earnMore": ["每日签到"],
   "caveats": ["风险提示"],
-  "community": []
+  "community": [],
+
+  // 英文版（README.en.md）用这里的覆盖块。不写也能跑，只是该站在英文版里会少掉
+  // 副标题 / 卖点 / 注意事项这些段落——宁可少一段，也不把中文原文塞进英文版。
+  "en": {
+    "name": "Example",                     // 站名是中文才需要（如「年华 API」→ "NianHua API"）
+    "subtitle": "One-line pitch",
+    "highlights": ["Why sign up"],
+    "modelsNote": "Replaces the model table when the list is login-only",
+    "register": { "requirements": ["Sign up through this page's link"] },
+    "earnMore": ["Daily check-in"],
+    "caveats": ["Risk notes"],
+    "community": ["Telegram: https://t.me/example"]
+  }
 }
 ```
+
+> 镜像入口的标签如果要显示成英文，在 `mirrors` 那条上再加一个 `labelEn`（不写就显示通用的「Alternate domain」）。
 
 2. 重新生成并自检：
 
 ```bash
-npm test          # 单测：抓取失败时的合并逻辑（不联网）
+npm test          # 单测：抓取失败时的合并逻辑 + 两个 README 的渲染（不联网）
 npm run refresh   # 抓 /api/status 与 /api/pricing，写入 data/live.json
-npm run build     # 重新生成 README.md 与 docs/index.html
+npm run build     # 重新生成 README.md / README.en.md 与 docs/ 全站
 npm run check     # 确认新链接可访问
 ```
 
-3. 提交时把 `data/sites.json`、`data/live.json`、`README.md`、`docs/` 一起带上。
+3. 提交时把 `data/sites.json`、`data/live.json`、`README.md`、`README.en.md`、`docs/` 一起带上。
+
+## 文案改动要动几处
+
+界面文案（章节标题、表格表头、FAQ、免责声明、代码块注释）全在 [`scripts/lib/i18n.mjs`](scripts/lib/i18n.mjs) 的语言包里，
+`zh` 和 `en` 两份并排写。改完**两个 README 都要跑一遍 build 看效果**——中文是主版本，改动不许破坏它的输出。
+
+站点自己的文案（卖点 / 注意事项 / 模型说明）是数据，写在 `sites.json` 的顶层字段和它的 `en` 块里，两边同步改。
 
 ## 站点不是 New API 面板怎么办
 

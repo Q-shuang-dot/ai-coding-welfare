@@ -25,7 +25,21 @@
       "claude-opus-5 按次计费"
     ],
     "repoUrl": "https://github.com/Q-shuang-dot/ai-coding-welfare",
-    "pagesUrl": "https://q-shuang-dot.github.io/ai-coding-welfare/"
+    "pagesUrl": "https://q-shuang-dot.github.io/ai-coding-welfare/",
+    "titleEn": "AI Welfare Hub · Free Claude Code / Codex credit tracker",
+    "taglineEn": "Free credits · a collection of relay and community services for free Claude Code / Codex / Cursor quota · daily check-ins",
+    "keywordsEn": [
+      "free Claude Code",
+      "free Codex",
+      "Claude Code relay",
+      "Codex relay",
+      "free AI API credits",
+      "New API relay",
+      "AgentRouter",
+      "AI coding free tier",
+      "claude-opus-5 API",
+      "GPT-5.6 Sol relay"
+    ]
   },
   "sites": [
     {
@@ -48,7 +62,8 @@
         {
           "label": "大陆备用域名",
           "homeUrl": "https://ps.air-outer.com",
-          "signupUrl": "https://ps.air-outer.com/register?aff=szt3"
+          "signupUrl": "https://ps.air-outer.com/register?aff=szt3",
+          "labelEn": "Mainland China alternate domain"
         }
       ],
       "tags": [
@@ -92,7 +107,37 @@
         "Discord: https://discord.gg/aYq5B4RW3",
         "X: https://x.com/AgentRouter_0",
         "邮箱: agent_router_org@163.com"
-      ]
+      ],
+      "en": {
+        "subtitle": "AI coding community service · credit on signup, daily check-in keeps it alive",
+        "highlights": [
+          "$100 on signup, plus another $50 if you enter through this page's invite link — no top-up needed, no credit card",
+          "Daily check-in pays another $25; up to $175 total on day one, and a steady supply for long-term free use",
+          "Offers both Anthropic- and OpenAI-compatible protocols, so Claude Code / Codex / Cline / Cursor connect directly",
+          "Official docs cover a dozen-plus clients — copy the config and go"
+        ],
+        "register": {
+          "requirements": [
+            "You must sign up through this page's invite link, otherwise the invite bonus will not be credited",
+            "After signing up, log out and log back in once for the credit to appear"
+          ]
+        },
+        "earnMore": [
+          "Daily check-in for credit (log into the dashboard and click check-in)",
+          "Bind an email to join the official periodic giveaway codes",
+          "Invite others — the inviter earns credit too"
+        ],
+        "caveats": [
+          "Officially positioned as a community service: no SLA, no top-ups, and some models may be temporarily unavailable when upstream wobbles",
+          "Request content is accepted only in Chinese / English / French / German / Russian; other languages are blocked with a 400",
+          "Bulk registration, traffic farming, reselling credit and fake referrals are strictly prohibited and will get the account banned"
+        ],
+        "community": [
+          "Discord: https://discord.gg/aYq5B4RW3",
+          "X: https://x.com/AgentRouter_0",
+          "Email: agent_router_org@163.com"
+        ]
+      }
     },
     {
       "id": "docode",
@@ -116,7 +161,8 @@
         {
           "label": "直连美国",
           "homeUrl": "https://api.docode.cc",
-          "signupUrl": "https://api.docode.cc/register?aff=zMRe"
+          "signupUrl": "https://api.docode.cc/register?aff=zMRe",
+          "labelEn": "Direct to US"
         }
       ],
       "tags": [
@@ -165,7 +211,41 @@
         "站内 FAQ 公示的备用域名 ai.docode.pro / ai.docode.life 与公告里的 hk.docode.cc 目前 HTTPS 都连不上（前两个的证书只签了 docode.cc、域名对不上，hk 直接 TLS 握手失败），本页只登记实测可用的 api.docode.cc",
         "上游波动写在公告里：GPT plus「全面阵亡」后又「暂时复活」、gpt-5.4 已彻底下架、9 月 10 日还在说「openai 炸了，gpt 全线都不太行」，别当稳定生产通道用"
       ],
-      "community": []
+      "community": [],
+      "en": {
+        "subtitle": "New API relay · 50 site-dollars on signup, 250 more with invite code zMRe, 300 on day one — both Claude and GPT on the shelf",
+        "highlights": [
+          "⚠ Do not miss the invite code: type zMRe into the \"Invite code\" field of the signup form or the 250 site-dollars will not arrive. Entering through this page's link normally fills it in automatically, but check that field with your own eyes before submitting — miss it and you only get the 50 signup bonus, which cannot be added later",
+          "50 site-dollars on signup, 250 more with invite code zMRe — 300 on day one with no top-up. Note this \"dollar\" is the site's own unit, not USD; see the risk notes below",
+          "Claude and GPT are both online: announcements name cc / cc-kiro group sonnet-5 and pay-per-call opus4.6, plus GPT pro / plus, Grok, Gemini and fable-5. One key covers everything, whereas most services on this page offer only one side",
+          "Both native routes are open (anonymous probes of /v1/messages and /v1/chat/completions return New API's 401 Invalid token), so Claude Code connects directly with the Base URL and Codex CLI uses /v1",
+          "The panel's public config ships one-click deeplinks for CC Switch, Cherry Studio, DeepChat, OpenCat, Lobe Chat and more — push the key straight from the dashboard",
+          "Besides the main domain there is api.docode.cc (announcements call it \"direct to US\"); both were alive in testing, so switch over if the main site is unreachable"
+        ],
+        "modelsNote": "This service put its pricing page behind login (`/api/pricing` returns 401; its own nav config sets pricing.requireAuth = true), so this page does not list a model table. Announcements name Claude (cc / cc-kiro groups: sonnet-5 and pay-per-call opus4.6), GPT pro / plus, Grok, Gemini, fable-5, plus a separate image endpoint at img.docode.cc. Check the console's \"Pricing\" page after signing up for the full list, groups and ratios.",
+        "register": {
+          "requirements": [
+            "Invite code = zMRe. Entering through this page's link (with ?aff=zMRe) normally fills the signup form's \"Invite code\" field automatically; double-check it yourself — leaving it empty gets you only the 50 signup site-dollars",
+            "The 250 site-dollars is settled at registration. Filling the invite code in from the dashboard afterwards does nothing",
+            "Email + password only: github / linuxdo / discord / telegram / WeChat / OIDC / Passkey are all false in the public config, so there is no third-party login",
+            "Registration needs an email verification code (email_verification = true) and passes Cloudflare Turnstile",
+            "If the main domain is unreachable, switch to api.docode.cc — same account, same credit"
+          ]
+        },
+        "earnMore": [
+          "There is no site check-in (the panel reports checkin_enabled = false); credit comes from top-ups and occasional campaigns — announcements have run limited promos like \"top up 100, get 500 dollars\"",
+          "Inviting others also pays; an announcement raised the VIP referral bonus from 80 to 120 — confirm the exact figure on the dashboard's \"Invite\" page"
+        ],
+        "caveats": [
+          "The site's \"dollar\" is not USD: the public price = 0.02 is the top-up ratio, 1 CNY = 50 site-dollars (announcements say it returns to 1:25 normally), while other services on this page give ¥7.3 ≈ $1. So 300 site-dollars corresponds to only ¥6–12 of face value, and this page does not fold it into the cross-service USD total",
+          "Billing is multiplied again by group ratios: announcements put the GPT pro group at 7–14× as upstream account prices move (New API convention: ratio 1 = $2 per million tokens). At roughly 13×, 300 site-dollars is on the order of ten million input tokens, with output multiplied by the completion ratio again — not a small amount, but always defer to the console's live ratio",
+          "The credit figures (50 signup / 250 invite) are not exposed by the public API: /api/status has neither quota_for_new_user nor quota_for_invitee. This page records what the site publishes; verify in the dashboard before doing the math",
+          "There is no daily check-in, so once credit runs out you must top up or wait for a campaign — no daily top-up like AgentRouter",
+          "This is a paid relay, not a community service: online top-ups are enabled (Stripe at ¥8) and most announcements are about top-up bonuses and ratio swings. Exhausted free credit means paying to continue",
+          "The FAQ's alternate domains ai.docode.pro / ai.docode.life and the announced hk.docode.cc all fail HTTPS (the first two have certificates issued only for docode.cc and therefore mismatch; hk fails the TLS handshake outright). This page lists only the verified api.docode.cc",
+          "Upstream instability is documented in the announcements: GPT plus \"wiped out\" then \"temporarily revived\", gpt-5.4 fully delisted, and on Sept 10 they were still saying \"openai blew up, all of gpt is bad\". Do not treat it as a stable production channel"
+        ]
+      }
     },
     {
       "id": "nianhua",
@@ -240,7 +320,50 @@
         "QQ群: 1093317048（面板公告 id 1 公示的交流群）",
         "服务器监控: https://vps.makelove.cloud（页脚公示）",
         "文档: https://us-3.nianhuaapi.com/docs/"
-      ]
+      ],
+      "en": {
+        "name": "NianHua API",
+        "subtitle": "Custom New API relay · ratios publicly readable (89 models / 16 groups), random check-in rewards, a 0.05-ratio community group and multimodal models at zero per call",
+        "highlights": [
+          "All 89 models and 16 group ratios hang off the public API (/api/pricing is readable without login, measured 2026-09-24). Claude side: opus-5 / opus-5-5 / opus-4-8 / sonnet-5 / fable-5-1; GPT side: the gpt-6 and gpt-5.6 families; Grok 4.3–4.6, Gemini 3.x and the kiro group are also on the shelf",
+          "The \"community\" group has a 0.05 ratio, the cheapest pricing group on the site (11 models including gpt-5-5 / gpt-5-3 / gpt-5-mini / agnes, described in the panel as \"free for svip\"), plus 3 MiMo voice models priced at zero (mimo-v2.5-tts / -voiceclone / -voicedesign)",
+          "Daily check-in is enabled (panel checkin_enabled = true) with random credit rewards — a steady source that keeps free use alive",
+          "All four endpoints are live: /v1/chat/completions, /v1/messages, /v1/responses and /v1/images/generations return 401 rather than 404 anonymously (measured 2026-09-24). There is also a native Gemini path and /v1/embeddings, so Claude Code / Codex / Gemini CLI all work",
+          "The docs spell out the three routes: US3 is the only web frontend and the default API entry; US1 and the old master node are API-only fallbacks. \"All active nodes share account, token, balance and model permissions\", so switching routes needs no re-registration",
+          "Client setup is tabulated in the official docs: Claude Code uses https://us-3.nianhuaapi.com (Messages path /v1/messages), while Codex / Cherry Studio / Open WebUI use https://us-3.nianhuaapi.com/v1. The panel FAQ also covers one-click CC Switch import (Token page → More → CC Switch)"
+        ],
+        "modelsNote": "The pricing API is readable without login (GET /api/pricing returned 89 models and 16 groups on 2026-09-24), so this page records only the highlights rather than the whole table. Claude side: claude-opus-5 / opus-5-5 / opus-4-8 / opus-4-7 / opus-4-6, claude-sonnet-5 / 4-6, claude-haiku-4-5, claude-fable-5(-1). GPT side: gpt-6 / gpt-6-astra / gpt-6-luna / gpt-6-sol, gpt-5.6(-luna/-sol/-terra), gpt-5.5, gpt-5.4, gpt-5-3, the gpt-image-2 family. Grok side: grok-4.3 / 4.5 / 4.6 / 4.20 plus grok-imagine image and video. Gemini side: gemini-3.1-pro, gemini-3.5-flash, gemini-3-flash. Also MiMo v2.5 (including 3 zero-price voice models) and agnes-1.5 / 2.0-flash. Group ratios: community 0.05, Gemini-special 0.6, domestic 0.9, GPT 1.2, GPT-Image 1, GPT-budget 1, Anti-Claude 1, welfare 1, kiro 2, GPTPro 2.2, Gemini 3, enterprise-Pro 3.2, Grok 4.2, GPT-official 5, default 6, CCMax-external 11. Actual price = model ratio × group ratio; defer to the console's \"Model pricing / Group ratios\" page.",
+        "register": {
+          "requirements": [
+            "Sign up through this page's invite link (?aff=aonj) so the invite bonus is settled",
+            "Email + password only: GitHub / LinuxDO / Discord / Telegram / WeChat / OIDC / Passkey are all disabled in the panel, so there is no third-party login (password_register_enabled = true)",
+            "Registration needs an email verification code (email_verification = true) and passes Cloudflare Turnstile (turnstile_check = true)",
+            "This is a paid relay; signup does not require payment, but free credit is limited to check-in (random) and the community group — do not treat it as a pure community service"
+          ]
+        },
+        "earnMore": [
+          "Daily random check-in (enabled in the panel) — just click it in the dashboard",
+          "Invite others (the panel ships an Invitation Code / Invitation Quota / Invitee Reward set) — check the dashboard for the amounts",
+          "The 0.05-ratio community group is almost free and svip users ride free there; 3 zero-price MiMo voice models and the agnes family can be run for nothing too",
+          "Subscription plans and redemption codes are enabled (enable_task and a promo-code entry exist); announcements post occasional campaign prices"
+        ],
+        "caveats": [
+          "This is a paid relay, not a community service: online top-ups are on (Stripe at ¥8), the FAQ is mostly about plans and ratios, and the site's own announcements say \"removed the max group because costs are too high\" and \"cancelled the free credit for new users (could not take it)\" — free credit is only check-in and the community group",
+          "The site's \"dollar\" is not USD: panel price = 1 (about ¥1 ≈ 1 site-dollar), 7× off the ¥7.3 ≈ $1 used by most services, while the FAQ also says \"plans 0.05–0.24 CNY per USD of credit\" and \"normal users 0.8x / plan users 0.6x\" — the figures do not reconcile. This page does not fold it into the cross-service USD total; defer to the console's live ratios",
+          "The community group's GPT models are documented as \"supports web search but not tool calling\"; to run tool calling there, use the agnes family (the announcement says \"kept agnes, supports full tool calling\"). Claude Code / Codex need the kiro / CCMax / GPT groups",
+          "Hyphenated model names are the cut-down versions: the FAQ says gpt-5-5 \"only supports text chat, no images or any other calls\" while gpt-5.5 is the full model, and image2 only generates at the default resolution with only image2-max doing 4K — do not pick models by how similar the names look",
+          "The panel's auto_groups does not include \"community\": it lists GPT / GPTPro / enterprise-Pro / Grok / Gemini / kiro / CCMax / GPT-official / GPT-Image, so new tokens on auto grouping will not land there — select it manually on the token",
+          "No specific signup / check-in / invite figures are recorded here: the public API exposes neither quota_for_new_user nor quota_for_invitee, the 2026-06-03 announcement cancelled the new-user free credit and moved referral credit to the backup site api.nianhua.store (currently unreachable), and circulating numbers do not match the announcements — so we do not guess. Verify in the dashboard after signing up",
+          "The site had one data-loss incident: the 2026-05-16 announcement says \"the relay's IDC server vendor ran off and data was lost; users after #340 need to re-register, and paying users can recover credit by sending payment records in the QQ group\"",
+          "The other two routes the site publishes (US1 three-network CMI, and the old master newapi.makelove.cloud) are unreachable on the current network, and the docs themselves note \"unreachable on some Chinese networks\". This page lists only the verified US3; verify backups yourself",
+          "Both the signup page and the API sit behind Cloudflare, so datacenter IPs may be 403'd on the signup page (home broadband is fine), and registration passes Turnstile. Upstream is multi-channel aggregation (announcements say sub2api scheduling over kiro / anti pools), so actual quality varies by group — do not treat it as a stable production channel"
+        ],
+        "community": [
+          "QQ group: 1093317048 (the chat group posted in panel announcement id 1)",
+          "Server monitoring: https://vps.makelove.cloud (listed in the footer)",
+          "Docs: https://us-3.nianhuaapi.com/docs/"
+        ]
+      }
     },
     {
       "id": "orbelis",
@@ -320,7 +443,50 @@
         "TG通知群: https://t.me/+BjepRc4vnEY1YWNl",
         "DC通知群: https://discord.gg/awqKu3wStA",
         "文档: https://nova.vcrauo.com/docs（国内需代理）"
-      ]
+      ],
+      "en": {
+        "subtitle": "Custom New API relay · 117 models / 47 groups, domestic-NVIDIA group at 0.0001 ratio and gptfree at 0.04, AFF gives both sides 1U, and the main site blocks mainland direct connections so bring a proxy",
+        "highlights": [
+          "⚠ The main panel blocks direct connections from CN / HK / MO / TW: mainland IPs get 403 unsupported_region on the signup page, docs and panel alike, so registration needs a proxy in an unrestricted region. The site does run two API-only routes — api.vcrauo.lat (direct, unaccelerated) and fast.vcrauo.lat (optimized tri-network, high bandwidth) — where mainland IPs get 401 Invalid token rather than a 403 region block (measured 2026-10-15). In short: proxy to register, none needed to call",
+          "Big model lineup: /api/pricing is readable without login and returned 117 models and 47 pricing groups on 2026-10-15. Claude side has claude-opus-5 / opus-5-5 / opus-4-8 / opus-4-7 / opus-4-6 / sonnet-5 / sonnet-5-5 / sonnet-4-6 / haiku-4-5 / fable-5 / fable-5.1 all on the shelf; GPT side gpt-6-sol / gpt-6.1-sol / gpt-6-astra / gpt-5.6-sol / gpt-5.6-terra / gpt-5.5(-pro) / gpt-5.3-codex; also grok-4.7 (with build-fast), kimi-k3, deepseek-v4-pro, glm-5.3-prime, qwen3.8-max, plus 24 pay-per-call multimodal models including Gemini image, Grok video, minimax-h3 and seedance2.5 video",
+          "Several welfare groups sit below 0.1 ratio: domestic NVIDIA free group 0.0001, gptfree node 0.04 (gpt-5.5 only), Codex welfare nodes 1 and 2 at 0.05 each, Jev official key 0.05, domestic welfare channel 0.05 (DeepSeek only), Grok welfare node 0.06, Claude stable node 0.09, Codex high-speed nodes 1 and 2 at 0.1 each, plus the \"no-downgrade group\" announced 2026-09-23 (announced at 0.24) and the Pro no-downgrade high-cache group at 0.2",
+          "Signup bonus: the announcement states \"register via AFF and both sides get 1U\", and joining the site's QQ / TG / DC notification groups gets you a 10U one-week trial card (\"trial card usable only in the trial group\", one per account ID). The referral rebate is 5% of the invitee's first 20 top-ups, withdrawable or transferable in one click",
+          "Daily check-in is on (checkin_enabled = true) and top-up discounts became a lottery wheel (recharge_lottery_enabled = true); each of the three notification groups runs a draw every 300 / 500 members with 1 / 2 / 5 / 10 / 20U vouchers",
+          "All three protocols are live: /v1/chat/completions, /v1/messages (13 models support the native Anthropic endpoint) and /v1/responses return 401 rather than 404 anonymously (measured 2026-10-15), so Claude Code / Codex CLI / Cline connect. The panel also provides jump configs for Cherry Studio / CC Switch / AionUI / DeepChat"
+        ],
+        "modelsNote": "Pricing API readable without login (GET /api/pricing returned 117 models and 47 pricing groups on 2026-10-15); this page records only the highlights. Claude side: claude-opus-5 / opus-5-5 / opus-4-8 / opus-4-7 / opus-4-6, claude-sonnet-5 / sonnet-5-5 / sonnet-4-6 / sonnet-4-5, claude-haiku-4-5, claude-fable-5 / fable-5.1 (13 support the native Anthropic endpoint). GPT side: gpt-6-sol / gpt-6.1-sol / gpt-6-astra / gpt-5.6-sol / gpt-5.6-terra / gpt-5.5(-pro) / gpt-5.4(-pro/-nano) / gpt-5.3-codex / gpt-5.2(-pro) / the gpt-image-2 family. Grok side: grok-4.7(-build-fast) / 4.6 / 4.5 / 4.3 / 4.20 plus grok-imagine image and video. Also the Gemini image preview family, kimi-k3 / k2.7-code / k2.6 / k2.5, deepseek-v4-pro / v4-flash / v4.1-flash, glm-5.3(-prime/-flash) / 5.2 / 5.1, qwen3.8-max(-0902) / qwen3.7-max / plus, and minimax-h3 and seedance2.5 video. 24 models are billed per call (model_price > 0). Actual price = model ratio × group ratio; defer to the console's \"Model pricing / Group ratios\" page.",
+        "register": {
+          "requirements": [
+            "Sign up through this page's invite link (?aff=0hvb); the announcement states \"register via AFF and both sides get 1U\"",
+            "Only three signup methods: QQ email + password, GitHub OAuth and LinuxDO OAuth (announcement id 1: \"signup supports QQ email only / GitHub only / LinuxDO only\"); Discord / Telegram / WeChat / OIDC / Passkey are all disabled",
+            "⚠ The signup page is unreachable from mainland IPs: the main site returns 403 unsupported_region for CN / HK / MO / TW, so you need a proxy in an unrestricted region. The FAQ suggests V2Ray, and with Clash you must enable the virtual NIC (\"if it does not work, your proxy's actual exit IP is usually in those regions\")",
+            "Registration passes Cloudflare Turnstile (turnstile_check = true) and email verification is on (email_verification = true)",
+            "Do not farm alt accounts: the announcement says \"do not self-invite alt accounts — we run IP + browser and device fingerprint risk control plus manual review\""
+          ]
+        },
+        "earnMore": [
+          "Daily random check-in (enabled in the panel) — click it in the dashboard; top-up discounts also became a lottery wheel",
+          "Join the site's QQ (1085125870) / TG / DC notification groups for a 10U one-week trial card (\"trial card usable only in the trial group\")",
+          "Referral rebate: 5% of the invitee's first 20 top-ups, withdrawable or transferable in one click",
+          "Each notification group draws a prize every 300 / 500 members: 1 / 2 / 5 / 10 / 20U vouchers, one entry per account",
+          "Top-ups go through a USDT card network (no fee) or a Chinese reseller shop; announcements listed a 1:7 redemption, so 10 USDT ≈ 70U of credit"
+        ],
+        "caveats": [
+          "⚠ The main panel blocks CN / HK / MO / TW direct connections (403 unsupported_region): registration, docs, token management and check-in all need a proxy. Only the two API routes (api.vcrauo.lat / fast.vcrauo.lat) allow mainland IPs, which is why the sample config on this page uses fast.vcrauo.lat rather than the main domain — if you already have a proxy, switching back to nova.vcrauo.com works the same",
+          "The site's \"U\" is not USD: panel price = 1 (¥1 ≈ 1 site-U), 7× off the ¥7.3 ≈ $1 used by most services, and the announced top-up ratio is 1:7 as well. This page records it in the site's own unit and does not fold it into the USD total; defer to the console's live ratios",
+          "The announcement itself says the two Codex welfare channels are \"rotating Pro5X team accounts, banned very quickly, auto-refill cannot keep up — stability is only 'stable until it gets banned, then it blows up'\". Use groups above 0.1 ratio if you want stability",
+          "gpt-6 and Grok suffer risk-control downgrading (\"gpt6 currently has risk-control downgrading similar to Grok\"), and the site warns \"do not repeatedly probe gpt6 or run other distillation — accounts found repeatedly disturbing the pool's intelligence level lose access to that model\"",
+          "The domestic NVIDIA free group (0.0001 ratio) is self-described as \"junk NVIDIA channel, usability is a lottery\"; another 0.01 NVIDIA welfare group's announcement states \"probing is not allowed — bots scanning it get banned\", so do not point probe scripts at it",
+          "The site is very new: the panel start_time shows 2026-10-14 and fork version orbelis-20261007, while announcements only go back to 2026-07-25 — they swapped panels / migrated part-way through, so rules and stability are still moving. Assess the risk yourself",
+          "Upstream is third-party pool aggregation (CCMAX / kiro / Pro20X / official keys mixed together), so actual quality varies by group — do not treat it as a stable production channel. Credit and ratios move with announcements; defer to the console's live figures"
+        ],
+        "community": [
+          "QQ notification group: 1085125870",
+          "TG notification group: https://t.me/+BjepRc4vnEY1YWNl",
+          "Discord notification group: https://discord.gg/awqKu3wStA",
+          "Docs: https://nova.vcrauo.com/docs (needs a proxy from mainland China)"
+        ]
+      }
     },
     {
       "id": "supxh",
@@ -383,7 +549,36 @@
         "模型列表虽可公开读取，但免费/付费线路、模型上下架、倍率调整均可能随时变化",
         "该站为新收录站点，稳定性与可用性尚待长期观察"
       ],
-      "community": []
+      "community": [],
+      "en": {
+        "name": "ShawnAI",
+        "subtitle": "Free LLM API · 5000 credit on signup, 1000–3000 per daily check-in, 2000 each for inviter and invitee",
+        "highlights": [
+          "Signing up through this page's invite link grants 7000–10000 credit; invite code MVU8GX adds 5000 more, for a theoretical day-one high of 15000 points",
+          "The site periodically opens a limited-time extra 15000 credit — check the dashboard for any claimable task",
+          "Daily check-in is supported (the page says 1000–3000), a steady source for long-term free use",
+          "The pricing page is readable without login (/api/models/pricing publicly returns 191 models), so this page can list them directly",
+          "Signup is QQ email + verification code; the invite code field is optional but fill it in to get the full amount"
+        ],
+        "modelsNote": "On 2026-09-20 the public pricing page returned 191 models including stepfun, deepseek-v4.1-flash, gpt-5.5, gemini-2.5-flash, claude-sonnet-4-6 and kimi-k2.5. Note that the response mixes many free and paid entries; availability and ratios defer to the console.",
+        "register": {
+          "requirements": [
+            "QQ email only, with an email verification code",
+            "The invite code is optional, but entering through this page and filling MVU8GX adds 5000 credit",
+            "The signup page has a CAPTCHA; getting blocked is normal protection"
+          ]
+        },
+        "earnMore": [
+          "Daily check-in grants credit (do it in the dashboard)",
+          "Invite others — both sides get 5000 credit",
+          "Credit is denominated in points, exchangeable for model calls"
+        ],
+        "caveats": [
+          "The points-to-CNY/USD conversion is not exposed by the public API. This page records what the site publishes; the dashboard is authoritative for what actually lands",
+          "The model list is publicly readable, but free/paid routing, model additions and removals, and ratio changes can happen at any time",
+          "This is a newly listed service; stability and availability are still to be observed over time"
+        ]
+      }
     },
     {
       "id": "api456",
@@ -440,7 +635,33 @@
         "站点挂在 Cloudflare 后面，匿名探测可能被 WAF 拦，属正常防护",
         "上游为第三方中转，模型与倍率随公告调整，别当稳定生产通道用"
       ],
-      "community": []
+      "community": [],
+      "en": {
+        "subtitle": "New API relay · $20 on signup, daily check-in, OpenAI protocol support",
+        "highlights": [
+          "Signing up through this page's invite link grants $20; invite code zmza adds $20 more, for $30 total on day one",
+          "Daily check-in is supported, a steady source for long-term free use",
+          "OpenAI-compatible protocol, so Claude Code / Codex / Cursor connect directly",
+          "The pricing page is readable without login (/api/pricing is public)"
+        ],
+        "modelsNote": "The model list and prices are only visible in the console after login (/api/pricing requires login anonymously), so this page does not list a model table.",
+        "register": {
+          "requirements": [
+            "Sign up through this page's invite link (?aff=zmza) so the invite credit is granted",
+            "GitHub authorization is the only login method",
+            "Registration needs an email verification code and has a CAPTCHA"
+          ]
+        },
+        "earnMore": [
+          "Daily check-in grants credit (do it in the dashboard)",
+          "Invite others — both sides get $20"
+        ],
+        "caveats": [
+          "The credit figures are not exposed by the public API; check the dashboard after signing up to see what actually landed",
+          "The site sits behind Cloudflare, so anonymous probes may be blocked by the WAF — normal protection",
+          "Upstream is a third-party relay and models and ratios move with announcements; do not treat it as a stable production channel"
+        ]
+      }
     },
     {
       "id": "justwoker",
@@ -504,7 +725,36 @@
         "上游为第三方中转，gpt-5.6 系模型在大上下文 / 高并发时可能出现超时或断流，别当稳定生产通道用",
         "模型可用性与价格随上游调整，以控制台实时页面为准"
       ],
-      "community": []
+      "community": [],
+      "en": {
+        "subtitle": "New API relay · GitHub-only login, focused on gpt-5.6 models, check-in + tasks for ongoing credit, native Anthropic protocol for Claude Code / Codex",
+        "highlights": [
+          "GitHub authorization only — no password to remember and no email verification code (panel email_verification = false), a clean signup flow",
+          "Daily check-in and site tasks are both on (checkin_enabled / enable_task are true) — a click in the dashboard keeps the credit coming",
+          "Focused on gpt-5.6 models (gpt-5.6-luna / sol / terra); function calling is verified, so Claude Code / Codex tool calls work",
+          "The native Anthropic protocol is on the shelf: Claude Code connects to /v1/messages with the Base URL, the OpenAI-compatible route uses /v1, and Codex CLI works too"
+        ],
+        "modelsNote": "The pricing page requires login (/api/pricing returns 401 anonymously; panel pricing.requireAuth = true), so this page does not list a model table. Testing shows the main lineup is the gpt-5.6 family (gpt-5.6-luna / sol / terra), and every request carries roughly 2000 tokens of a fixed hidden prompt. Confirm the full list and ratios on the console's \"Pricing\" page.",
+        "register": {
+          "requirements": [
+            "Sign up through this page's invite link (?aff=OIWh) so the invite credit is granted",
+            "GitHub authorization is the only login: email / LinuxDO / Telegram / WeChat / OIDC are all disabled in the panel, and there is no email-password signup",
+            "Registration runs Cloudflare Turnstile; both the signup page and the API sit behind Cloudflare, so datacenter IPs may be 403'd (home broadband is fine)"
+          ]
+        },
+        "earnMore": [
+          "Daily check-in grants credit (enabled in the panel) — just click it in the dashboard",
+          "The site task center grants credit too (enable_task is on)",
+          "Invite others — the inviter earns credit"
+        ],
+        "caveats": [
+          "The credit figures are not exposed by the public API (quota_for_new_user / quota_for_invitee are both empty in /api/status); check the dashboard after signing up",
+          "Panel price = 7.3 (¥7.3 ≈ 1 site-dollar), so credit is shown in CNY terms and this page does not convert to USD",
+          "The site sits behind Cloudflare, so anonymous probes of /chat/completions and similar endpoints get a 403 from the WAF — normal protection, not a broken API",
+          "Upstream is a third-party relay; the gpt-5.6 family can time out or drop the stream under large context or high concurrency, so do not treat it as a stable production channel",
+          "Model availability and prices move with upstream; defer to the console's live page"
+        ]
+      }
     },
     {
       "id": "matrix",
@@ -584,7 +834,52 @@
       "community": [
         "文档: https://matrix.mzsjai.com/docs/quickstart",
         "反馈: https://matrix.mzsjai.com/docs/contact"
-      ]
+      ],
+      "en": {
+        "subtitle": "Unified API gateway + open-source app store · 600 credit on invite signup, 2000 more for ID verification",
+        "highlights": [
+          "Signing up through this page's invite link grants 600 gift credit — issued on registration, no ID verification, no top-up",
+          "Completing personal ID verification grants another 2,000 credit, the fastest way to earn credit on this site",
+          "One key reaches OpenAI / Anthropic / Google / DeepSeek / Moonshot / Zhipu / Alibaba and more, with the OpenAI-compatible protocol connecting Cursor / Cherry Studio / Open WebUI / Aider directly",
+          "Ships an open-source app store: one click spins up an isolated container instance, and AI calls inside the container automatically use your Matrix key"
+        ],
+        "setup": {
+          "client": "OpenAI-compatible",
+          "note": "The official docs write the gateway address as the placeholder \"<Matrix gateway address>/v1\" and note that the current address is shown only on the API Key detail page after login, so this page does not guess it.",
+          "steps": [
+            "Sign up and log in through this page's invite link (Hangdian unified SSO / phone code / email + password, any one)",
+            "In the console's \"API Key\" section create a key: the token starts with mat- and is shown only once, so copy it; the same page shows the current gateway address",
+            "In your client set Base URL = gateway address + /v1 and API Key = the mat- key you just copied; confirm the model name on the console's \"Model list\" page"
+          ]
+        },
+        "modelsNote": "The model list and prices are visible in the console's \"Model list\" after login (priced per million tokens, filterable by vendor / context window). The site has no public model or pricing API, so this page makes no claims.",
+        "register": {
+          "requirements": [
+            "Sign up through this page's invite link (with inviteCode); the reward is valid only for a new user's first registration, otherwise the 600 credit is not granted",
+            "The invitee gets 600 gift credit on registration without ID verification; the 2,000 ID-verification reward must be claimed on the wallet page",
+            "The same user / verified identity can claim the ID reward only once; abnormal registrations and duplicate referral bindings are not rewarded"
+          ]
+        },
+        "earnMore": [
+          "Complete personal ID verification and claim 2,000 credit on the wallet page (one-off)",
+          "Invite friends: inviter and invitee each get 600 credit per person",
+          "\"Feedback for redemption codes\": adopted suggestions earn credit",
+          "After registering there is also an initial experience credit in the wallet; the site does not publish the amount, so this page excludes it from the total"
+        ],
+        "caveats": [
+          "Credit is site points, and the site publishes no points-to-USD conversion, so this page shows points as-is without converting or folding them into the cross-service USD total",
+          "Campaign rewards are \"gift credit\", valid long-term but usable only on models and platform services that accept gift credit",
+          "The growth campaign is officially stated to run until 2026-12-31, after which the rules may change",
+          "Only the OpenAI-compatible protocol is offered; the official docs have no native Anthropic endpoint, so Claude Code cannot connect directly (you would need your own protocol translation)",
+          "App-store container instances bill by spec × runtime, so stop or delete them in the console after trying them out or credit keeps draining",
+          "The site's Qoder subscription and top-ups are paid products; do not confuse them with free campaign rewards",
+          "ID verification requires submitting personal identity information — decide for yourself whether 2,000 credit is worth that step"
+        ],
+        "community": [
+          "Docs: https://matrix.mzsjai.com/docs/quickstart",
+          "Feedback: https://matrix.mzsjai.com/docs/contact"
+        ]
+      }
     },
     {
       "id": "seekai",
@@ -607,7 +902,8 @@
         {
           "label": "API 域名",
           "homeUrl": "https://api.hcnsec.cn",
-          "signupUrl": "https://api.hcnsec.cn/sign-up?aff=3J8z"
+          "signupUrl": "https://api.hcnsec.cn/sign-up?aff=3J8z",
+          "labelEn": "API domain"
         }
       ],
       "tags": [
@@ -656,7 +952,40 @@
         "Telegram: https://t.me/ModelFreeApi",
         "邮箱: yangyuqi@xjhcit.cn",
         "QQ群: 94355225"
-      ]
+      ],
+      "en": {
+        "subtitle": "New API relay · credit on signup, check-in and invites for ongoing credit, supports Claude Code / Codex / Cursor",
+        "highlights": [
+          "New users get usable balance on signup; the site says the default credit is enough for half a year of free use, and both inviter and invitee are rewarded",
+          "Daily check-in is on — log in and click check-in for steady credit",
+          "Email/password, GitHub and Telegram logins are supported; registration needs an email code and passes Cloudflare Turnstile",
+          "The OpenAI-compatible protocol connects mainstream clients like Claude Code / Codex / Cursor / Cherry Studio"
+        ],
+        "modelsNote": "The model list and prices are visible in the console's \"Model plaza\" after login; the public API exposes neither specific models nor pricing. Announcements mention Claude / DeepSeek / GPT / Gemini / Step and other families.",
+        "register": {
+          "requirements": [
+            "Sign up through this page's invite link (?aff=dDJy) so the invite credit is granted",
+            "Registration needs an email verification code and passes Cloudflare Turnstile",
+            "New users get default balance on signup and can earn more through invites, check-in and tasks"
+          ]
+        },
+        "earnMore": [
+          "Daily check-in grants credit (click it in the dashboard)",
+          "Invite others — both inviter and invitee earn credit",
+          "Watch the site announcements for periodic tasks and campaign redemption codes"
+        ],
+        "caveats": [
+          "Free users get throttled or hit unavailable models at peak times; the site suggests running long tasks late at night or early morning and preferring small models like step / auto / qwen3.6 during the day",
+          "Credit is site balance with no public USD conversion, so this page describes it qualitatively and does not convert to USD",
+          "Model availability and prices move with upstream; defer to the console's live page",
+          "The site's ICP registrant is Xinjiang Huancheng Network Security Technology, sharing the same registrant as the site-building business under the same domain"
+        ],
+        "community": [
+          "Telegram: https://t.me/ModelFreeApi",
+          "Email: yangyuqi@xjhcit.cn",
+          "QQ group: 94355225"
+        ]
+      }
     },
     {
       "id": "aaawinn",
@@ -723,7 +1052,43 @@
         "QQ: 1171999840",
         "模型来源公示: https://aaawinn.xyz/public-pool",
         "文档: https://www.yuque.com/riyeqiaodaimadelong/bk54gx"
-      ]
+      ],
+      "en": {
+        "name": "Long's AI",
+        "subtitle": "New API relay · the free-tier group costs nothing, GitHub accounts must be 120 days old, and GPT models go over the Anthropic protocol",
+        "highlights": [
+          "The site's announcement states the free-tier group is \"permanently free\" at zero cost; it updated the deepseek-v4 versions and 4.1 on 2026-09-17 and says kimi3 will be delisted later",
+          "Signup is GitHub authorization only — no password to remember — but the GitHub account must be at least 120 days old (anti-script protection)",
+          "All three protocols are live: /v1/chat/completions, /v1/messages and /v1/responses return 401 rather than 404 anonymously (measured 2026-09-17)",
+          "The free-tier group's model sources are posted on a public pool page, and the site says all its revenue goes into the free-tier group"
+        ],
+        "modelsNote": "The site's model pricing API is not public (/api/pricing returns 401 anonymously; you would need to log into the admin page), and the free-tier group's model sources are published at https://aaawinn.xyz/public-pool. Announcements note that the free-tier group's GPT models only support the Anthropic protocol — the OpenAI protocol has compatibility issues.",
+        "register": {
+          "requirements": [
+            "Sign up through this page's invite link (?aff=ijFL); the announcement says registering with the site invite code grants 5 of site credit (unit unspecified)",
+            "New accounts must use a GitHub account registered at least 120 days ago and must accept the terms of service and privacy policy",
+            "There is no email signup and no daily check-in; GitHub is the only OAuth path"
+          ]
+        },
+        "earnMore": [
+          "The free-tier group itself is the long-term free mainstay; the announcement says \"the free models are permanently free\"",
+          "If referral credit does not arrive, contact the admin (WeChat SuperLong1129) for a manual grant — the site says script-farmed accounts caused it",
+          "For stronger models you can use paid groups: domestic models moved to the 0.2-ratio group, which the site says sources from WorkBuddy"
+        ],
+        "caveats": [
+          "The site is candid about the free-tier group: \"kimi3 will be delisted later\" and \"the free group's models are not maintained much\" — available free models move with announcements, so do not expect new models to keep arriving",
+          "The free-tier group's GPT models only support the Anthropic protocol (the announcement says the OpenAI protocol has compatibility issues), so the config below uses the Claude Code style with the Anthropic endpoint; connecting GPT through the OpenAI endpoint will fail",
+          "Panel price = 7 (¥7 ≈ 1 site-dollar), but the site also announced \"0.2 CNY equals 1 platform dollar\" — the two do not reconcile. Read the site's \"dollar\" as site dollars; this page does not convert to USD",
+          "The signup threshold is a 120-day-old GitHub account, so brand-new accounts are blocked outright; the site keeps complaining about script farming in its announcements, so risk control may tighten further",
+          "The site is very new (panel start_time 2026-09-11), so rules and stability are still moving — assess the risk yourself"
+        ],
+        "community": [
+          "WeChat: SuperLong1129 (can grant new-user experience credit)",
+          "QQ: 1171999840",
+          "Model sources: https://aaawinn.xyz/public-pool",
+          "Docs: https://www.yuque.com/riyeqiaodaimadelong/bk54gx"
+        ]
+      }
     },
     {
       "id": "hcnsec",
@@ -796,7 +1161,47 @@
         "QQ群: 943554225",
         "使用教程: https://hcnote.cn/2026/07/12/12831.html",
         "白嫖导航: https://link.hcnsec.cn（站方标注为非本站链接）"
-      ]
+      ],
+      "en": {
+        "name": "Xinjiang Huancheng Security",
+        "subtitle": "New API community gateway · system name \"Xinjiang Huancheng Network Security Technology Community LLM Security Gateway\"; check-in + tasks + invites all earn credit, 30000 site-dollars on signup, and the free group has models priced at zero per call",
+        "highlights": [
+          "30000 site-dollars on signup (panel price = 7.3, roughly ¥219k face value; this page shows the site's own unit and does not fold it into the USD total)",
+          "Default balance on signup as well — the FAQ says \"the new-user default balance is enough to use freely for half a year\" (the default was already lowered once through redistribution)",
+          "Daily check-in, invites and site tasks all earn credit, and announcements have run exchanges like \"10000 credit for 1 day of SVIP\"",
+          "The free group really does have zero-per-call models: Qwen3.8-Flash-Next (which the site itself labels \"not very stable\") arrived 2026-09-12, and deepseek-v4-flash-vision-exp is open to free users too",
+          "All three protocols are live: /v1/chat/completions, /v1/messages and /v1/responses return 401 rather than 404 anonymously (measured 2026-09-17)",
+          "The site itself tells free users in its announcements to switch to small models like auto / step / qwen3.8-27b — more honest expectation management than most"
+        ],
+        "modelsNote": "The model pricing page requires login (/api/pricing returns 401 anonymously), but the names in the announcements can be copied directly: Qwen3.8-Flash-Next (zero per call), the DeepSeek-V4.1-Flash family (about 2 CNY per call in paid groups; the vision-exp version is open to free users), longcat-2.0 (1 CNY per call), glm-5.3-flash, qwen3.8-27b, the step family, spark-x2.5 and Qwen3.6-35B-A3B. The site also open-sourced SparkMuse-4B and Qing-Sec-20B, both searchable on ModelScope (hcnote/SparkMuse-4B).",
+        "register": {
+          "requirements": [
+            "Sign up through this page's invite link (?aff=3J8z) so the invite credit is granted",
+            "Registration needs an email verification code; login uses a password or Passkey, and the site does not enable Turnstile",
+            "The FAQ stresses: whichever plan you buy, create a new key and set its group to the matching plan group, or calls will not go through"
+          ]
+        },
+        "earnMore": [
+          "Daily check-in grants credit (enabled in the panel) — just click it in the dashboard",
+          "Invite others: the announcement warns that when transferring invite credit to the wallet you must enter 49990, not \"50k\" — the wrong value fails",
+          "The site task center grants credit too (enable_task is on)",
+          "Announcements periodically offer \"10000 credit for 1 day of SVIP\", paid from balance and opened at irregular times each day"
+        ],
+        "caveats": [
+          "Free users ride third-party budget upstream; the site itself writes in its announcements that \"model authenticity is open to question\" and notes that free users' glm-5.3-flash cannot read images — do not run production-critical tasks on it",
+          "The announcement says outright that good models have extremely low availability for free users and suggests switching to auto / step / qwen3.8-27b; free-channel latency and stability are a matter of luck",
+          "Panel price = 7.3 (¥7.3 ≈ 1 site-dollar), so credit is shown in CNY terms and this page does not convert to USD",
+          "The ICP registrant is Xinjiang Huancheng Network Security Technology, sharing the same registrant and after-sales email as SeekAi; the two sites cross-promote in their announcements, so they may be run by the same company or admin",
+          "Both the signup page and the API sit behind Cloudflare, so datacenter IPs get a 403 on the signup page (which is why this page's automated probe shows that too); home broadband is fine",
+          "The announcement explicitly states there are \"no Taobao / Xianyu resellers\" — beware of third-party scalping"
+        ],
+        "community": [
+          "Email: yangyuqi@xjhcit.cn",
+          "QQ group: 943554225",
+          "Tutorial: https://hcnote.cn/2026/07/12/12831.html",
+          "Free-stuff directory: https://link.hcnsec.cn (the site marks it as a non-site link)"
+        ]
+      }
     }
   ]
 }

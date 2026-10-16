@@ -1086,6 +1086,151 @@ test('停注变动进日志时带上接口口径，别让人以为是我们猜�
   assert.equal(ev.severity, 'major', '停注必须能触发 Release / 推送');
 });
 
+console.log('README 双版本：英文版全翻模板、中文版零回归');
+
+const EN_SITE = {
+  ...SITE,
+  id: 'demo2',
+  name: 'Demo 站',
+  en: {
+    name: 'Demo Site',
+    subtitle: 'A demo relay that hands out credit on signup',
+    highlights: ['Generous credit'],
+    caveats: ['Rules change without notice'],
+    register: { requirements: ['Enter through this page\'s invite link'] },
+    modelsNote: 'Model list is login-only.',
+    community: ['Telegram: https://t.me/demo'],
+  },
+};
+const NO_EN_SITE = { ...SITE, id: 'demo3', name: '无翻译站', en: undefined };
+const EN_LIVE = { generatedAt: iso(0), sites: [{ ...FIXED_SNAP, id: 'demo2' }] };
+const NO_EN_LIVE = { generatedAt: iso(0), sites: [{ ...FIXED_SNAP, id: 'demo3' }] };
+const EN_META = { ...META, titleEn: 'AI Welfare Hub', taglineEn: 'Free credits, tracked', keywordsEn: ['free api'] };
+const renderEn = (sites = [EN_SITE], live = EN_LIVE) =>
+  renderReadme({ meta: EN_META, sites, live, groups: [], history: HIST, lang: 'en' });
+
+test('英文版没有未知语言回退：lang 写错也不能炸，回落到中文', () => {
+  const md = renderReadme({ meta: META, sites: [SITE], live: LIVE, groups: [], history: HIST, lang: 'xx' });
+  assert.match(md, /福利站详情/, '未知语言回落到默认语言');
+});
+
+test('英文版用 meta.titleEn / taglineEn，并在标题下给出回中文版的链接', () => {
+  const md = renderEn();
+  assert.match(md, /<h1 align="center">AI Welfare Hub<\/h1>/);
+  assert.match(md, /Free credits, tracked/);
+  assert.match(md, /<a href="README\.md"><b>中文<\/b><\/a>/);
+  const zh = renderReadme({ meta: META, sites: [SITE], live: LIVE, groups: [], history: HIST });
+  assert.match(zh, /<a href="README\.en\.md"><b>English<\/b><\/a>/, '中文版也要能切到英文');
+});
+
+test('英文版的章节标题、表格表头、FAQ、免责声明全部是英文', () => {
+  const md = renderEn();
+  for (const en of ['## 🚀 Get started in a minute', '**Why sign up**', '**Signup requirements**', '**⚠️ Read before use**', '| Service | Status | First day |', '❓ FAQ', '⚠️ Disclaimer', '🤝 Suggest a new service']) {
+    assert.ok(md.includes(en), `缺少英文段落：${en}`);
+  }
+  // 模板里的中文一个都不该漏到英文版里（站点名等数据不算，这里只看结构词）
+  for (const zh of ['站点总览', '首日可得', '额度构成', '注册要求', '使用前必读', '免责声明', '仓库里有什么', '常见问题']) {
+    assert.ok(!md.includes(zh), `英文版漏出中文模板：${zh}`);
+  }
+});
+
+test('站点文案走 sites.json 的 en 覆盖块，站名与卖点都换英文', () => {
+  const md = renderEn();
+  assert.match(md, /### 🟢 Demo Site/);
+  assert.match(md, /> A demo relay that hands out credit on signup/);
+  assert.match(md, /- Generous credit/);
+  assert.match(md, /- Rules change without notice/);
+  assert.match(md, /- Enter through this page's invite link/);
+  assert.doesNotMatch(md, /注册送额度的示例站/, '中文副标题不许出现在英文版');
+  assert.doesNotMatch(md, /额度大方/, '中文卖点不许出现在英文版');
+});
+
+test('没写 en 覆盖的站点：段落整段跳过，不把中文明文塞进英文版', () => {
+  const md = renderEn([NO_EN_SITE], NO_EN_LIVE);
+  assert.match(md, /### 🟢 无翻译站/, '站名是品牌，没有英文写法就沿用原文');
+  assert.doesNotMatch(md, /注册送额度的示例站/);
+  assert.doesNotMatch(md, /额度大方/);
+  assert.doesNotMatch(md, /规则随时变/);
+  // 模型表来自接口、与语言无关，照常渲染
+  assert.match(md, /claude-opus-5/);
+  // 拿不到模型表时用英文通用兜底句，而不是站点自己的中文 modelsNote
+  const noModels = { generatedAt: iso(0), sites: [{ ...FIXED_SNAP, id: 'demo3', models: [] }] };
+  const md2 = renderEn([{ ...NO_EN_SITE, modelsNote: '模型清单需登录查看' }], noModels);
+  assert.doesNotMatch(md2, /模型清单需登录查看/);
+  assert.match(md2, /does not publish a model list/);
+});
+
+test('抓来的中文公告不进英文版，换成一句说明指路', () => {
+  const withAnn = { ...EN_LIVE, sites: [{ ...FIXED_SNAP, id: 'demo2', announcements: [{ date: '2026-10-15', text: '站点发了公告' }] }] };
+  const en = renderEn([EN_SITE], withAnn);
+  assert.doesNotMatch(en, /站点发了公告/);
+  assert.doesNotMatch(en, /Latest announcements/);
+  const zh = renderReadme({ meta: META, sites: [EN_SITE], live: withAnn, groups: [], history: HIST });
+  assert.match(zh, /站点发了公告/, '中文版照旧显示公告原文');
+});
+
+test('变动事件是抓来的中文公告，英文版只给订阅说明不贴事件', () => {
+  const en = renderReadme({ meta: EN_META, sites: [EN_SITE], live: EN_LIVE, groups: GROUPS, history: HIST, lang: 'en' });
+  assert.match(en, /🔔 Credit changes get announced here/);
+  assert.doesNotMatch(en, /Latest:/, '不列具体事件');
+  assert.match(en, /CHANGELOG\.md/, '给出中文变更日志的入口');
+  const zh = renderReadme({ meta: META, sites: [EN_SITE], live: EN_LIVE, groups: GROUPS, history: HIST });
+  assert.match(zh, /最近几条：/, '中文版照旧列事件');
+});
+
+test('面板自报的中文站名在英文版里跳过，省得读者看天书', () => {
+  const live = { generatedAt: iso(0), sites: [{ ...FIXED_SNAP, id: 'demo2', systemName: '年华 API 中转站' }] };
+  const en = renderEn([EN_SITE], live);
+  assert.doesNotMatch(en, /年华/);
+  const en2 = renderEn([EN_SITE], { generatedAt: iso(0), sites: [{ ...FIXED_SNAP, id: 'demo2', systemName: 'Agent Router' }] });
+  assert.match(en2, /Panel name: \*\*Agent Router\*\*/, '拉丁字母的站名照常显示');
+  const zh = renderReadme({ meta: META, sites: [EN_SITE], live, groups: [], history: HIST });
+  assert.match(zh, /站点名称：\*\*年华 API 中转站\*\*/, '中文版照旧显示');
+});
+
+test('额度单位在英文版换英文说法，中文版保持原样', () => {
+  assert.equal(usd(2600, false, 'point', 'en'), '2600 pts');
+  assert.equal(usd(2600, false, 'point'), '2600 积分');
+  assert.equal(usd(300, false, 'site-usd', 'en'), '300 site-USD');
+  assert.equal(usd(300, false, 'site-usd'), '300 站内刀');
+  assert.equal(usd(null, false, 'usd', 'en'), null);
+});
+
+test('「另发」那句英文版用英文站名和英文连接词', () => {
+  const others = [{ name: 'Demo 站', firstDay: 2600, approx: false, unit: 'point' }];
+  const byName = new Map([[EN_SITE.name, EN_SITE]]);
+  const note = othersNote(others, 'en', (p) => byName.get(p.name)?.en?.name ?? p.name);
+  assert.equal(note, 'Demo Site separately credits 2600 pts');
+  assert.equal(othersNote(others, 'zh'), 'Demo 站 另发 2600 积分');
+});
+
+test('面板登录方式枚举在英文版翻成英文，未知值原样保留不编造', () => {
+  const snap = { ...FIXED_SNAP, id: 'demo2', loginMethods: ['账号密码', 'GitHub', 'Passkey'] };
+  const md = renderEn([EN_SITE], { generatedAt: iso(0), sites: [snap] });
+  assert.match(md, /Login methods: Email \+ password \/ GitHub \/ Passkey/);
+  const zh = renderReadme({ meta: META, sites: [EN_SITE], live: { generatedAt: iso(0), sites: [snap] }, groups: [], history: HIST });
+  assert.match(zh, /登录方式：账号密码 \/ GitHub \/ Passkey/);
+});
+
+test('英文版的表格列数与中文版一致，别在 GitHub 上散架', () => {
+  const open = { generatedAt: iso(0), sites: [{ ...FIXED_SNAP, id: 'demo2', registerOpen: true }] };
+  const coded = { ...EN_SITE, inviteCode: 'abcd' };
+  const md = renderEn([coded], open);
+  const [head, sep, row] = md.split('\n').filter((l) => l.startsWith('| ')).slice(0, 3);
+  const cols = (l) => l.split('|').length;
+  assert.equal(cols(head), cols(sep));
+  assert.equal(cols(head), cols(row));
+  assert.match(head, /\| Sign up \| Invite code \|/);
+});
+
+test('英文版停注站点照样划掉额度、按钮降级', () => {
+  const shut = { generatedAt: iso(0), sites: [{ ...FIXED_SNAP, id: 'demo2', online: true, registerOpen: false, passwordRegister: false, loginMethods: ['GitHub'] }] };
+  const md = renderEn([EN_SITE], shut);
+  assert.match(md, /🟡 Closed/);
+  assert.match(md, /~~\$120~~/);
+  assert.match(md, /Closed · open anyway/);
+});
+
 console.log('安全：出网协议与 Telegram 转义（issue #3 的安全报告）');
 let blockedFetchCalls = 0;
 const httpJson = await fetchJson('http://example.test/api/status');

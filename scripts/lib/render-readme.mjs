@@ -1,197 +1,225 @@
-/** 生成 README.md：全部内容由 data/sites.json + data/live.json 渲染，请勿手改 README。 */
+/** 生成 README：全部内容由 data/sites.json + data/live.json 渲染，请勿手改 README。 */
 import { staleHours } from './newapi.mjs';
 import { creditPlan, usd, breakdown, perDay, usdTotals, othersNote } from './credits.mjs';
 import { signupRoute, acceptsNew } from './signup.mjs';
 import { icon } from './changelog.mjs';
 import { coverage } from './history.mjs';
+import { pack, siteCopy, loginMethod, DEFAULT_LANG } from './i18n.mjs';
 
 /** shields.io 转义：- → --，_ → __，其余走 URI 编码 */
 const shield = (s) => encodeURIComponent(String(s).replace(/-/g, '--').replace(/_/g, '__'));
 const B = (label, msg, color) => `https://img.shields.io/badge/${shield(label)}-${shield(msg)}-${color}`;
 
-const yes = (v) => (v === true ? '✅' : v === false ? '❌' : '—');
+/** 徽章词条返回 { label, msg, color }，这里拼成 shields.io 的一行 <img> */
+const badge = (spec) => `  <img src="${B(spec.label, spec.msg, spec.color)}" alt="${spec.label}">`;
 
 /** 站外链接一律写原始 <a>：markdown 链接的 target 会被 GitHub 丢掉，点了就从 README 跳走 */
 const ext = (text, href) => `<a href="${href}" target="_blank" rel="noopener">${text}</a>`;
 
-function fmtDate(iso) {
-  if (!iso) return '未知';
+/**
+ * 镜像入口的标签是数据（「大陆备用域名」「直连美国」…），英文版走 mirrors[i].labelEn。
+ * 没写 labelEn 就退回通用的「备用域名」，绝不把中文标签原样塞进英文版。
+ */
+const mirrorLabel = (m, lang) =>
+  lang === DEFAULT_LANG
+    ? (m.label ?? pack(lang).section.mirrorFallback)
+    : (m.labelEn ?? pack(lang).section.mirrorFallback);
+
+function fmtDate(iso, lang = DEFAULT_LANG) {
+  if (!iso) return pack(lang).common.unknown;
   const d = new Date(iso);
+  if (Number.isNaN(d.getTime())) return pack(lang).common.unknown;
   const p = (n) => String(n).padStart(2, '0');
   return `${d.getUTCFullYear()}-${p(d.getUTCMonth() + 1)}-${p(d.getUTCDate())} ${p(d.getUTCHours())}:${p(d.getUTCMinutes())} UTC`;
 }
 
 /** 挑一个用于示例配置的 Claude 模型名 */
-function claudeModel(snap) {
-  return snap?.defaults?.claude ?? '<登录后台查看可用模型名>';
+function claudeModel(snap, t) {
+  return snap?.defaults?.claude ?? t.setup.pickModel;
 }
 
 /** 挑一个用于示例配置的 OpenAI 协议模型名 */
-function openaiModel(snap) {
-  return snap?.defaults?.openai ?? '<登录后台查看可用模型名>';
+function openaiModel(snap, t) {
+  return snap?.defaults?.openai ?? t.setup.pickModel;
 }
 
-function overviewTable(sites, liveById) {
+function overviewTable(sites, liveById, lang) {
+  const t = pack(lang).table;
   // 多数站的邀请额度是邀请链接自己带的，用户不用手打；只有个别站（DoCode）注册表单里
   // 有一栏「邀请码」要自己填，漏填就只拿注册额度。没有任何站需要手填时不出这一列。
   const hasCode = sites.some((s) => s.inviteCode);
   const rows = sites.map((s) => {
     const l = liveById.get(s.id) ?? {};
+    const copy = siteCopy(s, lang);
     const plan = creditPlan(s, l);
-    const route = signupRoute(l);
+    const route = signupRoute(l, lang);
     // 「在线」和「收不收新用户」是两件事：站点活得好好的但停注了，对新用户就是死路，
     // 状态栏必须说出来，否则下面那个「首日可得 $120」是在骗人点链接
-    const state = l.online ? (route.state === 'closed' ? '🟡 停注' : '🟢 在线') : '🔴 异常';
+    const state = l.online ? (route.state === 'closed' ? t.stateShut : t.stateOnline) : t.stateDown;
     const first =
       plan.unit === 'free'
-        ? '免费'
+        ? t.free
         : plan.firstDay != null
           ? route.state === 'closed'
-            ? `~~${usd(plan.firstDay, plan.approx, plan.unit)}~~`
-            : `**${usd(plan.firstDay, plan.approx, plan.unit)}**`
-          : '站内公示';
-    const detail = plan.unit === 'free' ? '白嫖分组免费' : breakdown(plan) ?? '—';
+            ? `~~${usd(plan.firstDay, plan.approx, plan.unit, lang)}~~`
+            : `**${usd(plan.firstDay, plan.approx, plan.unit, lang)}**`
+          : t.announced;
+    const detail = plan.unit === 'free' ? t.freeGroup : (breakdown(plan, lang) ?? '—');
     const checkin =
-      perDay(plan) ??
-      (l.checkinEnabled
-        ? '支持签到'
-        : l.checkinEnabled === false
-          ? '无签到'
-          : '—');
-    const models = l.models?.length ? `${l.models.length} 个可查` : l.services?.length ? l.services.join(' / ') : '需登录查看';
+      perDay(plan, lang) ??
+      (l.checkinEnabled ? t.checkinYes : l.checkinEnabled === false ? t.checkinNo : '—');
+    const models = l.models?.length
+      ? t.modelsKnown(l.models.length)
+      : l.services?.length
+        ? l.services.map((x) => loginMethod(x, lang)).join(' / ')
+        : t.modelsLogin;
     const proto =
       [s.endpoints?.anthropic && 'Anthropic', s.endpoints?.openai && 'OpenAI'].filter(Boolean).join(' + ') ||
-      s.setup?.client ||
-      '登录后台配置';
+      copy.setup?.client ||
+      t.signupDefault;
     const cta =
       route.state === 'closed'
-        ? ext('已停注 · 仍可打开 →', s.signupUrl)
+        ? ext(t.ctaClosed, s.signupUrl)
         : route.state === 'oauth'
-          ? ext(`${route.oauth[0]} 注册 →`, s.signupUrl)
-          : ext('点此注册 →', s.signupUrl);
+          ? ext(t.ctaOauth(route.oauth[0]), s.signupUrl)
+          : ext(t.ctaRegister, s.signupUrl);
     const code = s.inviteCode ? ` \`${s.inviteCode}\` |` : ' — |';
     return (
-      `| **${s.name}**${s.recommended ? ' 🔥' : ''} | ${state} | ${first} | ${detail} | ${checkin} | ${proto} | ${models} | ${cta} |` +
+      `| **${copy.name}**${s.recommended ? ' 🔥' : ''} | ${state} | ${first} | ${detail} | ${checkin} | ${proto} | ${models} | ${cta} |` +
       (hasCode ? code : '')
     );
   });
   return [
-    `| 站点 | 状态 | 首日可得 | 额度构成 | 之后每天 | 兼容协议 | 模型 | 注册 |${hasCode ? ' 邀请码 |' : ''}`,
+    `| ${t.headers.slice(0, hasCode ? 9 : 8).join(' | ')} |`,
     `| :-- | :--: | :--: | :-- | :--: | :--: | :--: | :--: |${hasCode ? ' :--: |' : ''}`,
     ...rows,
   ].join('\n');
 }
 
-function modelTable(snap) {
+function modelTable(snap, lang) {
   if (!snap?.models?.length) return null;
+  const t = pack(lang).modelsTable;
   const rows = snap.models.map((m) => {
     // 按次计费的模型（New API 的 model_price）没有倍率概念，倍率栏照抄接口的 0 会被读成「免费」，
     // 真正有用的是每次多少钱，所以这类模型把价格放到输入列、倍率列写「按次」。
     const fixed = m.fixedPrice != null;
-    const ratio = fixed ? '按次' : (m.ratio ?? '—');
-    const inp = fixed ? `**$${m.fixedPrice} / 次**` : m.inputPerMTok != null ? `$${m.inputPerMTok}` : '—';
+    const ratio = fixed ? t.perCall : (m.ratio ?? '—');
+    const inp = fixed ? t.perCallPrice(m.fixedPrice) : m.inputPerMTok != null ? `$${m.inputPerMTok}` : '—';
     const out = fixed ? '—' : m.outputPerMTok != null ? `$${m.outputPerMTok}` : '—';
     return `| \`${m.name}\` | ${ratio} | ${inp} | ${out} | ${(m.protocols ?? []).join(' / ') || '—'} |`;
   });
-  return [
-    '| 模型 | 倍率 | 输入 / 1M tokens | 输出 / 1M tokens | 协议 |',
-    '| :-- | :--: | :--: | :--: | :--: |',
-    ...rows,
-  ].join('\n');
+  return [`| ${t.headers.join(' | ')} |`, '| :-- | :--: | :--: | :--: | :--: |', ...rows].join('\n');
 }
 
-function liveFacts(snap) {
-  if (!snap) return '_暂无实时数据_';
+/**
+ * 面板自己报的名字（systemName）是抓来的中文，英文版里跳过——
+ * 名字短但读者看不懂，硬留着不如不显示；想核对就去看中文版或站点本身。
+ */
+const cjk = (s) => /[\u4e00-\u9fff]/.test(String(s ?? ''));
+
+function liveFacts(snap, lang) {
+  const t = pack(lang).live;
+  if (!snap) return t.none;
+  const yes = (v) => (v === true ? t.yes : v === false ? t.no : t.unknown);
   const items = [
-    staleHours(snap) ? `⚠ 接口已连续 ${staleHours(snap)} 小时没抓到新数据，下列信息为 \`${fmtDate(snap.staleFrom)}\` 的快照` : null,
-    snap.probeBlocked ? `ℹ️ 本次自动探测被站点 WAF 拦下（GitHub Actions 机房 IP 常见，家宽访问不受影响），状态与下列信息沿用 \`${fmtDate(snap.staleFrom ?? snap.checkedAt)}\` 的成功快照` : null,
+    staleHours(snap) ? t.stale(staleHours(snap), fmtDate(snap.staleFrom, lang)) : null,
+    snap.probeBlocked ? t.blockedFrom(fmtDate(snap.staleFrom ?? snap.checkedAt, lang)) : null,
     // 站名 / 版本不是每种面板都拿得到（Matrix 只有一个健康检查），拿不到就别摆一行「—」占位
-    snap.systemName ? `站点名称：**${snap.systemName}**` : null,
-    snap.version ? `面板版本：\`${snap.version}\`` : null,
-    snap.services?.length ? `已开放服务：${snap.services.join(' / ')}` : null,
-    snap.inviterBonusUsd ? `邀请他人可得：**$${snap.inviterBonusUsd}**` : null,
-    snap.checkinEnabled != null ? `每日签到：${yes(snap.checkinEnabled)}` : null,
-    snap.registerOpen != null ? `开放注册：${yes(snap.registerOpen)}${signupRoute(snap).note ? `（${signupRoute(snap).note}）` : ''}` : null,
-    snap.loginMethods?.length ? `登录方式：${snap.loginMethods.join(' / ')}` : null,
-    snap.githubMinAccountAgeDays ? `GitHub 账号需满 **${snap.githubMinAccountAgeDays} 天**` : null,
-    snap.latencyMs != null ? `接口延迟：${snap.latencyMs} ms` : null,
+    snap.systemName && (lang === DEFAULT_LANG || !cjk(snap.systemName)) ? t.systemName(snap.systemName) : null,
+    snap.version ? t.version(snap.version) : null,
+    snap.services?.length ? t.services(snap.services.map((x) => loginMethod(x, lang)).join(' / ')) : null,
+    snap.inviterBonusUsd ? t.inviterBonus(snap.inviterBonusUsd) : null,
+    snap.checkinEnabled != null ? t.checkin(yes(snap.checkinEnabled)) : null,
+    snap.registerOpen != null ? t.registerOpen(yes(snap.registerOpen), signupRoute(snap, lang).note) : null,
+    snap.loginMethods?.length
+      ? t.loginMethods(snap.loginMethods.map((x) => loginMethod(x, lang)).join(' / '))
+      : null,
+    snap.githubMinAccountAgeDays ? t.githubAge(snap.githubMinAccountAgeDays) : null,
+    snap.latencyMs != null ? t.latency(snap.latencyMs) : null,
   ].filter(Boolean);
-  return items.map((t) => `- ${t}`).join('\n');
+  return items.map((x) => `- ${x}`).join('\n');
 }
 
 /** 额度明细：接口只给邀请额度，注册基础额度与签到额度来自 sites.json 登记 */
-function creditFacts(site, snap) {
+function creditFacts(site, snap, lang) {
+  const t = pack(lang).credit;
   const p = creditPlan(site, snap);
   if (p.firstDay == null) return null;
-  const detail = breakdown(p);
+  const detail = breakdown(p, lang);
   return [
-    p.signup != null ? `- 注册即送：**${usd(p.signup, false, p.unit)}**` : null,
-    p.invite != null
-      ? `- 从本页邀请链接注册额外：**${usd(p.invite, false, p.unit)}**${p.apiInvite === p.invite ? '（站点接口实测一致）' : ''}`
-      : null,
+    p.signup != null ? t.signup(usd(p.signup, false, p.unit, lang)) : null,
+    p.invite != null ? t.invite(usd(p.invite, false, p.unit, lang), p.apiInvite === p.invite) : null,
     p.daily == null
       ? null
       : p.resets
-        ? `- 每日额度池：**${usd(p.daily, p.approx, p.unit)}/天**（每天重置，当天用不完不累积，也不用签到）`
-        : `- 每日签到：**${usd(p.daily, p.approx, p.unit)}/天**（长期续命的关键）`,
-    `- 首日合计：**${usd(p.firstDay, p.approx, p.unit)}**${p.sources > 1 && detail ? `　（${detail}）` : ''}`,
+        ? t.dailyPool(usd(p.daily, p.approx, p.unit, lang))
+        : t.dailyCheckin(usd(p.daily, p.approx, p.unit, lang)),
+    t.firstDay(usd(p.firstDay, p.approx, p.unit, lang), p.sources > 1 && detail ? detail : null),
   ]
     .filter(Boolean)
     .join('\n');
 }
 
-function siteSection(site, snap) {
-  const cm = claudeModel(snap);
-  const om = openaiModel(snap);
-  const models = modelTable(snap);
+function siteSection(site, snap, lang, meta) {
+  const t = pack(lang).section;
+  const copy = siteCopy(site, lang);
+  const cm = claudeModel(snap, pack(lang));
+  const om = openaiModel(snap, pack(lang));
+  const models = modelTable(snap, lang);
   const mirror = (site.mirrors ?? [])
-    .map((m) => `- ${m.label ?? '备用域名'}：<${m.homeUrl}> · ${ext('从备用域名注册', m.signupUrl)}`)
+    .map((m) => `- ${mirrorLabel(m, lang)}${t.mirrorSep}<${m.homeUrl}> · ${ext(t.mirrorSignup, m.signupUrl)}`)
     .join('\n');
 
   const parts = [
-    `### ${snap?.online ? '🟢' : '🔴'} ${site.name}${site.recommended ? ' 🔥 首推' : ''}`,
+    `### ${snap?.online ? '🟢' : '🔴'} ${copy.name}${site.recommended ? t.recommended : ''}`,
     '',
-    `> ${site.subtitle}`,
+    // 没写英文副标题就整行不出现，别留一个空的引用块
+    ...(copy.subtitle ? [`> ${copy.subtitle}`, ''] : []),
+    ext(`<img src="${B(t.signupBadge, copy.name, 'brightgreen?style=for-the-badge')}" alt="${t.signupAlt(copy.name)}">`, site.signupUrl),
     '',
-    ext(`<img src="${B('立即注册', site.name, 'brightgreen?style=for-the-badge')}" alt="注册 ${site.name}">`, site.signupUrl),
+    t.why,
     '',
-    `**为什么值得注册**`,
+    copy.highlights.map((h) => `- ${h}`).join('\n'),
+    ...(creditFacts(site, snap, lang) ? ['', t.howMuch, '', creditFacts(site, snap, lang)] : []),
     '',
-    site.highlights.map((h) => `- ${h}`).join('\n'),
-    ...(creditFacts(site, snap) ? ['', '**能拿多少额度**', '', creditFacts(site, snap)] : []),
+    t.live,
     '',
-    '**实时数据**（自动抓取站点公开接口）',
-    '',
-    liveFacts(snap),
+    liveFacts(snap, lang),
   ];
 
-  if (mirror) parts.push('', '**镜像 / 备用入口**', '', mirror);
+  if (mirror) parts.push('', t.mirrors, '', mirror);
+
+  // 模型表来自接口、与语言无关；拿不到时优先用站点自己写的说明，英文版没翻就退到通用说法
   if (models) {
     const fixedAny = (snap?.models ?? []).some((m) => m.fixedPrice != null);
-    const note = fixedAny
-      ? '标「按次」的模型按请求次数计费，与 tokens 用量无关；其余倍率 1 ≈ $2 / 1M tokens。以站内实时价格为准。'
-      : '倍率 1 ≈ $2 / 1M tokens，输出价 = 倍率 × 补全倍率 × $2；以站内实时价格为准。';
-    parts.push('', '**当前可用模型**', '', models, '', `<sub>${note}</sub>`);
-  } else parts.push('', `> ${site.modelsNote ?? '该站模型清单需登录后台查看，注册后在「模型价格」页确认。'}`);
+    parts.push('', t.models, '', models, '', `<sub>${fixedAny ? t.modelNoteFixed : t.modelNoteToken}</sub>`);
+  } else if (copy.modelsNote) {
+    parts.push('', `> ${copy.modelsNote}`);
+  } else if (lang !== DEFAULT_LANG) {
+    parts.push('', t.noModelTable);
+  } else {
+    parts.push('', `> ${t.modelsLoginFallback}`);
+  }
 
   parts.push(
     '',
-    '**注册要求**',
+    t.requirements,
     '',
-    [...(site.register?.requirements ?? []).map((r) => `- ${r}`)].join('\n') || '- 无特殊限制',
+    [...(copy.register?.requirements ?? []).map((r) => `- ${r}`)].join('\n') || t.requirementsNone,
     '',
-    '**接入配置**',
+    t.setup,
     '',
-    accessBlock(site, cm, om),
+    accessBlock(site, cm, om, lang, copy),
   );
 
-  if (site.earnMore?.length) parts.push('', '**如何继续拿额度**', '', site.earnMore.map((t) => `- ${t}`).join('\n'));
-  if (site.caveats?.length) parts.push('', '**⚠️ 使用前必读**', '', site.caveats.map((t) => `- ${t}`).join('\n'));
-  if (site.community?.length) parts.push('', '**官方渠道**', '', site.community.map((t) => `- ${t}`).join('\n'));
+  if (copy.earnMore?.length) parts.push('', t.earnMore, '', copy.earnMore.map((x) => `- ${x}`).join('\n'));
+  if (copy.caveats?.length) parts.push('', t.caveats, '', copy.caveats.map((x) => `- ${x}`).join('\n'));
+  if (copy.community?.length) parts.push('', t.community, '', copy.community.map((x) => `- ${x}`).join('\n'));
 
-  const ann = (snap?.announcements ?? []).slice(0, 3);
+  // 公告是站方发的中文原文，翻了就是编内容；英文版只给一句说明指路
+  const ann = lang === DEFAULT_LANG ? (snap?.announcements ?? []).slice(0, 3) : [];
   if (ann.length) {
-    parts.push('', '<details><summary><b>站点最新公告</b>（自动同步）</summary>', '');
+    parts.push('', t.announcements, '');
     parts.push(ann.map((a) => `- ${a.date ? `\`${a.date}\` ` : ''}${a.text}`).join('\n'));
     parts.push('', '</details>');
   }
@@ -205,30 +233,32 @@ const F = '```';
  * Codex 号池那类站点的 Base URL 与 Key 是后台登录后才下发的，只能写清楚去哪儿领，
  * 硬编一个猜出来的地址比不写更糟。
  */
-function accessBlock(site, claude, openai) {
-  if (site.endpoints?.anthropic || site.endpoints?.openai) return codeBlocks(site, claude, openai);
+function accessBlock(site, claude, openai, lang, copy) {
+  if (site.endpoints?.anthropic || site.endpoints?.openai) return codeBlocks(site, claude, openai, lang, copy.name);
 
-  const s = site.setup ?? {};
+  const s = copy.setup ?? {};
+  const t = pack(lang).section;
   const out = [];
   if (s.note) out.push(`> ${s.note}`, '');
-  if (s.steps?.length) out.push(s.steps.map((t, i) => `${i + 1}. ${t}`).join('\n'));
-  if (s.dashboardUrl) out.push('', `控制台入口：<${s.dashboardUrl}>`);
-  return out.join('\n') || '> 注册登录后在站内后台查看接入方式。';
+  if (s.steps?.length) out.push(s.steps.map((x, i) => `${i + 1}. ${x}`).join('\n'));
+  if (s.dashboardUrl) out.push('', t.consoleLink(s.dashboardUrl));
+  return out.join('\n') || t.setupFallback;
 }
 
-function codeBlocks(site, claude, openai) {
+function codeBlocks(site, claude, openai, lang, name) {
+  const t = pack(lang).setup;
   const anth = site.endpoints?.anthropic;
   const oai = site.endpoints?.openai;
   const out = [];
 
   if (anth) {
     out.push(
-      '<details open><summary><b>Claude Code</b>（Anthropic 兼容，Base URL 不带 <code>/v1</code>）</summary>',
+      t.claudeSummary,
       '',
       `${F}bash`,
       '# macOS / Linux',
       `export ANTHROPIC_BASE_URL=${anth}`,
-      'export ANTHROPIC_AUTH_TOKEN=你在站点后台创建的 Key',
+      `export ANTHROPIC_AUTH_TOKEN=${t.claudeKey}`,
       `export ANTHROPIC_MODEL=${claude}`,
       'npm install -g @anthropic-ai/claude-code@latest && claude',
       F,
@@ -236,7 +266,7 @@ function codeBlocks(site, claude, openai) {
       `${F}powershell`,
       '# Windows PowerShell',
       `$env:ANTHROPIC_BASE_URL = "${anth}"`,
-      '$env:ANTHROPIC_AUTH_TOKEN = "你在站点后台创建的 Key"',
+      `$env:ANTHROPIC_AUTH_TOKEN = "${t.claudeKey}"`,
       `$env:ANTHROPIC_MODEL = "${claude}"`,
       'claude',
       F,
@@ -248,14 +278,14 @@ function codeBlocks(site, claude, openai) {
 
   if (oai) {
     out.push(
-      '<details><summary><b>Codex CLI</b>（OpenAI 兼容，写入 <code>~/.codex/config.toml</code>）</summary>',
+      t.codexSummary,
       '',
       `${F}toml`,
       `model = "${openai}"`,
       `model_provider = "${site.id}"`,
       '',
       `[model_providers.${site.id}]`,
-      `name = "${site.name}"`,
+      `name = "${name}"`,
       `base_url = "${oai}"`,
       `env_key = "${site.id.toUpperCase()}_API_KEY"`,
       'wire_api = "chat"',
@@ -263,26 +293,26 @@ function codeBlocks(site, claude, openai) {
       '',
       '</details>',
       '',
-      '<details><summary><b>OpenAI SDK / Cherry Studio / Cursor 等通用客户端</b></summary>',
+      t.genericSummary,
       '',
       `${F}python`,
       'from openai import OpenAI',
       '',
-      `client = OpenAI(api_key="你的 Key", base_url="${oai}")`,
+      `client = OpenAI(api_key="${t.genericKey}", base_url="${oai}")`,
       `resp = client.chat.completions.create(model="${openai}", messages=[{"role": "user", "content": "ping"}])`,
       'print(resp.choices[0].message.content)',
       F,
       '',
-      '通用客户端只需填两项：**Base URL** = `' + oai + '`，**API Key** = 站点后台创建的 Key。',
+      t.genericNote(oai),
       '',
       '</details>',
       '',
-      '<details><summary><b>连通性自测</b></summary>',
+      t.verifySummary,
       '',
       `${F}bash`,
       `curl -s ${oai}/chat/completions \\`,
       '  -H "Authorization: Bearer $KEY" -H "Content-Type: application/json" \\',
-      `  -d '{"model":"${openai}","messages":[{"role":"user","content":"只回复 OK"}]}'`,
+      `  -d '{"model":"${openai}","messages":[{"role":"user","content":"${t.verifyPrompt}"}]}'`,
       F,
       '',
       '</details>',
@@ -291,7 +321,8 @@ function codeBlocks(site, claude, openai) {
   return out.join('\n');
 }
 
-export function renderReadme({ meta, sites, live, groups = [], history }) {
+export function renderReadme({ meta, sites, live, groups = [], history, lang = DEFAULT_LANG }) {
+  const t = pack(lang);
   const byId = new Map((live?.sites ?? []).map((s) => [s.id, s]));
   const welfare = sites;
   const onlineCount = welfare.filter((s) => byId.get(s.id)?.online).length;
@@ -303,88 +334,81 @@ export function renderReadme({ meta, sites, live, groups = [], history }) {
   // 合计只算美元站：积分与美元没有公开换算，混着加就是编数字（详见 lib/credits.mjs）
   const { count: usdCount, best, total, resetting, others } = usdTotals(plans);
   const codeSites = welfare.filter((s) => s.inviteCode);
-  const extra = othersNote(others);
-  const scope = others.length ? `${usdCount} 个按美元计价、且还收新用户的站` : `${openSites.length} 个还收新用户的站`;
+  // 站点名走 en.name 覆盖：多数站名本来就是拉丁字母，中文名（如「年华 API」）得给个英文写法
+  const nameOf = (s) => siteCopy(s, lang).name;
+  // othersNote 拿的是 creditPlan 的结果，只有 name 字段，回查一次拿到目标语言的站名
+  const byName = new Map(welfare.map((s) => [s.name, s]));
+  const extra = othersNote(others, lang, (p) => (p.name ? nameOf(byName.get(p.name) ?? { name: p.name }) : null));
+  const scope = others.length ? t.callouts.scope(usdCount) : t.callouts.scopeAll(openSites.length);
   const pages = (meta.pagesUrl ?? '').replace(/\/?$/, '/');
+  const sep = lang === DEFAULT_LANG ? '、' : ', ';
 
   const head = [
-    `<h1 align="center">${meta.title}</h1>`,
+    `<h1 align="center">${lang === DEFAULT_LANG ? meta.title : (meta.titleEn ?? meta.title)}</h1>`,
     '',
-    `<p align="center">${meta.tagline}</p>`,
+    `<p align="center">${lang === DEFAULT_LANG ? meta.tagline : (meta.taglineEn ?? meta.tagline)}</p>`,
     '',
-    '<p align="center">',
-    `  <img src="${B('收录福利站', `${welfare.length} 个`, 'blue')}" alt="收录福利站">`,
-    `  <img src="${B('在线', `${onlineCount}/${welfare.length}`, onlineCount === welfare.length ? 'brightgreen' : 'orange')}" alt="在线">`,
-    closedSites.length
-      ? `  <img src="${B('可注册', `${openSites.length}/${welfare.length}`, 'yellow')}" alt="可注册">`
-      : null,
-    best > 0 ? `  <img src="${B('首日可得', `最高 $${best}`, 'success')}" alt="首日可得">` : null,
-    `  <img src="${B('数据更新', fmtDate(live?.generatedAt).replace(/:/g, '.'), 'informational')}" alt="数据更新">`,
+    // 切换链接紧贴标题：读者第一眼就要看见另一版在哪，别埋在页脚
+    t.langSwitch,
+    '',
+    '<p align="center">',    badge(t.badges.sites(welfare.length)),
+    badge(t.badges.online(onlineCount, welfare.length, onlineCount === welfare.length)),
+    closedSites.length ? badge(t.badges.open(openSites.length, welfare.length)) : null,
+    best > 0 ? badge(t.badges.best(best)) : null,
+    badge(t.badges.updated(fmtDate(live?.generatedAt, lang).replace(/:/g, '.'))),
     '</p>',
     '',
     '<p align="center">',
-    welfare.map((s) => `  <a href="${s.signupUrl}"><b>${s.name} 注册</b></a>`).join(' ·\n'),
+    welfare.map((s) => `  <a href="${s.signupUrl}"><b>${nameOf(s)} ${t.table.signupSuffix}</b></a>`).join(' ·\n'),
     '</p>',
     '',
     '---',
     '',
-    '## 🚀 一分钟上车（福利站）',
+    `## ${t.hero.quickTitle}`,
     '',
-    '> 下面两张表都是第三方站点，本仓库只做信息聚合。',
+    t.hero.note,
     '',
-    overviewTable(welfare, byId),
+    overviewTable(welfare, byId, lang),
     '',
-    `> 「首日可得」= 注册基础额度 + 本页邀请链接额度 + 当天能领的签到额度（每日重置额度池的站点按一天的池子算）；模型、价格、在线状态由脚本抓取站点公开接口自动生成，最后更新：\`${fmtDate(live?.generatedAt)}\`。`,
+    t.callouts.firstDay(fmtDate(live?.generatedAt, lang)),
     codeSites.length ? '>' : null,
     // 「—」不等于没有邀请额度，只是不用手打；这一句不写清楚，读者会以为那些站白嫖不到邀请额度
     codeSites.length
-      ? `> 「邀请码」列写了码的站（${codeSites
-          .map((s) => `${s.name} \`${s.inviteCode}\``)
-          .join('、')}），注册表单里有一栏要**自己填**，漏填就只拿得到注册基础额度、事后补不上；其余站写 — 是因为邀请额度由链接自带，不用手打。`
+      ? t.callouts.inviteCode(codeSites.map((s) => `${nameOf(s)} \`${s.inviteCode}\``).join(sep))
       : null,
     total > 0 ? '>' : null,
-    total > 0
-      ? `> ${scope}全注册一遍，第一天手上大约有 **$${total}** 额度可用${resetting ? '（其中每日重置的额度池次日会回满，但不累积）' : ''}${
-          extra ? `；${extra}，都是各站自己的计价单位、与美元没有公开换算，未计入这个合计` : ''
-        }。`
-      : null,
+    total > 0 ? t.callouts.totals(scope, total, resetting, extra) : null,
     closedSites.length ? '>' : null,
-    closedSites.length
-      ? `> 🟡 ${closedSites
-          .map((s) => `**${s.name}**`)
-          .join('、')} 的接口自报已关闭新用户注册（\`register_enabled=false\`），表里额度已划掉、也没算进上面的合计；站点本身还在跑，老用户不受影响，重新开放会记进[变动日志](${pages}changelog/)。`
-      : null,
+    closedSites.length ? t.callouts.closed(closedSites.map((s) => `**${nameOf(s)}**`).join(sep), pages) : null,
     staleCount > 0 ? '>' : null,
-    staleCount > 0
-      ? `> 🟡 有 ${staleCount} 个站点已超过 48 小时没抓到接口数据，其明细为上一次成功抓取的快照；在线状态按注册页实际可访问性判断。`
-      : null,
+    staleCount > 0 ? t.callouts.stale(staleCount) : null,
     '',
-    '**只想快点用上 Claude Code？** 三步：',
+    t.quickstart.lead,
     '',
-    `1. 点上表的注册链接 → 按站点支持的方式登录（GitHub / 邮箱），额度是按邀请链接发放的，别走裸链`,
-    '2. 后台「令牌 / API Keys」新建一个 Key',
-    '3. 跑一键脚本，或手抄下面对应站点的环境变量',
+    `1. ${t.quickstart.steps[0]}`,
+    `2. ${t.quickstart.steps[1]}`,
+    `3. ${t.quickstart.steps[2]}`,
     '',
     `${F}bash`,
-    '# 交互式写好 Claude Code 的环境变量（macOS / Linux）',
+    t.quickstart.bashComment,
     'bash scripts/quickstart.sh',
     F,
     '',
     `${F}powershell`,
-    '# Windows PowerShell',
+    t.quickstart.psComment,
     'powershell -ExecutionPolicy Bypass -File scripts/quickstart.ps1',
     F,
     '',
-    '## 📚 福利站详情',
+    `## ${t.section.details}`,
     '',
   ];
 
-  const body = welfare.map((s) => siteSection(s, byId.get(s.id))).join('\n\n---\n\n');
+  const body = welfare.map((s) => siteSection(s, byId.get(s.id), lang, meta)).join('\n\n---\n\n');
   return [
     head.filter((l) => l !== null).join('\n'),
     body,
-    changesBlock({ groups, history, pages }),
-    tail(meta, sites, live),
+    changesBlock({ groups, history, pages, lang }),
+    tail(meta, sites, live, lang),
   ]
     .filter(Boolean)
     .join('\n\n');
@@ -396,21 +420,13 @@ export function renderReadme({ meta, sites, live, groups = [], history }) {
  * 导航类仓库最大的问题是没人会来第二次：给出 Watch → Releases 和 Atom 两个出口，
  * 让 CI 主动把变动推到用户面前，而不是等用户回来刷 README。
  */
-function changesBlock({ groups, history, pages }) {
+function changesBlock({ groups, history, pages, lang }) {
+  const t = pack(lang).changes;
   const events = groups.flatMap((g) => g.events).slice(0, 6);
   const cov = coverage(history ?? { samples: [] });
-  const lines = [
-    '---',
-    '',
-    '## 🔔 额度变了，这里会通知你',
-    '',
-    `CI 每 6 小时抓一次各站接口，与上一次快照逐字段比对${
-      cov.samples ? `，目前已攒下 ${cov.samples} 个样本、覆盖约 ${cov.days} 天` : ''
-    }。额度调整、掉线与恢复、模型上下线、价格变动都会自动记一条：`,
-    '',
-    '- 点仓库右上角 **Watch → Custom → Releases**：有重要变动时 GitHub 直接发邮件',
-  ];
-  if (events.length) {
+  const lines = ['---', '', `## ${t.title}`, '', t.intro(cov.samples, cov.days), '', t.watch];
+  // 事件文本是抓来的中文公告原文，机器翻出来就是编内容；英文版给一句说明指路
+  if (lang === DEFAULT_LANG && events.length) {
     lines.push(
       '',
       '最近几条：',
@@ -419,106 +435,69 @@ function changesBlock({ groups, history, pages }) {
       '',
       '完整记录见 [CHANGELOG.md](CHANGELOG.md)。',
     );
+  } else if (t.noteZhOnly) {
+    lines.push('', t.noteZhOnly);
   }
   return lines.join('\n');
 }
 
-function tail(meta, sites, live) {
+function tail(meta, sites, live, lang) {
+  const t = pack(lang).tail;
+  const faq = pack(lang).faq;
+  const foot = pack(lang).footer;
+  const contribute = pack(lang).contribute;
+  const disclaimer = pack(lang).disclaimer;
   return [
     '---',
     '',
-    '## 🧰 仓库里有什么',
+    `## ${t.filesTitle}`,
     '',
-    '| 文件 | 作用 |',
+    `| ${t.filesHeaders[0]} | ${t.filesHeaders[1]} |`,
     '| :-- | :-- |',
-    '| [`data/sites.json`](data/sites.json) | 唯一数据源：站点信息与推广链接 |',
-    '| [`data/live.json`](data/live.json) | 自动抓取的实时快照（额度 / 模型 / 在线状态） |',
-    '| [`data/history.json`](data/history.json) | 每 6 小时一个样本的可用性时间序列 |',
-    '| [`data/changelog.json`](data/changelog.json) | 快照比对出来的变动事件流 |',
-    '| [`scripts/refresh.mjs`](scripts/refresh.mjs) | 抓取站点公开接口 |',
-    '| [`scripts/lib/merge.mjs`](scripts/lib/merge.mjs) | 抓取失败时沿用上次快照，页面不会被刷空 |',
-    '| [`scripts/lib/credits.mjs`](scripts/lib/credits.mjs) | 额度口径：注册 + 邀请 + 签到 = 首日可得 |',
-    '| [`scripts/lib/diff.mjs`](scripts/lib/diff.mjs) | 比对两份快照，只挑「影响值不值得注册」的变动 |',
-    '| [`scripts/history.mjs`](scripts/history.mjs) | 归档历史 + 生成 CHANGELOG / Release / 推送素材 |',
-    '| [`scripts/build.mjs`](scripts/build.mjs) | 用数据重新生成 README 与 docs/ 全站 |',
-    '| [`scripts/notify.mjs`](scripts/notify.mjs) | 重要变动推到 Telegram（没配 secret 就跳过） |',
-    '| [`scripts/check.mjs`](scripts/check.mjs) | 链接与站点健康检查，失效即 CI 报警 |',
-    '| [`scripts/test.mjs`](scripts/test.mjs) | 合并逻辑与额度口径的单测（零依赖，`npm test`） |',
-    '| [`scripts/quickstart.sh`](scripts/quickstart.sh) / [`.ps1`](scripts/quickstart.ps1) | 交互式配置 Claude Code 环境变量 |',
+    ...t.files.map(([a, b]) => `| ${a} | ${b} |`),
     '',
-    '本地跑一遍：',
+    t.runTitle,
     '',
     `${F}bash`,
-    'npm test          # 单测（不联网）',
-    'npm run refresh   # 抓最新数据',
-    'npm run history   # 归档历史 + 生成变动日志',
-    'npm run build     # 重新生成 README + docs/',
-    'npm run check     # 校验链接是否还活着',
+    `npm test          ${t.runComments[0]}`,
+    `npm run refresh   ${t.runComments[1]}`,
+    `npm run history   ${t.runComments[2]}`,
+    `npm run build     ${t.runComments[3]}`,
+    `npm run check     ${t.runComments[4]}`,
     F,
     '',
-    '## ❓ 常见问题',
+    `## ${faq.title}`,
     '',
-    '<details><summary><b>注册完为什么看不到额度？</b></summary>',
+    ...faq.items.flatMap(([q, a]) => [`<details><summary><b>${q}</b></summary>`, '', a, '', '</details>', '']),
+    `## ${contribute.title}`,
     '',
-    '公益站的额度多在登录时结算，**退出登录再重新登录一次**通常就会到账；余额偶尔显示 $0 是前端展示问题，稍后刷新即可。',
+    contribute.intro,
     '',
-    '</details>',
+    contribute.issue(`${meta.repoUrl}/issues/new?template=new-site.yml`),
+    contribute.pr,
     '',
-    '<details><summary><b>Claude Code 报 401 / Unauthorized？</b></summary>',
+    contribute.criteria,
     '',
-    '按顺序排查：Base URL 是否误加了 `/v1`（Anthropic 协议不要加）、Key 是否复制完整、模型名是否在站内可用清单里、当前客户端是否属于该站支持的客户端。',
+    `## ${disclaimer.title}`,
     '',
-    '</details>',
+    ...disclaimer.items,
     '',
-    '<details><summary><b>请求返回 400 content blocked？</b></summary>',
-    '',
-    '部分站点只放行中 / 英 / 法 / 德 / 俄，提示词里混入其它语言会被上游拦截，换语言重试即可。',
-    '',
-    '</details>',
-    '',
-    '<details><summary><b>之前登录过 Claude Pro / Max，切过来会冲突吗？</b></summary>',
-    '',
-    '会。环境变量优先级高于订阅登录，想切回官方订阅就 `unset ANTHROPIC_BASE_URL ANTHROPIC_AUTH_TOKEN ANTHROPIC_MODEL` 后重开终端。',
-    '',
-    '</details>',
-    '',
-    tailFooter(meta, sites),
-  ].join('\n');
-}
-
-function tailFooter(meta, sites) {
-  return [
-    '## 🤝 收录新的福利站',
-    '',
-    '发现好用的公益站 / 中转站？两种方式：',
-    '',
-    `- 提 [Issue](${meta.repoUrl}/issues/new?template=new-site.yml) 填个表单，我来收录`,
-    '- 或者直接 PR：往 `data/sites.json` 加一条，跑 `npm run refresh && npm run build` 后提交',
-    '',
-    '收录标准：**能免费拿到额度**、注册流程不套娃、站点公开接口可探测。',
-    '',
-    '## ⚠️ 免责声明',
-    '',
-    '- 本页注册链接为**邀请链接**，通过它注册双方都会获得站点发放的额度；不影响你的注册流程与额度多少。',
-    '- 本仓库只做信息聚合，**与各站点无隶属关系**，不代收费用、不承诺可用性。公益站随时可能改规则、限速或关站。',
-    '- 请勿把生产密钥、隐私数据、企业代码丢给来源不明的中转服务；重要项目请用官方 API。',
-    '- 请遵守各站点与上游模型服务商的使用条款，禁止批量注册、刷量、转售额度等行为，封号自负。',
-    '- 页面上的额度 / 模型 / 价格由脚本自动抓取，仅代表抓取那一刻的状态，**一切以站内实时公示为准**。',
-    '',
-    '## 💬 交流群',
+    `## ${t.groupTitle}`,
     '',
     '<p align="center">',
-    '  <img src="docs/assets/qq-group.jpg" width="260" alt="QQ 群二维码 GCMP-福利站 1125690737">',
+    `  <img src="docs/assets/qq-group.jpg" width="260" alt="${t.groupAlt}">`,
     '</p>',
     '',
-    '<p align="center">QQ 群：<b>1125690737</b>（GCMP-福利站） · 扫码或搜群号加入，第一时间获取站点变动与上车技巧。</p>',
+    `<p align="center">${t.groupDesc}</p>`,
     '',
     '---',
     '',
-    `<p align="center"><b>觉得有用点个 ⭐ Star</b>，福利站有变动时这里会自动更新。</p>`,
+    `<p align="center">${foot.star}</p>`,
     '',
-    `<sub>关键词：${(meta.keywords ?? []).join(' · ')}</sub>`,
+    foot.keywords(
+      (lang === DEFAULT_LANG ? (meta.keywords ?? []) : (meta.keywordsEn ?? meta.keywords ?? [])).join(' · '),
+    ),
     '',
-    `<!-- 本文件由 scripts/build.mjs 自动生成，请修改 data/sites.json 或 scripts/lib/render-readme.mjs -->`,
+    foot.generated,
   ].join('\n');
 }

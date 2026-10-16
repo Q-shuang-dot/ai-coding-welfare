@@ -10,20 +10,22 @@
  *   - 只是关了邮箱注册就写成「已关闭注册」→ 明明能用 GitHub 进，白劝退一个人
  * 所以四种状态分开说，接口没给字段（AgentRouter 那种旧版面板）就什么都不声称。
  */
+import { pack, loginMethod, DEFAULT_LANG } from './i18n.mjs';
 
 /** 账号密码是「登录方式」里唯一不算 OAuth 的一项，注册通道要把它排掉 */
 const PASSWORD = '账号密码';
 
-export function signupRoute(snap) {
+export function signupRoute(snap, lang = DEFAULT_LANG) {
+  const t = pack(lang).signup;
   const open = snap?.registerOpen;
-  const oauth = (snap?.loginMethods ?? []).filter((m) => m !== PASSWORD);
+  const oauth = (snap?.loginMethods ?? []).filter((m) => m !== PASSWORD).map((m) => loginMethod(m, lang));
 
   if (open === false) {
     return {
       state: 'closed',
-      short: '暂停注册',
+      short: t.closedShort,
       // 上游把 OAuth 建号也挂在总闸下，所以这里不承诺「GitHub 还能进」，只说明观测到什么
-      note: '站点接口自报已关闭新用户注册，现在点进去大概注册不上；已注册的老用户不受影响。',
+      note: t.closedNote,
       oauth,
     };
   }
@@ -31,13 +33,13 @@ export function signupRoute(snap) {
   if (open === true && snap?.passwordRegister === false && oauth.length) {
     return {
       state: 'oauth',
-      short: `仅 ${oauth.join(' / ')} 注册`,
-      note: `站点关掉了邮箱密码注册，得用 ${oauth.join(' / ')} 登录建号（防批量注册的常规做法）。`,
+      short: t.oauthShort(oauth.join(' / ')),
+      note: t.oauthNote(oauth.join(' / '), t.openShort),
       oauth,
     };
   }
 
-  if (open === true) return { state: 'open', short: '开放注册', note: null, oauth };
+  if (open === true) return { state: 'open', short: t.openShort, note: null, oauth };
   return { state: 'unknown', short: null, note: null, oauth };
 }
 

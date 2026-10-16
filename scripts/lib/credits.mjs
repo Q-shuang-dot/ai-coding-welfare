@@ -16,22 +16,13 @@
  * 同理，DoCode 这类站虽然也写「刀」，但它的刀是站内计价单位（充值比例 1 元 = 50 刀），
  * 和按 ¥7.3 ≈ $1 发额度的站不是一个量级，登记成 site-usd 一样排除在合计之外。
  */
+import { pack, unitStyle, DEFAULT_LANG } from './i18n.mjs';
 
 const num = (v) => (Number.isFinite(Number(v)) && Number(v) > 0 ? Number(v) : null);
 
-/** 已知计价单位的显示方式；未登记的单位原样后缀显示，绝不擅自加 $ */
-const UNITS = {
-  usd: { prefix: '$', suffix: '' },
-  point: { prefix: '', suffix: ' 积分' },
-  'site-usd': { prefix: '', suffix: ' 站内刀' },
-  free: { prefix: '', suffix: '' },
-};
-
 export const DEFAULT_UNIT = 'usd';
 
-const unitStyle = (unit) => UNITS[unit] ?? { prefix: '', suffix: ` ${unit}` };
-
-export const KNOWN_UNITS = Object.keys(UNITS);
+export const KNOWN_UNITS = ['usd', 'point', 'site-usd', 'free'];
 
 export function creditPlan(site, snap) {
   const c = site?.credits ?? {};
@@ -81,32 +72,35 @@ export function creditPlan(site, snap) {
 }
 
 /** $175 / ≈$92 / 600 积分 / 免费 */
-export function usd(n, approx = false, unit = DEFAULT_UNIT) {
+export function usd(n, approx = false, unit = DEFAULT_UNIT, lang = DEFAULT_LANG) {
   if (n == null) return null;
-  if (unit === 'free') return '免费';
-  const { prefix, suffix } = unitStyle(unit);
+  if (unit === 'free') return pack(lang).credit.free;
+  const { prefix, suffix } = unitStyle(unit, lang);
   return `${approx ? '≈' : ''}${prefix}${n}${suffix}`;
 }
 
 /** 「之后每天」列：签到是往账户里加，额度池是每天重置回同一个数 */
-export function perDay(plan) {
+export function perDay(plan, lang = DEFAULT_LANG) {
   if (plan.daily == null) return null;
-  return `${usd(plan.daily, plan.approx, plan.unit)}/天${plan.resets ? '（重置）' : ''}`;
+  return pack(lang).credit.perDay(usd(plan.daily, plan.approx, plan.unit, lang), plan.resets);
 }
 
 /** 「注册 $100 + 本页邀请 $50 + 首签 $25」／「每日额度池 $50（每天重置，不累积）」 */
-export function breakdown(plan) {
+export function breakdown(plan, lang = DEFAULT_LANG) {
+  const t = pack(lang).credit;
   const items = [
-    plan.signup != null ? `注册 ${usd(plan.signup, false, plan.unit)}` : null,
-    plan.invite != null ? `本页邀请 ${usd(plan.invite, false, plan.unit)}` : null,
-    plan.realNameBonus != null ? `实名认证 ${usd(plan.realNameBonus, false, plan.unit)}` : null,
-    plan.daily != null ? `${plan.resets ? '每日额度池' : '首签'} ${usd(plan.daily, plan.approx, plan.unit)}` : null,
+    plan.signup != null ? t.breakdownSignup(usd(plan.signup, false, plan.unit, lang)) : null,
+    plan.invite != null ? t.breakdownInvite(usd(plan.invite, false, plan.unit, lang)) : null,
+    plan.realNameBonus != null ? t.breakdownRealName(usd(plan.realNameBonus, false, plan.unit, lang)) : null,
+    plan.daily != null
+      ? (plan.resets ? t.breakdownPool : t.breakdownCheckin)(usd(plan.daily, plan.approx, plan.unit, lang))
+      : null,
   ].filter(Boolean);
   if (items.length > 1) return items.join(' + ');
   if (items.length !== 1) return null;
   // 只有一项时也要把这一项说清楚：额度池的关键信息是「不累积」，
   // 只有邀请额度的站点则要让人看见「这笔钱全靠邀请链接」，比留个「—」有用
-  return plan.resets ? `${items[0]}（每天重置，不累积）` : items[0];
+  return plan.resets ? `${items[0]}${t.poolSuffix}` : items[0];
 }
 
 /**
@@ -126,9 +120,12 @@ export function usdTotals(plans) {
 }
 
 /** 「Matrix 另发 600 积分」——合计里装不下的单位，如实单独说一句 */
-export function othersNote(others) {
+export function othersNote(others, lang = DEFAULT_LANG, nameOf = (p) => p.name) {
   if (!others?.length) return null;
-  return others.map((p) => `${p.name ?? '该站'} 另发 ${usd(p.firstDay, p.approx, p.unit)}`).join('，');
+  const t = pack(lang).credit;
+  return others
+    .map((p) => t.othersItem(nameOf(p) ?? pack(lang).common.unknown, usd(p.firstDay, p.approx, p.unit, lang)))
+    .join(t.othersJoin);
 }
 
 /** 登记值与接口实测值不一致时提醒维护者更新，别让页面上的数字烂掉 */
