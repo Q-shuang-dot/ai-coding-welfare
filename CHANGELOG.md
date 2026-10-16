@@ -8,6 +8,7 @@ AI 福利站 · Claude Code / Codex 免费额度白嫖导航的自动变动记�
 
 ## 2026-10-16
 
+- ➖ Orbelis 下线模型：claude-opus-4-6-thinking、claude-opus-5-5-high、claude-sonnet-5-5-high、gemini-3-flash 等 14 个 <sub>11:24 UTC</sub>
 - ➖ Orbelis 下线模型：deepseek-v4-flash-0731、glm-5.1、glm-5.2、glm-5.2-fast-preview 等 15 个 <sub>04:09 UTC</sub>
 
 ## 2026-10-15
