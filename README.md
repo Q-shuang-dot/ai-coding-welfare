@@ -1,8 +1,8 @@
+<p align="center"><b>中文</b> ｜ <a href="README.en.md">English</a></p>
+
 <h1 align="center">AI 福利站 · Claude Code / Codex 免费额度白嫖导航</h1>
 
 <p align="center">免费额度 · 白嫖 Claude Code / Codex / Cursor 的中转与公益站合集 · 每日签到领福利</p>
-
-<p align="center"><a href="README.en.md"><b>English version →</b></a></p>
 
 <p align="center">
   <img src="https://img.shields.io/badge/%E6%94%B6%E5%BD%95%E7%A6%8F%E5%88%A9%E7%AB%99-11%20%E4%B8%AA-blue" alt="收录福利站">
@@ -1500,7 +1500,7 @@ curl -s https://aaawinn.xyz/v1/chat/completions \
 
 **实时数据**（自动抓取站点公开接口）
 
-- ⚠ 接口已连续 158 小时没抓到新数据，下列信息为 `2026-10-09 13:16 UTC` 的快照
+- ⚠ 接口已连续 159 小时没抓到新数据，下列信息为 `2026-10-09 13:16 UTC` 的快照
 - 站点名称：**新疆幻城网安科技公益大模型安全网关**
 - 面板版本：`v1.0.0-rc.40-hc2`
 - 每日签到：✅

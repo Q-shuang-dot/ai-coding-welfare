@@ -1114,16 +1114,20 @@ test('英文版没有未知语言回退：lang 写错也不能炸，回落到中
   assert.match(md, /福利站详情/, '未知语言回落到默认语言');
 });
 
-test('英文版用 meta.titleEn / taglineEn，两边都在标题附近给出切到对方的入口', () => {
+test('语言切换条在整页第一行，当前语言不可点、另一种语言是链接', () => {
   const md = renderEn();
   assert.match(md, /<h1 align="center">AI Welfare Hub<\/h1>/);
   assert.match(md, /Free credits, tracked/);
-  assert.match(md, /<a href="README\.md"><b>← 中文版（Chinese）<\/b><\/a>/);
+  // 第一行就是切换条：比标题还靠前，读者一眼就能看见
+  assert.equal(md.split('\n')[0], '<p align="center"><a href="README.md">中文</a> ｜ <b>English</b></p>');
+  assert.match(md, /<a href="README\.md">中文<\/a> ｜ <b>English<\/b>/);
+
   const zh = renderReadme({ meta: META, sites: [SITE], live: LIVE, groups: [], history: HIST });
-  // 中文是首页主版本，这一行是海外访客的唯一入口：必须写明这是「英文版」，
-  // 只写「English」两个字容易被当成装饰忽略（2026-10-16 实测，用户自己就没看见）
-  assert.match(zh, /<a href="README\.en\.md"><b>English version →<\/b><\/a>/, '中文版也要能切到英文');
-  assert.match(zh, /English version/, '入口文案要说明那是英文版整页');
+  assert.equal(zh.split('\n')[0], '<p align="center"><b>中文</b> ｜ <a href="README.en.md">English</a></p>');
+  assert.match(zh, /<b>中文<\/b> ｜ <a href="README\.en\.md">English<\/a>/, '中文版也要能切到英文');
+  // 当前语言不能做成链接（点了原地不动，像坏链）
+  assert.doesNotMatch(zh, /<a href="README\.md">中文<\/a>/);
+  assert.doesNotMatch(md, /<a href="README\.en\.md">English<\/a>/);
 });
 
 test('英文版的章节标题、表格表头、FAQ、免责声明全部是英文', () => {

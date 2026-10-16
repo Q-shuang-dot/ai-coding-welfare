@@ -1,8 +1,8 @@
+<p align="center"><a href="README.md">中文</a> ｜ <b>English</b></p>
+
 <h1 align="center">AI Welfare Hub · Free Claude Code / Codex credit tracker</h1>
 
 <p align="center">Free credits · a collection of relay and community services for free Claude Code / Codex / Cursor quota · daily check-ins</p>
-
-<p align="center"><a href="README.md"><b>← 中文版（Chinese）</b></a></p>
 
 <p align="center">
   <img src="https://img.shields.io/badge/Tracked%20services-11-blue" alt="Tracked services">
@@ -1449,7 +1449,7 @@ curl -s https://aaawinn.xyz/v1/chat/completions \
 
 **Live data** (scraped from public APIs)
 
-- ⚠ No fresh API data for 158 hours; the info below is a snapshot from `2026-10-09 13:16 UTC`
+- ⚠ No fresh API data for 159 hours; the info below is a snapshot from `2026-10-09 13:16 UTC`
 - Panel version: `v1.0.0-rc.40-hc2`
 - Daily check-in: ✅
 - Open signups: ✅

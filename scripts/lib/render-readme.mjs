@@ -344,14 +344,15 @@ export function renderReadme({ meta, sites, live, groups = [], history, lang = D
   const sep = lang === DEFAULT_LANG ? '、' : ', ';
 
   const head = [
+    // 语言切换条放整页第一行：这是给海外访客的入口，比标题还靠前，一眼就能看见
+    t.langBar,
+    '',
     `<h1 align="center">${lang === DEFAULT_LANG ? meta.title : (meta.titleEn ?? meta.title)}</h1>`,
     '',
     `<p align="center">${lang === DEFAULT_LANG ? meta.tagline : (meta.taglineEn ?? meta.tagline)}</p>`,
     '',
-    // 切换链接紧贴标题：读者第一眼就要看见另一版在哪，别埋在页脚
-    t.langSwitch,
-    '',
-    '<p align="center">',    badge(t.badges.sites(welfare.length)),
+    '<p align="center">',
+    badge(t.badges.sites(welfare.length)),
     badge(t.badges.online(onlineCount, welfare.length, onlineCount === welfare.length)),
     closedSites.length ? badge(t.badges.open(openSites.length, welfare.length)) : null,
     best > 0 ? badge(t.badges.best(best)) : null,
