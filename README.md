@@ -2,7 +2,7 @@
 
 <p align="center">免费额度 · 白嫖 Claude Code / Codex / Cursor 的中转与公益站合集 · 每日签到领福利</p>
 
-<p align="center"><a href="README.en.md"><b>English</b></a></p>
+<p align="center"><a href="README.en.md"><b>English version →</b></a></p>
 
 <p align="center">
   <img src="https://img.shields.io/badge/%E6%94%B6%E5%BD%95%E7%A6%8F%E5%88%A9%E7%AB%99-11%20%E4%B8%AA-blue" alt="收录福利站">

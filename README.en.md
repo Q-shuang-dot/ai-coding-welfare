@@ -2,7 +2,7 @@
 
 <p align="center">Free credits · a collection of relay and community services for free Claude Code / Codex / Cursor quota · daily check-ins</p>
 
-<p align="center"><a href="README.md"><b>中文</b></a></p>
+<p align="center"><a href="README.md"><b>← 中文版（Chinese）</b></a></p>
 
 <p align="center">
   <img src="https://img.shields.io/badge/Tracked%20services-11-blue" alt="Tracked services">

@@ -41,7 +41,7 @@ const en = {
 
   common: { unknown: 'unknown' },
 
-  langSwitch: '<p align="center"><a href="README.md"><b>中文</b></a></p>',
+  langSwitch: '<p align="center"><a href="README.md"><b>← 中文版（Chinese）</b></a></p>',
 
   badges: {
     sites: (n) => ({ label: 'Tracked services', msg: `${n}`, color: 'blue' }),
@@ -311,7 +311,9 @@ const zh = {
 
   common: { unknown: '未知' },
 
-  langSwitch: '<p align="center"><a href="README.en.md"><b>English</b></a></p>',
+  // 首页主版本是中文，这一行是给海外访客的入口：只有链接本身看不出这是「另一版完整页面」，
+  // 所以补一句标注（English version），别只写「English」两个字
+  langSwitch: '<p align="center"><a href="README.en.md"><b>English version →</b></a></p>',
 
   badges: {
     sites: (n) => ({ label: '收录福利站', msg: `${n} 个`, color: 'blue' }),
