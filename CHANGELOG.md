@@ -6,6 +6,10 @@ AI 福利站 · Claude Code / Codex 免费额度白嫖导航的自动变动记�
 
 > 只记录会影响「值不值得注册」的字段。探测被站点 WAF 拦下时不记在线状态变化，避免机房 IP 被拦被误报成掉线。
 
+## 2026-10-16
+
+- ➖ Orbelis 下线模型：deepseek-v4-flash-0731、glm-5.1、glm-5.2、glm-5.2-fast-preview 等 15 个 <sub>04:09 UTC</sub>
+
 ## 2026-10-15
 
 - ➕ 年华 API 上线模型：bge-m3、bge-multilingual-gemma2、cohere/north-mini-code:free、DeepSeek-V4-Flash-0731 等 38 个 <sub>17:00 UTC</sub>
