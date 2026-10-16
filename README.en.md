@@ -1,4 +1,4 @@
-<p align="center"><a href="README.md">中文</a> ｜ <b>English</b></p>
+<p align="center"><a href="README.md"><kbd>　中文　</kbd></a>　<kbd>　English　</kbd></p>
 
 <h1 align="center">AI Welfare Hub · Free Claude Code / Codex credit tracker</h1>
 

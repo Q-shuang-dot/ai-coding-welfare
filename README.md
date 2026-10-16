@@ -1,4 +1,4 @@
-<p align="center"><b>中文</b> ｜ <a href="README.en.md">English</a></p>
+<p align="center"><kbd>　中文　</kbd>　<a href="README.en.md"><kbd>　English　</kbd></a></p>
 
 <h1 align="center">AI 福利站 · Claude Code / Codex 免费额度白嫖导航</h1>
 

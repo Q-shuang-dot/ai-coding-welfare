@@ -1114,20 +1114,24 @@ test('英文版没有未知语言回退：lang 写错也不能炸，回落到中
   assert.match(md, /福利站详情/, '未知语言回落到默认语言');
 });
 
-test('语言切换条在整页第一行，当前语言不可点、另一种语言是链接', () => {
+test('语言切换条在整页第一行，用 kbd 做成 tab 样式，当前语言不可点', () => {
   const md = renderEn();
   assert.match(md, /<h1 align="center">AI Welfare Hub<\/h1>/);
   assert.match(md, /Free credits, tracked/);
   // 第一行就是切换条：比标题还靠前，读者一眼就能看见
-  assert.equal(md.split('\n')[0], '<p align="center"><a href="README.md">中文</a> ｜ <b>English</b></p>');
-  assert.match(md, /<a href="README\.md">中文<\/a> ｜ <b>English<\/b>/);
+  assert.equal(
+    md.split('\n')[0],
+    '<p align="center"><a href="README.md"><kbd>　中文　</kbd></a>　<kbd>　English　</kbd></p>',
+  );
 
   const zh = renderReadme({ meta: META, sites: [SITE], live: LIVE, groups: [], history: HIST });
-  assert.equal(zh.split('\n')[0], '<p align="center"><b>中文</b> ｜ <a href="README.en.md">English</a></p>');
-  assert.match(zh, /<b>中文<\/b> ｜ <a href="README\.en\.md">English<\/a>/, '中文版也要能切到英文');
+  assert.equal(
+    zh.split('\n')[0],
+    '<p align="center"><kbd>　中文　</kbd>　<a href="README.en.md"><kbd>　English　</kbd></a></p>',
+  );
   // 当前语言不能做成链接（点了原地不动，像坏链）
-  assert.doesNotMatch(zh, /<a href="README\.md">中文<\/a>/);
-  assert.doesNotMatch(md, /<a href="README\.en\.md">English<\/a>/);
+  assert.doesNotMatch(zh, /<a href="README\.md">/, '中文版里「中文」不该是链接');
+  assert.doesNotMatch(md, /<a href="README\.en\.md">/, '英文版里「English」不该是链接');
 });
 
 test('英文版的章节标题、表格表头、FAQ、免责声明全部是英文', () => {

@@ -41,8 +41,10 @@ const en = {
 
   common: { unknown: 'unknown' },
 
-  // 语言切换条：英文版里英文加粗不可点、中文是链接
-  langBar: '<p align="center"><a href="README.md">中文</a> ｜ <b>English</b></p>',
+  // 语言切换条：<kbd> 会被 GitHub 渲染成带边框的小方块，比纯文字更像 tab。
+  // 实测（api.github.com/markdown）kbd 与「链接套 kbd」都不会被 sanitizer 剥掉。
+  // 全角空格是为了让方块有内边距，GitHub 会保留。
+  langBar: '<p align="center"><a href="README.md"><kbd>　中文　</kbd></a>　<kbd>　English　</kbd></p>',
 
   badges: {
     sites: (n) => ({ label: 'Tracked services', msg: `${n}`, color: 'blue' }),
@@ -312,8 +314,8 @@ const zh = {
 
   common: { unknown: '未知' },
 
-  // 语言切换条：中文是主版本，所以中文加粗不可点、英文是链接
-  langBar: '<p align="center"><b>中文</b> ｜ <a href="README.en.md">English</a></p>',
+  // 语言切换条：中文是主版本，所以「中文」是不可点的 kbd、「English」是链接
+  langBar: '<p align="center"><kbd>　中文　</kbd>　<a href="README.en.md"><kbd>　English　</kbd></a></p>',
 
   badges: {
     sites: (n) => ({ label: '收录福利站', msg: `${n} 个`, color: 'blue' }),
