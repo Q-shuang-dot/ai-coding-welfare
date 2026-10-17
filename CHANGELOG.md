@@ -6,6 +6,11 @@ AI 福利站 · Claude Code / Codex 免费额度白嫖导航的自动变动记�
 
 > 只记录会影响「值不值得注册」的字段。探测被站点 WAF 拦下时不记在线状态变化，避免机房 IP 被拦被误报成掉线。
 
+## 2026-10-17
+
+- ➖ Orbelis 下线模型：gpt-5.3-codex-spark、qwen3.8-max <sub>15:34 UTC</sub>
+- 📢 新疆幻城网安 发了公告：DeepSeek-V4.1-Flash我站svip已经切换为DeepSeek-V4.1-Flash-10.17您无需改动，正常使用即可使用1017最新版，免费用户目前依旧没有切换为最新版，请耐心等待 <sub>15:34 UTC</sub>
+
 ## 2026-10-16
 
 - ➕ Orbelis 上线模型：claude-haiku-5-5 <sub>16:39 UTC</sub>
