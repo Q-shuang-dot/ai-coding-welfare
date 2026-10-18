@@ -8,7 +8,7 @@
   <img src="https://img.shields.io/badge/Tracked%20services-11-blue" alt="Tracked services">
   <img src="https://img.shields.io/badge/Online-11%2F11-brightgreen" alt="Online">
   <img src="https://img.shields.io/badge/Best%20first%20day-%24175-success" alt="Best first day">
-  <img src="https://img.shields.io/badge/Data%20updated-2026--10--18%2004.33%20UTC-informational" alt="Data updated">
+  <img src="https://img.shields.io/badge/Data%20updated-2026--10--18%2011.04%20UTC-informational" alt="Data updated">
 </p>
 
 <p align="center">
@@ -36,7 +36,7 @@
 | **AgentRouter** 🔥 | 🟢 Online | **$175** | signup $100 + this page's invite $50 + first check-in $25 | $25/day | Anthropic + OpenAI | 4 listed | <a href="https://agentrouter.org/register?aff=aibw" target="_blank" rel="noopener">Sign up →</a> | — |
 | **DoCode** | 🟢 Online | **300 site-USD** | signup 50 site-USD + this page's invite 250 site-USD | No check-in | Anthropic + OpenAI | Sign in to see | <a href="https://docode.cc/register?aff=1Qof" target="_blank" rel="noopener">Sign up →</a> | `1Qof` |
 | **NianHua API** | 🟢 Online | Posted on site | — | Daily check-in | Anthropic + OpenAI | 143 listed | <a href="https://us-3.nianhuaapi.com/sign-up?aff=aonj" target="_blank" rel="noopener">Sign up →</a> | `aonj` |
-| **Orbelis** | 🟢 Online | **1 site-USD** | this page's invite 1 site-USD | Daily check-in | Anthropic + OpenAI | 96 listed | <a href="https://nova.vcrauo.com/sign-up?aff=0hvb" target="_blank" rel="noopener">Sign up →</a> | `0hvb` |
+| **Orbelis** | 🟢 Online | **1 site-USD** | this page's invite 1 site-USD | Daily check-in | Anthropic + OpenAI | 125 listed | <a href="https://nova.vcrauo.com/sign-up?aff=0hvb" target="_blank" rel="noopener">Sign up →</a> | `0hvb` |
 | **ShawnAI** | 🟢 Online | **≈14000 pts** | signup 7000 pts + this page's invite 5000 pts + first check-in ≈2000 pts | ≈2000 pts/day | Anthropic + OpenAI | Sign in to see | <a href="https://free.supxh.xin/register?code=MVU8GX" target="_blank" rel="noopener">Sign up →</a> | `MVU8GX` |
 | **api456.me** | 🟢 Online | **$50** | signup $20 + this page's invite $20 + first check-in $10 | $10/day | OpenAI | Sign in to see | <a href="https://api456.me/register?aff=zmza" target="_blank" rel="noopener">Sign up →</a> | `zmza` |
 | **JustDoWork** | 🟢 Online | Posted on site | — | Daily check-in | Anthropic + OpenAI | Sign in to see | <a href="https://api.justwoker.icu/register?aff=OIWh" target="_blank" rel="noopener">GitHub sign up →</a> | `OIWh` |
@@ -45,7 +45,7 @@
 | **Long's AI** | 🟢 Online | Free | Free tier, zero cost | No check-in | Anthropic + OpenAI | Sign in to see | <a href="https://aaawinn.xyz/sign-up?aff=ijFL" target="_blank" rel="noopener">GitHub sign up →</a> | `ijFL` |
 | **Xinjiang Huancheng Security** | 🟢 Online | **30000 site-USD** | signup 30000 site-USD | Daily check-in | Anthropic + OpenAI | Sign in to see | <a href="https://api.hcnsec.cn/sign-up?aff=3J8z" target="_blank" rel="noopener">Sign up →</a> | `3J8z` |
 
-> "First day" = signup bonus + invite bonus from this page + whatever check-in pays out on day one (services with a daily reset pool count a single day's pool). Models, prices and status are scraped from each service's public API. Last update: `2026-10-18 04:33 UTC`.
+> "First day" = signup bonus + invite bonus from this page + whatever check-in pays out on day one (services with a daily reset pool count a single day's pool). Models, prices and status are scraped from each service's public API. Last update: `2026-10-18 11:04 UTC`.
 >
 > Services with a code in the "Invite code" column (DoCode `1Qof`, NianHua API `aonj`, Orbelis `0hvb`, ShawnAI `MVU8GX`, api456.me `zmza`, JustDoWork `OIWh`, SeekAi `dDJy`, Long's AI `ijFL`, Xinjiang Huancheng Security `3J8z`) require **typing the code yourself** in the signup form. Miss it and you only get the base signup bonus — it cannot be added afterwards. A dash means the invite bonus travels inside the link and needs no typing.
 >
@@ -94,12 +94,12 @@ powershell -ExecutionPolicy Bypass -File scripts/quickstart.ps1
 
 **Live data** (scraped from public APIs)
 
-- ⚠ No fresh API data for 73 hours; the info below is a snapshot from `2026-10-15 03:05 UTC`
+- ⚠ No fresh API data for 80 hours; the info below is a snapshot from `2026-10-15 03:05 UTC`
 - Panel name: **Agent Router**
 - Panel version: `init-20261009-3d8bb4d7`
 - Referral bonus: **$50**
 - Login methods: GitHub / LinuxDO
-- API latency: 297 ms
+- API latency: 329 ms
 
 **Mirrors / alternate entry points**
 
@@ -229,7 +229,7 @@ curl -s https://agentrouter.org/v1/chat/completions \
 - Daily check-in: ❌
 - Open signups: ✅
 - Login methods: Email + password
-- API latency: 746 ms
+- API latency: 2816 ms
 
 **Mirrors / alternate entry points**
 
@@ -344,7 +344,7 @@ curl -s https://docode.cc/v1/chat/completions \
 - Daily check-in: ✅
 - Open signups: ✅
 - Login methods: Email + password
-- API latency: 979 ms
+- API latency: 3176 ms
 
 **Available models**
 
@@ -618,7 +618,7 @@ curl -s https://us-3.nianhuaapi.com/v1/chat/completions \
 - Daily check-in: ✅
 - Open signups: ✅
 - Login methods: GitHub / LinuxDO / Email + password
-- API latency: 1012 ms
+- API latency: 3250 ms
 
 **Available models**
 
@@ -626,13 +626,13 @@ curl -s https://us-3.nianhuaapi.com/v1/chat/completions \
 | :-- | :--: | :--: | :--: | :--: |
 | `a-2.0-720p-v1` | 37.5 | $75 | $75 | openai |
 | `a-2.5-hs-1080p` | 37.5 | $75 | $75 | openai |
-| `Adobe-gpt-image-2` | 37.5 | $75 | $75 | openai |
-| `Adobe-gpt-image-2.5-flare` | 37.5 | $75 | $75 | openai |
-| `Adobe-gpt-image-2.5-sunburst` | 37.5 | $75 | $75 | openai |
-| `Adobe-gpt-image-medium` | 37.5 | $75 | $75 | openai |
-| `AZ-gpt-image-2` | per call | **$0.08 / call** | — | openai |
-| `AZ-gpt-image-2.5-flare` | per call | **$0.08 / call** | — | openai |
-| `AZ-gpt-image-2.5-sunburst` | per call | **$0.08 / call** | — | openai |
+| `Adobe-gpt-image-2` | 37.5 | $75 | $75 | image-generation / openai |
+| `Adobe-gpt-image-2.5-flare` | 37.5 | $75 | $75 | image-generation / openai |
+| `Adobe-gpt-image-2.5-sunburst` | 37.5 | $75 | $75 | image-generation / openai |
+| `Adobe-gpt-image-medium` | 37.5 | $75 | $75 | image-generation / openai |
+| `AZ-gpt-image-2` | per call | **$0.08 / call** | — | image-generation / openai |
+| `AZ-gpt-image-2.5-flare` | per call | **$0.08 / call** | — | image-generation / openai |
+| `AZ-gpt-image-2.5-sunburst` | per call | **$0.08 / call** | — | image-generation / openai |
 | `claude-fable-5` | 5 | $10 | $50 | anthropic / openai |
 | `claude-fable-5-1` | 5 | $10 | $50 | anthropic / openai |
 | `claude-fable-5.1` | 5 | $10 | $50 | anthropic / openai |
@@ -649,15 +649,29 @@ curl -s https://us-3.nianhuaapi.com/v1/chat/completions \
 | `claude-sonnet-5` | 1.5 | $3 | $15 | anthropic / openai |
 | `claude-sonnet-5-5` | 37.5 | $75 | $75 | anthropic / openai |
 | `codex-auto-review` | 0.1 | $0.2 | $1.2 | openai |
+| `deepseek-v4-flash-0731` | 37.5 | $75 | $75 | openai |
 | `DeepSeek-V4-Flash[free]` | per call | **$0.01 / call** | — | openai |
-| `deepseek-v4-pro` | 1.5 | $3 | $15 | openai |
 | `deepseek-v4-pro-0813` | 37.5 | $75 | $75 | openai |
 | `deepseek-v4.1-flash` | 0.5 | $1 | $4 | openai |
+| `deepseek-v4.1-flash-1017` | 37.5 | $75 | $75 | openai |
 | `deepseek/deepseek-v4-flash-0731:free` | 0.5 | $1 | $4 | openai |
 | `gemini-2.5-flash-image` | per call | **$0.08 / call** | — | gemini / openai |
+| `gemini-3-flash` | 37.5 | $75 | $300 | gemini / openai |
 | `gemini-3-pro-image-preview` | per call | **$0.12 / call** | — | gemini / openai |
+| `gemini-3.1-flash-image` | 37.5 | $75 | $300 | gemini / openai |
 | `gemini-3.1-flash-image-preview` | per call | **$0.08 / call** | — | gemini / openai |
+| `gemini-3.5-flash-extra-low` | 37.5 | $75 | $300 | gemini / openai |
+| `gemini-3.5-flash-low` | 37.5 | $75 | $300 | gemini / openai |
+| `gemini-3.8-flash` | 0.375 | $0.75 | $3.75 | gemini / openai |
+| `gemini-3.8-flash-high` | 37.5 | $75 | $300 | gemini / openai |
+| `gemini-3.8-flash-low` | 37.5 | $75 | $300 | gemini / openai |
+| `gemini-3.8-flash-medium` | 37.5 | $75 | $300 | gemini / openai |
+| `gemini-3.8-flash-tiered` | 37.5 | $75 | $300 | gemini / openai |
+| `glm-5.1` | 37.5 | $75 | $75 | openai |
+| `glm-5.2` | 4 | $8 | $28 | openai |
 | `glm-5.3` | 4 | $8 | $28 | openai |
+| `glm-5.3-flash` | 0.4 | $0.8 | $2.8 | openai |
+| `glm-5.3-flashx` | 37.5 | $75 | $75 | openai |
 | `google/gemma-4-31b-it` | per call | **$0.01 / call** | — | openai |
 | `gpt-4.1` | 37.5 | $75 | $150 | openai |
 | `gpt-4.1-mini` | 37.5 | $75 | $150 | openai |
@@ -675,9 +689,9 @@ curl -s https://us-3.nianhuaapi.com/v1/chat/completions \
 | `gpt-6-astra` | 5 | $10 | $50 | openai |
 | `gpt-6-sol` | 1 | $2 | $10 | openai |
 | `gpt-6.1-sol` | 37.5 | $75 | $150 | openai |
-| `gpt-image-2` | 37.5 | $75 | $150 | openai |
-| `gpt-image-2.5-flare` | 37.5 | $75 | $150 | openai |
-| `gpt-image-2.5-sunburst` | 37.5 | $75 | $150 | openai |
+| `gpt-image-2` | 37.5 | $75 | $150 | image-generation / openai |
+| `gpt-image-2.5-flare` | 37.5 | $75 | $150 | image-generation / openai |
+| `gpt-image-2.5-sunburst` | 37.5 | $75 | $150 | image-generation / openai |
 | `grok-4.5` | 1 | $2 | $6 | openai / openai-response |
 | `grok-4.6` | 1 | $2 | $6 | openai / openai-response |
 | `grok-4.7` | 37.5 | $75 | $75 | openai / openai-response |
@@ -688,9 +702,17 @@ curl -s https://us-3.nianhuaapi.com/v1/chat/completions \
 | `grok-imagine-video` | per call | **$0.85 / call** | — | openai |
 | `grok-imagine-video-1.5` | per call | **$0.85 / call** | — | openai |
 | `grok-imagine-video-1.5-preview` | 37.5 | $75 | $75 | openai |
+| `hy3` | 37.5 | $75 | $75 | openai |
+| `hy4-preview` | 37.5 | $75 | $75 | openai |
 | `jimeng-seedance-2.5-480` | 37.5 | $75 | $75 | openai |
 | `jimeng-seedance-2.5-720` | 37.5 | $75 | $75 | openai |
+| `kimi-k2.7-code` | 3.25 | $6.5 | $27 | openai |
+| `kimi-k2.8` | 37.5 | $75 | $75 | openai |
 | `kimi-k3` | 10 | $20 | $100 | openai |
+| `mimo-v2.5` | 37.5 | $75 | $75 | openai |
+| `mimo-v2.5-pro` | 37.5 | $75 | $75 | openai |
+| `mimo-v2.6-flash` | 37.5 | $75 | $75 | openai |
+| `mimo-v2.6-pro` | 37.5 | $75 | $75 | openai |
 | `minimax-h3-comic-768p` | 37.5 | $75 | $75 | openai |
 | `minimax-h3-comic-cf-2k` | 37.5 | $75 | $75 | openai |
 | `minimax-h3-comic-cf-4k` | per call | **$1 / call** | — | openai |
@@ -699,9 +721,16 @@ curl -s https://us-3.nianhuaapi.com/v1/chat/completions \
 | `minimax-h3-original-cf-2k` | 37.5 | $75 | $75 | openai |
 | `minimax-h3-original-cf-4k` | 37.5 | $75 | $75 | openai |
 | `minimax-h3-quantized-768p` | 37.5 | $75 | $75 | openai |
+| `MiniMax-M2.7` | 37.5 | $75 | $75 | openai |
+| `MiniMax-M2.7-highspeed` | 37.5 | $75 | $75 | openai |
+| `minimax-m3` | 37.5 | $75 | $75 | openai |
+| `MiniMax-M3` | 1.5 | $3 | $15 | openai |
 | `minimax/minimax-m3:free` | per call | **$0.01 / call** | — | openai |
 | `qwen-8b` | per call | **$0.01 / call** | — | openai |
 | `qwen/qwen3.8-27b:free` | per call | **$0.01 / call** | — | openai |
+| `qwen3.7-max` | 3 | $6 | $18 | openai |
+| `qwen3.8-flash` | 0.4 | $0.8 | $2.7 | openai |
+| `qwen3.8-max` | 6 | $12 | $36 | openai |
 | `sd-2.5-M-720p-v3` | 37.5 | $75 | $75 | openai |
 | `seedance-2.5-pro-720p` | 37.5 | $75 | $75 | openai |
 | `seedance2.0` | per call | **$3.5 / call** | — | openai |
@@ -842,7 +871,7 @@ curl -s https://fast.vcrauo.lat/v1/chat/completions \
 
 **Live data** (scraped from public APIs)
 
-- API latency: 1356 ms
+- API latency: 3442 ms
 
 > On 2026-09-20 the public pricing page returned 191 models including stepfun, deepseek-v4.1-flash, gpt-5.5, gemini-2.5-flash, claude-sonnet-4-6 and kimi-k2.5. Note that the response mixes many free and paid entries; availability and ratios defer to the console.
 
@@ -950,7 +979,7 @@ curl -s https://free.supxh.xin/v1/chat/completions \
 **Live data** (scraped from public APIs)
 
 - Daily check-in: ✅
-- API latency: 1178 ms
+- API latency: 3800 ms
 
 > The model list and prices are only visible in the console after login (/api/pricing requires login anonymously), so this page does not list a model table.
 
@@ -1035,7 +1064,7 @@ curl -s https://api456.me/v1/chat/completions \
 - Open signups: ✅ (The service turned off email/password signup, so you have to create the account with GitHub (a common anti-abuse measure).)
 - Login methods: GitHub / Email + password
 - GitHub account must be at least **365 days** old
-- API latency: 1197 ms
+- API latency: 3699 ms
 
 > The pricing page requires login (/api/pricing returns 401 anonymously; panel pricing.requireAuth = true), so this page does not list a model table. Testing shows the main lineup is the gpt-5.6 family (gpt-5.6-luna / sol / terra), and every request carries roughly 2000 tokens of a fixed hidden prompt. Confirm the full list and ratios on the console's "Pricing" page.
 
@@ -1142,7 +1171,7 @@ curl -s https://api.justwoker.icu/v1/chat/completions \
 
 **Live data** (scraped from public APIs)
 
-- API latency: 2447 ms
+- API latency: 4724 ms
 
 > The model list and prices are visible in the console's "Model list" after login (priced per million tokens, filterable by vendor / context window). The site has no public model or pricing API, so this page makes no claims.
 
@@ -1206,7 +1235,7 @@ Console: <https://matrix.mzsjai.com/app/apikey>
 - Daily check-in: ✅
 - Open signups: ✅
 - Login methods: GitHub / Telegram / Email + password
-- API latency: 1993 ms
+- API latency: 4385 ms
 
 **Mirrors / alternate entry points**
 
@@ -1304,7 +1333,7 @@ curl -s https://seekai.cc/v1/chat/completions \
 - Daily check-in: ❌
 - Open signups: ✅ (The service turned off email/password signup, so you have to create the account with GitHub (a common anti-abuse measure).)
 - Login methods: GitHub
-- API latency: 2194 ms
+- API latency: 4310 ms
 
 > The site's model pricing API is not public (/api/pricing returns 401 anonymously; you would need to log into the admin page), and the free-tier group's model sources are published at https://aaawinn.xyz/public-pool. Announcements note that the free-tier group's GPT models only support the Anthropic protocol — the OpenAI protocol has compatibility issues.
 
@@ -1420,12 +1449,12 @@ curl -s https://aaawinn.xyz/v1/chat/completions \
 
 **Live data** (scraped from public APIs)
 
-- ⚠ No fresh API data for 207 hours; the info below is a snapshot from `2026-10-09 13:16 UTC`
+- ⚠ No fresh API data for 214 hours; the info below is a snapshot from `2026-10-09 13:16 UTC`
 - Panel version: `v1.0.0-rc.40-hc2`
 - Daily check-in: ✅
 - Open signups: ✅
 - Login methods: Passkey / Email + password
-- API latency: 3222 ms
+- API latency: 7240 ms
 
 > The model pricing page requires login (/api/pricing returns 401 anonymously), but the names in the announcements can be copied directly: Qwen3.8-Flash-Next (zero per call), the DeepSeek-V4.1-Flash family (about 2 CNY per call in paid groups; the vision-exp version is open to free users), longcat-2.0 (1 CNY per call), glm-5.3-flash, qwen3.8-27b, the step family, spark-x2.5 and Qwen3.6-35B-A3B. The site also open-sourced SparkMuse-4B and Qing-Sec-20B, both searchable on ModelScope (hcnote/SparkMuse-4B).
 
@@ -1523,7 +1552,7 @@ curl -s https://api.hcnsec.cn/v1/chat/completions \
 
 ## 🔔 Credit changes get announced here
 
-CI probes every service every 6 hours and diffs each field against the previous snapshot; 98 samples covering about 25.9 days so far. Credit adjustments, outages and recoveries, models added or removed, and price changes are all recorded automatically:
+CI probes every service every 6 hours and diffs each field against the previous snapshot; 99 samples covering about 26.1 days so far. Credit adjustments, outages and recoveries, models added or removed, and price changes are all recorded automatically:
 
 - Click **Watch → Custom → Releases** at the top of the repo and GitHub emails you when something important changes
 
