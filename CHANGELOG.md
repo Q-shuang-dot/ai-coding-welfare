@@ -8,6 +8,7 @@ AI 福利站 · Claude Code / Codex 免费额度白嫖导航的自动变动记�
 
 ## 2026-10-18
 
+- ➖ Orbelis 下线模型：gemini-3-flash、gemini-3.1-flash-image、gemini-3.5-flash-extra-low、gemini-3.5-flash-low 等 9 个 <sub>20:42 UTC</sub>
 - 🏷️ Orbelis qwen3.7-max 价格 $6 入 / $18 出（每 1M） → $12 入 / $36 出（每 1M） <sub>15:52 UTC</sub>
 - ➕ Orbelis 上线模型：deepseek-v4-flash-0731、deepseek-v4.1-flash-1017、gemini-3-flash、gemini-3.1-flash-image 等 30 个 <sub>11:04 UTC</sub>
 - ➖ Orbelis 下线模型：deepseek-v4-pro <sub>11:04 UTC</sub>
