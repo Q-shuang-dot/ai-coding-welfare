@@ -6,6 +6,10 @@ AI 福利站 · Claude Code / Codex 免费额度白嫖导航的自动变动记�
 
 > 只记录会影响「值不值得注册」的字段。探测被站点 WAF 拦下时不记在线状态变化，避免机房 IP 被拦被误报成掉线。
 
+## 2026-10-20
+
+- ➕ 年华 API 上线模型：agnes-2.5-flash、agnes-3.0-flash、agnes-image-2.0-flash、agnes-image-2.1-flash 等 6 个 <sub>17:09 UTC</sub>
+
 ## 2026-10-19
 
 - ➕ Orbelis 上线模型：gemini-3.5-flash、gemini-3.6-flash、gemini-3.7-flash、gemini-3.8-flash 等 6 个 <sub>22:21 UTC</sub>
