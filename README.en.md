@@ -99,7 +99,7 @@ powershell -ExecutionPolicy Bypass -File scripts/quickstart.ps1
 - Panel version: `init-20261009-3d8bb4d7`
 - Referral bonus: **$50**
 - Login methods: GitHub / LinuxDO
-- API latency: 247 ms
+- API latency: 242 ms
 
 **Mirrors / alternate entry points**
 
@@ -229,7 +229,7 @@ curl -s https://agentrouter.org/v1/chat/completions \
 - Daily check-in: ❌
 - Open signups: ✅
 - Login methods: Email + password
-- API latency: 802 ms
+- API latency: 736 ms
 
 **Mirrors / alternate entry points**
 
@@ -344,7 +344,7 @@ curl -s https://docode.cc/v1/chat/completions \
 - Daily check-in: ✅
 - Open signups: ✅
 - Login methods: Email + password
-- API latency: 1144 ms
+- API latency: 1215 ms
 
 **Available models**
 
@@ -624,7 +624,7 @@ curl -s https://us-3.nianhuaapi.com/v1/chat/completions \
 - Daily check-in: ✅
 - Open signups: ✅
 - Login methods: GitHub / LinuxDO / Email + password
-- API latency: 1333 ms
+- API latency: 1369 ms
 
 **Available models**
 
@@ -874,7 +874,7 @@ curl -s https://fast.vcrauo.lat/v1/chat/completions \
 
 **Live data** (scraped from public APIs)
 
-- API latency: 1595 ms
+- API latency: 1338 ms
 
 > On 2026-09-20 the public pricing page returned 191 models including stepfun, deepseek-v4.1-flash, gpt-5.5, gemini-2.5-flash, claude-sonnet-4-6 and kimi-k2.5. Note that the response mixes many free and paid entries; availability and ratios defer to the console.
 
@@ -985,7 +985,7 @@ curl -s https://free.supxh.xin/v1/chat/completions \
 - Daily check-in: ✅
 - Open signups: ✅
 - Login methods: Email + password
-- API latency: 1527 ms
+- API latency: 1351 ms
 
 > The model list and prices are only visible in the console after login (/api/pricing requires login anonymously), so this page does not list a model table.
 
@@ -1070,7 +1070,7 @@ curl -s https://api456.me/v1/chat/completions \
 - Open signups: ✅ (The service turned off email/password signup, so you have to create the account with GitHub (a common anti-abuse measure).)
 - Login methods: GitHub / Email + password
 - GitHub account must be at least **365 days** old
-- API latency: 1550 ms
+- API latency: 1347 ms
 
 > The pricing page requires login (/api/pricing returns 401 anonymously; panel pricing.requireAuth = true), so this page does not list a model table. Testing shows the main lineup is the gpt-5.6 family (gpt-5.6-luna / sol / terra), and every request carries roughly 2000 tokens of a fixed hidden prompt. Confirm the full list and ratios on the console's "Pricing" page.
 
@@ -1177,7 +1177,7 @@ curl -s https://api.justwoker.icu/v1/chat/completions \
 
 **Live data** (scraped from public APIs)
 
-- API latency: 2312 ms
+- API latency: 4228 ms
 
 > The model list and prices are visible in the console's "Model list" after login (priced per million tokens, filterable by vendor / context window). The site has no public model or pricing API, so this page makes no claims.
 
@@ -1241,7 +1241,7 @@ Console: <https://matrix.mzsjai.com/app/apikey>
 - Daily check-in: ✅
 - Open signups: ✅
 - Login methods: GitHub / Telegram / Email + password
-- API latency: 1968 ms
+- API latency: 1865 ms
 
 **Mirrors / alternate entry points**
 
@@ -1339,7 +1339,7 @@ curl -s https://seekai.cc/v1/chat/completions \
 - Daily check-in: ❌
 - Open signups: ✅ (The service turned off email/password signup, so you have to create the account with GitHub (a common anti-abuse measure).)
 - Login methods: GitHub
-- API latency: 1902 ms
+- API latency: 1871 ms
 
 > The site's model pricing API is not public (/api/pricing returns 401 anonymously; you would need to log into the admin page), and the free-tier group's model sources are published at https://aaawinn.xyz/public-pool. Announcements note that the free-tier group's GPT models only support the Anthropic protocol — the OpenAI protocol has compatibility issues.
 
@@ -1460,7 +1460,7 @@ curl -s https://aaawinn.xyz/v1/chat/completions \
 - Daily check-in: ✅
 - Open signups: ✅
 - Login methods: Passkey / Email + password
-- API latency: 5441 ms
+- API latency: 2792 ms
 
 > The model pricing page requires login (/api/pricing returns 401 anonymously), but the names in the announcements can be copied directly: Qwen3.8-Flash-Next (zero per call), the DeepSeek-V4.1-Flash family (about 2 CNY per call in paid groups; the vision-exp version is open to free users), longcat-2.0 (1 CNY per call), glm-5.3-flash, qwen3.8-27b, the step family, spark-x2.5 and Qwen3.6-35B-A3B. The site also open-sourced SparkMuse-4B and Qing-Sec-20B, both searchable on ModelScope (hcnote/SparkMuse-4B).
 

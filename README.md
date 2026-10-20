@@ -99,7 +99,7 @@ powershell -ExecutionPolicy Bypass -File scripts/quickstart.ps1
 - 面板版本：`init-20261009-3d8bb4d7`
 - 邀请他人可得：**$50**
 - 登录方式：GitHub / LinuxDO
-- 接口延迟：247 ms
+- 接口延迟：242 ms
 
 **镜像 / 备用入口**
 
@@ -237,7 +237,7 @@ curl -s https://agentrouter.org/v1/chat/completions \
 - 每日签到：❌
 - 开放注册：✅
 - 登录方式：账号密码
-- 接口延迟：802 ms
+- 接口延迟：736 ms
 
 **镜像 / 备用入口**
 
@@ -361,7 +361,7 @@ curl -s https://docode.cc/v1/chat/completions \
 - 每日签到：✅
 - 开放注册：✅
 - 登录方式：账号密码
-- 接口延迟：1144 ms
+- 接口延迟：1215 ms
 
 **当前可用模型**
 
@@ -649,7 +649,7 @@ curl -s https://us-3.nianhuaapi.com/v1/chat/completions \
 - 每日签到：✅
 - 开放注册：✅
 - 登录方式：GitHub / LinuxDO / 账号密码
-- 接口延迟：1333 ms
+- 接口延迟：1369 ms
 
 **当前可用模型**
 
@@ -907,7 +907,7 @@ curl -s https://fast.vcrauo.lat/v1/chat/completions \
 
 **实时数据**（自动抓取站点公开接口）
 
-- 接口延迟：1595 ms
+- 接口延迟：1338 ms
 
 > 2026-09-20 公开定价页返回 191 个模型，含 stepfun、deepseek-v4.1-flash、gpt-5.5、gemini-2.5-flash、claude-sonnet-4-6、kimi-k2.5 等。注意返回里同时混有大量免费与付费条目，模型可用性与倍率以控制台为准。
 
@@ -1019,7 +1019,7 @@ curl -s https://free.supxh.xin/v1/chat/completions \
 - 每日签到：✅
 - 开放注册：✅
 - 登录方式：账号密码
-- 接口延迟：1527 ms
+- 接口延迟：1351 ms
 
 > 模型清单与价格需登录后在控制台查看（/api/pricing 匿名请求需登录），本页不列模型表。
 
@@ -1112,7 +1112,7 @@ curl -s https://api456.me/v1/chat/completions \
 - 开放注册：✅（站点关掉了邮箱密码注册，得用 GitHub 登录建号（防批量注册的常规做法）。）
 - 登录方式：GitHub / 账号密码
 - GitHub 账号需满 **365 天**
-- 接口延迟：1550 ms
+- 接口延迟：1347 ms
 
 > 模型定价页需要登录（/api/pricing 匿名请求返回 401，面板 pricing.requireAuth = true），本页不列模型表。实测主力是 gpt-5.6 系（gpt-5.6-luna / sol / terra），每次请求会带约 2000 tokens 的固定隐藏提示词；完整清单与倍率请登录控制台「定价」页确认。
 
@@ -1219,7 +1219,7 @@ curl -s https://api.justwoker.icu/v1/chat/completions \
 
 **实时数据**（自动抓取站点公开接口）
 
-- 接口延迟：2312 ms
+- 接口延迟：4228 ms
 
 > 模型清单与价格需登录后在控制台「模型列表」查看（按每百万 Tokens 计价，可按厂商 / 上下文窗口筛选），站点没有公开的模型与定价接口，本页不做承诺。
 
@@ -1283,7 +1283,7 @@ curl -s https://api.justwoker.icu/v1/chat/completions \
 - 每日签到：✅
 - 开放注册：✅
 - 登录方式：GitHub / Telegram / 账号密码
-- 接口延迟：1968 ms
+- 接口延迟：1865 ms
 
 **镜像 / 备用入口**
 
@@ -1382,7 +1382,7 @@ curl -s https://seekai.cc/v1/chat/completions \
 - 每日签到：❌
 - 开放注册：✅（站点关掉了邮箱密码注册，得用 GitHub 登录建号（防批量注册的常规做法）。）
 - 登录方式：GitHub
-- 接口延迟：1902 ms
+- 接口延迟：1871 ms
 
 > 站点的模型价格接口不公开（/api/pricing 匿名请求返回 401，要登录管理页才看得到），白嫖分组的模型来源公示在 https://aaawinn.xyz/public-pool；站方公告提到白嫖分组的 GPT 系模型只支持 Anthropic 协议对接，OpenAI 协议有兼容问题。
 
@@ -1512,7 +1512,7 @@ curl -s https://aaawinn.xyz/v1/chat/completions \
 - 每日签到：✅
 - 开放注册：✅
 - 登录方式：Passkey / 账号密码
-- 接口延迟：5441 ms
+- 接口延迟：2792 ms
 
 > 模型价格页需要登录（/api/pricing 匿名请求返回 401），不过站内公告里的名字可以直接抄：Qwen3.8-Flash-Next（0 元一次）、DeepSeek-V4.1-Flash 系（付费分组约 2 元一次，vision-exp 版本免费用户可用）、longcat-2.0（一次 1 元）、glm-5.3-flash、qwen3.8-27b、step 系、spark-x2.5、Qwen3.6-35B-A3B，站方还开源了 SparkMuse-4B 与 Qing-Sec-20B，均可在 ModelScope 搜到（hcnote/SparkMuse-4B）。
 
