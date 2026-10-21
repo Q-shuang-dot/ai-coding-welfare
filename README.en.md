@@ -5,14 +5,15 @@
 <p align="center">Free credits · a collection of relay and community services for free Claude Code / Codex / Cursor quota · daily check-ins</p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Tracked%20services-11-blue" alt="Tracked services">
-  <img src="https://img.shields.io/badge/Online-11%2F11-brightgreen" alt="Online">
+  <img src="https://img.shields.io/badge/Tracked%20services-12-blue" alt="Tracked services">
+  <img src="https://img.shields.io/badge/Online-10%2F12-orange" alt="Online">
   <img src="https://img.shields.io/badge/Best%20first%20day-%24175-success" alt="Best first day">
-  <img src="https://img.shields.io/badge/Data%20updated-2026--10--20%2021.37%20UTC-informational" alt="Data updated">
+  <img src="https://img.shields.io/badge/Data%20updated-2026--10--21%2001.13%20UTC-informational" alt="Data updated">
 </p>
 
 <p align="center">
   <a href="https://agentrouter.org/register?aff=aibw"><b>AgentRouter sign up</b></a> ·
+  <a href="https://chuan.sylu.cc/sign-up?aff=zD17"><b>启源星 sign up</b></a> ·
   <a href="https://docode.cc/register?aff=1Qof"><b>DoCode sign up</b></a> ·
   <a href="https://us-3.nianhuaapi.com/sign-up?aff=aonj"><b>NianHua API sign up</b></a> ·
   <a href="https://nova.vcrauo.com/sign-up?aff=0hvb"><b>Orbelis sign up</b></a> ·
@@ -33,11 +34,12 @@
 
 | Service | Status | First day | How it adds up | After that | Protocols | Models | Sign up | Invite code |
 | :-- | :--: | :--: | :-- | :--: | :--: | :--: | :--: | :--: |
-| **AgentRouter** 🔥 | 🟢 Online | **$175** | signup $100 + this page's invite $50 + first check-in $25 | $25/day | Anthropic + OpenAI | 4 listed | <a href="https://agentrouter.org/register?aff=aibw" target="_blank" rel="noopener">Sign up →</a> | — |
+| **AgentRouter** 🔥 | 🔴 Unreachable | **$175** | signup $100 + this page's invite $50 + first check-in $25 | $25/day | Anthropic + OpenAI | 4 listed | <a href="https://agentrouter.org/register?aff=aibw" target="_blank" rel="noopener">Sign up →</a> | — |
+| **启源星** | 🟢 Online | **150 pts** | signup 150 pts | Daily check-in | Anthropic + OpenAI | 3 listed | <a href="https://chuan.sylu.cc/sign-up?aff=zD17" target="_blank" rel="noopener">GitHub sign up →</a> | — |
 | **DoCode** | 🟢 Online | **300 site-USD** | signup 50 site-USD + this page's invite 250 site-USD | No check-in | Anthropic + OpenAI | Sign in to see | <a href="https://docode.cc/register?aff=1Qof" target="_blank" rel="noopener">Sign up →</a> | `1Qof` |
 | **NianHua API** | 🟢 Online | Posted on site | — | Daily check-in | Anthropic + OpenAI | 149 listed | <a href="https://us-3.nianhuaapi.com/sign-up?aff=aonj" target="_blank" rel="noopener">Sign up →</a> | `aonj` |
 | **Orbelis** | 🟢 Online | **1 site-USD** | this page's invite 1 site-USD | Daily check-in | Anthropic + OpenAI | 122 listed | <a href="https://nova.vcrauo.com/sign-up?aff=0hvb" target="_blank" rel="noopener">Sign up →</a> | `0hvb` |
-| **ShawnAI** | 🟢 Online | **≈14000 pts** | signup 7000 pts + this page's invite 5000 pts + first check-in ≈2000 pts | ≈2000 pts/day | Anthropic + OpenAI | Sign in to see | <a href="https://free.supxh.xin/register?code=MVU8GX" target="_blank" rel="noopener">Sign up →</a> | `MVU8GX` |
+| **ShawnAI** | 🔴 Unreachable | **≈14000 pts** | signup 7000 pts + this page's invite 5000 pts + first check-in ≈2000 pts | ≈2000 pts/day | Anthropic + OpenAI | Sign in to see | <a href="https://free.supxh.xin/register?code=MVU8GX" target="_blank" rel="noopener">Sign up →</a> | `MVU8GX` |
 | **api456.me** | 🟢 Online | **$50** | signup $20 + this page's invite $20 + first check-in $10 | $10/day | OpenAI | Sign in to see | <a href="https://api456.me/register?aff=zmza" target="_blank" rel="noopener">Sign up →</a> | `zmza` |
 | **JustDoWork** | 🟢 Online | Posted on site | — | Daily check-in | Anthropic + OpenAI | Sign in to see | <a href="https://api.justwoker.icu/register?aff=OIWh" target="_blank" rel="noopener">GitHub sign up →</a> | `OIWh` |
 | **Matrix** | 🟢 Online | **2600 pts** | this page's invite 600 pts + ID verification 2000 pts | — | OpenAI-compatible | Sign in to see | <a href="https://matrix.mzsjai.com/login?redirect=%2Fapp%2Fgrowth%3FinviteCode%3DMX3CDVGATLJW" target="_blank" rel="noopener">Sign up →</a> | — |
@@ -45,11 +47,11 @@
 | **Long's AI** | 🟢 Online | Free | Free tier, zero cost | No check-in | Anthropic + OpenAI | Sign in to see | <a href="https://aaawinn.xyz/sign-up?aff=ijFL" target="_blank" rel="noopener">GitHub sign up →</a> | `ijFL` |
 | **Xinjiang Huancheng Security** | 🟢 Online | **30000 site-USD** | signup 30000 site-USD | Daily check-in | Anthropic + OpenAI | Sign in to see | <a href="https://api.hcnsec.cn/sign-up?aff=3J8z" target="_blank" rel="noopener">Sign up →</a> | `3J8z` |
 
-> "First day" = signup bonus + invite bonus from this page + whatever check-in pays out on day one (services with a daily reset pool count a single day's pool). Models, prices and status are scraped from each service's public API. Last update: `2026-10-20 21:37 UTC`.
+> "First day" = signup bonus + invite bonus from this page + whatever check-in pays out on day one (services with a daily reset pool count a single day's pool). Models, prices and status are scraped from each service's public API. Last update: `2026-10-21 01:13 UTC`.
 >
 > Services with a code in the "Invite code" column (DoCode `1Qof`, NianHua API `aonj`, Orbelis `0hvb`, ShawnAI `MVU8GX`, api456.me `zmza`, JustDoWork `OIWh`, SeekAi `dDJy`, Long's AI `ijFL`, Xinjiang Huancheng Security `3J8z`) require **typing the code yourself** in the signup form. Miss it and you only get the base signup bonus — it cannot be added afterwards. A dash means the invite bonus travels inside the link and needs no typing.
 >
-> Signing up for all 5 USD-priced services that still accept new users gets you roughly **$225** on day one; DoCode separately credits 300 site-USD, Orbelis separately credits 1 site-USD, ShawnAI separately credits ≈14000 pts, Matrix separately credits 2600 pts, Long's AI separately credits Free, Xinjiang Huancheng Security separately credits 30000 site-USD — each service prices in its own unit with no published USD conversion, so those are left out of this total.
+> Signing up for all 5 USD-priced services that still accept new users gets you roughly **$225** on day one; 启源星 separately credits 150 pts, DoCode separately credits 300 site-USD, Orbelis separately credits 1 site-USD, ShawnAI separately credits ≈14000 pts, Matrix separately credits 2600 pts, Long's AI separately credits Free, Xinjiang Huancheng Security separately credits 30000 site-USD — each service prices in its own unit with no published USD conversion, so those are left out of this total.
 >
 > 🟡 2 services have not returned fresh API data for over 48 hours. Details show the last successful snapshot; online status reflects whether the signup page actually loads.
 
@@ -72,7 +74,7 @@ powershell -ExecutionPolicy Bypass -File scripts/quickstart.ps1
 ## 📚 Service details
 
 
-### 🟢 AgentRouter 🔥 Top pick
+### 🔴 AgentRouter 🔥 Top pick
 
 > AI coding community service · credit on signup, daily check-in keeps it alive
 
@@ -94,12 +96,12 @@ powershell -ExecutionPolicy Bypass -File scripts/quickstart.ps1
 
 **Live data** (scraped from public APIs)
 
-- ⚠ No fresh API data for 139 hours; the info below is a snapshot from `2026-10-15 03:05 UTC`
+- ⚠ No fresh API data for 142 hours; the info below is a snapshot from `2026-10-15 03:05 UTC`
 - Panel name: **Agent Router**
 - Panel version: `init-20261009-3d8bb4d7`
 - Referral bonus: **$50**
 - Login methods: GitHub / LinuxDO
-- API latency: 304 ms
+- API latency: 10678 ms
 
 **Mirrors / alternate entry points**
 
@@ -202,6 +204,134 @@ curl -s https://agentrouter.org/v1/chat/completions \
 
 ---
 
+### 🟢 启源星
+
+> New API community service · 150 site credit on signup, check-in and tasks keep it alive, and only 3 models — but they are the good ones: claude-fable-5.1 and Grok-4.6
+
+<a href="https://chuan.sylu.cc/sign-up?aff=zD17" target="_blank" rel="noopener"><img src="https://img.shields.io/badge/Sign%20up-%E5%90%AF%E6%BA%90%E6%98%9F-brightgreen?style=for-the-badge" alt="Sign up for 启源星"></a>
+
+**Why sign up**
+
+- 150 site credit on signup, no top-up and no credit card (credit is the site's own unit "⭐": the panel reports quota_display_type = CUSTOM, symbol ⭐ and price = 7.3, and the pricing page's "top-up" view shows claude-fable-5.1 as ⭐21.9, i.e. ⭐3 × 7.3; this page records credit as-is and does not convert it to USD or fold it into the cross-service USD total)
+- Daily check-in and site tasks both keep the credit coming (the panel reports checkin_enabled and enable_task are both true)
+- Only 3 models are on the shelf, but they are the good ones: claude-fable-5.1 (⭐3 per request in standard view) plus Grok-4.6 / Grok-4.5 (⭐1 per request each) — billed per request, not per token
+- Both native routes are mounted: anonymous probes of /v1/messages and /v1/chat/completions return New API's 401 Invalid token rather than 404, so Claude Code connects directly with the Base URL and Codex CLI uses /v1
+- The panel's public config ships one-click deeplinks for CC Switch, Cherry Studio, DeepChat, Lobe Chat, OpenCat, AionUI and AMA — push the key to your client straight from the dashboard
+- The signup page offers both GitHub login and a username + password form, and password login works (the panel reports password_login_enabled = true)
+
+**How much you get**
+
+- Signup bonus: **150 pts**
+- First day total: **150 pts**
+
+**Live data** (scraped from public APIs)
+
+- Panel version: `v0.9.0-liminality-20260825`
+- Daily check-in: ✅
+- Open signups: ✅ (The service turned off email/password signup, so you have to create the account with GitHub (a common anti-abuse measure).)
+- Login methods: GitHub / Email + password
+- API latency: 2203 ms
+
+**Available models**
+
+| Model | Ratio | Input / 1M tokens | Output / 1M tokens | Protocols |
+| :-- | :--: | :--: | :--: | :--: |
+| `claude-fable-5.1` | per call | **$3 / call** | — | openai |
+| `Grok-4.5` | per call | **$1 / call** | — | openai |
+| `Grok-4.6` | per call | **$1 / call** | — | openai |
+
+<sub>Rows marked "per call" are billed per request regardless of token usage; everything else uses ratio 1 ≈ $2 / 1M tokens. Always confirm against in-site pricing.</sub>
+
+**Signup requirements**
+
+- Enter through this page's invite link (?aff=zD17); the referral relationship and reward are settled by the site's own invite mechanism
+- Registration passes Cloudflare Turnstile (turnstile_check = true); the registration endpoint rejects requests without a Turnstile token (it returned "Turnstile token 为空" when probed)
+- The public config has password_register_enabled = false, email_verification = false and github_oauth = true: the signup page does render a username + password form, but submitting it was still blocked by Turnstile during testing, so GitHub is the safer route
+
+**Client setup**
+
+<details open><summary><b>Claude Code</b> (Anthropic-compatible; Base URL without <code>/v1</code>)</summary>
+
+```bash
+# macOS / Linux
+export ANTHROPIC_BASE_URL=https://chuan.sylu.cc
+export ANTHROPIC_AUTH_TOKEN=YOUR_API_KEY
+export ANTHROPIC_MODEL=claude-fable-5.1
+npm install -g @anthropic-ai/claude-code@latest && claude
+```
+
+```powershell
+# Windows PowerShell
+$env:ANTHROPIC_BASE_URL = "https://chuan.sylu.cc"
+$env:ANTHROPIC_AUTH_TOKEN = "YOUR_API_KEY"
+$env:ANTHROPIC_MODEL = "claude-fable-5.1"
+claude
+```
+
+</details>
+
+<details><summary><b>Codex CLI</b> (OpenAI-compatible; goes into <code>~/.codex/config.toml</code>)</summary>
+
+```toml
+model = "claude-fable-5.1"
+model_provider = "chuan"
+
+[model_providers.chuan]
+name = "启源星"
+base_url = "https://chuan.sylu.cc/v1"
+env_key = "CHUAN_API_KEY"
+wire_api = "chat"
+```
+
+</details>
+
+<details><summary><b>OpenAI SDK / Cherry Studio / Cursor and other generic clients</b></summary>
+
+```python
+from openai import OpenAI
+
+client = OpenAI(api_key="YOUR_API_KEY", base_url="https://chuan.sylu.cc/v1")
+resp = client.chat.completions.create(model="claude-fable-5.1", messages=[{"role": "user", "content": "ping"}])
+print(resp.choices[0].message.content)
+```
+
+Generic clients need two fields: **Base URL** = `https://chuan.sylu.cc/v1`, **API Key** = the key you created in the dashboard.
+
+</details>
+
+<details><summary><b>Connectivity self-test</b></summary>
+
+```bash
+curl -s https://chuan.sylu.cc/v1/chat/completions \
+  -H "Authorization: Bearer $KEY" -H "Content-Type: application/json" \
+  -d '{"model":"claude-fable-5.1","messages":[{"role":"user","content":"reply OK only"}]}'
+```
+
+</details>
+
+**How to keep earning credits**
+
+- Daily check-in grants credit (the panel reports checkin_enabled = true — click it in the dashboard)
+- The site task center grants credit too (enable_task = true)
+- The announcement about scripted accounts farming "check-in credit" for resale confirms check-in really does produce credit steadily
+- Watch the site announcements and FAQ for occasional campaigns
+
+**⚠️ Read before use**
+
+- Site credit is the service's own unit: the panel reports quota_display_type = CUSTOM, symbol "⭐" and price = 7.3 (in the pricing page's "top-up" view claude-fable-5.1 shows as ⭐21.9, i.e. ⭐3 × 7.3), the same convention as hcnsec — so this page records credit as-is, does not convert it to USD and does not fold it into the cross-service USD total
+- Site announcement of 2026-10-04: user numbers surged and a wave of scripted accounts farmed GitHub logins to harvest check-in credit for resale. They are investigating one by one, and in the meantime "some model prices will surge" — free credit can shrink without notice, so do not treat long-term free use as a promise
+- The model pool is only 3 deep and all per-request: claude-fable-5.1 costs 3 credit per call and the Grok pair 1 credit each, so 150 credit is roughly a few dozen to a bit over a hundred calls; adds and delistings are entirely up to the site
+- Success rates are not perfect: the site publishes 88.9% for claude-fable-5.1, 97.1% for Grok-4.5 and only 68.9% for Grok-4.6, with average latencies of 15–32s — roughly a third of Grok-4.6 requests fail, so do not use it as a stable production channel
+- Both the signup page and the API sit behind Cloudflare, so datacenter IPs get blocked on the signup page (which is why this page's automated probe will show that too); home broadband is fine
+- The public status API does not expose signup or invite credit (quota_for_new_user, quota_for_invitee and quota_for_inviter are all absent — the same for hcnsec / DoCode / Long的AI), so the 150 credit recorded here is the site's published figure — verify it in the dashboard before doing the math
+
+**Official channels**
+
+- Site: https://chuan.sylu.cc
+- Announcements: https://chuan.sylu.cc/api/status (public announcements field)
+
+---
+
 ### 🟢 DoCode
 
 > New API relay · 50 site-dollars on signup, 250 more with invite code zMRe, 300 on day one — both Claude and GPT on the shelf
@@ -229,7 +359,7 @@ curl -s https://agentrouter.org/v1/chat/completions \
 - Daily check-in: ❌
 - Open signups: ✅
 - Login methods: Email + password
-- API latency: 873 ms
+- API latency: 960 ms
 
 **Mirrors / alternate entry points**
 
@@ -344,7 +474,7 @@ curl -s https://docode.cc/v1/chat/completions \
 - Daily check-in: ✅
 - Open signups: ✅
 - Login methods: Email + password
-- API latency: 933 ms
+- API latency: 1106 ms
 
 **Available models**
 
@@ -619,12 +749,13 @@ curl -s https://us-3.nianhuaapi.com/v1/chat/completions \
 
 **Live data** (scraped from public APIs)
 
+- ℹ️ This probe was blocked by the service WAF (common for GitHub Actions IP ranges; home connections are unaffected). Status and details below come from the last successful snapshot at `2026-10-20 21:37 UTC`
 - Panel name: **Orbelis**
 - Panel version: `v1.0.0-rc.41`
 - Daily check-in: ✅
 - Open signups: ✅
 - Login methods: GitHub / LinuxDO / Email + password
-- API latency: 1011 ms
+- API latency: 324 ms
 
 **Available models**
 
@@ -851,7 +982,7 @@ curl -s https://fast.vcrauo.lat/v1/chat/completions \
 
 ---
 
-### 🟢 ShawnAI
+### 🔴 ShawnAI
 
 > Free LLM API · 5000 credit on signup, 1000–3000 per daily check-in, 2000 each for inviter and invitee
 
@@ -874,7 +1005,7 @@ curl -s https://fast.vcrauo.lat/v1/chat/completions \
 
 **Live data** (scraped from public APIs)
 
-- API latency: 1161 ms
+- API latency: 10673 ms
 
 > On 2026-09-20 the public pricing page returned 191 models including stepfun, deepseek-v4.1-flash, gpt-5.5, gemini-2.5-flash, claude-sonnet-4-6 and kimi-k2.5. Note that the response mixes many free and paid entries; availability and ratios defer to the console.
 
@@ -985,7 +1116,7 @@ curl -s https://free.supxh.xin/v1/chat/completions \
 - Daily check-in: ✅
 - Open signups: ✅
 - Login methods: Email + password
-- API latency: 1271 ms
+- API latency: 1487 ms
 
 > The model list and prices are only visible in the console after login (/api/pricing requires login anonymously), so this page does not list a model table.
 
@@ -1070,7 +1201,7 @@ curl -s https://api456.me/v1/chat/completions \
 - Open signups: ✅ (The service turned off email/password signup, so you have to create the account with GitHub (a common anti-abuse measure).)
 - Login methods: GitHub / Email + password
 - GitHub account must be at least **365 days** old
-- API latency: 1987 ms
+- API latency: 1505 ms
 
 > The pricing page requires login (/api/pricing returns 401 anonymously; panel pricing.requireAuth = true), so this page does not list a model table. Testing shows the main lineup is the gpt-5.6 family (gpt-5.6-luna / sol / terra), and every request carries roughly 2000 tokens of a fixed hidden prompt. Confirm the full list and ratios on the console's "Pricing" page.
 
@@ -1177,7 +1308,7 @@ curl -s https://api.justwoker.icu/v1/chat/completions \
 
 **Live data** (scraped from public APIs)
 
-- API latency: 2516 ms
+- API latency: 631 ms
 
 > The model list and prices are visible in the console's "Model list" after login (priced per million tokens, filterable by vendor / context window). The site has no public model or pricing API, so this page makes no claims.
 
@@ -1236,12 +1367,13 @@ Console: <https://matrix.mzsjai.com/app/apikey>
 
 **Live data** (scraped from public APIs)
 
+- ℹ️ This probe was blocked by the service WAF (common for GitHub Actions IP ranges; home connections are unaffected). Status and details below come from the last successful snapshot at `2026-10-20 21:37 UTC`
 - Panel name: **SeekAi**
 - Panel version: `v1.0.0-rc.25`
 - Daily check-in: ✅
 - Open signups: ✅
 - Login methods: GitHub / Telegram / Email + password
-- API latency: 2211 ms
+- API latency: 187 ms
 
 **Mirrors / alternate entry points**
 
@@ -1339,7 +1471,7 @@ curl -s https://seekai.cc/v1/chat/completions \
 - Daily check-in: ❌
 - Open signups: ✅ (The service turned off email/password signup, so you have to create the account with GitHub (a common anti-abuse measure).)
 - Login methods: GitHub
-- API latency: 2052 ms
+- API latency: 1142 ms
 
 > The site's model pricing API is not public (/api/pricing returns 401 anonymously; you would need to log into the admin page), and the free-tier group's model sources are published at https://aaawinn.xyz/public-pool. Announcements note that the free-tier group's GPT models only support the Anthropic protocol — the OpenAI protocol has compatibility issues.
 
@@ -1455,12 +1587,12 @@ curl -s https://aaawinn.xyz/v1/chat/completions \
 
 **Live data** (scraped from public APIs)
 
-- ⚠ No fresh API data for 272 hours; the info below is a snapshot from `2026-10-09 13:16 UTC`
+- ⚠ No fresh API data for 276 hours; the info below is a snapshot from `2026-10-09 13:16 UTC`
 - Panel version: `v1.0.0-rc.40-hc2`
 - Daily check-in: ✅
 - Open signups: ✅
 - Login methods: Passkey / Email + password
-- API latency: 12502 ms
+- API latency: 773 ms
 
 > The model pricing page requires login (/api/pricing returns 401 anonymously), but the names in the announcements can be copied directly: Qwen3.8-Flash-Next (zero per call), the DeepSeek-V4.1-Flash family (about 2 CNY per call in paid groups; the vision-exp version is open to free users), longcat-2.0 (1 CNY per call), glm-5.3-flash, qwen3.8-27b, the step family, spark-x2.5 and Qwen3.6-35B-A3B. The site also open-sourced SparkMuse-4B and Qing-Sec-20B, both searchable on ModelScope (hcnote/SparkMuse-4B).
 
@@ -1558,7 +1690,7 @@ curl -s https://api.hcnsec.cn/v1/chat/completions \
 
 ## 🔔 Credit changes get announced here
 
-CI probes every service every 6 hours and diffs each field against the previous snapshot; 108 samples covering about 28.6 days so far. Credit adjustments, outages and recoveries, models added or removed, and price changes are all recorded automatically:
+CI probes every service every 6 hours and diffs each field against the previous snapshot; 109 samples covering about 28.7 days so far. Credit adjustments, outages and recoveries, models added or removed, and price changes are all recorded automatically:
 
 - Click **Watch → Custom → Releases** at the top of the repo and GitHub emails you when something important changes
 

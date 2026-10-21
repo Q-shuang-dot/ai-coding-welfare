@@ -140,6 +140,114 @@
       }
     },
     {
+      "id": "chuan",
+      "name": "启源星",
+      "subtitle": "New API 公益站 · 注册送 150 站内积分，签到 + 任务续命，模型只挂 3 个但都是硬货：claude-fable-5.1 与 Grok-4.6",
+      "recommended": false,
+      "credits": {
+        "signup": 150,
+        "invite": null,
+        "dailyCheckin": null,
+        "approx": false,
+        "unit": "point"
+      },
+      "signupUrl": "https://chuan.sylu.cc/sign-up?aff=zD17",
+      "homeUrl": "https://chuan.sylu.cc",
+      "docsUrl": null,
+      "statusApi": "https://chuan.sylu.cc/api/status",
+      "pricingApi": "https://chuan.sylu.cc/api/pricing",
+      "mirrors": [],
+      "tags": [
+        "New API",
+        "公益站",
+        "免费额度",
+        "每日签到",
+        "Claude Code",
+        "Codex",
+        "Anthropic 兼容",
+        "OpenAI 兼容"
+      ],
+      "highlights": [
+        "注册就送 150 站内积分，不用充值、不用绑卡（积分是站内自定义单位「⭐」：面板 quota_display_type = CUSTOM、符号 ⭐、price = 7.3，站点定价页的「充值」视角把 claude-fable-5.1 从 ⭐3 显示成 ⭐21.9，即 3 × 7.3；本页按积分原样登记，不折算美元、也不并入跨站美元合计）",
+        "每天签到 + 站内任务两条路都能继续领积分（面板自报 checkin_enabled / enable_task 都是 true）",
+        "模型只上 3 个但都是硬货：claude-fable-5.1（标准模式 ⭐3 / 请求）与 Grok-4.6 / Grok-4.5（各 ⭐1 / 请求），按次计费、不按 tokens 烧额度",
+        "Anthropic 与 OpenAI 两条原生路由都挂着（匿名探 /v1/messages 与 /v1/chat/completions 都回 New API 的 401 Invalid token，而不是 404），Claude Code 填 Base URL 直连，Codex CLI 走 /v1",
+        "面板公开配置里带一键导入的 deeplink：CC Switch、Cherry Studio、DeepChat、Lobe Chat、OpenCat、AionUI、AMA 问天等客户端可以从后台直接把 Key 推过去",
+        "注册页同时提供 GitHub 登录和用户名 + 密码表单，登录用密码也行（面板自报 password_login_enabled = true）"
+      ],
+      "endpoints": {
+        "anthropic": "https://chuan.sylu.cc",
+        "openai": "https://chuan.sylu.cc/v1"
+      },
+      "modelsNote": "公开定价接口只挂 3 个模型，且全是按次计费（claude-fable-5.1 = ⭐3 / 请求，Grok-4.6 与 Grok-4.5 = 各 ⭐1 / 请求），三个的 supported_endpoint_types 都只标了 openai；站内「模型广场」页同时公示每个模型的平均延迟与成功率（15~32s、68.9%~97.1%），登记的都是当时快照，以站内实时页面为准。",
+      "register": {
+        "methods": [
+          "GitHub OAuth",
+          "用户名 + 密码"
+        ],
+        "requirements": [
+          "从本页邀请链接进入注册（带 ?aff=zD17），邀请关系与奖励按站点的邀请机制结算",
+          "注册要过 Cloudflare Turnstile 人机校验（turnstile_check = true），站内注册接口没有 Turnstile token 直接拒掉（实测返回「Turnstile token 为空」）",
+          "面板公开配置里 password_register_enabled = false、email_verification = false、github_oauth = true：注册页确实渲染了用户名 + 密码表单，登记时实测提交仍被 Turnstile 拦下，走 GitHub 更稳"
+        ]
+      },
+      "earnMore": [
+        "每日签到领积分（面板自报 checkin_enabled = true，登录后台点一下）",
+        "站内任务中心也能领积分（enable_task = true）",
+        "站方公告提到脚本账号在批量刷「签到余额」倒卖，说明签到确实能稳定产出积分",
+        "留意站内公告与 FAQ，不定时会有活动"
+      ],
+      "caveats": [
+        "站内积分是站内自定义单位：面板 quota_display_type = CUSTOM、符号「⭐」、price = 7.3（站点定价页「充值」视角下 claude-fable-5.1 显示为 ⭐21.9，即 ⭐3 × 7.3），与 hcnsec 是同一种口径，所以本页按积分原样登记、不折算成美元、也不并入跨站美元合计",
+        "2026-10-04 站方公告：用户数激增，且出现大量脚本账号刷 GitHub 账号批量领签到余额倒卖，正在逐一排查；期间「部分模型价格将激增」——免费额度随时可能缩水，别把长期白嫖当成承诺",
+        "模型池浅得只剩 3 个，且都是按次计费：claude-fable-5.1 每次 3 个积分、Grok 系每次 1 个积分，150 积分粗算也就几十次到一百多次调用；上下架完全看站方",
+        "成功率不是满的：站内公示 claude-fable-5.1 88.9%、Grok-4.5 97.1%、Grok-4.6 只有 68.9%，平均延迟 15~32s——Grok-4.6 大约三成请求会失败，别当稳定生产通道",
+        "注册页与接口都挂在 Cloudflare 后面，机房 IP 打注册页容易被拦（本页的自动探测也会是这个原因），家用宽带正常",
+        "公开状态接口没有暴露注册 / 邀请额度字段（quota_for_new_user、quota_for_invitee 都缺，同批的 hcnsec / DoCode / Long的AI 也一样），本页登记的 150 积分是站内公示口径，进后台核对一遍再算账"
+      ],
+      "community": [
+        "站点: https://chuan.sylu.cc",
+        "公告: https://chuan.sylu.cc/api/status（公开接口 announcements 字段）"
+      ],
+      "en": {
+        "subtitle": "New API community service · 150 site credit on signup, check-in and tasks keep it alive, and only 3 models — but they are the good ones: claude-fable-5.1 and Grok-4.6",
+        "highlights": [
+          "150 site credit on signup, no top-up and no credit card (credit is the site's own unit \"⭐\": the panel reports quota_display_type = CUSTOM, symbol ⭐ and price = 7.3, and the pricing page's \"top-up\" view shows claude-fable-5.1 as ⭐21.9, i.e. ⭐3 × 7.3; this page records credit as-is and does not convert it to USD or fold it into the cross-service USD total)",
+          "Daily check-in and site tasks both keep the credit coming (the panel reports checkin_enabled and enable_task are both true)",
+          "Only 3 models are on the shelf, but they are the good ones: claude-fable-5.1 (⭐3 per request in standard view) plus Grok-4.6 / Grok-4.5 (⭐1 per request each) — billed per request, not per token",
+          "Both native routes are mounted: anonymous probes of /v1/messages and /v1/chat/completions return New API's 401 Invalid token rather than 404, so Claude Code connects directly with the Base URL and Codex CLI uses /v1",
+          "The panel's public config ships one-click deeplinks for CC Switch, Cherry Studio, DeepChat, Lobe Chat, OpenCat, AionUI and AMA — push the key to your client straight from the dashboard",
+          "The signup page offers both GitHub login and a username + password form, and password login works (the panel reports password_login_enabled = true)"
+        ],
+        "modelsNote": "The public pricing API lists only 3 models, all billed per request (claude-fable-5.1 = ⭐3 per request; Grok-4.6 and Grok-4.5 = ⭐1 per request each) and all declaring only the openai endpoint type. The site's \"Model plaza\" page also publishes average latency and success rate per model (15–32s, 68.9%–97.1%); those were snapshots, so defer to the live page.",
+        "register": {
+          "requirements": [
+            "Enter through this page's invite link (?aff=zD17); the referral relationship and reward are settled by the site's own invite mechanism",
+            "Registration passes Cloudflare Turnstile (turnstile_check = true); the registration endpoint rejects requests without a Turnstile token (it returned \"Turnstile token 为空\" when probed)",
+            "The public config has password_register_enabled = false, email_verification = false and github_oauth = true: the signup page does render a username + password form, but submitting it was still blocked by Turnstile during testing, so GitHub is the safer route"
+          ]
+        },
+        "earnMore": [
+          "Daily check-in grants credit (the panel reports checkin_enabled = true — click it in the dashboard)",
+          "The site task center grants credit too (enable_task = true)",
+          "The announcement about scripted accounts farming \"check-in credit\" for resale confirms check-in really does produce credit steadily",
+          "Watch the site announcements and FAQ for occasional campaigns"
+        ],
+        "caveats": [
+          "Site credit is the service's own unit: the panel reports quota_display_type = CUSTOM, symbol \"⭐\" and price = 7.3 (in the pricing page's \"top-up\" view claude-fable-5.1 shows as ⭐21.9, i.e. ⭐3 × 7.3), the same convention as hcnsec — so this page records credit as-is, does not convert it to USD and does not fold it into the cross-service USD total",
+          "Site announcement of 2026-10-04: user numbers surged and a wave of scripted accounts farmed GitHub logins to harvest check-in credit for resale. They are investigating one by one, and in the meantime \"some model prices will surge\" — free credit can shrink without notice, so do not treat long-term free use as a promise",
+          "The model pool is only 3 deep and all per-request: claude-fable-5.1 costs 3 credit per call and the Grok pair 1 credit each, so 150 credit is roughly a few dozen to a bit over a hundred calls; adds and delistings are entirely up to the site",
+          "Success rates are not perfect: the site publishes 88.9% for claude-fable-5.1, 97.1% for Grok-4.5 and only 68.9% for Grok-4.6, with average latencies of 15–32s — roughly a third of Grok-4.6 requests fail, so do not use it as a stable production channel",
+          "Both the signup page and the API sit behind Cloudflare, so datacenter IPs get blocked on the signup page (which is why this page's automated probe will show that too); home broadband is fine",
+          "The public status API does not expose signup or invite credit (quota_for_new_user, quota_for_invitee and quota_for_inviter are all absent — the same for hcnsec / DoCode / Long的AI), so the 150 credit recorded here is the site's published figure — verify it in the dashboard before doing the math"
+        ],
+        "community": [
+          "Site: https://chuan.sylu.cc",
+          "Announcements: https://chuan.sylu.cc/api/status (public announcements field)"
+        ]
+      }
+    },
+    {
       "id": "docode",
       "name": "DoCode",
       "subtitle": "New API 中转站 · 注册送 50 站内刀，注册时填邀请码 zMRe 再加 250，首日 300 刀，Claude 与 GPT 都在架上",
