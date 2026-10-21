@@ -8,6 +8,8 @@ AI 福利站 · Claude Code / Codex 免费额度白嫖导航的自动变动记�
 
 ## 2026-10-21
 
+- 🟢 AgentRouter 恢复在线 <sub>01:14 UTC</sub>
+- 🟢 肖恩AI 恢复在线 <sub>01:14 UTC</sub>
 - 🔴 AgentRouter 探测不到了：注册页与公开接口都没响应 <sub>01:13 UTC</sub>
 - 🆕 新收录 启源星：注册送 150 积分 <sub>01:13 UTC</sub>
 - 🔴 肖恩AI 探测不到了：注册页与公开接口都没响应 <sub>01:13 UTC</sub>
