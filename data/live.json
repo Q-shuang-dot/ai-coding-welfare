@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-10-22T04:44:56.943Z",
+  "generatedAt": "2026-10-22T11:52:27.032Z",
   "sites": [
     {
       "id": "agentrouter",
-      "checkedAt": "2026-10-22T04:44:51.140Z",
+      "checkedAt": "2026-10-22T11:52:21.045Z",
       "apiOk": false,
       "pricingOk": false,
-      "latencyMs": 234,
+      "latencyMs": 238,
       "error": "invalid json",
       "systemName": "Agent Router",
       "version": "init-20261009-3d8bb4d7",
@@ -135,7 +135,7 @@
       "signup": {
         "status": 200,
         "ok": true,
-        "ms": 1013,
+        "ms": 1113,
         "attempts": 1
       },
       "mirrors": [
@@ -163,10 +163,10 @@
     },
     {
       "id": "chuan",
-      "checkedAt": "2026-10-22T04:44:45.902Z",
+      "checkedAt": "2026-10-22T11:52:15.909Z",
       "apiOk": true,
       "pricingOk": true,
-      "latencyMs": 745,
+      "latencyMs": 620,
       "error": null,
       "systemName": "启源星⭐",
       "version": "v0.9.0-liminality-20260825",
@@ -242,7 +242,7 @@
       "signup": {
         "status": 200,
         "ok": true,
-        "ms": 740,
+        "ms": 623,
         "attempts": 1
       },
       "mirrors": [],
@@ -254,10 +254,10 @@
     },
     {
       "id": "docode",
-      "checkedAt": "2026-10-22T04:44:45.912Z",
+      "checkedAt": "2026-10-22T11:52:15.852Z",
       "apiOk": true,
       "pricingOk": false,
-      "latencyMs": 737,
+      "latencyMs": 836,
       "error": null,
       "systemName": "DoCode",
       "version": "",
@@ -274,6 +274,11 @@
       "topupEnabled": null,
       "services": [],
       "announcements": [
+        {
+          "id": 36,
+          "date": "2026-10-22",
+          "text": "Gemini Ultra分组上架，仅Gemini 4 Argon"
+        },
         {
           "id": 35,
           "date": "2026-10-15",
@@ -293,11 +298,6 @@
           "id": 32,
           "date": "2026-09-22",
           "text": "中秋节活动预告：中秋节当天凡是 vip500，赠送 1500 额度；vip1000，赠送 3000 额度，；vip2000，赠送 5000 额度。中秋节三天，充值加赠 5-20%。"
-        },
-        {
-          "id": 31,
-          "date": "2026-09-21",
-          "text": "gptpro+分组即将下线，请及时切换至其他分组，推荐gpt不降智分组！！！"
         }
       ],
       "models": [],
@@ -309,7 +309,7 @@
       "signup": {
         "status": 200,
         "ok": true,
-        "ms": 627,
+        "ms": 758,
         "attempts": 1
       },
       "mirrors": [
@@ -326,10 +326,10 @@
     },
     {
       "id": "nianhua",
-      "checkedAt": "2026-10-22T04:44:46.362Z",
+      "checkedAt": "2026-10-22T11:52:16.059Z",
       "apiOk": true,
       "pricingOk": true,
-      "latencyMs": 1192,
+      "latencyMs": 1067,
       "error": null,
       "systemName": "年华 API 中转站",
       "version": "1.0.0-rc.22-nianhua-bba9838-payguard-20261015",
@@ -549,10 +549,10 @@
           "inputPerMTok": 10,
           "outputPerMTok": 50,
           "groups": [
-            "CCMax支持外接",
             "Claude满血福利",
             "default",
-            "福利（可用群内会通知）"
+            "福利（可用群内会通知）",
+            "CCMax支持外接"
           ],
           "protocols": [
             "anthropic",
@@ -567,8 +567,8 @@
           "inputPerMTok": 10,
           "outputPerMTok": 50,
           "groups": [
-            "CCMax支持外接",
-            "kiro"
+            "kiro",
+            "CCMax支持外接"
           ],
           "protocols": [
             "anthropic",
@@ -598,8 +598,8 @@
           "inputPerMTok": 1,
           "outputPerMTok": 5,
           "groups": [
-            "CCMax支持外接",
-            "kiro"
+            "kiro",
+            "CCMax支持外接"
           ],
           "protocols": [
             "anthropic",
@@ -629,10 +629,10 @@
           "inputPerMTok": 5,
           "outputPerMTok": 25,
           "groups": [
+            "kiro",
             "CCMax支持外接",
             "Claude满血福利",
-            "default",
-            "kiro"
+            "default"
           ],
           "protocols": [
             "anthropic",
@@ -662,10 +662,10 @@
           "inputPerMTok": 5,
           "outputPerMTok": 25,
           "groups": [
-            "CCMax支持外接",
             "Claude满血福利",
             "default",
-            "kiro"
+            "kiro",
+            "CCMax支持外接"
           ],
           "protocols": [
             "anthropic",
@@ -698,9 +698,9 @@
           "inputPerMTok": 5,
           "outputPerMTok": 25,
           "groups": [
-            "CCMax支持外接",
             "kiro",
-            "福利（可用群内会通知）"
+            "福利（可用群内会通知）",
+            "CCMax支持外接"
           ],
           "protocols": [
             "anthropic",
@@ -731,10 +731,10 @@
           "inputPerMTok": 3,
           "outputPerMTok": 15,
           "groups": [
-            "default",
-            "kiro",
             "CCMax支持外接",
-            "Claude满血福利"
+            "Claude满血福利",
+            "default",
+            "kiro"
           ],
           "protocols": [
             "anthropic",
@@ -764,8 +764,8 @@
           "inputPerMTok": 3,
           "outputPerMTok": 3,
           "groups": [
-            "CCMax支持外接",
-            "kiro"
+            "kiro",
+            "CCMax支持外接"
           ],
           "protocols": [
             "anthropic",
@@ -795,12 +795,12 @@
           "inputPerMTok": 2.5,
           "outputPerMTok": 15,
           "groups": [
-            "企业Pro",
             "福利（可用群内会通知）",
             "GPT",
             "GPT-Pro-不降智",
             "GPTPro",
-            "GPT纯Plus低价分组"
+            "GPT纯Plus低价分组",
+            "企业Pro"
           ],
           "protocols": [
             "openai"
@@ -814,10 +814,10 @@
           "inputPerMTok": null,
           "outputPerMTok": null,
           "groups": [
-            "GPT",
-            "GPT-Image",
             "GPTPro",
-            "企业Pro"
+            "企业Pro",
+            "GPT",
+            "GPT-Image"
           ],
           "protocols": [
             "openai"
@@ -932,8 +932,8 @@
           "inputPerMTok": 0.5,
           "outputPerMTok": 3,
           "groups": [
-            "Gemini",
-            "Gemini-特惠-残将"
+            "Gemini-特惠-残将",
+            "Gemini"
           ],
           "protocols": [
             "gemini",
@@ -1403,11 +1403,11 @@
           "inputPerMTok": 2.5,
           "outputPerMTok": 15,
           "groups": [
+            "企业Pro",
+            "福利（可用群内会通知）",
             "GPT",
             "GPTPro",
-            "GPT纯Plus低价分组",
-            "企业Pro",
-            "福利（可用群内会通知）"
+            "GPT纯Plus低价分组"
           ],
           "protocols": [
             "openai"
@@ -1469,13 +1469,13 @@
           "inputPerMTok": 5,
           "outputPerMTok": 30,
           "groups": [
+            "GPTPro",
             "GPT官转",
             "GPT纯Plus低价分组",
             "企业Pro",
             "福利（可用群内会通知）",
             "GPT",
-            "GPT-Pro-不降智",
-            "GPTPro"
+            "GPT-Pro-不降智"
           ],
           "protocols": [
             "openai"
@@ -1489,10 +1489,10 @@
           "inputPerMTok": 5,
           "outputPerMTok": 30,
           "groups": [
+            "GPT",
             "GPTPro",
             "GPT纯Plus低价分组",
-            "企业Pro",
-            "GPT"
+            "企业Pro"
           ],
           "protocols": [
             "openai"
@@ -1522,11 +1522,11 @@
           "inputPerMTok": 75,
           "outputPerMTok": 450,
           "groups": [
-            "企业Pro",
             "福利（可用群内会通知）",
             "GPT",
             "GPTPro",
-            "GPT纯Plus低价分组"
+            "GPT纯Plus低价分组",
+            "企业Pro"
           ],
           "protocols": [
             "openai"
@@ -1540,13 +1540,13 @@
           "inputPerMTok": 5,
           "outputPerMTok": 30,
           "groups": [
+            "GPTPro",
             "GPT官转",
             "GPT纯Plus低价分组",
             "企业Pro",
             "福利（可用群内会通知）",
             "GPT",
-            "GPT-Pro-不降智",
-            "GPTPro"
+            "GPT-Pro-不降智"
           ],
           "protocols": [
             "openai"
@@ -1560,13 +1560,13 @@
           "inputPerMTok": 75,
           "outputPerMTok": 450,
           "groups": [
+            "企业Pro",
             "福利（可用群内会通知）",
             "GPT",
             "GPT-Pro-不降智",
             "GPTPro",
             "GPT官转",
-            "GPT纯Plus低价分组",
-            "企业Pro"
+            "GPT纯Plus低价分组"
           ],
           "protocols": [
             "openai"
@@ -1598,11 +1598,11 @@
           "inputPerMTok": 75,
           "outputPerMTok": 150,
           "groups": [
+            "GPT",
             "GPT-Pro-不降智",
             "GPTPro",
             "GPT官转",
-            "企业Pro",
-            "GPT"
+            "企业Pro"
           ],
           "protocols": [
             "openai"
@@ -1632,11 +1632,11 @@
           "inputPerMTok": 75,
           "outputPerMTok": 150,
           "groups": [
+            "企业Pro",
             "GPT",
             "GPT-Pro-不降智",
             "GPTPro",
-            "GPT官转",
-            "企业Pro"
+            "GPT官转"
           ],
           "protocols": [
             "openai"
@@ -1698,11 +1698,11 @@
           "inputPerMTok": null,
           "outputPerMTok": null,
           "groups": [
-            "GPTPro",
-            "福利（可用群内会通知）",
             "ALL",
             "GPT",
-            "GPT-Image"
+            "GPT-Image",
+            "GPTPro",
+            "福利（可用群内会通知）"
           ],
           "protocols": [
             "openai"
@@ -1733,10 +1733,10 @@
           "inputPerMTok": null,
           "outputPerMTok": null,
           "groups": [
+            "企业Pro",
             "GPT",
             "GPT-Image",
-            "GPTPro",
-            "企业Pro"
+            "GPTPro"
           ],
           "protocols": [
             "openai"
@@ -1784,10 +1784,10 @@
           "inputPerMTok": null,
           "outputPerMTok": null,
           "groups": [
+            "ALL",
             "GPT",
             "GPT-Image",
-            "GPTPro",
-            "ALL"
+            "GPTPro"
           ],
           "protocols": [
             "openai"
@@ -2152,8 +2152,8 @@
           "inputPerMTok": 0.28,
           "outputPerMTok": 0.56,
           "groups": [
-            "GPT-Image",
-            "公益"
+            "公益",
+            "GPT-Image"
           ],
           "protocols": [
             "openai"
@@ -2634,7 +2634,7 @@
       "signup": {
         "status": 200,
         "ok": true,
-        "ms": 1197,
+        "ms": 1238,
         "attempts": 1
       },
       "mirrors": [],
@@ -2646,10 +2646,10 @@
     },
     {
       "id": "orbelis",
-      "checkedAt": "2026-10-22T04:44:46.484Z",
+      "checkedAt": "2026-10-22T11:52:16.233Z",
       "apiOk": true,
       "pricingOk": true,
-      "latencyMs": 1322,
+      "latencyMs": 1239,
       "error": null,
       "systemName": "Orbelis",
       "version": "v1.0.0-rc.41",
@@ -2836,13 +2836,13 @@
           "inputPerMTok": 10,
           "outputPerMTok": 50,
           "groups": [
-            "Claude·华强北节点【请随意---国内某大厂渠道】",
             "CCMAX·蒸馏节点-有注入",
             "CCMAX·满血高性能特价",
             "CCMAX·不可外接节点【不可破限不可蒸馏】",
             "CCMAX·可外接节点【不可破限不可蒸馏】",
             "CCMAX·蒸馏节点-微注入",
-            "CCMAX·蒸馏节点-零注入"
+            "CCMAX·蒸馏节点-零注入",
+            "Claude·华强北节点【请随意---国内某大厂渠道】"
           ],
           "protocols": [
             "anthropic",
@@ -2857,13 +2857,13 @@
           "inputPerMTok": 10,
           "outputPerMTok": 50,
           "groups": [
-            "CCMAX·蒸馏节点-零注入",
-            "Claude·华强北节点【请随意---国内某大厂渠道】",
-            "CCMAX·蒸馏节点-有注入",
             "CCMAX·满血高性能特价",
             "CCMAX·不可外接节点【不可破限不可蒸馏】",
             "CCMAX·可外接节点【不可破限不可蒸馏】",
-            "CCMAX·蒸馏节点-微注入"
+            "CCMAX·蒸馏节点-微注入",
+            "CCMAX·蒸馏节点-零注入",
+            "Claude·华强北节点【请随意---国内某大厂渠道】",
+            "CCMAX·蒸馏节点-有注入"
           ],
           "protocols": [
             "anthropic",
@@ -2878,10 +2878,10 @@
           "inputPerMTok": 10,
           "outputPerMTok": 50,
           "groups": [
-            "Claude--kiro·稳定高缓渠道",
-            "Claude--kiro·Pro+正价渠道",
             "Claude--kiro·Power【企业级kiro智商较高】",
-            "Claude--kiro·兜底高缓渠道"
+            "Claude--kiro·兜底高缓渠道",
+            "Claude--kiro·稳定高缓渠道",
+            "Claude--kiro·Pro+正价渠道"
           ],
           "protocols": [
             "anthropic",
@@ -2916,10 +2916,10 @@
           "inputPerMTok": 75,
           "outputPerMTok": 75,
           "groups": [
-            "CCMAX·蒸馏节点-零注入",
             "CCMAX·蒸馏节点-有注入",
             "CCMAX·满血高性能特价",
-            "CCMAX·可外接节点【不可破限不可蒸馏】"
+            "CCMAX·可外接节点【不可破限不可蒸馏】",
+            "CCMAX·蒸馏节点-零注入"
           ],
           "protocols": [
             "anthropic",
@@ -2934,18 +2934,18 @@
           "inputPerMTok": 5,
           "outputPerMTok": 25,
           "groups": [
-            "Claude--kiro·Pro+正价渠道",
-            "Claude--kiro·Power【企业级kiro智商较高】",
             "Claude·华强北节点【请随意---国内某大厂渠道】",
-            "Claude·AWSB节点【不可破限不可蒸馏】",
-            "CCMAX·不可外接节点【不可破限不可蒸馏】",
-            "CCMAX·蒸馏节点-零注入",
             "Claude--kiro·兜底高缓渠道",
             "CCMAX·蒸馏节点-有注入",
             "CCMAX·满血高性能特价",
+            "CCMAX·不可外接节点【不可破限不可蒸馏】",
             "Claude--kiro·稳定高缓渠道",
             "CCMAX·可外接节点【不可破限不可蒸馏】",
-            "CCMAX·蒸馏节点-微注入"
+            "Claude--kiro·Power【企业级kiro智商较高】",
+            "Claude·AWSB节点【不可破限不可蒸馏】",
+            "CCMAX·蒸馏节点-微注入",
+            "CCMAX·蒸馏节点-零注入",
+            "Claude--kiro·Pro+正价渠道"
           ],
           "protocols": [
             "anthropic",
@@ -2960,18 +2960,18 @@
           "inputPerMTok": 5,
           "outputPerMTok": 25,
           "groups": [
+            "CCMAX·可外接节点【不可破限不可蒸馏】",
+            "CCMAX·蒸馏节点-微注入",
+            "Claude--kiro·Pro+正价渠道",
             "Claude--kiro·Power【企业级kiro智商较高】",
+            "Claude--kiro·兜底高缓渠道",
             "CCMAX·蒸馏节点-有注入",
             "CCMAX·满血高性能特价",
             "CCMAX·不可外接节点【不可破限不可蒸馏】",
-            "CCMAX·蒸馏节点-微注入",
             "CCMAX·蒸馏节点-零注入",
-            "Claude--kiro·Pro+正价渠道",
             "Claude·华强北节点【请随意---国内某大厂渠道】",
-            "Claude--kiro·兜底高缓渠道",
             "Claude·AWSB节点【不可破限不可蒸馏】",
-            "Claude--kiro·稳定高缓渠道",
-            "CCMAX·可外接节点【不可破限不可蒸馏】"
+            "Claude--kiro·稳定高缓渠道"
           ],
           "protocols": [
             "anthropic",
@@ -2987,17 +2987,17 @@
           "outputPerMTok": 25,
           "groups": [
             "Claude--kiro·Pro+正价渠道",
-            "Claude--kiro·Power【企业级kiro智商较高】",
-            "Claude·AWSB节点【不可破限不可蒸馏】",
             "CCMAX·蒸馏节点-有注入",
             "CCMAX·满血高性能特价",
             "CCMAX·不可外接节点【不可破限不可蒸馏】",
+            "CCMAX·可外接节点【不可破限不可蒸馏】",
             "CCMAX·蒸馏节点-微注入",
+            "CCMAX·蒸馏节点-零注入",
+            "Claude--kiro·Power【企业级kiro智商较高】",
             "Claude·华强北节点【请随意---国内某大厂渠道】",
             "Claude--kiro·兜底高缓渠道",
-            "Claude--kiro·稳定高缓渠道",
-            "CCMAX·可外接节点【不可破限不可蒸馏】",
-            "CCMAX·蒸馏节点-零注入"
+            "Claude·AWSB节点【不可破限不可蒸馏】",
+            "Claude--kiro·稳定高缓渠道"
           ],
           "protocols": [
             "anthropic",
@@ -3012,18 +3012,18 @@
           "inputPerMTok": 5,
           "outputPerMTok": 25,
           "groups": [
-            "Claude--kiro·Pro+正价渠道",
+            "Claude·华强北节点【请随意---国内某大厂渠道】",
             "Claude--kiro·兜底高缓渠道",
             "Claude·AWSB节点【不可破限不可蒸馏】",
-            "CCMAX·蒸馏节点-有注入",
-            "CCMAX·可外接节点【不可破限不可蒸馏】",
-            "Claude--kiro·Power【企业级kiro智商较高】",
-            "Claude·华强北节点【请随意---国内某大厂渠道】",
             "CCMAX·满血高性能特价",
+            "CCMAX·蒸馏节点-有注入",
             "CCMAX·不可外接节点【不可破限不可蒸馏】",
             "Claude--kiro·稳定高缓渠道",
+            "Claude--kiro·Pro+正价渠道",
+            "CCMAX·可外接节点【不可破限不可蒸馏】",
             "CCMAX·蒸馏节点-微注入",
-            "CCMAX·蒸馏节点-零注入"
+            "CCMAX·蒸馏节点-零注入",
+            "Claude--kiro·Power【企业级kiro智商较高】"
           ],
           "protocols": [
             "anthropic",
@@ -3038,18 +3038,18 @@
           "inputPerMTok": 75,
           "outputPerMTok": 75,
           "groups": [
-            "CCMAX·可外接节点【不可破限不可蒸馏】",
-            "CCMAX·蒸馏节点-微注入",
             "Claude--kiro·Pro+正价渠道",
-            "CCMAX·满血高性能特价",
-            "Claude--kiro·稳定高缓渠道",
-            "CCMAX·蒸馏节点-零注入",
-            "Claude--kiro·Power【企业级kiro智商较高】",
             "Claude·华强北节点【请随意---国内某大厂渠道】",
             "Claude--kiro·兜底高缓渠道",
+            "CCMAX·满血高性能特价",
+            "CCMAX·不可外接节点【不可破限不可蒸馏】",
+            "Claude--kiro·稳定高缓渠道",
+            "CCMAX·可外接节点【不可破限不可蒸馏】",
+            "CCMAX·蒸馏节点-零注入",
+            "Claude--kiro·Power【企业级kiro智商较高】",
             "Claude·AWSB节点【不可破限不可蒸馏】",
             "CCMAX·蒸馏节点-有注入",
-            "CCMAX·不可外接节点【不可破限不可蒸馏】"
+            "CCMAX·蒸馏节点-微注入"
           ],
           "protocols": [
             "anthropic",
@@ -3094,18 +3094,18 @@
           "inputPerMTok": 3,
           "outputPerMTok": 15,
           "groups": [
+            "Claude--kiro·Pro+正价渠道",
+            "Claude--kiro·Power【企业级kiro智商较高】",
             "Claude·华强北节点【请随意---国内某大厂渠道】",
+            "Claude--kiro·兜底高缓渠道",
             "CCMAX·满血高性能特价",
             "CCMAX·蒸馏节点-有注入",
             "CCMAX·蒸馏节点-零注入",
             "CCMAX·不可外接节点【不可破限不可蒸馏】",
+            "Claude·AWSB节点【不可破限不可蒸馏】",
             "Claude--kiro·稳定高缓渠道",
             "CCMAX·可外接节点【不可破限不可蒸馏】",
-            "Claude--kiro·Power【企业级kiro智商较高】",
-            "Claude--kiro·兜底高缓渠道",
-            "Claude·AWSB节点【不可破限不可蒸馏】",
-            "CCMAX·蒸馏节点-微注入",
-            "Claude--kiro·Pro+正价渠道"
+            "CCMAX·蒸馏节点-微注入"
           ],
           "protocols": [
             "anthropic",
@@ -3120,18 +3120,18 @@
           "inputPerMTok": 3,
           "outputPerMTok": 15,
           "groups": [
+            "CCMAX·不可外接节点【不可破限不可蒸馏】",
+            "Claude--kiro·Pro+正价渠道",
+            "Claude·华强北节点【请随意---国内某大厂渠道】",
+            "Claude·AWSB节点【不可破限不可蒸馏】",
+            "CCMAX·蒸馏节点-零注入",
+            "Claude--kiro·稳定高缓渠道",
             "CCMAX·可外接节点【不可破限不可蒸馏】",
             "CCMAX·蒸馏节点-微注入",
-            "Claude--kiro·Pro+正价渠道",
             "Claude--kiro·Power【企业级kiro智商较高】",
-            "Claude·华强北节点【请随意---国内某大厂渠道】",
             "Claude--kiro·兜底高缓渠道",
-            "CCMAX·蒸馏节点-有注入",
-            "CCMAX·蒸馏节点-零注入",
-            "CCMAX·不可外接节点【不可破限不可蒸馏】",
-            "Claude--kiro·稳定高缓渠道",
-            "Claude·AWSB节点【不可破限不可蒸馏】",
-            "CCMAX·满血高性能特价"
+            "CCMAX·满血高性能特价",
+            "CCMAX·蒸馏节点-有注入"
           ],
           "protocols": [
             "anthropic",
@@ -3146,16 +3146,16 @@
           "inputPerMTok": 75,
           "outputPerMTok": 75,
           "groups": [
-            "CCMAX·可外接节点【不可破限不可蒸馏】",
-            "CCMAX·蒸馏节点-微注入",
             "Claude--kiro·兜底高缓渠道",
-            "CCMAX·满血高性能特价",
-            "Claude--kiro·稳定高缓渠道",
-            "CCMAX·不可外接节点【不可破限不可蒸馏】",
-            "Claude--kiro·Power【企业级kiro智商较高】",
             "Claude·AWSB节点【不可破限不可蒸馏】",
             "CCMAX·蒸馏节点-有注入",
-            "CCMAX·蒸馏节点-零注入"
+            "CCMAX·可外接节点【不可破限不可蒸馏】",
+            "CCMAX·满血高性能特价",
+            "CCMAX·蒸馏节点-零注入",
+            "Claude--kiro·稳定高缓渠道",
+            "CCMAX·不可外接节点【不可破限不可蒸馏】",
+            "CCMAX·蒸馏节点-微注入",
+            "Claude--kiro·Power【企业级kiro智商较高】"
           ],
           "protocols": [
             "anthropic",
@@ -3170,12 +3170,12 @@
           "inputPerMTok": 0.2,
           "outputPerMTok": 1.2,
           "groups": [
+            "试用用户专用分组",
+            "Codex·高速节点一渠道",
             "Codex·高速节点二渠道",
             "Pro·不降智高缓分组",
             "企业专用专线",
-            "GPT·破限渠道",
-            "试用用户专用分组",
-            "Codex·高速节点一渠道"
+            "GPT·破限渠道"
           ],
           "protocols": [
             "openai"
@@ -3412,8 +3412,8 @@
           "inputPerMTok": 8,
           "outputPerMTok": 28,
           "groups": [
-            "国产特惠反代渠道",
-            "国产稳定反代渠道"
+            "国产稳定反代渠道",
+            "国产特惠反代渠道"
           ],
           "protocols": [
             "openai"
@@ -3623,21 +3623,21 @@
           "inputPerMTok": 5,
           "outputPerMTok": 30,
           "groups": [
-            "GPT·官转渠道",
-            "Pro·旗舰节点",
-            "Pro·企业专线节点",
-            "企业专用专线",
-            "Pro·不降智高缓兜底分组",
-            "Codex·高速节点一渠道",
-            "GPT·官key渠道",
-            "Codex·高速节点二渠道",
-            "Codex·高速节点不降智渠道",
             "Pro·不降智高缓分组",
+            "Pro·不降智高缓兜底分组",
+            "GPT·破限渠道",
             "Codex福利节点一渠道",
             "Codex福利节点二渠道",
             "试用用户专用分组",
+            "Codex·高速节点二渠道",
+            "Codex·高速节点不降智渠道",
+            "Codex·高速节点一渠道",
+            "GPT·官转渠道",
+            "Pro·旗舰节点",
+            "GPT·官key渠道",
+            "Pro·企业专线节点",
             "Codex·高缓高稳定渠道【用于兜底分组】",
-            "GPT·破限渠道"
+            "企业专用专线"
           ],
           "protocols": [
             "openai"
@@ -3651,20 +3651,20 @@
           "inputPerMTok": 2.5,
           "outputPerMTok": 15,
           "groups": [
-            "企业专用专线",
-            "GPT·破限渠道",
-            "Codex福利节点二渠道",
+            "Codex福利节点一渠道",
             "试用用户专用分组",
             "Codex·高速节点一渠道",
             "GPT·官转渠道",
-            "Gpt-Free渠道",
             "GPT·官key渠道",
             "Codex·高速节点二渠道",
             "Codex·高缓高稳定渠道【用于兜底分组】",
             "Pro·不降智高缓分组",
             "Pro·不降智高缓兜底分组",
-            "Codex福利节点一渠道",
-            "Pro·企业专线节点"
+            "GPT·破限渠道",
+            "Codex福利节点二渠道",
+            "Gpt-Free渠道",
+            "Pro·企业专线节点",
+            "企业专用专线"
           ],
           "protocols": [
             "openai"
@@ -3679,21 +3679,21 @@
           "outputPerMTok": 50,
           "groups": [
             "Codex·高速节点二渠道",
-            "Pro·不降智高缓分组",
-            "GPT·破限渠道",
-            "Codex福利节点一渠道",
-            "Codex福利节点二渠道",
-            "GPT·官转渠道",
-            "GPT-6Astra不降智分组",
-            "企业专用专线",
-            "试用用户专用分组",
-            "Codex·高速节点一渠道",
-            "Codex·高缓高稳定渠道【用于兜底分组】",
-            "Pro·旗舰节点",
             "Codex·高速节点不降智渠道",
             "Pro·不降智高缓兜底分组",
+            "试用用户专用分组",
+            "Codex·高速节点一渠道",
+            "GPT·官转渠道",
+            "Pro·旗舰节点",
+            "Codex·高缓高稳定渠道【用于兜底分组】",
+            "Pro·不降智高缓分组",
+            "企业专用专线",
+            "Codex福利节点二渠道",
+            "Pro·企业专线节点",
             "GPT·官key渠道",
-            "Pro·企业专线节点"
+            "GPT-6Astra不降智分组",
+            "GPT·破限渠道",
+            "Codex福利节点一渠道"
           ],
           "protocols": [
             "openai"
@@ -3707,21 +3707,21 @@
           "inputPerMTok": 2,
           "outputPerMTok": 10,
           "groups": [
+            "Codex·高速节点不降智渠道",
+            "Codex福利节点一渠道",
+            "试用用户专用分组",
+            "Codex·高缓高稳定渠道【用于兜底分组】",
+            "Pro·不降智高缓兜底分组",
             "GPT·破限渠道",
             "Codex福利节点二渠道",
+            "Codex·高速节点一渠道",
             "GPT·官转渠道",
             "Pro·旗舰节点",
-            "Pro·企业专线节点",
             "Pro·不降智高缓分组",
-            "Codex·高速节点一渠道",
+            "企业专用专线",
             "GPT·官key渠道",
             "Codex·高速节点二渠道",
-            "Codex福利节点一渠道",
-            "Codex·高缓高稳定渠道【用于兜底分组】",
-            "企业专用专线",
-            "试用用户专用分组",
-            "Codex·高速节点不降智渠道",
-            "Pro·不降智高缓兜底分组"
+            "Pro·企业专线节点"
           ],
           "protocols": [
             "openai"
@@ -3735,18 +3735,18 @@
           "inputPerMTok": 75,
           "outputPerMTok": 150,
           "groups": [
-            "Pro·不降智高缓兜底分组",
-            "试用用户专用分组",
-            "GPT·官key渠道",
-            "Codex·高速节点二渠道",
             "Codex·高速节点不降智渠道",
+            "Pro·不降智高缓分组",
             "Codex福利节点二渠道",
             "Codex·高速节点一渠道",
-            "GPT·官转渠道",
             "Pro·旗舰节点",
+            "GPT·官key渠道",
+            "Codex·高速节点二渠道",
             "Codex·高缓高稳定渠道【用于兜底分组】",
-            "Pro·不降智高缓分组",
-            "企业专用专线"
+            "企业专用专线",
+            "Pro·不降智高缓兜底分组",
+            "试用用户专用分组",
+            "GPT·官转渠道"
           ],
           "protocols": [
             "openai"
@@ -3822,9 +3822,9 @@
           "inputPerMTok": 2,
           "outputPerMTok": 6,
           "groups": [
-            "grok·Ultra节点",
             "Grok·Super节点",
-            "grok·heavy节点"
+            "grok·heavy节点",
+            "grok·Ultra节点"
           ],
           "protocols": [
             "openai",
@@ -4006,8 +4006,8 @@
           "inputPerMTok": 75,
           "outputPerMTok": 75,
           "groups": [
-            "国产稳定反代渠道",
-            "国产特惠反代渠道"
+            "国产特惠反代渠道",
+            "国产稳定反代渠道"
           ],
           "protocols": [
             "openai"
@@ -4658,7 +4658,7 @@
       "signup": {
         "status": 200,
         "ok": true,
-        "ms": 1298,
+        "ms": 1246,
         "attempts": 1
       },
       "mirrors": [],
@@ -4670,10 +4670,10 @@
     },
     {
       "id": "supxh",
-      "checkedAt": "2026-10-22T04:44:46.414Z",
+      "checkedAt": "2026-10-22T11:52:16.615Z",
       "apiOk": true,
       "pricingOk": true,
-      "latencyMs": 1243,
+      "latencyMs": 1589,
       "error": null,
       "systemName": null,
       "version": null,
@@ -4697,7 +4697,7 @@
       "signup": {
         "status": 200,
         "ok": true,
-        "ms": 1286,
+        "ms": 1949,
         "attempts": 1
       },
       "mirrors": [],
@@ -4709,10 +4709,10 @@
     },
     {
       "id": "api456",
-      "checkedAt": "2026-10-22T04:44:46.584Z",
+      "checkedAt": "2026-10-22T11:52:16.690Z",
       "apiOk": true,
       "pricingOk": false,
-      "latencyMs": 1419,
+      "latencyMs": 1692,
       "error": null,
       "systemName": "可萌中转站",
       "version": "v1.0.0-rc.45-api456.1",
@@ -4759,7 +4759,7 @@
       "signup": {
         "status": 200,
         "ok": true,
-        "ms": 1468,
+        "ms": 1699,
         "attempts": 1
       },
       "mirrors": [],
@@ -4771,10 +4771,10 @@
     },
     {
       "id": "justwoker",
-      "checkedAt": "2026-10-22T04:44:46.574Z",
+      "checkedAt": "2026-10-22T11:52:16.670Z",
       "apiOk": true,
       "pricingOk": false,
-      "latencyMs": 1408,
+      "latencyMs": 1672,
       "error": null,
       "systemName": "JustDoWork",
       "version": "v1.0.0-rc.23",
@@ -4801,7 +4801,7 @@
       "signup": {
         "status": 200,
         "ok": true,
-        "ms": 1561,
+        "ms": 2088,
         "attempts": 1
       },
       "mirrors": [],
@@ -4813,10 +4813,10 @@
     },
     {
       "id": "matrix",
-      "checkedAt": "2026-10-22T04:44:47.577Z",
+      "checkedAt": "2026-10-22T11:52:17.457Z",
       "apiOk": true,
       "pricingOk": false,
-      "latencyMs": 2411,
+      "latencyMs": 2459,
       "error": null,
       "systemName": null,
       "version": null,
@@ -4840,7 +4840,7 @@
       "signup": {
         "status": 200,
         "ok": true,
-        "ms": 2491,
+        "ms": 2480,
         "attempts": 1
       },
       "mirrors": [],
@@ -4852,10 +4852,10 @@
     },
     {
       "id": "seekai",
-      "checkedAt": "2026-10-22T04:44:49.218Z",
+      "checkedAt": "2026-10-22T11:52:17.326Z",
       "apiOk": true,
       "pricingOk": false,
-      "latencyMs": 4050,
+      "latencyMs": 2326,
       "error": null,
       "systemName": "SeekAi",
       "version": "v1.0.0-rc.25",
@@ -4883,7 +4883,7 @@
       "signup": {
         "status": 200,
         "ok": true,
-        "ms": 2141,
+        "ms": 2326,
         "attempts": 1
       },
       "mirrors": [
@@ -4900,10 +4900,10 @@
     },
     {
       "id": "aaawinn",
-      "checkedAt": "2026-10-22T04:44:47.051Z",
+      "checkedAt": "2026-10-22T11:52:17.058Z",
       "apiOk": true,
       "pricingOk": false,
-      "latencyMs": 1883,
+      "latencyMs": 2057,
       "error": null,
       "systemName": "Long的AI",
       "version": "",
@@ -4955,7 +4955,7 @@
       "signup": {
         "status": 200,
         "ok": true,
-        "ms": 1883,
+        "ms": 2058,
         "attempts": 1
       },
       "mirrors": [],
@@ -4967,10 +4967,10 @@
     },
     {
       "id": "hcnsec",
-      "checkedAt": "2026-10-22T04:44:50.998Z",
+      "checkedAt": "2026-10-22T11:52:19.056Z",
       "apiOk": true,
       "pricingOk": false,
-      "latencyMs": 5484,
+      "latencyMs": 3714,
       "error": null,
       "systemName": "新疆幻城网安科技公益大模型安全网关",
       "version": "v1.0.0-rc.40-hc2",
@@ -5023,7 +5023,7 @@
       "signup": {
         "status": 200,
         "ok": true,
-        "ms": 3698,
+        "ms": 3695,
         "attempts": 1
       },
       "mirrors": [],
