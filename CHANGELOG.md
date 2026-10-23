@@ -6,6 +6,11 @@ AI 福利站 · Claude Code / Codex 免费额度白嫖导航的自动变动记�
 
 > 只记录会影响「值不值得注册」的字段。探测被站点 WAF 拦下时不记在线状态变化，避免机房 IP 被拦被误报成掉线。
 
+## 2026-10-23
+
+- ➕ Orbelis 上线模型：Az-gpt-image-2、Az-gpt-image-2.5-flare、Az-gpt-image-2.5-sunburst、gemini-3-flash 等 13 个 <sub>17:06 UTC</sub>
+- ➖ Orbelis 下线模型：AZ-gpt-image-2、AZ-gpt-image-2.5-flare、AZ-gpt-image-2.5-sunburst、claude-sonnet-4-5 等 11 个 <sub>17:06 UTC</sub>
+
 ## 2026-10-22
 
 - 📢 DoCode 发了公告：Gemini Ultra分组上架，仅Gemini 4 Argon <sub>11:52 UTC</sub>
