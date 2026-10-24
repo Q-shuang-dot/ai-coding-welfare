@@ -6,6 +6,10 @@ AI 福利站 · Claude Code / Codex 免费额度白嫖导航的自动变动记�
 
 > 只记录会影响「值不值得注册」的字段。探测被站点 WAF 拦下时不记在线状态变化，避免机房 IP 被拦被误报成掉线。
 
+## 2026-10-24
+
+- ➕ 启源星 上线模型：Hunyuan3、step-3.7-flash <sub>10:59 UTC</sub>
+
 ## 2026-10-23
 
 - ➕ Orbelis 上线模型：Az-gpt-image-2、Az-gpt-image-2.5-flare、Az-gpt-image-2.5-sunburst、gemini-3-flash 等 13 个 <sub>17:06 UTC</sub>
