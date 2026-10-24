@@ -8,6 +8,8 @@ AI 福利站 · Claude Code / Codex 免费额度白嫖导航的自动变动记�
 
 ## 2026-10-24
 
+- ➕ 启源星 上线模型：claude-haiku-4.5、claude-sonnet-4.5、dots-3-note、gpt-flash 等 5 个 <sub>15:56 UTC</sub>
+- ➖ 启源星 下线模型：Grok-4.5、Grok-4.6 <sub>15:56 UTC</sub>
 - ➕ 启源星 上线模型：Hunyuan3、step-3.7-flash <sub>10:59 UTC</sub>
 
 ## 2026-10-23
