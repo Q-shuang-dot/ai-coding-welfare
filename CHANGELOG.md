@@ -6,6 +6,10 @@ AI 福利站 · Claude Code / Codex 免费额度白嫖导航的自动变动记�
 
 > 只记录会影响「值不值得注册」的字段。探测被站点 WAF 拦下时不记在线状态变化，避免机房 IP 被拦被误报成掉线。
 
+## 2026-10-25
+
+- ➕ Orbelis 上线模型：kimi-k3.1-pro <sub>11:28 UTC</sub>
+
 ## 2026-10-24
 
 - ➕ 启源星 上线模型：claude-haiku-4.5、claude-sonnet-4.5、dots-3-note、gpt-flash 等 5 个 <sub>15:56 UTC</sub>
