@@ -5,8 +5,8 @@
 <p align="center">Free credits · a collection of relay and community services for free Claude Code / Codex / Cursor quota · daily check-ins</p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Tracked%20services-12-blue" alt="Tracked services">
-  <img src="https://img.shields.io/badge/Online-12%2F12-brightgreen" alt="Online">
+  <img src="https://img.shields.io/badge/Tracked%20services-11-blue" alt="Tracked services">
+  <img src="https://img.shields.io/badge/Online-11%2F11-brightgreen" alt="Online">
   <img src="https://img.shields.io/badge/Best%20first%20day-%24175-success" alt="Best first day">
   <img src="https://img.shields.io/badge/Data%20updated-2026--10--25%2020.51%20UTC-informational" alt="Data updated">
 </p>
@@ -16,7 +16,6 @@
   <a href="https://chuan.sylu.cc/sign-up?aff=zD17"><b>启源星 sign up</b></a> ·
   <a href="https://docode.cc/register?aff=1Qof"><b>DoCode sign up</b></a> ·
   <a href="https://us-3.nianhuaapi.com/sign-up?aff=aonj"><b>NianHua API sign up</b></a> ·
-  <a href="https://nova.vcrauo.com/sign-up?aff=0hvb"><b>Orbelis sign up</b></a> ·
   <a href="https://free.supxh.xin/register?code=MVU8GX"><b>ShawnAI sign up</b></a> ·
   <a href="https://api456.me/register?aff=zmza"><b>api456.me sign up</b></a> ·
   <a href="https://api.justwoker.icu/register?aff=OIWh"><b>JustDoWork sign up</b></a> ·
@@ -38,7 +37,6 @@
 | **启源星** | 🟢 Online | **150 pts** | signup 150 pts | Daily check-in | Anthropic + OpenAI | 8 listed | <a href="https://chuan.sylu.cc/sign-up?aff=zD17" target="_blank" rel="noopener">GitHub sign up →</a> | — |
 | **DoCode** | 🟢 Online | **300 site-USD** | signup 50 site-USD + this page's invite 250 site-USD | No check-in | Anthropic + OpenAI | Sign in to see | <a href="https://docode.cc/register?aff=1Qof" target="_blank" rel="noopener">Sign up →</a> | `1Qof` |
 | **NianHua API** | 🟢 Online | Posted on site | — | Daily check-in | Anthropic + OpenAI | 149 listed | <a href="https://us-3.nianhuaapi.com/sign-up?aff=aonj" target="_blank" rel="noopener">Sign up →</a> | `aonj` |
-| **Orbelis** | 🟢 Online | **1 site-USD** | this page's invite 1 site-USD | Daily check-in | Anthropic + OpenAI | 125 listed | <a href="https://nova.vcrauo.com/sign-up?aff=0hvb" target="_blank" rel="noopener">Sign up →</a> | `0hvb` |
 | **ShawnAI** | 🟢 Online | **≈14000 pts** | signup 7000 pts + this page's invite 5000 pts + first check-in ≈2000 pts | ≈2000 pts/day | Anthropic + OpenAI | Sign in to see | <a href="https://free.supxh.xin/register?code=MVU8GX" target="_blank" rel="noopener">Sign up →</a> | `MVU8GX` |
 | **api456.me** | 🟢 Online | **$50** | signup $20 + this page's invite $20 + first check-in $10 | $10/day | OpenAI | Sign in to see | <a href="https://api456.me/register?aff=zmza" target="_blank" rel="noopener">Sign up →</a> | `zmza` |
 | **JustDoWork** | 🟢 Online | Posted on site | — | Daily check-in | Anthropic + OpenAI | Sign in to see | <a href="https://api.justwoker.icu/register?aff=OIWh" target="_blank" rel="noopener">GitHub sign up →</a> | `OIWh` |
@@ -49,9 +47,9 @@
 
 > "First day" = signup bonus + invite bonus from this page + whatever check-in pays out on day one (services with a daily reset pool count a single day's pool). Models, prices and status are scraped from each service's public API. Last update: `2026-10-25 20:51 UTC`.
 >
-> Services with a code in the "Invite code" column (DoCode `1Qof`, NianHua API `aonj`, Orbelis `0hvb`, ShawnAI `MVU8GX`, api456.me `zmza`, JustDoWork `OIWh`, SeekAi `dDJy`, Long's AI `ijFL`, Xinjiang Huancheng Security `3J8z`) require **typing the code yourself** in the signup form. Miss it and you only get the base signup bonus — it cannot be added afterwards. A dash means the invite bonus travels inside the link and needs no typing.
+> Services with a code in the "Invite code" column (DoCode `1Qof`, NianHua API `aonj`, ShawnAI `MVU8GX`, api456.me `zmza`, JustDoWork `OIWh`, SeekAi `dDJy`, Long's AI `ijFL`, Xinjiang Huancheng Security `3J8z`) require **typing the code yourself** in the signup form. Miss it and you only get the base signup bonus — it cannot be added afterwards. A dash means the invite bonus travels inside the link and needs no typing.
 >
-> Signing up for all 5 USD-priced services that still accept new users gets you roughly **$225** on day one; 启源星 separately credits 150 pts, DoCode separately credits 300 site-USD, Orbelis separately credits 1 site-USD, ShawnAI separately credits ≈14000 pts, Matrix separately credits 2600 pts, Long's AI separately credits Free, Xinjiang Huancheng Security separately credits 30000 site-USD — each service prices in its own unit with no published USD conversion, so those are left out of this total.
+> Signing up for all 5 USD-priced services that still accept new users gets you roughly **$225** on day one; 启源星 separately credits 150 pts, DoCode separately credits 300 site-USD, ShawnAI separately credits ≈14000 pts, Matrix separately credits 2600 pts, Long's AI separately credits Free, Xinjiang Huancheng Security separately credits 30000 site-USD — each service prices in its own unit with no published USD conversion, so those are left out of this total.
 >
 > 🟡 1 services have not returned fresh API data for over 48 hours. Details show the last successful snapshot; online status reflects whether the signup page actually loads.
 
@@ -96,7 +94,7 @@ powershell -ExecutionPolicy Bypass -File scripts/quickstart.ps1
 
 **Live data** (scraped from public APIs)
 
-- ⚠ No fresh API data for 258 hours; the info below is a snapshot from `2026-10-15 03:05 UTC`
+- ⚠ No fresh API data for 263 hours; the info below is a snapshot from `2026-10-15 03:05 UTC`
 - Panel name: **Agent Router**
 - Panel version: `init-20261009-3d8bb4d7`
 - Referral bonus: **$50**
@@ -729,263 +727,6 @@ curl -s https://us-3.nianhuaapi.com/v1/chat/completions \
 - QQ group: 1093317048 (the chat group posted in panel announcement id 1)
 - Server monitoring: https://vps.makelove.cloud (listed in the footer)
 - Docs: https://us-3.nianhuaapi.com/docs/
-
----
-
-### 🟢 Orbelis
-
-> Custom New API relay · 117 models / 47 groups, domestic-NVIDIA group at 0.0001 ratio and gptfree at 0.04, AFF gives both sides 1U, and the main site blocks mainland direct connections so bring a proxy
-
-<a href="https://nova.vcrauo.com/sign-up?aff=0hvb" target="_blank" rel="noopener"><img src="https://img.shields.io/badge/Sign%20up-Orbelis-brightgreen?style=for-the-badge" alt="Sign up for Orbelis"></a>
-
-**Why sign up**
-
-- ⚠ The main panel blocks direct connections from CN / HK / MO / TW: mainland IPs get 403 unsupported_region on the signup page, docs and panel alike, so registration needs a proxy in an unrestricted region. The site does run two API-only routes — api.vcrauo.lat (direct, unaccelerated) and fast.vcrauo.lat (optimized tri-network, high bandwidth) — where mainland IPs get 401 Invalid token rather than a 403 region block (measured 2026-10-15). In short: proxy to register, none needed to call
-- Big model lineup: /api/pricing is readable without login and returned 117 models and 47 pricing groups on 2026-10-15. Claude side has claude-opus-5 / opus-5-5 / opus-4-8 / opus-4-7 / opus-4-6 / sonnet-5 / sonnet-5-5 / sonnet-4-6 / haiku-4-5 / fable-5 / fable-5.1 all on the shelf; GPT side gpt-6-sol / gpt-6.1-sol / gpt-6-astra / gpt-5.6-sol / gpt-5.6-terra / gpt-5.5(-pro) / gpt-5.3-codex; also grok-4.7 (with build-fast), kimi-k3, deepseek-v4-pro, glm-5.3-prime, qwen3.8-max, plus 24 pay-per-call multimodal models including Gemini image, Grok video, minimax-h3 and seedance2.5 video
-- Several welfare groups sit below 0.1 ratio: domestic NVIDIA free group 0.0001, gptfree node 0.04 (gpt-5.5 only), Codex welfare nodes 1 and 2 at 0.05 each, Jev official key 0.05, domestic welfare channel 0.05 (DeepSeek only), Grok welfare node 0.06, Claude stable node 0.09, Codex high-speed nodes 1 and 2 at 0.1 each, plus the "no-downgrade group" announced 2026-09-23 (announced at 0.24) and the Pro no-downgrade high-cache group at 0.2
-- Signup bonus: the announcement states "register via AFF and both sides get 1U", and joining the site's QQ / TG / DC notification groups gets you a 10U one-week trial card ("trial card usable only in the trial group", one per account ID). The referral rebate is 5% of the invitee's first 20 top-ups, withdrawable or transferable in one click
-- Daily check-in is on (checkin_enabled = true) and top-up discounts became a lottery wheel (recharge_lottery_enabled = true); each of the three notification groups runs a draw every 300 / 500 members with 1 / 2 / 5 / 10 / 20U vouchers
-- All three protocols are live: /v1/chat/completions, /v1/messages (13 models support the native Anthropic endpoint) and /v1/responses return 401 rather than 404 anonymously (measured 2026-10-15), so Claude Code / Codex CLI / Cline connect. The panel also provides jump configs for Cherry Studio / CC Switch / AionUI / DeepChat
-
-**How much you get**
-
-- Extra via this page's invite link: **1 site-USD**
-- First day total: **1 site-USD**
-
-**Live data** (scraped from public APIs)
-
-- Panel name: **Orbelis**
-- Panel version: `v1.0.0-rc.41`
-- Daily check-in: ✅
-- Open signups: ✅
-- Login methods: GitHub / LinuxDO / Email + password
-- API latency: 20001 ms
-
-**Available models**
-
-| Model | Ratio | Input / 1M tokens | Output / 1M tokens | Protocols |
-| :-- | :--: | :--: | :--: | :--: |
-| `a-2.0-720p-v1` | 37.5 | $75 | $75 | openai |
-| `a-2.5-hs-1080p` | 37.5 | $75 | $75 | openai |
-| `Adobe-gpt-image-2` | 37.5 | $75 | $75 | image-generation / openai |
-| `Adobe-gpt-image-2.5-flare` | 37.5 | $75 | $75 | image-generation / openai |
-| `Adobe-gpt-image-2.5-sunburst` | 37.5 | $75 | $75 | image-generation / openai |
-| `Adobe-gpt-image-medium` | 37.5 | $75 | $75 | image-generation / openai |
-| `Az-gpt-image-2` | 37.5 | $75 | $75 | image-generation / openai |
-| `Az-gpt-image-2.5-flare` | 37.5 | $75 | $75 | image-generation / openai |
-| `Az-gpt-image-2.5-sunburst` | 37.5 | $75 | $75 | image-generation / openai |
-| `claude-fable-5` | 5 | $10 | $50 | anthropic / openai |
-| `claude-fable-5-1` | 5 | $10 | $50 | anthropic / openai |
-| `claude-fable-5.1` | 5 | $10 | $50 | anthropic / openai |
-| `claude-haiku-4-5-20251001` | 0.5 | $1 | $5 | anthropic / openai |
-| `claude-haiku-5-5` | 37.5 | $75 | $75 | anthropic / openai |
-| `claude-opus-4-6` | 2.5 | $5 | $25 | anthropic / openai |
-| `claude-opus-4-7` | 2.5 | $5 | $25 | anthropic / openai |
-| `claude-opus-4-8` | 2.5 | $5 | $25 | anthropic / openai |
-| `claude-opus-5` | 2.5 | $5 | $25 | anthropic / openai |
-| `claude-opus-5-5` | 37.5 | $75 | $75 | anthropic / openai |
-| `claude-sonnet-4-5-20250929` | 1.5 | $3 | $15 | anthropic / openai |
-| `claude-sonnet-4-6` | 1.5 | $3 | $15 | anthropic / openai |
-| `claude-sonnet-5` | 1.5 | $3 | $15 | anthropic / openai |
-| `claude-sonnet-5-5` | 37.5 | $75 | $75 | anthropic / openai |
-| `codex-auto-review` | 0.1 | $0.2 | $1.2 | openai |
-| `deepseek-v4-flash-0731` | 37.5 | $75 | $75 | openai |
-| `DeepSeek-V4-Flash[free]` | per call | **$0.01 / call** | — | openai |
-| `deepseek-v4-pro-0813` | 37.5 | $75 | $75 | openai |
-| `deepseek-v4.1-flash` | 0.5 | $1 | $4 | openai |
-| `deepseek-v4.1-flash-1017` | 37.5 | $75 | $75 | openai |
-| `deepseek/deepseek-v4-flash-0731:free` | 0.5 | $1 | $4 | openai |
-| `gemini-2.5-flash-image` | per call | **$0.08 / call** | — | gemini / openai |
-| `gemini-3-flash` | 37.5 | $75 | $300 | gemini / openai |
-| `gemini-3-pro-image-preview` | per call | **$0.12 / call** | — | gemini / openai |
-| `gemini-3.1-flash-image` | 37.5 | $75 | $300 | gemini / openai |
-| `gemini-3.1-flash-image-preview` | per call | **$0.08 / call** | — | gemini / openai |
-| `gemini-3.8-flash` | 0.375 | $0.75 | $3.75 | gemini / openai |
-| `gemini-3.8-flash-high` | 37.5 | $75 | $300 | gemini / openai |
-| `gemini-3.8-flash-low` | 37.5 | $75 | $300 | gemini / openai |
-| `gemini-3.8-flash-medium` | 37.5 | $75 | $300 | gemini / openai |
-| `gemini-3.8-flash-tiered` | 37.5 | $75 | $300 | gemini / openai |
-| `glm-5.1` | 37.5 | $75 | $75 | openai |
-| `glm-5.2` | 4 | $8 | $28 | openai |
-| `glm-5.3` | 4 | $8 | $28 | openai |
-| `glm-5.3-flash` | 0.4 | $0.8 | $2.8 | openai |
-| `glm-5.3-flashx` | 37.5 | $75 | $75 | openai |
-| `google/gemma-4-31b-it` | per call | **$0.01 / call** | — | openai |
-| `gpt-4.1` | 37.5 | $75 | $150 | openai |
-| `gpt-4.1-mini` | 37.5 | $75 | $150 | openai |
-| `gpt-4o` | 37.5 | $75 | $300 | openai |
-| `gpt-4o-mini` | 37.5 | $75 | $300 | openai |
-| `gpt-5.2` | 37.5 | $75 | $450 | openai |
-| `gpt-5.2-pro` | 37.5 | $75 | $450 | openai |
-| `gpt-5.3-codex` | 37.5 | $75 | $450 | openai |
-| `gpt-5.4` | 1.25 | $2.5 | $15 | openai |
-| `gpt-5.4-mini` | 0.375 | $0.75 | $4.5 | openai |
-| `gpt-5.4-nano` | 37.5 | $75 | $468.75 | openai |
-| `gpt-5.4-pro` | 37.5 | $75 | $450 | openai |
-| `gpt-5.5` | 2.5 | $5 | $30 | openai |
-| `gpt-5.5-pro` | 37.5 | $75 | $450 | openai |
-| `gpt-5.6-luna` | 0.1 | $0.2 | $1.2 | openai |
-| `gpt-5.6-sol` | 2.5 | $5 | $30 | openai |
-| `gpt-5.6-terra` | 1.25 | $2.5 | $15 | openai |
-| `gpt-6-astra` | 5 | $10 | $50 | openai |
-| `gpt-6-sol` | 1 | $2 | $10 | openai |
-| `gpt-6.1-sol` | 37.5 | $75 | $150 | openai |
-| `gpt-image-2` | 37.5 | $75 | $150 | image-generation / openai |
-| `gpt-image-2.5` | 37.5 | $75 | $150 | image-generation / openai |
-| `gpt-image-2.5-flare` | 37.5 | $75 | $150 | image-generation / openai |
-| `gpt-image-2.5-sunburst` | 37.5 | $75 | $150 | image-generation / openai |
-| `grok-4.5` | 1 | $2 | $6 | openai / openai-response |
-| `grok-4.6` | 1 | $2 | $6 | openai / openai-response |
-| `grok-4.7` | 37.5 | $75 | $75 | openai / openai-response |
-| `grok-4.7-build-fast` | 37.5 | $75 | $75 | openai / openai-response |
-| `grok-imagine` | per call | **$0.12 / call** | — | openai / openai-response |
-| `grok-imagine-image` | per call | **$0.12 / call** | — | openai / openai-response |
-| `grok-imagine-image-2.0` | 37.5 | $75 | $75 | openai / openai-response |
-| `grok-imagine-image-quality` | per call | **$0.12 / call** | — | openai / openai-response |
-| `grok-imagine-video` | per call | **$0.85 / call** | — | openai |
-| `grok-imagine-video-1.5` | per call | **$0.85 / call** | — | openai |
-| `grok-imagine-video-1.5-preview` | 37.5 | $75 | $75 | openai |
-| `hy3` | 37.5 | $75 | $75 | openai |
-| `hy4-preview` | 37.5 | $75 | $75 | openai |
-| `jimeng-seedance-2.5-480` | 37.5 | $75 | $75 | openai |
-| `jimeng-seedance-2.5-720` | 37.5 | $75 | $75 | openai |
-| `kimi-k2.7-code` | 3.25 | $6.5 | $27 | openai |
-| `kimi-k2.8` | 37.5 | $75 | $75 | openai |
-| `kimi-k3` | 10 | $20 | $100 | openai |
-| `kimi-k3.1-pro` | 37.5 | $75 | $75 | openai |
-| `mimo-v2.5-pro` | 37.5 | $75 | $75 | openai |
-| `mimo-v2.6-flash` | 37.5 | $75 | $75 | openai |
-| `mimo-v2.6-pro` | 37.5 | $75 | $75 | openai |
-| `minimax-h3-comic-768p` | 37.5 | $75 | $75 | openai |
-| `minimax-h3-comic-cf-2k` | 37.5 | $75 | $75 | openai |
-| `minimax-h3-comic-cf-4k` | per call | **$1 / call** | — | openai |
-| `minimax-h3-original-1080p` | per call | **$0.23 / call** | — | openai |
-| `minimax-h3-original-768p` | per call | **$0.2 / call** | — | openai |
-| `minimax-h3-original-cf-2k` | 37.5 | $75 | $75 | openai |
-| `minimax-h3-original-cf-4k` | 37.5 | $75 | $75 | openai |
-| `minimax-h3-quantized-768p` | 37.5 | $75 | $75 | openai |
-| `MiniMax-M2.7` | 37.5 | $75 | $75 | openai |
-| `MiniMax-M3` | 1.5 | $3 | $15 | openai |
-| `minimax/minimax-m3:free` | per call | **$0.01 / call** | — | openai |
-| `qwen-8b` | per call | **$0.01 / call** | — | openai |
-| `qwen/qwen3.8-27b:free` | per call | **$0.01 / call** | — | openai |
-| `qwen3.7-max` | 6 | $12 | $36 | openai |
-| `qwen3.8-flash` | 0.4 | $0.8 | $2.7 | openai |
-| `qwen3.8-max` | 6 | $12 | $36 | openai |
-| `sd-2.5-M-720p-v3` | 37.5 | $75 | $75 | openai |
-| `seedance-2.5-pro-720p` | 37.5 | $75 | $75 | openai |
-| `seedance2.0` | per call | **$3.5 / call** | — | openai |
-| `seedance2.0fast` | per call | **$3 / call** | — | openai |
-| `seedance2.0mini` | per call | **$3 / call** | — | openai |
-| `seedance2.5` | per call | **$4 / call** | — | openai |
-| `sh-2.5-720p` | 37.5 | $75 | $75 | openai |
-| `x-2.5-1080p` | 37.5 | $75 | $75 | openai |
-| `x-2.5-480p` | 37.5 | $75 | $75 | openai |
-| `x-2.5-720p` | 37.5 | $75 | $75 | openai |
-| `xin-seedance-2.0-fast` | 37.5 | $75 | $75 | openai |
-| `xinghe-2.0s` | 37.5 | $75 | $75 | openai |
-| `xinyao-2.0-720p-TJ` | 37.5 | $75 | $75 | openai |
-| `xj-2.0-m-480p` | 37.5 | $75 | $75 | openai |
-| `xj-2.0-m-720p` | 37.5 | $75 | $75 | openai |
-| `xx-2.0-t-720p` | 37.5 | $75 | $75 | openai |
-| `xx-2.0-t-720p-v1` | 37.5 | $75 | $75 | openai |
-| `z-ai/glm-5.2:free` | per call | **$0.01 / call** | — | openai |
-
-<sub>Rows marked "per call" are billed per request regardless of token usage; everything else uses ratio 1 ≈ $2 / 1M tokens. Always confirm against in-site pricing.</sub>
-
-**Signup requirements**
-
-- Sign up through this page's invite link (?aff=0hvb); the announcement states "register via AFF and both sides get 1U"
-- Only three signup methods: QQ email + password, GitHub OAuth and LinuxDO OAuth (announcement id 1: "signup supports QQ email only / GitHub only / LinuxDO only"); Discord / Telegram / WeChat / OIDC / Passkey are all disabled
-- ⚠ The signup page is unreachable from mainland IPs: the main site returns 403 unsupported_region for CN / HK / MO / TW, so you need a proxy in an unrestricted region. The FAQ suggests V2Ray, and with Clash you must enable the virtual NIC ("if it does not work, your proxy's actual exit IP is usually in those regions")
-- Registration passes Cloudflare Turnstile (turnstile_check = true) and email verification is on (email_verification = true)
-- Do not farm alt accounts: the announcement says "do not self-invite alt accounts — we run IP + browser and device fingerprint risk control plus manual review"
-
-**Client setup**
-
-<details open><summary><b>Claude Code</b> (Anthropic-compatible; Base URL without <code>/v1</code>)</summary>
-
-```bash
-# macOS / Linux
-export ANTHROPIC_BASE_URL=https://fast.vcrauo.lat
-export ANTHROPIC_AUTH_TOKEN=YOUR_API_KEY
-export ANTHROPIC_MODEL=claude-haiku-5-5
-npm install -g @anthropic-ai/claude-code@latest && claude
-```
-
-```powershell
-# Windows PowerShell
-$env:ANTHROPIC_BASE_URL = "https://fast.vcrauo.lat"
-$env:ANTHROPIC_AUTH_TOKEN = "YOUR_API_KEY"
-$env:ANTHROPIC_MODEL = "claude-haiku-5-5"
-claude
-```
-
-</details>
-
-<details><summary><b>Codex CLI</b> (OpenAI-compatible; goes into <code>~/.codex/config.toml</code>)</summary>
-
-```toml
-model = "qwen-8b"
-model_provider = "orbelis"
-
-[model_providers.orbelis]
-name = "Orbelis"
-base_url = "https://fast.vcrauo.lat/v1"
-env_key = "ORBELIS_API_KEY"
-wire_api = "chat"
-```
-
-</details>
-
-<details><summary><b>OpenAI SDK / Cherry Studio / Cursor and other generic clients</b></summary>
-
-```python
-from openai import OpenAI
-
-client = OpenAI(api_key="YOUR_API_KEY", base_url="https://fast.vcrauo.lat/v1")
-resp = client.chat.completions.create(model="qwen-8b", messages=[{"role": "user", "content": "ping"}])
-print(resp.choices[0].message.content)
-```
-
-Generic clients need two fields: **Base URL** = `https://fast.vcrauo.lat/v1`, **API Key** = the key you created in the dashboard.
-
-</details>
-
-<details><summary><b>Connectivity self-test</b></summary>
-
-```bash
-curl -s https://fast.vcrauo.lat/v1/chat/completions \
-  -H "Authorization: Bearer $KEY" -H "Content-Type: application/json" \
-  -d '{"model":"qwen-8b","messages":[{"role":"user","content":"reply OK only"}]}'
-```
-
-</details>
-
-**How to keep earning credits**
-
-- Daily random check-in (enabled in the panel) — click it in the dashboard; top-up discounts also became a lottery wheel
-- Join the site's QQ (1085125870) / TG / DC notification groups for a 10U one-week trial card ("trial card usable only in the trial group")
-- Referral rebate: 5% of the invitee's first 20 top-ups, withdrawable or transferable in one click
-- Each notification group draws a prize every 300 / 500 members: 1 / 2 / 5 / 10 / 20U vouchers, one entry per account
-- Top-ups go through a USDT card network (no fee) or a Chinese reseller shop; announcements listed a 1:7 redemption, so 10 USDT ≈ 70U of credit
-
-**⚠️ Read before use**
-
-- ⚠ The main panel blocks CN / HK / MO / TW direct connections (403 unsupported_region): registration, docs, token management and check-in all need a proxy. Only the two API routes (api.vcrauo.lat / fast.vcrauo.lat) allow mainland IPs, which is why the sample config on this page uses fast.vcrauo.lat rather than the main domain — if you already have a proxy, switching back to nova.vcrauo.com works the same
-- The site's "U" is not USD: panel price = 1 (¥1 ≈ 1 site-U), 7× off the ¥7.3 ≈ $1 used by most services, and the announced top-up ratio is 1:7 as well. This page records it in the site's own unit and does not fold it into the USD total; defer to the console's live ratios
-- The announcement itself says the two Codex welfare channels are "rotating Pro5X team accounts, banned very quickly, auto-refill cannot keep up — stability is only 'stable until it gets banned, then it blows up'". Use groups above 0.1 ratio if you want stability
-- gpt-6 and Grok suffer risk-control downgrading ("gpt6 currently has risk-control downgrading similar to Grok"), and the site warns "do not repeatedly probe gpt6 or run other distillation — accounts found repeatedly disturbing the pool's intelligence level lose access to that model"
-- The domestic NVIDIA free group (0.0001 ratio) is self-described as "junk NVIDIA channel, usability is a lottery"; another 0.01 NVIDIA welfare group's announcement states "probing is not allowed — bots scanning it get banned", so do not point probe scripts at it
-- The site is very new: the panel start_time shows 2026-10-14 and fork version orbelis-20261007, while announcements only go back to 2026-07-25 — they swapped panels / migrated part-way through, so rules and stability are still moving. Assess the risk yourself
-- Upstream is third-party pool aggregation (CCMAX / kiro / Pro20X / official keys mixed together), so actual quality varies by group — do not treat it as a stable production channel. Credit and ratios move with announcements; defer to the console's live figures
-
-**Official channels**
-
-- QQ notification group: 1085125870
-- TG notification group: https://t.me/+BjepRc4vnEY1YWNl
-- Discord notification group: https://discord.gg/awqKu3wStA
-- Docs: https://nova.vcrauo.com/docs (needs a proxy from mainland China)
 
 ---
 

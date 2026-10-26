@@ -8,18 +8,13 @@ AI 福利站 · Claude Code / Codex 免费额度白嫖导航的自动变动记�
 
 ## 2026-10-25
 
-- ➕ Orbelis 上线模型：kimi-k3.1-pro <sub>11:28 UTC</sub>
+- 🗑️ 移除收录 orbelis <sub>20:51 UTC</sub>
 
 ## 2026-10-24
 
 - ➕ 启源星 上线模型：claude-haiku-4.5、claude-sonnet-4.5、dots-3-note、gpt-flash 等 5 个 <sub>15:56 UTC</sub>
 - ➖ 启源星 下线模型：Grok-4.5、Grok-4.6 <sub>15:56 UTC</sub>
 - ➕ 启源星 上线模型：Hunyuan3、step-3.7-flash <sub>10:59 UTC</sub>
-
-## 2026-10-23
-
-- ➕ Orbelis 上线模型：Az-gpt-image-2、Az-gpt-image-2.5-flare、Az-gpt-image-2.5-sunburst、gemini-3-flash 等 13 个 <sub>17:06 UTC</sub>
-- ➖ Orbelis 下线模型：AZ-gpt-image-2、AZ-gpt-image-2.5-flare、AZ-gpt-image-2.5-sunburst、claude-sonnet-4-5 等 11 个 <sub>17:06 UTC</sub>
 
 ## 2026-10-22
 
@@ -37,27 +32,9 @@ AI 福利站 · Claude Code / Codex 免费额度白嫖导航的自动变动记�
 
 - ➕ 年华 API 上线模型：agnes-2.5-flash、agnes-3.0-flash、agnes-image-2.0-flash、agnes-image-2.1-flash 等 6 个 <sub>17:09 UTC</sub>
 
-## 2026-10-19
-
-- ➕ Orbelis 上线模型：gemini-3.5-flash、gemini-3.6-flash、gemini-3.7-flash、gemini-3.8-flash 等 6 个 <sub>22:21 UTC</sub>
-
-## 2026-10-18
-
-- ➖ Orbelis 下线模型：gemini-3-flash、gemini-3.1-flash-image、gemini-3.5-flash-extra-low、gemini-3.5-flash-low 等 9 个 <sub>20:42 UTC</sub>
-- 🏷️ Orbelis qwen3.7-max 价格 $6 入 / $18 出（每 1M） → $12 入 / $36 出（每 1M） <sub>15:52 UTC</sub>
-- ➕ Orbelis 上线模型：deepseek-v4-flash-0731、deepseek-v4.1-flash-1017、gemini-3-flash、gemini-3.1-flash-image 等 30 个 <sub>11:04 UTC</sub>
-- ➖ Orbelis 下线模型：deepseek-v4-pro <sub>11:04 UTC</sub>
-
 ## 2026-10-17
 
-- ➖ Orbelis 下线模型：gpt-5.3-codex-spark、qwen3.8-max <sub>15:34 UTC</sub>
 - 📢 新疆幻城网安 发了公告：DeepSeek-V4.1-Flash我站svip已经切换为DeepSeek-V4.1-Flash-10.17您无需改动，正常使用即可使用1017最新版，免费用户目前依旧没有切换为最新版，请耐心等待 <sub>15:34 UTC</sub>
-
-## 2026-10-16
-
-- ➕ Orbelis 上线模型：claude-haiku-5-5 <sub>16:39 UTC</sub>
-- ➖ Orbelis 下线模型：claude-opus-4-6-thinking、claude-opus-5-5-high、claude-sonnet-5-5-high、gemini-3-flash 等 14 个 <sub>11:24 UTC</sub>
-- ➖ Orbelis 下线模型：deepseek-v4-flash-0731、glm-5.1、glm-5.2、glm-5.2-fast-preview 等 15 个 <sub>04:09 UTC</sub>
 
 ## 2026-10-15
 
@@ -78,15 +55,8 @@ AI 福利站 · Claude Code / Codex 免费额度白嫖导航的自动变动记�
 - 🏷️ 年华 API muse-spark-1.2-contributor-free 价格 $75 入 / $75 出（每 1M） → $0 入 / $0 出（每 1M） <sub>17:00 UTC</sub>
 - 🏷️ 年华 API muse-spark-1.3-contributor-free 价格 $75 入 / $75 出（每 1M） → $0 入 / $0 出（每 1M） <sub>17:00 UTC</sub>
 - 🏷️ 年华 API space-bunny-free 价格 $75 入 / $75 出（每 1M） → $0 入 / $0 出（每 1M） <sub>17:00 UTC</sub>
-- ➕ Orbelis 上线模型：claude-opus-4-6-thinking、claude-opus-5-5-high、claude-sonnet-4-5、claude-sonnet-5-5-high 等 11 个 <sub>17:00 UTC</sub>
-- ➖ Orbelis 下线模型：deepseek-v4-flash <sub>17:00 UTC</sub>
-- 📢 Orbelis 发了公告：目前GPT的情况除了官Key和官转以外都不建议使用 <sub>17:00 UTC</sub>
-- 📢 Orbelis 发了公告：渠道名字和API密钥有点散乱，所以已经全部更新整理 <sub>17:00 UTC</sub>
-- 📢 Orbelis 发了公告：试用订阅用户分组请选择专用的试用分组 <sub>17:00 UTC</sub>
-- 📢 Orbelis 发了公告：充值有USDT卡网和链动小铺卡网俩种 建议走USDT卡网没有充值手续费截止9月31日前 兑换比例为1：7 相当于你充值10USDT仅需要67就可以获取70U的额度 <sub>17:00 UTC</sub>
 - 📢 新疆幻城网安 发了公告：step-5-preview限时补充用量，并且限时免费调用（200k上下文以内0元调用） <sub>17:00 UTC</sub>
 - ➕ 年华 API 上线模型：big-pickle、cat-jam-free、deepseek-v4.1-flash-free、longcat-2.5-preview-free 等 10 个 <sub>11:28 UTC</sub>
-- ➖ Orbelis 下线模型：gpt-5.5 <sub>11:28 UTC</sub>
 - 📢 新疆幻城网安 发了公告：小程序名字：《重生之这一世我要好好学人工智能》直接微信搜索然后进去答题，获取兑换码权限，获取兑换码，然后就可以在我站钱包界面填写兑换码兑换额度，一天能答题十次，十次能换一万余额，现阶段正处于内测阶段，有问题大家及时反馈 <sub>11:28 UTC</sub>
 - ➕ AgentRouter 上线模型：claude-opus-4-8、claude-opus-5、deepseek-v4-flash、gpt-6-astra <sub>03:05 UTC</sub>
 - 📢 AgentRouter 发了公告：为保障服务长期运行，Claude 和 GPT 模型已调整为限量供应，每日分批次发放，用完即止。新的投放时间为🕙北京时间10:00和19:00（对应UTC时间02:00和11:00），请大家注意时间变更，避免跑空。🕙 额度用完后会报错“402 Budget pool quota <sub>03:05 UTC</sub>
@@ -95,7 +65,6 @@ AI 福利站 · Claude Code / Codex 免费额度白嫖导航的自动变动记�
 - 📢 AgentRouter 发了公告：📢 不当使用行为封禁说明 为维护服务公平，平台禁止以下不当行为： · 批量注册/获取额度 · 自动化刷量套利 · 转售、共享账号及额度 · 虚假邀请欺诈 · 恶意绕过限制、干扰服务 违规账号将封禁，名单见 Discord 🚫blocked-history 频道。 申诉请联系： <sub>03:05 UTC</sub>
 - 📢 AgentRouter 发了公告：因受到恶意举报影响，近期服务稳定性遇到巨大挑战，导致Claude系列模型大规模停用。 为保障后续提升服务质量、及时同步信息，我们已启用新的官方 Discord，并在新的官方X更新动态。 为避免走失，请大家有序移步： 新的 Discord： 👉 https://discord.g <sub>03:05 UTC</sub>
 - 📢 DoCode 发了公告：生图功能暂时不可用，原因为 OpenAI 官方协议变更。 预计这两天修复好 <sub>03:05 UTC</sub>
-- 🆕 新收录 Orbelis：邀请再加 1 站内刀 <sub>03:05 UTC</sub>
 
 ## 2026-10-14
 
