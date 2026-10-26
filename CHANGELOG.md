@@ -8,7 +8,7 @@ AI 福利站 · Claude Code / Codex 免费额度白嫖导航的自动变动记�
 
 ## 2026-10-25
 
-- 🗑️ 移除收录 orbelis <sub>20:51 UTC</sub>
+- 🗑️ 移除收录 Orbelis <sub>20:51 UTC</sub>
 
 ## 2026-10-24
 
