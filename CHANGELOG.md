@@ -6,6 +6,11 @@ AI 福利站 · Claude Code / Codex 免费额度白嫖导航的自动变动记�
 
 > 只记录会影响「值不值得注册」的字段。探测被站点 WAF 拦下时不记在线状态变化，避免机房 IP 被拦被误报成掉线。
 
+## 2026-10-28
+
+- ➕ 年华 API 上线模型：gpt-6.1-terra <sub>22:35 UTC</sub>
+- ➖ 年华 API 下线模型：claude-opus-4-5-20251101 <sub>22:35 UTC</sub>
+
 ## 2026-10-25
 
 - 🗑️ 移除收录 Orbelis <sub>20:51 UTC</sub>
