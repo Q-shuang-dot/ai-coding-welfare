@@ -8,7 +8,7 @@
   <img src="https://img.shields.io/badge/Tracked%20services-11-blue" alt="Tracked services">
   <img src="https://img.shields.io/badge/Online-10%2F11-orange" alt="Online">
   <img src="https://img.shields.io/badge/Best%20first%20day-%24175-success" alt="Best first day">
-  <img src="https://img.shields.io/badge/Data%20updated-2026--10--31%2005.41%20UTC-informational" alt="Data updated">
+  <img src="https://img.shields.io/badge/Data%20updated-2026--10--31%2012.30%20UTC-informational" alt="Data updated">
 </p>
 
 <p align="center">
@@ -34,7 +34,7 @@
 | Service | Status | First day | How it adds up | After that | Protocols | Models | Sign up | Invite code |
 | :-- | :--: | :--: | :-- | :--: | :--: | :--: | :--: | :--: |
 | **AgentRouter** 🔥 | 🟢 Online | **$175** | signup $100 + this page's invite $50 + first check-in $25 | $25/day | Anthropic + OpenAI | 4 listed | <a href="https://agentrouter.org/register?aff=aibw" target="_blank" rel="noopener">Sign up →</a> | — |
-| **启源星** | 🟢 Online | **150 pts** | signup 150 pts | Daily check-in | Anthropic + OpenAI | 8 listed | <a href="https://chuan.sylu.cc/sign-up?aff=zD17" target="_blank" rel="noopener">GitHub sign up →</a> | — |
+| **启源星** | 🟢 Online | **150 pts** | signup 150 pts | Daily check-in | Anthropic + OpenAI | 12 listed | <a href="https://chuan.sylu.cc/sign-up?aff=zD17" target="_blank" rel="noopener">GitHub sign up →</a> | — |
 | **DoCode** | 🟢 Online | **300 site-USD** | signup 50 site-USD + this page's invite 250 site-USD | No check-in | Anthropic + OpenAI | Sign in to see | <a href="https://docode.cc/register?aff=1Qof" target="_blank" rel="noopener">Sign up →</a> | `1Qof` |
 | **NianHua API** | 🟢 Online | Posted on site | — | Daily check-in | Anthropic + OpenAI | 149 listed | <a href="https://us-3.nianhuaapi.com/sign-up?aff=aonj" target="_blank" rel="noopener">Sign up →</a> | `aonj` |
 | **ShawnAI** | 🟢 Online | **≈14000 pts** | signup 7000 pts + this page's invite 5000 pts + first check-in ≈2000 pts | ≈2000 pts/day | Anthropic + OpenAI | Sign in to see | <a href="https://free.supxh.xin/register?code=MVU8GX" target="_blank" rel="noopener">Sign up →</a> | `MVU8GX` |
@@ -45,7 +45,7 @@
 | **Long's AI** | 🟢 Online | Free | Free tier, zero cost | No check-in | Anthropic + OpenAI | Sign in to see | <a href="https://aaawinn.xyz/sign-up?aff=ijFL" target="_blank" rel="noopener">GitHub sign up →</a> | `ijFL` |
 | **Xinjiang Huancheng Security** | 🟢 Online | **30000 site-USD** | signup 30000 site-USD | Daily check-in | Anthropic + OpenAI | Sign in to see | <a href="https://api.hcnsec.cn/sign-up?aff=3J8z" target="_blank" rel="noopener">Sign up →</a> | `3J8z` |
 
-> "First day" = signup bonus + invite bonus from this page + whatever check-in pays out on day one (services with a daily reset pool count a single day's pool). Models, prices and status are scraped from each service's public API. Last update: `2026-10-31 05:41 UTC`.
+> "First day" = signup bonus + invite bonus from this page + whatever check-in pays out on day one (services with a daily reset pool count a single day's pool). Models, prices and status are scraped from each service's public API. Last update: `2026-10-31 12:30 UTC`.
 >
 > Services with a code in the "Invite code" column (DoCode `1Qof`, NianHua API `aonj`, ShawnAI `MVU8GX`, api456.me `zmza`, JustDoWork `OIWh`, SeekAi `dDJy`, Long's AI `ijFL`, Xinjiang Huancheng Security `3J8z`) require **typing the code yourself** in the signup form. Miss it and you only get the base signup bonus — it cannot be added afterwards. A dash means the invite bonus travels inside the link and needs no typing.
 >
@@ -94,12 +94,12 @@ powershell -ExecutionPolicy Bypass -File scripts/quickstart.ps1
 
 **Live data** (scraped from public APIs)
 
-- ⚠ No fresh API data for 387 hours; the info below is a snapshot from `2026-10-15 03:05 UTC`
+- ⚠ No fresh API data for 393 hours; the info below is a snapshot from `2026-10-15 03:05 UTC`
 - Panel name: **Agent Router**
 - Panel version: `init-20261009-3d8bb4d7`
 - Referral bonus: **$50**
 - Login methods: GitHub / LinuxDO
-- API latency: 296 ms
+- API latency: 227 ms
 
 **Mirrors / alternate entry points**
 
@@ -228,12 +228,13 @@ curl -s https://agentrouter.org/v1/chat/completions \
 - Daily check-in: ✅
 - Open signups: ✅ (The service turned off email/password signup, so you have to create the account with GitHub (a common anti-abuse measure).)
 - Login methods: GitHub / Email + password
-- API latency: 756 ms
+- API latency: 486 ms
 
 **Available models**
 
 | Model | Ratio | Input / 1M tokens | Output / 1M tokens | Protocols |
 | :-- | :--: | :--: | :--: | :--: |
+| `Beam-pro` | per call | **$1 / call** | — | openai |
 | `claude-fable-5.1` | per call | **$3 / call** | — | openai |
 | `claude-haiku-4.5` | per call | **$2 / call** | — | openai |
 | `claude-sonnet-4.5` | per call | **$1 / call** | — | openai |
@@ -241,7 +242,10 @@ curl -s https://agentrouter.org/v1/chat/completions \
 | `gpt-flash` | per call | **$1 / call** | — | openai |
 | `Hunyuan3` | per call | **$1 / call** | — | openai |
 | `Longcat-2.5` | per call | **$1 / call** | — | openai |
+| `MiniMax-M3` | per call | **$1 / call** | — | openai |
+| `Qwen3.8-Flash` | per call | **$1 / call** | — | openai |
 | `step-3.7-flash` | per call | **$1 / call** | — | openai |
+| `step-5-preview` | per call | **$1 / call** | — | openai |
 
 <sub>Rows marked "per call" are billed per request regardless of token usage; everything else uses ratio 1 ≈ $2 / 1M tokens. Always confirm against in-site pricing.</sub>
 
@@ -276,7 +280,7 @@ claude
 <details><summary><b>Codex CLI</b> (OpenAI-compatible; goes into <code>~/.codex/config.toml</code>)</summary>
 
 ```toml
-model = "gpt-flash"
+model = "Qwen3.8-Flash"
 model_provider = "chuan"
 
 [model_providers.chuan]
@@ -294,7 +298,7 @@ wire_api = "chat"
 from openai import OpenAI
 
 client = OpenAI(api_key="YOUR_API_KEY", base_url="https://chuan.sylu.cc/v1")
-resp = client.chat.completions.create(model="gpt-flash", messages=[{"role": "user", "content": "ping"}])
+resp = client.chat.completions.create(model="Qwen3.8-Flash", messages=[{"role": "user", "content": "ping"}])
 print(resp.choices[0].message.content)
 ```
 
@@ -307,7 +311,7 @@ Generic clients need two fields: **Base URL** = `https://chuan.sylu.cc/v1`, **AP
 ```bash
 curl -s https://chuan.sylu.cc/v1/chat/completions \
   -H "Authorization: Bearer $KEY" -H "Content-Type: application/json" \
-  -d '{"model":"gpt-flash","messages":[{"role":"user","content":"reply OK only"}]}'
+  -d '{"model":"Qwen3.8-Flash","messages":[{"role":"user","content":"reply OK only"}]}'
 ```
 
 </details>
@@ -362,7 +366,7 @@ curl -s https://chuan.sylu.cc/v1/chat/completions \
 - Daily check-in: ❌
 - Open signups: ✅
 - Login methods: Email + password
-- API latency: 856 ms
+- API latency: 2549 ms
 
 **Mirrors / alternate entry points**
 
@@ -477,7 +481,7 @@ curl -s https://docode.cc/v1/chat/completions \
 - Daily check-in: ✅
 - Open signups: ✅
 - Login methods: Email + password
-- API latency: 1144 ms
+- API latency: 2859 ms
 
 **Available models**
 
@@ -753,7 +757,7 @@ curl -s https://us-3.nianhuaapi.com/v1/chat/completions \
 
 **Live data** (scraped from public APIs)
 
-- API latency: 1293 ms
+- API latency: 2874 ms
 
 > On 2026-09-20 the public pricing page returned 191 models including stepfun, deepseek-v4.1-flash, gpt-5.5, gemini-2.5-flash, claude-sonnet-4-6 and kimi-k2.5. Note that the response mixes many free and paid entries; availability and ratios defer to the console.
 
@@ -864,7 +868,7 @@ curl -s https://free.supxh.xin/v1/chat/completions \
 - Daily check-in: ✅
 - Open signups: ✅
 - Login methods: Email + password
-- API latency: 1471 ms
+- API latency: 2968 ms
 
 > The model list and prices are only visible in the console after login (/api/pricing requires login anonymously), so this page does not list a model table.
 
@@ -949,7 +953,7 @@ curl -s https://api456.me/v1/chat/completions \
 - Open signups: ✅ (The service turned off email/password signup, so you have to create the account with GitHub (a common anti-abuse measure).)
 - Login methods: GitHub / Email + password
 - GitHub account must be at least **365 days** old
-- API latency: 1707 ms
+- API latency: 2908 ms
 
 > The pricing page requires login (/api/pricing returns 401 anonymously; panel pricing.requireAuth = true), so this page does not list a model table. Testing shows the main lineup is the gpt-5.6 family (gpt-5.6-luna / sol / terra), and every request carries roughly 2000 tokens of a fixed hidden prompt. Confirm the full list and ratios on the console's "Pricing" page.
 
@@ -1056,7 +1060,7 @@ curl -s https://api.justwoker.icu/v1/chat/completions \
 
 **Live data** (scraped from public APIs)
 
-- API latency: 2900 ms
+- API latency: 3727 ms
 
 > The model list and prices are visible in the console's "Model list" after login (priced per million tokens, filterable by vendor / context window). The site has no public model or pricing API, so this page makes no claims.
 
@@ -1120,7 +1124,7 @@ Console: <https://matrix.mzsjai.com/app/apikey>
 - Daily check-in: ✅
 - Open signups: ✅
 - Login methods: GitHub / Telegram / Email + password
-- API latency: 19525 ms
+- API latency: 19595 ms
 
 **Mirrors / alternate entry points**
 
@@ -1218,7 +1222,7 @@ curl -s https://seekai.cc/v1/chat/completions \
 - Daily check-in: ❌
 - Open signups: ✅ (The service turned off email/password signup, so you have to create the account with GitHub (a common anti-abuse measure).)
 - Login methods: GitHub
-- API latency: 2581 ms
+- API latency: 3199 ms
 
 > The site's model pricing API is not public (/api/pricing returns 401 anonymously; you would need to log into the admin page), and the free-tier group's model sources are published at https://aaawinn.xyz/public-pool. Announcements note that the free-tier group's GPT models only support the Anthropic protocol — the OpenAI protocol has compatibility issues.
 
@@ -1334,11 +1338,11 @@ curl -s https://aaawinn.xyz/v1/chat/completions \
 
 **Live data** (scraped from public APIs)
 
-- Panel version: `v1.0.0-rc.47-hc11`
+- Panel version: `v1.0.0-rc.47-hc12`
 - Daily check-in: ✅
 - Open signups: ✅
 - Login methods: Passkey / Email + password
-- API latency: 4311 ms
+- API latency: 5430 ms
 
 > The model pricing page requires login (/api/pricing returns 401 anonymously), but the names in the announcements can be copied directly: Qwen3.8-Flash-Next (zero per call), the DeepSeek-V4.1-Flash family (about 2 CNY per call in paid groups; the vision-exp version is open to free users), longcat-2.0 (1 CNY per call), glm-5.3-flash, qwen3.8-27b, the step family, spark-x2.5 and Qwen3.6-35B-A3B. The site also open-sourced SparkMuse-4B and Qing-Sec-20B, both searchable on ModelScope (hcnote/SparkMuse-4B).
 
@@ -1436,7 +1440,7 @@ curl -s https://api.hcnsec.cn/v1/chat/completions \
 
 ## 🔔 Credit changes get announced here
 
-CI probes every service every 6 hours and diffs each field against the previous snapshot; 148 samples covering about 38.9 days so far. Credit adjustments, outages and recoveries, models added or removed, and price changes are all recorded automatically:
+CI probes every service every 6 hours and diffs each field against the previous snapshot; 149 samples covering about 39.2 days so far. Credit adjustments, outages and recoveries, models added or removed, and price changes are all recorded automatically:
 
 - Click **Watch → Custom → Releases** at the top of the repo and GitHub emails you when something important changes
 

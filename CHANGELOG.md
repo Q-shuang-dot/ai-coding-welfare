@@ -8,6 +8,7 @@ AI 福利站 · Claude Code / Codex 免费额度白嫖导航的自动变动记�
 
 ## 2026-10-31
 
+- ➕ 启源星 上线模型：Beam-pro、MiniMax-M3、Qwen3.8-Flash、step-5-preview <sub>12:30 UTC</sub>
 - 🔴 SeekAi 探测不到了：注册页与公开接口都没响应 <sub>05:41 UTC</sub>
 
 ## 2026-10-30
