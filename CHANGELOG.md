@@ -8,6 +8,7 @@ AI 福利站 · Claude Code / Codex 免费额度白嫖导航的自动变动记�
 
 ## 2026-10-31
 
+- 📢 api456.me 发了公告：**安全提醒**：我们对一批长期未使用的密钥做了安全更换，旧密钥已失效。如果你的程序提示密钥无效，登录控制台，到令牌页面复制新密钥替换即可，余额不受影响。 <sub>21:33 UTC</sub>
 - ➕ 启源星 上线模型：Beam-pro、MiniMax-M3、Qwen3.8-Flash、step-5-preview <sub>12:30 UTC</sub>
 - 🔴 SeekAi 探测不到了：注册页与公开接口都没响应 <sub>05:41 UTC</sub>
 
