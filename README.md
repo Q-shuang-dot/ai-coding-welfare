@@ -31,19 +31,19 @@
 
 > 下面两张表都是第三方站点，本仓库只做信息聚合。
 
-| 站点 | 状态 | 首日可得 | 额度构成 | 之后每天 | 兼容协议 | 模型 | 注册 | 邀请码 |
-| :-- | :--: | :--: | :-- | :--: | :--: | :--: | :--: | :--: |
-| **AgentRouter** 🔥 | 🟢 在线 | **$175** | 注册 $100 + 本页邀请 $50 + 首签 $25 | $25/天 | Anthropic + OpenAI | 4 个可查 | <a href="https://agentrouter.org/register?aff=aibw" target="_blank" rel="noopener">点此注册 →</a> | — |
-| **熊猫API** 💳 | 🟢 在线 | **200 额度** | 注册 100 额度 + 本页邀请 100 额度 | 无签到 | Anthropic + OpenAI | 151 个可查 | <a href="https://api520.pro/register?aff=3pox" target="_blank" rel="noopener">点此注册 →</a> | — |
-| **DoCode** | 🟢 在线 | **300 站内刀** | 注册 50 站内刀 + 本页邀请 250 站内刀 | 无签到 | Anthropic + OpenAI | 需登录查看 | <a href="https://docode.cc/register?aff=1Qof" target="_blank" rel="noopener">点此注册 →</a> | `1Qof` |
-| **年华 API** | 🟢 在线 | 站内公示 | — | 支持签到 | Anthropic + OpenAI | 149 个可查 | <a href="https://us-3.nianhuaapi.com/sign-up?aff=aonj" target="_blank" rel="noopener">点此注册 →</a> | `aonj` |
-| **肖恩AI** | 🟢 在线 | **≈14000 积分** | 注册 7000 积分 + 本页邀请 5000 积分 + 首签 ≈2000 积分 | ≈2000 积分/天 | Anthropic + OpenAI | 需登录查看 | <a href="https://free.supxh.xin/register?code=MVU8GX" target="_blank" rel="noopener">点此注册 →</a> | `MVU8GX` |
-| **api456.me** | 🟢 在线 | **$50** | 注册 $20 + 本页邀请 $20 + 首签 $10 | $10/天 | OpenAI | 需登录查看 | <a href="https://api456.me/register?aff=zmza" target="_blank" rel="noopener">点此注册 →</a> | `zmza` |
-| **JustDoWork** | 🟢 在线 | 站内公示 | — | 支持签到 | Anthropic + OpenAI | 需登录查看 | <a href="https://api.justwoker.icu/register?aff=OIWh" target="_blank" rel="noopener">GitHub 注册 →</a> | `OIWh` |
-| **Matrix** | 🟢 在线 | **2600 积分** | 本页邀请 600 积分 + 实名认证 2000 积分 | — | OpenAI 兼容 | 需登录查看 | <a href="https://matrix.mzsjai.com/login?redirect=%2Fapp%2Fgrowth%3FinviteCode%3DMX3CDVGATLJW" target="_blank" rel="noopener">点此注册 →</a> | — |
-| **SeekAi** | 🔴 异常 | 站内公示 | — | 支持签到 | OpenAI | 需登录查看 | <a href="https://seekai.cc/sign-up?aff=dDJy" target="_blank" rel="noopener">点此注册 →</a> | `dDJy` |
-| **Long的AI** | 🟢 在线 | 免费 | 白嫖分组免费 | 无签到 | Anthropic + OpenAI | 需登录查看 | <a href="https://aaawinn.xyz/sign-up?aff=ijFL" target="_blank" rel="noopener">GitHub 注册 →</a> | `ijFL` |
-| **新疆幻城网安** | 🟢 在线 | **30000 站内刀** | 注册 30000 站内刀 | 支持签到 | Anthropic + OpenAI | 需登录查看 | <a href="https://api.hcnsec.cn/sign-up?aff=3J8z" target="_blank" rel="noopener">点此注册 →</a> | `3J8z` |
+| 站点 | 状态 | 首日可得 | 额度构成 | 之后每天 | 兼容协议 | 模型 | 注册 | 邀请码 | 备注 |
+| :-- | :--: | :--: | :-- | :--: | :--: | :--: | :--: | :--: | :-- |
+| **AgentRouter** 🔥 | 🟢 在线 | **$175** | 注册 $100 + 本页邀请 $50 + 首签 $25 | $25/天 | Anthropic + OpenAI | 4 个可查 | <a href="https://agentrouter.org/register?aff=aibw" target="_blank" rel="noopener">点此注册 →</a> | — | 额度没到账先退出重登一次 |
+| **熊猫API** 💳 | 🟢 在线 | **200 额度** | 注册 100 额度 + 本页邀请 100 额度 | 无签到 | Anthropic + OpenAI | 151 个可查 | <a href="https://api520.pro/register?aff=3pox" target="_blank" rel="noopener">点此注册 →</a> | — | 付费站：200 额度≈¥0.9，无签到 |
+| **DoCode** | 🟢 在线 | **300 站内刀** | 注册 50 站内刀 + 本页邀请 250 站内刀 | 无签到 | Anthropic + OpenAI | 需登录查看 | <a href="https://docode.cc/register?aff=1Qof" target="_blank" rel="noopener">点此注册 →</a> | `1Qof` | 表单要手填邀请码 zMRe，漏填只有 50 刀 |
+| **年华 API** | 🟢 在线 | 站内公示 | — | 支持签到 | Anthropic + OpenAI | 149 个可查 | <a href="https://us-3.nianhuaapi.com/sign-up?aff=aonj" target="_blank" rel="noopener">点此注册 →</a> | `aonj` | 免费额度只有签到 + 0.05 倍率公益分组 |
+| **肖恩AI** | 🟢 在线 | **≈14000 积分** | 注册 7000 积分 + 本页邀请 5000 积分 + 首签 ≈2000 积分 | ≈2000 积分/天 | Anthropic + OpenAI | 需登录查看 | <a href="https://free.supxh.xin/register?code=MVU8GX" target="_blank" rel="noopener">点此注册 →</a> | `MVU8GX` | 仅 QQ 邮箱；邀请码填 MVU8GX 多 5000 |
+| **api456.me** | 🟢 在线 | **$50** | 注册 $20 + 本页邀请 $20 + 首签 $10 | $10/天 | OpenAI | 需登录查看 | <a href="https://api456.me/register?aff=zmza" target="_blank" rel="noopener">点此注册 →</a> | `zmza` | 只能 GitHub 登录；额度进后台核对 |
+| **JustDoWork** | 🟢 在线 | 站内公示 | — | 支持签到 | Anthropic + OpenAI | 需登录查看 | <a href="https://api.justwoker.icu/register?aff=OIWh" target="_blank" rel="noopener">GitHub 注册 →</a> | `OIWh` | 只能 GitHub 登录；额度数字不公开 |
+| **Matrix** | 🟢 在线 | **2600 积分** | 本页邀请 600 积分 + 实名认证 2000 积分 | — | OpenAI 兼容 | 需登录查看 | <a href="https://matrix.mzsjai.com/login?redirect=%2Fapp%2Fgrowth%3FinviteCode%3DMX3CDVGATLJW" target="_blank" rel="noopener">点此注册 →</a> | — | 无 Anthropic 协议，Claude Code 不能直连 |
+| **SeekAi** | 🔴 异常 | 站内公示 | — | 支持签到 | OpenAI | 需登录查看 | <a href="https://seekai.cc/sign-up?aff=dDJy" target="_blank" rel="noopener">点此注册 →</a> | `dDJy` | 站点 526 异常中，先用备用注册 |
+| **Long的AI** | 🟢 在线 | 免费 | 白嫖分组免费 | 无签到 | Anthropic + OpenAI | 需登录查看 | <a href="https://aaawinn.xyz/sign-up?aff=ijFL" target="_blank" rel="noopener">GitHub 注册 →</a> | `ijFL` | GitHub 账号需满 120 天 |
+| **新疆幻城网安** | 🟢 在线 | **30000 站内刀** | 注册 30000 站内刀 | 支持签到 | Anthropic + OpenAI | 需登录查看 | <a href="https://api.hcnsec.cn/sign-up?aff=3J8z" target="_blank" rel="noopener">点此注册 →</a> | `3J8z` | 邀请额度转钱包要填 49990 |
 
 > 「首日可得」= 注册基础额度 + 本页邀请链接额度 + 当天能领的签到额度（每日重置额度池的站点按一天的池子算）；模型、价格、在线状态由脚本抓取站点公开接口自动生成，最后更新：`2026-11-02 02:00 UTC`。
 >

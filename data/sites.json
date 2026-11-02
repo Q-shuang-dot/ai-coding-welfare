@@ -137,7 +137,22 @@
           "X: https://x.com/AgentRouter_0",
           "Email: agent_router_org@163.com"
         ]
-      }
+      },
+      "remarks": "额度没到账先退出重登一次",
+      "faq": [
+        [
+          "AgentRouter 注册能拿多少额度？",
+          "首日合计约 $175：注册送 $100、从本页邀请链接注册再得 $50、首签 $25；之后每天签到 $25。额度数字以站内公示为准，注册后可在后台核对。"
+        ],
+        [
+          "AgentRouter 能直接跑 Claude Code 和 Codex 吗？",
+          "能。Claude Code 用 Anthropic 原生端点 https://agentrouter.org（Base URL 不带 /v1），Codex CLI 用 OpenAI 端点 https://agentrouter.org/v1，两条路由都通。"
+        ],
+        [
+          "注册完额度没到账怎么办？",
+          "先退出登录再重新登录一次，额度通常会在这时结算显示；另外确认是从本页邀请链接进入注册的，裸链注册拿不到那 $50 邀请额度。"
+        ]
+      ]
     },
     {
       "id": "api520",
@@ -256,7 +271,22 @@
           "Alternate domains: https://api521.pro / https://api522.pro (main sites 2 and 3 in the help doc)"
         ]
       },
-      "paid": true
+      "paid": true,
+      "remarks": "付费站：200 额度≈¥0.9，无签到",
+      "faq": [
+        [
+          "熊猫API 注册送多少额度？",
+          "注册 100 额度，从本页邀请链接进入再得 100，合计 200 额度；没有每日签到，之后只能靠邀请、站内任务或买卡密续额度。"
+        ],
+        [
+          "200 额度大概能用多久？",
+          "按站方公示的 1 元 ≈ 220 额度折算约 ¥0.9。按次价目最多跑 1 次官 key 直连 Opus（280 额度/次）或 8 次 kiro Opus（24~27 额度/次），只够试吃。"
+        ],
+        [
+          "熊猫API 支持 Claude Code 吗？",
+          "支持。Anthropic 端点是 https://api520.pro（Base URL 不带 /v1），OpenAI 端点是 https://api520.pro/v1；模型按量与按次混排，价格以站内实时页面为准。"
+        ]
+      ]
     },
     {
       "id": "docode",
@@ -364,7 +394,22 @@
           "The FAQ's alternate domains ai.docode.pro / ai.docode.life and the announced hk.docode.cc all fail HTTPS (the first two have certificates issued only for docode.cc and therefore mismatch; hk fails the TLS handshake outright). This page lists only the verified api.docode.cc",
           "Upstream instability is documented in the announcements: GPT plus \"wiped out\" then \"temporarily revived\", gpt-5.4 fully delisted, and on Sept 10 they were still saying \"openai blew up, all of gpt is bad\". Do not treat it as a stable production channel"
         ]
-      }
+      },
+      "remarks": "表单要手填邀请码 zMRe，漏填只有 50 刀",
+      "faq": [
+        [
+          "DoCode 的邀请码怎么填？",
+          "注册表单里的「邀请码」一栏填 zMRe。从本页链接进入通常会自动填好，提交前再确认一次不是空的——空着只有注册送的 50 站内刀，250 邀请额度事后补不上。"
+        ],
+        [
+          "DoCode 首日 300 站内刀值多少钱？",
+          "站内「刀」不是美元：面板 price = 0.02，即 1 元 = 50 站内刀（公告说平时恢复 1:25），300 刀约合充值面值 ¥6~12，本页不把它折成美元。"
+        ],
+        [
+          "DoCode 用什么协议接入？",
+          "Anthropic 端点 https://docode.cc（不带 /v1），OpenAI 端点 https://docode.cc/v1；主域名打不开时换 api.docode.cc，同一套账号和额度。"
+        ]
+      ]
     },
     {
       "id": "nianhua",
@@ -482,7 +527,22 @@
           "Server monitoring: https://vps.makelove.cloud (listed in the footer)",
           "Docs: https://us-3.nianhuaapi.com/docs/"
         ]
-      }
+      },
+      "remarks": "免费额度只有签到 + 0.05 倍率公益分组",
+      "faq": [
+        [
+          "年华 API 的免费额度从哪来？",
+          "没有固定的注册赠送数字，免费额度来自每日签到（随机）和公益分组（0.05 倍率，svip 用户免费），另外还有 3 个 0 元一次的 MiMo 语音模型可以白跑。"
+        ],
+        [
+          "年华 API 能跑 Claude Code 吗？",
+          "可以，Anthropic 端点 https://us-3.nianhuaapi.com（Base URL 不带 /v1）。但公益分组的 GPT 系模型不支持工具调用，跑 Claude Code 要换到 kiro / CCMax / GPT 等分组。"
+        ],
+        [
+          "年华 API 的「刀」是美元吗？",
+          "不是。面板 price = 1，约 ¥1 = 站内 1 刀，和「¥7.3 ≈ $1」的站不是一个口径；本页不并入美元合计，实际倍率以控制台为准。"
+        ]
+      ]
     },
     {
       "id": "supxh",
@@ -574,7 +634,22 @@
           "The model list is publicly readable, but free/paid routing, model additions and removals, and ratio changes can happen at any time",
           "This is a newly listed service; stability and availability are still to be observed over time"
         ]
-      }
+      },
+      "remarks": "仅 QQ 邮箱；邀请码填 MVU8GX 多 5000",
+      "faq": [
+        [
+          "肖恩AI 注册能拿多少积分？",
+          "首日合计约 14000 积分：注册 7000 + 本页邀请 5000 + 首签约 2000，之后每天签到约 2000。积分与人民币没有公开换算，本页按站内公示登记。"
+        ],
+        [
+          "肖恩AI 怎么注册？",
+          "只支持 QQ 邮箱 + 密码，需要邮箱验证码，注册页有人机校验。邀请码选填，但从本页链接进入并填 MVU8GX 可额外得 5000 积分。"
+        ],
+        [
+          "肖恩AI 的积分能折成多少钱？",
+          "站方没有公开积分与人民币 / 美元的换算，本页不折算，也不并进跨站美元合计；实际到账与可用模型以控制台为准。"
+        ]
+      ]
     },
     {
       "id": "api456",
@@ -657,7 +732,22 @@
           "The site sits behind Cloudflare, so anonymous probes may be blocked by the WAF — normal protection",
           "Upstream is a third-party relay and models and ratios move with announcements; do not treat it as a stable production channel"
         ]
-      }
+      },
+      "remarks": "只能 GitHub 登录；额度进后台核对",
+      "faq": [
+        [
+          "api456.me 首日能拿多少？",
+          "合计 $50：注册 $20 + 本页邀请 $20 + 首签 $10，之后每天签到 $10。额度数字站点接口不暴露，注册后进后台核对实际到账。"
+        ],
+        [
+          "api456.me 怎么注册？",
+          "只能用 GitHub 授权登录，注册需要邮箱验证码并过人机校验；务必从本页邀请链接进入，否则 $20 邀请额度不发放。"
+        ],
+        [
+          "api456.me 支持 Claude Code 吗？",
+          "不支持直连。站点只提供 OpenAI 兼容端点 https://api456.me/v1，没有 Anthropic 原生接口，Claude Code 要用得自己做协议转换。"
+        ]
+      ]
     },
     {
       "id": "justwoker",
@@ -750,7 +840,22 @@
           "Upstream is a third-party relay; the gpt-5.6 family can time out or drop the stream under large context or high concurrency, so do not treat it as a stable production channel",
           "Model availability and prices move with upstream; defer to the console's live page"
         ]
-      }
+      },
+      "remarks": "只能 GitHub 登录；额度数字不公开",
+      "faq": [
+        [
+          "JustDoWork 注册送多少额度？",
+          "站方没有公开固定数字（/api/status 里 quota_for_new_user 为空），免费额度靠每日签到 + 站内任务，注册后进后台核对实际到账。"
+        ],
+        [
+          "JustDoWork 怎么注册？",
+          "只能用 GitHub 授权登录，注册开着 Cloudflare Turnstile；注册页和 API 都在 Cloudflare 后面，机房 IP 可能被 403，家用宽带正常。"
+        ],
+        [
+          "JustDoWork 支持 Claude Code 吗？",
+          "支持。Anthropic 端点 https://api.justwoker.icu（Base URL 不带 /v1），OpenAI 端点 https://api.justwoker.icu/v1；主力是 gpt-5.6 系模型。"
+        ]
+      ]
     },
     {
       "id": "matrix",
@@ -875,7 +980,22 @@
           "Docs: https://matrix.mzsjai.com/docs/quickstart",
           "Feedback: https://matrix.mzsjai.com/docs/contact"
         ]
-      }
+      },
+      "remarks": "无 Anthropic 协议，Claude Code 不能直连",
+      "faq": [
+        [
+          "Matrix 注册送多少积分？",
+          "合计 2600 积分：本页邀请 600 + 实名认证 2000。600 积分注册即得，2000 积分要自己去钱包页领取，同一实名主体只能领一次。"
+        ],
+        [
+          "Matrix 能接 Claude Code 吗？",
+          "不能直连。站点只提供 OpenAI 兼容协议，没有 Anthropic 原生接口，Claude Code 需要自己做协议转换。"
+        ],
+        [
+          "Matrix 的积分会过期吗？",
+          "活动发的是「获赠积分」，长期有效，但只能调用支持获赠积分的模型与平台服务；增长活动官方写明有效期到 2026-12-31，之后规则可能调整。"
+        ]
+      ]
     },
     {
       "id": "seekai",
@@ -981,7 +1101,22 @@
           "Email: yangyuqi@xjhcit.cn",
           "QQ group: 94355225"
         ]
-      }
+      },
+      "remarks": "站点 526 异常中，先用备用注册",
+      "faq": [
+        [
+          "SeekAi 注册送多少额度？",
+          "站方没有公开固定数字，新用户注册即送默认余额，之后靠每日签到、邀请和站内任务继续拿；额度是站内余额，没有公开的美元换算。"
+        ],
+        [
+          "SeekAi 支持 Claude Code 吗？",
+          "站点只公开了 OpenAI 兼容端点 https://seekai.cc/v1，没有 Anthropic 原生接口，Claude Code 不能直连。"
+        ],
+        [
+          "SeekAi 现在能正常注册吗？",
+          "2026-11-02 检查时注册页与首页返回 HTTP 526（源站连接超时），备用注册入口 https://api.hcnsec.cn/sign-up?aff=3J8z 仍可用；主站恢复前可以先走备用入口。"
+        ]
+      ]
     },
     {
       "id": "aaawinn",
@@ -1084,7 +1219,22 @@
           "Model sources: https://aaawinn.xyz/public-pool",
           "Docs: https://www.yuque.com/riyeqiaodaimadelong/bk54gx"
         ]
-      }
+      },
+      "remarks": "GitHub 账号需满 120 天",
+      "faq": [
+        [
+          "Long的AI 怎么注册？",
+          "只能用 GitHub 授权登录，且账号注册时间必须满 120 天；没有邮箱注册入口，也没有每日签到。"
+        ],
+        [
+          "Long的AI 免费额度是多少？",
+          "白嫖分组的模型费用 0 元、长期免费，额度按分组给；站方公告说白嫖分组模型不怎么维护，kimi3 后续会下架，能白嫖的模型会随公告变。"
+        ],
+        [
+          "Long的AI 的 GPT 模型怎么接？",
+          "白嫖分组的 GPT 系只支持 Anthropic 协议（公告说 OpenAI 协议有兼容问题），Base URL 填 https://aaawinn.xyz（不带 /v1），按 Claude Code 的方式接。"
+        ]
+      ]
     },
     {
       "id": "hcnsec",
@@ -1197,7 +1347,22 @@
           "Tutorial: https://hcnote.cn/2026/07/12/12831.html",
           "Free-stuff directory: https://link.hcnsec.cn (the site marks it as a non-site link)"
         ]
-      }
+      },
+      "remarks": "邀请额度转钱包要填 49990",
+      "faq": [
+        [
+          "新疆幻城网安注册送多少？",
+          "注册即送 30000 站内刀，首日就能用；之后每天签到、站内任务和邀请都能继续拿额度。"
+        ],
+        [
+          "邀请额度转钱包要注意什么？",
+          "站方公告提醒：转账金额填 49990，不要填「5 万」，填错会失败。"
+        ],
+        [
+          "新疆幻城网安支持 Claude Code 吗？",
+          "支持。Anthropic 端点 https://api.hcnsec.cn（Base URL 不带 /v1），OpenAI 端点 https://api.hcnsec.cn/v1；新建密钥时要把分组选成对应套餐的分组，否则调不通。"
+        ]
+      ]
     },
     {
       "id": "chuan",

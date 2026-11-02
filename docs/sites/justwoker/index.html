@@ -17,7 +17,7 @@
 <meta name="twitter:image" content="https://q-shuang-dot.github.io/ai-coding-welfare/assets/social-preview.png">
 <link rel="canonical" href="https://q-shuang-dot.github.io/ai-coding-welfare/sites/justwoker/">
 <link rel="alternate" type="application/atom+xml" title="变动日志" href="https://q-shuang-dot.github.io/ai-coding-welfare/feed.xml">
-<script type="application/ld+json">[{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"AI 福利站 · Claude Code / Codex 免费额度白嫖导航","item":"https://q-shuang-dot.github.io/ai-coding-welfare/"},{"@type":"ListItem","position":2,"name":"JustDoWork","item":"https://q-shuang-dot.github.io/ai-coding-welfare/sites/justwoker/"}]},{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"JustDoWork 注册完为什么看不到额度？","acceptedAnswer":{"@type":"Answer","text":"公益站额度多在登录时结算，退出登录再重新登录一次通常就到账；余额短暂显示 $0 属于前端展示问题，稍后刷新即可。"}},{"@type":"Question","name":"JustDoWork 的 Claude Code 报 401 怎么办？","acceptedAnswer":{"@type":"Answer","text":"Anthropic 协议的 Base URL 不要带 /v1；再确认 Key 复制完整、模型名在站内可用清单里、客户端属于该站支持的类型。"}},{"@type":"Question","name":"从别的链接注册 JustDoWork 有区别吗？","acceptedAnswer":{"@type":"Answer","text":"有。邀请额度在注册那一刻结算，走裸链拿不到，事后补不上。"}}]}]</script>
+<script type="application/ld+json">[{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"AI 福利站 · Claude Code / Codex 免费额度白嫖导航","item":"https://q-shuang-dot.github.io/ai-coding-welfare/"},{"@type":"ListItem","position":2,"name":"JustDoWork","item":"https://q-shuang-dot.github.io/ai-coding-welfare/sites/justwoker/"}]},{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"JustDoWork 注册送多少额度？","acceptedAnswer":{"@type":"Answer","text":"站方没有公开固定数字（/api/status 里 quota_for_new_user 为空），免费额度靠每日签到 + 站内任务，注册后进后台核对实际到账。"}},{"@type":"Question","name":"JustDoWork 怎么注册？","acceptedAnswer":{"@type":"Answer","text":"只能用 GitHub 授权登录，注册开着 Cloudflare Turnstile；注册页和 API 都在 Cloudflare 后面，机房 IP 可能被 403，家用宽带正常。"}},{"@type":"Question","name":"JustDoWork 支持 Claude Code 吗？","acceptedAnswer":{"@type":"Answer","text":"支持。Anthropic 端点 https://api.justwoker.icu（Base URL 不带 /v1），OpenAI 端点 https://api.justwoker.icu/v1；主力是 gpt-5.6 系模型。"}}]}]</script>
 <style>
 /* AI 福利站 — 落地页样式（手写，非生成物） */
 :root {
@@ -285,9 +285,9 @@ wire_api = &quot;chat&quot;</code></pre><button class="copy" type="button">复�
   
 
   <section><h2>常见问题</h2>
-    <details><summary>JustDoWork 注册完为什么看不到额度？</summary><p>公益站额度多在登录时结算，退出登录再重新登录一次通常就到账；余额短暂显示 $0 属于前端展示问题，稍后刷新即可。</p></details>
-    <details><summary>JustDoWork 的 Claude Code 报 401 怎么办？</summary><p>Anthropic 协议的 Base URL 不要带 /v1；再确认 Key 复制完整、模型名在站内可用清单里、客户端属于该站支持的类型。</p></details>
-    <details><summary>从别的链接注册 JustDoWork 有区别吗？</summary><p>有。邀请额度在注册那一刻结算，走裸链拿不到，事后补不上。</p></details>
+    <details><summary>JustDoWork 注册送多少额度？</summary><p>站方没有公开固定数字（/api/status 里 quota_for_new_user 为空），免费额度靠每日签到 + 站内任务，注册后进后台核对实际到账。</p></details>
+    <details><summary>JustDoWork 怎么注册？</summary><p>只能用 GitHub 授权登录，注册开着 Cloudflare Turnstile；注册页和 API 都在 Cloudflare 后面，机房 IP 可能被 403，家用宽带正常。</p></details>
+    <details><summary>JustDoWork 支持 Claude Code 吗？</summary><p>支持。Anthropic 端点 https://api.justwoker.icu（Base URL 不带 /v1），OpenAI 端点 https://api.justwoker.icu/v1；主力是 gpt-5.6 系模型。</p></details>
   </section>
 
   <section><h2>其它福利站</h2>

@@ -31,19 +31,19 @@
 
 > Both tables below point to third-party services. This repo only aggregates information.
 
-| Service | Status | First day | How it adds up | After that | Protocols | Models | Sign up | Invite code |
-| :-- | :--: | :--: | :-- | :--: | :--: | :--: | :--: | :--: |
-| **AgentRouter** 🔥 | 🟢 Online | **$175** | signup $100 + this page's invite $50 + first check-in $25 | $25/day | Anthropic + OpenAI | 4 listed | <a href="https://agentrouter.org/register?aff=aibw" target="_blank" rel="noopener">Sign up →</a> | — |
-| **Panda API** 💳 | 🟢 Online | **200 credit** | signup 100 credit + this page's invite 100 credit | No check-in | Anthropic + OpenAI | 151 listed | <a href="https://api520.pro/register?aff=3pox" target="_blank" rel="noopener">Sign up →</a> | — |
-| **DoCode** | 🟢 Online | **300 site-USD** | signup 50 site-USD + this page's invite 250 site-USD | No check-in | Anthropic + OpenAI | Sign in to see | <a href="https://docode.cc/register?aff=1Qof" target="_blank" rel="noopener">Sign up →</a> | `1Qof` |
-| **NianHua API** | 🟢 Online | Posted on site | — | Daily check-in | Anthropic + OpenAI | 149 listed | <a href="https://us-3.nianhuaapi.com/sign-up?aff=aonj" target="_blank" rel="noopener">Sign up →</a> | `aonj` |
-| **ShawnAI** | 🟢 Online | **≈14000 pts** | signup 7000 pts + this page's invite 5000 pts + first check-in ≈2000 pts | ≈2000 pts/day | Anthropic + OpenAI | Sign in to see | <a href="https://free.supxh.xin/register?code=MVU8GX" target="_blank" rel="noopener">Sign up →</a> | `MVU8GX` |
-| **api456.me** | 🟢 Online | **$50** | signup $20 + this page's invite $20 + first check-in $10 | $10/day | OpenAI | Sign in to see | <a href="https://api456.me/register?aff=zmza" target="_blank" rel="noopener">Sign up →</a> | `zmza` |
-| **JustDoWork** | 🟢 Online | Posted on site | — | Daily check-in | Anthropic + OpenAI | Sign in to see | <a href="https://api.justwoker.icu/register?aff=OIWh" target="_blank" rel="noopener">GitHub sign up →</a> | `OIWh` |
-| **Matrix** | 🟢 Online | **2600 pts** | this page's invite 600 pts + ID verification 2000 pts | — | OpenAI-compatible | Sign in to see | <a href="https://matrix.mzsjai.com/login?redirect=%2Fapp%2Fgrowth%3FinviteCode%3DMX3CDVGATLJW" target="_blank" rel="noopener">Sign up →</a> | — |
-| **SeekAi** | 🔴 Unreachable | Posted on site | — | Daily check-in | OpenAI | Sign in to see | <a href="https://seekai.cc/sign-up?aff=dDJy" target="_blank" rel="noopener">Sign up →</a> | `dDJy` |
-| **Long's AI** | 🟢 Online | Free | Free tier, zero cost | No check-in | Anthropic + OpenAI | Sign in to see | <a href="https://aaawinn.xyz/sign-up?aff=ijFL" target="_blank" rel="noopener">GitHub sign up →</a> | `ijFL` |
-| **Xinjiang Huancheng Security** | 🟢 Online | **30000 site-USD** | signup 30000 site-USD | Daily check-in | Anthropic + OpenAI | Sign in to see | <a href="https://api.hcnsec.cn/sign-up?aff=3J8z" target="_blank" rel="noopener">Sign up →</a> | `3J8z` |
+| Service | Status | First day | How it adds up | After that | Protocols | Models | Sign up | Invite code | Notes |
+| :-- | :--: | :--: | :-- | :--: | :--: | :--: | :--: | :--: | :-- |
+| **AgentRouter** 🔥 | 🟢 Online | **$175** | signup $100 + this page's invite $50 + first check-in $25 | $25/day | Anthropic + OpenAI | 4 listed | <a href="https://agentrouter.org/register?aff=aibw" target="_blank" rel="noopener">Sign up →</a> | — | 额度没到账先退出重登一次 |
+| **Panda API** 💳 | 🟢 Online | **200 credit** | signup 100 credit + this page's invite 100 credit | No check-in | Anthropic + OpenAI | 151 listed | <a href="https://api520.pro/register?aff=3pox" target="_blank" rel="noopener">Sign up →</a> | — | 付费站：200 额度≈¥0.9，无签到 |
+| **DoCode** | 🟢 Online | **300 site-USD** | signup 50 site-USD + this page's invite 250 site-USD | No check-in | Anthropic + OpenAI | Sign in to see | <a href="https://docode.cc/register?aff=1Qof" target="_blank" rel="noopener">Sign up →</a> | `1Qof` | 表单要手填邀请码 zMRe，漏填只有 50 刀 |
+| **NianHua API** | 🟢 Online | Posted on site | — | Daily check-in | Anthropic + OpenAI | 149 listed | <a href="https://us-3.nianhuaapi.com/sign-up?aff=aonj" target="_blank" rel="noopener">Sign up →</a> | `aonj` | 免费额度只有签到 + 0.05 倍率公益分组 |
+| **ShawnAI** | 🟢 Online | **≈14000 pts** | signup 7000 pts + this page's invite 5000 pts + first check-in ≈2000 pts | ≈2000 pts/day | Anthropic + OpenAI | Sign in to see | <a href="https://free.supxh.xin/register?code=MVU8GX" target="_blank" rel="noopener">Sign up →</a> | `MVU8GX` | 仅 QQ 邮箱；邀请码填 MVU8GX 多 5000 |
+| **api456.me** | 🟢 Online | **$50** | signup $20 + this page's invite $20 + first check-in $10 | $10/day | OpenAI | Sign in to see | <a href="https://api456.me/register?aff=zmza" target="_blank" rel="noopener">Sign up →</a> | `zmza` | 只能 GitHub 登录；额度进后台核对 |
+| **JustDoWork** | 🟢 Online | Posted on site | — | Daily check-in | Anthropic + OpenAI | Sign in to see | <a href="https://api.justwoker.icu/register?aff=OIWh" target="_blank" rel="noopener">GitHub sign up →</a> | `OIWh` | 只能 GitHub 登录；额度数字不公开 |
+| **Matrix** | 🟢 Online | **2600 pts** | this page's invite 600 pts + ID verification 2000 pts | — | OpenAI-compatible | Sign in to see | <a href="https://matrix.mzsjai.com/login?redirect=%2Fapp%2Fgrowth%3FinviteCode%3DMX3CDVGATLJW" target="_blank" rel="noopener">Sign up →</a> | — | 无 Anthropic 协议，Claude Code 不能直连 |
+| **SeekAi** | 🔴 Unreachable | Posted on site | — | Daily check-in | OpenAI | Sign in to see | <a href="https://seekai.cc/sign-up?aff=dDJy" target="_blank" rel="noopener">Sign up →</a> | `dDJy` | 站点 526 异常中，先用备用注册 |
+| **Long's AI** | 🟢 Online | Free | Free tier, zero cost | No check-in | Anthropic + OpenAI | Sign in to see | <a href="https://aaawinn.xyz/sign-up?aff=ijFL" target="_blank" rel="noopener">GitHub sign up →</a> | `ijFL` | GitHub 账号需满 120 天 |
+| **Xinjiang Huancheng Security** | 🟢 Online | **30000 site-USD** | signup 30000 site-USD | Daily check-in | Anthropic + OpenAI | Sign in to see | <a href="https://api.hcnsec.cn/sign-up?aff=3J8z" target="_blank" rel="noopener">Sign up →</a> | `3J8z` | 邀请额度转钱包要填 49990 |
 
 > "First day" = signup bonus + invite bonus from this page + whatever check-in pays out on day one (services with a daily reset pool count a single day's pool). Models, prices and status are scraped from each service's public API. Last update: `2026-11-02 02:00 UTC`.
 >

@@ -63,6 +63,7 @@ const en = {
 
   table: {
     headers: ['Service', 'Status', 'First day', 'How it adds up', 'After that', 'Protocols', 'Models', 'Sign up', 'Invite code'],
+    remarks: 'Notes',
     stateOnline: '🟢 Online',
     stateShut: '🟡 Closed',
     stateDown: '🔴 Unreachable',
@@ -345,6 +346,7 @@ const zh = {
 
   table: {
     headers: ['站点', '状态', '首日可得', '额度构成', '之后每天', '兼容协议', '模型', '注册', '邀请码'],
+    remarks: '备注',
     stateOnline: '🟢 在线',
     stateShut: '🟡 停注',
     stateDown: '🔴 异常',

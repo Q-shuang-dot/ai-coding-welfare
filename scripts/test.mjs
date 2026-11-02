@@ -1099,6 +1099,21 @@ test('邀请码要手填的站才出「邀请码」列，且写清 — 不等于
   assert.equal(cols(head), cols(sep));
   assert.equal(cols(head), cols(row));
 });
+test('有备注时才出「备注」列，竖线要转义、不能把表格撑散', () => {
+  const live = { generatedAt: iso(0), sites: [{ id: 'demo', online: true, registerOpen: true }] };
+  const plain = renderReadme({ meta: META, sites: [SITE], live, groups: [], history: HIST });
+  assert.doesNotMatch(plain, /\| 备注 \|/, '没有站写备注时不该多出一个空列');
+
+  const noted = { ...SITE, remarks: '加群解锁 | 额外福利' };
+  const md = renderReadme({ meta: META, sites: [noted], live, groups: [], history: HIST });
+  assert.match(md, /\| 备注 \|/);
+  assert.match(md, /加群解锁 \\\| 额外福利/, '竖线必须转义，否则整行会被截断');
+  const [head, sep, row] = md.split('\n').filter((l) => l.startsWith('| ')).slice(0, 3);
+  // 转义后的 \| 是单元格内容，不算列分隔符
+  const cols = (l) => l.replace(/\\\|/g, '·').split('|').length;
+  assert.equal(cols(head), cols(sep));
+  assert.equal(cols(head), cols(row));
+});
 test('停注变动进日志时带上接口口径，别让人以为是我们猜的', () => {
   const [ev] = D({ ...snap(), registerOpen: true }, { ...snap(), registerOpen: false });
   assert.equal(ev.type, 'register_closed');

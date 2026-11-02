@@ -44,11 +44,16 @@ function openaiModel(snap, t) {
   return snap?.defaults?.openai ?? t.setup.pickModel;
 }
 
+/** 表格单元格：竖线要转义、换行压平，否则整张表会从备注这一列散架 */
+const cell = (s) => String(s ?? '').replace(/\|/g, '\\|').replace(/[\r\n]+/g, ' ').trim();
+
 function overviewTable(sites, liveById, lang) {
   const t = pack(lang).table;
   // 多数站的邀请额度是邀请链接自己带的，用户不用手打；只有个别站（DoCode）注册表单里
   // 有一栏「邀请码」要自己填，漏填就只拿注册额度。没有任何站需要手填时不出这一列。
   const hasCode = sites.some((s) => s.inviteCode);
+  // 备注列同理：全是空的时候不出这一列，免得表里挂一列「—」
+  const hasRemarks = sites.some((s) => s.remarks);
   const rows = sites.map((s) => {
     const l = liveById.get(s.id) ?? {};
     const copy = siteCopy(s, lang);
@@ -90,12 +95,14 @@ function overviewTable(sites, liveById, lang) {
     const code = s.inviteCode ? ` \`${s.inviteCode}\` |` : ' — |';
     return (
       `| **${copy.name}**${s.recommended ? ' 🔥' : ''}${s.paid ? ' 💳' : ''} | ${state} | ${first} | ${detail} | ${checkin} | ${proto} | ${models} | ${cta} |` +
-      (hasCode ? code : '')
+      (hasCode ? code : '') +
+      (hasRemarks ? ` ${s.remarks ? cell(s.remarks) : '—'} |` : '')
     );
   });
+  const headers = [...t.headers.slice(0, 8), ...(hasCode ? [t.headers[8]] : []), ...(hasRemarks ? [t.remarks] : [])];
   return [
-    `| ${t.headers.slice(0, hasCode ? 9 : 8).join(' | ')} |`,
-    `| :-- | :--: | :--: | :-- | :--: | :--: | :--: | :--: |${hasCode ? ' :--: |' : ''}`,
+    `| ${headers.join(' | ')} |`,
+    `| :-- | :--: | :--: | :-- | :--: | :--: | :--: | :--: |${hasCode ? ' :--: |' : ''}${hasRemarks ? ' :-- |' : ''}`,
     ...rows,
   ].join('\n');
 }

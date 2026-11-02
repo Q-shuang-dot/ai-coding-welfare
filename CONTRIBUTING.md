@@ -46,6 +46,12 @@
     "dashboardUrl": "https://example.com/dashboard"
   },
   "modelsNote": "该站不公示模型清单时，写一句解释替代模型表",
+  "modelsSummary": "没公开模型接口时，总表「模型」列显示这句（如「Claude / GPT / Gemini」）",
+  "remarks": "总表「备注」列：加群领福利、邀请码要手填这类只有群里才知道的门道",
+  "faq": [                                // 站点页 FAQ + FAQPage 结构化数据，只写能核实的事实
+    ["示例站注册能拿多少额度？", "一句话答清楚，数字与额度构成保持一致"],
+    ["示例站支持 Claude Code 吗？", "支持 / 不支持，支持就写清 Base URL"]
+  ],
   "register": { "methods": ["GitHub OAuth"], "requirements": ["注意事项"] },
   "earnMore": ["每日签到"],
   "caveats": ["风险提示"],
