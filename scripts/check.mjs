@@ -1,4 +1,4 @@
-﻿#!/usr/bin/env node
+#!/usr/bin/env node
 /**
  * 健康检查：确认每个站点的首页、注册（邀请）链接、状态接口都还活着。
  *   node scripts/check.mjs
@@ -98,7 +98,18 @@ for (const s of sites) {
   }
 }
 
-const results = await Promise.all(targets.map(async (t) => ({ ...t, res: await probe(t.url) })));
+const results = await Promise.all(
+  targets.map(async (t) => {
+    let res = await probe(t.url);
+    // 关键链接失败先重试一次：偶尔的 TLS/超时抖动不该直接开一条 Issue
+    if (!res.ok && !res.skipped && t.critical) {
+      await new Promise((r) => setTimeout(r, 1200));
+      const again = await probe(t.url);
+      if (again.ok) res = { ...again, retried: true };
+    }
+    return { ...t, res };
+  }),
+);
 
 let failed = 0;
 let warned = 0;
@@ -122,7 +133,8 @@ for (const r of results) {
       `${String(r.res.ms).padStart(5)}ms  ${r.url}${r.res.error ? `  (${r.res.error})` : ''}` +
       `${needsKey ? '  ← 中转口要鉴权，401 是预期答案' : ''}` +
       `${filtered ? '  ← 被 WAF 拦（本机 IP 的问题，不算死链）' : ''}` +
-      `${known ? `  ← 已连续 48 小时无成功探测，按已知异常处理` : ''}`,
+      `${known ? `  ← 已连续 48 小时无成功探测，按已知异常处理` : ''}` +
+      `${r.res.retried ? '  ← 首次失败，重试后恢复' : ''}`,
   );
 }
 
