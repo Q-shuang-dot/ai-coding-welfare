@@ -5,6 +5,7 @@ import { signupRoute, acceptsNew } from './signup.mjs';
 import { icon } from './changelog.mjs';
 import { coverage } from './history.mjs';
 import { pack, siteCopy, loginMethod, unitStyle, DEFAULT_LANG } from './i18n.mjs';
+import { archivedAt, archivedReason } from './archived.mjs';
 
 /** shields.io 转义：- → --，_ → __，其余走 URI 编码 */
 const shield = (s) => encodeURIComponent(String(s).replace(/-/g, '--').replace(/_/g, '__'));
@@ -70,9 +71,12 @@ function overviewTable(sites, liveById, lang) {
       (l.checkinEnabled ? t.checkinYes : l.checkinEnabled === false ? t.checkinNo : '—');
     const models = l.models?.length
       ? t.modelsKnown(l.models.length)
-      : l.services?.length
-        ? l.services.map((x) => loginMethod(x, lang)).join(' / ')
-        : t.modelsLogin;
+      : // 站点没公开定价接口时，人工写一句「在架哪些模型系列」，比干巴巴一句「需登录查看」有用
+        copy.modelsSummary
+        ? `**${copy.modelsSummary}**`
+        : l.services?.length
+          ? l.services.map((x) => loginMethod(x, lang)).join(' / ')
+          : t.modelsLogin;
     const proto =
       [s.endpoints?.anthropic && 'Anthropic', s.endpoints?.openai && 'OpenAI'].filter(Boolean).join(' + ') ||
       copy.setup?.client ||
@@ -331,7 +335,7 @@ function codeBlocks(site, claude, openai, lang, name) {
   return out.join('\n');
 }
 
-export function renderReadme({ meta, sites, live, groups = [], history, lang = DEFAULT_LANG }) {
+export function renderReadme({ meta, sites, live, groups = [], history, lang = DEFAULT_LANG, archived = [] }) {
   const t = pack(lang);
   const byId = new Map((live?.sites ?? []).map((s) => [s.id, s]));
   const welfare = sites;
@@ -418,11 +422,26 @@ export function renderReadme({ meta, sites, live, groups = [], history, lang = D
   return [
     head.filter((l) => l !== null).join('\n'),
     body,
+    archiveBlock({ archived, lang }),
     changesBlock({ groups, history, pages, lang }),
     tail(meta, sites, live, lang),
   ]
     .filter(Boolean)
     .join('\n\n');
+}
+
+/**
+ * 「历史区」：已归档的站点。
+ *
+ * 死站不删名：删掉之后读者只会记得「这站以前被收录过」，却不知道后来怎么了；
+ * 留一条归档日期 + 原因，比悄悄消失有信息量，也顺便挡住「为什么没有 XX 站」的追问。
+ */
+function archiveBlock({ archived = [], lang = DEFAULT_LANG }) {
+  if (!archived.length) return '';
+  const t = pack(lang).archive;
+  return ['---', '', `## ${t.title}`, '', t.intro, '', ...archived.map((s) => t.item(s.name, archivedAt(s), archivedReason(s)))].join(
+    '\n',
+  );
 }
 
 /**

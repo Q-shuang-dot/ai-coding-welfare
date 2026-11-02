@@ -1298,7 +1298,7 @@ curl -s https://api.justwoker.icu/v1/chat/completions \
 
 **实时数据**（自动抓取站点公开接口）
 
-- ⚠ 接口已连续 51 小时没抓到新数据，下列信息为 `2026-10-30 22:19 UTC` 的快照
+- ⚠ 接口已连续 52 小时没抓到新数据，下列信息为 `2026-10-30 22:19 UTC` 的快照
 - 站点名称：**SeekAi**
 - 面板版本：`v1.0.0-rc.25`
 - 每日签到：✅
@@ -1636,6 +1636,14 @@ curl -s https://api.hcnsec.cn/v1/chat/completions \
 
 ---
 
+## 📦 历史区 · 已停用站点
+
+这些站已确认不可用，保留名称与归档原因；不再推荐注册、不展示额度、也不再定时探测。历史记录仍可在变动日志里查到，确认恢复后可重新收录。
+
+- **启源星**（`2026-11-02` 归档） — 2026-11-01 22:02 UTC 起注册页与公开接口连续探测不到（首页、注册页、状态接口都没响应），确认停运，移入历史区；站点恢复后可重新收录
+
+---
+
 ## 🔔 额度变了，这里会通知你
 
 CI 每 6 小时抓一次各站接口，与上一次快照逐字段比对，目前已攒下 155 个样本、覆盖约 40.8 天。额度调整、掉线与恢复、模型上下线、价格变动都会自动记一条：
@@ -1667,6 +1675,7 @@ CI 每 6 小时抓一次各站接口，与上一次快照逐字段比对，目�
 | [`scripts/lib/merge.mjs`](scripts/lib/merge.mjs) | 抓取失败时沿用上次快照，页面不会被刷空 |
 | [`scripts/lib/credits.mjs`](scripts/lib/credits.mjs) | 额度口径：注册 + 邀请 + 签到 = 首日可得 |
 | [`scripts/lib/diff.mjs`](scripts/lib/diff.mjs) | 比对两份快照，只挑「影响值不值得注册」的变动 |
+| [`scripts/lib/archived.mjs`](scripts/lib/archived.mjs) | 归档口径：死站移进历史区，不再探测、不再吆喝额度 |
 | [`scripts/history.mjs`](scripts/history.mjs) | 归档历史 + 生成 CHANGELOG / Release / 推送素材 |
 | [`scripts/build.mjs`](scripts/build.mjs) | 用数据重新生成 README 与 docs/ 全站 |
 | [`scripts/notify.mjs`](scripts/notify.mjs) | 重要变动推到 Telegram（没配 secret 就跳过） |

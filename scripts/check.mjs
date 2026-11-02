@@ -12,9 +12,12 @@ import { readFile } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
 import path from 'node:path';
 import { looksFiltered, isHttpsUrl } from './lib/newapi.mjs';
+import { activeSites } from './lib/archived.mjs';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
-const { sites } = JSON.parse(await readFile(path.join(ROOT, 'data', 'sites.json'), 'utf8'));
+const { sites: allSites } = JSON.parse(await readFile(path.join(ROOT, 'data', 'sites.json'), 'utf8'));
+const sites = activeSites(allSites);
+const archivedCount = allSites.length - sites.length;
 
 if (typeof globalThis.AbortSignal === 'undefined') {
   globalThis.AbortSignal = class AbortSignal {
@@ -104,6 +107,7 @@ for (const r of results) {
 }
 
 console.log(`\n共 ${results.length} 项：失败 ${failed}，告警 ${warned}，被拦 ${blocked}`);
+if (archivedCount) console.log(`⚰ ${archivedCount} 个已归档（停用）的站点跳过检查`);
 if (blocked) {
   console.log('被拦的链接请换个网络（非机房 IP）复核一次，站点通常是好的。');
 }

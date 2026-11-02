@@ -16,6 +16,7 @@ import { renderComparePage, renderStatusPage, renderChangelogPage, estimateTurns
 import { renderHtml } from './lib/render-html.mjs';
 import { renderReadme } from './lib/render-readme.mjs';
 import { signupRoute, acceptsNew } from './lib/signup.mjs';
+import { activeSites, archivedSites, archivedAt, archivedReason } from './lib/archived.mjs';
 import { telegramText } from './lib/telegram.mjs';
 
 let passed = 0;
@@ -1315,6 +1316,47 @@ test('超过 12 条折成「另有 N 项」，6 小时一次不该把频道刷�
   });
   assert.match(t, /另有 3 项/);
   assert.equal((t.match(/^🟢 e\d+$/gm) ?? []).length, 12);
+});
+
+console.log('归档站点：死站不删名，但也不许再吆喝额度');
+
+const OLD_SITE = {
+  id: 'old',
+  name: '启源星',
+  subtitle: '已停运的示例站',
+  credits: { signup: 150, invite: null, dailyCheckin: null, approx: false, unit: 'point' },
+  signupUrl: 'https://old.test/sign-up?aff=zD17',
+  homeUrl: 'https://old.test',
+  archived: { at: '2026-11-02', reason: '注册页与公开接口连续探测不到，确认停运' },
+};
+
+test('归档站不进主列表，历史区按归档日期倒序', () => {
+  const newer = { ...OLD_SITE, id: 'newer', archived: { at: '2026-12-01', reason: '另一个' } };
+  assert.deepEqual(activeSites([SITE, OLD_SITE]).map((s) => s.id), ['demo']);
+  assert.deepEqual(archivedSites([OLD_SITE, newer]).map((s) => s.id), ['newer', 'old']);
+  assert.equal(archivedAt(OLD_SITE), '2026-11-02');
+  assert.equal(archivedReason({ id: 'x' }), '站点已不可用', '没写原因也得有一句兜底');
+});
+
+test('README：归档站从主表和额度合计里消失，只在历史区留名', () => {
+  const live = { generatedAt: iso(0), sites: [{ id: 'demo', online: true, registerOpen: true }] };
+  const md = renderReadme({ meta: META, sites: [SITE], live, groups: [], history: HIST, archived: [OLD_SITE] });
+  assert.match(md, /## 📦 历史区 · 已停用站点/);
+  assert.match(md, /启源星/);
+  assert.match(md, /2026-11-02/);
+  assert.equal((md.match(/启源星/g) ?? []).length, 1, '归档站只该在历史区出现一次');
+  assert.doesNotMatch(md, /old\.test/, '归档站不再出现注册链接');
+});
+
+test('落地页有历史区，归档详情页 noindex 且不给注册入口', () => {
+  const live = { generatedAt: iso(0), sites: [] };
+  const html = renderHtml({ meta: META, sites: [SITE], live, css: '', archived: [OLD_SITE] });
+  assert.match(html, /历史区 · 已停用站点/);
+  assert.match(html, /确认停运/);
+  const page = renderSitePage({ meta: META, site: OLD_SITE, live, css: '', history: HIST });
+  assert.match(page, /<meta name="robots" content="noindex, follow">/);
+  assert.match(page, /已移入历史区/);
+  assert.doesNotMatch(page, /old\.test/, '归档页不许再挂过期的注册链接');
 });
 
 console.log(`\n${process.exitCode ? '✘ 有用例失败' : `✔ 全部通过（${passed} 项）`}`);

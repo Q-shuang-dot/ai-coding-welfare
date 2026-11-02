@@ -10,6 +10,7 @@ import { signupRoute, acceptsNew } from './signup.mjs';
 import { esc, fmt, pageShell, faqLd } from './layout.mjs';
 import { icon } from './changelog.mjs';
 import { coverage } from './history.mjs';
+import { archivedAt, archivedReason } from './archived.mjs';
 
 function claudeSnippet(site, snap) {
   const model = snap?.defaults?.claude ?? '在站内模型列表中选择';
@@ -140,9 +141,8 @@ const FAQ = [
   ['会不会顶掉我的 Claude 订阅登录？', '会。环境变量优先级更高，想切回订阅登录就 unset ANTHROPIC_BASE_URL / ANTHROPIC_AUTH_TOKEN / ANTHROPIC_MODEL 后重开终端。'],
 ];
 
-export function renderHtml({ meta, sites, live, css, groups = [], history }) {
-  const byId = new Map((live?.sites ?? []).map((s) => [s.id, s]));
-  const welfareSites = sites;
+export function renderHtml({ meta, sites, live, css, groups = [], history, archived = [] }) {
+  const byId = new Map((live?.sites ?? []).map((s) => [s.id, s]));  const welfareSites = sites;
   const online = welfareSites.filter((s) => byId.get(s.id)?.online).length;
   // 停注的站点不进「新用户能拿多少」的口径，也不当首屏主按钮（详见 lib/signup.mjs）
   const openSites = welfareSites.filter((s) => acceptsNew(byId.get(s.id)));
@@ -196,7 +196,8 @@ export function renderHtml({ meta, sites, live, css, groups = [], history }) {
     </div>
   </section>
 ${modelsTable(welfareSites, byId)}
-${recentSection(groups, history, new Set(sites.map((s) => s.id)))}
+${recentSection(groups, history, new Set([...sites, ...archived].map((s) => s.id)))}
+${archiveSection(archived)}
   <section id="faq">
     <h2>常见问题</h2>
     <p class="hint">踩坑集中在这四个。</p>
@@ -241,4 +242,26 @@ document.querySelectorAll('.copy').forEach(function (btn) {
     jsonLd: [itemList, faqLd(FAQ)],
     body,
   });
+}
+
+/**
+ * 「历史区」：死站不删名。
+ *
+ * 落地页是别人第一次看到这个仓库的地方，也是最容易被问「怎么没有 XX 站」的地方；
+ * 留一栏归档记录，既解释了消失，也证明这个列表是被人维护的、不是爬来的。
+ */
+function archiveSection(archived) {
+  if (!archived.length) return '';
+  return `  <section id="archive">
+    <h2>📦 历史区 · 已停用站点</h2>
+    <p class="hint">这些站已确认不可用，只留名与归档原因：不再推荐注册、不展示额度、也不再定时探测。历史变动见 <a href="changelog/">变动日志</a>。</p>
+    <ul class="hl">${archived
+      .map(
+        (s) =>
+          `<li><b>${esc(s.name)}</b>${archivedAt(s) ? `（<code>${esc(archivedAt(s))}</code> 归档）` : ''} — ${esc(
+            archivedReason(s),
+          )}</li>`,
+      )
+      .join('')}</ul>
+  </section>\n`;
 }

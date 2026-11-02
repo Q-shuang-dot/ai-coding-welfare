@@ -1,0 +1,33 @@
+name: 单测
+
+# 投稿 PR 的把关。refresh.yml 里的单测只认推到 main 的提交：
+# 外部 PR 改坏了 sites.json（字段写错、少写一份译文），要等合并后那一轮刷新标红才知道，
+# 那时错误已经进了 main。这里在 PR 上先跑一遍，fork 来的 PR 拿到只读 token，
+# 两步都不联网、没有任何 secret，放心跑。
+on:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: test-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: '22'
+
+      - name: 单测（额度口径、合并逻辑、README 渲染）
+        run: npm test
+
+      # build 会真渲染一遍全站，但不联网：读的是仓库里的 live.json 快照
+      - name: 生成全站
+        run: npm run build

@@ -24,6 +24,7 @@ import { renderComparePage, renderStatusPage, renderChangelogPage } from './lib/
 import { groupByDay, renderAtom } from './lib/changelog.mjs';
 import { EMPTY_HISTORY } from './lib/history.mjs';
 import { auditCredits } from './lib/credits.mjs';
+import { activeSites, archivedSites } from './lib/archived.mjs';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const p = (...s) => path.join(ROOT, ...s);
@@ -35,8 +36,11 @@ const readJson = async (rel, fallback) => {
   }
 };
 
-const { meta, sites } = JSON.parse(await readFile(p('data', 'sites.json'), 'utf8'));
-if (!sites.length) throw new Error('data/sites.json 里没有任何站点');
+const { meta, sites: allSites } = JSON.parse(await readFile(p('data', 'sites.json'), 'utf8'));
+// 归档站只出现在「历史区」和它自己的说明页：不进总表、不算合计、不占 sitemap
+const sites = activeSites(allSites);
+const archived = archivedSites(allSites);
+if (!sites.length) throw new Error('data/sites.json 里没有任何在架站点');
 
 const live = await readJson('data/live.json', { generatedAt: null, sites: [] });
 if (!live.generatedAt) console.warn('⚠ 找不到 data/live.json，先跑 `npm run refresh` 才有实时数据，本次按空数据生成。');
@@ -50,8 +54,8 @@ for (const w of auditCredits(sites, live)) console.warn(`⚠ ${w}`);
 // 每个语言产出一份 README：中文是主版本（README.md），其余是 README.<lang>.md。
 // 站点没写 en 覆盖块时对应段落会跳过、不会退化成中文，所以无翻译也照样出文件。
 for (const lang of LANGS) {
-  await writeFile(p(readmeFile(lang)), renderReadme({ meta, sites, live, groups, history, lang }), 'utf8');
-  console.log(`✔ ${readmeFile(lang)} 已生成（${sites.length} 个站点）`);
+  await writeFile(p(readmeFile(lang)), renderReadme({ meta, sites, live, groups, history, lang, archived }), 'utf8');
+  console.log(`✔ ${readmeFile(lang)} 已生成（${sites.length} 个在架 + ${archived.length} 个归档）`);
 }
 
 // 样式内联进 HTML：每一页都变成单文件，直接丢给别人打开、或转发到社群都不会掉样式
@@ -63,10 +67,10 @@ const write = async (rel, content) => {
   await writeFile(p('docs', rel), content, 'utf8');
 };
 
-await write('index.html', renderHtml({ meta, sites, live, css, groups, history }));
+await write('index.html', renderHtml({ meta, sites, live, css, groups, history, archived }));
 await write('.nojekyll', '');
 
-for (const site of sites) {
+for (const site of [...sites, ...archived]) {
   await write(
     `sites/${site.id}/index.html`,
     renderSitePage({
@@ -83,7 +87,7 @@ for (const site of sites) {
 
 await write('compare/index.html', renderComparePage({ meta, sites, live, css }));
 await write('status/index.html', renderStatusPage({ meta, sites, live, css, history }));
-await write('changelog/index.html', renderChangelogPage({ meta, sites, groups, live, css }));
+await write('changelog/index.html', renderChangelogPage({ meta, sites: allSites, groups, live, css }));
 await write('feed.xml', renderAtom({ meta, groups, updated: changelog.updatedAt ?? live.generatedAt }));
 
 // 落地页要被搜到才有推广价值：robots + 把每一页都写进 sitemap

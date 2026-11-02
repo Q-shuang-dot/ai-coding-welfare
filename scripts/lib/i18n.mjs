@@ -146,6 +146,13 @@ const en = {
       `Rows marked "per call" are billed per request regardless of token usage; the rest are converted from ratios and settled in the site's own unit (${unit}), on top of the group ratio. Always confirm against in-site pricing.`,
   },
 
+  archive: {
+    title: '📦 Archive · retired services',
+    intro:
+      'These services are confirmed down or withdrawn. The names and reasons stay on record: they are no longer recommended, no credits are advertised and the probes no longer run. History is in the changelog; a recovered service can be relisted.',
+    item: (name, when, reason) => `- **${name}**${when ? ` (archived \`${when}\`)` : ''} — ${reason}`,
+  },
+
   modelsTable: {
     headers: ['Model', 'Ratio', 'Input / 1M tokens', 'Output / 1M tokens', 'Protocols'],
     perCall: 'per call',
@@ -239,6 +246,7 @@ const en = {
       ['[`scripts/lib/merge.mjs`](scripts/lib/merge.mjs)', 'Falls back to the previous snapshot when a scrape fails, so pages never go blank'],
       ['[`scripts/lib/credits.mjs`](scripts/lib/credits.mjs)', 'Credit math: signup + invite + check-in = first day'],
       ['[`scripts/lib/diff.mjs`](scripts/lib/diff.mjs)', 'Diffs two snapshots and keeps only changes that affect "is it worth signing up?"'],
+      ['[`scripts/lib/archived.mjs`](scripts/lib/archived.mjs)', 'Archive rules: retired services move to the archive — no probes, no credit pitch'],
       ['[`scripts/history.mjs`](scripts/history.mjs)', 'Archives history and generates CHANGELOG / releases / promo material'],
       ['[`scripts/build.mjs`](scripts/build.mjs)', 'Regenerates the README and the whole docs/ site from data'],
       ['[`scripts/notify.mjs`](scripts/notify.mjs)', 'Pushes important changes to Telegram (skipped when no secret is configured)'],
@@ -411,6 +419,13 @@ const zh = {
       `标「按次」的模型按请求次数计费，与 tokens 无关；其余按倍率换算，站内以「${unit}」结算、还要再乘分组倍率。以站内实时价格为准。`,
   },
 
+  archive: {
+    title: '📦 历史区 · 已停用站点',
+    intro:
+      '这些站已确认不可用，保留名称与归档原因；不再推荐注册、不展示额度、也不再定时探测。历史记录仍可在变动日志里查到，确认恢复后可重新收录。',
+    item: (name, when, reason) => `- **${name}**${when ? `（\`${when}\` 归档）` : ''} — ${reason}`,
+  },
+
   modelsTable: {
     headers: ['模型', '倍率', '输入 / 1M tokens', '输出 / 1M tokens', '协议'],
     perCall: '按次',
@@ -496,6 +511,7 @@ const zh = {
       ['[`scripts/lib/merge.mjs`](scripts/lib/merge.mjs)', '抓取失败时沿用上次快照，页面不会被刷空'],
       ['[`scripts/lib/credits.mjs`](scripts/lib/credits.mjs)', '额度口径：注册 + 邀请 + 签到 = 首日可得'],
       ['[`scripts/lib/diff.mjs`](scripts/lib/diff.mjs)', '比对两份快照，只挑「影响值不值得注册」的变动'],
+      ['[`scripts/lib/archived.mjs`](scripts/lib/archived.mjs)', '归档口径：死站移进历史区，不再探测、不再吆喝额度'],
       ['[`scripts/history.mjs`](scripts/history.mjs)', '归档历史 + 生成 CHANGELOG / Release / 推送素材'],
       ['[`scripts/build.mjs`](scripts/build.mjs)', '用数据重新生成 README 与 docs/ 全站'],
       ['[`scripts/notify.mjs`](scripts/notify.mjs)', '重要变动推到 Telegram（没配 secret 就跳过）'],
@@ -600,6 +616,7 @@ export function siteCopy(site, lang = DEFAULT_LANG) {
     return {
       name: own.name ?? '',
       subtitle: own.subtitle ?? null,
+      modelsSummary: own.modelsSummary ?? null,
       modelsNote: own.modelsNote ?? null,
       setup: own.setup ?? null,
       register: own.register ?? null,
@@ -618,6 +635,8 @@ export function siteCopy(site, lang = DEFAULT_LANG) {
     // 站名多数本来就是拉丁字母，没给翻译就用原名，别把整段标题留空
     name: t.name ?? own.name ?? '',
     subtitle: t.subtitle ?? null,
+    // 没翻译就不写，别把中文模型卖点塞进英文版
+    modelsSummary: t.modelsSummary ?? null,
     modelsNote: t.modelsNote ?? null,
     // setup 是「去哪领 Base URL」的操作指引，翻不了就别装作有：宁可不给，也不能给中文步骤
     setup: setupMissing ? null : { ...setup, ...tsetup },

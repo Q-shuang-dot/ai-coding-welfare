@@ -44,8 +44,23 @@ function navBar(base, current, repoUrl) {
 const ld = (data) =>
   JSON.stringify(data).replace(/</g, '\\u003c').replace(/>/g, '\\u003e').replace(/&/g, '\\u0026');
 
-export function pageShell({ meta, css, title, desc, canonical, base = '', current = '', jsonLd = [], body, live }) {
+export function pageShell({
+  meta,
+  css,
+  title,
+  desc,
+  canonical,
+  base = '',
+  current = '',
+  jsonLd = [],
+  body,
+  live,
+  noindex = false,
+}) {
   const feed = `${meta.pagesUrl}feed.xml`;
+  // 分享卡：仓库里已经有了 docs/assets/social-preview.png，不引用就等于白发一张图。
+  // 群消息 / Issue / 推文里的链接预览都靠它，比纯文字标题的点击率高。
+  const ogImage = meta.ogImage ?? (meta.pagesUrl ? `${meta.pagesUrl.replace(/\/?$/, '/')}assets/social-preview.png` : null);
   return `<!doctype html>
 <html lang="zh-CN">
 <head>
@@ -53,12 +68,16 @@ export function pageShell({ meta, css, title, desc, canonical, base = '', curren
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>${esc(title)}</title>
 <meta name="description" content="${esc(desc)}">
+${noindex ? '<meta name="robots" content="noindex, follow">' : ''}
 <meta name="keywords" content="${esc((meta.keywords ?? []).join(','))}">
 <meta property="og:type" content="website">
 <meta property="og:title" content="${esc(title)}">
 <meta property="og:description" content="${esc(desc)}">
 <meta property="og:url" content="${esc(canonical)}">
+${ogImage ? `<meta property="og:image" content="${esc(ogImage)}">` : ''}
+${ogImage ? `<meta property="og:image:alt" content="${esc(title)}">` : ''}
 <meta name="twitter:card" content="summary_large_image">
+${ogImage ? `<meta name="twitter:image" content="${esc(ogImage)}">` : ''}
 <link rel="canonical" href="${esc(canonical)}">
 <link rel="alternate" type="application/atom+xml" title="变动日志" href="${esc(feed)}">
 ${jsonLd.length ? `<script type="application/ld+json">${ld(jsonLd.length === 1 ? jsonLd[0] : jsonLd)}</script>` : ''}

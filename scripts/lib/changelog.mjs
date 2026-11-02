@@ -11,6 +11,8 @@ const esc = (s) =>
 const ICON = {
   site_added: '🆕',
   site_removed: '🗑️',
+  site_archived: '🗑️',
+  site_unarchived: '📦',
   online: '🟢',
   offline: '🔴',
   invite_change: '💰',

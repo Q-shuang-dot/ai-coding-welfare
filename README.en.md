@@ -1263,7 +1263,7 @@ Console: <https://matrix.mzsjai.com/app/apikey>
 
 **Live data** (scraped from public APIs)
 
-- ⚠ No fresh API data for 51 hours; the info below is a snapshot from `2026-10-30 22:19 UTC`
+- ⚠ No fresh API data for 52 hours; the info below is a snapshot from `2026-10-30 22:19 UTC`
 - Panel name: **SeekAi**
 - Panel version: `v1.0.0-rc.25`
 - Daily check-in: ✅
@@ -1583,6 +1583,14 @@ curl -s https://api.hcnsec.cn/v1/chat/completions \
 
 ---
 
+## 📦 Archive · retired services
+
+These services are confirmed down or withdrawn. The names and reasons stay on record: they are no longer recommended, no credits are advertised and the probes no longer run. History is in the changelog; a recovered service can be relisted.
+
+- **启源星** (archived `2026-11-02`) — 2026-11-01 22:02 UTC 起注册页与公开接口连续探测不到（首页、注册页、状态接口都没响应），确认停运，移入历史区；站点恢复后可重新收录
+
+---
+
 ## 🔔 Credit changes get announced here
 
 CI probes every service every 6 hours and diffs each field against the previous snapshot; 155 samples covering about 40.8 days so far. Credit adjustments, outages and recoveries, models added or removed, and price changes are all recorded automatically:
@@ -1605,6 +1613,7 @@ The event log below is written in Chinese and is not machine translated here. Fu
 | [`scripts/lib/merge.mjs`](scripts/lib/merge.mjs) | Falls back to the previous snapshot when a scrape fails, so pages never go blank |
 | [`scripts/lib/credits.mjs`](scripts/lib/credits.mjs) | Credit math: signup + invite + check-in = first day |
 | [`scripts/lib/diff.mjs`](scripts/lib/diff.mjs) | Diffs two snapshots and keeps only changes that affect "is it worth signing up?" |
+| [`scripts/lib/archived.mjs`](scripts/lib/archived.mjs) | Archive rules: retired services move to the archive — no probes, no credit pitch |
 | [`scripts/history.mjs`](scripts/history.mjs) | Archives history and generates CHANGELOG / releases / promo material |
 | [`scripts/build.mjs`](scripts/build.mjs) | Regenerates the README and the whole docs/ site from data |
 | [`scripts/notify.mjs`](scripts/notify.mjs) | Pushes important changes to Telegram (skipped when no secret is configured) |

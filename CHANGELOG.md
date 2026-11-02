@@ -16,7 +16,7 @@ AI 福利站 · Claude Code / Codex 免费额度白嫖导航的自动变动记�
 - 📢 AgentRouter 发了公告：### 📢 供应调整公告 / Supply Adjustment Notice 即日起，**claude-opus-5-5** 模型将实行单独限量供应。每日于**北京时间 9:00**（对应 **UTC 1:00**）投放额度，**用完即止**。 Effective immed <sub>01:31 UTC</sub>
 - 📢 AgentRouter 发了公告：【分组调整】 不当使用者（非编程用户或使用不支持客户端）将进入 **probation** 分组，**倍率翻倍**并动态更新，以减少浪费。请珍惜额度。 ✅支持客户端： claude-code⭐, codex⭐, openclaw, pi, opencode, ohmyopenco <sub>01:31 UTC</sub>
 - 🆕 新收录 熊猫API：注册送 100 额度，邀请再加 100 额度 <sub>01:31 UTC</sub>
-- 🗑️ 移除收录 启源星⭐ <sub>01:31 UTC</sub>
+- 🗑️ 移入历史区 启源星：2026-11-01 22:02 UTC 起注册页与公开接口连续探测不到，确认停运（恢复后可重新收录） <sub>01:31 UTC</sub>
 
 ## 2026-11-01
 

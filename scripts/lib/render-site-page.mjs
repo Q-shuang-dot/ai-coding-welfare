@@ -11,6 +11,7 @@ import { signupRoute } from './signup.mjs';
 import { staleHours } from './newapi.mjs';
 import { esc, fmt, pageShell, breadcrumb, faqLd } from './layout.mjs';
 import { uptime } from './history.mjs';
+import { archivedAt, archivedReason } from './archived.mjs';
 
 const yes = (v) => (v === true ? '✅' : v === false ? '❌' : '—');
 
@@ -142,7 +143,44 @@ document.querySelectorAll('.copy').forEach(function (btn) {
 });
 </script>`;
 
+/**
+ * 归档页：站点已经死了，但旧链接还会被搜到、被群里转发。
+ * 与其 404，不如留一页说明「收录过、后来怎么了」，同时 noindex 掉，
+ * 免得搜索引擎继续把过期注册链接当成可用资源推荐。
+ */
+function archivedPage({ meta, site, live, css }) {
+  const when = archivedAt(site);
+  const reason = archivedReason(site);
+  const body = `  <header class="hero">
+    <p class="crumb"><a href="../../">${esc(meta.title)}</a> › ${esc(site.name)}</p>
+    <h1>${esc(site.name)}</h1>
+    <p class="sub">已移入历史区，不再推荐注册</p>
+    <div class="pills">
+      <span class="pill"><span class="dot down"></span> 已停用</span>
+      ${when ? `<span class="pill">归档日期 <b>${esc(when)}</b></span>` : ''}
+    </div>
+  </header>
+
+  <section><h2>归档原因</h2>
+    <p>${esc(reason)}</p>
+    <p class="hint">这一页只作记录：不再展示过期的注册链接、额度与接入配置。同类站点见 <a href="../../">总览</a>，历史变动见 <a href="../../changelog/">变动日志</a>。</p>
+  </section>`;
+
+  return pageShell({
+    meta,
+    css,
+    live,
+    base: '../../',
+    noindex: true,
+    title: `${site.name} 已停用 — ${meta.title}`,
+    desc: `${site.name} 已移入历史区，不再推荐注册。${reason}`,
+    canonical: `${meta.pagesUrl}sites/${site.id}/`,
+    body,
+  });
+}
+
 export function renderSitePage({ meta, site, snap, live, css, history, siblings = [] }) {
+  if (site.archived) return archivedPage({ meta, site, live, css });
   const p = creditPlan(site, snap);
   const up = Boolean(snap?.online);
   const route = signupRoute(snap);
@@ -153,7 +191,9 @@ export function renderSitePage({ meta, site, snap, live, css, history, siblings 
     shut ? '。⚠ 站点接口自报已暂停新用户注册' : p.unit === 'free' ? '。首日可得 免费' : p.firstDay != null ? `。首日可得 ${usd(p.firstDay, p.approx, p.unit)}${breakdown(p) ? `（${breakdown(p)}）` : ''}` : ''
   }。含实时在线状态、模型价格、Claude Code / Codex 接入配置与踩坑清单，数据快照 ${fmt(snap?.checkedAt)}。`;
 
-  const faq = [
+  // 站点自己写了的问答优先：能答「这家多少钱 / 支持 Claude Code 吗」这类长尾问题，
+  // 通用那三条只在没写 faq 时兜底。
+  const faq = site.faq ?? [
     [`${site.name} 注册完为什么看不到额度？`, '公益站额度多在登录时结算，退出登录再重新登录一次通常就到账；余额短暂显示 $0 属于前端展示问题，稍后刷新即可。'],
     [`${site.name} 的 Claude Code 报 401 怎么办？`, 'Anthropic 协议的 Base URL 不要带 /v1；再确认 Key 复制完整、模型名在站内可用清单里、客户端属于该站支持的类型。'],
     ['从别的链接注册 ' + site.name + ' 有区别吗？', '有。' + (p.invite != null ? '邀请额度 ' + usd(p.invite, false, p.unit) + ' 是在注册那一刻结算的，走裸链拿不到，事后也补不上。' : '邀请额度在注册那一刻结算，走裸链拿不到，事后补不上。')],

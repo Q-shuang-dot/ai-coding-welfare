@@ -10,6 +10,7 @@ import path from 'node:path';
 import { fetchJson, probeUrl } from './lib/newapi.mjs';
 import { probeSite } from './lib/panels.mjs';
 import { mergeSnapshot } from './lib/merge.mjs';
+import { activeSites } from './lib/archived.mjs';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const SITES = path.join(ROOT, 'data', 'sites.json');
@@ -23,7 +24,9 @@ async function loadPrevious() {
   }
 }
 
-const { sites } = JSON.parse(await readFile(SITES, 'utf8'));
+const { sites: allSites } = JSON.parse(await readFile(SITES, 'utf8'));
+// 归档站已经确认挂了，不再探测：白跑请求，还会让 CI 天天为一个死站报警
+const sites = activeSites(allSites);
 const previous = await loadPrevious();
 
 const snapshots = await Promise.all(
