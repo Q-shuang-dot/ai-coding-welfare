@@ -1625,6 +1625,7 @@ The event log below is written in Chinese and is not machine translated here. Fu
 | [`data/live.json`](data/live.json) | Scraped live snapshot (credits / models / status) |
 | [`data/history.json`](data/history.json) | Uptime time series, one sample every 6 hours |
 | [`data/changelog.json`](data/changelog.json) | Change events produced by diffing snapshots |
+| [`docs/api/sites.json`](docs/api/sites.json) / [`status.json`](docs/api/status.json) | Public read-only API: service catalogue and live status (version 1) |
 | [`scripts/refresh.mjs`](scripts/refresh.mjs) | Scrapes the public APIs |
 | [`scripts/lib/merge.mjs`](scripts/lib/merge.mjs) | Falls back to the previous snapshot when a scrape fails, so pages never go blank |
 | [`scripts/lib/credits.mjs`](scripts/lib/credits.mjs) | Credit math: signup + invite + check-in = first day |

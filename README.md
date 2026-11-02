@@ -1687,6 +1687,7 @@ CI 每 6 小时抓一次各站接口，与上一次快照逐字段比对，目�
 | [`data/live.json`](data/live.json) | 自动抓取的实时快照（额度 / 模型 / 在线状态） |
 | [`data/history.json`](data/history.json) | 每 6 小时一个样本的可用性时间序列 |
 | [`data/changelog.json`](data/changelog.json) | 快照比对出来的变动事件流 |
+| [`docs/api/sites.json`](docs/api/sites.json) / [`status.json`](docs/api/status.json) | 对外只读 API：站点清单与在线状态（version 1） |
 | [`scripts/refresh.mjs`](scripts/refresh.mjs) | 抓取站点公开接口 |
 | [`scripts/lib/merge.mjs`](scripts/lib/merge.mjs) | 抓取失败时沿用上次快照，页面不会被刷空 |
 | [`scripts/lib/credits.mjs`](scripts/lib/credits.mjs) | 额度口径：注册 + 邀请 + 签到 = 首日可得 |
