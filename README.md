@@ -28,13 +28,6 @@
 ---
 
 > [!TIP]
-> **💬 AI Coding 交流群 · QQ 群号：1125690737（GCMP-福利站）**
->
-> 交流 Claude Code / Codex 配置、额度使用与站点动态；站点变动和上车技巧会第一时间发在群里。
->
-> QQ 搜群号加入，或扫码进群 · [入群二维码](docs/assets/qq-group.jpg)
-
-> [!TIP]
 > **📣 欢迎投稿：[Issue 区](https://github.com/Q-shuang-dot/ai-coding-welfare/issues)就是免费推广位**
 >
 > 发现好用的福利站，或自己就在运营一个？直接[提交 Issue](https://github.com/Q-shuang-dot/ai-coding-welfare/issues/new/choose)，邀请链接可以一并贴上。Issue 对所有人公开，本身就是推广渠道；实测靠谱的会收录进正文。
@@ -1810,13 +1803,12 @@ npm run check     # 校验链接是否还活着
 - 请遵守各站点与上游模型服务商的使用条款，禁止批量注册、刷量、转售额度等行为，封号自负。
 - 页面上的额度 / 模型 / 价格由脚本自动抓取，仅代表抓取那一刻的状态，**一切以站内实时公示为准**。
 
-## 💬 交流群
-
-<p align="center">
-  <img src="docs/assets/qq-group.jpg" width="140" alt="QQ 群二维码 GCMP-福利站 1125690737">
-</p>
-
-<p align="center">QQ 群：<b>1125690737</b>（GCMP-福利站） · 扫码或搜群号加入，第一时间获取站点变动与上车技巧。</p>
+> [!TIP]
+> **💬 AI Coding 交流群（可选） · QQ 群号：1125690737（GCMP-福利站）**
+>
+> 交流 Claude Code / Codex 配置、额度使用与站点动态。
+>
+> 加群完全自愿；想交流配置或看站点动态，QQ 搜群号即可。
 
 ---
 

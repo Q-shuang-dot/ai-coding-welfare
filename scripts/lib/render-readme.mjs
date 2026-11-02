@@ -383,7 +383,6 @@ export function renderReadme({ meta, sites, live, groups = [], history, lang = D
     '',
     '---',
     '',
-    ...communityReadme(meta, t.community),
     '> [!TIP]',
     `> **${t.contribute.tipTitle(meta.repoUrl)}**`,
     '>',
@@ -493,6 +492,7 @@ function tail(meta, sites, live, lang) {
   const foot = pack(lang).footer;
   const contribute = pack(lang).contribute;
   const disclaimer = pack(lang).disclaimer;
+  const community = pack(lang).community;
   return [
     '---',
     '',
@@ -528,14 +528,7 @@ function tail(meta, sites, live, lang) {
     '',
     ...disclaimer.items,
     '',
-    `## ${t.groupTitle}`,
-    '',
-    '<p align="center">',
-    `  <img src="docs/assets/qq-group.jpg" width="140" alt="${t.groupAlt}">`,
-    '</p>',
-    '',
-    `<p align="center">${t.groupDesc}</p>`,
-    '',
+    ...communityReadme(meta, community),
     '---',
     '',
     `<p align="center">${foot.star}</p>`,

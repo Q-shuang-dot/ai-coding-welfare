@@ -1191,7 +1191,7 @@ test('README 首屏：7 列速查表、站点详情默认折叠', () => {
   assert.doesNotMatch(md, /### 🟢 Demo 站/, '站点标题已改成 summary，避免详情里再重复一遍');
 });
 
-test('交流群：群号与二维码从 meta.community 来，不写死在模板里', () => {
+test('交流群：群号从 meta.community 来，不写死；README 放文末且不推入群', () => {
   const live = { generatedAt: iso(0), sites: [{ id: 'demo', online: true }] };
   const plain = renderReadme({ meta: META, sites: [SITE], live, groups: [], history: HIST });
   assert.doesNotMatch(plain, /QQ 群号/, '没配 community 就不该凭空冒出一个群');
@@ -1199,7 +1199,8 @@ test('交流群：群号与二维码从 meta.community 来，不写死在模板�
   const meta = { ...META, community: { qqGroup: '12345678', name: '测试群', qrPath: 'assets/qq-group.jpg' } };
   const md = renderReadme({ meta, sites: [SITE], live, groups: [], history: HIST });
   assert.match(md, /QQ 群号：12345678（测试群）/);
-  assert.match(md, /docs\/assets\/qq-group\.jpg/);
+  assert.doesNotMatch(md, /docs\/assets\/qq-group\.jpg|入群二维码/, '没有 joinUrl 时不再贴二维码');
+  assert.ok(md.indexOf('QQ 群号：12345678') > md.lastIndexOf('免责声明'), '交流群应放在免责声明之后的文末');
   const html = renderHtml({ meta, sites: [SITE], live, css: '', history: HIST });
   assert.match(html, /community-banner/);
   assert.match(html, /12345678/);

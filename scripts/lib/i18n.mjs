@@ -265,10 +265,6 @@ const en = {
       '# regenerate README + docs/',
       '# check whether links are still alive',
     ],
-    groupTitle: '💬 Community chat',
-    groupAlt: 'QQ group QR code — GCMP welfare services, 1125690737',
-    groupDesc:
-      'QQ group: <b>1125690737</b> (GCMP) · A Chinese-language group — scan or search the number to join for service updates and signup tips.',
   },
 
   faq: {
@@ -294,12 +290,13 @@ const en = {
   },
 
   community: {
-    title: 'Community chat',
-    text: 'Claude Code / Codex setup, credit tips and service updates — the group hears about changes first.',
+    title: 'Community chat (optional)',
+    text: 'Claude Code / Codex setup and credit tips.',
     groupLabel: 'QQ group',
+    groupSep: ': ',
     join: 'Join the QQ group',
     qr: 'Group QR code',
-    hint: 'Search the group number in QQ, or scan the code',
+    hint: 'Joining is completely optional — search the group number in QQ for setup tips or service updates.',
   },
 
   contribute: {
@@ -540,9 +537,6 @@ const zh = {
     ],
     runTitle: '本地跑一遍：',
     runComments: ['# 单测（不联网）', '# 抓最新数据', '# 归档历史 + 生成变动日志', '# 重新生成 README + docs/', '# 校验链接是否还活着'],
-    groupTitle: '💬 交流群',
-    groupAlt: 'QQ 群二维码 GCMP-福利站 1125690737',
-    groupDesc: 'QQ 群：<b>1125690737</b>（GCMP-福利站） · 扫码或搜群号加入，第一时间获取站点变动与上车技巧。',
   },
 
   faq: {
@@ -568,12 +562,13 @@ const zh = {
   },
 
   community: {
-    title: 'AI Coding 交流群',
-    text: '交流 Claude Code / Codex 配置、额度使用与站点动态；站点变动和上车技巧会第一时间发在群里。',
+    title: 'AI Coding 交流群（可选）',
+    text: '交流 Claude Code / Codex 配置、额度使用与站点动态。',
     groupLabel: 'QQ 群号',
+    groupSep: '：',
     join: '加入 QQ 群',
     qr: '入群二维码',
-    hint: 'QQ 搜群号加入，或扫码进群',
+    hint: '加群完全自愿；想交流配置或看站点动态，QQ 搜群号即可。',
   },
 
   contribute: {

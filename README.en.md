@@ -28,13 +28,6 @@
 ---
 
 > [!TIP]
-> **💬 Community chat · QQ group：1125690737（GCMP-福利站）**
->
-> Claude Code / Codex setup, credit tips and service updates — the group hears about changes first.
->
-> Search the group number in QQ, or scan the code · [Group QR code](docs/assets/qq-group.jpg)
-
-> [!TIP]
 > **📣 Want to be listed? The [Issue tab](https://github.com/Q-shuang-dot/ai-coding-welfare/issues) is free advertising**
 >
 > Found a service worth listing, or run one yourself? [Open an Issue](https://github.com/Q-shuang-dot/ai-coding-welfare/issues/new/choose) with your invite link. Issues are public, so the Issue tab is a promotion channel in itself; services that check out get added to the table.
@@ -1726,13 +1719,12 @@ Criteria: **credits are genuinely free** — paid relays are fine only if they p
 - Follow each service and upstream provider terms of use. Bulk registration, traffic farming, and reselling credits are prohibited — bans are on you.
 - Credits / models / prices on this page are scraped automatically and only reflect the moment they were captured. **Always treat in-site pricing as the source of truth.**
 
-## 💬 Community chat
-
-<p align="center">
-  <img src="docs/assets/qq-group.jpg" width="140" alt="QQ group QR code — GCMP welfare services, 1125690737">
-</p>
-
-<p align="center">QQ group: <b>1125690737</b> (GCMP) · A Chinese-language group — scan or search the number to join for service updates and signup tips.</p>
+> [!TIP]
+> **💬 Community chat (optional) · QQ group: 1125690737（GCMP-福利站）**
+>
+> Claude Code / Codex setup and credit tips.
+>
+> Joining is completely optional — search the group number in QQ for setup tips or service updates.
 
 ---
 
