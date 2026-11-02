@@ -8,6 +8,7 @@ AI 福利站 · Claude Code / Codex 免费额度白嫖导航的自动变动记�
 
 ## 2026-11-02
 
+- 🟢 Long的AI 恢复在线 <sub>04:55 UTC</sub>
 - 🔴 Long的AI 探测不到了：注册页与公开接口都没响应 <sub>03:54 UTC</sub>
 - 💰 AgentRouter 邀请他人的奖励 $50 → $100 <sub>01:31 UTC</sub>
 - ➕ AgentRouter 上线模型：claude-opus-5-5、gpt-5.6-sol、gpt-6.1-sol <sub>01:31 UTC</sub>
