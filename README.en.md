@@ -37,7 +37,7 @@
 > [!TIP]
 > **📣 Want to be listed? The Issue tab is free advertising**
 >
-> Found a service worth listing, or run one yourself? [Open an Issue](https://github.com/Q-shuang-dot/ai-coding-welfare/issues/new/choose) with your invite link. Issues are public, so the Issue tab is a promotion channel in itself; services that check out get added to the table.
+> Found a service worth listing, or run one yourself? [Open an Issue](https://github.com/Q-shuang-dot/ai-coding-welfare/issues/new/choose) with your invite link. Issues are public, so the Issue tab is a promotion channel in itself; services that check out get added to the table. Want to see what others have suggested? [Browse all Issues](https://github.com/Q-shuang-dot/ai-coding-welfare/issues).
 
 ## 🚀 Get started in a minute
 

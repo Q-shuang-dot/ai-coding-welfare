@@ -29,19 +29,18 @@ export function communityBanner(meta, copy, base = '') {
   return `<aside class="community-banner" aria-label="${esc(copy.title)}">
       <div class="community-copy">
         <p class="community-title">💬 ${esc(title)}</p>
-        <p class="community-description">${esc(copy.text)}</p>
-        <p class="community-group">${esc(copy.groupLabel)} <strong>${esc(group.qqGroup)}</strong></p>
-        <div class="community-actions">
+        <p class="community-line">
+          <span class="community-group">${esc(copy.groupLabel)} <strong>${esc(group.qqGroup)}</strong></span>
           ${
             group.joinUrl
-              ? `<a class="btn community-join" href="${esc(group.joinUrl)}" target="_blank" rel="noopener noreferrer">${esc(copy.join)} ↗</a>`
+              ? `<a class="community-join" href="${esc(group.joinUrl)}" target="_blank" rel="noopener noreferrer">${esc(copy.join)} ↗</a>`
               : ''
           }
-          <span>${esc(copy.hint)}</span>
-        </div>
+          <span class="community-hint">${esc(copy.hint)}</span>
+        </p>
       </div>
       <a class="community-qr" href="${esc(qr)}" target="_blank" rel="noopener noreferrer" aria-label="${esc(copy.qr)}">
-        <img src="${esc(qr)}" width="128" height="128" alt="${esc(copy.qr)}" loading="lazy">
+        <img src="${esc(qr)}" width="96" height="96" alt="${esc(copy.qr)}" loading="lazy">
       </a>
     </aside>`;
 }
