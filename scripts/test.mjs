@@ -9,7 +9,7 @@ import { pickPreferred, staleHours, STALE_WARN_HOURS, blankSnapshot, looksFilter
 import { creditPlan, usd, breakdown, perDay, auditCredits, usdTotals, othersNote } from './lib/credits.mjs';
 import { PANELS, probeSite } from './lib/panels.mjs';
 import { diffSite, diffSnapshots, majorOnly, priceLabel } from './lib/diff.mjs';
-import { appendSample, compact, uptime, byDay, coverage, EMPTY_HISTORY } from './lib/history.mjs';
+import { appendSample, compact, uptime, byDay, coverage, pruneHistory, EMPTY_HISTORY } from './lib/history.mjs';
 import { groupByDay, renderAtom, summarize, icon } from './lib/changelog.mjs';
 import { renderSitePage } from './lib/render-site-page.mjs';
 import { renderComparePage, renderStatusPage, renderChangelogPage, estimateTurns } from './lib/render-aux-pages.mjs';
@@ -872,6 +872,22 @@ test('样本按时间升序存，且按上限截断', () => {
   const ats = h.samples.map((s) => s.at);
   assert.deepEqual(ats, [...ats].sort());
   assert.equal(appendSample(seed(3), liveAt(0), { limit: 2 }).history.samples.length, 2);
+});
+test('历史降采样：30 天内全留，30~90 天每天一条，90 天以上每周一条', () => {
+  const now = new Date('2026-11-02T00:00:00Z').getTime();
+  const samples = [];
+  for (let i = 120 * 4 - 1; i >= 0; i -= 1) {
+    samples.push({ at: new Date(now - i * 6 * HOUR).toISOString(), sites: {} });
+  }
+  const pruned = pruneHistory({ updatedAt: samples.at(-1).at, samples }, { now });
+  const age = (s) => now - new Date(s.at).getTime();
+  assert.equal(pruned.samples.filter((s) => age(s) < 30 * DAY).length, 120, '30 天内的点一个都不能少');
+  const mid = pruned.samples.filter((s) => age(s) >= 30 * DAY && age(s) < 90 * DAY);
+  const midDays = new Set(mid.map((s) => s.at.slice(0, 10)));
+  assert.equal(mid.length, midDays.size, '30~90 天每天只留一条');
+  assert.ok(midDays.size >= 59 && midDays.size <= 62, `30~90 天应覆盖约 60 天，实际 ${midDays.size}`);
+  assert.ok(pruned.samples.filter((s) => age(s) >= 90 * DAY).length <= 8, '90 天以上按周压到个位数');
+  assert.ok(pruned.samples.length < 200, `降采样后应远小于 480，实际 ${pruned.samples.length}`);
 });
 test('样本不足一天（< 4 个点）时不给可用性百分比，页面据此说「样本还不够」', () => {
   assert.equal(uptime(seed(3), 'agentrouter', 7).enough, false);

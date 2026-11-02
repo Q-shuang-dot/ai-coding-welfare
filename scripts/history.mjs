@@ -14,7 +14,7 @@ import { execFileSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
 import path from 'node:path';
 import { diffSnapshots, majorOnly } from './lib/diff.mjs';
-import { appendSample, EMPTY_HISTORY } from './lib/history.mjs';
+import { appendSample, EMPTY_HISTORY, pruneHistory } from './lib/history.mjs';
 import { groupByDay, renderChangelogMd, renderReleaseNotes, summarize } from './lib/changelog.mjs';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
@@ -95,6 +95,9 @@ if (BACKFILL) {
 events.sort((a, b) => String(b.at).localeCompare(String(a.at)));
 events = events.slice(0, EVENT_CAP);
 
+// 提交频率不变（6 小时一次的心跳要留着），只把太久远的样本压成每天 / 每周一条
+history = pruneHistory(history, { now: new Date(live.generatedAt ?? Date.now()).getTime() });
+
 await writeFile(p('data', 'history.json'), `${JSON.stringify(history)}\n`, 'utf8');
 await writeFile(
   p('data', 'changelog.json'),
@@ -103,6 +106,15 @@ await writeFile(
 );
 await writeFile(p('CHANGELOG.md'), `${renderChangelogMd({ meta, groups: groupByDay(events) })}\n`, 'utf8');
 console.log(`✔ CHANGELOG.md 已生成（共 ${events.length} 条变动）`);
+
+// 给 workflow 的提交信息用：在线站数 / 总站数 / 本次变动数
+const online = (live.sites ?? []).filter((s) => s.online).length;
+if (process.env.GITHUB_OUTPUT) {
+  appendFileSync(
+    process.env.GITHUB_OUTPUT,
+    `changes=${BACKFILL ? events.length : fresh.length}\nonline=${online}\ntotal=${(live.sites ?? []).length}\n`,
+  );
+}
 
 // 只有「会影响值不值得注册」的变动才配得上一次 Release / 一条推送
 const major = majorOnly(BACKFILL ? [] : fresh);

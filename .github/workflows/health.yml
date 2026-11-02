@@ -33,10 +33,22 @@ jobs:
           EXISTING=$(gh issue list --state open --label link-broken --json number --jq '.[0].number' || true)
           BODY=$'巡检发现关键链接不可用，请核对 `data/sites.json`。\n\n```\n'"$(tail -40 check.log)"$'\n```'
           if [ -n "$EXISTING" ]; then
-            gh issue comment "$EXISTING" --body "$BODY"
+            # 同一个故障还在，Issue 已经开着：不再每天追加评论，避免把告警刷成噪音
+            echo "已有告警 Issue #$EXISTING，本次不重复评论"
           else
             gh label create link-broken --color d73a4a --description "推广链接或站点不可用" 2>/dev/null || true
             gh issue create --title "$TITLE" --label link-broken --body "$BODY"
+          fi
+
+      - name: 巡检恢复正常时自动关闭告警
+        if: steps.check.outcome == 'success'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          EXISTING=$(gh issue list --state open --label link-broken --json number --jq '.[0].number' || true)
+          if [ -n "$EXISTING" ]; then
+            gh issue comment "$EXISTING" --body "巡检已恢复正常，自动关闭。"
+            gh issue close "$EXISTING"
           fi
 
       - name: 汇总到运行摘要

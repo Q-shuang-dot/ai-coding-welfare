@@ -111,3 +111,43 @@ export function coverage(history) {
   const days = Math.max(0, (new Date(to).getTime() - new Date(from).getTime()) / 86_400_000);
   return { samples: s.length, from, to, days: Math.round(days * 10) / 10 };
 }
+
+const dayKey = (iso) => String(iso ?? '').slice(0, 10);
+
+/** ISO 周键（UTC），跨年也算得对 */
+function weekKey(iso) {
+  const d = new Date(iso);
+  const t = new Date(Date.UTC(d.getUTCFullYear(), d.getUTCMonth(), d.getUTCDate()));
+  const day = t.getUTCDay() || 7;
+  t.setUTCDate(t.getUTCDate() + 4 - day);
+  const yearStart = new Date(Date.UTC(t.getUTCFullYear(), 0, 1));
+  const week = Math.ceil(((t - yearStart) / 86_400_000 + 1) / 7);
+  return `${t.getUTCFullYear()}-W${String(week).padStart(2, '0')}`;
+}
+
+/**
+ * 长期历史降采样：30 天内全留（7 天可用性、状态页条形图都靠它），
+ * 30~90 天每天只留最后一条，90 天以上每周只留最后一条。
+ * 一天 4 个点 × 一年 ≈ 1500 条；降采样后大约 150 条，趋势还在，仓库不跟着涨。
+ */
+export function pruneHistory(history, { now = Date.now(), fullDays = 30, dailyDays = 90 } = {}) {
+  const samples = [...(history?.samples ?? [])].sort((a, b) => String(a.at).localeCompare(String(b.at)));
+  const dayMs = 86_400_000;
+  const kept = [];
+  let bucket = null;
+  for (const s of samples) {
+    const age = now - new Date(s.at).getTime();
+    if (!Number.isFinite(age) || age < fullDays * dayMs) {
+      kept.push(s);
+      bucket = null;
+      continue;
+    }
+    const key = age < dailyDays * dayMs ? `D:${dayKey(s.at)}` : `W:${weekKey(s.at)}`;
+    if (key === bucket && kept.length) kept[kept.length - 1] = s; // 同一个桶只留最新的那条
+    else {
+      kept.push(s);
+      bucket = key;
+    }
+  }
+  return { ...history, samples: kept };
+}

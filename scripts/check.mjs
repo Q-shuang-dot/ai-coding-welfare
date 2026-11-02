@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+﻿#!/usr/bin/env node
 /**
  * 健康检查：确认每个站点的首页、注册（邀请）链接、状态接口都还活着。
  *   node scripts/check.mjs
@@ -18,6 +18,21 @@ const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const { sites: allSites } = JSON.parse(await readFile(path.join(ROOT, 'data', 'sites.json'), 'utf8'));
 const sites = activeSites(allSites);
 const archivedCount = allSites.length - sites.length;
+
+// 连续 48 小时没有一次成功探测（且至少攒了 8 个失败点）的站：当成已知异常，不再每天重复报同一条死链。
+// 数据来自 history.json，站点恢复后下一次巡检会自动回到正常判定。
+const history = JSON.parse(await readFile(path.join(ROOT, 'data', 'history.json'), 'utf8'));
+const KNOWN_DOWN_HOURS = 48;
+const knownDown = new Set();
+for (const s of sites) {
+  const rows = (history.samples ?? [])
+    .map((x) => ({ at: x.at, r: x.sites?.[s.id] }))
+    .filter((x) => x.r);
+  const lastUp = rows.filter((x) => x.r.up).at(-1)?.at;
+  const since = lastUp ? Date.now() - new Date(lastUp).getTime() : Number.POSITIVE_INFINITY;
+  const failsSince = rows.filter((x) => !x.r.up && (!lastUp || x.at > lastUp)).length;
+  if (since >= KNOWN_DOWN_HOURS * 3_600_000 && failsSince >= 8) knownDown.add(s.id);
+}
 
 if (typeof globalThis.AbortSignal === 'undefined') {
   globalThis.AbortSignal = class AbortSignal {
@@ -63,12 +78,13 @@ async function probe(url) {
 
 const targets = [];
 for (const s of sites) {
-  targets.push({ site: s.name, kind: '注册链接', url: s.signupUrl, critical: true });
-  targets.push({ site: s.name, kind: '站点首页', url: s.homeUrl, critical: true });
+  targets.push({ id: s.id, site: s.name, kind: '注册链接', url: s.signupUrl, critical: true });
+  targets.push({ id: s.id, site: s.name, kind: '站点首页', url: s.homeUrl, critical: true });
   // relay 面板的 statusApi 是个「要鉴权的中转口」，不带 key 回 401 才是正常的（见 lib/relay.mjs）。
   // 不把这一类算进告警，否则每次 check 都固定挂一条噪音，久了就没人看告警了。
   if (s.statusApi) {
     targets.push({
+      id: s.id,
       site: s.name,
       kind: '状态接口',
       url: s.statusApi,
@@ -76,9 +92,9 @@ for (const s of sites) {
       expect401: s.panel === 'relay',
     });
   }
-  if (s.docsUrl) targets.push({ site: s.name, kind: '文档', url: s.docsUrl, critical: false });
+  if (s.docsUrl) targets.push({ id: s.id, site: s.name, kind: '文档', url: s.docsUrl, critical: false });
   for (const m of s.mirrors ?? []) {
-    targets.push({ site: s.name, kind: '备用注册', url: m.signupUrl, critical: false });
+    targets.push({ id: s.id, site: s.name, kind: '备用注册', url: m.signupUrl, critical: false });
   }
 }
 
@@ -87,14 +103,17 @@ const results = await Promise.all(targets.map(async (t) => ({ ...t, res: await p
 let failed = 0;
 let warned = 0;
 let blocked = 0;
+let knownCount = 0;
 for (const r of results) {
   const needsKey = r.expect401 && r.res.status === 401;
   const alive = r.res.ok || needsKey;
   const filtered = !alive && looksFiltered(r.res);
   const skipped = r.res.skipped && !r.res.ok;
-  const mark = alive ? '✔' : skipped ? '⊘' : filtered ? '≡' : r.critical ? '✖' : '!';
+  const known = !alive && !skipped && knownDown.has(r.id);
+  const mark = alive ? '✔' : skipped ? '⊘' : filtered ? '≡' : known ? '⚰' : r.critical ? '✖' : '!';
   if (!alive && !skipped) {
     if (filtered) blocked += 1;
+    else if (known) knownCount += 1;
     else if (r.critical) failed += 1;
     else warned += 1;
   }
@@ -102,11 +121,13 @@ for (const r of results) {
     `${mark} ${r.site.padEnd(13)} ${r.kind.padEnd(10)} HTTP ${String(r.res.status).padEnd(4)} ` +
       `${String(r.res.ms).padStart(5)}ms  ${r.url}${r.res.error ? `  (${r.res.error})` : ''}` +
       `${needsKey ? '  ← 中转口要鉴权，401 是预期答案' : ''}` +
-      `${filtered ? '  ← 被 WAF 拦（本机 IP 的问题，不算死链）' : ''}`,
+      `${filtered ? '  ← 被 WAF 拦（本机 IP 的问题，不算死链）' : ''}` +
+      `${known ? `  ← 已连续 48 小时无成功探测，按已知异常处理` : ''}`,
   );
 }
 
-console.log(`\n共 ${results.length} 项：失败 ${failed}，告警 ${warned}，被拦 ${blocked}`);
+console.log(`\n共 ${results.length} 项：失败 ${failed}，告警 ${warned}，被拦 ${blocked}，已知异常 ${knownCount}`);
+if (knownDown.size) console.log(`⚰ ${knownDown.size} 个站点已连续 48 小时探测失败，不再每天重复报警`);
 if (archivedCount) console.log(`⚰ ${archivedCount} 个已归档（停用）的站点跳过检查`);
 if (blocked) {
   console.log('被拦的链接请换个网络（非机房 IP）复核一次，站点通常是好的。');
@@ -115,3 +136,4 @@ if (failed) {
   console.error('\n关键链接不可用，请核对 data/sites.json 里的推广链接是否已失效或换域名。');
   process.exit(1);
 }
+
