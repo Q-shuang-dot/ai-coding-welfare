@@ -32,8 +32,8 @@ function navBar(base, current, repoUrl) {
     return `<a class="navlink${active ? ' active' : ''}" href="${esc(base + n.href)}">${esc(n.label)}</a>`;
   });
   return `<nav class="nav"><div class="wrap navrow">${items.join('')}<span class="navspace"></span><a class="navlink" href="${esc(
-    repoUrl,
-  )}" target="_blank" rel="noopener">GitHub 仓库</a></div></nav>`;
+    `${repoUrl}/issues`,
+  )}" target="_blank" rel="noopener">Issue 区</a><a class="navlink" href="${esc(repoUrl)}" target="_blank" rel="noopener">GitHub 仓库</a></div></nav>`;
 }
 
 /**

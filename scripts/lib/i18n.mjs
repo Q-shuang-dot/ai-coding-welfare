@@ -306,9 +306,10 @@ const en = {
     intro: 'Found a community or relay service worth listing? Two ways:',
     issue: (url) => `- Open an [Issue](${url}) and fill in the form`,
     pr: '- Or send a PR: add an entry to `data/sites.json`, run `npm run refresh && npm run build`, then commit',
-    tipTitle: '📣 Want to be listed? The Issue tab is free advertising',
+    tipTitle: (url) => `📣 Want to be listed? The [Issue tab](${url}/issues) is free advertising`,
     tipBody: (url) =>
-      `Found a service worth listing, or run one yourself? [Open an Issue](${url}/issues/new/choose) with your invite link. Issues are public, so the Issue tab is a promotion channel in itself; services that check out get added to the table. Want to see what others have suggested? [Browse all Issues](${url}/issues).`,
+      `Found a service worth listing, or run one yourself? [Open an Issue](${url}/issues/new/choose) with your invite link. Issues are public, so the Issue tab is a promotion channel in itself; services that check out get added to the table.`,
+    tipLink: '📋 Browse every Issue →',
     criteria:
       'Criteria: **credits are genuinely free** — paid relays are fine only if they publish a clear signup / trial credit and the page states it is a paid service. Signup is not an endless chain, and the service exposes a public API that can be probed.',
   },
@@ -578,9 +579,10 @@ const zh = {
     intro: '发现好用的公益站 / 中转站？两种方式：',
     issue: (url) => `- 提 [Issue](${url}) 填个表单，我来收录`,
     pr: '- 或者直接 PR：往 `data/sites.json` 加一条，跑 `npm run refresh && npm run build` 后提交',
-    tipTitle: '📣 欢迎投稿：Issue 区就是免费推广位',
+    tipTitle: (url) => `📣 欢迎投稿：[Issue 区](${url}/issues)就是免费推广位`,
     tipBody: (url) =>
-      `发现好用的福利站，或自己就在运营一个？直接[提交 Issue](${url}/issues/new/choose)，邀请链接可以一并贴上。Issue 对所有人公开，本身就是推广渠道；实测靠谱的会收录进正文。想先看看别人提了什么，直接[逛逛 Issue 区](${url}/issues)。`,
+      `发现好用的福利站，或自己就在运营一个？直接[提交 Issue](${url}/issues/new/choose)，邀请链接可以一并贴上。Issue 对所有人公开，本身就是推广渠道；实测靠谱的会收录进正文。`,
+    tipLink: '📋 查看全部 Issue 记录 →',
     criteria:
       '收录标准：**能免费拿到额度**（付费中转也可以，但必须有明确、公开的赠送 / 试用额度，并在页面上标明它是付费站）、注册流程不套娃、站点公开接口可探测。',
   },

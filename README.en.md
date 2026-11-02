@@ -35,9 +35,11 @@
 > Search the group number in QQ, or scan the code · [Group QR code](docs/assets/qq-group.jpg)
 
 > [!TIP]
-> **📣 Want to be listed? The Issue tab is free advertising**
+> **📣 Want to be listed? The [Issue tab](https://github.com/Q-shuang-dot/ai-coding-welfare/issues) is free advertising**
 >
-> Found a service worth listing, or run one yourself? [Open an Issue](https://github.com/Q-shuang-dot/ai-coding-welfare/issues/new/choose) with your invite link. Issues are public, so the Issue tab is a promotion channel in itself; services that check out get added to the table. Want to see what others have suggested? [Browse all Issues](https://github.com/Q-shuang-dot/ai-coding-welfare/issues).
+> Found a service worth listing, or run one yourself? [Open an Issue](https://github.com/Q-shuang-dot/ai-coding-welfare/issues/new/choose) with your invite link. Issues are public, so the Issue tab is a promotion channel in itself; services that check out get added to the table.
+>
+> **[📋 Browse every Issue →](https://github.com/Q-shuang-dot/ai-coding-welfare/issues)**
 
 ## 🚀 Get started in a minute
 
@@ -1277,7 +1279,7 @@ Console: <https://matrix.mzsjai.com/app/apikey>
 
 **Live data** (scraped from public APIs)
 
-- ⚠ No fresh API data for 52 hours; the info below is a snapshot from `2026-10-30 22:19 UTC`
+- ⚠ No fresh API data for 53 hours; the info below is a snapshot from `2026-10-30 22:19 UTC`
 - Panel name: **SeekAi**
 - Panel version: `v1.0.0-rc.25`
 - Daily check-in: ✅

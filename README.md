@@ -35,9 +35,11 @@
 > QQ 搜群号加入，或扫码进群 · [入群二维码](docs/assets/qq-group.jpg)
 
 > [!TIP]
-> **📣 欢迎投稿：Issue 区就是免费推广位**
+> **📣 欢迎投稿：[Issue 区](https://github.com/Q-shuang-dot/ai-coding-welfare/issues)就是免费推广位**
 >
-> 发现好用的福利站，或自己就在运营一个？直接[提交 Issue](https://github.com/Q-shuang-dot/ai-coding-welfare/issues/new/choose)，邀请链接可以一并贴上。Issue 对所有人公开，本身就是推广渠道；实测靠谱的会收录进正文。想先看看别人提了什么，直接[逛逛 Issue 区](https://github.com/Q-shuang-dot/ai-coding-welfare/issues)。
+> 发现好用的福利站，或自己就在运营一个？直接[提交 Issue](https://github.com/Q-shuang-dot/ai-coding-welfare/issues/new/choose)，邀请链接可以一并贴上。Issue 对所有人公开，本身就是推广渠道；实测靠谱的会收录进正文。
+>
+> **[📋 查看全部 Issue 记录 →](https://github.com/Q-shuang-dot/ai-coding-welfare/issues)**
 
 ## 🚀 一分钟上车（福利站）
 
@@ -1312,7 +1314,7 @@ curl -s https://api.justwoker.icu/v1/chat/completions \
 
 **实时数据**（自动抓取站点公开接口）
 
-- ⚠ 接口已连续 52 小时没抓到新数据，下列信息为 `2026-10-30 22:19 UTC` 的快照
+- ⚠ 接口已连续 53 小时没抓到新数据，下列信息为 `2026-10-30 22:19 UTC` 的快照
 - 站点名称：**SeekAi**
 - 面板版本：`v1.0.0-rc.25`
 - 每日签到：✅
