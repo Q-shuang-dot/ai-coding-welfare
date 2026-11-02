@@ -533,7 +533,7 @@ function tail(meta, sites, live, lang) {
     `## ${t.groupTitle}`,
     '',
     '<p align="center">',
-    `  <img src="docs/assets/qq-group.jpg" width="260" alt="${t.groupAlt}">`,
+    `  <img src="docs/assets/qq-group.jpg" width="200" alt="${t.groupAlt}">`,
     '</p>',
     '',
     `<p align="center">${t.groupDesc}</p>`,

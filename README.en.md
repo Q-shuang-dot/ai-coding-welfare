@@ -1691,7 +1691,7 @@ Criteria: **credits are genuinely free** — paid relays are fine only if they p
 ## 💬 Community chat
 
 <p align="center">
-  <img src="docs/assets/qq-group.jpg" width="260" alt="QQ group QR code — GCMP welfare services, 1125690737">
+  <img src="docs/assets/qq-group.jpg" width="200" alt="QQ group QR code — GCMP welfare services, 1125690737">
 </p>
 
 <p align="center">QQ group: <b>1125690737</b> (GCMP) · A Chinese-language group — scan or search the number to join for service updates and signup tips.</p>
