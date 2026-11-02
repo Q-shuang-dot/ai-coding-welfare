@@ -39,7 +39,12 @@
       "AI coding free tier",
       "claude-opus-5 API",
       "GPT-5.6 Sol relay"
-    ]
+    ],
+    "community": {
+      "qqGroup": "1125690737",
+      "name": "GCMP-福利站",
+      "qrPath": "assets/qq-group.jpg"
+    }
   },
   "sites": [
     {
@@ -291,7 +296,7 @@
     {
       "id": "docode",
       "name": "DoCode",
-      "subtitle": "New API 中转站 · 注册送 50 站内刀，注册时填邀请码 zMRe 再加 250，首日 300 刀，Claude 与 GPT 都在架上",
+      "subtitle": "New API 中转站 · 注册送 50 站内刀，注册时填邀请码 1Qof 再加 250，首日 300 刀，Claude 与 GPT 都在架上",
       "recommended": false,
       "credits": {
         "signup": 50,
@@ -310,7 +315,7 @@
         {
           "label": "直连美国",
           "homeUrl": "https://api.docode.cc",
-          "signupUrl": "https://api.docode.cc/register?aff=zMRe",
+          "signupUrl": "https://api.docode.cc/register?aff=1Qof",
           "labelEn": "Direct to US"
         }
       ],
@@ -323,8 +328,8 @@
         "OpenAI 兼容"
       ],
       "highlights": [
-        "⚠️ 别漏了邀请码：注册表单里的「邀请码」一栏填 zMRe，这 250 站内刀才会到账。从本页链接进去通常会自动带上，但提交前务必肉眼确认那一栏不是空的——没填就只有注册送的 50，事后补不上",
-        "注册送 50 站内刀，填了邀请码 zMRe 再加 250，首日 300 刀不用充值——注意这个「刀」是站内计价单位，不是美元，换算见下面的风险提示",
+        "⚠️ 别漏了邀请码：注册表单里的「邀请码」一栏填 1Qof，这 250 站内刀才会到账。从本页链接进去通常会自动带上，但提交前务必肉眼确认那一栏不是空的——没填就只有注册送的 50，事后补不上",
+        "注册送 50 站内刀，填了邀请码 1Qof 再加 250，首日 300 刀不用充值——注意这个「刀」是站内计价单位，不是美元，换算见下面的风险提示",
         "Claude 和 GPT 同时在架：站内公告点名 cc / cc-kiro 分组的 sonnet-5、按次计费的 opus4.6，以及 GPT pro / plus、Grok、Gemini、fable-5，一把 Key 通吃，本页多数站只给其中一边",
         "Anthropic 与 OpenAI 两条原生路由都开着（不带 key 探 /v1/messages 与 /v1/chat/completions 都回 New API 的 401 Invalid token），Claude Code 填 Base URL 就能直连，Codex CLI 走 /v1",
         "面板公开配置里带着一键导入的 deeplink：CC Switch、Cherry Studio、DeepChat、OpenCat、Lobe Chat 等客户端可以从后台直接把 Key 推过去",
@@ -340,7 +345,7 @@
           "邮箱 + 密码"
         ],
         "requirements": [
-          "邀请码 = zMRe。从本页链接进入（带 ?aff=zMRe）通常会自动填进注册表单的「邀请码」栏，提交前自己再看一眼；空着就只拿得到注册送的 50 站内刀",
+          "邀请码 = 1Qof。从本页链接进入（带 ?aff=1Qof）通常会自动填进注册表单的「邀请码」栏，提交前自己再看一眼；空着就只拿得到注册送的 50 站内刀",
           "250 站内刀在注册那一刻结算，注册完再去后台补填邀请码是没用的",
           "只能邮箱 + 密码建号：公开配置里 github / linuxdo / discord / telegram / 微信 / OIDC / Passkey 的开关全是 false，没有第三方登录入口",
           "注册要邮箱验证码（email_verification = true），并且开着 Cloudflare Turnstile 人机校验",
@@ -362,10 +367,10 @@
       ],
       "community": [],
       "en": {
-        "subtitle": "New API relay · 50 site-dollars on signup, 250 more with invite code zMRe, 300 on day one — both Claude and GPT on the shelf",
+        "subtitle": "New API relay · 50 site-dollars on signup, 250 more with invite code 1Qof, 300 on day one — both Claude and GPT on the shelf",
         "highlights": [
-          "⚠ Do not miss the invite code: type zMRe into the \"Invite code\" field of the signup form or the 250 site-dollars will not arrive. Entering through this page's link normally fills it in automatically, but check that field with your own eyes before submitting — miss it and you only get the 50 signup bonus, which cannot be added later",
-          "50 site-dollars on signup, 250 more with invite code zMRe — 300 on day one with no top-up. Note this \"dollar\" is the site's own unit, not USD; see the risk notes below",
+          "⚠ Do not miss the invite code: type 1Qof into the \"Invite code\" field of the signup form or the 250 site-dollars will not arrive. Entering through this page's link normally fills it in automatically, but check that field with your own eyes before submitting — miss it and you only get the 50 signup bonus, which cannot be added later",
+          "50 site-dollars on signup, 250 more with invite code 1Qof — 300 on day one with no top-up. Note this \"dollar\" is the site's own unit, not USD; see the risk notes below",
           "Claude and GPT are both online: announcements name cc / cc-kiro group sonnet-5 and pay-per-call opus4.6, plus GPT pro / plus, Grok, Gemini and fable-5. One key covers everything, whereas most services on this page offer only one side",
           "Both native routes are open (anonymous probes of /v1/messages and /v1/chat/completions return New API's 401 Invalid token), so Claude Code connects directly with the Base URL and Codex CLI uses /v1",
           "The panel's public config ships one-click deeplinks for CC Switch, Cherry Studio, DeepChat, OpenCat, Lobe Chat and more — push the key straight from the dashboard",
@@ -374,7 +379,7 @@
         "modelsNote": "This service put its pricing page behind login (`/api/pricing` returns 401; its own nav config sets pricing.requireAuth = true), so this page does not list a model table. Announcements name Claude (cc / cc-kiro groups: sonnet-5 and pay-per-call opus4.6), GPT pro / plus, Grok, Gemini, fable-5, plus a separate image endpoint at img.docode.cc. Check the console's \"Pricing\" page after signing up for the full list, groups and ratios.",
         "register": {
           "requirements": [
-            "Invite code = zMRe. Entering through this page's link (with ?aff=zMRe) normally fills the signup form's \"Invite code\" field automatically; double-check it yourself — leaving it empty gets you only the 50 signup site-dollars",
+            "Invite code = 1Qof. Entering through this page's link (with ?aff=1Qof) normally fills the signup form's \"Invite code\" field automatically; double-check it yourself — leaving it empty gets you only the 50 signup site-dollars",
             "The 250 site-dollars is settled at registration. Filling the invite code in from the dashboard afterwards does nothing",
             "Email + password only: github / linuxdo / discord / telegram / WeChat / OIDC / Passkey are all false in the public config, so there is no third-party login",
             "Registration needs an email verification code (email_verification = true) and passes Cloudflare Turnstile",
@@ -395,11 +400,11 @@
           "Upstream instability is documented in the announcements: GPT plus \"wiped out\" then \"temporarily revived\", gpt-5.4 fully delisted, and on Sept 10 they were still saying \"openai blew up, all of gpt is bad\". Do not treat it as a stable production channel"
         ]
       },
-      "remarks": "表单要手填邀请码 zMRe，漏填只有 50 刀",
+      "remarks": "表单要手填邀请码 1Qof，漏填只有 50 刀",
       "faq": [
         [
           "DoCode 的邀请码怎么填？",
-          "注册表单里的「邀请码」一栏填 zMRe。从本页链接进入通常会自动填好，提交前再确认一次不是空的——空着只有注册送的 50 站内刀，250 邀请额度事后补不上。"
+          "注册表单里的「邀请码」一栏填 1Qof。从本页链接进入通常会自动填好，提交前再确认一次不是空的——空着只有注册送的 50 站内刀，250 邀请额度事后补不上。"
         ],
         [
           "DoCode 首日 300 站内刀值多少钱？",

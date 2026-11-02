@@ -27,6 +27,18 @@
 
 ---
 
+> [!TIP]
+> **💬 AI Coding 交流群 · QQ 群号：1125690737（GCMP-福利站）**
+>
+> 交流 Claude Code / Codex 配置、额度使用与站点动态；站点变动和上车技巧会第一时间发在群里。
+>
+> QQ 搜群号加入，或扫码进群 · [入群二维码](docs/assets/qq-group.jpg)
+
+> [!TIP]
+> **📣 欢迎投稿：Issue 区就是免费推广位**
+>
+> 发现好用的福利站，或自己就在运营一个？直接[提交 Issue](https://github.com/Q-shuang-dot/ai-coding-welfare/issues/new/choose)，邀请链接可以一并贴上。Issue 对所有人公开，本身就是推广渠道；实测靠谱的会收录进正文。
+
 ## 🚀 一分钟上车（福利站）
 
 > 下面两张表都是第三方站点，本仓库只做信息聚合。
@@ -35,7 +47,7 @@
 | :-- | :--: | :--: | :-- | :--: | :--: | :--: | :--: | :--: | :-- |
 | **AgentRouter** 🔥 | 🟢 在线 | **$175** | 注册 $100 + 本页邀请 $50 + 首签 $25 | $25/天 | Anthropic + OpenAI | 4 个可查 | <a href="https://agentrouter.org/register?aff=aibw" target="_blank" rel="noopener">点此注册 →</a> | — | 额度没到账先退出重登一次 |
 | **熊猫API** 💳 | 🟢 在线 | **200 额度** | 注册 100 额度 + 本页邀请 100 额度 | 无签到 | Anthropic + OpenAI | 151 个可查 | <a href="https://api520.pro/register?aff=3pox" target="_blank" rel="noopener">点此注册 →</a> | — | 付费站：200 额度≈¥0.9，无签到 |
-| **DoCode** | 🟢 在线 | **300 站内刀** | 注册 50 站内刀 + 本页邀请 250 站内刀 | 无签到 | Anthropic + OpenAI | 需登录查看 | <a href="https://docode.cc/register?aff=1Qof" target="_blank" rel="noopener">点此注册 →</a> | `1Qof` | 表单要手填邀请码 zMRe，漏填只有 50 刀 |
+| **DoCode** | 🟢 在线 | **300 站内刀** | 注册 50 站内刀 + 本页邀请 250 站内刀 | 无签到 | Anthropic + OpenAI | 需登录查看 | <a href="https://docode.cc/register?aff=1Qof" target="_blank" rel="noopener">点此注册 →</a> | `1Qof` | 表单要手填邀请码 1Qof，漏填只有 50 刀 |
 | **年华 API** | 🟢 在线 | 站内公示 | — | 支持签到 | Anthropic + OpenAI | 149 个可查 | <a href="https://us-3.nianhuaapi.com/sign-up?aff=aonj" target="_blank" rel="noopener">点此注册 →</a> | `aonj` | 免费额度只有签到 + 0.05 倍率公益分组 |
 | **肖恩AI** | 🟢 在线 | **≈14000 积分** | 注册 7000 积分 + 本页邀请 5000 积分 + 首签 ≈2000 积分 | ≈2000 积分/天 | Anthropic + OpenAI | 需登录查看 | <a href="https://free.supxh.xin/register?code=MVU8GX" target="_blank" rel="noopener">点此注册 →</a> | `MVU8GX` | 仅 QQ 邮箱；邀请码填 MVU8GX 多 5000 |
 | **api456.me** | 🟢 在线 | **$50** | 注册 $20 + 本页邀请 $20 + 首签 $10 | $10/天 | OpenAI | 需登录查看 | <a href="https://api456.me/register?aff=zmza" target="_blank" rel="noopener">点此注册 →</a> | `zmza` | 只能 GitHub 登录；额度进后台核对 |
@@ -496,14 +508,14 @@ curl -s https://api520.pro/v1/chat/completions \
 
 ### 🟢 DoCode
 
-> New API 中转站 · 注册送 50 站内刀，注册时填邀请码 zMRe 再加 250，首日 300 刀，Claude 与 GPT 都在架上
+> New API 中转站 · 注册送 50 站内刀，注册时填邀请码 1Qof 再加 250，首日 300 刀，Claude 与 GPT 都在架上
 
 <a href="https://docode.cc/register?aff=1Qof" target="_blank" rel="noopener"><img src="https://img.shields.io/badge/%E7%AB%8B%E5%8D%B3%E6%B3%A8%E5%86%8C-DoCode-brightgreen?style=for-the-badge" alt="注册 DoCode"></a>
 
 **为什么值得注册**
 
-- ⚠️ 别漏了邀请码：注册表单里的「邀请码」一栏填 zMRe，这 250 站内刀才会到账。从本页链接进去通常会自动带上，但提交前务必肉眼确认那一栏不是空的——没填就只有注册送的 50，事后补不上
-- 注册送 50 站内刀，填了邀请码 zMRe 再加 250，首日 300 刀不用充值——注意这个「刀」是站内计价单位，不是美元，换算见下面的风险提示
+- ⚠️ 别漏了邀请码：注册表单里的「邀请码」一栏填 1Qof，这 250 站内刀才会到账。从本页链接进去通常会自动带上，但提交前务必肉眼确认那一栏不是空的——没填就只有注册送的 50，事后补不上
+- 注册送 50 站内刀，填了邀请码 1Qof 再加 250，首日 300 刀不用充值——注意这个「刀」是站内计价单位，不是美元，换算见下面的风险提示
 - Claude 和 GPT 同时在架：站内公告点名 cc / cc-kiro 分组的 sonnet-5、按次计费的 opus4.6，以及 GPT pro / plus、Grok、Gemini、fable-5，一把 Key 通吃，本页多数站只给其中一边
 - Anthropic 与 OpenAI 两条原生路由都开着（不带 key 探 /v1/messages 与 /v1/chat/completions 都回 New API 的 401 Invalid token），Claude Code 填 Base URL 就能直连，Codex CLI 走 /v1
 - 面板公开配置里带着一键导入的 deeplink：CC Switch、Cherry Studio、DeepChat、OpenCat、Lobe Chat 等客户端可以从后台直接把 Key 推过去
@@ -525,13 +537,13 @@ curl -s https://api520.pro/v1/chat/completions \
 
 **镜像 / 备用入口**
 
-- 直连美国：<https://api.docode.cc> · <a href="https://api.docode.cc/register?aff=zMRe" target="_blank" rel="noopener">从备用域名注册</a>
+- 直连美国：<https://api.docode.cc> · <a href="https://api.docode.cc/register?aff=1Qof" target="_blank" rel="noopener">从备用域名注册</a>
 
 > 该站把定价页设成了登录可见（`/api/pricing` 返回 401，站点自己的导航配置里 pricing.requireAuth = true），本页不列模型表。站内公告点名在售的有 Claude（cc / cc-kiro 分组，sonnet-5 与按次计费的 opus4.6）、GPT pro / plus、Grok、Gemini、fable-5，另有独立的生图入口 img.docode.cc；完整清单、分组与倍率注册后在控制台「定价」页确认。
 
 **注册要求**
 
-- 邀请码 = zMRe。从本页链接进入（带 ?aff=zMRe）通常会自动填进注册表单的「邀请码」栏，提交前自己再看一眼；空着就只拿得到注册送的 50 站内刀
+- 邀请码 = 1Qof。从本页链接进入（带 ?aff=1Qof）通常会自动填进注册表单的「邀请码」栏，提交前自己再看一眼；空着就只拿得到注册送的 50 站内刀
 - 250 站内刀在注册那一刻结算，注册完再去后台补填邀请码是没用的
 - 只能邮箱 + 密码建号：公开配置里 github / linuxdo / discord / telegram / 微信 / OIDC / Passkey 的开关全是 false，没有第三方登录入口
 - 注册要邮箱验证码（email_verification = true），并且开着 Cloudflare Turnstile 人机校验

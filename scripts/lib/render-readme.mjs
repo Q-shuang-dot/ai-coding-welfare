@@ -6,6 +6,7 @@ import { icon } from './changelog.mjs';
 import { coverage } from './history.mjs';
 import { pack, siteCopy, loginMethod, unitStyle, DEFAULT_LANG } from './i18n.mjs';
 import { archivedAt, archivedReason } from './archived.mjs';
+import { communityReadme } from './community.mjs';
 
 /** shields.io 转义：- → --，_ → __，其余走 URI 编码 */
 const shield = (s) => encodeURIComponent(String(s).replace(/-/g, '--').replace(/_/g, '__'));
@@ -387,6 +388,12 @@ export function renderReadme({ meta, sites, live, groups = [], history, lang = D
     '</p>',
     '',
     '---',
+    '',
+    ...communityReadme(meta, t.community),
+    '> [!TIP]',
+    `> **${t.contribute.tipTitle}**`,
+    '>',
+    `> ${t.contribute.tipBody(meta.repoUrl)}`,
     '',
     `## ${t.hero.quickTitle}`,
     '',

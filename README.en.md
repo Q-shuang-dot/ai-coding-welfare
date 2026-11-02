@@ -27,6 +27,18 @@
 
 ---
 
+> [!TIP]
+> **💬 Community chat · QQ group：1125690737（GCMP-福利站）**
+>
+> Claude Code / Codex setup, credit tips and service updates — the group hears about changes first.
+>
+> Search the group number in QQ, or scan the code · [Group QR code](docs/assets/qq-group.jpg)
+
+> [!TIP]
+> **📣 Want to be listed? The Issue tab is free advertising**
+>
+> Found a service worth listing, or run one yourself? [Open an Issue](https://github.com/Q-shuang-dot/ai-coding-welfare/issues/new/choose) with your invite link. Issues are public, so the Issue tab is a promotion channel in itself; services that check out get added to the table.
+
 ## 🚀 Get started in a minute
 
 > Both tables below point to third-party services. This repo only aggregates information.
@@ -35,7 +47,7 @@
 | :-- | :--: | :--: | :-- | :--: | :--: | :--: | :--: | :--: | :-- |
 | **AgentRouter** 🔥 | 🟢 Online | **$175** | signup $100 + this page's invite $50 + first check-in $25 | $25/day | Anthropic + OpenAI | 4 listed | <a href="https://agentrouter.org/register?aff=aibw" target="_blank" rel="noopener">Sign up →</a> | — | 额度没到账先退出重登一次 |
 | **Panda API** 💳 | 🟢 Online | **200 credit** | signup 100 credit + this page's invite 100 credit | No check-in | Anthropic + OpenAI | 151 listed | <a href="https://api520.pro/register?aff=3pox" target="_blank" rel="noopener">Sign up →</a> | — | 付费站：200 额度≈¥0.9，无签到 |
-| **DoCode** | 🟢 Online | **300 site-USD** | signup 50 site-USD + this page's invite 250 site-USD | No check-in | Anthropic + OpenAI | Sign in to see | <a href="https://docode.cc/register?aff=1Qof" target="_blank" rel="noopener">Sign up →</a> | `1Qof` | 表单要手填邀请码 zMRe，漏填只有 50 刀 |
+| **DoCode** | 🟢 Online | **300 site-USD** | signup 50 site-USD + this page's invite 250 site-USD | No check-in | Anthropic + OpenAI | Sign in to see | <a href="https://docode.cc/register?aff=1Qof" target="_blank" rel="noopener">Sign up →</a> | `1Qof` | 表单要手填邀请码 1Qof，漏填只有 50 刀 |
 | **NianHua API** | 🟢 Online | Posted on site | — | Daily check-in | Anthropic + OpenAI | 149 listed | <a href="https://us-3.nianhuaapi.com/sign-up?aff=aonj" target="_blank" rel="noopener">Sign up →</a> | `aonj` | 免费额度只有签到 + 0.05 倍率公益分组 |
 | **ShawnAI** | 🟢 Online | **≈14000 pts** | signup 7000 pts + this page's invite 5000 pts + first check-in ≈2000 pts | ≈2000 pts/day | Anthropic + OpenAI | Sign in to see | <a href="https://free.supxh.xin/register?code=MVU8GX" target="_blank" rel="noopener">Sign up →</a> | `MVU8GX` | 仅 QQ 邮箱；邀请码填 MVU8GX 多 5000 |
 | **api456.me** | 🟢 Online | **$50** | signup $20 + this page's invite $20 + first check-in $10 | $10/day | OpenAI | Sign in to see | <a href="https://api456.me/register?aff=zmza" target="_blank" rel="noopener">Sign up →</a> | `zmza` | 只能 GitHub 登录；额度进后台核对 |
@@ -487,14 +499,14 @@ curl -s https://api520.pro/v1/chat/completions \
 
 ### 🟢 DoCode
 
-> New API relay · 50 site-dollars on signup, 250 more with invite code zMRe, 300 on day one — both Claude and GPT on the shelf
+> New API relay · 50 site-dollars on signup, 250 more with invite code 1Qof, 300 on day one — both Claude and GPT on the shelf
 
 <a href="https://docode.cc/register?aff=1Qof" target="_blank" rel="noopener"><img src="https://img.shields.io/badge/Sign%20up-DoCode-brightgreen?style=for-the-badge" alt="Sign up for DoCode"></a>
 
 **Why sign up**
 
-- ⚠ Do not miss the invite code: type zMRe into the "Invite code" field of the signup form or the 250 site-dollars will not arrive. Entering through this page's link normally fills it in automatically, but check that field with your own eyes before submitting — miss it and you only get the 50 signup bonus, which cannot be added later
-- 50 site-dollars on signup, 250 more with invite code zMRe — 300 on day one with no top-up. Note this "dollar" is the site's own unit, not USD; see the risk notes below
+- ⚠ Do not miss the invite code: type 1Qof into the "Invite code" field of the signup form or the 250 site-dollars will not arrive. Entering through this page's link normally fills it in automatically, but check that field with your own eyes before submitting — miss it and you only get the 50 signup bonus, which cannot be added later
+- 50 site-dollars on signup, 250 more with invite code 1Qof — 300 on day one with no top-up. Note this "dollar" is the site's own unit, not USD; see the risk notes below
 - Claude and GPT are both online: announcements name cc / cc-kiro group sonnet-5 and pay-per-call opus4.6, plus GPT pro / plus, Grok, Gemini and fable-5. One key covers everything, whereas most services on this page offer only one side
 - Both native routes are open (anonymous probes of /v1/messages and /v1/chat/completions return New API's 401 Invalid token), so Claude Code connects directly with the Base URL and Codex CLI uses /v1
 - The panel's public config ships one-click deeplinks for CC Switch, Cherry Studio, DeepChat, OpenCat, Lobe Chat and more — push the key straight from the dashboard
@@ -516,13 +528,13 @@ curl -s https://api520.pro/v1/chat/completions \
 
 **Mirrors / alternate entry points**
 
-- Direct to US: <https://api.docode.cc> · <a href="https://api.docode.cc/register?aff=zMRe" target="_blank" rel="noopener">Sign up via the mirror</a>
+- Direct to US: <https://api.docode.cc> · <a href="https://api.docode.cc/register?aff=1Qof" target="_blank" rel="noopener">Sign up via the mirror</a>
 
 > This service put its pricing page behind login (`/api/pricing` returns 401; its own nav config sets pricing.requireAuth = true), so this page does not list a model table. Announcements name Claude (cc / cc-kiro groups: sonnet-5 and pay-per-call opus4.6), GPT pro / plus, Grok, Gemini, fable-5, plus a separate image endpoint at img.docode.cc. Check the console's "Pricing" page after signing up for the full list, groups and ratios.
 
 **Signup requirements**
 
-- Invite code = zMRe. Entering through this page's link (with ?aff=zMRe) normally fills the signup form's "Invite code" field automatically; double-check it yourself — leaving it empty gets you only the 50 signup site-dollars
+- Invite code = 1Qof. Entering through this page's link (with ?aff=1Qof) normally fills the signup form's "Invite code" field automatically; double-check it yourself — leaving it empty gets you only the 50 signup site-dollars
 - The 250 site-dollars is settled at registration. Filling the invite code in from the dashboard afterwards does nothing
 - Email + password only: github / linuxdo / discord / telegram / WeChat / OIDC / Passkey are all false in the public config, so there is no third-party login
 - Registration needs an email verification code (email_verification = true) and passes Cloudflare Turnstile

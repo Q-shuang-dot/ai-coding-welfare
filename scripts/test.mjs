@@ -1114,6 +1114,19 @@ test('有备注时才出「备注」列，竖线要转义、不能把表格撑�
   assert.equal(cols(head), cols(sep));
   assert.equal(cols(head), cols(row));
 });
+test('交流群：群号与二维码从 meta.community 来，不写死在模板里', () => {
+  const live = { generatedAt: iso(0), sites: [{ id: 'demo', online: true }] };
+  const plain = renderReadme({ meta: META, sites: [SITE], live, groups: [], history: HIST });
+  assert.doesNotMatch(plain, /QQ 群号/, '没配 community 就不该凭空冒出一个群');
+
+  const meta = { ...META, community: { qqGroup: '12345678', name: '测试群', qrPath: 'assets/qq-group.jpg' } };
+  const md = renderReadme({ meta, sites: [SITE], live, groups: [], history: HIST });
+  assert.match(md, /QQ 群号：12345678（测试群）/);
+  assert.match(md, /docs\/assets\/qq-group\.jpg/);
+  const html = renderHtml({ meta, sites: [SITE], live, css: '', history: HIST });
+  assert.match(html, /community-banner/);
+  assert.match(html, /12345678/);
+});
 test('停注变动进日志时带上接口口径，别让人以为是我们猜的', () => {
   const [ev] = D({ ...snap(), registerOpen: true }, { ...snap(), registerOpen: false });
   assert.equal(ev.type, 'register_closed');

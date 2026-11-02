@@ -11,6 +11,8 @@ import { esc, fmt, pageShell, faqLd } from './layout.mjs';
 import { icon } from './changelog.mjs';
 import { coverage } from './history.mjs';
 import { archivedAt, archivedReason } from './archived.mjs';
+import { pack } from './i18n.mjs';
+import { communityBanner } from './community.mjs';
 
 function claudeSnippet(site, snap) {
   const model = snap?.defaults?.claude ?? '在站内模型列表中选择';
@@ -142,6 +144,7 @@ const FAQ = [
 ];
 
 export function renderHtml({ meta, sites, live, css, groups = [], history, archived = [] }) {
+  const t = pack('zh');
   const byId = new Map((live?.sites ?? []).map((s) => [s.id, s]));  const welfareSites = sites;
   const online = welfareSites.filter((s) => byId.get(s.id)?.online).length;
   // 停注的站点不进「新用户能拿多少」的口径，也不当首屏主按钮（详见 lib/signup.mjs）
@@ -178,6 +181,7 @@ export function renderHtml({ meta, sites, live, css, groups = [], history, archi
       }
       <a class="btn btn-ghost" href="${esc(meta.repoUrl)}" target="_blank" rel="noopener">GitHub 仓库 ⭐</a>
     </div>
+    ${communityBanner(meta, t.community)}
   </header>
   <section id="welfare">
     <h2>福利站总览</h2>
