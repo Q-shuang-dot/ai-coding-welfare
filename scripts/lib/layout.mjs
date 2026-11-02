@@ -97,6 +97,7 @@ ${body}
       <li>请勿把生产密钥、隐私数据、企业代码交给来源不明的中转服务；重要项目请使用官方 API。</li>
       <li>请遵守各站点与上游服务商条款，禁止批量注册、刷量、转售额度。</li>
     </ul>
+    <p class="hint"><a href="${base}api/">开放 API</a> · 站点与状态数据，脚本 / 其他导航站可直接读取</p>
     <p>数据快照时间：${esc(fmt(live?.generatedAt))} · 由 <a href="${esc(meta.repoUrl)}">${esc(
       meta.repoUrl.replace(/^https:\/\//, ''),
     )}</a> 自动生成</p>

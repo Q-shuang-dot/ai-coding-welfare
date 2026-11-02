@@ -258,6 +258,44 @@ tr.shut td { color: var(--fg-dim); }
   .community-qr img { width: 80px; height: 80px; }
   .community-hint { display: none; }
 }
+
+/* 首页筛选：纯前端过滤，卡片本身不变 */
+.filters { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin: 14px 0 2px; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.filter-chip {
+  padding: 6px 12px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--card);
+  color: var(--fg-dim);
+  font: inherit;
+  font-size: 13px;
+  cursor: pointer;
+}
+.filter-chip:hover { border-color: var(--accent); color: var(--accent-2); }
+.filter-chip.active { border-color: var(--accent); background: var(--accent); color: #fff; }
+.filter-chip .n { font-size: 12px; opacity: 0.75; }
+.site-search {
+  flex: 1 1 170px;
+  min-width: 130px;
+  max-width: 260px;
+  padding: 7px 12px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--card);
+  color: var(--fg);
+  font: inherit;
+  font-size: 13px;
+}
+.site-search:focus { outline: 2px solid rgba(59, 130, 246, 0.3); border-color: var(--accent); }
+.filter-count { margin-left: auto; color: var(--fg-dim); font-size: 12px; }
+.row.hide { display: none; }
+.filter-empty { margin: 8px 0 0; }
+
+@media (max-width: 640px) {
+  .site-search { flex-basis: 100%; max-width: none; }
+  .filter-count { margin-left: 0; }
+}
 </style>
 </head>
 <body>
@@ -348,6 +386,7 @@ document.querySelectorAll('.copy').forEach(function (btn) {
       <li>请勿把生产密钥、隐私数据、企业代码交给来源不明的中转服务；重要项目请使用官方 API。</li>
       <li>请遵守各站点与上游服务商条款，禁止批量注册、刷量、转售额度。</li>
     </ul>
+    <p class="hint"><a href="../../api/">开放 API</a> · 站点与状态数据，脚本 / 其他导航站可直接读取</p>
     <p>数据快照时间：2026-11-02 03:28 UTC · 由 <a href="https://github.com/Q-shuang-dot/ai-coding-welfare">github.com/Q-shuang-dot/ai-coding-welfare</a> 自动生成</p>
   </footer>
 </div>

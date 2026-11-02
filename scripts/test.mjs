@@ -14,6 +14,7 @@ import { groupByDay, renderAtom, summarize, icon } from './lib/changelog.mjs';
 import { renderSitePage } from './lib/render-site-page.mjs';
 import { renderComparePage, renderStatusPage, renderChangelogPage, estimateTurns } from './lib/render-aux-pages.mjs';
 import { renderHtml } from './lib/render-html.mjs';
+import { sitesApi, statusApi } from './lib/api.mjs';
 import { renderReadme } from './lib/render-readme.mjs';
 import { signupRoute, acceptsNew } from './lib/signup.mjs';
 import { activeSites, archivedSites, archivedAt, archivedReason } from './lib/archived.mjs';
@@ -1040,6 +1041,27 @@ test('站点页带这个站自己的最近变动（最多 5 条）和手工字�
   assert.match(html, /这个站最近发生了什么/);
   assert.equal((html.match(/变动\d/g) || []).length, 5, '只显示最近 5 条');
   assert.match(html, /手工字段最后核对 <b>2026-11-02<\/b>/);
+});
+
+test('公开 API：sites.json 带版本与详情页地址，status.json 给在线和模型数', () => {
+  const a = sitesApi({ meta: META, sites: [SITE], live: LIVE });
+  assert.equal(a.version, 1);
+  assert.equal(a.count, 1);
+  assert.equal(a.sites[0].id, 'demo');
+  assert.ok(a.sites[0].page.endsWith('/sites/demo/'));
+  const s = statusApi({ meta: META, sites: [SITE], live: LIVE, history: HIST });
+  assert.equal(s.sites[0].online, true);
+  assert.equal(s.sites[0].models, 2);
+});
+
+test('首页筛选按钮与卡片 data 属性齐全（站点少时不显示筛选）', () => {
+  const many = [SITE, 1, 2, 3].map((x, i) => (i ? { ...SITE, id: `demo${i}`, name: `Demo${i}` } : SITE));
+  const html = renderHtml({ meta: META, sites: many, live: LIVE, css: '', groups: GROUPS, history: HIST });
+  assert.match(html, /data-filter="claude"/);
+  assert.match(html, /data-filter="checkin"/);
+  assert.match(html, /data-protocols="anthropic openai"/);
+  assert.match(html, /data-search="[^"]*Demo 站/);
+  assert.match(html, /id="site-rows"/);
 });
 
 test('数据里的 HTML / 引号不许原样进页面（sites.json 是手工维护的，迟早会有尖括号）', () => {

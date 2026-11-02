@@ -26,6 +26,7 @@ import { EMPTY_HISTORY } from './lib/history.mjs';
 import { auditCredits } from './lib/credits.mjs';
 import { activeSites, archivedSites } from './lib/archived.mjs';
 import { pageShell } from './lib/layout.mjs';
+import { renderApiPage, sitesApi, statusApi } from './lib/api.mjs';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const p = (...s) => path.join(ROOT, ...s);
@@ -124,6 +125,11 @@ await write('status/index.html', renderStatusPage({ meta, sites, live, css, hist
 await write('changelog/index.html', renderChangelogPage({ meta, sites: allSites, groups, live, css }));
 await write('feed.xml', renderAtom({ meta, groups, updated: changelog.updatedAt ?? live.generatedAt }));
 
+// 对外只读 API：页面自己用同一份数据，额外吐两个稳定 JSON 给脚本 / 别的导航站
+await write('api/sites.json', `${JSON.stringify(sitesApi({ meta, sites, live }), null, 2)}\n`);
+await write('api/status.json', `${JSON.stringify(statusApi({ meta, sites, live, history }), null, 2)}\n`);
+await write('api/index.html', renderApiPage({ meta, css, live }));
+
 // 落地页要被搜到才有推广价值：robots + 把每一页都写进 sitemap
 const base = siteBase;
 const day = (live.generatedAt ?? new Date().toISOString()).slice(0, 10);
@@ -132,6 +138,7 @@ const urls = [
   { loc: `${base}compare/`, freq: 'weekly', pri: '0.8' },
   { loc: `${base}status/`, freq: 'daily', pri: '0.7' },
   { loc: `${base}changelog/`, freq: 'daily', pri: '0.7' },
+  { loc: `${base}api/`, freq: 'weekly', pri: '0.5' },
   ...sites.map((s) => ({ loc: `${base}sites/${s.id}/`, freq: 'daily', pri: '0.9' })),
 ];
 

@@ -42,6 +42,9 @@ function siteCard(site, snap) {
   const p = creditPlan(site, snap);
   const route = signupRoute(snap);
   const shut = route.state === 'closed';
+  const protocols = Object.keys(site.endpoints ?? {});
+  const checkin = p.daily != null || snap?.checkinEnabled === true;
+  const search = [site.name, site.subtitle, ...(site.tags ?? []), ...(site.highlights ?? [])].join(' ');
 
   const credit = p.firstDay != null
     ? `首日 <b${shut ? ' class="struck"' : ''}>${usd(p.firstDay, p.approx, p.unit)}</b>${p.daily != null ? ` / 每天 ${usd(p.daily, p.approx, p.unit)}` : ''}`
@@ -58,7 +61,7 @@ function siteCard(site, snap) {
   ].filter(Boolean);
 
   return `
-      <div class="row${site.recommended ? ' featured' : ''}${shut ? ' shut' : ''}">
+      <div class="row${site.recommended ? ' featured' : ''}${shut ? ' shut' : ''}" data-search="${esc(search)}" data-protocols="${esc(protocols.join(' '))}" data-paid="${site.paid ? '1' : '0'}" data-checkin="${checkin ? '1' : '0'}" data-online="${up ? '1' : '0'}">
         <div class="status">
           <span class="dot ${up ? 'up' : 'down'}" title="${up ? '在线' : '异常'}"></span>
           <span>${esc(site.name)}${site.recommended ? ' <span class="tag">首推</span>' : ''}${site.paid ? ' <span class="tag warn">付费</span>' : ''}${shut ? ' <span class="tag warn">停注</span>' : ''}</span>
@@ -194,7 +197,24 @@ export function renderHtml({ meta, sites, live, css, groups = [], history, archi
         : ''
     }
     ${extra ? `<p class="hint">${esc(extra)}——站内积分与美元没有公开换算关系，未计入上面的美元合计。</p>` : ''}
-    <div class="rows">
+    ${
+      welfareSites.length > 3
+        ? `<div class="filters">
+      <div class="chips" role="group" aria-label="按协议或类型筛选">
+        <button type="button" class="filter-chip active" data-filter="all">全部 <span class="n">${welfareSites.length}</span></button>
+        <button type="button" class="filter-chip" data-filter="claude">Claude Code</button>
+        <button type="button" class="filter-chip" data-filter="openai">Codex / OpenAI</button>
+        <button type="button" class="filter-chip" data-filter="free">免费</button>
+        <button type="button" class="filter-chip" data-filter="paid">付费</button>
+        <button type="button" class="filter-chip" data-filter="checkin">有签到</button>
+      </div>
+      <input type="search" class="site-search" placeholder="搜站名 / 标签…" aria-label="搜索站点">
+      <span class="filter-count" aria-live="polite">${welfareSites.length} 个站点</span>
+    </div>
+    <p class="hint filter-empty" hidden>没有符合条件的站点，换个筛选试试。</p>`
+        : ''
+    }
+    <div class="rows" id="site-rows">
       <div class="row head"><div>站点</div><div>说明</div><div>额度 / 状态</div><div>操作</div></div>
       ${welfareSites.map((s) => siteCard(s, byId.get(s.id))).join('')}
     </div>
@@ -217,6 +237,49 @@ document.querySelectorAll('.copy').forEach(function (btn) {
     });
   });
 });
+
+// 首页筛选：纯前端，不改数据、不加依赖；关掉 JS 时只是筛选按钮不生效，表格照样完整
+(function () {
+  var chips = Array.prototype.slice.call(document.querySelectorAll('.filter-chip'));
+  var rows = Array.prototype.slice.call(document.querySelectorAll('#site-rows .row:not(.head)'));
+  var search = document.querySelector('.site-search');
+  var count = document.querySelector('.filter-count');
+  var empty = document.querySelector('.filter-empty');
+  if (!chips.length || !rows.length) return;
+  var active = 'all';
+
+  function match(row) {
+    var protocols = row.getAttribute('data-protocols') || '';
+    if (active === 'claude' && protocols.indexOf('anthropic') < 0) return false;
+    if (active === 'openai' && protocols.indexOf('openai') < 0) return false;
+    if (active === 'free' && row.getAttribute('data-paid') === '1') return false;
+    if (active === 'paid' && row.getAttribute('data-paid') !== '1') return false;
+    if (active === 'checkin' && row.getAttribute('data-checkin') !== '1') return false;
+    var q = (search && search.value ? search.value : '').trim().toLowerCase();
+    return !q || (row.getAttribute('data-search') || '').toLowerCase().indexOf(q) >= 0;
+  }
+
+  function apply() {
+    var shown = 0;
+    rows.forEach(function (row) {
+      var ok = match(row);
+      row.classList.toggle('hide', !ok);
+      if (ok) shown += 1;
+    });
+    if (count) count.textContent = shown + ' / ' + rows.length + ' 个站点';
+    if (empty) empty.hidden = shown > 0;
+  }
+
+  chips.forEach(function (chip) {
+    chip.addEventListener('click', function () {
+      active = chip.getAttribute('data-filter');
+      chips.forEach(function (c) { c.classList.toggle('active', c === chip); });
+      apply();
+    });
+  });
+  if (search) search.addEventListener('input', apply);
+  apply();
+})();
 </script>`;
 
   // ItemList 让搜索引擎和 AI 抓取时知道这页是「福利站的清单」，每项指向各自的详情页
