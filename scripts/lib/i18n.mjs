@@ -99,6 +99,7 @@ const en = {
       `> 🟡 ${names} report \`register_enabled=false\` — new accounts can no longer sign up there. Their credits are struck through and excluded from the total above. The services themselves are still running and existing users are unaffected; any reopening shows up in the [changelog](${pages}changelog/).`,
     stale: (n) =>
       `> 🟡 ${n} services have not returned fresh API data for over 48 hours. Details show the last successful snapshot; online status reflects whether the signup page actually loads.`,
+    paid: '💳 = paid relay: it does publish a clear signup credit, but once that runs out you top up at the site\'s own rates — not a long-term free ride.',
   },
 
   quickstart: {
@@ -296,7 +297,7 @@ const en = {
     issue: (url) => `- Open an [Issue](${url}) and fill in the form`,
     pr: '- Or send a PR: add an entry to `data/sites.json`, run `npm run refresh && npm run build`, then commit',
     criteria:
-      'Criteria: **credits are genuinely free**, signup is not an endless chain, and the service exposes a public API that can be probed.',
+      'Criteria: **credits are genuinely free** — paid relays are fine only if they publish a clear signup / trial credit and the page states it is a paid service. Signup is not an endless chain, and the service exposes a public API that can be probed.',
   },
 
   disclaimer: {
@@ -376,6 +377,7 @@ const zh = {
       `> 🟡 ${names} 的接口自报已关闭新用户注册（\`register_enabled=false\`），表里额度已划掉、也没算进上面的合计；站点本身还在跑，老用户不受影响，重新开放会记进[变动日志](${pages}changelog/)。`,
     stale: (n) =>
       `> 🟡 有 ${n} 个站点已超过 48 小时没抓到接口数据，其明细为上一次成功抓取的快照；在线状态按注册页实际可访问性判断。`,
+    paid: '💳 = 付费中转站：有明确赠送额度，但用完要自己充值、按站内单价计费，别把这里当长期白嫖。',
   },
 
   quickstart: {
@@ -553,7 +555,8 @@ const zh = {
     intro: '发现好用的公益站 / 中转站？两种方式：',
     issue: (url) => `- 提 [Issue](${url}) 填个表单，我来收录`,
     pr: '- 或者直接 PR：往 `data/sites.json` 加一条，跑 `npm run refresh && npm run build` 后提交',
-    criteria: '收录标准：**能免费拿到额度**、注册流程不套娃、站点公开接口可探测。',
+    criteria:
+      '收录标准：**能免费拿到额度**（付费中转也可以，但必须有明确、公开的赠送 / 试用额度，并在页面上标明它是付费站）、注册流程不套娃、站点公开接口可探测。',
   },
 
   disclaimer: {

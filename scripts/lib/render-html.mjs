@@ -59,7 +59,7 @@ function siteCard(site, snap) {
       <div class="row${site.recommended ? ' featured' : ''}${shut ? ' shut' : ''}">
         <div class="status">
           <span class="dot ${up ? 'up' : 'down'}" title="${up ? '在线' : '异常'}"></span>
-          <span>${esc(site.name)}${site.recommended ? ' <span class="tag">首推</span>' : ''}${shut ? ' <span class="tag warn">停注</span>' : ''}</span>
+          <span>${esc(site.name)}${site.recommended ? ' <span class="tag">首推</span>' : ''}${site.paid ? ' <span class="tag warn">付费</span>' : ''}${shut ? ' <span class="tag warn">停注</span>' : ''}</span>
         </div>
         <div class="meta">
           <div>${esc(site.subtitle)}</div>

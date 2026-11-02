@@ -34,7 +34,7 @@
 | Service | Status | First day | How it adds up | After that | Protocols | Models | Sign up | Invite code |
 | :-- | :--: | :--: | :-- | :--: | :--: | :--: | :--: | :--: |
 | **AgentRouter** 🔥 | 🟢 Online | **$175** | signup $100 + this page's invite $50 + first check-in $25 | $25/day | Anthropic + OpenAI | 4 listed | <a href="https://agentrouter.org/register?aff=aibw" target="_blank" rel="noopener">Sign up →</a> | — |
-| **Panda API** | 🟢 Online | **200 credit** | signup 100 credit + this page's invite 100 credit | No check-in | Anthropic + OpenAI | 151 listed | <a href="https://api520.pro/register?aff=3pox" target="_blank" rel="noopener">Sign up →</a> | — |
+| **Panda API** 💳 | 🟢 Online | **200 credit** | signup 100 credit + this page's invite 100 credit | No check-in | Anthropic + OpenAI | 151 listed | <a href="https://api520.pro/register?aff=3pox" target="_blank" rel="noopener">Sign up →</a> | — |
 | **DoCode** | 🟢 Online | **300 site-USD** | signup 50 site-USD + this page's invite 250 site-USD | No check-in | Anthropic + OpenAI | Sign in to see | <a href="https://docode.cc/register?aff=1Qof" target="_blank" rel="noopener">Sign up →</a> | `1Qof` |
 | **NianHua API** | 🟢 Online | Posted on site | — | Daily check-in | Anthropic + OpenAI | 149 listed | <a href="https://us-3.nianhuaapi.com/sign-up?aff=aonj" target="_blank" rel="noopener">Sign up →</a> | `aonj` |
 | **ShawnAI** | 🟢 Online | **≈14000 pts** | signup 7000 pts + this page's invite 5000 pts + first check-in ≈2000 pts | ≈2000 pts/day | Anthropic + OpenAI | Sign in to see | <a href="https://free.supxh.xin/register?code=MVU8GX" target="_blank" rel="noopener">Sign up →</a> | `MVU8GX` |
@@ -52,6 +52,8 @@
 > Signing up for all 5 USD-priced services that still accept new users gets you roughly **$225** on day one; Panda API separately credits 200 credit, DoCode separately credits 300 site-USD, ShawnAI separately credits ≈14000 pts, Matrix separately credits 2600 pts, Long's AI separately credits Free, Xinjiang Huancheng Security separately credits 30000 site-USD — each service prices in its own unit with no published USD conversion, so those are left out of this total.
 >
 > 🟡 1 services have not returned fresh API data for over 48 hours. Details show the last successful snapshot; online status reflects whether the signup page actually loads.
+>
+💳 = paid relay: it does publish a clear signup credit, but once that runs out you top up at the site's own rates — not a long-term free ride.
 
 **Just want to use Claude Code right now?** Three steps:
 
@@ -1664,7 +1666,7 @@ Found a community or relay service worth listing? Two ways:
 - Open an [Issue](https://github.com/Q-shuang-dot/ai-coding-welfare/issues/new?template=new-site.yml) and fill in the form
 - Or send a PR: add an entry to `data/sites.json`, run `npm run refresh && npm run build`, then commit
 
-Criteria: **credits are genuinely free**, signup is not an endless chain, and the service exposes a public API that can be probed.
+Criteria: **credits are genuinely free** — paid relays are fine only if they publish a clear signup / trial credit and the page states it is a paid service. Signup is not an endless chain, and the service exposes a public API that can be probed.
 
 ## ⚠️ Disclaimer
 

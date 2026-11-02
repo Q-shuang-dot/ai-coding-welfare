@@ -34,7 +34,7 @@
 | 站点 | 状态 | 首日可得 | 额度构成 | 之后每天 | 兼容协议 | 模型 | 注册 | 邀请码 |
 | :-- | :--: | :--: | :-- | :--: | :--: | :--: | :--: | :--: |
 | **AgentRouter** 🔥 | 🟢 在线 | **$175** | 注册 $100 + 本页邀请 $50 + 首签 $25 | $25/天 | Anthropic + OpenAI | 4 个可查 | <a href="https://agentrouter.org/register?aff=aibw" target="_blank" rel="noopener">点此注册 →</a> | — |
-| **熊猫API** | 🟢 在线 | **200 额度** | 注册 100 额度 + 本页邀请 100 额度 | 无签到 | Anthropic + OpenAI | 151 个可查 | <a href="https://api520.pro/register?aff=3pox" target="_blank" rel="noopener">点此注册 →</a> | — |
+| **熊猫API** 💳 | 🟢 在线 | **200 额度** | 注册 100 额度 + 本页邀请 100 额度 | 无签到 | Anthropic + OpenAI | 151 个可查 | <a href="https://api520.pro/register?aff=3pox" target="_blank" rel="noopener">点此注册 →</a> | — |
 | **DoCode** | 🟢 在线 | **300 站内刀** | 注册 50 站内刀 + 本页邀请 250 站内刀 | 无签到 | Anthropic + OpenAI | 需登录查看 | <a href="https://docode.cc/register?aff=1Qof" target="_blank" rel="noopener">点此注册 →</a> | `1Qof` |
 | **年华 API** | 🟢 在线 | 站内公示 | — | 支持签到 | Anthropic + OpenAI | 149 个可查 | <a href="https://us-3.nianhuaapi.com/sign-up?aff=aonj" target="_blank" rel="noopener">点此注册 →</a> | `aonj` |
 | **肖恩AI** | 🟢 在线 | **≈14000 积分** | 注册 7000 积分 + 本页邀请 5000 积分 + 首签 ≈2000 积分 | ≈2000 积分/天 | Anthropic + OpenAI | 需登录查看 | <a href="https://free.supxh.xin/register?code=MVU8GX" target="_blank" rel="noopener">点此注册 →</a> | `MVU8GX` |
@@ -52,6 +52,8 @@
 > 5 个按美元计价、且还收新用户的站全注册一遍，第一天手上大约有 **$225** 额度可用；熊猫API 另发 200 额度，DoCode 另发 300 站内刀，肖恩AI 另发 ≈14000 积分，Matrix 另发 2600 积分，Long的AI 另发 免费，新疆幻城网安 另发 30000 站内刀，都是各站自己的计价单位、与美元没有公开换算，未计入这个合计。
 >
 > 🟡 有 1 个站点已超过 48 小时没抓到接口数据，其明细为上一次成功抓取的快照；在线状态按注册页实际可访问性判断。
+>
+💳 = 付费中转站：有明确赠送额度，但用完要自己充值、按站内单价计费，别把这里当长期白嫖。
 
 **只想快点用上 Claude Code？** 三步：
 
@@ -1726,7 +1728,7 @@ npm run check     # 校验链接是否还活着
 - 提 [Issue](https://github.com/Q-shuang-dot/ai-coding-welfare/issues/new?template=new-site.yml) 填个表单，我来收录
 - 或者直接 PR：往 `data/sites.json` 加一条，跑 `npm run refresh && npm run build` 后提交
 
-收录标准：**能免费拿到额度**、注册流程不套娃、站点公开接口可探测。
+收录标准：**能免费拿到额度**（付费中转也可以，但必须有明确、公开的赠送 / 试用额度，并在页面上标明它是付费站）、注册流程不套娃、站点公开接口可探测。
 
 ## ⚠️ 免责声明
 

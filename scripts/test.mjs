@@ -1359,4 +1359,14 @@ test('落地页有历史区，归档详情页 noindex 且不给注册入口', ()
   assert.doesNotMatch(page, /old\.test/, '归档页不许再挂过期的注册链接');
 });
 
+test('付费站带 💳 和图例，别把试用额度冒充白嫖', () => {
+  const paid = { ...SITE, paid: true };
+  const live = { generatedAt: iso(0), sites: [{ id: 'demo', online: true, registerOpen: true }] };
+  const md = renderReadme({ meta: META, sites: [paid], live, groups: [], history: HIST });
+  assert.match(md, /\*\*Demo 站\*\*[^|]*💳/, '表里的站名要带付费标记');
+  assert.match(md, /💳 = 付费中转站/, '标记要有图例解释');
+  const page = renderSitePage({ meta: META, site: paid, snap: FIXED_SNAP, live, css: '', history: HIST });
+  assert.match(page, /这是付费中转站/, '详情页要把「用完要充值」说清楚');
+});
+
 console.log(`\n${process.exitCode ? '✘ 有用例失败' : `✔ 全部通过（${passed} 项）`}`);

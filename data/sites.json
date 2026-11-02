@@ -255,7 +255,8 @@
           "Status monitor: https://look.api520.pro (the monitoring site the vendor advertises in a model slot; reachable on 2026-11-02)",
           "Alternate domains: https://api521.pro / https://api522.pro (main sites 2 and 3 in the help doc)"
         ]
-      }
+      },
+      "paid": true
     },
     {
       "id": "docode",

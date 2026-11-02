@@ -89,7 +89,7 @@ function overviewTable(sites, liveById, lang) {
           : ext(t.ctaRegister, s.signupUrl);
     const code = s.inviteCode ? ` \`${s.inviteCode}\` |` : ' — |';
     return (
-      `| **${copy.name}**${s.recommended ? ' 🔥' : ''} | ${state} | ${first} | ${detail} | ${checkin} | ${proto} | ${models} | ${cta} |` +
+      `| **${copy.name}**${s.recommended ? ' 🔥' : ''}${s.paid ? ' 💳' : ''} | ${state} | ${first} | ${detail} | ${checkin} | ${proto} | ${models} | ${cta} |` +
       (hasCode ? code : '')
     );
   });
@@ -348,6 +348,8 @@ export function renderReadme({ meta, sites, live, groups = [], history, lang = D
   // 合计只算美元站：积分与美元没有公开换算，混着加就是编数字（详见 lib/credits.mjs）
   const { count: usdCount, best, total, resetting, others } = usdTotals(plans);
   const codeSites = welfare.filter((s) => s.inviteCode);
+  // 付费中转：有赠送额度所以收，但必须在表里认账，不能靠读者自己点进去才发现要充值
+  const paidSites = welfare.filter((s) => s.paid);
   // 站点名走 en.name 覆盖：多数站名本来就是拉丁字母，中文名（如「年华 API」）得给个英文写法
   const nameOf = (s) => siteCopy(s, lang).name;
   // othersNote 拿的是 creditPlan 的结果，只有 name 字段，回查一次拿到目标语言的站名
@@ -397,6 +399,8 @@ export function renderReadme({ meta, sites, live, groups = [], history, lang = D
     closedSites.length ? t.callouts.closed(closedSites.map((s) => `**${nameOf(s)}**`).join(sep), pages) : null,
     staleCount > 0 ? '>' : null,
     staleCount > 0 ? t.callouts.stale(staleCount) : null,
+    paidSites.length ? '>' : null,
+    paidSites.length ? t.callouts.paid : null,
     '',
     t.quickstart.lead,
     '',

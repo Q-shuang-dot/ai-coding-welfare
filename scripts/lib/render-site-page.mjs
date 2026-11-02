@@ -203,6 +203,7 @@ export function renderSitePage({ meta, site, snap, live, css, history, siblings 
     <p class="crumb"><a href="../../">${esc(meta.title)}</a> › ${esc(site.name)}</p>
     <h1>${esc(site.name)}</h1>
     <p class="sub">${esc(site.subtitle)}</p>
+    ${site.paid ? '<p class="notice">💳 这是付费中转站：赠送额度用完要自己充值，按站内单价计费。</p>' : ''}
     <div class="pills">
       <span class="pill"><span class="dot ${up ? 'up' : 'down'}"></span> ${up ? '在线' : '探测异常'}</span>
       ${shut ? '<span class="pill warn">暂停注册</span>' : ''}
