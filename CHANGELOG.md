@@ -8,6 +8,9 @@ AI 福利站 · Claude Code / Codex 免费额度白嫖导航的自动变动记�
 
 ## 2026-11-02
 
+- 🏷️ 熊猫API 熊猫-X-24-kiro-claude-opus-4.5 价格 $75 入 / $375 出（每 1M） → $24 / 次 <sub>05:48 UTC</sub>
+- 🏷️ 熊猫API 熊猫-X-24-kiro-claude-opus-5.5 价格 $75 入 / $75 出（每 1M） → $24 / 次 <sub>05:48 UTC</sub>
+- 🔴 Long的AI 探测不到了：注册页与公开接口都没响应 <sub>05:48 UTC</sub>
 - 🟢 Long的AI 恢复在线 <sub>04:55 UTC</sub>
 - 🔴 Long的AI 探测不到了：注册页与公开接口都没响应 <sub>03:54 UTC</sub>
 - 💰 AgentRouter 邀请他人的奖励 $50 → $100 <sub>01:31 UTC</sub>

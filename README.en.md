@@ -6,9 +6,9 @@
 
 <p align="center">
   <img src="https://img.shields.io/badge/Tracked%20services-11-blue" alt="Tracked services">
-  <img src="https://img.shields.io/badge/Online-10%2F11-orange" alt="Online">
+  <img src="https://img.shields.io/badge/Online-9%2F11-orange" alt="Online">
   <img src="https://img.shields.io/badge/Best%20first%20day-%24175-success" alt="Best first day">
-  <img src="https://img.shields.io/badge/Data%20updated-2026--11--02%2004.55%20UTC-informational" alt="Data updated">
+  <img src="https://img.shields.io/badge/Data%20updated-2026--11--02%2005.48%20UTC-informational" alt="Data updated">
 </p>
 
 <p align="center">
@@ -49,10 +49,10 @@
 | **JustDoWork** | 🟢 Online | Posted on site | Daily check-in | Anthropic + OpenAI | <a href="https://api.justwoker.icu/register?aff=OIWh" target="_blank" rel="noopener">GitHub sign up →</a> | `OIWh` |
 | **Matrix** | 🟢 Online | **2600 pts** | — | OpenAI-compatible | <a href="https://matrix.mzsjai.com/login?redirect=%2Fapp%2Fgrowth%3FinviteCode%3DMX3CDVGATLJW" target="_blank" rel="noopener">Sign up →</a> | — |
 | **SeekAi** | 🔴 Unreachable | Posted on site | Daily check-in | OpenAI | <a href="https://seekai.cc/sign-up?aff=dDJy" target="_blank" rel="noopener">Sign up →</a> | `dDJy` |
-| **Long's AI** | 🟢 Online | Free | No check-in | Anthropic + OpenAI | <a href="https://aaawinn.xyz/sign-up?aff=ijFL" target="_blank" rel="noopener">GitHub sign up →</a> | `ijFL` |
+| **Long's AI** | 🔴 Unreachable | Free | No check-in | Anthropic + OpenAI | <a href="https://aaawinn.xyz/sign-up?aff=ijFL" target="_blank" rel="noopener">GitHub sign up →</a> | `ijFL` |
 | **Xinjiang Huancheng Security** | 🟢 Online | **30000 site-USD** | Daily check-in | Anthropic + OpenAI | <a href="https://api.hcnsec.cn/sign-up?aff=3J8z" target="_blank" rel="noopener">Sign up →</a> | `3J8z` |
 
-> "First day" = signup bonus + invite bonus from this page + whatever check-in pays out on day one (services with a daily reset pool count a single day's pool). Models, prices and status are scraped from each service's public API. Last update: `2026-11-02 04:55 UTC`.
+> "First day" = signup bonus + invite bonus from this page + whatever check-in pays out on day one (services with a daily reset pool count a single day's pool). Models, prices and status are scraped from each service's public API. Last update: `2026-11-02 05:48 UTC`.
 >
 > Services with a code in the "Invite code" column (DoCode `1Qof`, NianHua API `aonj`, ShawnAI `MVU8GX`, api456.me `zmza`, JustDoWork `OIWh`, SeekAi `dDJy`, Long's AI `ijFL`, Xinjiang Huancheng Security `3J8z`) require **typing the code yourself** in the signup form. Miss it and you only get the base signup bonus — it cannot be added afterwards. A dash means the invite bonus travels inside the link and needs no typing.
 >
@@ -244,7 +244,7 @@ curl -s https://agentrouter.org/v1/chat/completions \
 - Daily check-in: ❌
 - Open signups: ✅
 - Login methods: Email + password
-- API latency: 968 ms
+- API latency: 878 ms
 
 **Available models**
 
@@ -304,12 +304,12 @@ curl -s https://agentrouter.org/v1/chat/completions \
 | `熊猫-X-10-官逆-gemini-3.1-pro` | per call | **10 credit / call** | — | openai |
 | `熊猫-X-10-官逆-gemini-3.1-pro-联网` | per call | **10 credit / call** | — | openai |
 | `熊猫-x-11-gemini-3.1-pro-anti` | per call | **11 credit / call** | — | openai |
-| `熊猫-X-24-kiro-claude-opus-4.5` | 37.5 | 75 credit | 375 credit | openai |
+| `熊猫-X-24-kiro-claude-opus-4.5` | per call | **24 credit / call** | — | openai |
 | `熊猫-X-24-kiro-claude-opus-4.6` | per call | **24 credit / call** | — | openai |
 | `熊猫-X-24-kiro-claude-opus-4.7` | per call | **24 credit / call** | — | openai |
 | `熊猫-X-24-kiro-claude-opus-4.8` | per call | **24 credit / call** | — | openai |
 | `熊猫-X-24-kiro-claude-opus-5` | per call | **24 credit / call** | — | openai |
-| `熊猫-X-24-kiro-claude-opus-5.5` | 37.5 | 75 credit | 75 credit | openai |
+| `熊猫-X-24-kiro-claude-opus-5.5` | per call | **24 credit / call** | — | openai |
 | `熊猫-X-27-kiro-claude-opus-4.5` | per call | **27 credit / call** | — | openai |
 | `熊猫-X-27-kiro-claude-opus-4.6` | per call | **27 credit / call** | — | openai |
 | `熊猫-X-27-kiro-claude-opus-4.7` | per call | **27 credit / call** | — | openai |
@@ -528,7 +528,7 @@ curl -s https://api520.pro/v1/chat/completions \
 - Daily check-in: ❌
 - Open signups: ✅
 - Login methods: Email + password
-- API latency: 1033 ms
+- API latency: 1066 ms
 
 **Mirrors / alternate entry points**
 
@@ -646,7 +646,7 @@ curl -s https://docode.cc/v1/chat/completions \
 - Daily check-in: ✅
 - Open signups: ✅
 - Login methods: Email + password
-- API latency: 1359 ms
+- API latency: 1389 ms
 
 **Available models**
 
@@ -925,7 +925,7 @@ curl -s https://us-3.nianhuaapi.com/v1/chat/completions \
 
 **Live data** (scraped from public APIs)
 
-- API latency: 1377 ms
+- API latency: 1618 ms
 
 > On 2026-09-20 the public pricing page returned 191 models including stepfun, deepseek-v4.1-flash, gpt-5.5, gemini-2.5-flash, claude-sonnet-4-6 and kimi-k2.5. Note that the response mixes many free and paid entries; availability and ratios defer to the console.
 
@@ -1039,7 +1039,7 @@ curl -s https://free.supxh.xin/v1/chat/completions \
 - Daily check-in: ✅
 - Open signups: ✅
 - Login methods: Email + password
-- API latency: 1326 ms
+- API latency: 1779 ms
 
 > The model list and prices are only visible in the console after login (/api/pricing requires login anonymously), so this page does not list a model table.
 
@@ -1127,7 +1127,7 @@ curl -s https://api456.me/v1/chat/completions \
 - Open signups: ✅ (The service turned off email/password signup, so you have to create the account with GitHub (a common anti-abuse measure).)
 - Login methods: GitHub / Email + password
 - GitHub account must be at least **365 days** old
-- API latency: 19675 ms
+- API latency: 19440 ms
 
 > The pricing page requires login (/api/pricing returns 401 anonymously; panel pricing.requireAuth = true), so this page does not list a model table. Testing shows the main lineup is the gpt-5.6 family (gpt-5.6-luna / sol / terra), and every request carries roughly 2000 tokens of a fixed hidden prompt. Confirm the full list and ratios on the console's "Pricing" page.
 
@@ -1237,7 +1237,7 @@ curl -s https://api.justwoker.icu/v1/chat/completions \
 
 **Live data** (scraped from public APIs)
 
-- API latency: 2300 ms
+- API latency: 2540 ms
 
 > The model list and prices are visible in the console's "Model list" after login (priced per million tokens, filterable by vendor / context window). The site has no public model or pricing API, so this page makes no claims.
 
@@ -1305,7 +1305,7 @@ Console: <https://matrix.mzsjai.com/app/apikey>
 - Daily check-in: ✅
 - Open signups: ✅
 - Login methods: GitHub / Telegram / Email + password
-- API latency: 18 ms
+- API latency: 29 ms
 
 **Mirrors / alternate entry points**
 
@@ -1384,7 +1384,7 @@ curl -s https://seekai.cc/v1/chat/completions \
 ---
 
 <a id="site-aaawinn"></a>
-<details><summary><b>🟢 Long's AI</b></summary>
+<details><summary><b>🔴 Long's AI</b></summary>
 
 > New API relay · the free-tier group costs nothing, GitHub accounts must be 120 days old, and GPT models go over the Anthropic protocol
 
@@ -1406,7 +1406,7 @@ curl -s https://seekai.cc/v1/chat/completions \
 - Daily check-in: ❌
 - Open signups: ✅ (The service turned off email/password signup, so you have to create the account with GitHub (a common anti-abuse measure).)
 - Login methods: GitHub
-- API latency: 1766 ms
+- API latency: 10492 ms
 
 > The site's model pricing API is not public (/api/pricing returns 401 anonymously; you would need to log into the admin page), and the free-tier group's model sources are published at https://aaawinn.xyz/public-pool. Announcements note that the free-tier group's GPT models only support the Anthropic protocol — the OpenAI protocol has compatibility issues.
 
@@ -1529,7 +1529,7 @@ curl -s https://aaawinn.xyz/v1/chat/completions \
 - Daily check-in: ✅
 - Open signups: ✅
 - Login methods: Passkey / Email + password
-- API latency: 5074 ms
+- API latency: 3081 ms
 
 > The model pricing page requires login (/api/pricing returns 401 anonymously), but the names in the announcements can be copied directly: Qwen3.8-Flash-Next (zero per call), the DeepSeek-V4.1-Flash family (about 2 CNY per call in paid groups; the vision-exp version is open to free users), longcat-2.0 (1 CNY per call), glm-5.3-flash, qwen3.8-27b, the step family, spark-x2.5 and Qwen3.6-35B-A3B. The site also open-sourced SparkMuse-4B and Qing-Sec-20B, both searchable on ModelScope (hcnote/SparkMuse-4B).
 
@@ -1637,7 +1637,7 @@ These services are confirmed down or withdrawn. The names and reasons stay on re
 
 ## 🔔 Credit changes get announced here
 
-CI probes every service every 6 hours and diffs each field against the previous snapshot; 141 samples covering about 40.3 days so far. Credit adjustments, outages and recoveries, models added or removed, and price changes are all recorded automatically:
+CI probes every service every 6 hours and diffs each field against the previous snapshot; 142 samples covering about 40.4 days so far. Credit adjustments, outages and recoveries, models added or removed, and price changes are all recorded automatically:
 
 - Click **Watch → Custom → Releases** at the top of the repo and GitHub emails you when something important changes
 
