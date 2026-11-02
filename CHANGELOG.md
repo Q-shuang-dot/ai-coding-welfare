@@ -6,6 +6,18 @@ AI 福利站 · Claude Code / Codex 免费额度白嫖导航的自动变动记�
 
 > 只记录会影响「值不值得注册」的字段。探测被站点 WAF 拦下时不记在线状态变化，避免机房 IP 被拦被误报成掉线。
 
+## 2026-11-02
+
+- 💰 AgentRouter 邀请他人的奖励 $50 → $100 <sub>01:31 UTC</sub>
+- ➕ AgentRouter 上线模型：claude-opus-5-5、gpt-5.6-sol、gpt-6.1-sol <sub>01:31 UTC</sub>
+- ➖ AgentRouter 下线模型：claude-opus-4-8、claude-opus-5、deepseek-v4-flash <sub>01:31 UTC</sub>
+- 🏷️ AgentRouter gpt-6-astra 价格 $6 入 / $30 出（每 1M） → $8 入 / $40 出（每 1M） <sub>01:31 UTC</sub>
+- 📢 AgentRouter 发了公告：📢 重要通知 claude-opus-5.5 暂时下线，恢复时间另行通知。 gpt-6-astra 取消限量，现已全天候供应，欢迎随时使用。 gpt-6.1sol 不限量低倍率供应，建议优先使用。 📢 Important Notice claude-opus-5.5 is t <sub>01:31 UTC</sub>
+- 📢 AgentRouter 发了公告：### 📢 供应调整公告 / Supply Adjustment Notice 即日起，**claude-opus-5-5** 模型将实行单独限量供应。每日于**北京时间 9:00**（对应 **UTC 1:00**）投放额度，**用完即止**。 Effective immed <sub>01:31 UTC</sub>
+- 📢 AgentRouter 发了公告：【分组调整】 不当使用者（非编程用户或使用不支持客户端）将进入 **probation** 分组，**倍率翻倍**并动态更新，以减少浪费。请珍惜额度。 ✅支持客户端： claude-code⭐, codex⭐, openclaw, pi, opencode, ohmyopenco <sub>01:31 UTC</sub>
+- 🆕 新收录 熊猫API：注册送 100 额度，邀请再加 100 额度 <sub>01:31 UTC</sub>
+- 🗑️ 移除收录 启源星⭐ <sub>01:31 UTC</sub>
+
 ## 2026-11-01
 
 - 🔴 启源星 探测不到了：注册页与公开接口都没响应 <sub>22:02 UTC</sub>

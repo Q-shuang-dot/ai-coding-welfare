@@ -158,15 +158,18 @@ export function diffSnapshots(prevLive, nextLive, sites = []) {
     events.push(...diffSite({ prev: A.get(id), next, site, at }));
   }
 
-  for (const [id] of A) {
+  for (const [id, prev] of A) {
     if (B.has(id)) continue;
+    // 这个 id 已经不在 sites.json 里了，meta 查不到；退到上一版快照自报的站名，
+    // 否则日志里会写出一条「移除收录 chuan」这种没人看得懂的 slug
+    const label = meta.get(id)?.name ?? prev?.systemName ?? id;
     events.push({
       at,
       siteId: id,
-      siteName: meta.get(id)?.name ?? id,
+      siteName: label,
       type: 'site_removed',
       severity: 'major',
-      text: `移除收录 ${meta.get(id)?.name ?? id}`,
+      text: `移除收录 ${label}`,
     });
   }
 

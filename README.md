@@ -6,14 +6,14 @@
 
 <p align="center">
   <img src="https://img.shields.io/badge/%E6%94%B6%E5%BD%95%E7%A6%8F%E5%88%A9%E7%AB%99-11%20%E4%B8%AA-blue" alt="收录福利站">
-  <img src="https://img.shields.io/badge/%E5%9C%A8%E7%BA%BF-9%2F11-orange" alt="在线">
+  <img src="https://img.shields.io/badge/%E5%9C%A8%E7%BA%BF-10%2F11-orange" alt="在线">
   <img src="https://img.shields.io/badge/%E9%A6%96%E6%97%A5%E5%8F%AF%E5%BE%97-%E6%9C%80%E9%AB%98%20%24175-success" alt="首日可得">
-  <img src="https://img.shields.io/badge/%E6%95%B0%E6%8D%AE%E6%9B%B4%E6%96%B0-2026--11--01%2022.02%20UTC-informational" alt="数据更新">
+  <img src="https://img.shields.io/badge/%E6%95%B0%E6%8D%AE%E6%9B%B4%E6%96%B0-2026--11--02%2001.31%20UTC-informational" alt="数据更新">
 </p>
 
 <p align="center">
   <a href="https://agentrouter.org/register?aff=aibw"><b>AgentRouter 注册</b></a> ·
-  <a href="https://chuan.sylu.cc/sign-up?aff=zD17"><b>启源星 注册</b></a> ·
+  <a href="https://api520.pro/register?aff=3pox"><b>熊猫API 注册</b></a> ·
   <a href="https://docode.cc/register?aff=1Qof"><b>DoCode 注册</b></a> ·
   <a href="https://us-3.nianhuaapi.com/sign-up?aff=aonj"><b>年华 API 注册</b></a> ·
   <a href="https://free.supxh.xin/register?code=MVU8GX"><b>肖恩AI 注册</b></a> ·
@@ -34,7 +34,7 @@
 | 站点 | 状态 | 首日可得 | 额度构成 | 之后每天 | 兼容协议 | 模型 | 注册 | 邀请码 |
 | :-- | :--: | :--: | :-- | :--: | :--: | :--: | :--: | :--: |
 | **AgentRouter** 🔥 | 🟢 在线 | **$175** | 注册 $100 + 本页邀请 $50 + 首签 $25 | $25/天 | Anthropic + OpenAI | 4 个可查 | <a href="https://agentrouter.org/register?aff=aibw" target="_blank" rel="noopener">点此注册 →</a> | — |
-| **启源星** | 🔴 异常 | **150 积分** | 注册 150 积分 | 支持签到 | Anthropic + OpenAI | 12 个可查 | <a href="https://chuan.sylu.cc/sign-up?aff=zD17" target="_blank" rel="noopener">GitHub 注册 →</a> | — |
+| **熊猫API** | 🟢 在线 | **200 额度** | 注册 100 额度 + 本页邀请 100 额度 | 无签到 | Anthropic + OpenAI | 151 个可查 | <a href="https://api520.pro/register?aff=3pox" target="_blank" rel="noopener">点此注册 →</a> | — |
 | **DoCode** | 🟢 在线 | **300 站内刀** | 注册 50 站内刀 + 本页邀请 250 站内刀 | 无签到 | Anthropic + OpenAI | 需登录查看 | <a href="https://docode.cc/register?aff=1Qof" target="_blank" rel="noopener">点此注册 →</a> | `1Qof` |
 | **年华 API** | 🟢 在线 | 站内公示 | — | 支持签到 | Anthropic + OpenAI | 149 个可查 | <a href="https://us-3.nianhuaapi.com/sign-up?aff=aonj" target="_blank" rel="noopener">点此注册 →</a> | `aonj` |
 | **肖恩AI** | 🟢 在线 | **≈14000 积分** | 注册 7000 积分 + 本页邀请 5000 积分 + 首签 ≈2000 积分 | ≈2000 积分/天 | Anthropic + OpenAI | 需登录查看 | <a href="https://free.supxh.xin/register?code=MVU8GX" target="_blank" rel="noopener">点此注册 →</a> | `MVU8GX` |
@@ -45,11 +45,11 @@
 | **Long的AI** | 🟢 在线 | 免费 | 白嫖分组免费 | 无签到 | Anthropic + OpenAI | 需登录查看 | <a href="https://aaawinn.xyz/sign-up?aff=ijFL" target="_blank" rel="noopener">GitHub 注册 →</a> | `ijFL` |
 | **新疆幻城网安** | 🟢 在线 | **30000 站内刀** | 注册 30000 站内刀 | 支持签到 | Anthropic + OpenAI | 需登录查看 | <a href="https://api.hcnsec.cn/sign-up?aff=3J8z" target="_blank" rel="noopener">点此注册 →</a> | `3J8z` |
 
-> 「首日可得」= 注册基础额度 + 本页邀请链接额度 + 当天能领的签到额度（每日重置额度池的站点按一天的池子算）；模型、价格、在线状态由脚本抓取站点公开接口自动生成，最后更新：`2026-11-01 22:02 UTC`。
+> 「首日可得」= 注册基础额度 + 本页邀请链接额度 + 当天能领的签到额度（每日重置额度池的站点按一天的池子算）；模型、价格、在线状态由脚本抓取站点公开接口自动生成，最后更新：`2026-11-02 01:31 UTC`。
 >
 > 「邀请码」列写了码的站（DoCode `1Qof`、年华 API `aonj`、肖恩AI `MVU8GX`、api456.me `zmza`、JustDoWork `OIWh`、SeekAi `dDJy`、Long的AI `ijFL`、新疆幻城网安 `3J8z`），注册表单里有一栏要**自己填**，漏填就只拿得到注册基础额度、事后补不上；其余站写 — 是因为邀请额度由链接自带，不用手打。
 >
-> 5 个按美元计价、且还收新用户的站全注册一遍，第一天手上大约有 **$225** 额度可用；启源星 另发 150 积分，DoCode 另发 300 站内刀，肖恩AI 另发 ≈14000 积分，Matrix 另发 2600 积分，Long的AI 另发 免费，新疆幻城网安 另发 30000 站内刀，都是各站自己的计价单位、与美元没有公开换算，未计入这个合计。
+> 5 个按美元计价、且还收新用户的站全注册一遍，第一天手上大约有 **$225** 额度可用；熊猫API 另发 200 额度，DoCode 另发 300 站内刀，肖恩AI 另发 ≈14000 积分，Matrix 另发 2600 积分，Long的AI 另发 免费，新疆幻城网安 另发 30000 站内刀，都是各站自己的计价单位、与美元没有公开换算，未计入这个合计。
 >
 > 🟡 有 1 个站点已超过 48 小时没抓到接口数据，其明细为上一次成功抓取的快照；在线状态按注册页实际可访问性判断。
 
@@ -94,12 +94,11 @@ powershell -ExecutionPolicy Bypass -File scripts/quickstart.ps1
 
 **实时数据**（自动抓取站点公开接口）
 
-- ⚠ 接口已连续 427 小时没抓到新数据，下列信息为 `2026-10-15 03:05 UTC` 的快照
 - 站点名称：**Agent Router**
-- 面板版本：`init-20261009-3d8bb4d7`
-- 邀请他人可得：**$50**
+- 面板版本：`init-20261016-861e4557`
+- 邀请他人可得：**$100**
 - 登录方式：GitHub / LinuxDO
-- 接口延迟：248 ms
+- 接口延迟：964 ms
 
 **镜像 / 备用入口**
 
@@ -109,10 +108,10 @@ powershell -ExecutionPolicy Bypass -File scripts/quickstart.ps1
 
 | 模型 | 倍率 | 输入 / 1M tokens | 输出 / 1M tokens | 协议 |
 | :-- | :--: | :--: | :--: | :--: |
-| `claude-opus-4-8` | 4 | $8 | $40 | anthropic / openai |
-| `claude-opus-5` | 4 | $8 | $40 | anthropic / openai |
-| `deepseek-v4-flash` | 2 | $4 | $12 | openai / anthropic |
-| `gpt-6-astra` | 3 | $6 | $30 | openai |
+| `claude-opus-5-5` | 3 | $6 | $6 | anthropic / openai |
+| `gpt-5.6-sol` | 2 | $4 | $20 | openai |
+| `gpt-6-astra` | 4 | $8 | $40 | openai |
+| `gpt-6.1-sol` | 2 | $4 | $20 | openai |
 
 <sub>倍率 1 ≈ $2 / 1M tokens，输出价 = 倍率 × 补全倍率 × $2；以站内实时价格为准。</sub>
 
@@ -129,7 +128,7 @@ powershell -ExecutionPolicy Bypass -File scripts/quickstart.ps1
 # macOS / Linux
 export ANTHROPIC_BASE_URL=https://agentrouter.org
 export ANTHROPIC_AUTH_TOKEN=你在站点后台创建的 Key
-export ANTHROPIC_MODEL=claude-opus-5
+export ANTHROPIC_MODEL=claude-opus-5-5
 npm install -g @anthropic-ai/claude-code@latest && claude
 ```
 
@@ -137,7 +136,7 @@ npm install -g @anthropic-ai/claude-code@latest && claude
 # Windows PowerShell
 $env:ANTHROPIC_BASE_URL = "https://agentrouter.org"
 $env:ANTHROPIC_AUTH_TOKEN = "你在站点后台创建的 Key"
-$env:ANTHROPIC_MODEL = "claude-opus-5"
+$env:ANTHROPIC_MODEL = "claude-opus-5-5"
 claude
 ```
 
@@ -146,7 +145,7 @@ claude
 <details><summary><b>Codex CLI</b>（OpenAI 兼容，写入 <code>~/.codex/config.toml</code>）</summary>
 
 ```toml
-model = "gpt-6-astra"
+model = "gpt-6.1-sol"
 model_provider = "agentrouter"
 
 [model_providers.agentrouter]
@@ -164,7 +163,7 @@ wire_api = "chat"
 from openai import OpenAI
 
 client = OpenAI(api_key="你的 Key", base_url="https://agentrouter.org/v1")
-resp = client.chat.completions.create(model="gpt-6-astra", messages=[{"role": "user", "content": "ping"}])
+resp = client.chat.completions.create(model="gpt-6.1-sol", messages=[{"role": "user", "content": "ping"}])
 print(resp.choices[0].message.content)
 ```
 
@@ -177,7 +176,7 @@ print(resp.choices[0].message.content)
 ```bash
 curl -s https://agentrouter.org/v1/chat/completions \
   -H "Authorization: Bearer $KEY" -H "Content-Type: application/json" \
-  -d '{"model":"gpt-6-astra","messages":[{"role":"user","content":"只回复 OK"}]}'
+  -d '{"model":"gpt-6.1-sol","messages":[{"role":"user","content":"只回复 OK"}]}'
 ```
 
 </details>
@@ -202,67 +201,209 @@ curl -s https://agentrouter.org/v1/chat/completions \
 
 <details><summary><b>站点最新公告</b>（自动同步）</summary>
 
-- `2026-08-28` 为保障服务长期运行，Claude 和 GPT 模型已调整为限量供应，每日分批次发放，用完即止。新的投放时间为🕙北京时间10:00和19:00（对应UTC时间02:00和11:00），请大家注意时间变更，避免跑空。🕙 额度用完后会报错“402 Budget pool quota has been exhausted.”，等待下一批或切换至 DeepSeek / GLM 即可继续使用。
-- `2026-07-28` 📢 备用域名正式上线 为进一步提升服务可用性，本站现已推出备用域名：🔗 https://ps.air-outer.com 访问不了原域名的中国大陆用户可使用此域名，备用域名支持 API 接口调用 与 官网访问，与原域名功能完全一致。 原域名 https://agentrouter.org 可继续使用。
-- `2026-07-16` 🎁 官方社区平台汇总 欢迎加入或关注以下官方渠道，获取最新动态与支持： 📱 QQ 群（会定期清人，没进多试几次） · 1群：1054950616 · 2群：1091388133 · 3群：700583832 💬 Discord（有中文交流频道） https://discord.gg/HgekCyHJqB 🐦 X（Twitter） https://x.com/AgentRouter_0
+- `2026-10-24` 📢 重要通知 claude-opus-5.5 暂时下线，恢复时间另行通知。 gpt-6-astra 取消限量，现已全天候供应，欢迎随时使用。 gpt-6.1sol 不限量低倍率供应，建议优先使用。 📢 Important Notice claude-opus-5.5 is temporarily unavailable. Further updates will follow. gpt-6-astra is now unlimite
+- `2026-10-19` ### 📢 供应调整公告 / Supply Adjustment Notice 即日起，**claude-opus-5-5** 模型将实行单独限量供应。每日于**北京时间 9:00**（对应 **UTC 1:00**）投放额度，**用完即止**。 Effective immediately, the **claude-opus-5-5** model will be supplied in limited quantities. Qu
+- `2026-09-18` 【分组调整】 不当使用者（非编程用户或使用不支持客户端）将进入 **probation** 分组，**倍率翻倍**并动态更新，以减少浪费。请珍惜额度。 ✅支持客户端： claude-code⭐, codex⭐, openclaw, pi, opencode, ohmyopencode, kilo-code, roocode, cline, crush, droid, qwencode, hermes, zcode, qoder, kim
 
 </details>
 
 ---
 
-### 🔴 启源星
+### 🟢 熊猫API
 
-> New API 公益站 · 注册送 150 站内积分，签到 + 任务续命，模型只挂 3 个但都是硬货：claude-fable-5.1 与 Grok-4.6
+> New API 付费中转站 · 注册送 100 额度、本页邀请再送 100，151 个模型（Claude Opus 4.6~5 / GPT-6 / Gemini 3.x）按量按次混排
 
-<a href="https://chuan.sylu.cc/sign-up?aff=zD17" target="_blank" rel="noopener"><img src="https://img.shields.io/badge/%E7%AB%8B%E5%8D%B3%E6%B3%A8%E5%86%8C-%E5%90%AF%E6%BA%90%E6%98%9F-brightgreen?style=for-the-badge" alt="注册 启源星"></a>
+<a href="https://api520.pro/register?aff=3pox" target="_blank" rel="noopener"><img src="https://img.shields.io/badge/%E7%AB%8B%E5%8D%B3%E6%B3%A8%E5%86%8C-%E7%86%8A%E7%8C%ABAPI-brightgreen?style=for-the-badge" alt="注册 熊猫API"></a>
 
 **为什么值得注册**
 
-- 注册就送 150 站内积分，不用充值、不用绑卡（积分是站内自定义单位「⭐」：面板 quota_display_type = CUSTOM、符号 ⭐、price = 7.3，站点定价页的「充值」视角把 claude-fable-5.1 从 ⭐3 显示成 ⭐21.9，即 3 × 7.3；本页按积分原样登记，不折算美元、也不并入跨站美元合计）
-- 每天签到 + 站内任务两条路都能继续领积分（面板自报 checkin_enabled / enable_task 都是 true）
-- 模型只上 3 个但都是硬货：claude-fable-5.1（标准模式 ⭐3 / 请求）与 Grok-4.6 / Grok-4.5（各 ⭐1 / 请求），按次计费、不按 tokens 烧额度
-- Anthropic 与 OpenAI 两条原生路由都挂着（匿名探 /v1/messages 与 /v1/chat/completions 都回 New API 的 401 Invalid token，而不是 404），Claude Code 填 Base URL 直连，Codex CLI 走 /v1
-- 面板公开配置里带一键导入的 deeplink：CC Switch、Cherry Studio、DeepChat、Lobe Chat、OpenCat、AionUI、AMA 问天等客户端可以从后台直接把 Key 推过去
-- 注册页同时提供 GitHub 登录和用户名 + 密码表单，登录用密码也行（面板自报 password_login_enabled = true）
+- 注册立得 100 额度，从本页邀请链接进入再得 100，新用户最多一次拿 200 额度（站方 Help 文档原文口径，2026-11-02 核对）
+- 公开定价接口免登录可读：2026-11-02 实测 151 条模型记录 = 52 个按量 + 99 个按次（其中 3 条是站方拿模型位当公告栏的占位条目，真模型约 148 个），Claude Opus 4.5~5 与 sonnet 4.6 / fable-5-1、GPT-6 / 6.1-sol / 5.6、Gemini 3.x、Grok、DeepSeek v4.1、Kimi K2.7、MiniMax、GLM 都在架
+- Anthropic 与 OpenAI 两条原生路由都活着：匿名 POST /v1/messages 与 /v1/chat/completions 回的是 New API 的 401 Invalid token 而不是 404（2026-11-02 实测），Claude Code 填 Base URL 直连、Codex CLI 走 /v1
+- 按次计费的模型把价格写进名字里：kiro Opus 24~27 额度一次、官 key 直连 Opus 280 额度一次、gemini 生图 1 额度一次，单次 1~280 额度不等
+- 面板带一键导入 deeplink：CC Switch、Cherry Studio、AionUI、DeepChat、Lobe Chat、OpenCat、AMA 问天等客户端能从后台直接把 Key 推过去
+- 站方文档把「买卡密 → 兑换码充值 → 建令牌」三步写全了：1 元 220 额度起，10 元 2200、30 元 6900、50 元 1.2 万、100 元 2.5 万
+- 站方文档另列 api521.pro / api522.pro 两个主站域名（本页实测都能打开、面板自报同名），主域名被墙时可以换
 
 **能拿多少额度**
 
-- 注册即送：**150 积分**
-- 首日合计：**150 积分**
+- 注册即送：**100 额度**
+- 从本页邀请链接注册额外：**100 额度**
+- 首日合计：**200 额度**　（注册 100 额度 + 本页邀请 100 额度）
 
 **实时数据**（自动抓取站点公开接口）
 
-- 站点名称：**启源星⭐**
-- 面板版本：`v0.9.0-liminality-20260825`
-- 每日签到：✅
-- 开放注册：✅（站点关掉了邮箱密码注册，得用 GitHub 登录建号（防批量注册的常规做法）。）
-- 登录方式：GitHub / 账号密码
-- 接口延迟：19727 ms
+- 站点名称：**熊猫API**
+- 面板版本：`v1.0.0-rc.21-5555-gd455867c9-dirty`
+- 每日签到：❌
+- 开放注册：✅
+- 登录方式：账号密码
+- 接口延迟：1243 ms
 
 **当前可用模型**
 
 | 模型 | 倍率 | 输入 / 1M tokens | 输出 / 1M tokens | 协议 |
 | :-- | :--: | :--: | :--: | :--: |
-| `Beam-pro` | 按次 | **$1 / 次** | — | openai |
-| `claude-fable-5.1` | 按次 | **$3 / 次** | — | openai |
-| `claude-haiku-4.5` | 按次 | **$2 / 次** | — | openai |
-| `claude-sonnet-4.5` | 按次 | **$1 / 次** | — | openai |
-| `dots-3-note` | 按次 | **$1 / 次** | — | openai |
-| `gpt-flash` | 按次 | **$1 / 次** | — | openai |
-| `Hunyuan3` | 按次 | **$1 / 次** | — | openai |
-| `Longcat-2.5` | 按次 | **$1 / 次** | — | openai |
-| `MiniMax-M3` | 按次 | **$1 / 次** | — | openai |
-| `Qwen3.8-Flash` | 按次 | **$1 / 次** | — | openai |
-| `step-3.7-flash` | 按次 | **$1 / 次** | — | openai |
-| `step-5-preview` | 按次 | **$1 / 次** | — | openai |
+| `按量模型是根据输入输出字数算额度的~要控制字数喔` | 按次 | **4 额度 / 次** | — | openai |
+| `测试` | 0.00209484 | 0.004 额度 | 0.021 额度 | openai |
+| `随时看 look.api520.pro  监控网站  ～所有模型都超稳` | 37.5 | 75 额度 | 75 额度 | openai |
+| `熊猫-10-deepseek-v4-pro` | 按次 | **10 额度 / 次** | — | openai |
+| `熊猫-10-glm-5.3` | 按次 | **10 额度 / 次** | — | openai |
+| `熊猫-13-glm-5.2` | 按次 | **13 额度 / 次** | — | openai |
+| `熊猫-15-gemini-生图image-nano-banana-2` | 按次 | **1 额度 / 次** | — | openai |
+| `熊猫-7-deepsees-v4-flash` | 按次 | **7 额度 / 次** | — | openai |
+| `熊猫-7-ds-v4-flash` | 按次 | **7 额度 / 次** | — | openai |
+| `熊猫-8-deepseek-v4.1-flash` | 按次 | **8 额度 / 次** | — | openai |
+| `熊猫-8-glm-5.1` | 按次 | **8 额度 / 次** | — | openai |
+| `熊猫-8-qwen3.8-max` | 按次 | **8 额度 / 次** | — | openai |
+| `熊猫-按量-顶级特供-官max-claude-fable-5-1` | 0.009 | 0.018 额度 | 0.09 额度 | anthropic / openai |
+| `熊猫-按量-顶级特供-官max-claude-fable-5-神话模型` | 0.009 | 0.018 额度 | 0.09 额度 | anthropic / openai |
+| `熊猫-按量-顶级特供-官max-claude-haiku-4.5` | 0.00075 | 0.002 额度 | 0.008 额度 | anthropic / openai |
+| `熊猫-按量-顶级特供-官max-claude-opus-4.6` | 0.00375 | 0.008 额度 | 0.038 额度 | anthropic / openai |
+| `熊猫-按量-顶级特供-官max-claude-opus-4.6-thinking` | 0.00375 | 0.008 额度 | 0.038 额度 | anthropic / openai |
+| `熊猫-按量-顶级特供-官max-claude-opus-4.7` | 0.00375 | 0.008 额度 | 0.038 额度 | anthropic / openai |
+| `熊猫-按量-顶级特供-官max-claude-opus-4.8` | 0.00375 | 0.008 额度 | 0.038 额度 | anthropic / openai |
+| `熊猫-按量-顶级特供-官max-claude-opus-5` | 0.00375 | 0.008 额度 | 0.038 额度 | anthropic / openai |
+| `熊猫-按量-顶级特供-官max-claude-opus-5.5` | 0.00336 | 0.007 额度 | 0.034 额度 | anthropic / openai |
+| `熊猫-按量-顶级特供-官max-claude-sonnet-4.6` | 0.00225 | 0.005 额度 | 0.023 额度 | anthropic / openai |
+| `熊猫-按量-满血非量化-deepseek-v4-pro` | 0.0004554 | 0.001 额度 | 0.002 额度 | openai |
+| `熊猫-按量-满血非量化-deepseek-v4.1-flash` | 0.000112 | 0 额度 | 0.001 额度 | openai |
+| `熊猫-按量-满血非量化-glm-5.2` | 0.0012144 | 0.002 额度 | 0.009 额度 | openai |
+| `熊猫-按量-满血非量化-kimi-k3` | 0.003036 | 0.006 额度 | 0.03 额度 | openai |
+| `熊猫-按量-特供顶级-官方正向满血-claude-fable-5-神话模型` | 0.009 | 0.018 额度 | 0.09 额度 | anthropic / openai |
+| `熊猫-按量-特供顶级-官方正向满血-claude-haiku-4.5` | 0.00075 | 0.002 额度 | 0.008 额度 | anthropic / openai |
+| `熊猫-按量-特供顶级-官方正向满血-claude-opus-4.6` | 0.00375 | 0.008 额度 | 0.038 额度 | anthropic / openai |
+| `熊猫-按量-特供顶级-官方正向满血-claude-opus-4.6-thinking` | 0.00375 | 0.008 额度 | 0.038 额度 | anthropic / openai |
+| `熊猫-按量-特供顶级-官方正向满血-claude-opus-4.7` | 0.00375 | 0.008 额度 | 0.038 额度 | anthropic / openai |
+| `熊猫-按量-特供顶级-官方正向满血-claude-opus-4.8` | 0.00375 | 0.008 额度 | 0.038 额度 | anthropic / openai |
+| `熊猫-按量-特供顶级-官方正向满血-claude-sonnet-4.6` | 0.00225 | 0.005 额度 | 0.023 额度 | anthropic / openai |
+| `熊猫-按量-特供顶级-官方正向满血-claude-sonnet-4.6-thinking` | 0.00225 | 0.005 额度 | 0.023 额度 | anthropic / openai |
+| `熊猫-按量-gpt-5.4` | 0.00036875 | 0.001 额度 | 0.006 额度 | openai |
+| `熊猫-按量-gpt-5.5` | 0.0006125 | 0.001 额度 | 0.01 额度 | openai |
+| `熊猫-按量-gpt-5.6-terra` | 0.000245 | 0 额度 | 0.003 额度 | openai |
+| `熊猫-按量-gpt-6-astra` | 0.002001 | 0.004 额度 | 0.02 额度 | openai |
+| `熊猫-按量-gpt-6-sol` | 0.0003864 | 0.001 额度 | 0.004 额度 | openai |
+| `熊猫-按量-gpt-6.1-sol` | 0.0003864 | 0.001 额度 | 0.004 额度 | openai |
+| `熊猫-按量-vertex官-gemini-2.5-pro` | 0.0010125 | 0.002 额度 | 0.016 额度 | openai |
+| `熊猫-按量-vertex官-gemini-3.1-pro-preview` | 0.00162 | 0.003 额度 | 0.013 额度 | openai |
+| `熊猫-按量-vertex官-gemini-4-argon` | 0.00162 | 0.003 额度 | 0.016 额度 | openai |
+| `熊猫-顶级-21-vertex逆-gemini-2.5-pro` | 按次 | **21 额度 / 次** | — | openai |
+| `熊猫-顶级-21-vertex逆-gemini-3.1-pro-preview` | 按次 | **21 额度 / 次** | — | openai |
+| `熊猫-顶级-X-25-不截断-claude-sonnet-4.6` | 按次 | **25 额度 / 次** | — | openai |
+| `熊猫-顶级-X-25-不截断-claude-sonnet-4.6-thinking` | 按次 | **25 额度 / 次** | — | openai |
+| `熊猫-官逆-14-gemini-4-pro-argon` | 按次 | **14 额度 / 次** | — | openai |
+| `熊猫-官逆-7-gemini-3.1-pro` | 按次 | **7 额度 / 次** | — | openai |
+| `熊猫-官逆-7-gemini-3.1-pro-thinking` | 按次 | **7 额度 / 次** | — | openai |
+| `熊猫-官逆-7-gemini-3.6-flash` | 按次 | **7 额度 / 次** | — | openai |
+| `熊猫-官逆-7-gemini-3.6-flash-thinking` | 按次 | **7 额度 / 次** | — | openai |
+| `熊猫-官逆-7-gemini-3.7-flash` | 按次 | **7 额度 / 次** | — | openai |
+| `熊猫-官逆-7-gemini-3.7-flash-thinking` | 按次 | **7 额度 / 次** | — | openai |
+| `熊猫-官逆-7-gemini-3.8-flash` | 按次 | **7 额度 / 次** | — | openai |
+| `熊猫-官key质量-88-claude-opus-5.5` | 按次 | **88 额度 / 次** | — | openai |
+| `熊猫-逆向-66-claude-opus-4.6` | 按次 | **66 额度 / 次** | — | openai |
+| `熊猫-特供-7-claude-haiku-4.5-20251001-满血速度快` | 按次 | **7 额度 / 次** | — | openai |
+| `熊猫-特供-按量-满血逆-claude-opus-4-6` | 0.001035 | 0.002 额度 | 0.01 额度 | anthropic / openai |
+| `熊猫-特供-按量-满血逆-claude-opus-4-7` | 0.001035 | 0.002 额度 | 0.01 额度 | anthropic / openai |
+| `熊猫-特供-按量-满血逆-claude-opus-4-8` | 0.001035 | 0.002 额度 | 0.01 额度 | anthropic / openai |
+| `熊猫-特供-按量-满血逆-claude-opus-5.5` | 0.0007728 | 0.002 额度 | 0.008 额度 | anthropic / openai |
+| `熊猫-特供-按量-满血逆-claude-sonnet-4-6` | 0.000621 | 0.001 额度 | 0.006 额度 | anthropic / openai |
+| `熊猫-特供-按量-满血逆-claude-sonnet-4.6` | 0.000531 | 0.001 额度 | 0.005 额度 | anthropic / openai |
+| `熊猫-特供-官key直连-200额度-claude-opus-4.8` | 按次 | **200 额度 / 次** | — | openai |
+| `熊猫-特供-官key直连-280额度-claude-opus-4.6` | 按次 | **280 额度 / 次** | — | openai |
+| `熊猫-特供-官key直连-280额度-claude-opus-4.6-thinking` | 按次 | **280 额度 / 次** | — | openai |
+| `熊猫-特供-官key直连-280额度-claude-opus-4.7` | 按次 | **280 额度 / 次** | — | openai |
+| `熊猫-特供-官key直连-280额度-claude-opus-4.7-thinking` | 按次 | **280 额度 / 次** | — | openai |
+| `熊猫-特供-官key直连-280额度-claude-opus-4.8` | 按次 | **280 额度 / 次** | — | openai |
+| `熊猫-特供-官key直连-280额度-claude-opus-4.8-thinking` | 按次 | **280 额度 / 次** | — | openai |
+| `熊猫-特供-A-55-claude-opus-4.5-thinking` | 按次 | **55 额度 / 次** | — | openai |
+| `熊猫-特供-A-55-claude-opus-4.6` | 按次 | **55 额度 / 次** | — | openai |
+| `熊猫-特供-A-55-claude-opus-4.6-thinking` | 按次 | **55 额度 / 次** | — | openai |
+| `熊猫-特供-X-10-gpt-5.5` | 按次 | **10 额度 / 次** | — | openai |
+| `熊猫-特供-X-19-gpt-5.6-terra` | 按次 | **19 额度 / 次** | — | openai |
+| `熊猫-特供-X-22-gpt-5.6-sol` | 按次 | **22 额度 / 次** | — | openai |
+| `熊猫-限时官key-88-claude-opus-4.6` | 按次 | **88 额度 / 次** | — | openai |
+| `熊猫-限时官key-88-claude-opus-4.7` | 按次 | **88 额度 / 次** | — | openai |
+| `熊猫-限时官key-88-claude-opus-4.8` | 按次 | **88 额度 / 次** | — | openai |
+| `熊猫-限时官key质量-88-claude-opus-5` | 按次 | **88 额度 / 次** | — | openai |
+| `熊猫-A-10-gemini-3.1-pro-preview-1000k` | 按次 | **10 额度 / 次** | — | openai |
+| `熊猫-A-10-grok-4.5` | 按次 | **10 额度 / 次** | — | openai |
+| `熊猫-A-10-grok-4.6` | 按次 | **10 额度 / 次** | — | openai |
+| `熊猫-A-10-grok-4.7` | 按次 | **10 额度 / 次** | — | openai |
+| `熊猫-A-13-MiniMax-M2.7` | 按次 | **13 额度 / 次** | — | openai |
+| `熊猫-A-14-MiniMax-M2.7-highspeed-高速` | 按次 | **14 额度 / 次** | — | openai |
+| `熊猫-A-15-gemini-3.1-pro-满血` | 按次 | **15 额度 / 次** | — | openai |
+| `熊猫-A-15-MiniMax-M3` | 按次 | **15 额度 / 次** | — | openai |
+| `熊猫-A-16-MiniMax-M3-highspeed-高速` | 按次 | **16 额度 / 次** | — | openai |
+| `熊猫-A-18-claude-sonnet-4-6-逆` | 按次 | **18 额度 / 次** | — | openai |
+| `熊猫-A-19-claude-sonnet-4.6` | 按次 | **19 额度 / 次** | — | openai |
+| `熊猫-A-2-gemini-2.5-flash` | 按次 | **2 额度 / 次** | — | openai |
+| `熊猫-A-2-gemini-3.5-flash-lite` | 按次 | **2 额度 / 次** | — | openai |
+| `熊猫-A-27-kimi-k2.7` | 按次 | **27 额度 / 次** | — | openai |
+| `熊猫-A-29-claude-opus-4.6` | 按次 | **29 额度 / 次** | — | openai |
+| `熊猫-A-29-claude-opus-4.7` | 按次 | **29 额度 / 次** | — | openai |
+| `熊猫-A-29-claude-opus-4.8` | 按次 | **29 额度 / 次** | — | openai |
+| `熊猫-A-3-gemini-3-flash-preview` | 按次 | **3 额度 / 次** | — | openai |
+| `熊猫-A-3-gemini-3.1-flash-lite` | 按次 | **3 额度 / 次** | — | openai |
+| `熊猫-A-39-gemini-4-argon-high-反重力ultra` | 按次 | **39 额度 / 次** | — | openai |
+| `熊猫-A-8-kimi-k2.6` | 按次 | **8 额度 / 次** | — | openai |
+| `熊猫-A-9-gemini-3.8-flash-反重力-tob` | 按次 | **9 额度 / 次** | — | openai |
+| `熊猫-A-9-gemini-3.8-flash-search` | 按次 | **9 额度 / 次** | — | openai |
+| `熊猫-aiStudio官-X-20-gemini-3.1-pro-preview` | 按次 | **20 额度 / 次** | — | openai |
+| `熊猫-aiStudio官-X-20-gemini-3.1-pro-preview-联网` | 按次 | **20 额度 / 次** | — | openai |
+| `熊猫-aiStudio官-X-20-gemini-3.1-pro-preview-thinking` | 按次 | **20 额度 / 次** | — | openai |
+| `熊猫-B-10-gemini-3.7-flash` | 按次 | **10 额度 / 次** | — | openai |
+| `熊猫-B-7-gemini-3.6-flash-高质量逆` | 按次 | **7 额度 / 次** | — | openai |
+| `熊猫-gemini-3.8-flash-反重力-稳定名` | 按次 | **9 额度 / 次** | — | openai |
+| `熊猫-K-17-kiro-claude-sonnet-5` | 按次 | **17 额度 / 次** | — | openai |
+| `熊猫-vertex逆-23-gemini-3.1-pro-preview` | 按次 | **23 额度 / 次** | — | openai |
+| `熊猫-vertex逆-49-gemini-4-argon` | 按次 | **49 额度 / 次** | — | openai |
+| `熊猫-W-39-限时官key-claude-sonnet-5` | 按次 | **39 额度 / 次** | — | openai |
+| `熊猫-X-10-官逆-gemini-3.1-pro` | 按次 | **10 额度 / 次** | — | openai |
+| `熊猫-X-10-官逆-gemini-3.1-pro-联网` | 按次 | **10 额度 / 次** | — | openai |
+| `熊猫-X-10-AS正向-gemini-3.6-flash` | 按次 | **10 额度 / 次** | — | openai |
+| `熊猫-x-11-gemini-3.1-pro-anti` | 按次 | **11 额度 / 次** | — | openai |
+| `熊猫-X-24-kiro-claude-opus-4.5` | 37.5 | 75 额度 | 375 额度 | openai |
+| `熊猫-X-24-kiro-claude-opus-4.6` | 按次 | **24 额度 / 次** | — | openai |
+| `熊猫-X-24-kiro-claude-opus-4.7` | 按次 | **24 额度 / 次** | — | openai |
+| `熊猫-X-24-kiro-claude-opus-4.8` | 按次 | **24 额度 / 次** | — | openai |
+| `熊猫-X-24-kiro-claude-opus-5` | 按次 | **24 额度 / 次** | — | openai |
+| `熊猫-X-24-kiro-claude-opus-5.5` | 37.5 | 75 额度 | 75 额度 | openai |
+| `熊猫-X-27-kiro-claude-opus-4.5` | 按次 | **27 额度 / 次** | — | openai |
+| `熊猫-X-27-kiro-claude-opus-4.6` | 按次 | **27 额度 / 次** | — | openai |
+| `熊猫-X-27-kiro-claude-opus-4.7` | 按次 | **27 额度 / 次** | — | openai |
+| `熊猫-X-27-kiro-claude-opus-4.8` | 按次 | **27 额度 / 次** | — | openai |
+| `熊猫-X-27-kiro-claude-opus-5` | 按次 | **27 额度 / 次** | — | openai |
+| `熊猫-X-27-kiro-claude-opus-5.5` | 按次 | **27 额度 / 次** | — | openai |
+| `熊猫-x-29-最强生图-gpt-image-2.5` | 按次 | **29 额度 / 次** | — | openai |
+| `熊猫-X-29-claude-opus-5` | 按次 | **29 额度 / 次** | — | openai |
+| `熊猫特供-按量-SSS-gemini-3.1-pro-preview` | 0.00075 | 0.002 额度 | 0.009 额度 | openai |
+| `熊猫特供-按量-SSS-gemini-3.1-pro-preview-thinking` | 0.00075 | 0.002 额度 | 0.009 额度 | openai |
+| `熊猫特供-按量-SSS-gemini-3.6-flash` | 0.0000711 | 0 额度 | 0.001 额度 | openai |
+| `熊猫特供-按量-SSS-gemini-3.8-flash` | 0.00003555 | 0 额度 | 0 额度 | openai |
+| `熊猫特供-超纯满血-99额度-claude-opus-4.5` | 按次 | **99 额度 / 次** | — | openai |
+| `熊猫特供-超纯满血-99额度-claude-opus-4.5-thinking` | 按次 | **99 额度 / 次** | — | openai |
+| `熊猫特供-超纯满血-99额度-claude-opus-4.6` | 按次 | **99 额度 / 次** | — | openai |
+| `熊猫特供-超纯满血-99额度-claude-opus-4.6-thinking` | 按次 | **99 额度 / 次** | — | openai |
+| `熊猫特供-超纯满血-99额度-claude-opus-4.7` | 按次 | **99 额度 / 次** | — | openai |
+| `熊猫特供-超纯满血-99额度-claude-opus-4.7-thinking` | 按次 | **99 额度 / 次** | — | openai |
+| `熊猫特供-anti-99-claude-opus-4.6` | 按次 | **99 额度 / 次** | — | openai |
+| `熊猫特供-anti-99-claude-opus-4.6-thinking` | 按次 | **99 额度 / 次** | — | openai |
+| `熊猫特供S-按量-gemini-3-flash-preview` | 0.0000675 | 0 额度 | 0.001 额度 | openai |
+| `gpt-5.5` | 0.0006125 | 0.001 额度 | 0.01 额度 | openai |
+| `gpt-5.6-sol` | 0.0005439 | 0.001 额度 | 0.007 额度 | openai |
+| `gpt-5.6-terra` | 0.0002156 | 0 额度 | 0.003 额度 | openai |
+| `gpt-6-astra` | 0.002001 | 0.004 额度 | 0.02 额度 | openai |
+| `gpt-6-sol` | 0.0003864 | 0.001 额度 | 0.004 额度 | openai |
+| `gpt-6.1-sol` | 0.0003864 | 0.001 额度 | 0.004 额度 | openai |
 
-<sub>标「按次」的模型按请求次数计费，与 tokens 用量无关；其余倍率 1 ≈ $2 / 1M tokens。以站内实时价格为准。</sub>
+<sub>标「按次」的模型按请求次数计费，与 tokens 无关；其余按倍率换算，站内以「额度」结算、还要再乘分组倍率。以站内实时价格为准。</sub>
 
 **注册要求**
 
-- 从本页邀请链接进入注册（带 ?aff=zD17），邀请关系与奖励按站点的邀请机制结算
-- 注册要过 Cloudflare Turnstile 人机校验（turnstile_check = true），站内注册接口没有 Turnstile token 直接拒掉（实测返回「Turnstile token 为空」）
-- 面板公开配置里 password_register_enabled = false、email_verification = false、github_oauth = true：注册页确实渲染了用户名 + 密码表单，登记时实测提交仍被 Turnstile 拦下，走 GitHub 更稳
+- 务必从本页邀请链接进入注册（带 ?aff=3pox），被邀请的那 100 额度才会结算
+- 只有邮箱 + 密码一条路：面板里 GitHub / LinuxDO / Telegram / 微信 / OIDC / Passkey 的开关全是关的（github_oauth = false、password_register_enabled = true）
+- 注册要邮箱验证码（email_verification = true），还要过 Cloudflare Turnstile 人机校验（turnstile_check = true）
+- 站方文档提醒「注册邮箱有特殊限制」，常用邮箱被拒时按文档提交售后处理
 
 **接入配置**
 
@@ -270,17 +411,17 @@ curl -s https://agentrouter.org/v1/chat/completions \
 
 ```bash
 # macOS / Linux
-export ANTHROPIC_BASE_URL=https://chuan.sylu.cc
+export ANTHROPIC_BASE_URL=https://api520.pro
 export ANTHROPIC_AUTH_TOKEN=你在站点后台创建的 Key
-export ANTHROPIC_MODEL=claude-fable-5.1
+export ANTHROPIC_MODEL=<登录后台查看可用模型名>
 npm install -g @anthropic-ai/claude-code@latest && claude
 ```
 
 ```powershell
 # Windows PowerShell
-$env:ANTHROPIC_BASE_URL = "https://chuan.sylu.cc"
+$env:ANTHROPIC_BASE_URL = "https://api520.pro"
 $env:ANTHROPIC_AUTH_TOKEN = "你在站点后台创建的 Key"
-$env:ANTHROPIC_MODEL = "claude-fable-5.1"
+$env:ANTHROPIC_MODEL = "<登录后台查看可用模型名>"
 claude
 ```
 
@@ -289,13 +430,13 @@ claude
 <details><summary><b>Codex CLI</b>（OpenAI 兼容，写入 <code>~/.codex/config.toml</code>）</summary>
 
 ```toml
-model = "Qwen3.8-Flash"
-model_provider = "chuan"
+model = "gpt-6.1-sol"
+model_provider = "api520"
 
-[model_providers.chuan]
-name = "启源星"
-base_url = "https://chuan.sylu.cc/v1"
-env_key = "CHUAN_API_KEY"
+[model_providers.api520]
+name = "熊猫API"
+base_url = "https://api520.pro/v1"
+env_key = "API520_API_KEY"
 wire_api = "chat"
 ```
 
@@ -306,51 +447,48 @@ wire_api = "chat"
 ```python
 from openai import OpenAI
 
-client = OpenAI(api_key="你的 Key", base_url="https://chuan.sylu.cc/v1")
-resp = client.chat.completions.create(model="Qwen3.8-Flash", messages=[{"role": "user", "content": "ping"}])
+client = OpenAI(api_key="你的 Key", base_url="https://api520.pro/v1")
+resp = client.chat.completions.create(model="gpt-6.1-sol", messages=[{"role": "user", "content": "ping"}])
 print(resp.choices[0].message.content)
 ```
 
-通用客户端只需填两项：**Base URL** = `https://chuan.sylu.cc/v1`，**API Key** = 站点后台创建的 Key。
+通用客户端只需填两项：**Base URL** = `https://api520.pro/v1`，**API Key** = 站点后台创建的 Key。
 
 </details>
 
 <details><summary><b>连通性自测</b></summary>
 
 ```bash
-curl -s https://chuan.sylu.cc/v1/chat/completions \
+curl -s https://api520.pro/v1/chat/completions \
   -H "Authorization: Bearer $KEY" -H "Content-Type: application/json" \
-  -d '{"model":"Qwen3.8-Flash","messages":[{"role":"user","content":"只回复 OK"}]}'
+  -d '{"model":"gpt-6.1-sol","messages":[{"role":"user","content":"只回复 OK"}]}'
 ```
 
 </details>
 
 **如何继续拿额度**
 
-- 每日签到领积分（面板自报 checkin_enabled = true，登录后台点一下）
-- 站内任务中心也能领积分（enable_task = true）
-- 站方公告提到脚本账号在批量刷「签到余额」倒卖，说明签到确实能稳定产出积分
-- 留意站内公告与 FAQ，不定时会有活动
+- 邀请好友：邀请人与被邀请人各得 100 额度，站方文档写明上不封顶
+- 站内任务中心开着（enable_task = true），具体奖励公开接口拿不到，登录后台看
+- 兑换码充值：控制台 → 钱包管理 → 兑换码充值，卡密从站方淘宝小店买
+- 没有每日签到（面板自报 checkin_enabled = false），想续额度只能靠邀请、任务或买卡密
 
 **⚠️ 使用前必读**
 
-- 站内积分是站内自定义单位：面板 quota_display_type = CUSTOM、符号「⭐」、price = 7.3（站点定价页「充值」视角下 claude-fable-5.1 显示为 ⭐21.9，即 ⭐3 × 7.3），与 hcnsec 是同一种口径，所以本页按积分原样登记、不折算成美元、也不并入跨站美元合计
-- 2026-10-04 站方公告：用户数激增，且出现大量脚本账号刷 GitHub 账号批量领签到余额倒卖，正在逐一排查；期间「部分模型价格将激增」——免费额度随时可能缩水，别把长期白嫖当成承诺
-- 模型池浅得只剩 3 个，且都是按次计费：claude-fable-5.1 每次 3 个积分、Grok 系每次 1 个积分，150 积分粗算也就几十次到一百多次调用；上下架完全看站方
-- 成功率不是满的：站内公示 claude-fable-5.1 88.9%、Grok-4.5 97.1%、Grok-4.6 只有 68.9%，平均延迟 15~32s——Grok-4.6 大约三成请求会失败，别当稳定生产通道
-- 注册页与接口都挂在 Cloudflare 后面，机房 IP 打注册页容易被拦（本页的自动探测也会是这个原因），家用宽带正常
-- 公开状态接口没有暴露注册 / 邀请额度字段（quota_for_new_user、quota_for_invitee 都缺，同批的 hcnsec / DoCode / Long的AI 也一样），本页登记的 150 积分是站内公示口径，进后台核对一遍再算账
+- 这是付费中转站，不是公益站：200 额度按站方公示的 1 元 ≈ 220 额度折算约 ¥0.9，按按次价目最多跑 1 次官 key 直连 Opus（280 额度 / 次）或 8 次 kiro Opus（24~27 额度 / 次），只够试吃
+- 站内「额度」是自定义单位（🍚、quota_display_type = CUSTOM、price = 7.3），站方没有公开额度与美元的换算，本页按额度原样登记、不折算、也不并入跨站美元合计
+- 站点极新：面板 start_time = 2026-10-31，收录时运营不到 3 天，没有历史可用性可查，跑路、改价、改规则的风险自己评估
+- 同名模型有多条渠道（官逆 / 逆向 / 官方正向 / kiro / vertex 逆），站方不公示上游来源，「claude-opus-5」不等于官方直连，重活别全压上去
+- 公开状态接口的 announcements 字段是空的，站方也不开 Telegram / QQ 群，出问题只能看 Help 文档或找淘宝店客服
+- 注册页、API、定价接口都在 Cloudflare 后面，机房 IP 打注册页可能被 403 拦（本页自动探测也常因此显示异常），家用宽带正常
+- 按次模型不看 token，但单次 1~280 额度；按量模型的实际扣费 = 倍率 × 分组倍率，以控制台实时价格为准
 
 **官方渠道**
 
-- 站点: https://chuan.sylu.cc
-- 公告: https://chuan.sylu.cc/api/status（公开接口 announcements 字段）
-
-<details><summary><b>站点最新公告</b>（自动同步）</summary>
-
-- `2026-10-04` 非常抱歉,由于最近用户数量激增,并且出现大量脚本账号（刷取大量github账号批量获取签到余额用于商业倒卖）,我们正在逐一排查,且由于公益性质,我们无力承担高昂成本,在此期间,部分模型价格将激增,请谅解😐
-
-</details>
+- 文档: https://help.api521.pro
+- 购买: https://s.tb.cn/c.0x5qxf（站方文档公示的淘宝小店「熊猫ai的小店2店」）
+- 监控: https://look.api520.pro（站方在模型位里公示的监控站，2026-11-02 实测可打开）
+- 备用域名: https://api521.pro / https://api522.pro（站方文档标注主站 2 / 主站 3）
 
 ---
 
@@ -381,7 +519,7 @@ curl -s https://chuan.sylu.cc/v1/chat/completions \
 - 每日签到：❌
 - 开放注册：✅
 - 登录方式：账号密码
-- 接口延迟：632 ms
+- 接口延迟：821 ms
 
 **镜像 / 备用入口**
 
@@ -505,7 +643,7 @@ curl -s https://docode.cc/v1/chat/completions \
 - 每日签到：✅
 - 开放注册：✅
 - 登录方式：账号密码
-- 接口延迟：914 ms
+- 接口延迟：904 ms
 
 **当前可用模型**
 
@@ -789,7 +927,7 @@ curl -s https://us-3.nianhuaapi.com/v1/chat/completions \
 
 **实时数据**（自动抓取站点公开接口）
 
-- 接口延迟：940 ms
+- 接口延迟：1050 ms
 
 > 2026-09-20 公开定价页返回 191 个模型，含 stepfun、deepseek-v4.1-flash、gpt-5.5、gemini-2.5-flash、claude-sonnet-4-6、kimi-k2.5 等。注意返回里同时混有大量免费与付费条目，模型可用性与倍率以控制台为准。
 
@@ -901,7 +1039,7 @@ curl -s https://free.supxh.xin/v1/chat/completions \
 - 每日签到：✅
 - 开放注册：✅
 - 登录方式：账号密码
-- 接口延迟：1139 ms
+- 接口延迟：607 ms
 
 > 模型清单与价格需登录后在控制台查看（/api/pricing 匿名请求需登录），本页不列模型表。
 
@@ -994,7 +1132,7 @@ curl -s https://api456.me/v1/chat/completions \
 - 开放注册：✅（站点关掉了邮箱密码注册，得用 GitHub 登录建号（防批量注册的常规做法）。）
 - 登录方式：GitHub / 账号密码
 - GitHub 账号需满 **365 天**
-- 接口延迟：1088 ms
+- 接口延迟：422 ms
 
 > 模型定价页需要登录（/api/pricing 匿名请求返回 401，面板 pricing.requireAuth = true），本页不列模型表。实测主力是 gpt-5.6 系（gpt-5.6-luna / sol / terra），每次请求会带约 2000 tokens 的固定隐藏提示词；完整清单与倍率请登录控制台「定价」页确认。
 
@@ -1101,7 +1239,7 @@ curl -s https://api.justwoker.icu/v1/chat/completions \
 
 **实时数据**（自动抓取站点公开接口）
 
-- 接口延迟：2152 ms
+- 接口延迟：266 ms
 
 > 模型清单与价格需登录后在控制台「模型列表」查看（按每百万 Tokens 计价，可按厂商 / 上下文窗口筛选），站点没有公开的模型与定价接口，本页不做承诺。
 
@@ -1160,12 +1298,13 @@ curl -s https://api.justwoker.icu/v1/chat/completions \
 
 **实时数据**（自动抓取站点公开接口）
 
+- ⚠ 接口已连续 51 小时没抓到新数据，下列信息为 `2026-10-30 22:19 UTC` 的快照
 - 站点名称：**SeekAi**
 - 面板版本：`v1.0.0-rc.25`
 - 每日签到：✅
 - 开放注册：✅
 - 登录方式：GitHub / Telegram / 账号密码
-- 接口延迟：50 ms
+- 接口延迟：373 ms
 
 **镜像 / 备用入口**
 
@@ -1264,7 +1403,7 @@ curl -s https://seekai.cc/v1/chat/completions \
 - 每日签到：❌
 - 开放注册：✅（站点关掉了邮箱密码注册，得用 GitHub 登录建号（防批量注册的常规做法）。）
 - 登录方式：GitHub
-- 接口延迟：1639 ms
+- 接口延迟：770 ms
 
 > 站点的模型价格接口不公开（/api/pricing 匿名请求返回 401，要登录管理页才看得到），白嫖分组的模型来源公示在 https://aaawinn.xyz/public-pool；站方公告提到白嫖分组的 GPT 系模型只支持 Anthropic 协议对接，OpenAI 协议有兼容问题。
 
@@ -1393,7 +1532,7 @@ curl -s https://aaawinn.xyz/v1/chat/completions \
 - 每日签到：✅
 - 开放注册：✅
 - 登录方式：Passkey / 账号密码
-- 接口延迟：3520 ms
+- 接口延迟：446 ms
 
 > 模型价格页需要登录（/api/pricing 匿名请求返回 401），不过站内公告里的名字可以直接抄：Qwen3.8-Flash-Next（0 元一次）、DeepSeek-V4.1-Flash 系（付费分组约 2 元一次，vision-exp 版本免费用户可用）、longcat-2.0（一次 1 元）、glm-5.3-flash、qwen3.8-27b、step 系、spark-x2.5、Qwen3.6-35B-A3B，站方还开源了 SparkMuse-4B 与 Qing-Sec-20B，均可在 ModelScope 搜到（hcnote/SparkMuse-4B）。
 
@@ -1499,18 +1638,18 @@ curl -s https://api.hcnsec.cn/v1/chat/completions \
 
 ## 🔔 额度变了，这里会通知你
 
-CI 每 6 小时抓一次各站接口，与上一次快照逐字段比对，目前已攒下 153 个样本、覆盖约 40.6 天。额度调整、掉线与恢复、模型上下线、价格变动都会自动记一条：
+CI 每 6 小时抓一次各站接口，与上一次快照逐字段比对，目前已攒下 154 个样本、覆盖约 40.7 天。额度调整、掉线与恢复、模型上下线、价格变动都会自动记一条：
 
 - 点仓库右上角 **Watch → Custom → Releases**：有重要变动时 GitHub 直接发邮件
 
 最近几条：
 
-- `2026-11-01` 🔴 启源星 探测不到了：注册页与公开接口都没响应
-- `2026-10-31` 📢 api456.me 发了公告：**安全提醒**：我们对一批长期未使用的密钥做了安全更换，旧密钥已失效。如果你的程序提示密钥无效，登录控制台，到令牌页面复制新密钥替换即可，余额不受影响。
-- `2026-10-31` ➕ 启源星 上线模型：Beam-pro、MiniMax-M3、Qwen3.8-Flash、step-5-preview
-- `2026-10-31` 🔴 SeekAi 探测不到了：注册页与公开接口都没响应
-- `2026-10-30` 📢 新疆幻城网安 发了公告：我在用 LongCat AI 开放平台，体验LongCat最新模型，编程、推理、Agent 工具调用能力持续进化！通过我的链接完成实名认证，你我各得 1000 万 Tokens（叠加平台新人礼包最高可得 2000 万）；首购下单即可返实付金额 5%！立即体验： https://l
-- `2026-10-29` 📢 新疆幻城网安 发了公告：本站已将本站同款修改过的网站源码进行开源，包括智能路由算法，风控系统，实名系统，日志记录系统等，欢迎给星星 https://github.com/yangqi1309134997-coder/new-api-hcnsec
+- `2026-11-02` 💰 AgentRouter 邀请他人的奖励 $50 → $100
+- `2026-11-02` ➕ AgentRouter 上线模型：claude-opus-5-5、gpt-5.6-sol、gpt-6.1-sol
+- `2026-11-02` ➖ AgentRouter 下线模型：claude-opus-4-8、claude-opus-5、deepseek-v4-flash
+- `2026-11-02` 🏷️ AgentRouter gpt-6-astra 价格 $6 入 / $30 出（每 1M） → $8 入 / $40 出（每 1M）
+- `2026-11-02` 📢 AgentRouter 发了公告：📢 重要通知 claude-opus-5.5 暂时下线，恢复时间另行通知。 gpt-6-astra 取消限量，现已全天候供应，欢迎随时使用。 gpt-6.1sol 不限量低倍率供应，建议优先使用。 📢 Important Notice claude-opus-5.5 is t
+- `2026-11-02` 📢 AgentRouter 发了公告：### 📢 供应调整公告 / Supply Adjustment Notice 即日起，**claude-opus-5-5** 模型将实行单独限量供应。每日于**北京时间 9:00**（对应 **UTC 1:00**）投放额度，**用完即止**。 Effective immed
 
 完整记录见 [CHANGELOG.md](CHANGELOG.md)。
 

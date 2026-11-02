@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-11-01T22:02:29.230Z",
+  "generatedAt": "2026-11-02T01:31:15.627Z",
   "sites": [
     {
       "id": "agentrouter",
-      "checkedAt": "2026-11-01T22:01:31.339Z",
-      "apiOk": false,
-      "pricingOk": false,
-      "latencyMs": 248,
-      "error": "invalid json",
+      "checkedAt": "2026-11-02T01:31:10.459Z",
+      "apiOk": true,
+      "pricingOk": true,
+      "latencyMs": 964,
+      "error": null,
       "systemName": "Agent Router",
-      "version": "init-20261009-3d8bb4d7",
+      "version": "init-20261016-861e4557",
       "registerOpen": null,
       "passwordRegister": null,
       "checkinEnabled": null,
@@ -20,50 +20,47 @@
       "githubMinAccountAgeDays": null,
       "quotaPerUnit": 500000,
       "inviteeBonusUsd": 50,
-      "inviterBonusUsd": 50,
+      "inviterBonusUsd": 100,
       "topupEnabled": false,
       "services": [],
       "announcements": [
         {
+          "id": 19,
+          "date": "2026-10-24",
+          "text": "📢 重要通知 claude-opus-5.5 暂时下线，恢复时间另行通知。 gpt-6-astra 取消限量，现已全天候供应，欢迎随时使用。 gpt-6.1sol 不限量低倍率供应，建议优先使用。 📢 Important Notice claude-opus-5.5 is temporarily unavailable. Further updates will follow. gpt-6-astra is now unlimite"
+        },
+        {
+          "id": 18,
+          "date": "2026-10-19",
+          "text": "### 📢 供应调整公告 / Supply Adjustment Notice 即日起，**claude-opus-5-5** 模型将实行单独限量供应。每日于**北京时间 9:00**（对应 **UTC 1:00**）投放额度，**用完即止**。 Effective immediately, the **claude-opus-5-5** model will be supplied in limited quantities. Qu"
+        },
+        {
+          "id": 17,
+          "date": "2026-09-18",
+          "text": "【分组调整】 不当使用者（非编程用户或使用不支持客户端）将进入 **probation** 分组，**倍率翻倍**并动态更新，以减少浪费。请珍惜额度。 ✅支持客户端： claude-code⭐, codex⭐, openclaw, pi, opencode, ohmyopencode, kilo-code, roocode, cline, crush, droid, qwencode, hermes, zcode, qoder, kim"
+        },
+        {
           "id": 16,
           "date": "2026-08-28",
-          "text": "为保障服务长期运行，Claude 和 GPT 模型已调整为限量供应，每日分批次发放，用完即止。新的投放时间为🕙北京时间10:00和19:00（对应UTC时间02:00和11:00），请大家注意时间变更，避免跑空。🕙 额度用完后会报错“402 Budget pool quota has been exhausted.”，等待下一批或切换至 DeepSeek / GLM 即可继续使用。"
+          "text": "为保障服务长期运行，Claude 和 GPT 模型已调整为限量供应，每日分批次发放，用完即止。最新的投放时间为🕙北京时间10:00和19:00（对应UTC时间02:00和11:00），请大家注意时间变更，避免跑空。🕙 额度用完后会报错“402 Budget pool quota has been exhausted.”，等待下一批或切换至 DeepSeek即可继续使用。"
         },
         {
           "id": 15,
           "date": "2026-07-28",
           "text": "📢 备用域名正式上线 为进一步提升服务可用性，本站现已推出备用域名：🔗 https://ps.air-outer.com 访问不了原域名的中国大陆用户可使用此域名，备用域名支持 API 接口调用 与 官网访问，与原域名功能完全一致。 原域名 https://agentrouter.org 可继续使用。"
-        },
-        {
-          "id": 14,
-          "date": "2026-07-16",
-          "text": "🎁 官方社区平台汇总 欢迎加入或关注以下官方渠道，获取最新动态与支持： 📱 QQ 群（会定期清人，没进多试几次） · 1群：1054950616 · 2群：1091388133 · 3群：700583832 💬 Discord（有中文交流频道） https://discord.gg/HgekCyHJqB 🐦 X（Twitter） https://x.com/AgentRouter_0"
-        },
-        {
-          "id": 13,
-          "date": "2026-06-30",
-          "text": "📢 不当使用行为封禁说明 为维护服务公平，平台禁止以下不当行为： · 批量注册/获取额度 · 自动化刷量套利 · 转售、共享账号及额度 · 虚假邀请欺诈 · 恶意绕过限制、干扰服务 违规账号将封禁，名单见 Discord 🚫blocked-history 频道。 申诉请联系：agent_router_org@163.com"
-        },
-        {
-          "id": 12,
-          "date": "2026-05-14",
-          "text": "因受到恶意举报影响，近期服务稳定性遇到巨大挑战，导致Claude系列模型大规模停用。 为保障后续提升服务质量、及时同步信息，我们已启用新的官方 Discord，并在新的官方X更新动态。 为避免走失，请大家有序移步： 新的 Discord： 👉 https://discord.gg/aYq5B4RW3 官方 X： 👉 @AgentRouter_0 https://x.com/AgentRouter_0 且用且珍惜"
         }
       ],
       "models": [
         {
-          "name": "claude-opus-4-8",
-          "ratio": 4,
-          "completionRatio": 5,
+          "name": "claude-opus-5-5",
+          "ratio": 3,
+          "completionRatio": 1,
           "fixedPrice": null,
-          "inputPerMTok": 8,
-          "outputPerMTok": 40,
+          "inputPerMTok": 6,
+          "outputPerMTok": 6,
           "groups": [
             "svip",
-            "test",
-            "core",
-            "default",
-            "probation"
+            "test"
           ],
           "protocols": [
             "anthropic",
@@ -71,31 +68,30 @@
           ]
         },
         {
-          "name": "claude-opus-5",
-          "ratio": 4,
+          "name": "gpt-5.6-sol",
+          "ratio": 2,
           "completionRatio": 5,
           "fixedPrice": null,
-          "inputPerMTok": 8,
-          "outputPerMTok": 40,
+          "inputPerMTok": 4,
+          "outputPerMTok": 20,
           "groups": [
+            "core",
             "default",
             "probation",
             "svip",
-            "test",
-            "core"
+            "test"
           ],
           "protocols": [
-            "anthropic",
             "openai"
           ]
         },
         {
-          "name": "deepseek-v4-flash",
-          "ratio": 2,
-          "completionRatio": 3,
+          "name": "gpt-6-astra",
+          "ratio": 4,
+          "completionRatio": 5,
           "fixedPrice": null,
-          "inputPerMTok": 4,
-          "outputPerMTok": 12,
+          "inputPerMTok": 8,
+          "outputPerMTok": 40,
           "groups": [
             "probation",
             "svip",
@@ -104,17 +100,16 @@
             "default"
           ],
           "protocols": [
-            "openai",
-            "anthropic"
+            "openai"
           ]
         },
         {
-          "name": "gpt-6-astra",
-          "ratio": 3,
+          "name": "gpt-6.1-sol",
+          "ratio": 2,
           "completionRatio": 5,
           "fixedPrice": null,
-          "inputPerMTok": 6,
-          "outputPerMTok": 30,
+          "inputPerMTok": 4,
+          "outputPerMTok": 20,
           "groups": [
             "core",
             "default",
@@ -127,78 +122,187 @@
           ]
         }
       ],
-      "modelsSource": "cached",
+      "modelsSource": "public-api",
       "defaults": {
-        "claude": "claude-opus-5",
-        "openai": "gpt-6-astra"
+        "claude": "claude-opus-5-5",
+        "openai": "gpt-6.1-sol"
       },
       "signup": {
         "status": 200,
         "ok": true,
-        "ms": 929,
+        "ms": 911,
         "attempts": 1
       },
       "mirrors": [
         {
           "homeUrl": "https://ps.air-outer.com",
-          "online": false
+          "online": true
         }
       ],
       "probeBlocked": false,
       "online": true,
-      "dataStale": true,
-      "staleFrom": "2026-10-15T03:05:29.281Z",
-      "staleFields": [
-        "systemName",
-        "version",
-        "loginMethods",
-        "quotaPerUnit",
-        "inviteeBonusUsd",
-        "inviterBonusUsd",
-        "topupEnabled",
-        "announcements",
-        "models",
-        "defaults"
-      ]
+      "dataStale": false,
+      "staleFrom": null,
+      "staleFields": []
     },
     {
-      "id": "chuan",
-      "checkedAt": "2026-11-01T22:02:29.228Z",
-      "apiOk": false,
-      "pricingOk": false,
-      "latencyMs": 19727,
-      "error": "HTTP 522",
-      "systemName": "启源星⭐",
-      "version": "v0.9.0-liminality-20260825",
+      "id": "api520",
+      "checkedAt": "2026-11-02T01:31:10.747Z",
+      "apiOk": true,
+      "pricingOk": true,
+      "latencyMs": 1243,
+      "error": null,
+      "systemName": "熊猫API",
+      "version": "v1.0.0-rc.21-5555-gd455867c9-dirty",
       "registerOpen": true,
-      "passwordRegister": false,
-      "checkinEnabled": true,
+      "passwordRegister": true,
+      "checkinEnabled": false,
       "loginMethods": [
-        "GitHub",
         "账号密码"
       ],
       "githubMinAccountAgeDays": null,
-      "quotaPerUnit": 500000,
+      "quotaPerUnit": 1,
       "inviteeBonusUsd": null,
       "inviterBonusUsd": null,
       "topupEnabled": null,
       "services": [],
-      "announcements": [
-        {
-          "id": 1,
-          "date": "2026-10-04",
-          "text": "非常抱歉,由于最近用户数量激增,并且出现大量脚本账号（刷取大量github账号批量获取签到余额用于商业倒卖）,我们正在逐一排查,且由于公益性质,我们无力承担高昂成本,在此期间,部分模型价格将激增,请谅解😐"
-        }
-      ],
+      "announcements": [],
       "models": [
         {
-          "name": "Beam-pro",
+          "name": "按量模型是根据输入输出字数算额度的~要控制字数喔",
+          "ratio": 0,
+          "completionRatio": 0,
+          "fixedPrice": 4,
+          "inputPerMTok": null,
+          "outputPerMTok": null,
+          "groups": [
+            "default",
+            "D渠道",
+            "E渠道",
+            "A渠道",
+            "B渠道",
+            "C渠道"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "测试",
+          "ratio": 0.00209484,
+          "completionRatio": 5,
+          "fixedPrice": null,
+          "inputPerMTok": 0.004,
+          "outputPerMTok": 0.021,
+          "groups": [
+            "default"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "随时看 look.api520.pro  监控网站  ～所有模型都超稳",
+          "ratio": 37.5,
+          "completionRatio": 1,
+          "fixedPrice": null,
+          "inputPerMTok": 75,
+          "outputPerMTok": 75,
+          "groups": [
+            "顶级特供",
+            "A渠道",
+            "C渠道",
+            "default",
+            "D渠道"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "熊猫-10-deepseek-v4-pro",
+          "ratio": 0,
+          "completionRatio": 0,
+          "fixedPrice": 10,
+          "inputPerMTok": null,
+          "outputPerMTok": null,
+          "groups": [
+            "D渠道",
+            "顶级特供",
+            "A渠道",
+            "C渠道",
+            "default"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "熊猫-10-glm-5.3",
+          "ratio": 0,
+          "completionRatio": 0,
+          "fixedPrice": 10,
+          "inputPerMTok": null,
+          "outputPerMTok": null,
+          "groups": [
+            "A渠道",
+            "C渠道",
+            "default",
+            "D渠道",
+            "顶级特供"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "熊猫-13-glm-5.2",
+          "ratio": 0,
+          "completionRatio": 0,
+          "fixedPrice": 13,
+          "inputPerMTok": null,
+          "outputPerMTok": null,
+          "groups": [
+            "A渠道",
+            "C渠道",
+            "default",
+            "D渠道",
+            "顶级特供"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "熊猫-15-gemini-生图image-nano-banana-2",
           "ratio": 0,
           "completionRatio": 0,
           "fixedPrice": 1,
           "inputPerMTok": null,
           "outputPerMTok": null,
           "groups": [
+            "default",
+            "D渠道",
+            "顶级特供",
+            "A渠道",
+            "C渠道"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "熊猫-7-deepsees-v4-flash",
+          "ratio": 0,
+          "completionRatio": 0,
+          "fixedPrice": 7,
+          "inputPerMTok": null,
+          "outputPerMTok": null,
+          "groups": [
+            "D渠道",
+            "顶级特供",
+            "A渠道",
+            "C渠道",
             "default"
           ],
           "protocols": [
@@ -206,12 +310,234 @@
           ]
         },
         {
-          "name": "claude-fable-5.1",
+          "name": "熊猫-7-ds-v4-flash",
           "ratio": 0,
           "completionRatio": 0,
-          "fixedPrice": 3,
+          "fixedPrice": 7,
           "inputPerMTok": null,
           "outputPerMTok": null,
+          "groups": [
+            "A渠道",
+            "C渠道",
+            "default",
+            "D渠道",
+            "顶级特供"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "熊猫-8-deepseek-v4.1-flash",
+          "ratio": 0,
+          "completionRatio": 0,
+          "fixedPrice": 8,
+          "inputPerMTok": null,
+          "outputPerMTok": null,
+          "groups": [
+            "default",
+            "D渠道",
+            "顶级特供",
+            "A渠道",
+            "C渠道"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "熊猫-8-glm-5.1",
+          "ratio": 0,
+          "completionRatio": 0,
+          "fixedPrice": 8,
+          "inputPerMTok": null,
+          "outputPerMTok": null,
+          "groups": [
+            "default",
+            "D渠道",
+            "顶级特供",
+            "A渠道",
+            "C渠道"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "熊猫-8-qwen3.8-max",
+          "ratio": 0,
+          "completionRatio": 0,
+          "fixedPrice": 8,
+          "inputPerMTok": null,
+          "outputPerMTok": null,
+          "groups": [
+            "A渠道",
+            "C渠道",
+            "default",
+            "D渠道",
+            "顶级特供"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "熊猫-按量-顶级特供-官max-claude-fable-5-1",
+          "ratio": 0.009,
+          "completionRatio": 5,
+          "fixedPrice": null,
+          "inputPerMTok": 0.018,
+          "outputPerMTok": 0.09,
+          "groups": [
+            "default"
+          ],
+          "protocols": [
+            "anthropic",
+            "openai"
+          ]
+        },
+        {
+          "name": "熊猫-按量-顶级特供-官max-claude-fable-5-神话模型",
+          "ratio": 0.009,
+          "completionRatio": 5,
+          "fixedPrice": null,
+          "inputPerMTok": 0.018,
+          "outputPerMTok": 0.09,
+          "groups": [
+            "default"
+          ],
+          "protocols": [
+            "anthropic",
+            "openai"
+          ]
+        },
+        {
+          "name": "熊猫-按量-顶级特供-官max-claude-haiku-4.5",
+          "ratio": 0.00075,
+          "completionRatio": 5,
+          "fixedPrice": null,
+          "inputPerMTok": 0.002,
+          "outputPerMTok": 0.008,
+          "groups": [
+            "default"
+          ],
+          "protocols": [
+            "anthropic",
+            "openai"
+          ]
+        },
+        {
+          "name": "熊猫-按量-顶级特供-官max-claude-opus-4.6",
+          "ratio": 0.00375,
+          "completionRatio": 5,
+          "fixedPrice": null,
+          "inputPerMTok": 0.008,
+          "outputPerMTok": 0.038,
+          "groups": [
+            "default"
+          ],
+          "protocols": [
+            "anthropic",
+            "openai"
+          ]
+        },
+        {
+          "name": "熊猫-按量-顶级特供-官max-claude-opus-4.6-thinking",
+          "ratio": 0.00375,
+          "completionRatio": 5,
+          "fixedPrice": null,
+          "inputPerMTok": 0.008,
+          "outputPerMTok": 0.038,
+          "groups": [
+            "default"
+          ],
+          "protocols": [
+            "anthropic",
+            "openai"
+          ]
+        },
+        {
+          "name": "熊猫-按量-顶级特供-官max-claude-opus-4.7",
+          "ratio": 0.00375,
+          "completionRatio": 5,
+          "fixedPrice": null,
+          "inputPerMTok": 0.008,
+          "outputPerMTok": 0.038,
+          "groups": [
+            "default"
+          ],
+          "protocols": [
+            "anthropic",
+            "openai"
+          ]
+        },
+        {
+          "name": "熊猫-按量-顶级特供-官max-claude-opus-4.8",
+          "ratio": 0.00375,
+          "completionRatio": 5,
+          "fixedPrice": null,
+          "inputPerMTok": 0.008,
+          "outputPerMTok": 0.038,
+          "groups": [
+            "default"
+          ],
+          "protocols": [
+            "anthropic",
+            "openai"
+          ]
+        },
+        {
+          "name": "熊猫-按量-顶级特供-官max-claude-opus-5",
+          "ratio": 0.00375,
+          "completionRatio": 5,
+          "fixedPrice": null,
+          "inputPerMTok": 0.008,
+          "outputPerMTok": 0.038,
+          "groups": [
+            "default"
+          ],
+          "protocols": [
+            "anthropic",
+            "openai"
+          ]
+        },
+        {
+          "name": "熊猫-按量-顶级特供-官max-claude-opus-5.5",
+          "ratio": 0.00336,
+          "completionRatio": 5,
+          "fixedPrice": null,
+          "inputPerMTok": 0.007,
+          "outputPerMTok": 0.034,
+          "groups": [
+            "default"
+          ],
+          "protocols": [
+            "anthropic",
+            "openai"
+          ]
+        },
+        {
+          "name": "熊猫-按量-顶级特供-官max-claude-sonnet-4.6",
+          "ratio": 0.00225,
+          "completionRatio": 5,
+          "fixedPrice": null,
+          "inputPerMTok": 0.005,
+          "outputPerMTok": 0.023,
+          "groups": [
+            "default"
+          ],
+          "protocols": [
+            "anthropic",
+            "openai"
+          ]
+        },
+        {
+          "name": "熊猫-按量-满血非量化-deepseek-v4-pro",
+          "ratio": 0.0004554,
+          "completionRatio": 2,
+          "fixedPrice": null,
+          "inputPerMTok": 0.001,
+          "outputPerMTok": 0.002,
           "groups": [
             "default"
           ],
@@ -220,13 +546,1475 @@
           ]
         },
         {
-          "name": "claude-haiku-4.5",
+          "name": "熊猫-按量-满血非量化-deepseek-v4.1-flash",
+          "ratio": 0.000112,
+          "completionRatio": 4,
+          "fixedPrice": null,
+          "inputPerMTok": 0,
+          "outputPerMTok": 0.001,
+          "groups": [
+            "default"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "熊猫-按量-满血非量化-glm-5.2",
+          "ratio": 0.0012144,
+          "completionRatio": 3.5,
+          "fixedPrice": null,
+          "inputPerMTok": 0.002,
+          "outputPerMTok": 0.009,
+          "groups": [
+            "default"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "熊猫-按量-满血非量化-kimi-k3",
+          "ratio": 0.003036,
+          "completionRatio": 5,
+          "fixedPrice": null,
+          "inputPerMTok": 0.006,
+          "outputPerMTok": 0.03,
+          "groups": [
+            "default"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "熊猫-按量-特供顶级-官方正向满血-claude-fable-5-神话模型",
+          "ratio": 0.009,
+          "completionRatio": 5,
+          "fixedPrice": null,
+          "inputPerMTok": 0.018,
+          "outputPerMTok": 0.09,
+          "groups": [
+            "default"
+          ],
+          "protocols": [
+            "anthropic",
+            "openai"
+          ]
+        },
+        {
+          "name": "熊猫-按量-特供顶级-官方正向满血-claude-haiku-4.5",
+          "ratio": 0.00075,
+          "completionRatio": 5,
+          "fixedPrice": null,
+          "inputPerMTok": 0.002,
+          "outputPerMTok": 0.008,
+          "groups": [
+            "default"
+          ],
+          "protocols": [
+            "anthropic",
+            "openai"
+          ]
+        },
+        {
+          "name": "熊猫-按量-特供顶级-官方正向满血-claude-opus-4.6",
+          "ratio": 0.00375,
+          "completionRatio": 5,
+          "fixedPrice": null,
+          "inputPerMTok": 0.008,
+          "outputPerMTok": 0.038,
+          "groups": [
+            "default"
+          ],
+          "protocols": [
+            "anthropic",
+            "openai"
+          ]
+        },
+        {
+          "name": "熊猫-按量-特供顶级-官方正向满血-claude-opus-4.6-thinking",
+          "ratio": 0.00375,
+          "completionRatio": 5,
+          "fixedPrice": null,
+          "inputPerMTok": 0.008,
+          "outputPerMTok": 0.038,
+          "groups": [
+            "default"
+          ],
+          "protocols": [
+            "anthropic",
+            "openai"
+          ]
+        },
+        {
+          "name": "熊猫-按量-特供顶级-官方正向满血-claude-opus-4.7",
+          "ratio": 0.00375,
+          "completionRatio": 5,
+          "fixedPrice": null,
+          "inputPerMTok": 0.008,
+          "outputPerMTok": 0.038,
+          "groups": [
+            "default"
+          ],
+          "protocols": [
+            "anthropic",
+            "openai"
+          ]
+        },
+        {
+          "name": "熊猫-按量-特供顶级-官方正向满血-claude-opus-4.8",
+          "ratio": 0.00375,
+          "completionRatio": 5,
+          "fixedPrice": null,
+          "inputPerMTok": 0.008,
+          "outputPerMTok": 0.038,
+          "groups": [
+            "default"
+          ],
+          "protocols": [
+            "anthropic",
+            "openai"
+          ]
+        },
+        {
+          "name": "熊猫-按量-特供顶级-官方正向满血-claude-sonnet-4.6",
+          "ratio": 0.00225,
+          "completionRatio": 5,
+          "fixedPrice": null,
+          "inputPerMTok": 0.005,
+          "outputPerMTok": 0.023,
+          "groups": [
+            "default"
+          ],
+          "protocols": [
+            "anthropic",
+            "openai"
+          ]
+        },
+        {
+          "name": "熊猫-按量-特供顶级-官方正向满血-claude-sonnet-4.6-thinking",
+          "ratio": 0.00225,
+          "completionRatio": 5,
+          "fixedPrice": null,
+          "inputPerMTok": 0.005,
+          "outputPerMTok": 0.023,
+          "groups": [
+            "default"
+          ],
+          "protocols": [
+            "anthropic",
+            "openai"
+          ]
+        },
+        {
+          "name": "熊猫-按量-gpt-5.4",
+          "ratio": 0.00036875,
+          "completionRatio": 8,
+          "fixedPrice": null,
+          "inputPerMTok": 0.001,
+          "outputPerMTok": 0.006,
+          "groups": [
+            "default"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "熊猫-按量-gpt-5.5",
+          "ratio": 0.0006125,
+          "completionRatio": 8,
+          "fixedPrice": null,
+          "inputPerMTok": 0.001,
+          "outputPerMTok": 0.01,
+          "groups": [
+            "default"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "熊猫-按量-gpt-5.6-terra",
+          "ratio": 0.000245,
+          "completionRatio": 6,
+          "fixedPrice": null,
+          "inputPerMTok": 0,
+          "outputPerMTok": 0.003,
+          "groups": [
+            "default"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "熊猫-按量-gpt-6-astra",
+          "ratio": 0.002001,
+          "completionRatio": 5,
+          "fixedPrice": null,
+          "inputPerMTok": 0.004,
+          "outputPerMTok": 0.02,
+          "groups": [
+            "default"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "熊猫-按量-gpt-6-sol",
+          "ratio": 0.0003864,
+          "completionRatio": 5,
+          "fixedPrice": null,
+          "inputPerMTok": 0.001,
+          "outputPerMTok": 0.004,
+          "groups": [
+            "default"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "熊猫-按量-gpt-6.1-sol",
+          "ratio": 0.0003864,
+          "completionRatio": 5,
+          "fixedPrice": null,
+          "inputPerMTok": 0.001,
+          "outputPerMTok": 0.004,
+          "groups": [
+            "default"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "熊猫-按量-vertex官-gemini-2.5-pro",
+          "ratio": 0.0010125,
+          "completionRatio": 8,
+          "fixedPrice": null,
+          "inputPerMTok": 0.002,
+          "outputPerMTok": 0.016,
+          "groups": [
+            "default"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "熊猫-按量-vertex官-gemini-3.1-pro-preview",
+          "ratio": 0.00162,
+          "completionRatio": 4,
+          "fixedPrice": null,
+          "inputPerMTok": 0.003,
+          "outputPerMTok": 0.013,
+          "groups": [
+            "default"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "熊猫-按量-vertex官-gemini-4-argon",
+          "ratio": 0.00162,
+          "completionRatio": 5,
+          "fixedPrice": null,
+          "inputPerMTok": 0.003,
+          "outputPerMTok": 0.016,
+          "groups": [
+            "default"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "熊猫-顶级-21-vertex逆-gemini-2.5-pro",
+          "ratio": 0,
+          "completionRatio": 0,
+          "fixedPrice": 21,
+          "inputPerMTok": null,
+          "outputPerMTok": null,
+          "groups": [
+            "A渠道",
+            "C渠道",
+            "default",
+            "D渠道",
+            "顶级特供"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "熊猫-顶级-21-vertex逆-gemini-3.1-pro-preview",
+          "ratio": 0,
+          "completionRatio": 0,
+          "fixedPrice": 21,
+          "inputPerMTok": null,
+          "outputPerMTok": null,
+          "groups": [
+            "D渠道",
+            "顶级特供",
+            "A渠道",
+            "C渠道",
+            "default"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "熊猫-顶级-X-25-不截断-claude-sonnet-4.6",
+          "ratio": 0,
+          "completionRatio": 0,
+          "fixedPrice": 25,
+          "inputPerMTok": null,
+          "outputPerMTok": null,
+          "groups": [
+            "C渠道",
+            "default",
+            "D渠道",
+            "顶级特供",
+            "A渠道"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "熊猫-顶级-X-25-不截断-claude-sonnet-4.6-thinking",
+          "ratio": 0,
+          "completionRatio": 0,
+          "fixedPrice": 25,
+          "inputPerMTok": null,
+          "outputPerMTok": null,
+          "groups": [
+            "D渠道",
+            "顶级特供",
+            "A渠道",
+            "C渠道",
+            "default"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "熊猫-官逆-14-gemini-4-pro-argon",
+          "ratio": 0,
+          "completionRatio": 0,
+          "fixedPrice": 14,
+          "inputPerMTok": null,
+          "outputPerMTok": null,
+          "groups": [
+            "D渠道",
+            "顶级特供",
+            "A渠道",
+            "C渠道",
+            "default"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "熊猫-官逆-7-gemini-3.1-pro",
+          "ratio": 0,
+          "completionRatio": 0,
+          "fixedPrice": 7,
+          "inputPerMTok": null,
+          "outputPerMTok": null,
+          "groups": [
+            "A渠道",
+            "C渠道",
+            "default",
+            "D渠道",
+            "顶级特供"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "熊猫-官逆-7-gemini-3.1-pro-thinking",
+          "ratio": 0,
+          "completionRatio": 0,
+          "fixedPrice": 7,
+          "inputPerMTok": null,
+          "outputPerMTok": null,
+          "groups": [
+            "A渠道",
+            "C渠道",
+            "default",
+            "D渠道",
+            "顶级特供"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "熊猫-官逆-7-gemini-3.6-flash",
+          "ratio": 0,
+          "completionRatio": 0,
+          "fixedPrice": 7,
+          "inputPerMTok": null,
+          "outputPerMTok": null,
+          "groups": [
+            "A渠道",
+            "C渠道",
+            "default",
+            "D渠道",
+            "顶级特供"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "熊猫-官逆-7-gemini-3.6-flash-thinking",
+          "ratio": 0,
+          "completionRatio": 0,
+          "fixedPrice": 7,
+          "inputPerMTok": null,
+          "outputPerMTok": null,
+          "groups": [
+            "D渠道",
+            "顶级特供",
+            "A渠道",
+            "C渠道",
+            "default"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "熊猫-官逆-7-gemini-3.7-flash",
+          "ratio": 0,
+          "completionRatio": 0,
+          "fixedPrice": 7,
+          "inputPerMTok": null,
+          "outputPerMTok": null,
+          "groups": [
+            "C渠道",
+            "default",
+            "D渠道",
+            "顶级特供",
+            "A渠道"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "熊猫-官逆-7-gemini-3.7-flash-thinking",
+          "ratio": 0,
+          "completionRatio": 0,
+          "fixedPrice": 7,
+          "inputPerMTok": null,
+          "outputPerMTok": null,
+          "groups": [
+            "A渠道",
+            "C渠道",
+            "default",
+            "D渠道",
+            "顶级特供"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "熊猫-官逆-7-gemini-3.8-flash",
+          "ratio": 0,
+          "completionRatio": 0,
+          "fixedPrice": 7,
+          "inputPerMTok": null,
+          "outputPerMTok": null,
+          "groups": [
+            "C渠道",
+            "default",
+            "D渠道",
+            "顶级特供",
+            "A渠道"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "熊猫-官key质量-88-claude-opus-5.5",
+          "ratio": 0,
+          "completionRatio": 0,
+          "fixedPrice": 88,
+          "inputPerMTok": null,
+          "outputPerMTok": null,
+          "groups": [
+            "顶级特供",
+            "A渠道",
+            "C渠道",
+            "default",
+            "D渠道"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "熊猫-逆向-66-claude-opus-4.6",
+          "ratio": 0,
+          "completionRatio": 0,
+          "fixedPrice": 66,
+          "inputPerMTok": null,
+          "outputPerMTok": null,
+          "groups": [
+            "C渠道",
+            "default",
+            "D渠道",
+            "顶级特供",
+            "A渠道"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "熊猫-特供-7-claude-haiku-4.5-20251001-满血速度快",
+          "ratio": 0,
+          "completionRatio": 0,
+          "fixedPrice": 7,
+          "inputPerMTok": null,
+          "outputPerMTok": null,
+          "groups": [
+            "D渠道",
+            "顶级特供",
+            "A渠道",
+            "C渠道",
+            "default"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "熊猫-特供-按量-满血逆-claude-opus-4-6",
+          "ratio": 0.001035,
+          "completionRatio": 5,
+          "fixedPrice": null,
+          "inputPerMTok": 0.002,
+          "outputPerMTok": 0.01,
+          "groups": [
+            "default"
+          ],
+          "protocols": [
+            "anthropic",
+            "openai"
+          ]
+        },
+        {
+          "name": "熊猫-特供-按量-满血逆-claude-opus-4-7",
+          "ratio": 0.001035,
+          "completionRatio": 5,
+          "fixedPrice": null,
+          "inputPerMTok": 0.002,
+          "outputPerMTok": 0.01,
+          "groups": [
+            "default"
+          ],
+          "protocols": [
+            "anthropic",
+            "openai"
+          ]
+        },
+        {
+          "name": "熊猫-特供-按量-满血逆-claude-opus-4-8",
+          "ratio": 0.001035,
+          "completionRatio": 5,
+          "fixedPrice": null,
+          "inputPerMTok": 0.002,
+          "outputPerMTok": 0.01,
+          "groups": [
+            "default"
+          ],
+          "protocols": [
+            "anthropic",
+            "openai"
+          ]
+        },
+        {
+          "name": "熊猫-特供-按量-满血逆-claude-opus-5.5",
+          "ratio": 0.0007728,
+          "completionRatio": 5,
+          "fixedPrice": null,
+          "inputPerMTok": 0.002,
+          "outputPerMTok": 0.008,
+          "groups": [
+            "default"
+          ],
+          "protocols": [
+            "anthropic",
+            "openai"
+          ]
+        },
+        {
+          "name": "熊猫-特供-按量-满血逆-claude-sonnet-4-6",
+          "ratio": 0.000621,
+          "completionRatio": 5,
+          "fixedPrice": null,
+          "inputPerMTok": 0.001,
+          "outputPerMTok": 0.006,
+          "groups": [
+            "default"
+          ],
+          "protocols": [
+            "anthropic",
+            "openai"
+          ]
+        },
+        {
+          "name": "熊猫-特供-按量-满血逆-claude-sonnet-4.6",
+          "ratio": 0.000531,
+          "completionRatio": 5,
+          "fixedPrice": null,
+          "inputPerMTok": 0.001,
+          "outputPerMTok": 0.005,
+          "groups": [
+            "default"
+          ],
+          "protocols": [
+            "anthropic",
+            "openai"
+          ]
+        },
+        {
+          "name": "熊猫-特供-官key直连-200额度-claude-opus-4.8",
+          "ratio": 0,
+          "completionRatio": 0,
+          "fixedPrice": 200,
+          "inputPerMTok": null,
+          "outputPerMTok": null,
+          "groups": [
+            "A渠道",
+            "C渠道",
+            "default",
+            "D渠道",
+            "顶级特供"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "熊猫-特供-官key直连-280额度-claude-opus-4.6",
+          "ratio": 0,
+          "completionRatio": 0,
+          "fixedPrice": 280,
+          "inputPerMTok": null,
+          "outputPerMTok": null,
+          "groups": [
+            "C渠道",
+            "default",
+            "D渠道",
+            "顶级特供",
+            "A渠道"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "熊猫-特供-官key直连-280额度-claude-opus-4.6-thinking",
+          "ratio": 0,
+          "completionRatio": 0,
+          "fixedPrice": 280,
+          "inputPerMTok": null,
+          "outputPerMTok": null,
+          "groups": [
+            "default",
+            "D渠道",
+            "顶级特供",
+            "A渠道",
+            "C渠道"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "熊猫-特供-官key直连-280额度-claude-opus-4.7",
+          "ratio": 0,
+          "completionRatio": 0,
+          "fixedPrice": 280,
+          "inputPerMTok": null,
+          "outputPerMTok": null,
+          "groups": [
+            "D渠道",
+            "顶级特供",
+            "A渠道",
+            "C渠道",
+            "default"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "熊猫-特供-官key直连-280额度-claude-opus-4.7-thinking",
+          "ratio": 0,
+          "completionRatio": 0,
+          "fixedPrice": 280,
+          "inputPerMTok": null,
+          "outputPerMTok": null,
+          "groups": [
+            "A渠道",
+            "C渠道",
+            "default",
+            "D渠道",
+            "顶级特供"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "熊猫-特供-官key直连-280额度-claude-opus-4.8",
+          "ratio": 0,
+          "completionRatio": 0,
+          "fixedPrice": 280,
+          "inputPerMTok": null,
+          "outputPerMTok": null,
+          "groups": [
+            "C渠道",
+            "default",
+            "D渠道",
+            "顶级特供",
+            "A渠道"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "熊猫-特供-官key直连-280额度-claude-opus-4.8-thinking",
+          "ratio": 0,
+          "completionRatio": 0,
+          "fixedPrice": 280,
+          "inputPerMTok": null,
+          "outputPerMTok": null,
+          "groups": [
+            "A渠道",
+            "C渠道",
+            "default",
+            "D渠道",
+            "顶级特供"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "熊猫-特供-A-55-claude-opus-4.5-thinking",
+          "ratio": 0,
+          "completionRatio": 0,
+          "fixedPrice": 55,
+          "inputPerMTok": null,
+          "outputPerMTok": null,
+          "groups": [
+            "D渠道",
+            "顶级特供",
+            "A渠道",
+            "C渠道",
+            "default"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "熊猫-特供-A-55-claude-opus-4.6",
+          "ratio": 0,
+          "completionRatio": 0,
+          "fixedPrice": 55,
+          "inputPerMTok": null,
+          "outputPerMTok": null,
+          "groups": [
+            "default",
+            "D渠道",
+            "顶级特供",
+            "A渠道",
+            "C渠道"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "熊猫-特供-A-55-claude-opus-4.6-thinking",
+          "ratio": 0,
+          "completionRatio": 0,
+          "fixedPrice": 55,
+          "inputPerMTok": null,
+          "outputPerMTok": null,
+          "groups": [
+            "D渠道",
+            "顶级特供",
+            "A渠道",
+            "C渠道",
+            "default"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "熊猫-特供-X-10-gpt-5.5",
+          "ratio": 0,
+          "completionRatio": 0,
+          "fixedPrice": 10,
+          "inputPerMTok": null,
+          "outputPerMTok": null,
+          "groups": [
+            "顶级特供",
+            "A渠道",
+            "C渠道",
+            "default",
+            "D渠道"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "熊猫-特供-X-19-gpt-5.6-terra",
+          "ratio": 0,
+          "completionRatio": 0,
+          "fixedPrice": 19,
+          "inputPerMTok": null,
+          "outputPerMTok": null,
+          "groups": [
+            "A渠道",
+            "C渠道",
+            "default",
+            "D渠道",
+            "顶级特供"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "熊猫-特供-X-22-gpt-5.6-sol",
+          "ratio": 0,
+          "completionRatio": 0,
+          "fixedPrice": 22,
+          "inputPerMTok": null,
+          "outputPerMTok": null,
+          "groups": [
+            "A渠道",
+            "C渠道",
+            "default",
+            "D渠道",
+            "顶级特供"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "熊猫-限时官key-88-claude-opus-4.6",
+          "ratio": 0,
+          "completionRatio": 0,
+          "fixedPrice": 88,
+          "inputPerMTok": null,
+          "outputPerMTok": null,
+          "groups": [
+            "A渠道",
+            "C渠道",
+            "default",
+            "D渠道",
+            "顶级特供"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "熊猫-限时官key-88-claude-opus-4.7",
+          "ratio": 0,
+          "completionRatio": 0,
+          "fixedPrice": 88,
+          "inputPerMTok": null,
+          "outputPerMTok": null,
+          "groups": [
+            "A渠道",
+            "C渠道",
+            "default",
+            "D渠道",
+            "顶级特供"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "熊猫-限时官key-88-claude-opus-4.8",
+          "ratio": 0,
+          "completionRatio": 0,
+          "fixedPrice": 88,
+          "inputPerMTok": null,
+          "outputPerMTok": null,
+          "groups": [
+            "A渠道",
+            "C渠道",
+            "default",
+            "D渠道",
+            "顶级特供"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "熊猫-限时官key质量-88-claude-opus-5",
+          "ratio": 0,
+          "completionRatio": 0,
+          "fixedPrice": 88,
+          "inputPerMTok": null,
+          "outputPerMTok": null,
+          "groups": [
+            "A渠道",
+            "C渠道",
+            "default",
+            "D渠道",
+            "顶级特供"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "熊猫-A-10-gemini-3.1-pro-preview-1000k",
+          "ratio": 0,
+          "completionRatio": 0,
+          "fixedPrice": 10,
+          "inputPerMTok": null,
+          "outputPerMTok": null,
+          "groups": [
+            "default",
+            "D渠道",
+            "顶级特供",
+            "A渠道",
+            "C渠道"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "熊猫-A-10-grok-4.5",
+          "ratio": 0,
+          "completionRatio": 0,
+          "fixedPrice": 10,
+          "inputPerMTok": null,
+          "outputPerMTok": null,
+          "groups": [
+            "A渠道",
+            "C渠道",
+            "default",
+            "D渠道",
+            "顶级特供"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "熊猫-A-10-grok-4.6",
+          "ratio": 0,
+          "completionRatio": 0,
+          "fixedPrice": 10,
+          "inputPerMTok": null,
+          "outputPerMTok": null,
+          "groups": [
+            "A渠道",
+            "C渠道",
+            "default",
+            "D渠道",
+            "顶级特供"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "熊猫-A-10-grok-4.7",
+          "ratio": 0,
+          "completionRatio": 0,
+          "fixedPrice": 10,
+          "inputPerMTok": null,
+          "outputPerMTok": null,
+          "groups": [
+            "A渠道",
+            "C渠道",
+            "default",
+            "D渠道",
+            "顶级特供"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "熊猫-A-13-MiniMax-M2.7",
+          "ratio": 0,
+          "completionRatio": 0,
+          "fixedPrice": 13,
+          "inputPerMTok": null,
+          "outputPerMTok": null,
+          "groups": [
+            "C渠道",
+            "default",
+            "D渠道",
+            "顶级特供",
+            "A渠道"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "熊猫-A-14-MiniMax-M2.7-highspeed-高速",
+          "ratio": 0,
+          "completionRatio": 0,
+          "fixedPrice": 14,
+          "inputPerMTok": null,
+          "outputPerMTok": null,
+          "groups": [
+            "D渠道",
+            "顶级特供",
+            "A渠道",
+            "C渠道",
+            "default"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "熊猫-A-15-gemini-3.1-pro-满血",
+          "ratio": 0,
+          "completionRatio": 0,
+          "fixedPrice": 15,
+          "inputPerMTok": null,
+          "outputPerMTok": null,
+          "groups": [
+            "A渠道",
+            "C渠道",
+            "default",
+            "D渠道",
+            "顶级特供"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "熊猫-A-15-MiniMax-M3",
+          "ratio": 0,
+          "completionRatio": 0,
+          "fixedPrice": 15,
+          "inputPerMTok": null,
+          "outputPerMTok": null,
+          "groups": [
+            "A渠道",
+            "C渠道",
+            "default",
+            "D渠道",
+            "顶级特供"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "熊猫-A-16-MiniMax-M3-highspeed-高速",
+          "ratio": 0,
+          "completionRatio": 0,
+          "fixedPrice": 16,
+          "inputPerMTok": null,
+          "outputPerMTok": null,
+          "groups": [
+            "顶级特供",
+            "A渠道",
+            "C渠道",
+            "default",
+            "D渠道"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "熊猫-A-18-claude-sonnet-4-6-逆",
+          "ratio": 0,
+          "completionRatio": 0,
+          "fixedPrice": 18,
+          "inputPerMTok": null,
+          "outputPerMTok": null,
+          "groups": [
+            "A渠道",
+            "C渠道",
+            "default",
+            "D渠道",
+            "顶级特供"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "熊猫-A-19-claude-sonnet-4.6",
+          "ratio": 0,
+          "completionRatio": 0,
+          "fixedPrice": 19,
+          "inputPerMTok": null,
+          "outputPerMTok": null,
+          "groups": [
+            "顶级特供",
+            "A渠道",
+            "C渠道",
+            "default",
+            "D渠道"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "熊猫-A-2-gemini-2.5-flash",
           "ratio": 0,
           "completionRatio": 0,
           "fixedPrice": 2,
           "inputPerMTok": null,
           "outputPerMTok": null,
           "groups": [
+            "A渠道",
+            "C渠道",
+            "default",
+            "D渠道",
+            "顶级特供"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "熊猫-A-2-gemini-3.5-flash-lite",
+          "ratio": 0,
+          "completionRatio": 0,
+          "fixedPrice": 2,
+          "inputPerMTok": null,
+          "outputPerMTok": null,
+          "groups": [
+            "A渠道",
+            "C渠道",
+            "default",
+            "D渠道",
+            "顶级特供"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "熊猫-A-27-kimi-k2.7",
+          "ratio": 0,
+          "completionRatio": 0,
+          "fixedPrice": 27,
+          "inputPerMTok": null,
+          "outputPerMTok": null,
+          "groups": [
+            "A渠道",
+            "C渠道",
+            "default",
+            "D渠道",
+            "顶级特供"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "熊猫-A-29-claude-opus-4.6",
+          "ratio": 0,
+          "completionRatio": 0,
+          "fixedPrice": 29,
+          "inputPerMTok": null,
+          "outputPerMTok": null,
+          "groups": [
+            "A渠道",
+            "C渠道",
+            "default",
+            "D渠道",
+            "顶级特供"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "熊猫-A-29-claude-opus-4.7",
+          "ratio": 0,
+          "completionRatio": 0,
+          "fixedPrice": 29,
+          "inputPerMTok": null,
+          "outputPerMTok": null,
+          "groups": [
+            "C渠道",
+            "default",
+            "D渠道",
+            "顶级特供",
+            "A渠道"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "熊猫-A-29-claude-opus-4.8",
+          "ratio": 0,
+          "completionRatio": 0,
+          "fixedPrice": 29,
+          "inputPerMTok": null,
+          "outputPerMTok": null,
+          "groups": [
+            "default",
+            "D渠道",
+            "顶级特供",
+            "A渠道",
+            "C渠道"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "熊猫-A-3-gemini-3-flash-preview",
+          "ratio": 0,
+          "completionRatio": 0,
+          "fixedPrice": 3,
+          "inputPerMTok": null,
+          "outputPerMTok": null,
+          "groups": [
+            "A渠道",
+            "C渠道",
+            "default",
+            "D渠道",
+            "顶级特供"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "熊猫-A-3-gemini-3.1-flash-lite",
+          "ratio": 0,
+          "completionRatio": 0,
+          "fixedPrice": 3,
+          "inputPerMTok": null,
+          "outputPerMTok": null,
+          "groups": [
+            "A渠道",
+            "C渠道",
+            "default",
+            "D渠道",
+            "顶级特供"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "熊猫-A-39-gemini-4-argon-high-反重力ultra",
+          "ratio": 0,
+          "completionRatio": 0,
+          "fixedPrice": 39,
+          "inputPerMTok": null,
+          "outputPerMTok": null,
+          "groups": [
+            "A渠道",
+            "C渠道",
+            "default",
+            "D渠道",
+            "顶级特供"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "熊猫-A-8-kimi-k2.6",
+          "ratio": 0,
+          "completionRatio": 0,
+          "fixedPrice": 8,
+          "inputPerMTok": null,
+          "outputPerMTok": null,
+          "groups": [
+            "A渠道",
+            "C渠道",
+            "default",
+            "D渠道",
+            "顶级特供"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "熊猫-A-9-gemini-3.8-flash-反重力-tob",
+          "ratio": 0,
+          "completionRatio": 0,
+          "fixedPrice": 9,
+          "inputPerMTok": null,
+          "outputPerMTok": null,
+          "groups": [
+            "A渠道",
+            "C渠道",
+            "default",
+            "D渠道",
+            "顶级特供"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "熊猫-A-9-gemini-3.8-flash-search",
+          "ratio": 0,
+          "completionRatio": 0,
+          "fixedPrice": 9,
+          "inputPerMTok": null,
+          "outputPerMTok": null,
+          "groups": [
+            "default",
+            "D渠道",
+            "顶级特供",
+            "A渠道",
+            "C渠道"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "熊猫-aiStudio官-X-20-gemini-3.1-pro-preview",
+          "ratio": 0,
+          "completionRatio": 0,
+          "fixedPrice": 20,
+          "inputPerMTok": null,
+          "outputPerMTok": null,
+          "groups": [
+            "A渠道",
+            "C渠道",
+            "default",
+            "D渠道",
+            "顶级特供"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "熊猫-aiStudio官-X-20-gemini-3.1-pro-preview-联网",
+          "ratio": 0,
+          "completionRatio": 0,
+          "fixedPrice": 20,
+          "inputPerMTok": null,
+          "outputPerMTok": null,
+          "groups": [
+            "A渠道",
+            "C渠道",
+            "default",
+            "D渠道",
+            "顶级特供"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "熊猫-aiStudio官-X-20-gemini-3.1-pro-preview-thinking",
+          "ratio": 0,
+          "completionRatio": 0,
+          "fixedPrice": 20,
+          "inputPerMTok": null,
+          "outputPerMTok": null,
+          "groups": [
+            "A渠道",
+            "C渠道",
+            "default",
+            "D渠道",
+            "顶级特供"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "熊猫-B-10-gemini-3.7-flash",
+          "ratio": 0,
+          "completionRatio": 0,
+          "fixedPrice": 10,
+          "inputPerMTok": null,
+          "outputPerMTok": null,
+          "groups": [
+            "A渠道",
+            "C渠道",
+            "default",
+            "D渠道",
+            "顶级特供"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "熊猫-B-7-gemini-3.6-flash-高质量逆",
+          "ratio": 0,
+          "completionRatio": 0,
+          "fixedPrice": 7,
+          "inputPerMTok": null,
+          "outputPerMTok": null,
+          "groups": [
+            "A渠道",
+            "C渠道",
+            "default",
+            "D渠道",
+            "顶级特供"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "熊猫-gemini-3.8-flash-反重力-稳定名",
+          "ratio": 0,
+          "completionRatio": 0,
+          "fixedPrice": 9,
+          "inputPerMTok": null,
+          "outputPerMTok": null,
+          "groups": [
+            "D渠道",
+            "顶级特供",
+            "A渠道",
+            "C渠道",
             "default"
           ],
           "protocols": [
@@ -234,12 +2022,408 @@
           ]
         },
         {
-          "name": "claude-sonnet-4.5",
+          "name": "熊猫-K-17-kiro-claude-sonnet-5",
           "ratio": 0,
           "completionRatio": 0,
-          "fixedPrice": 1,
+          "fixedPrice": 17,
           "inputPerMTok": null,
           "outputPerMTok": null,
+          "groups": [
+            "顶级特供",
+            "A渠道",
+            "C渠道",
+            "default",
+            "D渠道"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "熊猫-vertex逆-23-gemini-3.1-pro-preview",
+          "ratio": 0,
+          "completionRatio": 0,
+          "fixedPrice": 23,
+          "inputPerMTok": null,
+          "outputPerMTok": null,
+          "groups": [
+            "A渠道",
+            "C渠道",
+            "default",
+            "D渠道",
+            "顶级特供"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "熊猫-vertex逆-49-gemini-4-argon",
+          "ratio": 0,
+          "completionRatio": 0,
+          "fixedPrice": 49,
+          "inputPerMTok": null,
+          "outputPerMTok": null,
+          "groups": [
+            "A渠道",
+            "C渠道",
+            "default",
+            "D渠道",
+            "顶级特供"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "熊猫-W-39-限时官key-claude-sonnet-5",
+          "ratio": 0,
+          "completionRatio": 0,
+          "fixedPrice": 39,
+          "inputPerMTok": null,
+          "outputPerMTok": null,
+          "groups": [
+            "顶级特供",
+            "A渠道",
+            "C渠道",
+            "default",
+            "D渠道"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "熊猫-X-10-官逆-gemini-3.1-pro",
+          "ratio": 0,
+          "completionRatio": 0,
+          "fixedPrice": 10,
+          "inputPerMTok": null,
+          "outputPerMTok": null,
+          "groups": [
+            "A渠道",
+            "C渠道",
+            "default",
+            "D渠道",
+            "顶级特供"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "熊猫-X-10-官逆-gemini-3.1-pro-联网",
+          "ratio": 0,
+          "completionRatio": 0,
+          "fixedPrice": 10,
+          "inputPerMTok": null,
+          "outputPerMTok": null,
+          "groups": [
+            "A渠道",
+            "C渠道",
+            "default",
+            "D渠道",
+            "顶级特供"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "熊猫-X-10-AS正向-gemini-3.6-flash",
+          "ratio": 0,
+          "completionRatio": 0,
+          "fixedPrice": 10,
+          "inputPerMTok": null,
+          "outputPerMTok": null,
+          "groups": [
+            "C渠道",
+            "default",
+            "D渠道",
+            "顶级特供",
+            "A渠道"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "熊猫-x-11-gemini-3.1-pro-anti",
+          "ratio": 0,
+          "completionRatio": 0,
+          "fixedPrice": 11,
+          "inputPerMTok": null,
+          "outputPerMTok": null,
+          "groups": [
+            "A渠道",
+            "C渠道",
+            "default",
+            "D渠道",
+            "顶级特供"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "熊猫-X-24-kiro-claude-opus-4.5",
+          "ratio": 37.5,
+          "completionRatio": 5,
+          "fixedPrice": null,
+          "inputPerMTok": 75,
+          "outputPerMTok": 375,
+          "groups": [
+            "C渠道",
+            "default",
+            "D渠道",
+            "顶级特供",
+            "A渠道"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "熊猫-X-24-kiro-claude-opus-4.6",
+          "ratio": 0,
+          "completionRatio": 0,
+          "fixedPrice": 24,
+          "inputPerMTok": null,
+          "outputPerMTok": null,
+          "groups": [
+            "顶级特供",
+            "A渠道",
+            "C渠道",
+            "default",
+            "D渠道"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "熊猫-X-24-kiro-claude-opus-4.7",
+          "ratio": 0,
+          "completionRatio": 0,
+          "fixedPrice": 24,
+          "inputPerMTok": null,
+          "outputPerMTok": null,
+          "groups": [
+            "A渠道",
+            "C渠道",
+            "default",
+            "D渠道",
+            "顶级特供"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "熊猫-X-24-kiro-claude-opus-4.8",
+          "ratio": 0,
+          "completionRatio": 0,
+          "fixedPrice": 24,
+          "inputPerMTok": null,
+          "outputPerMTok": null,
+          "groups": [
+            "D渠道",
+            "顶级特供",
+            "A渠道",
+            "C渠道",
+            "default"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "熊猫-X-24-kiro-claude-opus-5",
+          "ratio": 0,
+          "completionRatio": 0,
+          "fixedPrice": 24,
+          "inputPerMTok": null,
+          "outputPerMTok": null,
+          "groups": [
+            "A渠道",
+            "C渠道",
+            "default",
+            "D渠道",
+            "顶级特供"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "熊猫-X-24-kiro-claude-opus-5.5",
+          "ratio": 37.5,
+          "completionRatio": 1,
+          "fixedPrice": null,
+          "inputPerMTok": 75,
+          "outputPerMTok": 75,
+          "groups": [
+            "A渠道",
+            "C渠道",
+            "default",
+            "D渠道",
+            "顶级特供"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "熊猫-X-27-kiro-claude-opus-4.5",
+          "ratio": 0,
+          "completionRatio": 0,
+          "fixedPrice": 27,
+          "inputPerMTok": null,
+          "outputPerMTok": null,
+          "groups": [
+            "A渠道",
+            "C渠道",
+            "default",
+            "D渠道",
+            "顶级特供"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "熊猫-X-27-kiro-claude-opus-4.6",
+          "ratio": 0,
+          "completionRatio": 0,
+          "fixedPrice": 27,
+          "inputPerMTok": null,
+          "outputPerMTok": null,
+          "groups": [
+            "A渠道",
+            "C渠道",
+            "default",
+            "D渠道",
+            "顶级特供"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "熊猫-X-27-kiro-claude-opus-4.7",
+          "ratio": 0,
+          "completionRatio": 0,
+          "fixedPrice": 27,
+          "inputPerMTok": null,
+          "outputPerMTok": null,
+          "groups": [
+            "A渠道",
+            "C渠道",
+            "default",
+            "D渠道",
+            "顶级特供"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "熊猫-X-27-kiro-claude-opus-4.8",
+          "ratio": 0,
+          "completionRatio": 0,
+          "fixedPrice": 27,
+          "inputPerMTok": null,
+          "outputPerMTok": null,
+          "groups": [
+            "顶级特供",
+            "A渠道",
+            "C渠道",
+            "default",
+            "D渠道"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "熊猫-X-27-kiro-claude-opus-5",
+          "ratio": 0,
+          "completionRatio": 0,
+          "fixedPrice": 27,
+          "inputPerMTok": null,
+          "outputPerMTok": null,
+          "groups": [
+            "顶级特供",
+            "A渠道",
+            "C渠道",
+            "default",
+            "D渠道"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "熊猫-X-27-kiro-claude-opus-5.5",
+          "ratio": 0,
+          "completionRatio": 0,
+          "fixedPrice": 27,
+          "inputPerMTok": null,
+          "outputPerMTok": null,
+          "groups": [
+            "A渠道",
+            "C渠道",
+            "default",
+            "D渠道",
+            "顶级特供"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "熊猫-x-29-最强生图-gpt-image-2.5",
+          "ratio": 0,
+          "completionRatio": 0,
+          "fixedPrice": 29,
+          "inputPerMTok": null,
+          "outputPerMTok": null,
+          "groups": [
+            "A渠道",
+            "C渠道",
+            "default",
+            "D渠道",
+            "顶级特供"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "熊猫-X-29-claude-opus-5",
+          "ratio": 0,
+          "completionRatio": 0,
+          "fixedPrice": 29,
+          "inputPerMTok": null,
+          "outputPerMTok": null,
+          "groups": [
+            "A渠道",
+            "C渠道",
+            "default",
+            "D渠道",
+            "顶级特供"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "熊猫特供-按量-SSS-gemini-3.1-pro-preview",
+          "ratio": 0.00075,
+          "completionRatio": 6,
+          "fixedPrice": null,
+          "inputPerMTok": 0.002,
+          "outputPerMTok": 0.009,
           "groups": [
             "default"
           ],
@@ -248,12 +2432,12 @@
           ]
         },
         {
-          "name": "dots-3-note",
-          "ratio": 0,
-          "completionRatio": 0,
-          "fixedPrice": 1,
-          "inputPerMTok": null,
-          "outputPerMTok": null,
+          "name": "熊猫特供-按量-SSS-gemini-3.1-pro-preview-thinking",
+          "ratio": 0.00075,
+          "completionRatio": 6,
+          "fixedPrice": null,
+          "inputPerMTok": 0.002,
+          "outputPerMTok": 0.009,
           "groups": [
             "default"
           ],
@@ -262,12 +2446,12 @@
           ]
         },
         {
-          "name": "gpt-flash",
-          "ratio": 0,
-          "completionRatio": 0,
-          "fixedPrice": 1,
-          "inputPerMTok": null,
-          "outputPerMTok": null,
+          "name": "熊猫特供-按量-SSS-gemini-3.6-flash",
+          "ratio": 0.0000711,
+          "completionRatio": 5,
+          "fixedPrice": null,
+          "inputPerMTok": 0,
+          "outputPerMTok": 0.001,
           "groups": [
             "default"
           ],
@@ -276,12 +2460,12 @@
           ]
         },
         {
-          "name": "Hunyuan3",
-          "ratio": 0,
-          "completionRatio": 0,
-          "fixedPrice": 1,
-          "inputPerMTok": null,
-          "outputPerMTok": null,
+          "name": "熊猫特供-按量-SSS-gemini-3.8-flash",
+          "ratio": 0.00003555,
+          "completionRatio": 5,
+          "fixedPrice": null,
+          "inputPerMTok": 0,
+          "outputPerMTok": 0,
           "groups": [
             "default"
           ],
@@ -290,12 +2474,156 @@
           ]
         },
         {
-          "name": "Longcat-2.5",
+          "name": "熊猫特供-超纯满血-99额度-claude-opus-4.5",
           "ratio": 0,
           "completionRatio": 0,
-          "fixedPrice": 1,
+          "fixedPrice": 99,
           "inputPerMTok": null,
           "outputPerMTok": null,
+          "groups": [
+            "A渠道",
+            "C渠道",
+            "default",
+            "D渠道",
+            "顶级特供"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "熊猫特供-超纯满血-99额度-claude-opus-4.5-thinking",
+          "ratio": 0,
+          "completionRatio": 0,
+          "fixedPrice": 99,
+          "inputPerMTok": null,
+          "outputPerMTok": null,
+          "groups": [
+            "A渠道",
+            "C渠道",
+            "default",
+            "D渠道",
+            "顶级特供"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "熊猫特供-超纯满血-99额度-claude-opus-4.6",
+          "ratio": 0,
+          "completionRatio": 0,
+          "fixedPrice": 99,
+          "inputPerMTok": null,
+          "outputPerMTok": null,
+          "groups": [
+            "C渠道",
+            "default",
+            "D渠道",
+            "顶级特供",
+            "A渠道"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "熊猫特供-超纯满血-99额度-claude-opus-4.6-thinking",
+          "ratio": 0,
+          "completionRatio": 0,
+          "fixedPrice": 99,
+          "inputPerMTok": null,
+          "outputPerMTok": null,
+          "groups": [
+            "D渠道",
+            "顶级特供",
+            "A渠道",
+            "C渠道",
+            "default"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "熊猫特供-超纯满血-99额度-claude-opus-4.7",
+          "ratio": 0,
+          "completionRatio": 0,
+          "fixedPrice": 99,
+          "inputPerMTok": null,
+          "outputPerMTok": null,
+          "groups": [
+            "A渠道",
+            "C渠道",
+            "default",
+            "D渠道",
+            "顶级特供"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "熊猫特供-超纯满血-99额度-claude-opus-4.7-thinking",
+          "ratio": 0,
+          "completionRatio": 0,
+          "fixedPrice": 99,
+          "inputPerMTok": null,
+          "outputPerMTok": null,
+          "groups": [
+            "顶级特供",
+            "A渠道",
+            "C渠道",
+            "default",
+            "D渠道"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "熊猫特供-anti-99-claude-opus-4.6",
+          "ratio": 0,
+          "completionRatio": 0,
+          "fixedPrice": 99,
+          "inputPerMTok": null,
+          "outputPerMTok": null,
+          "groups": [
+            "C渠道",
+            "default",
+            "D渠道",
+            "顶级特供",
+            "A渠道"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "熊猫特供-anti-99-claude-opus-4.6-thinking",
+          "ratio": 0,
+          "completionRatio": 0,
+          "fixedPrice": 99,
+          "inputPerMTok": null,
+          "outputPerMTok": null,
+          "groups": [
+            "顶级特供",
+            "A渠道",
+            "C渠道",
+            "default",
+            "D渠道"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "熊猫特供S-按量-gemini-3-flash-preview",
+          "ratio": 0.0000675,
+          "completionRatio": 8.3333,
+          "fixedPrice": null,
+          "inputPerMTok": 0,
+          "outputPerMTok": 0.001,
           "groups": [
             "default"
           ],
@@ -304,12 +2632,12 @@
           ]
         },
         {
-          "name": "MiniMax-M3",
-          "ratio": 0,
-          "completionRatio": 0,
-          "fixedPrice": 1,
-          "inputPerMTok": null,
-          "outputPerMTok": null,
+          "name": "gpt-5.5",
+          "ratio": 0.0006125,
+          "completionRatio": 8,
+          "fixedPrice": null,
+          "inputPerMTok": 0.001,
+          "outputPerMTok": 0.01,
           "groups": [
             "default"
           ],
@@ -318,12 +2646,12 @@
           ]
         },
         {
-          "name": "Qwen3.8-Flash",
-          "ratio": 0,
-          "completionRatio": 0,
-          "fixedPrice": 1,
-          "inputPerMTok": null,
-          "outputPerMTok": null,
+          "name": "gpt-5.6-sol",
+          "ratio": 0.0005439,
+          "completionRatio": 6,
+          "fixedPrice": null,
+          "inputPerMTok": 0.001,
+          "outputPerMTok": 0.007,
           "groups": [
             "default"
           ],
@@ -332,12 +2660,12 @@
           ]
         },
         {
-          "name": "step-3.7-flash",
-          "ratio": 0,
-          "completionRatio": 0,
-          "fixedPrice": 1,
-          "inputPerMTok": null,
-          "outputPerMTok": null,
+          "name": "gpt-5.6-terra",
+          "ratio": 0.0002156,
+          "completionRatio": 6,
+          "fixedPrice": null,
+          "inputPerMTok": 0,
+          "outputPerMTok": 0.003,
           "groups": [
             "default"
           ],
@@ -346,12 +2674,40 @@
           ]
         },
         {
-          "name": "step-5-preview",
-          "ratio": 0,
-          "completionRatio": 0,
-          "fixedPrice": 1,
-          "inputPerMTok": null,
-          "outputPerMTok": null,
+          "name": "gpt-6-astra",
+          "ratio": 0.002001,
+          "completionRatio": 5,
+          "fixedPrice": null,
+          "inputPerMTok": 0.004,
+          "outputPerMTok": 0.02,
+          "groups": [
+            "default"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "gpt-6-sol",
+          "ratio": 0.0003864,
+          "completionRatio": 5,
+          "fixedPrice": null,
+          "inputPerMTok": 0.001,
+          "outputPerMTok": 0.004,
+          "groups": [
+            "default"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "gpt-6.1-sol",
+          "ratio": 0.0003864,
+          "completionRatio": 5,
+          "fixedPrice": null,
+          "inputPerMTok": 0.001,
+          "outputPerMTok": 0.004,
           "groups": [
             "default"
           ],
@@ -360,41 +2716,30 @@
           ]
         }
       ],
-      "modelsSource": "cached",
+      "modelsSource": "public-api",
       "defaults": {
-        "claude": "claude-fable-5.1",
-        "openai": "Qwen3.8-Flash"
+        "claude": null,
+        "openai": "gpt-6.1-sol"
       },
       "signup": {
-        "status": 522,
-        "ok": false,
-        "ms": 19678,
+        "status": 200,
+        "ok": true,
+        "ms": 1258,
         "attempts": 1
       },
       "mirrors": [],
       "probeBlocked": false,
-      "online": false,
-      "dataStale": true,
-      "staleFrom": "2026-11-01T13:23:55.660Z",
-      "staleFields": [
-        "systemName",
-        "version",
-        "registerOpen",
-        "passwordRegister",
-        "checkinEnabled",
-        "loginMethods",
-        "quotaPerUnit",
-        "announcements",
-        "models",
-        "defaults"
-      ]
+      "online": true,
+      "dataStale": false,
+      "staleFrom": null,
+      "staleFields": []
     },
     {
       "id": "docode",
-      "checkedAt": "2026-11-01T22:01:26.057Z",
+      "checkedAt": "2026-11-02T01:31:10.410Z",
       "apiOk": true,
       "pricingOk": false,
-      "latencyMs": 632,
+      "latencyMs": 821,
       "error": null,
       "systemName": "DoCode",
       "version": "",
@@ -446,7 +2791,7 @@
       "signup": {
         "status": 200,
         "ok": true,
-        "ms": 545,
+        "ms": 694,
         "attempts": 1
       },
       "mirrors": [
@@ -463,10 +2808,10 @@
     },
     {
       "id": "nianhua",
-      "checkedAt": "2026-11-01T22:01:26.334Z",
+      "checkedAt": "2026-11-02T01:31:10.559Z",
       "apiOk": true,
       "pricingOk": true,
-      "latencyMs": 914,
+      "latencyMs": 904,
       "error": null,
       "systemName": "年华 API 中转站",
       "version": "1.0.0-rc.46-nianhua-payguard-20261025",
@@ -686,10 +3031,10 @@
           "inputPerMTok": 10,
           "outputPerMTok": 50,
           "groups": [
+            "CCMax支持外接",
             "Claude满血福利",
             "default",
-            "福利（可用群内会通知）",
-            "CCMax支持外接"
+            "福利（可用群内会通知）"
           ],
           "protocols": [
             "anthropic",
@@ -751,10 +3096,10 @@
           "inputPerMTok": 5,
           "outputPerMTok": 25,
           "groups": [
-            "default",
-            "kiro",
             "CCMax支持外接",
-            "Claude满血福利"
+            "Claude满血福利",
+            "default",
+            "kiro"
           ],
           "protocols": [
             "anthropic",
@@ -784,10 +3129,10 @@
           "inputPerMTok": 5,
           "outputPerMTok": 25,
           "groups": [
+            "CCMax支持外接",
             "Claude满血福利",
             "default",
-            "kiro",
-            "CCMax支持外接"
+            "kiro"
           ],
           "protocols": [
             "anthropic",
@@ -802,10 +3147,10 @@
           "inputPerMTok": 5,
           "outputPerMTok": 25,
           "groups": [
-            "CCMax支持外接",
-            "Claude满血福利",
             "default",
-            "kiro"
+            "kiro",
+            "CCMax支持外接",
+            "Claude满血福利"
           ],
           "protocols": [
             "anthropic",
@@ -820,9 +3165,9 @@
           "inputPerMTok": 5,
           "outputPerMTok": 25,
           "groups": [
+            "福利（可用群内会通知）",
             "CCMax支持外接",
-            "kiro",
-            "福利（可用群内会通知）"
+            "kiro"
           ],
           "protocols": [
             "anthropic",
@@ -853,10 +3198,10 @@
           "inputPerMTok": 3,
           "outputPerMTok": 15,
           "groups": [
+            "CCMax支持外接",
             "Claude满血福利",
             "default",
-            "kiro",
-            "CCMax支持外接"
+            "kiro"
           ],
           "protocols": [
             "anthropic",
@@ -917,12 +3262,12 @@
           "inputPerMTok": 2.5,
           "outputPerMTok": 15,
           "groups": [
+            "GPT",
             "GPT-Pro-不降智",
             "GPTPro",
             "GPT纯Plus低价分组",
             "企业Pro",
-            "福利（可用群内会通知）",
-            "GPT"
+            "福利（可用群内会通知）"
           ],
           "protocols": [
             "openai"
@@ -1101,8 +3446,8 @@
           "inputPerMTok": 4,
           "outputPerMTok": 18,
           "groups": [
-            "Gemini-特惠-残将",
-            "Gemini"
+            "Gemini",
+            "Gemini-特惠-残将"
           ],
           "protocols": [
             "gemini",
@@ -1558,10 +3903,10 @@
           "inputPerMTok": 0.75,
           "outputPerMTok": 4.5,
           "groups": [
+            "GPT纯Plus低价分组",
             "福利（可用群内会通知）",
             "GPT",
-            "GPTPro",
-            "GPT纯Plus低价分组"
+            "GPTPro"
           ],
           "protocols": [
             "openai"
@@ -1575,10 +3920,10 @@
           "inputPerMTok": 5,
           "outputPerMTok": 30,
           "groups": [
-            "GPT",
             "GPTPro",
             "GPT纯Plus低价分组",
-            "企业Pro"
+            "企业Pro",
+            "GPT"
           ],
           "protocols": [
             "openai"
@@ -1645,11 +3990,11 @@
           "inputPerMTok": 75,
           "outputPerMTok": 450,
           "groups": [
-            "福利（可用群内会通知）",
             "GPT",
             "GPTPro",
             "GPT纯Plus低价分组",
-            "企业Pro"
+            "企业Pro",
+            "福利（可用群内会通知）"
           ],
           "protocols": [
             "openai"
@@ -1683,13 +4028,13 @@
           "inputPerMTok": 75,
           "outputPerMTok": 450,
           "groups": [
-            "GPT",
-            "GPT-Pro-不降智",
             "GPTPro",
             "GPT官转",
             "GPT纯Plus低价分组",
             "企业Pro",
-            "福利（可用群内会通知）"
+            "福利（可用群内会通知）",
+            "GPT",
+            "GPT-Pro-不降智"
           ],
           "protocols": [
             "openai"
@@ -1721,11 +4066,11 @@
           "inputPerMTok": 75,
           "outputPerMTok": 150,
           "groups": [
-            "GPT官转",
-            "企业Pro",
             "GPT",
             "GPT-Pro-不降智",
-            "GPTPro"
+            "GPTPro",
+            "GPT官转",
+            "企业Pro"
           ],
           "protocols": [
             "openai"
@@ -1755,11 +4100,11 @@
           "inputPerMTok": 75,
           "outputPerMTok": 150,
           "groups": [
+            "企业Pro",
             "GPT",
             "GPT-Pro-不降智",
             "GPTPro",
-            "GPT官转",
-            "企业Pro"
+            "GPT官转"
           ],
           "protocols": [
             "openai"
@@ -1773,11 +4118,11 @@
           "inputPerMTok": 75,
           "outputPerMTok": 150,
           "groups": [
+            "GPTPro",
             "GPT官转",
             "企业Pro",
             "GPT",
-            "GPT-Pro-不降智",
-            "GPTPro"
+            "GPT-Pro-不降智"
           ],
           "protocols": [
             "openai"
@@ -1791,10 +4136,10 @@
           "inputPerMTok": 75,
           "outputPerMTok": 150,
           "groups": [
-            "GPT",
             "GPT-Pro-不降智",
             "GPTPro",
-            "企业Pro"
+            "企业Pro",
+            "GPT"
           ],
           "protocols": [
             "openai"
@@ -1838,13 +4183,13 @@
           "inputPerMTok": null,
           "outputPerMTok": null,
           "groups": [
+            "企业Pro",
+            "福利（可用群内会通知）",
             "ALL",
             "GPT",
             "GPT-Image",
             "GPT-Pro-不降智",
-            "GPTPro",
-            "企业Pro",
-            "福利（可用群内会通知）"
+            "GPTPro"
           ],
           "protocols": [
             "image-generation",
@@ -1859,10 +4204,10 @@
           "inputPerMTok": null,
           "outputPerMTok": null,
           "groups": [
+            "企业Pro",
             "GPT",
             "GPT-Image",
-            "GPTPro",
-            "企业Pro"
+            "GPTPro"
           ],
           "protocols": [
             "image-generation",
@@ -1877,10 +4222,10 @@
           "inputPerMTok": null,
           "outputPerMTok": null,
           "groups": [
-            "企业Pro",
             "GPT",
             "GPT-Image",
-            "GPTPro"
+            "GPTPro",
+            "企业Pro"
           ],
           "protocols": [
             "image-generation",
@@ -1889,6 +4234,26 @@
         },
         {
           "name": "gpt-image-2.5",
+          "ratio": 0,
+          "completionRatio": 0,
+          "fixedPrice": 0.16,
+          "inputPerMTok": null,
+          "outputPerMTok": null,
+          "groups": [
+            "企业Pro",
+            "ALL",
+            "GPT",
+            "GPT-Image",
+            "GPT-Pro-不降智",
+            "GPTPro"
+          ],
+          "protocols": [
+            "image-generation",
+            "openai"
+          ]
+        },
+        {
+          "name": "gpt-image-2.5-flare",
           "ratio": 0,
           "completionRatio": 0,
           "fixedPrice": 0.16,
@@ -1908,26 +4273,6 @@
           ]
         },
         {
-          "name": "gpt-image-2.5-flare",
-          "ratio": 0,
-          "completionRatio": 0,
-          "fixedPrice": 0.16,
-          "inputPerMTok": null,
-          "outputPerMTok": null,
-          "groups": [
-            "GPT",
-            "GPT-Image",
-            "GPT-Pro-不降智",
-            "GPTPro",
-            "企业Pro",
-            "ALL"
-          ],
-          "protocols": [
-            "image-generation",
-            "openai"
-          ]
-        },
-        {
           "name": "gpt-image-2.5-sunburst",
           "ratio": 0,
           "completionRatio": 0,
@@ -1935,12 +4280,12 @@
           "inputPerMTok": null,
           "outputPerMTok": null,
           "groups": [
+            "GPTPro",
             "企业Pro",
             "ALL",
             "GPT",
             "GPT-Image",
-            "GPT-Pro-不降智",
-            "GPTPro"
+            "GPT-Pro-不降智"
           ],
           "protocols": [
             "image-generation",
@@ -2306,8 +4651,8 @@
           "inputPerMTok": 0.28,
           "outputPerMTok": 0.56,
           "groups": [
-            "公益",
-            "GPT-Image"
+            "GPT-Image",
+            "公益"
           ],
           "protocols": [
             "openai"
@@ -2321,8 +4666,8 @@
           "inputPerMTok": 0,
           "outputPerMTok": 0,
           "groups": [
-            "公益",
-            "GPT-Image"
+            "GPT-Image",
+            "公益"
           ],
           "protocols": [
             "openai"
@@ -2788,7 +5133,7 @@
       "signup": {
         "status": 200,
         "ok": true,
-        "ms": 1160,
+        "ms": 973,
         "attempts": 1
       },
       "mirrors": [],
@@ -2800,10 +5145,10 @@
     },
     {
       "id": "supxh",
-      "checkedAt": "2026-11-01T22:01:26.406Z",
+      "checkedAt": "2026-11-02T01:31:10.793Z",
       "apiOk": true,
       "pricingOk": true,
-      "latencyMs": 940,
+      "latencyMs": 1050,
       "error": null,
       "systemName": null,
       "version": null,
@@ -2827,7 +5172,7 @@
       "signup": {
         "status": 200,
         "ok": true,
-        "ms": 960,
+        "ms": 946,
         "attempts": 1
       },
       "mirrors": [],
@@ -2839,10 +5184,10 @@
     },
     {
       "id": "api456",
-      "checkedAt": "2026-11-01T22:01:26.560Z",
+      "checkedAt": "2026-11-02T01:31:10.121Z",
       "apiOk": true,
       "pricingOk": false,
-      "latencyMs": 1139,
+      "latencyMs": 607,
       "error": null,
       "systemName": "可萌中转站",
       "version": "v1.0.0-rc.45-api456.1",
@@ -2894,7 +5239,7 @@
       "signup": {
         "status": 200,
         "ok": true,
-        "ms": 1317,
+        "ms": 611,
         "attempts": 1
       },
       "mirrors": [],
@@ -2906,10 +5251,10 @@
     },
     {
       "id": "justwoker",
-      "checkedAt": "2026-11-01T22:01:26.512Z",
+      "checkedAt": "2026-11-02T01:31:09.931Z",
       "apiOk": true,
       "pricingOk": false,
-      "latencyMs": 1088,
+      "latencyMs": 422,
       "error": null,
       "systemName": "JustDoWork",
       "version": "v1.0.0-rc.23",
@@ -2936,7 +5281,7 @@
       "signup": {
         "status": 200,
         "ok": true,
-        "ms": 1242,
+        "ms": 531,
         "attempts": 1
       },
       "mirrors": [],
@@ -2948,10 +5293,10 @@
     },
     {
       "id": "matrix",
-      "checkedAt": "2026-11-01T22:01:27.574Z",
+      "checkedAt": "2026-11-02T01:31:09.776Z",
       "apiOk": true,
       "pricingOk": false,
-      "latencyMs": 2152,
+      "latencyMs": 266,
       "error": null,
       "systemName": null,
       "version": null,
@@ -2975,7 +5320,7 @@
       "signup": {
         "status": 200,
         "ok": true,
-        "ms": 2184,
+        "ms": 349,
         "attempts": 1
       },
       "mirrors": [],
@@ -2987,10 +5332,10 @@
     },
     {
       "id": "seekai",
-      "checkedAt": "2026-11-01T22:01:31.628Z",
+      "checkedAt": "2026-11-02T01:31:15.343Z",
       "apiOk": false,
       "pricingOk": false,
-      "latencyMs": 50,
+      "latencyMs": 373,
       "error": "HTTP 526",
       "systemName": "SeekAi",
       "version": "v1.0.0-rc.25",
@@ -3018,7 +5363,7 @@
       "signup": {
         "status": 526,
         "ok": false,
-        "ms": 1625,
+        "ms": 657,
         "attempts": 1
       },
       "mirrors": [
@@ -3043,10 +5388,10 @@
     },
     {
       "id": "aaawinn",
-      "checkedAt": "2026-11-01T22:01:27.064Z",
+      "checkedAt": "2026-11-02T01:31:10.281Z",
       "apiOk": true,
       "pricingOk": false,
-      "latencyMs": 1639,
+      "latencyMs": 770,
       "error": null,
       "systemName": "Long的AI",
       "version": "",
@@ -3098,7 +5443,7 @@
       "signup": {
         "status": 200,
         "ok": true,
-        "ms": 1637,
+        "ms": 771,
         "attempts": 1
       },
       "mirrors": [],
@@ -3110,10 +5455,10 @@
     },
     {
       "id": "hcnsec",
-      "checkedAt": "2026-11-01T22:01:28.948Z",
+      "checkedAt": "2026-11-02T01:31:09.967Z",
       "apiOk": true,
       "pricingOk": false,
-      "latencyMs": 3520,
+      "latencyMs": 446,
       "error": null,
       "systemName": "新疆幻城网安科技公益大模型安全网关",
       "version": "v1.0.0-rc.47-hc12",
@@ -3166,7 +5511,7 @@
       "signup": {
         "status": 200,
         "ok": true,
-        "ms": 2787,
+        "ms": 379,
         "attempts": 1
       },
       "mirrors": [],

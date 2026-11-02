@@ -1,10 +1,10 @@
 /** 生成 README：全部内容由 data/sites.json + data/live.json 渲染，请勿手改 README。 */
 import { staleHours } from './newapi.mjs';
-import { creditPlan, usd, breakdown, perDay, usdTotals, othersNote } from './credits.mjs';
+import { creditPlan, usd, breakdown, perDay, usdTotals, othersNote, DEFAULT_UNIT } from './credits.mjs';
 import { signupRoute, acceptsNew } from './signup.mjs';
 import { icon } from './changelog.mjs';
 import { coverage } from './history.mjs';
-import { pack, siteCopy, loginMethod, DEFAULT_LANG } from './i18n.mjs';
+import { pack, siteCopy, loginMethod, unitStyle, DEFAULT_LANG } from './i18n.mjs';
 
 /** shields.io 转义：- → --，_ → __，其余走 URI 编码 */
 const shield = (s) => encodeURIComponent(String(s).replace(/-/g, '--').replace(/_/g, '__'));
@@ -96,16 +96,18 @@ function overviewTable(sites, liveById, lang) {
   ].join('\n');
 }
 
-function modelTable(snap, lang) {
+function modelTable(snap, lang, unit = DEFAULT_UNIT) {
   if (!snap?.models?.length) return null;
   const t = pack(lang).modelsTable;
+  // 站内单位不是美元的站（熊猫API 的 🍚 额度）就把价格按它自己的单位写，别套一个 $ 上去
+  const price = (v) => usd(v, false, unit, lang);
   const rows = snap.models.map((m) => {
     // 按次计费的模型（New API 的 model_price）没有倍率概念，倍率栏照抄接口的 0 会被读成「免费」，
     // 真正有用的是每次多少钱，所以这类模型把价格放到输入列、倍率列写「按次」。
     const fixed = m.fixedPrice != null;
     const ratio = fixed ? t.perCall : (m.ratio ?? '—');
-    const inp = fixed ? t.perCallPrice(m.fixedPrice) : m.inputPerMTok != null ? `$${m.inputPerMTok}` : '—';
-    const out = fixed ? '—' : m.outputPerMTok != null ? `$${m.outputPerMTok}` : '—';
+    const inp = fixed ? t.perCallPrice(price(m.fixedPrice)) : m.inputPerMTok != null ? price(m.inputPerMTok) : '—';
+    const out = fixed ? '—' : m.outputPerMTok != null ? price(m.outputPerMTok) : '—';
     return `| \`${m.name}\` | ${ratio} | ${inp} | ${out} | ${(m.protocols ?? []).join(' / ') || '—'} |`;
   });
   return [`| ${t.headers.join(' | ')} |`, '| :-- | :--: | :--: | :--: | :--: |', ...rows].join('\n');
@@ -165,7 +167,8 @@ function siteSection(site, snap, lang, meta) {
   const copy = siteCopy(site, lang);
   const cm = claudeModel(snap, pack(lang));
   const om = openaiModel(snap, pack(lang));
-  const models = modelTable(snap, lang);
+  const plan = creditPlan(site, snap);
+  const models = modelTable(snap, lang, plan.unit);
   const mirror = (site.mirrors ?? [])
     .map((m) => `- ${mirrorLabel(m, lang)}${t.mirrorSep}<${m.homeUrl}> · ${ext(t.mirrorSignup, m.signupUrl)}`)
     .join('\n');
@@ -192,7 +195,14 @@ function siteSection(site, snap, lang, meta) {
   // 模型表来自接口、与语言无关；拿不到时优先用站点自己写的说明，英文版没翻就退到通用说法
   if (models) {
     const fixedAny = (snap?.models ?? []).some((m) => m.fixedPrice != null);
-    parts.push('', t.models, '', models, '', `<sub>${fixedAny ? t.modelNoteFixed : t.modelNoteToken}</sub>`);
+    // 非美元单位的站要换一套注脚：倍率 1 ≈ $2 / 1M 的口径在这儿不成立
+    const note =
+      plan.unit === DEFAULT_UNIT
+        ? fixedAny
+          ? t.modelNoteFixed
+          : t.modelNoteToken
+        : t.modelNoteUnit(unitStyle(plan.unit, lang).suffix.trim());
+    parts.push('', t.models, '', models, '', `<sub>${note}</sub>`);
   } else if (copy.modelsNote) {
     parts.push('', `> ${copy.modelsNote}`);
   } else if (lang !== DEFAULT_LANG) {

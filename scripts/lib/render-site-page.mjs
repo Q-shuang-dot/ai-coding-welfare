@@ -6,6 +6,7 @@
  * 内容全部来自 sites.json + live.json + history.json，不新增维护成本。
  */
 import { creditPlan, usd, breakdown } from './credits.mjs';
+import { unitStyle } from './i18n.mjs';
 import { signupRoute } from './signup.mjs';
 import { staleHours } from './newapi.mjs';
 import { esc, fmt, pageShell, breadcrumb, faqLd } from './layout.mjs';
@@ -43,20 +44,26 @@ function factRows(site, snap) {
 function modelsTable(site, snap) {
   if (!snap?.models?.length) return '';
   if (snap.models.every((m) => m.fixedPrice == null && m.inputPerMTok == null)) return '';
+  const unit = site.credits?.unit ?? 'usd';
+  // 非美元单位的站（熊猫API 的 🍚 额度）按它自己的单位标价，别套一个 $ 上去
+  const price = (v) => usd(v, false, unit);
+  const label = unitStyle(unit).suffix.trim();
   const fixedAny = snap.models.some((m) => m.fixedPrice != null);
   const rows = snap.models.map((m) => {
     const fixed = m.fixedPrice != null;
     return `<tr><td><code>${esc(m.name)}</code></td><td>${fixed ? '按次' : (m.ratio ?? '—')}</td><td>${
-      fixed ? `<b>$${m.fixedPrice} / 次</b>` : m.inputPerMTok != null ? `$${m.inputPerMTok}` : '—'
-    }</td><td>${fixed ? '—' : m.outputPerMTok != null ? `$${m.outputPerMTok}` : '—'}</td><td>${esc(
+      fixed ? `<b>${price(m.fixedPrice)} / 次</b>` : m.inputPerMTok != null ? price(m.inputPerMTok) : '—'
+    }</td><td>${fixed ? '—' : m.outputPerMTok != null ? price(m.outputPerMTok) : '—'}</td><td>${esc(
       (m.protocols ?? []).join(' / '),
     )}</td></tr>`;
   });
-  return `<section><h2>当前可用模型与价格</h2><p class="hint">${
-    fixedAny
-      ? '标「按次」的模型按请求次数计费，与 tokens 无关；其余倍率 1 ≈ $2 / 1M tokens。'
-      : '倍率 1 ≈ $2 / 1M tokens。'
-  }抓取自站点公开定价接口，一切以站内实时公示为准。</p>
+  const hint =
+    unit === 'usd'
+      ? fixedAny
+        ? '标「按次」的模型按请求次数计费，与 tokens 无关；其余倍率 1 ≈ $2 / 1M tokens。'
+        : '倍率 1 ≈ $2 / 1M tokens。'
+      : `标「按次」的模型按请求次数计费，与 tokens 无关；其余按倍率换算，站内以「${label}」结算、还要再乘分组倍率。`;
+  return `<section><h2>当前可用模型与价格</h2><p class="hint">${hint}抓取自站点公开定价接口，一切以站内实时公示为准。</p>
     <div class="table-wrap"><table><thead><tr><th>模型</th><th>倍率</th><th>输入 /1M</th><th>输出 /1M</th><th>协议</th></tr></thead>
     <tbody>${rows.join('')}</tbody></table></div></section>`;
 }

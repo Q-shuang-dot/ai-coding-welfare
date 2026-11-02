@@ -79,22 +79,25 @@ function modelsTable(sites, byId) {
   const rows = [];
   let fixedAny = false;
   for (const s of sites) {
+    // 站内单位不是美元的站，价格按它自己的单位显示（credits.unit），别套 $
+    const unit = s.credits?.unit ?? 'usd';
+    const price = (v) => usd(v, false, unit);
     for (const m of byId.get(s.id)?.models ?? []) {
       // 按次计费的模型没有倍率，接口里的 0 不能照抄（会被读成免费），价格挪到输入列
       const fixed = m.fixedPrice != null;
       if (fixed) fixedAny = true;
       rows.push(
         `<tr><td>${esc(s.name)}</td><td><code>${esc(m.name)}</code></td><td>${fixed ? '按次' : (m.ratio ?? '—')}</td>` +
-          `<td>${fixed ? `<b>$${m.fixedPrice} / 次</b>` : m.inputPerMTok != null ? `$${m.inputPerMTok}` : '—'}</td>` +
-          `<td>${fixed ? '—' : m.outputPerMTok != null ? `$${m.outputPerMTok}` : '—'}</td>` +
+          `<td>${fixed ? `<b>${price(m.fixedPrice)} / 次</b>` : m.inputPerMTok != null ? price(m.inputPerMTok) : '—'}</td>` +
+          `<td>${fixed ? '—' : m.outputPerMTok != null ? price(m.outputPerMTok) : '—'}</td>` +
           `<td>${esc((m.protocols ?? []).join(' / '))}</td></tr>`,
       );
     }
   }
   if (!rows.length) return '';
   const hint = fixedAny
-    ? '抓取自各站点公开的定价接口；标「按次」的模型按请求次数计费，与 tokens 无关，其余倍率 1 ≈ $2 / 1M tokens，一切以站内实时公示为准。'
-    : '抓取自各站点公开的定价接口；倍率 1 ≈ $2 / 1M tokens，一切以站内实时公示为准。';
+    ? '抓取自各站点公开的定价接口；标「按次」的模型按请求次数计费，与 tokens 无关，其余倍率 1 ≈ $2 / 1M tokens（非美元计价的站按站内单位显示），一切以站内实时公示为准。'
+    : '抓取自各站点公开的定价接口；倍率 1 ≈ $2 / 1M tokens（非美元计价的站按站内单位显示），一切以站内实时公示为准。';
   return `
     <section id="models">
       <h2>可用模型与价格</h2>

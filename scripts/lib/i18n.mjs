@@ -22,12 +22,14 @@ const UNITS = {
     usd: { prefix: '$', suffix: '' },
     point: { prefix: '', suffix: ' 积分' },
     'site-usd': { prefix: '', suffix: ' 站内刀' },
+    credit: { prefix: '', suffix: ' 额度' },
     free: { prefix: '', suffix: '' },
   },
   en: {
     usd: { prefix: '$', suffix: '' },
     point: { prefix: '', suffix: ' pts' },
     'site-usd': { prefix: '', suffix: ' site-USD' },
+    credit: { prefix: '', suffix: ' credit' },
     free: { prefix: '', suffix: '' },
   },
 };
@@ -140,12 +142,14 @@ const en = {
       'Rows marked "per call" are billed per request regardless of token usage; everything else uses ratio 1 ≈ $2 / 1M tokens. Always confirm against in-site pricing.',
     modelNoteToken:
       'Ratio 1 ≈ $2 / 1M tokens; output price = ratio × completion ratio × $2. Always confirm against in-site pricing.',
+    modelNoteUnit: (unit) =>
+      `Rows marked "per call" are billed per request regardless of token usage; the rest are converted from ratios and settled in the site's own unit (${unit}), on top of the group ratio. Always confirm against in-site pricing.`,
   },
 
   modelsTable: {
     headers: ['Model', 'Ratio', 'Input / 1M tokens', 'Output / 1M tokens', 'Protocols'],
     perCall: 'per call',
-    perCallPrice: (v) => `**$${v} / call**`,
+    perCallPrice: (v) => `**${v} / call**`,
   },
 
   setup: {
@@ -403,12 +407,14 @@ const zh = {
     noModelTable: '> 该站模型清单需登录后台查看，注册后在「模型价格」页确认。',
     modelNoteFixed: '标「按次」的模型按请求次数计费，与 tokens 用量无关；其余倍率 1 ≈ $2 / 1M tokens。以站内实时价格为准。',
     modelNoteToken: '倍率 1 ≈ $2 / 1M tokens，输出价 = 倍率 × 补全倍率 × $2；以站内实时价格为准。',
+    modelNoteUnit: (unit) =>
+      `标「按次」的模型按请求次数计费，与 tokens 无关；其余按倍率换算，站内以「${unit}」结算、还要再乘分组倍率。以站内实时价格为准。`,
   },
 
   modelsTable: {
     headers: ['模型', '倍率', '输入 / 1M tokens', '输出 / 1M tokens', '协议'],
     perCall: '按次',
-    perCallPrice: (v) => `**$${v} / 次**`,
+    perCallPrice: (v) => `**${v} / 次**`,
   },
 
   setup: {

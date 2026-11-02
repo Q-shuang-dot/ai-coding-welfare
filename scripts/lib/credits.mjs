@@ -15,6 +15,8 @@
  * 一律只算美元站，见 usdTotals——把积分和美元加在一起就是编数字。
  * 同理，DoCode 这类站虽然也写「刀」，但它的刀是站内计价单位（充值比例 1 元 = 50 刀），
  * 和按 ¥7.3 ≈ $1 发额度的站不是一个量级，登记成 site-usd 一样排除在合计之外。
+ * 还有一类站（熊猫API）把「额度」做成自定义货币（🍚、quto_display_type = CUSTOM）并按分组倍率计价，
+ * 额度与美元完全脱钩，登记成 credit，页面显示「280 额度」，同样不并入美元合计。
  */
 import { pack, unitStyle, DEFAULT_LANG } from './i18n.mjs';
 
@@ -22,7 +24,7 @@ const num = (v) => (Number.isFinite(Number(v)) && Number(v) > 0 ? Number(v) : nu
 
 export const DEFAULT_UNIT = 'usd';
 
-export const KNOWN_UNITS = ['usd', 'point', 'site-usd', 'free'];
+export const KNOWN_UNITS = ['usd', 'point', 'site-usd', 'credit', 'free'];
 
 export function creditPlan(site, snap) {
   const c = site?.credits ?? {};

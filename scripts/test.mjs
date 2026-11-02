@@ -323,10 +323,23 @@ test('积分站不拿接口的美元邀请额度对账，避免误报', () => {
   assert.deepEqual(auditCredits([MX], { sites: [{ id: 'matrix', inviteeBonusUsd: 30 }] }), []);
 });
 test('未登记的单位原样后缀显示，并告警提醒补 UNITS', () => {
-  const odd = { id: 'odd', name: 'Odd', credits: { signup: 5, unit: 'credit' } };
-  assert.equal(usd(5, false, 'credit'), '5 credit');
+  const odd = { id: 'odd', name: 'Odd', credits: { signup: 5, unit: 'ticket' } };
+  assert.equal(usd(5, false, 'ticket'), '5 ticket');
   assert.match(auditCredits([odd], { sites: [] }).join(''), /不在已知单位/);
 });
+/** 熊猫API 的「额度」是自定义货币（🍚、quota_display_type = CUSTOM），和美元没有公开换算 */
+const PANDA = { id: 'api520', name: '熊猫API', credits: { signup: 100, invite: 100, dailyCheckin: null, approx: false, unit: 'credit' } };
+
+test('自定义货币「额度」按额度显示，不并进美元合计', () => {
+  const p = creditPlan(PANDA, null);
+  assert.equal(p.firstDay, 200);
+  assert.equal(usd(p.firstDay, p.approx, p.unit), '200 额度');
+  assert.equal(usd(280, false, 'credit', 'en'), '280 credit');
+  assert.equal(breakdown(p), '注册 100 额度 + 本页邀请 100 额度');
+  assert.deepEqual(auditCredits([PANDA], { sites: [] }), []); // 已登记的单位不该告警
+  assert.deepEqual(usdTotals([creditPlan(AR, OLD_GOOD), p]).others.map((x) => x.firstDay), [200]);
+});
+
 /** DoCode 的「刀」是站内计价单位：面板 price=0.02（1 元 = 50 刀），和 ¥7.3 ≈ $1 的站差两个数量级 */
 const DC = { id: 'docode', name: 'DoCode', credits: { signup: 50, invite: 250, dailyCheckin: null, approx: false, unit: 'site-usd' } };
 
@@ -344,6 +357,13 @@ test('站内刀按「站内刀」显示，不加 $、不并进美元合计', () 
 test('新收录事件按站点自己的单位写额度，不硬拼 $', () => {
   const [ev] = diffSnapshots({ sites: [] }, { generatedAt: iso(0), sites: [{ id: 'docode' }] }, [DC]);
   assert.equal(ev.text, '新收录 DoCode：注册送 50 站内刀，邀请再加 250 站内刀');
+});
+test('移除收录时用上一版快照自报的站名，别把 slug 写进日志', () => {
+  const prev = { generatedAt: iso(0), sites: [{ id: 'chuan', systemName: '启源星', online: true }] };
+  const [ev] = diffSnapshots(prev, { generatedAt: iso(1), sites: [] }, []);
+  assert.equal(ev.type, 'site_removed');
+  assert.equal(ev.siteName, '启源星');
+  assert.equal(ev.text, '移除收录 启源星');
 });
 
 console.log('vibe-code 面板（Codex 公益站，接口不是 New API）');
