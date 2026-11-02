@@ -127,6 +127,20 @@ function uptimeBlock(site, history) {
     <p><a class="navlink" href="../../status/">看全部站点的可用性 →</a></p></section>`;
 }
 
+/** 这个站自己的调价 / 掉线 / 模型上下线记录：数据早就在 changelog 里，只是以前只挂在全站日志页 */
+function eventsBlock(site, events) {
+  const list = (events ?? [])
+    .filter((e) => e.siteId === site.id)
+    .sort((a, b) => String(b.at).localeCompare(String(a.at)))
+    .slice(0, 5);
+  if (!list.length) return '';
+  return `<section><h2>这个站最近发生了什么</h2>
+    <ul class="hl">${list
+      .map((e) => `<li><span class="hint">${esc(String(e.at ?? '').slice(0, 10))}</span> ${esc(e.text)}</li>`)
+      .join('')}</ul>
+    <p><a class="navlink" href="../../changelog/">查看全部变动 →</a></p></section>`;
+}
+
 function list(title, items, cls = 'hl') {
   if (!items?.length) return '';
   return `<section><h2>${esc(title)}</h2><ul class="${cls}">${items.map((t) => `<li>${esc(t)}</li>`).join('')}</ul></section>`;
@@ -179,12 +193,14 @@ function archivedPage({ meta, site, live, css }) {
   });
 }
 
-export function renderSitePage({ meta, site, snap, live, css, history, siblings = [] }) {
+export function renderSitePage({ meta, site, snap, live, css, history, events = [], siblings = [] }) {
   if (site.archived) return archivedPage({ meta, site, live, css });
   const p = creditPlan(site, snap);
   const up = Boolean(snap?.online);
   const route = signupRoute(snap);
   const shut = route.state === 'closed';
+  const reviewed = site.reviewedAt ? String(site.reviewedAt) : null;
+  const reviewStale = reviewed ? Date.now() - new Date(reviewed).getTime() > 90 * 86_400_000 : false;
   const url = `${meta.pagesUrl}sites/${site.id}/`;
   const title = `${site.name} 免费额度 / 邀请链接 / Claude Code 配置 — ${meta.title}`;
   const desc = `${site.name}：${site.subtitle}${
@@ -229,6 +245,11 @@ export function renderSitePage({ meta, site, snap, live, css, history, siblings 
     <div class="rows"><div class="row head"><div>项目</div><div>数值</div></div>${
       factRows(site, snap).map(([k, v]) => `<div class="row"><div>${esc(k)}</div><div>${v}</div></div>`).join('')
     }</div>
+    <p class="hint">来源：额度为站方公示 + 人工登记（邀请额度由接口核对）；模型与价格为接口实测；可用性为自动探测。${
+      reviewed
+        ? `手工字段最后核对 <b>${esc(reviewed)}</b>${reviewStale ? '，已超过 90 天，信息可能过期。' : '。'}`
+        : ''
+    }</p>
   </section>
 
   ${list('为什么值得注册', site.highlights)}
@@ -246,6 +267,8 @@ export function renderSitePage({ meta, site, snap, live, css, history, siblings 
       : ''
   }
   ${list('官方渠道', site.community)}
+
+  ${eventsBlock(site, events)}
 
   <section><h2>常见问题</h2>
     ${faq.map(([q, a]) => `<details><summary>${esc(q)}</summary><p>${esc(a)}</p></details>`).join('\n    ')}

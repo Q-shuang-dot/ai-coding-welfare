@@ -1020,6 +1020,28 @@ test('每一页的 JSON-LD 都必须是合法 JSON，且带面包屑', () => {
   const types = jsonLd(pages[0])[0].map((x) => x['@type']);
   assert.deepEqual(types, ['BreadcrumbList', 'FAQPage']);
 });
+test('站点页带这个站自己的最近变动（最多 5 条）和手工字段核对日期', () => {
+  const events = Array.from({ length: 7 }, (_, i) => ({
+    at: `2026-10-0${i + 1}T00:00:00.000Z`,
+    siteId: 'demo',
+    type: 'x',
+    text: `变动${i + 1}`,
+  }));
+  const html = renderSitePage({
+    meta: META,
+    site: { ...SITE, reviewedAt: '2026-11-02' },
+    snap: FIXED_SNAP,
+    live: LIVE,
+    css: '',
+    history: HIST,
+    events,
+    siblings: [],
+  });
+  assert.match(html, /这个站最近发生了什么/);
+  assert.equal((html.match(/变动\d/g) || []).length, 5, '只显示最近 5 条');
+  assert.match(html, /手工字段最后核对 <b>2026-11-02<\/b>/);
+});
+
 test('数据里的 HTML / 引号不许原样进页面（sites.json 是手工维护的，迟早会有尖括号）', () => {
   const evil = { ...SITE, name: '<img src=x onerror=alert(1)>', subtitle: '带"引号"的副标题' };
   const html = renderSitePage({ meta: META, site: evil, snap: FIXED_SNAP, live: LIVE, css: '', history: HIST, siblings: [] });

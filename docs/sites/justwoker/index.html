@@ -16,6 +16,8 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://q-shuang-dot.github.io/ai-coding-welfare/assets/social-preview.png">
 <link rel="canonical" href="https://q-shuang-dot.github.io/ai-coding-welfare/sites/justwoker/">
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+<meta name="theme-color" content="#2563eb">
 <link rel="alternate" type="application/atom+xml" title="变动日志" href="https://q-shuang-dot.github.io/ai-coding-welfare/feed.xml">
 <script type="application/ld+json">[{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"AI 福利站 · Claude Code / Codex 免费额度白嫖导航","item":"https://q-shuang-dot.github.io/ai-coding-welfare/"},{"@type":"ListItem","position":2,"name":"JustDoWork","item":"https://q-shuang-dot.github.io/ai-coding-welfare/sites/justwoker/"}]},{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"JustDoWork 注册送多少额度？","acceptedAnswer":{"@type":"Answer","text":"站方没有公开固定数字（/api/status 里 quota_for_new_user 为空），免费额度靠每日签到 + 站内任务，注册后进后台核对实际到账。"}},{"@type":"Question","name":"JustDoWork 怎么注册？","acceptedAnswer":{"@type":"Answer","text":"只能用 GitHub 授权登录，注册开着 Cloudflare Turnstile；注册页和 API 都在 Cloudflare 后面，机房 IP 可能被 403，家用宽带正常。"}},{"@type":"Question","name":"JustDoWork 支持 Claude Code 吗？","acceptedAnswer":{"@type":"Answer","text":"支持。Anthropic 端点 https://api.justwoker.icu（Base URL 不带 /v1），OpenAI 端点 https://api.justwoker.icu/v1；主力是 gpt-5.6 系模型。"}}]}]</script>
 <style>
@@ -284,6 +286,7 @@ tr.shut td { color: var(--fg-dim); }
 
   <section><h2>能拿多少额度</h2>
     <div class="rows"><div class="row head"><div>项目</div><div>数值</div></div><div class="row"><div>站点名称</div><div>JustDoWork</div></div><div class="row"><div>面板版本</div><div><code>v1.0.0-rc.23</code></div></div><div class="row"><div>每日签到</div><div>✅</div></div><div class="row"><div>开放注册</div><div>✅（仅 GitHub 注册）</div></div><div class="row"><div>登录方式</div><div>GitHub / 账号密码</div></div><div class="row"><div>账号门槛</div><div>GitHub 满 365 天</div></div><div class="row"><div>接口延迟</div><div>1560 ms</div></div><div class="row"><div>数据快照</div><div>2026-11-02 03:06 UTC</div></div></div>
+    <p class="hint">来源：额度为站方公示 + 人工登记（邀请额度由接口核对）；模型与价格为接口实测；可用性为自动探测。手工字段最后核对 <b>2026-11-02</b>。</p>
   </section>
 
   <section><h2>为什么值得注册</h2><ul class="hl"><li>只用 GitHub 授权登录，不用记密码、不用邮箱验证码（面板 email_verification = false），注册流程干净</li><li>每日签到与站内任务都开着（checkin_enabled / enable_task 均为 true），登录后台点一下就能持续拿额度</li><li>主打 gpt-5.6 系模型（gpt-5.6-luna / sol / terra），实测支持 function calling，能跑 Claude Code / Codex 的工具调用</li><li>Anthropic 原生协议在架：Claude Code 填 Base URL 直连 /v1/messages，OpenAI 兼容路由走 /v1，Codex CLI 也能对接</li></ul></section>
@@ -310,6 +313,8 @@ wire_api = &quot;chat&quot;</code></pre><button class="copy" type="button">复�
   <section><h2>最近 7 天可用性</h2><p class="hint">最近 7 天自动探测 34 次，在线 34 次（<b>100%</b>）。</p>
     <p><a class="navlink" href="../../status/">看全部站点的可用性 →</a></p></section>
   
+  
+
   
 
   <section><h2>常见问题</h2>

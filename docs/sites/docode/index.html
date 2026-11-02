@@ -16,6 +16,8 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://q-shuang-dot.github.io/ai-coding-welfare/assets/social-preview.png">
 <link rel="canonical" href="https://q-shuang-dot.github.io/ai-coding-welfare/sites/docode/">
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+<meta name="theme-color" content="#2563eb">
 <link rel="alternate" type="application/atom+xml" title="变动日志" href="https://q-shuang-dot.github.io/ai-coding-welfare/feed.xml">
 <script type="application/ld+json">[{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"AI 福利站 · Claude Code / Codex 免费额度白嫖导航","item":"https://q-shuang-dot.github.io/ai-coding-welfare/"},{"@type":"ListItem","position":2,"name":"DoCode","item":"https://q-shuang-dot.github.io/ai-coding-welfare/sites/docode/"}]},{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"DoCode 的邀请码怎么填？","acceptedAnswer":{"@type":"Answer","text":"注册表单里的「邀请码」一栏填 1Qof。从本页链接进入通常会自动填好，提交前再确认一次不是空的——空着只有注册送的 50 站内刀，250 邀请额度事后补不上。"}},{"@type":"Question","name":"DoCode 首日 300 站内刀值多少钱？","acceptedAnswer":{"@type":"Answer","text":"站内「刀」不是美元：面板 price = 0.02，即 1 元 = 50 站内刀（公告说平时恢复 1:25），300 刀约合充值面值 ¥6~12，本页不把它折成美元。"}},{"@type":"Question","name":"DoCode 用什么协议接入？","acceptedAnswer":{"@type":"Answer","text":"Anthropic 端点 https://docode.cc（不带 /v1），OpenAI 端点 https://docode.cc/v1；主域名打不开时换 api.docode.cc，同一套账号和额度。"}}]}]</script>
 <style>
@@ -284,6 +286,7 @@ tr.shut td { color: var(--fg-dim); }
 
   <section><h2>能拿多少额度</h2>
     <div class="rows"><div class="row head"><div>项目</div><div>数值</div></div><div class="row"><div>首日可得</div><div><b>300 站内刀</b></div></div><div class="row"><div>额度构成</div><div>注册 50 站内刀 + 本页邀请 250 站内刀</div></div><div class="row"><div>站点名称</div><div>DoCode</div></div><div class="row"><div>每日签到</div><div>❌</div></div><div class="row"><div>开放注册</div><div>✅（开放注册）</div></div><div class="row"><div>登录方式</div><div>账号密码</div></div><div class="row"><div>接口延迟</div><div>1088 ms</div></div><div class="row"><div>数据快照</div><div>2026-11-02 03:06 UTC</div></div></div>
+    <p class="hint">来源：额度为站方公示 + 人工登记（邀请额度由接口核对）；模型与价格为接口实测；可用性为自动探测。手工字段最后核对 <b>2026-11-02</b>。</p>
   </section>
 
   <section><h2>为什么值得注册</h2><ul class="hl"><li>⚠️ 别漏了邀请码：注册表单里的「邀请码」一栏填 1Qof，这 250 站内刀才会到账。从本页链接进去通常会自动带上，但提交前务必肉眼确认那一栏不是空的——没填就只有注册送的 50，事后补不上</li><li>注册送 50 站内刀，填了邀请码 1Qof 再加 250，首日 300 刀不用充值——注意这个「刀」是站内计价单位，不是美元，换算见下面的风险提示</li><li>Claude 和 GPT 同时在架：站内公告点名 cc / cc-kiro 分组的 sonnet-5、按次计费的 opus4.6，以及 GPT pro / plus、Grok、Gemini、fable-5，一把 Key 通吃，本页多数站只给其中一边</li><li>Anthropic 与 OpenAI 两条原生路由都开着（不带 key 探 /v1/messages 与 /v1/chat/completions 都回 New API 的 401 Invalid token），Claude Code 填 Base URL 就能直连，Codex CLI 走 /v1</li><li>面板公开配置里带着一键导入的 deeplink：CC Switch、Cherry Studio、DeepChat、OpenCat、Lobe Chat 等客户端可以从后台直接把 Key 推过去</li><li>主域名之外还有 api.docode.cc（公告写「直连美国」），实测两个入口都活着，主站进不去时可以换</li></ul></section>
@@ -311,6 +314,10 @@ wire_api = &quot;chat&quot;</code></pre><button class="copy" type="button">复�
     <p><a class="navlink" href="../../status/">看全部站点的可用性 →</a></p></section>
   <section><h2>镜像 / 备用入口</h2><ul class="hl"><li>直连美国：<a href="https://api.docode.cc/register?aff=1Qof" target="_blank" rel="noopener">https://api.docode.cc</a></li></ul></section>
   
+
+  <section><h2>这个站最近发生了什么</h2>
+    <ul class="hl"><li><span class="hint">2026-10-22</span> DoCode 发了公告：Gemini Ultra分组上架，仅Gemini 4 Argon</li><li><span class="hint">2026-10-15</span> DoCode 发了公告：生图功能暂时不可用，原因为 OpenAI 官方协议变更。 预计这两天修复好</li><li><span class="hint">2026-10-09</span> DoCode 发了公告：gpt 全系已大幅下调倍率，gptpro 最低 7 倍，不降智最低 15 倍，官 key 最低 24 倍。</li><li><span class="hint">2026-10-04</span> DoCode 发了公告：最近上线模型：gpt-6.1-sol、claude-opus-5-5、claude-sonnet-5-5</li><li><span class="hint">2026-09-22</span> DoCode 发了公告：中秋节活动预告：中秋节当天凡是 vip500，赠送 1500 额度；vip1000，赠送 3000 额度，；vip2000，赠送 5000 额度。中秋节三天，充值加赠 5-20%。</li></ul>
+    <p><a class="navlink" href="../../changelog/">查看全部变动 →</a></p></section>
 
   <section><h2>常见问题</h2>
     <details><summary>DoCode 的邀请码怎么填？</summary><p>注册表单里的「邀请码」一栏填 1Qof。从本页链接进入通常会自动填好，提交前再确认一次不是空的——空着只有注册送的 50 站内刀，250 邀请额度事后补不上。</p></details>

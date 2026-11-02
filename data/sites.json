@@ -157,7 +157,8 @@
           "注册完额度没到账怎么办？",
           "先退出登录再重新登录一次，额度通常会在这时结算显示；另外确认是从本页邀请链接进入注册的，裸链注册拿不到那 $50 邀请额度。"
         ]
-      ]
+      ],
+      "reviewedAt": "2026-11-02"
     },
     {
       "id": "api520",
@@ -291,7 +292,8 @@
           "熊猫API 支持 Claude Code 吗？",
           "支持。Anthropic 端点是 https://api520.pro（Base URL 不带 /v1），OpenAI 端点是 https://api520.pro/v1；模型按量与按次混排，价格以站内实时页面为准。"
         ]
-      ]
+      ],
+      "reviewedAt": "2026-11-02"
     },
     {
       "id": "docode",
@@ -414,7 +416,8 @@
           "DoCode 用什么协议接入？",
           "Anthropic 端点 https://docode.cc（不带 /v1），OpenAI 端点 https://docode.cc/v1；主域名打不开时换 api.docode.cc，同一套账号和额度。"
         ]
-      ]
+      ],
+      "reviewedAt": "2026-11-02"
     },
     {
       "id": "nianhua",
@@ -547,7 +550,8 @@
           "年华 API 的「刀」是美元吗？",
           "不是。面板 price = 1，约 ¥1 = 站内 1 刀，和「¥7.3 ≈ $1」的站不是一个口径；本页不并入美元合计，实际倍率以控制台为准。"
         ]
-      ]
+      ],
+      "reviewedAt": "2026-11-02"
     },
     {
       "id": "supxh",
@@ -654,7 +658,8 @@
           "肖恩AI 的积分能折成多少钱？",
           "站方没有公开积分与人民币 / 美元的换算，本页不折算，也不并进跨站美元合计；实际到账与可用模型以控制台为准。"
         ]
-      ]
+      ],
+      "reviewedAt": "2026-11-02"
     },
     {
       "id": "api456",
@@ -752,7 +757,8 @@
           "api456.me 支持 Claude Code 吗？",
           "不支持直连。站点只提供 OpenAI 兼容端点 https://api456.me/v1，没有 Anthropic 原生接口，Claude Code 要用得自己做协议转换。"
         ]
-      ]
+      ],
+      "reviewedAt": "2026-11-02"
     },
     {
       "id": "justwoker",
@@ -860,7 +866,8 @@
           "JustDoWork 支持 Claude Code 吗？",
           "支持。Anthropic 端点 https://api.justwoker.icu（Base URL 不带 /v1），OpenAI 端点 https://api.justwoker.icu/v1；主力是 gpt-5.6 系模型。"
         ]
-      ]
+      ],
+      "reviewedAt": "2026-11-02"
     },
     {
       "id": "matrix",
@@ -1000,7 +1007,8 @@
           "Matrix 的积分会过期吗？",
           "活动发的是「获赠积分」，长期有效，但只能调用支持获赠积分的模型与平台服务；增长活动官方写明有效期到 2026-12-31，之后规则可能调整。"
         ]
-      ]
+      ],
+      "reviewedAt": "2026-11-02"
     },
     {
       "id": "seekai",
@@ -1121,7 +1129,8 @@
           "SeekAi 现在能正常注册吗？",
           "2026-11-02 检查时注册页与首页返回 HTTP 526（源站连接超时），备用注册入口 https://api.hcnsec.cn/sign-up?aff=3J8z 仍可用；主站恢复前可以先走备用入口。"
         ]
-      ]
+      ],
+      "reviewedAt": "2026-11-02"
     },
     {
       "id": "aaawinn",
@@ -1239,7 +1248,8 @@
           "Long的AI 的 GPT 模型怎么接？",
           "白嫖分组的 GPT 系只支持 Anthropic 协议（公告说 OpenAI 协议有兼容问题），Base URL 填 https://aaawinn.xyz（不带 /v1），按 Claude Code 的方式接。"
         ]
-      ]
+      ],
+      "reviewedAt": "2026-11-02"
     },
     {
       "id": "hcnsec",
@@ -1367,7 +1377,8 @@
           "新疆幻城网安支持 Claude Code 吗？",
           "支持。Anthropic 端点 https://api.hcnsec.cn（Base URL 不带 /v1），OpenAI 端点 https://api.hcnsec.cn/v1；新建密钥时要把分组选成对应套餐的分组，否则调不通。"
         ]
-      ]
+      ],
+      "reviewedAt": "2026-11-02"
     },
     {
       "id": "chuan",

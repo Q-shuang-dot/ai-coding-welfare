@@ -79,6 +79,8 @@ ${ogImage ? `<meta property="og:image:alt" content="${esc(title)}">` : ''}
 <meta name="twitter:card" content="summary_large_image">
 ${ogImage ? `<meta name="twitter:image" content="${esc(ogImage)}">` : ''}
 <link rel="canonical" href="${esc(canonical)}">
+<link rel="icon" href="${esc(base)}assets/favicon.svg" type="image/svg+xml">
+<meta name="theme-color" content="#2563eb">
 <link rel="alternate" type="application/atom+xml" title="变动日志" href="${esc(feed)}">
 ${jsonLd.length ? `<script type="application/ld+json">${ld(jsonLd.length === 1 ? jsonLd[0] : jsonLd)}</script>` : ''}
 ${css ? `<style>\n${css}</style>` : `<link rel="stylesheet" href="${esc(base)}assets/style.css">`}

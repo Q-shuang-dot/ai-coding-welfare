@@ -25,6 +25,7 @@ import { groupByDay, renderAtom } from './lib/changelog.mjs';
 import { EMPTY_HISTORY } from './lib/history.mjs';
 import { auditCredits } from './lib/credits.mjs';
 import { activeSites, archivedSites } from './lib/archived.mjs';
+import { pageShell } from './lib/layout.mjs';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const p = (...s) => path.join(ROOT, ...s);
@@ -67,8 +68,40 @@ const write = async (rel, content) => {
   await writeFile(p('docs', rel), content, 'utf8');
 };
 
+const siteBase = meta.pagesUrl?.replace(/\/?$/, '/') ?? '/';
+
 await write('index.html', renderHtml({ meta, sites, live, css, groups, history, archived }));
 await write('.nojekyll', '');
+
+// GitHub Pages 的默认 404 太生硬：给条回首页 / 看状态页的路，别让从群里点进来的访客直接关掉
+await write(
+  '404.html',
+  pageShell({
+    meta,
+    css,
+    live,
+    base: siteBase,
+    title: `页面不存在 — ${meta.title}`,
+    desc: '这个页面不存在，可能链接写错了，或者站点已经归档。回首页看全部福利站。',
+    canonical: `${siteBase}404.html`,
+    body: `  <header class="hero">
+    <p class="crumb"><a href="${siteBase}">${meta.title}</a> › 404</p>
+    <h1>404 · 这个页面不存在</h1>
+    <p class="sub">链接可能写错了，或者这个站点已经归档。</p>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="${siteBase}">回首页看全部站点</a>
+      <a class="btn btn-ghost" href="${siteBase}status/">看站点可用性</a>
+    </div>
+  </header>
+  <section><h2>可能想找</h2>
+    <ul class="hl">
+      <li><a href="${siteBase}compare/">中转站折算对比</a></li>
+      <li><a href="${siteBase}changelog/">最近的变动记录</a></li>
+      <li><a href="${meta.repoUrl}/issues">Issue 区 · 投稿与反馈</a></li>
+    </ul>
+  </section>`,
+  }),
+);
 
 for (const site of [...sites, ...archived]) {
   await write(
@@ -80,6 +113,7 @@ for (const site of [...sites, ...archived]) {
       live,
       css,
       history,
+      events: changelog.events ?? [],
       siblings: sites.filter((s) => s.id !== site.id).map(({ id, name, subtitle }) => ({ id, name, subtitle })),
     }),
   );
@@ -91,7 +125,7 @@ await write('changelog/index.html', renderChangelogPage({ meta, sites: allSites,
 await write('feed.xml', renderAtom({ meta, groups, updated: changelog.updatedAt ?? live.generatedAt }));
 
 // 落地页要被搜到才有推广价值：robots + 把每一页都写进 sitemap
-const base = meta.pagesUrl?.replace(/\/?$/, '/') ?? '';
+const base = siteBase;
 const day = (live.generatedAt ?? new Date().toISOString()).slice(0, 10);
 const urls = [
   { loc: base, freq: 'daily', pri: '1.0' },

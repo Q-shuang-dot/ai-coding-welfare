@@ -16,6 +16,8 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://q-shuang-dot.github.io/ai-coding-welfare/assets/social-preview.png">
 <link rel="canonical" href="https://q-shuang-dot.github.io/ai-coding-welfare/sites/api520/">
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+<meta name="theme-color" content="#2563eb">
 <link rel="alternate" type="application/atom+xml" title="变动日志" href="https://q-shuang-dot.github.io/ai-coding-welfare/feed.xml">
 <script type="application/ld+json">[{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"AI 福利站 · Claude Code / Codex 免费额度白嫖导航","item":"https://q-shuang-dot.github.io/ai-coding-welfare/"},{"@type":"ListItem","position":2,"name":"熊猫API","item":"https://q-shuang-dot.github.io/ai-coding-welfare/sites/api520/"}]},{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"熊猫API 注册送多少额度？","acceptedAnswer":{"@type":"Answer","text":"注册 100 额度，从本页邀请链接进入再得 100，合计 200 额度；没有每日签到，之后只能靠邀请、站内任务或买卡密续额度。"}},{"@type":"Question","name":"200 额度大概能用多久？","acceptedAnswer":{"@type":"Answer","text":"按站方公示的 1 元 ≈ 220 额度折算约 ¥0.9。按次价目最多跑 1 次官 key 直连 Opus（280 额度/次）或 8 次 kiro Opus（24~27 额度/次），只够试吃。"}},{"@type":"Question","name":"熊猫API 支持 Claude Code 吗？","acceptedAnswer":{"@type":"Answer","text":"支持。Anthropic 端点是 https://api520.pro（Base URL 不带 /v1），OpenAI 端点是 https://api520.pro/v1；模型按量与按次混排，价格以站内实时页面为准。"}}]}]</script>
 <style>
@@ -284,6 +286,7 @@ tr.shut td { color: var(--fg-dim); }
 
   <section><h2>能拿多少额度</h2>
     <div class="rows"><div class="row head"><div>项目</div><div>数值</div></div><div class="row"><div>首日可得</div><div><b>200 额度</b></div></div><div class="row"><div>额度构成</div><div>注册 100 额度 + 本页邀请 100 额度</div></div><div class="row"><div>站点名称</div><div>熊猫API</div></div><div class="row"><div>面板版本</div><div><code>v1.0.0-rc.21-5555-gd455867c9-dirty</code></div></div><div class="row"><div>每日签到</div><div>❌</div></div><div class="row"><div>开放注册</div><div>✅（开放注册）</div></div><div class="row"><div>登录方式</div><div>账号密码</div></div><div class="row"><div>接口延迟</div><div>1006 ms</div></div><div class="row"><div>数据快照</div><div>2026-11-02 03:06 UTC</div></div></div>
+    <p class="hint">来源：额度为站方公示 + 人工登记（邀请额度由接口核对）；模型与价格为接口实测；可用性为自动探测。手工字段最后核对 <b>2026-11-02</b>。</p>
   </section>
 
   <section><h2>为什么值得注册</h2><ul class="hl"><li>注册立得 100 额度，从本页邀请链接进入再得 100，新用户最多一次拿 200 额度（站方 Help 文档原文口径，2026-11-02 核对）</li><li>公开定价接口免登录可读：2026-11-02 实测 151 条模型记录 = 52 个按量 + 99 个按次（其中 3 条是站方拿模型位当公告栏的占位条目，真模型约 148 个），Claude Opus 4.5~5 与 sonnet 4.6 / fable-5-1、GPT-6 / 6.1-sol / 5.6、Gemini 3.x、Grok、DeepSeek v4.1、Kimi K2.7、MiniMax、GLM 都在架</li><li>Anthropic 与 OpenAI 两条原生路由都活着：匿名 POST /v1/messages 与 /v1/chat/completions 回的是 New API 的 401 Invalid token 而不是 404（2026-11-02 实测），Claude Code 填 Base URL 直连、Codex CLI 走 /v1</li><li>按次计费的模型把价格写进名字里：kiro Opus 24~27 额度一次、官 key 直连 Opus 280 额度一次、gemini 生图 1 额度一次，单次 1~280 额度不等</li><li>面板带一键导入 deeplink：CC Switch、Cherry Studio、AionUI、DeepChat、Lobe Chat、OpenCat、AMA 问天等客户端能从后台直接把 Key 推过去</li><li>站方文档把「买卡密 → 兑换码充值 → 建令牌」三步写全了：1 元 220 额度起，10 元 2200、30 元 6900、50 元 1.2 万、100 元 2.5 万</li><li>站方文档另列 api521.pro / api522.pro 两个主站域名（本页实测都能打开、面板自报同名），主域名被墙时可以换</li></ul></section>
@@ -313,6 +316,10 @@ wire_api = &quot;chat&quot;</code></pre><button class="copy" type="button">复�
     <p><a class="navlink" href="../../status/">看全部站点的可用性 →</a></p></section>
   
   <section><h2>官方渠道</h2><ul class="hl"><li>文档: https://help.api521.pro</li><li>购买: https://s.tb.cn/c.0x5qxf（站方文档公示的淘宝小店「熊猫ai的小店2店」）</li><li>监控: https://look.api520.pro（站方在模型位里公示的监控站，2026-11-02 实测可打开）</li><li>备用域名: https://api521.pro / https://api522.pro（站方文档标注主站 2 / 主站 3）</li></ul></section>
+
+  <section><h2>这个站最近发生了什么</h2>
+    <ul class="hl"><li><span class="hint">2026-11-02</span> 新收录 熊猫API：注册送 100 额度，邀请再加 100 额度</li></ul>
+    <p><a class="navlink" href="../../changelog/">查看全部变动 →</a></p></section>
 
   <section><h2>常见问题</h2>
     <details><summary>熊猫API 注册送多少额度？</summary><p>注册 100 额度，从本页邀请链接进入再得 100，合计 200 额度；没有每日签到，之后只能靠邀请、站内任务或买卡密续额度。</p></details>
