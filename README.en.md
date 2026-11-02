@@ -45,15 +45,6 @@
 
 > The table below points to third-party services. This repo only aggregates information.
 
-### ⚡ Pick in 30 seconds
-
-Don't want to read the table? Pick by what you need:
-
-- **Zero-cost Claude Code** → **AgentRouter** (first day $175)
-- **Just want GPT / Codex** → **Long's AI** (free)
-- **A little paid, more stable** → **Panda API** (first day 200 credit)
-- **OpenAI protocol only** → **api456.me** (first day $50)
-
 | Service | Status | First day | After that | Protocols | Sign up | Invite code |
 | :-- | :--: | :--: | :--: | :--: | :--: | :--: |
 | **AgentRouter** 🔥 | 🟢 Online | **$175** | $25/day | Anthropic + OpenAI | <a href="https://agentrouter.org/register?aff=aibw" target="_blank" rel="noopener">Sign up →</a> | — |
@@ -1315,7 +1306,7 @@ Console: <https://matrix.mzsjai.com/app/apikey>
 
 **Live data** (scraped from public APIs)
 
-- ⚠ No fresh API data for 54 hours; the info below is a snapshot from `2026-10-30 22:19 UTC`
+- ⚠ No fresh API data for 55 hours; the info below is a snapshot from `2026-10-30 22:19 UTC`
 - Panel name: **SeekAi**
 - Panel version: `v1.0.0-rc.25`
 - Daily check-in: ✅

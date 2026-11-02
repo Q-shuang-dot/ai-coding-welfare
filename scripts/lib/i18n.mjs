@@ -61,18 +61,6 @@ const en = {
     note: '> The table below points to third-party services. This repo only aggregates information.',
   },
 
-  picks: {
-    title: '⚡ Pick in 30 seconds',
-    intro: "Don't want to read the table? Pick by what you need:",
-    zero: 'Zero-cost Claude Code',
-    free: 'Just want GPT / Codex',
-    paid: 'A little paid, more stable',
-    openai: 'OpenAI protocol only',
-    first: (v) => `first day ${v}`,
-    unknown: 'credits posted on site',
-    freeAmount: 'free',
-  },
-
   table: {
     headers: ['Service', 'Status', 'First day', 'How it adds up', 'After that', 'Protocols', 'Models', 'Sign up', 'Invite code'],
     remarks: 'Notes',
@@ -368,18 +356,6 @@ const zh = {
   hero: {
     quickTitle: '🚀 一分钟上车（福利站）',
     note: '> 下表都是第三方站点，本仓库只做信息聚合。',
-  },
-
-  picks: {
-    title: '⚡ 30 秒选站',
-    intro: '不想看表？按需求直接挑：',
-    zero: '零成本玩 Claude Code',
-    free: '只想用 GPT / Codex',
-    paid: '愿意付一点、要稳定',
-    openai: '只要 OpenAI 协议',
-    first: (v) => `首日 ${v}`,
-    unknown: '额度站内公示',
-    freeAmount: '免费',
   },
 
   table: {

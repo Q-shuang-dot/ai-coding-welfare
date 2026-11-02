@@ -1173,7 +1173,7 @@ test('备注不再占表格列，进站点折叠块；竖线不会撑散表格',
   assert.equal(cols(head), cols(sep));
   assert.equal(cols(head), cols(row));
 });
-test('README 首屏：30 秒选站、7 列速查表、站点详情默认折叠', () => {
+test('README 首屏：7 列速查表、站点详情默认折叠', () => {
   const live = {
     generatedAt: iso(0),
     sites: [
@@ -1184,7 +1184,7 @@ test('README 首屏：30 秒选站、7 列速查表、站点详情默认折叠',
   const first = { ...SITE, recommended: true, inviteCode: 'abc' };
   const second = { ...SITE, id: 'demo2', name: 'Demo Two', recommended: false, inviteCode: 'def' };
   const md = renderReadme({ meta: META, sites: [first, second], live, groups: [], history: HIST });
-  assert.match(md, /### ⚡ 30 秒选站/);
+  assert.doesNotMatch(md, /30 秒选站/, '选站推荐块已从 README 移除');
   assert.match(md, /\| 站点 \| 状态 \| 首日可得 \| 之后每天 \| 兼容协议 \| 注册 \| 邀请码 \|/);
   assert.match(md, /<details open><summary><b>🟢 Demo 站/);
   assert.match(md, /<details><summary><b>🟢 Demo Two/);

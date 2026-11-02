@@ -360,24 +360,6 @@ export function renderReadme({ meta, sites, live, groups = [], history, lang = D
   const scope = others.length ? t.callouts.scope(usdCount) : t.callouts.scopeAll(openSites.length);
   const pages = (meta.pagesUrl ?? '').replace(/\/?$/, '/');
   const sep = lang === DEFAULT_LANG ? '、' : ', ';
-  // 首屏「30 秒选站」：按特征自动挑，而不是把站名写死在模板里；站点归档/改名后自动换人
-  const pickRows = [
-    ['zero', welfare.find((s) => s.recommended && s.endpoints?.anthropic && !s.paid && acceptsNew(byId.get(s.id)))],
-    ['free', welfare.find((s) => s.credits?.free === true && acceptsNew(byId.get(s.id)))],
-    ['paid', welfare.find((s) => s.paid && acceptsNew(byId.get(s.id)))],
-    ['openai', welfare.find((s) => s.endpoints?.openai && !s.endpoints?.anthropic && !s.paid && acceptsNew(byId.get(s.id)))],
-  ]
-    .filter(([, s]) => Boolean(s))
-    .map(([key, s]) => {
-      const plan = creditPlan(s, byId.get(s.id));
-      const amount =
-        plan.unit === 'free'
-          ? t.picks.freeAmount
-          : plan.firstDay != null
-            ? t.picks.first(usd(plan.firstDay, plan.approx, plan.unit, lang))
-            : t.picks.unknown;
-      return `- **${t.picks[key]}** → **${nameOf(s)}** (${amount})`;
-    });
 
   const head = [
     // 语言切换条放整页第一行：这是给海外访客的入口，比标题还靠前，一眼就能看见
@@ -412,12 +394,6 @@ export function renderReadme({ meta, sites, live, groups = [], history, lang = D
     `## ${t.hero.quickTitle}`,
     '',
     t.hero.note,
-    '',
-    `### ${t.picks.title}`,
-    '',
-    t.picks.intro,
-    '',
-    ...pickRows,
     '',
     overviewTable(welfare, byId, lang),
     '',
