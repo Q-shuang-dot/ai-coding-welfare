@@ -8,7 +8,7 @@
   <img src="https://img.shields.io/badge/%E6%94%B6%E5%BD%95%E7%A6%8F%E5%88%A9%E7%AB%99-11%20%E4%B8%AA-blue" alt="收录福利站">
   <img src="https://img.shields.io/badge/%E5%9C%A8%E7%BA%BF-10%2F11-orange" alt="在线">
   <img src="https://img.shields.io/badge/%E9%A6%96%E6%97%A5%E5%8F%AF%E5%BE%97-%E6%9C%80%E9%AB%98%20%24175-success" alt="首日可得">
-  <img src="https://img.shields.io/badge/%E6%95%B0%E6%8D%AE%E6%9B%B4%E6%96%B0-2026--11--02%2001.31%20UTC-informational" alt="数据更新">
+  <img src="https://img.shields.io/badge/%E6%95%B0%E6%8D%AE%E6%9B%B4%E6%96%B0-2026--11--02%2001.39%20UTC-informational" alt="数据更新">
 </p>
 
 <p align="center">
@@ -45,7 +45,7 @@
 | **Long的AI** | 🟢 在线 | 免费 | 白嫖分组免费 | 无签到 | Anthropic + OpenAI | 需登录查看 | <a href="https://aaawinn.xyz/sign-up?aff=ijFL" target="_blank" rel="noopener">GitHub 注册 →</a> | `ijFL` |
 | **新疆幻城网安** | 🟢 在线 | **30000 站内刀** | 注册 30000 站内刀 | 支持签到 | Anthropic + OpenAI | 需登录查看 | <a href="https://api.hcnsec.cn/sign-up?aff=3J8z" target="_blank" rel="noopener">点此注册 →</a> | `3J8z` |
 
-> 「首日可得」= 注册基础额度 + 本页邀请链接额度 + 当天能领的签到额度（每日重置额度池的站点按一天的池子算）；模型、价格、在线状态由脚本抓取站点公开接口自动生成，最后更新：`2026-11-02 01:31 UTC`。
+> 「首日可得」= 注册基础额度 + 本页邀请链接额度 + 当天能领的签到额度（每日重置额度池的站点按一天的池子算）；模型、价格、在线状态由脚本抓取站点公开接口自动生成，最后更新：`2026-11-02 01:39 UTC`。
 >
 > 「邀请码」列写了码的站（DoCode `1Qof`、年华 API `aonj`、肖恩AI `MVU8GX`、api456.me `zmza`、JustDoWork `OIWh`、SeekAi `dDJy`、Long的AI `ijFL`、新疆幻城网安 `3J8z`），注册表单里有一栏要**自己填**，漏填就只拿得到注册基础额度、事后补不上；其余站写 — 是因为邀请额度由链接自带，不用手打。
 >
@@ -98,7 +98,7 @@ powershell -ExecutionPolicy Bypass -File scripts/quickstart.ps1
 - 面板版本：`init-20261016-861e4557`
 - 邀请他人可得：**$100**
 - 登录方式：GitHub / LinuxDO
-- 接口延迟：964 ms
+- 接口延迟：238 ms
 
 **镜像 / 备用入口**
 
@@ -238,15 +238,20 @@ curl -s https://agentrouter.org/v1/chat/completions \
 - 每日签到：❌
 - 开放注册：✅
 - 登录方式：账号密码
-- 接口延迟：1243 ms
+- 接口延迟：1143 ms
 
 **当前可用模型**
 
 | 模型 | 倍率 | 输入 / 1M tokens | 输出 / 1M tokens | 协议 |
 | :-- | :--: | :--: | :--: | :--: |
+| `gpt-5.5` | 0.0006125 | 0.001 额度 | 0.01 额度 | openai |
+| `gpt-5.6-sol` | 0.0005439 | 0.001 额度 | 0.007 额度 | openai |
+| `gpt-5.6-terra` | 0.0002156 | 0 额度 | 0.003 额度 | openai |
+| `gpt-6-astra` | 0.002001 | 0.004 额度 | 0.02 额度 | openai |
+| `gpt-6-sol` | 0.0003864 | 0.001 额度 | 0.004 额度 | openai |
+| `gpt-6.1-sol` | 0.0003864 | 0.001 额度 | 0.004 额度 | openai |
 | `按量模型是根据输入输出字数算额度的~要控制字数喔` | 按次 | **4 额度 / 次** | — | openai |
 | `测试` | 0.00209484 | 0.004 额度 | 0.021 额度 | openai |
-| `随时看 look.api520.pro  监控网站  ～所有模型都超稳` | 37.5 | 75 额度 | 75 额度 | openai |
 | `熊猫-10-deepseek-v4-pro` | 按次 | **10 额度 / 次** | — | openai |
 | `熊猫-10-glm-5.3` | 按次 | **10 额度 / 次** | — | openai |
 | `熊猫-13-glm-5.2` | 按次 | **13 额度 / 次** | — | openai |
@@ -256,75 +261,6 @@ curl -s https://agentrouter.org/v1/chat/completions \
 | `熊猫-8-deepseek-v4.1-flash` | 按次 | **8 额度 / 次** | — | openai |
 | `熊猫-8-glm-5.1` | 按次 | **8 额度 / 次** | — | openai |
 | `熊猫-8-qwen3.8-max` | 按次 | **8 额度 / 次** | — | openai |
-| `熊猫-按量-顶级特供-官max-claude-fable-5-1` | 0.009 | 0.018 额度 | 0.09 额度 | anthropic / openai |
-| `熊猫-按量-顶级特供-官max-claude-fable-5-神话模型` | 0.009 | 0.018 额度 | 0.09 额度 | anthropic / openai |
-| `熊猫-按量-顶级特供-官max-claude-haiku-4.5` | 0.00075 | 0.002 额度 | 0.008 额度 | anthropic / openai |
-| `熊猫-按量-顶级特供-官max-claude-opus-4.6` | 0.00375 | 0.008 额度 | 0.038 额度 | anthropic / openai |
-| `熊猫-按量-顶级特供-官max-claude-opus-4.6-thinking` | 0.00375 | 0.008 额度 | 0.038 额度 | anthropic / openai |
-| `熊猫-按量-顶级特供-官max-claude-opus-4.7` | 0.00375 | 0.008 额度 | 0.038 额度 | anthropic / openai |
-| `熊猫-按量-顶级特供-官max-claude-opus-4.8` | 0.00375 | 0.008 额度 | 0.038 额度 | anthropic / openai |
-| `熊猫-按量-顶级特供-官max-claude-opus-5` | 0.00375 | 0.008 额度 | 0.038 额度 | anthropic / openai |
-| `熊猫-按量-顶级特供-官max-claude-opus-5.5` | 0.00336 | 0.007 额度 | 0.034 额度 | anthropic / openai |
-| `熊猫-按量-顶级特供-官max-claude-sonnet-4.6` | 0.00225 | 0.005 额度 | 0.023 额度 | anthropic / openai |
-| `熊猫-按量-满血非量化-deepseek-v4-pro` | 0.0004554 | 0.001 额度 | 0.002 额度 | openai |
-| `熊猫-按量-满血非量化-deepseek-v4.1-flash` | 0.000112 | 0 额度 | 0.001 额度 | openai |
-| `熊猫-按量-满血非量化-glm-5.2` | 0.0012144 | 0.002 额度 | 0.009 额度 | openai |
-| `熊猫-按量-满血非量化-kimi-k3` | 0.003036 | 0.006 额度 | 0.03 额度 | openai |
-| `熊猫-按量-特供顶级-官方正向满血-claude-fable-5-神话模型` | 0.009 | 0.018 额度 | 0.09 额度 | anthropic / openai |
-| `熊猫-按量-特供顶级-官方正向满血-claude-haiku-4.5` | 0.00075 | 0.002 额度 | 0.008 额度 | anthropic / openai |
-| `熊猫-按量-特供顶级-官方正向满血-claude-opus-4.6` | 0.00375 | 0.008 额度 | 0.038 额度 | anthropic / openai |
-| `熊猫-按量-特供顶级-官方正向满血-claude-opus-4.6-thinking` | 0.00375 | 0.008 额度 | 0.038 额度 | anthropic / openai |
-| `熊猫-按量-特供顶级-官方正向满血-claude-opus-4.7` | 0.00375 | 0.008 额度 | 0.038 额度 | anthropic / openai |
-| `熊猫-按量-特供顶级-官方正向满血-claude-opus-4.8` | 0.00375 | 0.008 额度 | 0.038 额度 | anthropic / openai |
-| `熊猫-按量-特供顶级-官方正向满血-claude-sonnet-4.6` | 0.00225 | 0.005 额度 | 0.023 额度 | anthropic / openai |
-| `熊猫-按量-特供顶级-官方正向满血-claude-sonnet-4.6-thinking` | 0.00225 | 0.005 额度 | 0.023 额度 | anthropic / openai |
-| `熊猫-按量-gpt-5.4` | 0.00036875 | 0.001 额度 | 0.006 额度 | openai |
-| `熊猫-按量-gpt-5.5` | 0.0006125 | 0.001 额度 | 0.01 额度 | openai |
-| `熊猫-按量-gpt-5.6-terra` | 0.000245 | 0 额度 | 0.003 额度 | openai |
-| `熊猫-按量-gpt-6-astra` | 0.002001 | 0.004 额度 | 0.02 额度 | openai |
-| `熊猫-按量-gpt-6-sol` | 0.0003864 | 0.001 额度 | 0.004 额度 | openai |
-| `熊猫-按量-gpt-6.1-sol` | 0.0003864 | 0.001 额度 | 0.004 额度 | openai |
-| `熊猫-按量-vertex官-gemini-2.5-pro` | 0.0010125 | 0.002 额度 | 0.016 额度 | openai |
-| `熊猫-按量-vertex官-gemini-3.1-pro-preview` | 0.00162 | 0.003 额度 | 0.013 额度 | openai |
-| `熊猫-按量-vertex官-gemini-4-argon` | 0.00162 | 0.003 额度 | 0.016 额度 | openai |
-| `熊猫-顶级-21-vertex逆-gemini-2.5-pro` | 按次 | **21 额度 / 次** | — | openai |
-| `熊猫-顶级-21-vertex逆-gemini-3.1-pro-preview` | 按次 | **21 额度 / 次** | — | openai |
-| `熊猫-顶级-X-25-不截断-claude-sonnet-4.6` | 按次 | **25 额度 / 次** | — | openai |
-| `熊猫-顶级-X-25-不截断-claude-sonnet-4.6-thinking` | 按次 | **25 额度 / 次** | — | openai |
-| `熊猫-官逆-14-gemini-4-pro-argon` | 按次 | **14 额度 / 次** | — | openai |
-| `熊猫-官逆-7-gemini-3.1-pro` | 按次 | **7 额度 / 次** | — | openai |
-| `熊猫-官逆-7-gemini-3.1-pro-thinking` | 按次 | **7 额度 / 次** | — | openai |
-| `熊猫-官逆-7-gemini-3.6-flash` | 按次 | **7 额度 / 次** | — | openai |
-| `熊猫-官逆-7-gemini-3.6-flash-thinking` | 按次 | **7 额度 / 次** | — | openai |
-| `熊猫-官逆-7-gemini-3.7-flash` | 按次 | **7 额度 / 次** | — | openai |
-| `熊猫-官逆-7-gemini-3.7-flash-thinking` | 按次 | **7 额度 / 次** | — | openai |
-| `熊猫-官逆-7-gemini-3.8-flash` | 按次 | **7 额度 / 次** | — | openai |
-| `熊猫-官key质量-88-claude-opus-5.5` | 按次 | **88 额度 / 次** | — | openai |
-| `熊猫-逆向-66-claude-opus-4.6` | 按次 | **66 额度 / 次** | — | openai |
-| `熊猫-特供-7-claude-haiku-4.5-20251001-满血速度快` | 按次 | **7 额度 / 次** | — | openai |
-| `熊猫-特供-按量-满血逆-claude-opus-4-6` | 0.001035 | 0.002 额度 | 0.01 额度 | anthropic / openai |
-| `熊猫-特供-按量-满血逆-claude-opus-4-7` | 0.001035 | 0.002 额度 | 0.01 额度 | anthropic / openai |
-| `熊猫-特供-按量-满血逆-claude-opus-4-8` | 0.001035 | 0.002 额度 | 0.01 额度 | anthropic / openai |
-| `熊猫-特供-按量-满血逆-claude-opus-5.5` | 0.0007728 | 0.002 额度 | 0.008 额度 | anthropic / openai |
-| `熊猫-特供-按量-满血逆-claude-sonnet-4-6` | 0.000621 | 0.001 额度 | 0.006 额度 | anthropic / openai |
-| `熊猫-特供-按量-满血逆-claude-sonnet-4.6` | 0.000531 | 0.001 额度 | 0.005 额度 | anthropic / openai |
-| `熊猫-特供-官key直连-200额度-claude-opus-4.8` | 按次 | **200 额度 / 次** | — | openai |
-| `熊猫-特供-官key直连-280额度-claude-opus-4.6` | 按次 | **280 额度 / 次** | — | openai |
-| `熊猫-特供-官key直连-280额度-claude-opus-4.6-thinking` | 按次 | **280 额度 / 次** | — | openai |
-| `熊猫-特供-官key直连-280额度-claude-opus-4.7` | 按次 | **280 额度 / 次** | — | openai |
-| `熊猫-特供-官key直连-280额度-claude-opus-4.7-thinking` | 按次 | **280 额度 / 次** | — | openai |
-| `熊猫-特供-官key直连-280额度-claude-opus-4.8` | 按次 | **280 额度 / 次** | — | openai |
-| `熊猫-特供-官key直连-280额度-claude-opus-4.8-thinking` | 按次 | **280 额度 / 次** | — | openai |
-| `熊猫-特供-A-55-claude-opus-4.5-thinking` | 按次 | **55 额度 / 次** | — | openai |
-| `熊猫-特供-A-55-claude-opus-4.6` | 按次 | **55 额度 / 次** | — | openai |
-| `熊猫-特供-A-55-claude-opus-4.6-thinking` | 按次 | **55 额度 / 次** | — | openai |
-| `熊猫-特供-X-10-gpt-5.5` | 按次 | **10 额度 / 次** | — | openai |
-| `熊猫-特供-X-19-gpt-5.6-terra` | 按次 | **19 额度 / 次** | — | openai |
-| `熊猫-特供-X-22-gpt-5.6-sol` | 按次 | **22 额度 / 次** | — | openai |
-| `熊猫-限时官key-88-claude-opus-4.6` | 按次 | **88 额度 / 次** | — | openai |
-| `熊猫-限时官key-88-claude-opus-4.7` | 按次 | **88 额度 / 次** | — | openai |
-| `熊猫-限时官key-88-claude-opus-4.8` | 按次 | **88 额度 / 次** | — | openai |
-| `熊猫-限时官key质量-88-claude-opus-5` | 按次 | **88 额度 / 次** | — | openai |
 | `熊猫-A-10-gemini-3.1-pro-preview-1000k` | 按次 | **10 额度 / 次** | — | openai |
 | `熊猫-A-10-grok-4.5` | 按次 | **10 额度 / 次** | — | openai |
 | `熊猫-A-10-grok-4.6` | 按次 | **10 额度 / 次** | — | openai |
@@ -346,11 +282,11 @@ curl -s https://agentrouter.org/v1/chat/completions \
 | `熊猫-A-3-gemini-3.1-flash-lite` | 按次 | **3 额度 / 次** | — | openai |
 | `熊猫-A-39-gemini-4-argon-high-反重力ultra` | 按次 | **39 额度 / 次** | — | openai |
 | `熊猫-A-8-kimi-k2.6` | 按次 | **8 额度 / 次** | — | openai |
-| `熊猫-A-9-gemini-3.8-flash-反重力-tob` | 按次 | **9 额度 / 次** | — | openai |
 | `熊猫-A-9-gemini-3.8-flash-search` | 按次 | **9 额度 / 次** | — | openai |
+| `熊猫-A-9-gemini-3.8-flash-反重力-tob` | 按次 | **9 额度 / 次** | — | openai |
 | `熊猫-aiStudio官-X-20-gemini-3.1-pro-preview` | 按次 | **20 额度 / 次** | — | openai |
-| `熊猫-aiStudio官-X-20-gemini-3.1-pro-preview-联网` | 按次 | **20 额度 / 次** | — | openai |
 | `熊猫-aiStudio官-X-20-gemini-3.1-pro-preview-thinking` | 按次 | **20 额度 / 次** | — | openai |
+| `熊猫-aiStudio官-X-20-gemini-3.1-pro-preview-联网` | 按次 | **20 额度 / 次** | — | openai |
 | `熊猫-B-10-gemini-3.7-flash` | 按次 | **10 额度 / 次** | — | openai |
 | `熊猫-B-7-gemini-3.6-flash-高质量逆` | 按次 | **7 额度 / 次** | — | openai |
 | `熊猫-gemini-3.8-flash-反重力-稳定名` | 按次 | **9 额度 / 次** | — | openai |
@@ -358,9 +294,9 @@ curl -s https://agentrouter.org/v1/chat/completions \
 | `熊猫-vertex逆-23-gemini-3.1-pro-preview` | 按次 | **23 额度 / 次** | — | openai |
 | `熊猫-vertex逆-49-gemini-4-argon` | 按次 | **49 额度 / 次** | — | openai |
 | `熊猫-W-39-限时官key-claude-sonnet-5` | 按次 | **39 额度 / 次** | — | openai |
+| `熊猫-X-10-AS正向-gemini-3.6-flash` | 按次 | **10 额度 / 次** | — | openai |
 | `熊猫-X-10-官逆-gemini-3.1-pro` | 按次 | **10 额度 / 次** | — | openai |
 | `熊猫-X-10-官逆-gemini-3.1-pro-联网` | 按次 | **10 额度 / 次** | — | openai |
-| `熊猫-X-10-AS正向-gemini-3.6-flash` | 按次 | **10 额度 / 次** | — | openai |
 | `熊猫-x-11-gemini-3.1-pro-anti` | 按次 | **11 额度 / 次** | — | openai |
 | `熊猫-X-24-kiro-claude-opus-4.5` | 37.5 | 75 额度 | 375 额度 | openai |
 | `熊猫-X-24-kiro-claude-opus-4.6` | 按次 | **24 额度 / 次** | — | openai |
@@ -374,8 +310,79 @@ curl -s https://agentrouter.org/v1/chat/completions \
 | `熊猫-X-27-kiro-claude-opus-4.8` | 按次 | **27 额度 / 次** | — | openai |
 | `熊猫-X-27-kiro-claude-opus-5` | 按次 | **27 额度 / 次** | — | openai |
 | `熊猫-X-27-kiro-claude-opus-5.5` | 按次 | **27 额度 / 次** | — | openai |
-| `熊猫-x-29-最强生图-gpt-image-2.5` | 按次 | **29 额度 / 次** | — | openai |
 | `熊猫-X-29-claude-opus-5` | 按次 | **29 额度 / 次** | — | openai |
+| `熊猫-x-29-最强生图-gpt-image-2.5` | 按次 | **29 额度 / 次** | — | openai |
+| `熊猫-官key质量-88-claude-opus-5.5` | 按次 | **88 额度 / 次** | — | openai |
+| `熊猫-官逆-14-gemini-4-pro-argon` | 按次 | **14 额度 / 次** | — | openai |
+| `熊猫-官逆-7-gemini-3.1-pro` | 按次 | **7 额度 / 次** | — | openai |
+| `熊猫-官逆-7-gemini-3.1-pro-thinking` | 按次 | **7 额度 / 次** | — | openai |
+| `熊猫-官逆-7-gemini-3.6-flash` | 按次 | **7 额度 / 次** | — | openai |
+| `熊猫-官逆-7-gemini-3.6-flash-thinking` | 按次 | **7 额度 / 次** | — | openai |
+| `熊猫-官逆-7-gemini-3.7-flash` | 按次 | **7 额度 / 次** | — | openai |
+| `熊猫-官逆-7-gemini-3.7-flash-thinking` | 按次 | **7 额度 / 次** | — | openai |
+| `熊猫-官逆-7-gemini-3.8-flash` | 按次 | **7 额度 / 次** | — | openai |
+| `熊猫-按量-gpt-5.4` | 0.00036875 | 0.001 额度 | 0.006 额度 | openai |
+| `熊猫-按量-gpt-5.5` | 0.0006125 | 0.001 额度 | 0.01 额度 | openai |
+| `熊猫-按量-gpt-5.6-terra` | 0.000245 | 0 额度 | 0.003 额度 | openai |
+| `熊猫-按量-gpt-6-astra` | 0.002001 | 0.004 额度 | 0.02 额度 | openai |
+| `熊猫-按量-gpt-6-sol` | 0.0003864 | 0.001 额度 | 0.004 额度 | openai |
+| `熊猫-按量-gpt-6.1-sol` | 0.0003864 | 0.001 额度 | 0.004 额度 | openai |
+| `熊猫-按量-vertex官-gemini-2.5-pro` | 0.0010125 | 0.002 额度 | 0.016 额度 | openai |
+| `熊猫-按量-vertex官-gemini-3.1-pro-preview` | 0.00162 | 0.003 额度 | 0.013 额度 | openai |
+| `熊猫-按量-vertex官-gemini-4-argon` | 0.00162 | 0.003 额度 | 0.016 额度 | openai |
+| `熊猫-按量-满血非量化-deepseek-v4-pro` | 0.0004554 | 0.001 额度 | 0.002 额度 | openai |
+| `熊猫-按量-满血非量化-deepseek-v4.1-flash` | 0.000112 | 0 额度 | 0.001 额度 | openai |
+| `熊猫-按量-满血非量化-glm-5.2` | 0.0012144 | 0.002 额度 | 0.009 额度 | openai |
+| `熊猫-按量-满血非量化-kimi-k3` | 0.003036 | 0.006 额度 | 0.03 额度 | openai |
+| `熊猫-按量-特供顶级-官方正向满血-claude-fable-5-神话模型` | 0.009 | 0.018 额度 | 0.09 额度 | anthropic / openai |
+| `熊猫-按量-特供顶级-官方正向满血-claude-haiku-4.5` | 0.00075 | 0.002 额度 | 0.008 额度 | anthropic / openai |
+| `熊猫-按量-特供顶级-官方正向满血-claude-opus-4.6` | 0.00375 | 0.008 额度 | 0.038 额度 | anthropic / openai |
+| `熊猫-按量-特供顶级-官方正向满血-claude-opus-4.6-thinking` | 0.00375 | 0.008 额度 | 0.038 额度 | anthropic / openai |
+| `熊猫-按量-特供顶级-官方正向满血-claude-opus-4.7` | 0.00375 | 0.008 额度 | 0.038 额度 | anthropic / openai |
+| `熊猫-按量-特供顶级-官方正向满血-claude-opus-4.8` | 0.00375 | 0.008 额度 | 0.038 额度 | anthropic / openai |
+| `熊猫-按量-特供顶级-官方正向满血-claude-sonnet-4.6` | 0.00225 | 0.005 额度 | 0.023 额度 | anthropic / openai |
+| `熊猫-按量-特供顶级-官方正向满血-claude-sonnet-4.6-thinking` | 0.00225 | 0.005 额度 | 0.023 额度 | anthropic / openai |
+| `熊猫-按量-顶级特供-官max-claude-fable-5-1` | 0.009 | 0.018 额度 | 0.09 额度 | anthropic / openai |
+| `熊猫-按量-顶级特供-官max-claude-fable-5-神话模型` | 0.009 | 0.018 额度 | 0.09 额度 | anthropic / openai |
+| `熊猫-按量-顶级特供-官max-claude-haiku-4.5` | 0.00075 | 0.002 额度 | 0.008 额度 | anthropic / openai |
+| `熊猫-按量-顶级特供-官max-claude-opus-4.6` | 0.00375 | 0.008 额度 | 0.038 额度 | anthropic / openai |
+| `熊猫-按量-顶级特供-官max-claude-opus-4.6-thinking` | 0.00375 | 0.008 额度 | 0.038 额度 | anthropic / openai |
+| `熊猫-按量-顶级特供-官max-claude-opus-4.7` | 0.00375 | 0.008 额度 | 0.038 额度 | anthropic / openai |
+| `熊猫-按量-顶级特供-官max-claude-opus-4.8` | 0.00375 | 0.008 额度 | 0.038 额度 | anthropic / openai |
+| `熊猫-按量-顶级特供-官max-claude-opus-5` | 0.00375 | 0.008 额度 | 0.038 额度 | anthropic / openai |
+| `熊猫-按量-顶级特供-官max-claude-opus-5.5` | 0.00336 | 0.007 额度 | 0.034 额度 | anthropic / openai |
+| `熊猫-按量-顶级特供-官max-claude-sonnet-4.6` | 0.00225 | 0.005 额度 | 0.023 额度 | anthropic / openai |
+| `熊猫-特供-7-claude-haiku-4.5-20251001-满血速度快` | 按次 | **7 额度 / 次** | — | openai |
+| `熊猫-特供-A-55-claude-opus-4.5-thinking` | 按次 | **55 额度 / 次** | — | openai |
+| `熊猫-特供-A-55-claude-opus-4.6` | 按次 | **55 额度 / 次** | — | openai |
+| `熊猫-特供-A-55-claude-opus-4.6-thinking` | 按次 | **55 额度 / 次** | — | openai |
+| `熊猫-特供-X-10-gpt-5.5` | 按次 | **10 额度 / 次** | — | openai |
+| `熊猫-特供-X-19-gpt-5.6-terra` | 按次 | **19 额度 / 次** | — | openai |
+| `熊猫-特供-X-22-gpt-5.6-sol` | 按次 | **22 额度 / 次** | — | openai |
+| `熊猫-特供-官key直连-200额度-claude-opus-4.8` | 按次 | **200 额度 / 次** | — | openai |
+| `熊猫-特供-官key直连-280额度-claude-opus-4.6` | 按次 | **280 额度 / 次** | — | openai |
+| `熊猫-特供-官key直连-280额度-claude-opus-4.6-thinking` | 按次 | **280 额度 / 次** | — | openai |
+| `熊猫-特供-官key直连-280额度-claude-opus-4.7` | 按次 | **280 额度 / 次** | — | openai |
+| `熊猫-特供-官key直连-280额度-claude-opus-4.7-thinking` | 按次 | **280 额度 / 次** | — | openai |
+| `熊猫-特供-官key直连-280额度-claude-opus-4.8` | 按次 | **280 额度 / 次** | — | openai |
+| `熊猫-特供-官key直连-280额度-claude-opus-4.8-thinking` | 按次 | **280 额度 / 次** | — | openai |
+| `熊猫-特供-按量-满血逆-claude-opus-4-6` | 0.001035 | 0.002 额度 | 0.01 额度 | anthropic / openai |
+| `熊猫-特供-按量-满血逆-claude-opus-4-7` | 0.001035 | 0.002 额度 | 0.01 额度 | anthropic / openai |
+| `熊猫-特供-按量-满血逆-claude-opus-4-8` | 0.001035 | 0.002 额度 | 0.01 额度 | anthropic / openai |
+| `熊猫-特供-按量-满血逆-claude-opus-5.5` | 0.0007728 | 0.002 额度 | 0.008 额度 | anthropic / openai |
+| `熊猫-特供-按量-满血逆-claude-sonnet-4-6` | 0.000621 | 0.001 额度 | 0.006 额度 | anthropic / openai |
+| `熊猫-特供-按量-满血逆-claude-sonnet-4.6` | 0.000531 | 0.001 额度 | 0.005 额度 | anthropic / openai |
+| `熊猫-逆向-66-claude-opus-4.6` | 按次 | **66 额度 / 次** | — | openai |
+| `熊猫-限时官key-88-claude-opus-4.6` | 按次 | **88 额度 / 次** | — | openai |
+| `熊猫-限时官key-88-claude-opus-4.7` | 按次 | **88 额度 / 次** | — | openai |
+| `熊猫-限时官key-88-claude-opus-4.8` | 按次 | **88 额度 / 次** | — | openai |
+| `熊猫-限时官key质量-88-claude-opus-5` | 按次 | **88 额度 / 次** | — | openai |
+| `熊猫-顶级-21-vertex逆-gemini-2.5-pro` | 按次 | **21 额度 / 次** | — | openai |
+| `熊猫-顶级-21-vertex逆-gemini-3.1-pro-preview` | 按次 | **21 额度 / 次** | — | openai |
+| `熊猫-顶级-X-25-不截断-claude-sonnet-4.6` | 按次 | **25 额度 / 次** | — | openai |
+| `熊猫-顶级-X-25-不截断-claude-sonnet-4.6-thinking` | 按次 | **25 额度 / 次** | — | openai |
+| `熊猫特供-anti-99-claude-opus-4.6` | 按次 | **99 额度 / 次** | — | openai |
+| `熊猫特供-anti-99-claude-opus-4.6-thinking` | 按次 | **99 额度 / 次** | — | openai |
 | `熊猫特供-按量-SSS-gemini-3.1-pro-preview` | 0.00075 | 0.002 额度 | 0.009 额度 | openai |
 | `熊猫特供-按量-SSS-gemini-3.1-pro-preview-thinking` | 0.00075 | 0.002 额度 | 0.009 额度 | openai |
 | `熊猫特供-按量-SSS-gemini-3.6-flash` | 0.0000711 | 0 额度 | 0.001 额度 | openai |
@@ -386,15 +393,8 @@ curl -s https://agentrouter.org/v1/chat/completions \
 | `熊猫特供-超纯满血-99额度-claude-opus-4.6-thinking` | 按次 | **99 额度 / 次** | — | openai |
 | `熊猫特供-超纯满血-99额度-claude-opus-4.7` | 按次 | **99 额度 / 次** | — | openai |
 | `熊猫特供-超纯满血-99额度-claude-opus-4.7-thinking` | 按次 | **99 额度 / 次** | — | openai |
-| `熊猫特供-anti-99-claude-opus-4.6` | 按次 | **99 额度 / 次** | — | openai |
-| `熊猫特供-anti-99-claude-opus-4.6-thinking` | 按次 | **99 额度 / 次** | — | openai |
 | `熊猫特供S-按量-gemini-3-flash-preview` | 0.0000675 | 0 额度 | 0.001 额度 | openai |
-| `gpt-5.5` | 0.0006125 | 0.001 额度 | 0.01 额度 | openai |
-| `gpt-5.6-sol` | 0.0005439 | 0.001 额度 | 0.007 额度 | openai |
-| `gpt-5.6-terra` | 0.0002156 | 0 额度 | 0.003 额度 | openai |
-| `gpt-6-astra` | 0.002001 | 0.004 额度 | 0.02 额度 | openai |
-| `gpt-6-sol` | 0.0003864 | 0.001 额度 | 0.004 额度 | openai |
-| `gpt-6.1-sol` | 0.0003864 | 0.001 额度 | 0.004 额度 | openai |
+| `随时看 look.api520.pro  监控网站  ～所有模型都超稳` | 37.5 | 75 额度 | 75 额度 | openai |
 
 <sub>标「按次」的模型按请求次数计费，与 tokens 无关；其余按倍率换算，站内以「额度」结算、还要再乘分组倍率。以站内实时价格为准。</sub>
 
@@ -519,7 +519,7 @@ curl -s https://api520.pro/v1/chat/completions \
 - 每日签到：❌
 - 开放注册：✅
 - 登录方式：账号密码
-- 接口延迟：821 ms
+- 接口延迟：1420 ms
 
 **镜像 / 备用入口**
 
@@ -643,7 +643,7 @@ curl -s https://docode.cc/v1/chat/completions \
 - 每日签到：✅
 - 开放注册：✅
 - 登录方式：账号密码
-- 接口延迟：904 ms
+- 接口延迟：1763 ms
 
 **当前可用模型**
 
@@ -927,7 +927,7 @@ curl -s https://us-3.nianhuaapi.com/v1/chat/completions \
 
 **实时数据**（自动抓取站点公开接口）
 
-- 接口延迟：1050 ms
+- 接口延迟：1775 ms
 
 > 2026-09-20 公开定价页返回 191 个模型，含 stepfun、deepseek-v4.1-flash、gpt-5.5、gemini-2.5-flash、claude-sonnet-4-6、kimi-k2.5 等。注意返回里同时混有大量免费与付费条目，模型可用性与倍率以控制台为准。
 
@@ -1039,7 +1039,7 @@ curl -s https://free.supxh.xin/v1/chat/completions \
 - 每日签到：✅
 - 开放注册：✅
 - 登录方式：账号密码
-- 接口延迟：607 ms
+- 接口延迟：2244 ms
 
 > 模型清单与价格需登录后在控制台查看（/api/pricing 匿名请求需登录），本页不列模型表。
 
@@ -1132,7 +1132,7 @@ curl -s https://api456.me/v1/chat/completions \
 - 开放注册：✅（站点关掉了邮箱密码注册，得用 GitHub 登录建号（防批量注册的常规做法）。）
 - 登录方式：GitHub / 账号密码
 - GitHub 账号需满 **365 天**
-- 接口延迟：422 ms
+- 接口延迟：2160 ms
 
 > 模型定价页需要登录（/api/pricing 匿名请求返回 401，面板 pricing.requireAuth = true），本页不列模型表。实测主力是 gpt-5.6 系（gpt-5.6-luna / sol / terra），每次请求会带约 2000 tokens 的固定隐藏提示词；完整清单与倍率请登录控制台「定价」页确认。
 
@@ -1239,7 +1239,7 @@ curl -s https://api.justwoker.icu/v1/chat/completions \
 
 **实时数据**（自动抓取站点公开接口）
 
-- 接口延迟：266 ms
+- 接口延迟：2906 ms
 
 > 模型清单与价格需登录后在控制台「模型列表」查看（按每百万 Tokens 计价，可按厂商 / 上下文窗口筛选），站点没有公开的模型与定价接口，本页不做承诺。
 
@@ -1304,7 +1304,7 @@ curl -s https://api.justwoker.icu/v1/chat/completions \
 - 每日签到：✅
 - 开放注册：✅
 - 登录方式：GitHub / Telegram / 账号密码
-- 接口延迟：373 ms
+- 接口延迟：52 ms
 
 **镜像 / 备用入口**
 
@@ -1403,7 +1403,7 @@ curl -s https://seekai.cc/v1/chat/completions \
 - 每日签到：❌
 - 开放注册：✅（站点关掉了邮箱密码注册，得用 GitHub 登录建号（防批量注册的常规做法）。）
 - 登录方式：GitHub
-- 接口延迟：770 ms
+- 接口延迟：2493 ms
 
 > 站点的模型价格接口不公开（/api/pricing 匿名请求返回 401，要登录管理页才看得到），白嫖分组的模型来源公示在 https://aaawinn.xyz/public-pool；站方公告提到白嫖分组的 GPT 系模型只支持 Anthropic 协议对接，OpenAI 协议有兼容问题。
 
@@ -1532,7 +1532,7 @@ curl -s https://aaawinn.xyz/v1/chat/completions \
 - 每日签到：✅
 - 开放注册：✅
 - 登录方式：Passkey / 账号密码
-- 接口延迟：446 ms
+- 接口延迟：3554 ms
 
 > 模型价格页需要登录（/api/pricing 匿名请求返回 401），不过站内公告里的名字可以直接抄：Qwen3.8-Flash-Next（0 元一次）、DeepSeek-V4.1-Flash 系（付费分组约 2 元一次，vision-exp 版本免费用户可用）、longcat-2.0（一次 1 元）、glm-5.3-flash、qwen3.8-27b、step 系、spark-x2.5、Qwen3.6-35B-A3B，站方还开源了 SparkMuse-4B 与 Qing-Sec-20B，均可在 ModelScope 搜到（hcnote/SparkMuse-4B）。
 
@@ -1638,7 +1638,7 @@ curl -s https://api.hcnsec.cn/v1/chat/completions \
 
 ## 🔔 额度变了，这里会通知你
 
-CI 每 6 小时抓一次各站接口，与上一次快照逐字段比对，目前已攒下 154 个样本、覆盖约 40.7 天。额度调整、掉线与恢复、模型上下线、价格变动都会自动记一条：
+CI 每 6 小时抓一次各站接口，与上一次快照逐字段比对，目前已攒下 155 个样本、覆盖约 40.8 天。额度调整、掉线与恢复、模型上下线、价格变动都会自动记一条：
 
 - 点仓库右上角 **Watch → Custom → Releases**：有重要变动时 GitHub 直接发邮件
 
