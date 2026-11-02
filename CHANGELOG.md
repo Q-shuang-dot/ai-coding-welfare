@@ -8,6 +8,9 @@ AI 福利站 · Claude Code / Codex 免费额度白嫖导航的自动变动记�
 
 ## 2026-11-02
 
+- ➕ 熊猫API 上线模型：熊猫-A-29-gemini-4-argon-ais、熊猫-vertex逆-35-gemini-4-argon <sub>15:51 UTC</sub>
+- ➖ 熊猫API 下线模型：熊猫-A-14-MiniMax-M2.7-highspeed-高速 <sub>15:51 UTC</sub>
+- 🟢 Long的AI 恢复在线 <sub>15:51 UTC</sub>
 - 🏷️ 熊猫API 熊猫-X-24-kiro-claude-opus-4.5 价格 $75 入 / $375 出（每 1M） → $24 / 次 <sub>05:48 UTC</sub>
 - 🏷️ 熊猫API 熊猫-X-24-kiro-claude-opus-5.5 价格 $75 入 / $75 出（每 1M） → $24 / 次 <sub>05:48 UTC</sub>
 - 🔴 Long的AI 探测不到了：注册页与公开接口都没响应 <sub>05:48 UTC</sub>
