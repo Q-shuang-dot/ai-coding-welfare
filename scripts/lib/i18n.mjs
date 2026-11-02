@@ -58,7 +58,19 @@ const en = {
 
   hero: {
     quickTitle: '🚀 Get started in a minute',
-    note: '> Both tables below point to third-party services. This repo only aggregates information.',
+    note: '> The table below points to third-party services. This repo only aggregates information.',
+  },
+
+  picks: {
+    title: '⚡ Pick in 30 seconds',
+    intro: "Don't want to read the table? Pick by what you need:",
+    zero: 'Zero-cost Claude Code',
+    free: 'Just want GPT / Codex',
+    paid: 'A little paid, more stable',
+    openai: 'OpenAI protocol only',
+    first: (v) => `first day ${v}`,
+    unknown: 'credits posted on site',
+    freeAmount: 'free',
   },
 
   table: {
@@ -355,7 +367,19 @@ const zh = {
 
   hero: {
     quickTitle: '🚀 一分钟上车（福利站）',
-    note: '> 下面两张表都是第三方站点，本仓库只做信息聚合。',
+    note: '> 下表都是第三方站点，本仓库只做信息聚合。',
+  },
+
+  picks: {
+    title: '⚡ 30 秒选站',
+    intro: '不想看表？按需求直接挑：',
+    zero: '零成本玩 Claude Code',
+    free: '只想用 GPT / Codex',
+    paid: '愿意付一点、要稳定',
+    openai: '只要 OpenAI 协议',
+    first: (v) => `首日 ${v}`,
+    unknown: '额度站内公示',
+    freeAmount: '免费',
   },
 
   table: {
@@ -649,6 +673,7 @@ export function siteCopy(site, lang = DEFAULT_LANG) {
     return {
       name: own.name ?? '',
       subtitle: own.subtitle ?? null,
+      remarks: own.remarks ?? null,
       modelsSummary: own.modelsSummary ?? null,
       modelsNote: own.modelsNote ?? null,
       setup: own.setup ?? null,
@@ -668,6 +693,7 @@ export function siteCopy(site, lang = DEFAULT_LANG) {
     // 站名多数本来就是拉丁字母，没给翻译就用原名，别把整段标题留空
     name: t.name ?? own.name ?? '',
     subtitle: t.subtitle ?? null,
+    remarks: t.remarks ?? null,
     // 没翻译就不写，别把中文模型卖点塞进英文版
     modelsSummary: t.modelsSummary ?? null,
     modelsNote: t.modelsNote ?? null,

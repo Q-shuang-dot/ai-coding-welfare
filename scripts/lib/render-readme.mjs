@@ -45,16 +45,11 @@ function openaiModel(snap, t) {
   return snap?.defaults?.openai ?? t.setup.pickModel;
 }
 
-/** 表格单元格：竖线要转义、换行压平，否则整张表会从备注这一列散架 */
-const cell = (s) => String(s ?? '').replace(/\|/g, '\\|').replace(/[\r\n]+/g, ' ').trim();
-
 function overviewTable(sites, liveById, lang) {
   const t = pack(lang).table;
   // 多数站的邀请额度是邀请链接自己带的，用户不用手打；只有个别站（DoCode）注册表单里
   // 有一栏「邀请码」要自己填，漏填就只拿注册额度。没有任何站需要手填时不出这一列。
   const hasCode = sites.some((s) => s.inviteCode);
-  // 备注列同理：全是空的时候不出这一列，免得表里挂一列「—」
-  const hasRemarks = sites.some((s) => s.remarks);
   const rows = sites.map((s) => {
     const l = liveById.get(s.id) ?? {};
     const copy = siteCopy(s, lang);
@@ -71,18 +66,9 @@ function overviewTable(sites, liveById, lang) {
             ? `~~${usd(plan.firstDay, plan.approx, plan.unit, lang)}~~`
             : `**${usd(plan.firstDay, plan.approx, plan.unit, lang)}**`
           : t.announced;
-    const detail = plan.unit === 'free' ? t.freeGroup : (breakdown(plan, lang) ?? '—');
     const checkin =
       perDay(plan, lang) ??
       (l.checkinEnabled ? t.checkinYes : l.checkinEnabled === false ? t.checkinNo : '—');
-    const models = l.models?.length
-      ? t.modelsKnown(l.models.length)
-      : // 站点没公开定价接口时，人工写一句「在架哪些模型系列」，比干巴巴一句「需登录查看」有用
-        copy.modelsSummary
-        ? `**${copy.modelsSummary}**`
-        : l.services?.length
-          ? l.services.map((x) => loginMethod(x, lang)).join(' / ')
-          : t.modelsLogin;
     const proto =
       [s.endpoints?.anthropic && 'Anthropic', s.endpoints?.openai && 'OpenAI'].filter(Boolean).join(' + ') ||
       copy.setup?.client ||
@@ -94,16 +80,16 @@ function overviewTable(sites, liveById, lang) {
           ? ext(t.ctaOauth(route.oauth[0]), s.signupUrl)
           : ext(t.ctaRegister, s.signupUrl);
     const code = s.inviteCode ? ` \`${s.inviteCode}\` |` : ' — |';
+    // 7 列上限：额度构成 / 模型 / 备注都挪进下面的折叠详情，手机上少 3 列横向滚动
     return (
-      `| **${copy.name}**${s.recommended ? ' 🔥' : ''}${s.paid ? ' 💳' : ''} | ${state} | ${first} | ${detail} | ${checkin} | ${proto} | ${models} | ${cta} |` +
-      (hasCode ? code : '') +
-      (hasRemarks ? ` ${s.remarks ? cell(s.remarks) : '—'} |` : '')
+      `| **${copy.name}**${s.recommended ? ' 🔥' : ''}${s.paid ? ' 💳' : ''} | ${state} | ${first} | ${checkin} | ${proto} | ${cta} |` +
+      (hasCode ? code : '')
     );
   });
-  const headers = [...t.headers.slice(0, 8), ...(hasCode ? [t.headers[8]] : []), ...(hasRemarks ? [t.remarks] : [])];
+  const headers = [t.headers[0], t.headers[1], t.headers[2], t.headers[4], t.headers[5], t.headers[7], ...(hasCode ? [t.headers[8]] : [])];
   return [
     `| ${headers.join(' | ')} |`,
-    `| :-- | :--: | :--: | :-- | :--: | :--: | :--: | :--: |${hasCode ? ' :--: |' : ''}${hasRemarks ? ' :-- |' : ''}`,
+    `| :-- | :--: | :--: | :--: | :--: | :--: |${hasCode ? ' :--: |' : ''}`,
     ...rows,
   ].join('\n');
 }
@@ -181,15 +167,16 @@ function siteSection(site, snap, lang, meta) {
   const om = openaiModel(snap, pack(lang));
   const plan = creditPlan(site, snap);
   const models = modelTable(snap, lang, plan.unit);
+  const title = `${snap?.online ? '🟢' : '🔴'} ${copy.name}${site.recommended ? ' 🔥' : ''}${site.paid ? ' 💳' : ''}`;
+  const open = site.recommended ? ' open' : '';
   const mirror = (site.mirrors ?? [])
     .map((m) => `- ${mirrorLabel(m, lang)}${t.mirrorSep}<${m.homeUrl}> · ${ext(t.mirrorSignup, m.signupUrl)}`)
     .join('\n');
 
   const parts = [
-    `### ${snap?.online ? '🟢' : '🔴'} ${copy.name}${site.recommended ? t.recommended : ''}`,
-    '',
     // 没写英文副标题就整行不出现，别留一个空的引用块
     ...(copy.subtitle ? [`> ${copy.subtitle}`, ''] : []),
+    ...(copy.remarks ? [`> 📝 ${copy.remarks}`, ''] : []),
     ext(`<img src="${B(t.signupBadge, copy.name, 'brightgreen?style=for-the-badge')}" alt="${t.signupAlt(copy.name)}">`, site.signupUrl),
     '',
     t.why,
@@ -245,7 +232,14 @@ function siteSection(site, snap, lang, meta) {
     parts.push(ann.map((a) => `- ${a.date ? `\`${a.date}\` ` : ''}${a.text}`).join('\n'));
     parts.push('', '</details>');
   }
-  return parts.join('\n');
+  return [
+    `<a id="site-${site.id}"></a>`,
+    `<details${open}><summary><b>${title}</b></summary>`,
+    '',
+    parts.join('\n'),
+    '',
+    '</details>',
+  ].join('\n');
 }
 
 const F = '```';
@@ -366,6 +360,24 @@ export function renderReadme({ meta, sites, live, groups = [], history, lang = D
   const scope = others.length ? t.callouts.scope(usdCount) : t.callouts.scopeAll(openSites.length);
   const pages = (meta.pagesUrl ?? '').replace(/\/?$/, '/');
   const sep = lang === DEFAULT_LANG ? '、' : ', ';
+  // 首屏「30 秒选站」：按特征自动挑，而不是把站名写死在模板里；站点归档/改名后自动换人
+  const pickRows = [
+    ['zero', welfare.find((s) => s.recommended && s.endpoints?.anthropic && !s.paid && acceptsNew(byId.get(s.id)))],
+    ['free', welfare.find((s) => s.credits?.free === true && acceptsNew(byId.get(s.id)))],
+    ['paid', welfare.find((s) => s.paid && acceptsNew(byId.get(s.id)))],
+    ['openai', welfare.find((s) => s.endpoints?.openai && !s.endpoints?.anthropic && !s.paid && acceptsNew(byId.get(s.id)))],
+  ]
+    .filter(([, s]) => Boolean(s))
+    .map(([key, s]) => {
+      const plan = creditPlan(s, byId.get(s.id));
+      const amount =
+        plan.unit === 'free'
+          ? t.picks.freeAmount
+          : plan.firstDay != null
+            ? t.picks.first(usd(plan.firstDay, plan.approx, plan.unit, lang))
+            : t.picks.unknown;
+      return `- **${t.picks[key]}** → **${nameOf(s)}** (${amount})`;
+    });
 
   const head = [
     // 语言切换条放整页第一行：这是给海外访客的入口，比标题还靠前，一眼就能看见
@@ -389,17 +401,15 @@ export function renderReadme({ meta, sites, live, groups = [], history, lang = D
     '',
     '---',
     '',
-    ...communityReadme(meta, t.community),
-    '> [!TIP]',
-    `> **${t.contribute.tipTitle(meta.repoUrl)}**`,
-    '>',
-    `> ${t.contribute.tipBody(meta.repoUrl)}`,
-    '>',
-    `> **[${t.contribute.tipLink}](${meta.repoUrl}/issues)**`,
-    '',
     `## ${t.hero.quickTitle}`,
     '',
     t.hero.note,
+    '',
+    `### ${t.picks.title}`,
+    '',
+    t.picks.intro,
+    '',
+    ...pickRows,
     '',
     overviewTable(welfare, byId, lang),
     '',
@@ -433,6 +443,16 @@ export function renderReadme({ meta, sites, live, groups = [], history, lang = D
     t.quickstart.psComment,
     'powershell -ExecutionPolicy Bypass -File scripts/quickstart.ps1',
     F,
+    '',
+    '---',
+    '',
+    ...communityReadme(meta, t.community),
+    '> [!TIP]',
+    `> **${t.contribute.tipTitle(meta.repoUrl)}**`,
+    '>',
+    `> ${t.contribute.tipBody(meta.repoUrl)}`,
+    '>',
+    `> **[${t.contribute.tipLink}](${meta.repoUrl}/issues)**`,
     '',
     `## ${t.section.details}`,
     '',

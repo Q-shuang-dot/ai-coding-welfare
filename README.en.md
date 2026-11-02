@@ -27,37 +27,32 @@
 
 ---
 
-> [!TIP]
-> **💬 Community chat · QQ group：1125690737（GCMP-福利站）**
->
-> Claude Code / Codex setup, credit tips and service updates — the group hears about changes first.
->
-> Search the group number in QQ, or scan the code · [Group QR code](docs/assets/qq-group.jpg)
-
-> [!TIP]
-> **📣 Want to be listed? The [Issue tab](https://github.com/Q-shuang-dot/ai-coding-welfare/issues) is free advertising**
->
-> Found a service worth listing, or run one yourself? [Open an Issue](https://github.com/Q-shuang-dot/ai-coding-welfare/issues/new/choose) with your invite link. Issues are public, so the Issue tab is a promotion channel in itself; services that check out get added to the table.
->
-> **[📋 Browse every Issue →](https://github.com/Q-shuang-dot/ai-coding-welfare/issues)**
-
 ## 🚀 Get started in a minute
 
-> Both tables below point to third-party services. This repo only aggregates information.
+> The table below points to third-party services. This repo only aggregates information.
 
-| Service | Status | First day | How it adds up | After that | Protocols | Models | Sign up | Invite code | Notes |
-| :-- | :--: | :--: | :-- | :--: | :--: | :--: | :--: | :--: | :-- |
-| **AgentRouter** 🔥 | 🟢 Online | **$175** | signup $100 + this page's invite $50 + first check-in $25 | $25/day | Anthropic + OpenAI | 4 listed | <a href="https://agentrouter.org/register?aff=aibw" target="_blank" rel="noopener">Sign up →</a> | — | 额度没到账先退出重登一次 |
-| **Panda API** 💳 | 🟢 Online | **200 credit** | signup 100 credit + this page's invite 100 credit | No check-in | Anthropic + OpenAI | 151 listed | <a href="https://api520.pro/register?aff=3pox" target="_blank" rel="noopener">Sign up →</a> | — | 付费站：200 额度≈¥0.9，无签到 |
-| **DoCode** | 🟢 Online | **300 site-USD** | signup 50 site-USD + this page's invite 250 site-USD | No check-in | Anthropic + OpenAI | Sign in to see | <a href="https://docode.cc/register?aff=1Qof" target="_blank" rel="noopener">Sign up →</a> | `1Qof` | 表单要手填邀请码 1Qof，漏填只有 50 刀 |
-| **NianHua API** | 🟢 Online | Posted on site | — | Daily check-in | Anthropic + OpenAI | 149 listed | <a href="https://us-3.nianhuaapi.com/sign-up?aff=aonj" target="_blank" rel="noopener">Sign up →</a> | `aonj` | 免费额度只有签到 + 0.05 倍率公益分组 |
-| **ShawnAI** | 🟢 Online | **≈14000 pts** | signup 7000 pts + this page's invite 5000 pts + first check-in ≈2000 pts | ≈2000 pts/day | Anthropic + OpenAI | Sign in to see | <a href="https://free.supxh.xin/register?code=MVU8GX" target="_blank" rel="noopener">Sign up →</a> | `MVU8GX` | 仅 QQ 邮箱；邀请码填 MVU8GX 多 5000 |
-| **api456.me** | 🟢 Online | **$50** | signup $20 + this page's invite $20 + first check-in $10 | $10/day | OpenAI | Sign in to see | <a href="https://api456.me/register?aff=zmza" target="_blank" rel="noopener">Sign up →</a> | `zmza` | 只能 GitHub 登录；额度进后台核对 |
-| **JustDoWork** | 🟢 Online | Posted on site | — | Daily check-in | Anthropic + OpenAI | Sign in to see | <a href="https://api.justwoker.icu/register?aff=OIWh" target="_blank" rel="noopener">GitHub sign up →</a> | `OIWh` | 只能 GitHub 登录；额度数字不公开 |
-| **Matrix** | 🟢 Online | **2600 pts** | this page's invite 600 pts + ID verification 2000 pts | — | OpenAI-compatible | Sign in to see | <a href="https://matrix.mzsjai.com/login?redirect=%2Fapp%2Fgrowth%3FinviteCode%3DMX3CDVGATLJW" target="_blank" rel="noopener">Sign up →</a> | — | 无 Anthropic 协议，Claude Code 不能直连 |
-| **SeekAi** | 🔴 Unreachable | Posted on site | — | Daily check-in | OpenAI | Sign in to see | <a href="https://seekai.cc/sign-up?aff=dDJy" target="_blank" rel="noopener">Sign up →</a> | `dDJy` | 站点 526 异常中，先用备用注册 |
-| **Long's AI** | 🟢 Online | Free | Free tier, zero cost | No check-in | Anthropic + OpenAI | Sign in to see | <a href="https://aaawinn.xyz/sign-up?aff=ijFL" target="_blank" rel="noopener">GitHub sign up →</a> | `ijFL` | GitHub 账号需满 120 天 |
-| **Xinjiang Huancheng Security** | 🟢 Online | **30000 site-USD** | signup 30000 site-USD | Daily check-in | Anthropic + OpenAI | Sign in to see | <a href="https://api.hcnsec.cn/sign-up?aff=3J8z" target="_blank" rel="noopener">Sign up →</a> | `3J8z` | 邀请额度转钱包要填 49990 |
+### ⚡ Pick in 30 seconds
+
+Don't want to read the table? Pick by what you need:
+
+- **Zero-cost Claude Code** → **AgentRouter** (first day $175)
+- **Just want GPT / Codex** → **Long's AI** (free)
+- **A little paid, more stable** → **Panda API** (first day 200 credit)
+- **OpenAI protocol only** → **api456.me** (first day $50)
+
+| Service | Status | First day | After that | Protocols | Sign up | Invite code |
+| :-- | :--: | :--: | :--: | :--: | :--: | :--: |
+| **AgentRouter** 🔥 | 🟢 Online | **$175** | $25/day | Anthropic + OpenAI | <a href="https://agentrouter.org/register?aff=aibw" target="_blank" rel="noopener">Sign up →</a> | — |
+| **Panda API** 💳 | 🟢 Online | **200 credit** | No check-in | Anthropic + OpenAI | <a href="https://api520.pro/register?aff=3pox" target="_blank" rel="noopener">Sign up →</a> | — |
+| **DoCode** | 🟢 Online | **300 site-USD** | No check-in | Anthropic + OpenAI | <a href="https://docode.cc/register?aff=1Qof" target="_blank" rel="noopener">Sign up →</a> | `1Qof` |
+| **NianHua API** | 🟢 Online | Posted on site | Daily check-in | Anthropic + OpenAI | <a href="https://us-3.nianhuaapi.com/sign-up?aff=aonj" target="_blank" rel="noopener">Sign up →</a> | `aonj` |
+| **ShawnAI** | 🟢 Online | **≈14000 pts** | ≈2000 pts/day | Anthropic + OpenAI | <a href="https://free.supxh.xin/register?code=MVU8GX" target="_blank" rel="noopener">Sign up →</a> | `MVU8GX` |
+| **api456.me** | 🟢 Online | **$50** | $10/day | OpenAI | <a href="https://api456.me/register?aff=zmza" target="_blank" rel="noopener">Sign up →</a> | `zmza` |
+| **JustDoWork** | 🟢 Online | Posted on site | Daily check-in | Anthropic + OpenAI | <a href="https://api.justwoker.icu/register?aff=OIWh" target="_blank" rel="noopener">GitHub sign up →</a> | `OIWh` |
+| **Matrix** | 🟢 Online | **2600 pts** | — | OpenAI-compatible | <a href="https://matrix.mzsjai.com/login?redirect=%2Fapp%2Fgrowth%3FinviteCode%3DMX3CDVGATLJW" target="_blank" rel="noopener">Sign up →</a> | — |
+| **SeekAi** | 🔴 Unreachable | Posted on site | Daily check-in | OpenAI | <a href="https://seekai.cc/sign-up?aff=dDJy" target="_blank" rel="noopener">Sign up →</a> | `dDJy` |
+| **Long's AI** | 🟢 Online | Free | No check-in | Anthropic + OpenAI | <a href="https://aaawinn.xyz/sign-up?aff=ijFL" target="_blank" rel="noopener">GitHub sign up →</a> | `ijFL` |
+| **Xinjiang Huancheng Security** | 🟢 Online | **30000 site-USD** | Daily check-in | Anthropic + OpenAI | <a href="https://api.hcnsec.cn/sign-up?aff=3J8z" target="_blank" rel="noopener">Sign up →</a> | `3J8z` |
 
 > "First day" = signup bonus + invite bonus from this page + whatever check-in pays out on day one (services with a daily reset pool count a single day's pool). Models, prices and status are scraped from each service's public API. Last update: `2026-11-02 03:37 UTC`.
 >
@@ -85,10 +80,27 @@ bash scripts/quickstart.sh
 powershell -ExecutionPolicy Bypass -File scripts/quickstart.ps1
 ```
 
+---
+
+> [!TIP]
+> **💬 Community chat · QQ group：1125690737（GCMP-福利站）**
+>
+> Claude Code / Codex setup, credit tips and service updates — the group hears about changes first.
+>
+> Search the group number in QQ, or scan the code · [Group QR code](docs/assets/qq-group.jpg)
+
+> [!TIP]
+> **📣 Want to be listed? The [Issue tab](https://github.com/Q-shuang-dot/ai-coding-welfare/issues) is free advertising**
+>
+> Found a service worth listing, or run one yourself? [Open an Issue](https://github.com/Q-shuang-dot/ai-coding-welfare/issues/new/choose) with your invite link. Issues are public, so the Issue tab is a promotion channel in itself; services that check out get added to the table.
+>
+> **[📋 Browse every Issue →](https://github.com/Q-shuang-dot/ai-coding-welfare/issues)**
+
 ## 📚 Service details
 
 
-### 🟢 AgentRouter 🔥 Top pick
+<a id="site-agentrouter"></a>
+<details open><summary><b>🟢 AgentRouter 🔥</b></summary>
 
 > AI coding community service · credit on signup, daily check-in keeps it alive
 
@@ -215,9 +227,12 @@ curl -s https://agentrouter.org/v1/chat/completions \
 - X: https://x.com/AgentRouter_0
 - Email: agent_router_org@163.com
 
+</details>
+
 ---
 
-### 🟢 Panda API
+<a id="site-api520"></a>
+<details><summary><b>🟢 Panda API 💳</b></summary>
 
 > New API paid relay · 100 credit on signup and 100 more through this page's invite, with 151 models (Claude Opus 4.6–5 / GPT-6 / Gemini 3.x) mixing per-token and per-call billing
 
@@ -497,9 +512,12 @@ curl -s https://api520.pro/v1/chat/completions \
 - Status monitor: https://look.api520.pro (the monitoring site the vendor advertises in a model slot; reachable on 2026-11-02)
 - Alternate domains: https://api521.pro / https://api522.pro (main sites 2 and 3 in the help doc)
 
+</details>
+
 ---
 
-### 🟢 DoCode
+<a id="site-docode"></a>
+<details><summary><b>🟢 DoCode</b></summary>
 
 > New API relay · 50 site-dollars on signup, 250 more with invite code 1Qof, 300 on day one — both Claude and GPT on the shelf
 
@@ -618,9 +636,12 @@ curl -s https://docode.cc/v1/chat/completions \
 - The FAQ's alternate domains ai.docode.pro / ai.docode.life and the announced hk.docode.cc all fail HTTPS (the first two have certificates issued only for docode.cc and therefore mismatch; hk fails the TLS handshake outright). This page lists only the verified api.docode.cc
 - Upstream instability is documented in the announcements: GPT plus "wiped out" then "temporarily revived", gpt-5.4 fully delisted, and on Sept 10 they were still saying "openai blew up, all of gpt is bad". Do not treat it as a stable production channel
 
+</details>
+
 ---
 
-### 🟢 NianHua API
+<a id="site-nianhua"></a>
+<details><summary><b>🟢 NianHua API</b></summary>
 
 > Custom New API relay · ratios publicly readable (89 models / 16 groups), random check-in rewards, a 0.05-ratio community group and multimodal models at zero per call
 
@@ -892,9 +913,12 @@ curl -s https://us-3.nianhuaapi.com/v1/chat/completions \
 - Server monitoring: https://vps.makelove.cloud (listed in the footer)
 - Docs: https://us-3.nianhuaapi.com/docs/
 
+</details>
+
 ---
 
-### 🟢 ShawnAI
+<a id="site-supxh"></a>
+<details><summary><b>🟢 ShawnAI</b></summary>
 
 > Free LLM API · 5000 credit on signup, 1000–3000 per daily check-in, 2000 each for inviter and invitee
 
@@ -1000,9 +1024,12 @@ curl -s https://free.supxh.xin/v1/chat/completions \
 - The model list is publicly readable, but free/paid routing, model additions and removals, and ratio changes can happen at any time
 - This is a newly listed service; stability and availability are still to be observed over time
 
+</details>
+
 ---
 
-### 🟢 api456.me
+<a id="site-api456"></a>
+<details><summary><b>🟢 api456.me</b></summary>
 
 > New API relay · $20 on signup, daily check-in, OpenAI protocol support
 
@@ -1090,9 +1117,12 @@ curl -s https://api456.me/v1/chat/completions \
 - The site sits behind Cloudflare, so anonymous probes may be blocked by the WAF — normal protection
 - Upstream is a third-party relay and models and ratios move with announcements; do not treat it as a stable production channel
 
+</details>
+
 ---
 
-### 🟢 JustDoWork
+<a id="site-justwoker"></a>
+<details><summary><b>🟢 JustDoWork</b></summary>
 
 > New API relay · GitHub-only login, focused on gpt-5.6 models, check-in + tasks for ongoing credit, native Anthropic protocol for Claude Code / Codex
 
@@ -1198,9 +1228,12 @@ curl -s https://api.justwoker.icu/v1/chat/completions \
 - Upstream is a third-party relay; the gpt-5.6 family can time out or drop the stream under large context or high concurrency, so do not treat it as a stable production channel
 - Model availability and prices move with upstream; defer to the console's live page
 
+</details>
+
 ---
 
-### 🟢 Matrix
+<a id="site-matrix"></a>
+<details><summary><b>🟢 Matrix</b></summary>
 
 > Unified API gateway + open-source app store · 600 credit on invite signup, 2000 more for ID verification
 
@@ -1262,9 +1295,12 @@ Console: <https://matrix.mzsjai.com/app/apikey>
 - Docs: https://matrix.mzsjai.com/docs/quickstart
 - Feedback: https://matrix.mzsjai.com/docs/contact
 
+</details>
+
 ---
 
-### 🔴 SeekAi
+<a id="site-seekai"></a>
+<details><summary><b>🔴 SeekAi</b></summary>
 
 > New API relay · credit on signup, check-in and invites for ongoing credit, supports Claude Code / Codex / Cursor
 
@@ -1279,7 +1315,7 @@ Console: <https://matrix.mzsjai.com/app/apikey>
 
 **Live data** (scraped from public APIs)
 
-- ⚠ No fresh API data for 53 hours; the info below is a snapshot from `2026-10-30 22:19 UTC`
+- ⚠ No fresh API data for 54 hours; the info below is a snapshot from `2026-10-30 22:19 UTC`
 - Panel name: **SeekAi**
 - Panel version: `v1.0.0-rc.25`
 - Daily check-in: ✅
@@ -1359,9 +1395,12 @@ curl -s https://seekai.cc/v1/chat/completions \
 - Email: yangyuqi@xjhcit.cn
 - QQ group: 94355225
 
+</details>
+
 ---
 
-### 🟢 Long's AI
+<a id="site-aaawinn"></a>
+<details><summary><b>🟢 Long's AI</b></summary>
 
 > New API relay · the free-tier group costs nothing, GitHub accounts must be 120 days old, and GPT models go over the Anthropic protocol
 
@@ -1475,9 +1514,12 @@ curl -s https://aaawinn.xyz/v1/chat/completions \
 - Model sources: https://aaawinn.xyz/public-pool
 - Docs: https://www.yuque.com/riyeqiaodaimadelong/bk54gx
 
+</details>
+
 ---
 
-### 🟢 Xinjiang Huancheng Security
+<a id="site-hcnsec"></a>
+<details><summary><b>🟢 Xinjiang Huancheng Security</b></summary>
 
 > New API community gateway · system name "Xinjiang Huancheng Network Security Technology Community LLM Security Gateway"; check-in + tasks + invites all earn credit, 30000 site-dollars on signup, and the free group has models priced at zero per call
 
@@ -1596,6 +1638,8 @@ curl -s https://api.hcnsec.cn/v1/chat/completions \
 - QQ group: 943554225
 - Tutorial: https://hcnote.cn/2026/07/12/12831.html
 - Free-stuff directory: https://link.hcnsec.cn (the site marks it as a non-site link)
+
+</details>
 
 ---
 

@@ -1150,7 +1150,7 @@ test('邀请码要手填的站才出「邀请码」列，且写清 — 不等于
 
   const coded = { ...SITE, inviteCode: 'zMRe' };
   const md = renderReadme({ meta: META, sites: [coded], live, groups: [], history: HIST });
-  assert.match(md, /\| 模型 \| 注册 \| 邀请码 \|/, '邀请码列排在最后');
+  assert.match(md, /\| 注册 \| 邀请码 \|/, '邀请码列排在最后');
   assert.match(md, /`zMRe` \|$/m);
   assert.match(md, /注册表单里有一栏要\*\*自己填\*\*/);
   // 表头、分隔行、数据行的列数必须一致，否则 GitHub 上整张表会散架
@@ -1159,21 +1159,38 @@ test('邀请码要手填的站才出「邀请码」列，且写清 — 不等于
   assert.equal(cols(head), cols(sep));
   assert.equal(cols(head), cols(row));
 });
-test('有备注时才出「备注」列，竖线要转义、不能把表格撑散', () => {
+test('备注不再占表格列，进站点折叠块；竖线不会撑散表格', () => {
   const live = { generatedAt: iso(0), sites: [{ id: 'demo', online: true, registerOpen: true }] };
   const plain = renderReadme({ meta: META, sites: [SITE], live, groups: [], history: HIST });
-  assert.doesNotMatch(plain, /\| 备注 \|/, '没有站写备注时不该多出一个空列');
+  assert.doesNotMatch(plain, /\| 备注 \|/, '备注列已经挪进折叠详情');
 
   const noted = { ...SITE, remarks: '加群解锁 | 额外福利' };
   const md = renderReadme({ meta: META, sites: [noted], live, groups: [], history: HIST });
-  assert.match(md, /\| 备注 \|/);
-  assert.match(md, /加群解锁 \\\| 额外福利/, '竖线必须转义，否则整行会被截断');
+  assert.doesNotMatch(md, /\| 备注 \|/);
+  assert.match(md, /📝 加群解锁 \| 额外福利/, '备注要在详情里原样出现');
   const [head, sep, row] = md.split('\n').filter((l) => l.startsWith('| ')).slice(0, 3);
-  // 转义后的 \| 是单元格内容，不算列分隔符
-  const cols = (l) => l.replace(/\\\|/g, '·').split('|').length;
+  const cols = (l) => l.split('|').length;
   assert.equal(cols(head), cols(sep));
   assert.equal(cols(head), cols(row));
 });
+test('README 首屏：30 秒选站、7 列速查表、站点详情默认折叠', () => {
+  const live = {
+    generatedAt: iso(0),
+    sites: [
+      { id: 'demo', online: true, registerOpen: true },
+      { id: 'demo2', online: true, registerOpen: true },
+    ],
+  };
+  const first = { ...SITE, recommended: true, inviteCode: 'abc' };
+  const second = { ...SITE, id: 'demo2', name: 'Demo Two', recommended: false, inviteCode: 'def' };
+  const md = renderReadme({ meta: META, sites: [first, second], live, groups: [], history: HIST });
+  assert.match(md, /### ⚡ 30 秒选站/);
+  assert.match(md, /\| 站点 \| 状态 \| 首日可得 \| 之后每天 \| 兼容协议 \| 注册 \| 邀请码 \|/);
+  assert.match(md, /<details open><summary><b>🟢 Demo 站/);
+  assert.match(md, /<details><summary><b>🟢 Demo Two/);
+  assert.doesNotMatch(md, /### 🟢 Demo 站/, '站点标题已改成 summary，避免详情里再重复一遍');
+});
+
 test('交流群：群号与二维码从 meta.community 来，不写死在模板里', () => {
   const live = { generatedAt: iso(0), sites: [{ id: 'demo', online: true }] };
   const plain = renderReadme({ meta: META, sites: [SITE], live, groups: [], history: HIST });
@@ -1256,7 +1273,7 @@ test('英文版的章节标题、表格表头、FAQ、免责声明全部是英�
 
 test('站点文案走 sites.json 的 en 覆盖块，站名与卖点都换英文', () => {
   const md = renderEn();
-  assert.match(md, /### 🟢 Demo Site/);
+  assert.match(md, /🟢 Demo Site/);
   assert.match(md, /> A demo relay that hands out credit on signup/);
   assert.match(md, /- Generous credit/);
   assert.match(md, /- Rules change without notice/);
@@ -1267,7 +1284,7 @@ test('站点文案走 sites.json 的 en 覆盖块，站名与卖点都换英文'
 
 test('没写 en 覆盖的站点：段落整段跳过，不把中文明文塞进英文版', () => {
   const md = renderEn([NO_EN_SITE], NO_EN_LIVE);
-  assert.match(md, /### 🟢 无翻译站/, '站名是品牌，没有英文写法就沿用原文');
+  assert.match(md, /🟢 无翻译站/, '站名是品牌，没有英文写法就沿用原文');
   assert.doesNotMatch(md, /注册送额度的示例站/);
   assert.doesNotMatch(md, /额度大方/);
   assert.doesNotMatch(md, /规则随时变/);
