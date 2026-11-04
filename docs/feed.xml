@@ -5,8 +5,16 @@
   <link rel="self" href="https://q-shuang-dot.github.io/ai-coding-welfare/feed.xml"/>
   <link href="https://q-shuang-dot.github.io/ai-coding-welfare/"/>
   <id>https://q-shuang-dot.github.io/ai-coding-welfare/</id>
-  <updated>2026-11-04T06:22:57.484Z</updated>
+  <updated>2026-11-04T19:45:29.661Z</updated>
   <author><name>AI 福利站 · Claude Code / Codex 免费额度白嫖导航</name></author>
+  <entry>
+    <title>2026-11-04 · 2 项变动</title>
+    <link href="https://q-shuang-dot.github.io/ai-coding-welfare/changelog/#2026-11-04"/>
+    <id>tag:q-shuang-dot.github.io,2026-11-04:changelog</id>
+    <updated>2026-11-04T19:45:29.661Z</updated>
+    <summary>年华 API 上线模型：claude-haiku-5-5（另有 1 项变动）</summary>
+    <content type="html">&lt;ul&gt;&lt;li&gt;➕ 年华 API 上线模型：claude-haiku-5-5&lt;/li&gt;&lt;li&gt;➖ 年华 API 下线模型：claude-opus-4-6-thinking、claude-sonnet-4-6-thinking、gemini-2.5-flash、gemini-2.5-flash-lite 等 14 个&lt;/li&gt;&lt;/ul&gt;</content>
+  </entry>
   <entry>
     <title>2026-11-03 · 1 项变动</title>
     <link href="https://q-shuang-dot.github.io/ai-coding-welfare/changelog/#2026-11-03"/>

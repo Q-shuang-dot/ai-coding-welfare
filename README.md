@@ -8,7 +8,7 @@
   <img src="https://img.shields.io/badge/%E6%94%B6%E5%BD%95%E7%A6%8F%E5%88%A9%E7%AB%99-11%20%E4%B8%AA-blue" alt="收录福利站">
   <img src="https://img.shields.io/badge/%E5%9C%A8%E7%BA%BF-10%2F11-orange" alt="在线">
   <img src="https://img.shields.io/badge/%E9%A6%96%E6%97%A5%E5%8F%AF%E5%BE%97-%E6%9C%80%E9%AB%98%20%24175-success" alt="首日可得">
-  <img src="https://img.shields.io/badge/%E6%95%B0%E6%8D%AE%E6%9B%B4%E6%96%B0-2026--11--04%2006.22%20UTC-informational" alt="数据更新">
+  <img src="https://img.shields.io/badge/%E6%95%B0%E6%8D%AE%E6%9B%B4%E6%96%B0-2026--11--04%2019.45%20UTC-informational" alt="数据更新">
 </p>
 
 <p align="center">
@@ -52,7 +52,7 @@
 | **Long的AI** | 🟢 在线 | 免费 | 无签到 | Anthropic + OpenAI | <a href="https://aaawinn.xyz/sign-up?aff=ijFL" target="_blank" rel="noopener">GitHub 注册 →</a> | `ijFL` |
 | **新疆幻城网安** | 🟢 在线 | **30000 站内刀** | 支持签到 | Anthropic + OpenAI | <a href="https://api.hcnsec.cn/sign-up?aff=3J8z" target="_blank" rel="noopener">点此注册 →</a> | `3J8z` |
 
-> 「首日可得」= 注册基础额度 + 本页邀请链接额度 + 当天能领的签到额度（每日重置额度池的站点按一天的池子算）；模型、价格、在线状态由脚本抓取站点公开接口自动生成，最后更新：`2026-11-04 06:22 UTC`。
+> 「首日可得」= 注册基础额度 + 本页邀请链接额度 + 当天能领的签到额度（每日重置额度池的站点按一天的池子算）；模型、价格、在线状态由脚本抓取站点公开接口自动生成，最后更新：`2026-11-04 19:45 UTC`。
 >
 > 「邀请码」列写了码的站（DoCode `1Qof`、年华 API `aonj`、肖恩AI `MVU8GX`、api456.me `zmza`、JustDoWork `OIWh`、SeekAi `dDJy`、Long的AI `ijFL`、新疆幻城网安 `3J8z`），注册表单里有一栏要**自己填**，漏填就只拿得到注册基础额度、事后补不上；其余站写 — 是因为邀请额度由链接自带，不用手打。
 >
@@ -108,12 +108,12 @@ powershell -ExecutionPolicy Bypass -File scripts/quickstart.ps1
 
 **实时数据**（自动抓取站点公开接口）
 
-- ⚠ 接口已连续 53 小时没抓到新数据，下列信息为 `2026-11-02 01:31 UTC` 的快照
+- ⚠ 接口已连续 66 小时没抓到新数据，下列信息为 `2026-11-02 01:31 UTC` 的快照
 - 站点名称：**Agent Router**
 - 面板版本：`init-20261016-861e4557`
 - 邀请他人可得：**$100**
 - 登录方式：GitHub / LinuxDO
-- 接口延迟：297 ms
+- 接口延迟：317 ms
 
 **镜像 / 备用入口**
 
@@ -258,7 +258,7 @@ curl -s https://agentrouter.org/v1/chat/completions \
 - 每日签到：❌
 - 开放注册：✅
 - 登录方式：账号密码
-- 接口延迟：1511 ms
+- 接口延迟：885 ms
 
 **当前可用模型**
 
@@ -538,7 +538,7 @@ curl -s https://api520.pro/v1/chat/completions \
 - 每日签到：❌
 - 开放注册：✅
 - 登录方式：账号密码
-- 接口延迟：2183 ms
+- 接口延迟：1231 ms
 
 **镜像 / 备用入口**
 
@@ -667,7 +667,7 @@ curl -s https://docode.cc/v1/chat/completions \
 - 每日签到：✅
 - 开放注册：✅
 - 登录方式：账号密码
-- 接口延迟：1702 ms
+- 接口延迟：1521 ms
 
 **当前可用模型**
 
@@ -689,14 +689,13 @@ curl -s https://docode.cc/v1/chat/completions \
 | `claude-fable-5-1` | 5 | $10 | $50 | anthropic / openai |
 | `claude-haiku-4-5` | 0.5 | $1 | $5 | anthropic / openai |
 | `claude-haiku-4-5-20251001` | 0.5 | $1 | $5 | anthropic / openai |
+| `claude-haiku-5-5` | 37.5 | $75 | $75 | anthropic / openai |
 | `claude-opus-4-6` | 2.5 | $5 | $25 | anthropic / openai |
-| `claude-opus-4-6-thinking` | 2.5 | $5 | $25 | anthropic / openai |
 | `claude-opus-4-7` | 2.5 | $5 | $25 | anthropic / openai |
 | `claude-opus-4-8` | 2.5 | $5 | $25 | anthropic / openai |
 | `claude-opus-5` | 2.5 | $5 | $25 | anthropic / openai |
 | `claude-opus-5-5` | 2 | $4 | $20 | anthropic / openai |
 | `claude-sonnet-4-6` | 1.5 | $3 | $15 | anthropic / openai |
-| `claude-sonnet-4-6-thinking` | 2.5 | $5 | $25 | anthropic / openai |
 | `claude-sonnet-5` | 1.5 | $3 | $3 | anthropic / openai |
 | `claude-sonnet-5-5` | 37.5 | $75 | $75 | anthropic / openai |
 | `codex-auto-review` | 1.25 | $2.5 | $15 | openai |
@@ -705,25 +704,13 @@ curl -s https://docode.cc/v1/chat/completions \
 | `DeepSeek-V4-Flash-0731` | 1.5 | $3 | $9 | openai |
 | `deepseek-v4.1-flash-free` | 1 | $2 | $8 | openai |
 | `dots-studio/dots-3-note-preview:free` | 0 | $0 | $0 | openai |
-| `gemini-2.5-flash` | 0.15 | $0.3 | $2.5 | gemini / openai |
-| `gemini-2.5-flash-lite` | 0.05 | $0.1 | $0.4 | gemini / openai |
-| `gemini-2.5-pro` | 0.625 | $1.25 | $10 | gemini / openai |
 | `gemini-3-flash` | 0.25 | $0.5 | $3 | gemini / openai |
-| `gemini-3-flash-agent` | 0.125 | $0.25 | $1.5 | gemini / openai |
-| `gemini-3-flash-preview` | 0.25 | $0.5 | $3 | gemini / openai |
 | `gemini-3-pro-high` | 2 | $4 | $18 | gemini / openai |
-| `gemini-3-pro-low` | 1 | $2 | $12 | gemini / openai |
-| `gemini-3.1-flash-image` | 按次 | **$0.5 / 次** | — | gemini / openai |
-| `gemini-3.1-flash-lite` | 0.125 | $0.25 | $1.5 | gemini / openai |
-| `gemini-3.1-flash-lite-preview` | 0.125 | $0.25 | $1.5 | gemini / openai |
 | `gemini-3.1-pro` | 2 | $4 | $18 | gemini / openai |
-| `gemini-3.1-pro-low` | 1 | $2 | $12 | gemini / openai |
 | `gemini-3.5-flash` | 0.25 | $0.5 | $3 | gemini / openai |
-| `gemini-3.5-flash-low` | 0.125 | $0.25 | $1.5 | gemini / openai |
 | `gemini-3.7-flash` | 0.75 | $1.5 | $7.5 | gemini / openai |
 | `gemini-3.8-flash` | 0.75 | $1.5 | $7.5 | gemini / openai |
 | `gemini-4-argon` | 2 | $4 | $20 | gemini / openai |
-| `gemini-pro-agent` | 2 | $4 | $18 | gemini / openai |
 | `GLM-5.3-Flash` | 0.4 | $0.8 | $2.8 | openai |
 | `gpt-4o-audio-preview` | 1.25 | $2.5 | $10 | openai |
 | `gpt-4o-realtime-preview` | 2.5 | $5 | $20 | openai |
@@ -840,7 +827,7 @@ curl -s https://docode.cc/v1/chat/completions \
 # macOS / Linux
 export ANTHROPIC_BASE_URL=https://us-3.nianhuaapi.com
 export ANTHROPIC_AUTH_TOKEN=你在站点后台创建的 Key
-export ANTHROPIC_MODEL=claude-opus-5-5
+export ANTHROPIC_MODEL=claude-haiku-5-5
 npm install -g @anthropic-ai/claude-code@latest && claude
 ```
 
@@ -848,7 +835,7 @@ npm install -g @anthropic-ai/claude-code@latest && claude
 # Windows PowerShell
 $env:ANTHROPIC_BASE_URL = "https://us-3.nianhuaapi.com"
 $env:ANTHROPIC_AUTH_TOKEN = "你在站点后台创建的 Key"
-$env:ANTHROPIC_MODEL = "claude-opus-5-5"
+$env:ANTHROPIC_MODEL = "claude-haiku-5-5"
 claude
 ```
 
@@ -956,7 +943,7 @@ curl -s https://us-3.nianhuaapi.com/v1/chat/completions \
 
 **实时数据**（自动抓取站点公开接口）
 
-- 接口延迟：1937 ms
+- 接口延迟：1648 ms
 
 > 2026-09-20 公开定价页返回 191 个模型，含 stepfun、deepseek-v4.1-flash、gpt-5.5、gemini-2.5-flash、claude-sonnet-4-6、kimi-k2.5 等。注意返回里同时混有大量免费与付费条目，模型可用性与倍率以控制台为准。
 
@@ -1073,7 +1060,7 @@ curl -s https://free.supxh.xin/v1/chat/completions \
 - 每日签到：✅
 - 开放注册：✅
 - 登录方式：账号密码
-- 接口延迟：2133 ms
+- 接口延迟：1819 ms
 
 > 模型清单与价格需登录后在控制台查看（/api/pricing 匿名请求需登录），本页不列模型表。
 
@@ -1171,7 +1158,7 @@ curl -s https://api456.me/v1/chat/completions \
 - 开放注册：✅（站点关掉了邮箱密码注册，得用 GitHub 登录建号（防批量注册的常规做法）。）
 - 登录方式：GitHub / 账号密码
 - GitHub 账号需满 **365 天**
-- 接口延迟：19496 ms
+- 接口延迟：19360 ms
 
 > 模型定价页需要登录（/api/pricing 匿名请求返回 401，面板 pricing.requireAuth = true），本页不列模型表。实测主力是 gpt-5.6 系（gpt-5.6-luna / sol / terra），每次请求会带约 2000 tokens 的固定隐藏提示词；完整清单与倍率请登录控制台「定价」页确认。
 
@@ -1283,7 +1270,7 @@ curl -s https://api.justwoker.icu/v1/chat/completions \
 
 **实时数据**（自动抓取站点公开接口）
 
-- 接口延迟：3474 ms
+- 接口延迟：2779 ms
 
 > 模型清单与价格需登录后在控制台「模型列表」查看（按每百万 Tokens 计价，可按厂商 / 上下文窗口筛选），站点没有公开的模型与定价接口，本页不做承诺。
 
@@ -1347,13 +1334,13 @@ curl -s https://api.justwoker.icu/v1/chat/completions \
 
 **实时数据**（自动抓取站点公开接口）
 
-- ⚠ 接口已连续 104 小时没抓到新数据，下列信息为 `2026-10-30 22:19 UTC` 的快照
+- ⚠ 接口已连续 117 小时没抓到新数据，下列信息为 `2026-10-30 22:19 UTC` 的快照
 - 站点名称：**SeekAi**
 - 面板版本：`v1.0.0-rc.25`
 - 每日签到：✅
 - 开放注册：✅
 - 登录方式：GitHub / Telegram / 账号密码
-- 接口延迟：156 ms
+- 接口延迟：142 ms
 
 **镜像 / 备用入口**
 
@@ -1458,7 +1445,7 @@ curl -s https://seekai.cc/v1/chat/completions \
 - 每日签到：❌
 - 开放注册：✅（站点关掉了邮箱密码注册，得用 GitHub 登录建号（防批量注册的常规做法）。）
 - 登录方式：GitHub
-- 接口延迟：3102 ms
+- 接口延迟：2365 ms
 
 > 站点的模型价格接口不公开（/api/pricing 匿名请求返回 401，要登录管理页才看得到），白嫖分组的模型来源公示在 https://aaawinn.xyz/public-pool；站方公告提到白嫖分组的 GPT 系模型只支持 Anthropic 协议对接，OpenAI 协议有兼容问题。
 
@@ -1588,11 +1575,11 @@ curl -s https://aaawinn.xyz/v1/chat/completions \
 **实时数据**（自动抓取站点公开接口）
 
 - 站点名称：**新疆幻城网安科技公益大模型安全网关**
-- 面板版本：`v1.0.0-rc.47-hc13`
+- 面板版本：`v1.0.0-rc.47-hc14`
 - 每日签到：✅
 - 开放注册：✅
 - 登录方式：Passkey / 账号密码
-- 接口延迟：5706 ms
+- 接口延迟：4174 ms
 
 > 模型价格页需要登录（/api/pricing 匿名请求返回 401），不过站内公告里的名字可以直接抄：Qwen3.8-Flash-Next（0 元一次）、DeepSeek-V4.1-Flash 系（付费分组约 2 元一次，vision-exp 版本免费用户可用）、longcat-2.0（一次 1 元）、glm-5.3-flash、qwen3.8-27b、step 系、spark-x2.5、Qwen3.6-35B-A3B，站方还开源了 SparkMuse-4B 与 Qing-Sec-20B，均可在 ModelScope 搜到（hcnote/SparkMuse-4B）。
 
@@ -1708,18 +1695,18 @@ curl -s https://api.hcnsec.cn/v1/chat/completions \
 
 ## 🔔 额度变了，这里会通知你
 
-CI 每 6 小时抓一次各站接口，与上一次快照逐字段比对，目前已攒下 143 个样本、覆盖约 42.4 天。额度调整、掉线与恢复、模型上下线、价格变动都会自动记一条：
+CI 每 6 小时抓一次各站接口，与上一次快照逐字段比对，目前已攒下 143 个样本、覆盖约 42.9 天。额度调整、掉线与恢复、模型上下线、价格变动都会自动记一条：
 
 - 点仓库右上角 **Watch → Custom → Releases**：有重要变动时 GitHub 直接发邮件
 
 最近几条：
 
+- `2026-11-04` ➕ 年华 API 上线模型：claude-haiku-5-5
+- `2026-11-04` ➖ 年华 API 下线模型：claude-opus-4-6-thinking、claude-sonnet-4-6-thinking、gemini-2.5-flash、gemini-2.5-flash-lite 等 14 个
 - `2026-11-03` ➖ 熊猫API 下线模型：熊猫-vertex逆-49-gemini-4-argon、熊猫-X-27-kiro-claude-opus-4.5、熊猫-X-27-kiro-claude-opus-4.6、熊猫-X-27-kiro-claude-opus-4.7 等 7 个
 - `2026-11-02` ➕ 熊猫API 上线模型：熊猫-A-29-gemini-4-argon-ais、熊猫-vertex逆-35-gemini-4-argon
 - `2026-11-02` ➖ 熊猫API 下线模型：熊猫-A-14-MiniMax-M2.7-highspeed-高速
 - `2026-11-02` 🟢 Long的AI 恢复在线
-- `2026-11-02` 🏷️ 熊猫API 熊猫-X-24-kiro-claude-opus-4.5 价格 $75 入 / $375 出（每 1M） → $24 / 次
-- `2026-11-02` 🏷️ 熊猫API 熊猫-X-24-kiro-claude-opus-5.5 价格 $75 入 / $75 出（每 1M） → $24 / 次
 
 完整记录见 [CHANGELOG.md](CHANGELOG.md)。
 
