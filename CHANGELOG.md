@@ -6,6 +6,12 @@ AI 福利站 · Claude Code / Codex 免费额度白嫖导航的自动变动记�
 
 > 只记录会影响「值不值得注册」的字段。探测被站点 WAF 拦下时不记在线状态变化，避免机房 IP 被拦被误报成掉线。
 
+## 2026-11-07
+
+- ➕ 熊猫API 上线模型：熊猫-A-5-gemini-3.6-flash-高质量-特价 <sub>05:58 UTC</sub>
+- 🏷️ 熊猫API 熊猫-15-gemini-生图image-nano-banana-2 价格 $1 / 次 → $15 / 次 <sub>05:58 UTC</sub>
+- 🔴 JustDoWork 探测不到了：注册页与公开接口都没响应 <sub>05:58 UTC</sub>
+
 ## 2026-11-06
 
 - ➕ 熊猫API 上线模型：熊猫-A-69-vertex逆-gemini-4-carbon <sub>19:24 UTC</sub>
