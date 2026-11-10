@@ -6,6 +6,15 @@ AI 福利站 · Claude Code / Codex 免费额度白嫖导航的自动变动记�
 
 > 只记录会影响「值不值得注册」的字段。探测被站点 WAF 拦下时不记在线状态变化，避免机房 IP 被拦被误报成掉线。
 
+## 2026-11-10
+
+- 💰 AgentRouter 邀请他人的奖励 $100 → $50 <sub>02:47 UTC</sub>
+- ➖ AgentRouter 下线模型：claude-opus-5-5 <sub>02:47 UTC</sub>
+- 🏷️ AgentRouter gpt-6.1-sol 价格 $4 入 / $20 出（每 1M） → $2 入 / $10 出（每 1M） <sub>02:47 UTC</sub>
+- 📢 AgentRouter 发了公告：## gpt-6-astra 限量供应通知 gpt-6-astra 已调整为限量供应，**每天北京时间上午 10:00 投放一次，用完即止**。 预计每天仍有 **18 小时以上**可用，具体以实际可用情况为准。 <sub>02:47 UTC</sub>
+- 🆕 新收录 大汉 API <sub>02:47 UTC</sub>
+- 🟢 JustDoWork 恢复在线 <sub>02:47 UTC</sub>
+
 ## 2026-11-09
 
 - 🔴 JustDoWork 探测不到了：注册页与公开接口都没响应 <sub>22:22 UTC</sub>

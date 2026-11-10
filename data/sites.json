@@ -296,6 +296,136 @@
       "reviewedAt": "2026-11-02"
     },
     {
+      "id": "dahanxingbang",
+      "name": "大汉 API",
+      "subtitle": "New API 福利站 · 邮箱注册 + 每日签到续命，Anthropic / OpenAI 双协议直连；模型清单与倍率要登录后台才看得到",
+      "recommended": false,
+      "credits": {
+        "signup": null,
+        "invite": null,
+        "dailyCheckin": null,
+        "approx": false
+      },
+      "signupUrl": "https://ai.dahanxingbang.dpdns.org/sign-up?aff=ql9j",
+      "homeUrl": "https://ai.dahanxingbang.dpdns.org",
+      "docsUrl": null,
+      "statusApi": "https://ai.dahanxingbang.dpdns.org/api/status",
+      "pricingApi": "https://ai.dahanxingbang.dpdns.org/api/pricing",
+      "mirrors": [
+        {
+          "label": "自定义域名",
+          "homeUrl": "https://www.dahanxingbang.com",
+          "signupUrl": "https://www.dahanxingbang.com/sign-up?aff=ql9j",
+          "labelEn": "Custom domain"
+        }
+      ],
+      "tags": [
+        "New API",
+        "福利站",
+        "免费额度",
+        "每日签到",
+        "Claude Code",
+        "Codex",
+        "Anthropic 兼容",
+        "OpenAI 兼容"
+      ],
+      "highlights": [
+        "面板自报 checkin_enabled = true、enable_task = true：每日签到和站内任务中心两条路都能领额度，不用拉人头也能一直续命",
+        "站方公告（2026-10-28）原话：「日常签到满足使用，如需量大可加群 QQ群 1130094152 或者加 QQ：2369210051 咨询」——免费额度主要靠签到，不是靠一次性注册赠送",
+        "双协议都挂着：匿名 POST /v1/messages、/v1/chat/completions、/v1/responses 都回 New API 的 401（不是 404），Claude Code 填 Base URL 直连，Codex CLI 走 /v1",
+        "注册只有邮箱 + 密码和 Nodeloc 两种：面板自报 password_register_enabled = true、email_verification = true、turnstile_check = false，不用过人机校验，但邮箱必须收得到验证码",
+        "标准美元盘口径：quota_display_type = USD、quota_per_unit = 500000（$1 = 50 万 quota）、price 与 usd_exchange_rate 都是 7.3（¥7.3 ≈ $1），和页面上其它美元站能直接对比",
+        "模型清单抓不到：/api/pricing 与 /api/models 匿名访问都是 401（面板的 HeaderNavModules 里 pricing / rankings 也标着 requireAuth: true），所以本页暂时没有模型表"
+      ],
+      "endpoints": {
+        "anthropic": "https://ai.dahanxingbang.dpdns.org",
+        "openai": "https://ai.dahanxingbang.dpdns.org/v1"
+      },
+      "modelsNote": "公开接口不给模型：/api/pricing 与 /api/models 匿名访问都是 401，模型清单、倍率、分组要登录后在站内「模型广场 / 定价」页看。本页的协议支持是按匿名探路（/v1/messages 与 /v1/chat/completions 都回 401 Invalid token 而不是 404）加面板配置口径登记的，模型表留空。",
+      "register": {
+        "methods": [
+          "邮箱 + 密码",
+          "Nodeloc OAuth"
+        ],
+        "requirements": [
+          "从本页邀请链接进入注册（带 ?aff=ql9j），邀请关系与奖励按站点的邀请机制结算",
+          "注册要邮箱验证码（email_verification = true）：一次性邮箱、收不到信的域名会卡在验证那一步",
+          "面板自报 turnstile_check = false、password_register_enabled = true，注册不用过人机校验，填邮箱 + 密码 + 验证码即可",
+          "没有 GitHub / LinuxDO / Telegram / 微信 / Discord / OIDC / Passkey 入口（这些开关全是 false），第三方登录只有 Nodeloc（custom_oauth_providers 里唯一的 provider）"
+        ]
+      },
+      "earnMore": [
+        "每日签到领额度（面板 checkin_enabled = true，登录后台点一下）",
+        "站内任务中心也能领额度（enable_task = true）",
+        "站方公告留了 QQ 群 1130094152 与 QQ 2369210051，量大或遇到问题直接找站方"
+      ],
+      "caveats": [
+        "免费额度的数字没公开：注册赠送、邀请奖励、签到区间都不在 /api/status 里（没有 quota_for_new_user / quota_for_invitee 字段），本页按「站内公示」登记，进后台「钱包 / 额度」核对一遍再算账",
+        "价格页和模型清单要登录才看得到（/api/pricing 匿名 401），收录时没能核对模型与倍率，也判断不了 Claude 系是按量还是按次计费",
+        "站点很新：公开接口里最早一条公告是 2026-10-28，本仓库还没有它的可用性历史，先当试用通道，别把生产任务压上去",
+        "主入口是 dpdns.org 的免费二级域名（ai.dahanxingbang.dpdns.org），另有自定义域名 www.dahanxingbang.com 是同一套账号；免费域名换域名 / 停运的成本很低，注册后记得盯公告",
+        "站点挂在 Cloudflare 后面（api_info 里另给了一条 CF 线路 https://www.dahanxingbang.com/v1），机房 IP 打注册页容易被拦，家宽一般正常"
+      ],
+      "community": [
+        "站点: https://ai.dahanxingbang.dpdns.org",
+        "公告: https://ai.dahanxingbang.dpdns.org/api/status（公开 announcements 字段）",
+        "QQ 群: 1130094152 · QQ: 2369210051（站方公告给的咨询渠道）"
+      ],
+      "en": {
+        "subtitle": "New API community service · email signup plus a daily check-in to keep credit flowing, with both Anthropic and OpenAI routes mounted; the model list only appears after you log in",
+        "highlights": [
+          "The panel reports checkin_enabled = true and enable_task = true, so daily check-in and the task centre are two ways to keep earning credit without recruiting anyone",
+          "The site announcement of 2026-10-28 says in so many words that \"daily check-in is enough for normal use, join the QQ group 1130094152 or add QQ 2369210051 if you need more\" — free credit comes from check-in, not a one-off signup bonus",
+          "Both protocols are mounted: anonymous POSTs to /v1/messages, /v1/chat/completions and /v1/responses all return New API's 401 rather than 404, so Claude Code connects directly with the Base URL and Codex CLI uses /v1",
+          "Signup is email + password or Nodeloc only: the panel reports password_register_enabled = true, email_verification = true and turnstile_check = false, so no human check — but the mailbox must be able to receive the code",
+          "Standard USD accounting: quota_display_type = USD, quota_per_unit = 500000 ($1 = 500k quota), and both price and usd_exchange_rate are 7.3 (¥7.3 ≈ $1), so it is directly comparable with the other USD services on this page",
+          "The model list cannot be fetched: /api/pricing and /api/models both return 401 anonymously (the panel's HeaderNavModules marks pricing and rankings as requireAuth too), so this page has no model table yet"
+        ],
+        "modelsNote": "The public APIs give nothing away: /api/pricing and /api/models both answer 401 anonymously, so the model list, ratios and groups are only visible after logging in, on the site's model/pricing page. The protocol support recorded here comes from anonymous probes (/v1/messages and /v1/chat/completions return 401 Invalid token, not 404) plus the panel config, and the model table is intentionally left empty.",
+        "register": {
+          "requirements": [
+            "Enter through this page's invite link (?aff=ql9j); the referral relationship and reward follow the site's own invite mechanism",
+            "Registration needs an email code (email_verification = true), so disposable mailboxes or domains that cannot receive mail will stall at verification",
+            "The panel reports turnstile_check = false and password_register_enabled = true, so there is no human check — email, password and the code are enough",
+            "There is no GitHub / LinuxDO / Telegram / WeChat / Discord / OIDC / Passkey entry (all those switches are false); the only third-party login is Nodeloc, the sole provider in custom_oauth_providers"
+          ]
+        },
+        "earnMore": [
+          "Daily check-in grants credit (the panel reports checkin_enabled = true — click it in the dashboard)",
+          "The site task centre grants credit too (enable_task = true)",
+          "The announcement leaves a QQ group (1130094152) and a QQ contact (2369210051) for users who need more or hit problems"
+        ],
+        "caveats": [
+          "The credit numbers are not public: signup bonus, invite reward and check-in range are all absent from /api/status (no quota_for_new_user / quota_for_invitee fields), so this page records \"announced on site\" and you should check the wallet page after logging in",
+          "The pricing page and model list require a login (/api/pricing returns 401 anonymously), so models and ratios could not be verified when listing, and it is impossible to tell whether the Claude models are per-token or per-call",
+          "The site is very new: the earliest public announcement is dated 2026-10-28 and this repository has no uptime history for it yet — treat it as a trial channel, not production",
+          "The main entry is a free dpdns.org subdomain (ai.dahanxingbang.dpdns.org); a custom domain, www.dahanxingbang.com, serves the same account. Free subdomains are cheap to swap or drop, so keep an eye on the announcements",
+          "The site sits behind Cloudflare (api_info also lists a CF route at https://www.dahanxingbang.com/v1), so datacenter IPs tend to get blocked on the signup page; home broadband is usually fine"
+        ],
+        "community": [
+          "Site: https://ai.dahanxingbang.dpdns.org",
+          "Announcements: https://ai.dahanxingbang.dpdns.org/api/status (public announcements field)",
+          "QQ group: 1130094152 · QQ: 2369210051 (contacts given in the site announcement)"
+        ]
+      },
+      "remarks": "免费额度靠每日签到，注册赠送数字未公开",
+      "faq": [
+        [
+          "大汉 API 送多少额度？",
+          "站点公开接口没有吐注册 / 邀请 / 签到额度（/api/status 里没有 quota_for_new_user、quota_for_invitee 这些字段），所以本页按「站内公示」登记。登录后在「钱包 / 额度」页看到的数字才算数。"
+        ],
+        [
+          "大汉 API 能跑 Claude Code 和 Codex 吗？",
+          "两条协议都通：匿名 POST /v1/messages、/v1/chat/completions、/v1/responses 都回 401 而不是 404，说明路由挂上了。Claude Code 的 Base URL 填 https://ai.dahanxingbang.dpdns.org（不带 /v1），Codex CLI 的 base_url 用 https://ai.dahanxingbang.dpdns.org/v1。"
+        ],
+        [
+          "大汉 API 的模型和价格在哪看？",
+          "/api/pricing 和 /api/models 匿名访问都是 401，模型清单、倍率、分组都要登录后在「模型广场 / 定价」页看，本页暂时没有模型表。"
+        ]
+      ],
+      "reviewedAt": "2026-11-10"
+    },
+    {
       "id": "docode",
       "name": "DoCode",
       "subtitle": "New API 中转站 · 注册送 50 站内刀，注册时填邀请码 1Qof 再加 250，首日 300 刀，Claude 与 GPT 都在架上",

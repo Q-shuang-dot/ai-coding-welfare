@@ -1,0 +1,392 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>大汉 API 免费额度 / 邀请链接 / Claude Code 配置 — AI 福利站 · Claude Code / Codex 免费额度白嫖导航</title>
+<meta name="description" content="大汉 API：New API 福利站 · 邮箱注册 + 每日签到续命，Anthropic / OpenAI 双协议直连；模型清单与倍率要登录后台才看得到。含实时在线状态、模型价格、Claude Code / Codex 接入配置与踩坑清单，数据快照 2026-11-10 02:47 UTC。">
+
+<meta name="keywords" content="AI 福利站,白嫖 Claude Code,免费 Codex,Claude Code 免费,Claude Code 中转,Codex 免费额度,Codex 中转,Codex 公益站,AI API 中转站,公益站,免费 API 额度,每日免费额度,AI 福利,白嫖 API,免费 AI 工具,claude-opus-5 API,New API,AgentRouter,GPT-5.6 Sol 中转,claude-opus-5 按次计费">
+<meta property="og:type" content="website">
+<meta property="og:title" content="大汉 API 免费额度 / 邀请链接 / Claude Code 配置 — AI 福利站 · Claude Code / Codex 免费额度白嫖导航">
+<meta property="og:description" content="大汉 API：New API 福利站 · 邮箱注册 + 每日签到续命，Anthropic / OpenAI 双协议直连；模型清单与倍率要登录后台才看得到。含实时在线状态、模型价格、Claude Code / Codex 接入配置与踩坑清单，数据快照 2026-11-10 02:47 UTC。">
+<meta property="og:url" content="https://q-shuang-dot.github.io/ai-coding-welfare/sites/dahanxingbang/">
+<meta property="og:image" content="https://q-shuang-dot.github.io/ai-coding-welfare/assets/social-preview.png">
+<meta property="og:image:alt" content="大汉 API 免费额度 / 邀请链接 / Claude Code 配置 — AI 福利站 · Claude Code / Codex 免费额度白嫖导航">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://q-shuang-dot.github.io/ai-coding-welfare/assets/social-preview.png">
+<link rel="canonical" href="https://q-shuang-dot.github.io/ai-coding-welfare/sites/dahanxingbang/">
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+<meta name="theme-color" content="#2563eb">
+<link rel="alternate" type="application/atom+xml" title="变动日志" href="https://q-shuang-dot.github.io/ai-coding-welfare/feed.xml">
+<script type="application/ld+json">[{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"AI 福利站 · Claude Code / Codex 免费额度白嫖导航","item":"https://q-shuang-dot.github.io/ai-coding-welfare/"},{"@type":"ListItem","position":2,"name":"大汉 API","item":"https://q-shuang-dot.github.io/ai-coding-welfare/sites/dahanxingbang/"}]},{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"大汉 API 送多少额度？","acceptedAnswer":{"@type":"Answer","text":"站点公开接口没有吐注册 / 邀请 / 签到额度（/api/status 里没有 quota_for_new_user、quota_for_invitee 这些字段），所以本页按「站内公示」登记。登录后在「钱包 / 额度」页看到的数字才算数。"}},{"@type":"Question","name":"大汉 API 能跑 Claude Code 和 Codex 吗？","acceptedAnswer":{"@type":"Answer","text":"两条协议都通：匿名 POST /v1/messages、/v1/chat/completions、/v1/responses 都回 401 而不是 404，说明路由挂上了。Claude Code 的 Base URL 填 https://ai.dahanxingbang.dpdns.org（不带 /v1），Codex CLI 的 base_url 用 https://ai.dahanxingbang.dpdns.org/v1。"}},{"@type":"Question","name":"大汉 API 的模型和价格在哪看？","acceptedAnswer":{"@type":"Answer","text":"/api/pricing 和 /api/models 匿名访问都是 401，模型清单、倍率、分组都要登录后在「模型广场 / 定价」页看，本页暂时没有模型表。"}}]}]</script>
+<style>
+/* AI 福利站 — 落地页样式（手写，非生成物） */
+:root {
+  --bg: #f7f9fc;
+  --bg-soft: #eef2f7;
+  --card: #ffffff;
+  --line: #e3e8ef;
+  --fg: #0f172a;
+  --fg-dim: #475569;
+  --accent: #3b82f6;
+  --accent-2: #7c3aed;
+  --accent-3: #14b8a6;
+  --ok: #16a34a;
+  --bad: #ef4444;
+  --radius: 16px;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background:
+    radial-gradient(900px 500px at 15% -10%, rgba(59, 130, 246, 0.18), transparent 60%),
+    radial-gradient(800px 460px at 95% 0%, rgba(124, 58, 237, 0.14), transparent 55%),
+    var(--bg);
+  color: var(--fg);
+  font: 16px/1.7 ui-sans-serif, system-ui, -apple-system, "Segoe UI", "Microsoft YaHei", sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.wrap { max-width: 1120px; margin: 0 auto; padding: 0 20px; }
+
+/* ---------- hero ---------- */
+header.hero { padding: 70px 0 44px; text-align: center; }
+.hero h1 {
+  margin: 0 0 14px;
+  font-size: clamp(28px, 5.4vw, 48px);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  background: linear-gradient(96deg, var(--accent-2) 20%, var(--accent) 70%, var(--accent-3) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.hero p.sub { margin: 0 auto 24px; max-width: 620px; color: var(--fg-dim); font-size: clamp(15px, 2vw, 18px); }
+
+.pills { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-bottom: 28px; }
+.pill {
+  padding: 6px 13px; border: 1px solid var(--line); border-radius: 999px;
+  background: rgba(255, 255, 255, 0.6); color: var(--fg-dim); font-size: 13px;
+}
+.pill b { color: var(--fg); }
+
+.cta-row { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
+.btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 12px 22px; border-radius: 12px; text-decoration: none;
+  font-weight: 650; font-size: 15px; transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.btn-primary {
+  color: #ffffff; background: linear-gradient(96deg, var(--accent-2), var(--accent));
+  box-shadow: 0 8px 26px rgba(124, 58, 237, 0.28);
+}
+.btn-ghost { color: var(--fg); border: 1px solid var(--line); background: rgba(255,255,255,0.6); }
+.btn:hover { transform: translateY(-2px); }
+
+/* ---------- sections ---------- */
+section { padding: 28px 0; }
+section + section { border-top: 1px solid var(--line); }
+h2 { font-size: clamp(18px, 2.4vw, 22px); margin: 0 0 10px; letter-spacing: -0.01em; }
+h2 + .hint { margin: 0 0 18px; color: var(--fg-dim); font-size: 13px; }
+
+/* ---------- 首页：站点行列表 ---------- */
+.rows { display: flex; flex-direction: column; gap: 12px; }
+
+.row {
+  display: grid;
+  grid-template-columns: minmax(220px, 1.2fr) minmax(140px, 1fr) minmax(160px, 1fr) auto;
+  gap: 14px;
+  align-items: center;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--card);
+  padding: 18px 20px;
+}
+.row.two {
+  grid-template-columns: auto 1fr;
+}
+.row.head {
+  padding: 10px 20px;
+  background: rgba(239, 242, 247, 0.9);
+  color: var(--fg-dim);
+  font-weight: 600;
+  font-size: 13px;
+}
+.row .status { display: inline-flex; align-items: center; gap: 8px; font-weight: 600; }
+.row .meta { color: var(--fg-dim); font-size: 14px; }
+.row .actions { display: flex; flex-wrap: wrap; gap: 8px; justify-content: flex-end; }
+.row .actions .btn { padding: 9px 14px; font-size: 13px; border-radius: 10px; }
+.row.featured { border-color: rgba(59, 130, 246, 0.45); box-shadow: 0 0 0 1px rgba(59, 130, 246, 0.12) inset; }
+.row.shut { border-color: rgba(251, 191, 36, 0.4); }
+.row .struck { text-decoration: line-through; color: var(--fg-dim); }
+.row .tag { font-size: 12px; padding: 3px 9px; border-radius: 6px; background: rgba(59, 130, 246, 0.12); color: var(--accent-2); }
+.row .tag.warn { background: rgba(251, 191, 36, 0.18); color: #b45309; }
+.row .tags { display: flex; flex-wrap: wrap; gap: 6px; }
+
+.dot { width: 9px; height: 9px; border-radius: 50%; flex: none; }
+.dot.up { background: var(--ok); box-shadow: 0 0 0 4px rgba(22, 163, 74, 0.18); }
+.dot.down { background: var(--bad); box-shadow: 0 0 0 4px rgba(239, 68, 68, 0.18); }
+
+/* ---------- 详情页：更紧凑的段落 ---------- */
+.kv { display: grid; grid-template-columns: auto 1fr; gap: 6px 16px; font-size: 14px; margin: 0; }
+.kv dt { color: var(--fg-dim); }
+.kv dd { margin: 0; }
+.kv dd b { color: var(--ok); }
+.kv dd small { color: var(--fg-dim); font-size: 12px; display: block; }
+
+ul.hl, ol.hl { margin: 0; padding-left: 18px; font-size: 14px; color: var(--fg-dim); }
+ul.hl li, ol.hl li { margin-bottom: 5px; }
+ul.hl li::marker, ol.hl li::marker { color: var(--accent); }
+
+pre {
+  margin: 0; padding: 14px 16px; overflow-x: auto; font-size: 13px; line-height: 1.65;
+  background: #0c0e15; border: 1px solid var(--line); border-radius: 10px;
+  font-family: ui-monospace, SFMono-Regular, "Cascadia Code", Consolas, monospace;
+}
+pre code { color: #cbd5e1; }
+.copy {
+  align-self: flex-start; margin-top: 8px; padding: 5px 11px; font-size: 12px; cursor: pointer;
+  color: var(--fg-dim); background: transparent; border: 1px solid var(--line); border-radius: 7px;
+}
+.copy:hover { color: var(--fg); border-color: var(--accent); }
+
+details { border: 1px solid var(--line); border-radius: 10px; background: var(--bg-soft); padding: 14px 16px; margin-bottom: 10px; }
+details summary { cursor: pointer; font-weight: 600; }
+details p { color: var(--fg-dim); margin: 10px 0 0; font-size: 14px; }
+
+.table-wrap { overflow-x: auto; border: 1px solid var(--line); border-radius: var(--radius); }
+table { width: 100%; border-collapse: collapse; font-size: 13px; min-width: 560px; }
+table th, table td { padding: 8px 10px; border-bottom: 1px solid var(--line); text-align: left; }
+table th { color: var(--fg-dim); font-weight: 600; }
+table code { color: var(--accent-2); }
+
+footer { padding: 36px 0 56px; border-top: 1px solid var(--line); color: var(--fg-dim); font-size: 13px; }
+footer ul { padding-left: 18px; }
+footer a { color: var(--accent-2); }
+
+/* ---------- 站内导航 ---------- */
+.topbar-stripe { height: 3px; background: linear-gradient(90deg, var(--accent), var(--accent-2), var(--accent-3)); }
+.nav { border-bottom: 1px solid var(--line); background: rgba(255,255,255,0.72); backdrop-filter: blur(8px); position: sticky; top: 0; z-index: 20; }
+.navrow { display: flex; align-items: center; gap: 4px; flex-wrap: wrap; padding: 10px 20px; }
+.navlink {
+  padding: 7px 12px; border-radius: 9px; text-decoration: none;
+  color: var(--fg-dim); font-size: 14px; white-space: nowrap;
+}
+.navlink:hover { color: var(--fg); background: rgba(59, 130, 246, 0.08); }
+.navlink.active { color: var(--fg); background: rgba(59, 130, 246, 0.14); }
+.navspace { flex: 1 1 auto; }
+
+.crumb { margin: 0 0 10px; font-size: 13px; color: var(--fg-dim); }
+.crumb a { color: var(--accent-2); text-decoration: none; }
+
+/* ---------- 可用性色条 ---------- */
+.bars { display: flex; gap: 3px; align-items: flex-end; min-width: 120px; }
+.bar { display: block; width: 9px; height: 22px; border-radius: 3px; background: var(--line); }
+.bar.ok { background: var(--ok); }
+.bar.part { background: linear-gradient(to top, var(--bad) 50%, var(--ok) 50%); }
+.bar.bad { background: var(--bad); }
+.bar.nodata { background: repeating-linear-gradient(45deg, #e5e7eb, #e5e7eb 2px, #dde2e9 2px, #dde2e9 4px); }
+
+/* ---------- 变动日志 ---------- */
+section.day { padding: 22px 0; border-top: 1px solid var(--line); }
+section.day h2 { font-size: 18px; }
+section.day h2 a { color: var(--fg); text-decoration: none; }
+ul.events { list-style: none; margin: 12px 0 0; padding: 0; font-size: 14px; }
+ul.events li { display: flex; align-items: baseline; gap: 8px; padding: 6px 0; color: var(--fg-dim); flex-wrap: wrap; }
+.ev-ico { flex: none; width: 18px; text-align: center; }
+.ev-site { color: var(--accent-2); text-decoration: none; font-size: 12px; }
+.muted { color: #64748b; font-size: 12px; font-weight: 400; }
+
+.mt-auto { margin-top: auto; }
+
+/* ---------- 停注 ---------- */
+.tag.warn { background: rgba(251, 191, 36, 0.18); color: #b45309; }
+.pill.warn { border-color: rgba(251, 191, 36, 0.55); color: #b45309; }
+.kv b.struck,
+.row .struck { text-decoration: line-through; color: var(--fg-dim); }
+tr.shut td { color: var(--fg-dim); }
+.notice {
+  margin: 0;
+  padding: 9px 12px;
+  border-left: 3px solid #f59e0b;
+  border-radius: 0 8px 8px 0;
+  background: rgba(251, 191, 36, 0.10);
+  color: #92400e;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+@media (max-width: 860px) {
+  .row { grid-template-columns: 1fr; gap: 10px; padding: 16px; }
+  .row .actions { justify-content: flex-start; }
+}
+@media (max-width: 640px) {
+  header.hero { padding: 40px 0 32px; }
+  .navrow { padding: 8px 12px; gap: 2px; }
+  .navlink { padding: 6px 9px; font-size: 13px; }
+}
+
+/* 交流群横幅：首屏就能看到群号和二维码，不用滚到底部 */
+.community-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin: 20px 0 0;
+  padding: 12px 16px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--bg-soft);
+  text-align: left;
+}
+.community-title { margin: 0; color: var(--fg); font-size: 15px; font-weight: 700; line-height: 1.4; }
+.community-line { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 12px; margin: 4px 0 0; }
+.community-group { color: var(--fg-dim); font-size: 12px; }
+.community-group strong { color: var(--accent-2); font: 700 20px/1.2 ui-monospace, monospace; letter-spacing: 0.02em; user-select: all; }
+.community-hint { color: var(--fg-dim); font-size: 12px; }
+.community-join { color: var(--accent-2); font-size: 12px; font-weight: 600; }
+.community-qr { display: block; flex: none; padding: 3px; border-radius: 8px; background: #fff; line-height: 0; }
+.community-qr img { display: block; width: 96px; height: 96px; object-fit: contain; }
+
+@media (max-width: 640px) {
+  .community-banner { gap: 10px; padding: 10px 12px; }
+  .community-qr img { width: 80px; height: 80px; }
+  .community-hint { display: none; }
+}
+
+/* 首页筛选：纯前端过滤，卡片本身不变 */
+.filters { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin: 14px 0 2px; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.filter-chip {
+  padding: 6px 12px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--card);
+  color: var(--fg-dim);
+  font: inherit;
+  font-size: 13px;
+  cursor: pointer;
+}
+.filter-chip:hover { border-color: var(--accent); color: var(--accent-2); }
+.filter-chip.active { border-color: var(--accent); background: var(--accent); color: #fff; }
+.filter-chip .n { font-size: 12px; opacity: 0.75; }
+.site-search {
+  flex: 1 1 170px;
+  min-width: 130px;
+  max-width: 260px;
+  padding: 7px 12px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--card);
+  color: var(--fg);
+  font: inherit;
+  font-size: 13px;
+}
+.site-search:focus { outline: 2px solid rgba(59, 130, 246, 0.3); border-color: var(--accent); }
+.filter-count { margin-left: auto; color: var(--fg-dim); font-size: 12px; }
+.row.hide { display: none; }
+.filter-empty { margin: 8px 0 0; }
+
+@media (max-width: 640px) {
+  .site-search { flex-basis: 100%; max-width: none; }
+  .filter-count { margin-left: 0; }
+}
+</style>
+</head>
+<body>
+<div class="topbar-stripe"></div>
+<nav class="nav"><div class="wrap navrow"><a class="navlink active" href="../../">站点总览</a><span class="navspace"></span><a class="navlink" href="https://github.com/Q-shuang-dot/ai-coding-welfare/issues" target="_blank" rel="noopener">Issue 区</a><a class="navlink" href="https://github.com/Q-shuang-dot/ai-coding-welfare" target="_blank" rel="noopener">GitHub 仓库</a></div></nav>
+<div class="wrap">
+  <header class="hero">
+    <p class="crumb"><a href="../../">AI 福利站 · Claude Code / Codex 免费额度白嫖导航</a> › 大汉 API</p>
+    <h1>大汉 API</h1>
+    <p class="sub">New API 福利站 · 邮箱注册 + 每日签到续命，Anthropic / OpenAI 双协议直连；模型清单与倍率要登录后台才看得到</p>
+    
+    <div class="pills">
+      <span class="pill"><span class="dot up"></span> 在线</span>
+      
+      
+      
+      <span class="pill">数据更新 <b>2026-11-10 02:47 UTC</b></span>
+    </div>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="https://ai.dahanxingbang.dpdns.org/sign-up?aff=ql9j" target="_blank" rel="noopener">免费注册 大汉 API →</a>
+      <a class="btn btn-ghost" href="#config">直接看接入配置</a>
+    </div>
+    
+    
+  </header>
+
+  <section><h2>能拿多少额度</h2>
+    <div class="rows"><div class="row head"><div>项目</div><div>数值</div></div><div class="row"><div>站点名称</div><div>大汉 API</div></div><div class="row"><div>每日签到</div><div>✅</div></div><div class="row"><div>开放注册</div><div>✅（开放注册）</div></div><div class="row"><div>登录方式</div><div>账号密码</div></div><div class="row"><div>接口延迟</div><div>454 ms</div></div><div class="row"><div>数据快照</div><div>2026-11-10 02:47 UTC</div></div></div>
+    <p class="hint">来源：额度为站方公示 + 人工登记（邀请额度由接口核对）；模型与价格为接口实测；可用性为自动探测。手工字段最后核对 <b>2026-11-10</b>。</p>
+  </section>
+
+  <section><h2>为什么值得注册</h2><ul class="hl"><li>面板自报 checkin_enabled = true、enable_task = true：每日签到和站内任务中心两条路都能领额度，不用拉人头也能一直续命</li><li>站方公告（2026-10-28）原话：「日常签到满足使用，如需量大可加群 QQ群 1130094152 或者加 QQ：2369210051 咨询」——免费额度主要靠签到，不是靠一次性注册赠送</li><li>双协议都挂着：匿名 POST /v1/messages、/v1/chat/completions、/v1/responses 都回 New API 的 401（不是 404），Claude Code 填 Base URL 直连，Codex CLI 走 /v1</li><li>注册只有邮箱 + 密码和 Nodeloc 两种：面板自报 password_register_enabled = true、email_verification = true、turnstile_check = false，不用过人机校验，但邮箱必须收得到验证码</li><li>标准美元盘口径：quota_display_type = USD、quota_per_unit = 500000（$1 = 50 万 quota）、price 与 usd_exchange_rate 都是 7.3（¥7.3 ≈ $1），和页面上其它美元站能直接对比</li><li>模型清单抓不到：/api/pricing 与 /api/models 匿名访问都是 401（面板的 HeaderNavModules 里 pricing / rankings 也标着 requireAuth: true），所以本页暂时没有模型表</li></ul></section>
+  
+  <section><h2>注册要求</h2><ul class="hl"><li>从本页邀请链接进入注册（带 ?aff=ql9j），邀请关系与奖励按站点的邀请机制结算</li><li>注册要邮箱验证码（email_verification = true）：一次性邮箱、收不到信的域名会卡在验证那一步</li><li>面板自报 turnstile_check = false、password_register_enabled = true，注册不用过人机校验，填邮箱 + 密码 + 验证码即可</li><li>没有 GitHub / LinuxDO / Telegram / 微信 / Discord / OIDC / Passkey 入口（这些开关全是 false），第三方登录只有 Nodeloc（custom_oauth_providers 里唯一的 provider）</li></ul></section>
+  <section id="config"><h2>接入配置</h2><h3>Claude Code（Anthropic 兼容，Base URL 不带 <code>/v1</code>）</h3>
+      <pre><code>export ANTHROPIC_BASE_URL=https://ai.dahanxingbang.dpdns.org
+export ANTHROPIC_AUTH_TOKEN=你在站点后台创建的 Key
+export ANTHROPIC_MODEL=&lt;登录后台查看可用模型名&gt;
+npm install -g @anthropic-ai/claude-code@latest &amp;&amp; claude</code></pre><button class="copy" type="button">复制配置</button>
+<h3>Codex CLI（写入 <code>~/.codex/config.toml</code>）</h3>
+      <pre><code>model = &quot;&lt;登录后台查看可用模型名&gt;&quot;
+model_provider = &quot;dahanxingbang&quot;
+
+[model_providers.dahanxingbang]
+name = &quot;大汉 API&quot;
+base_url = &quot;https://ai.dahanxingbang.dpdns.org/v1&quot;
+env_key = &quot;DAHANXINGBANG_API_KEY&quot;
+wire_api = &quot;chat&quot;</code></pre><button class="copy" type="button">复制配置</button>
+      <h3>通用客户端（Cherry Studio / Cursor / OpenAI SDK）</h3>
+      <p class="hint">只需两项：Base URL = <code>https://ai.dahanxingbang.dpdns.org/v1</code>，API Key = 站点后台创建的 Key。</p></section>
+  <section><h2>如何继续拿额度</h2><ul class="hl"><li>每日签到领额度（面板 checkin_enabled = true，登录后台点一下）</li><li>站内任务中心也能领额度（enable_task = true）</li><li>站方公告留了 QQ 群 1130094152 与 QQ 2369210051，量大或遇到问题直接找站方</li></ul></section>
+  <section><h2>⚠️ 使用前必读</h2><ul class="hl"><li>免费额度的数字没公开：注册赠送、邀请奖励、签到区间都不在 /api/status 里（没有 quota_for_new_user / quota_for_invitee 字段），本页按「站内公示」登记，进后台「钱包 / 额度」核对一遍再算账</li><li>价格页和模型清单要登录才看得到（/api/pricing 匿名 401），收录时没能核对模型与倍率，也判断不了 Claude 系是按量还是按次计费</li><li>站点很新：公开接口里最早一条公告是 2026-10-28，本仓库还没有它的可用性历史，先当试用通道，别把生产任务压上去</li><li>主入口是 dpdns.org 的免费二级域名（ai.dahanxingbang.dpdns.org），另有自定义域名 www.dahanxingbang.com 是同一套账号；免费域名换域名 / 停运的成本很低，注册后记得盯公告</li><li>站点挂在 Cloudflare 后面（api_info 里另给了一条 CF 线路 https://www.dahanxingbang.com/v1），机房 IP 打注册页容易被拦，家宽一般正常</li></ul></section>
+  <section><h2>最近 7 天可用性</h2><p class="hint">样本还不够（仅 1 次探测），可用性百分比先不给，等历史攒够再说。</p>
+    <p><a class="navlink" href="../../status/">看全部站点的可用性 →</a></p></section>
+  <section><h2>镜像 / 备用入口</h2><ul class="hl"><li>自定义域名：<a href="https://www.dahanxingbang.com/sign-up?aff=ql9j" target="_blank" rel="noopener">https://www.dahanxingbang.com</a></li></ul></section>
+  <section><h2>官方渠道</h2><ul class="hl"><li>站点: https://ai.dahanxingbang.dpdns.org</li><li>公告: https://ai.dahanxingbang.dpdns.org/api/status（公开 announcements 字段）</li><li>QQ 群: 1130094152 · QQ: 2369210051（站方公告给的咨询渠道）</li></ul></section>
+
+  <section><h2>这个站最近发生了什么</h2>
+    <ul class="hl"><li><span class="hint">2026-11-10</span> 新收录 大汉 API</li></ul>
+    <p><a class="navlink" href="../../changelog/">查看全部变动 →</a></p></section>
+
+  <section><h2>常见问题</h2>
+    <details><summary>大汉 API 送多少额度？</summary><p>站点公开接口没有吐注册 / 邀请 / 签到额度（/api/status 里没有 quota_for_new_user、quota_for_invitee 这些字段），所以本页按「站内公示」登记。登录后在「钱包 / 额度」页看到的数字才算数。</p></details>
+    <details><summary>大汉 API 能跑 Claude Code 和 Codex 吗？</summary><p>两条协议都通：匿名 POST /v1/messages、/v1/chat/completions、/v1/responses 都回 401 而不是 404，说明路由挂上了。Claude Code 的 Base URL 填 https://ai.dahanxingbang.dpdns.org（不带 /v1），Codex CLI 的 base_url 用 https://ai.dahanxingbang.dpdns.org/v1。</p></details>
+    <details><summary>大汉 API 的模型和价格在哪看？</summary><p>/api/pricing 和 /api/models 匿名访问都是 401，模型清单、倍率、分组都要登录后在「模型广场 / 定价」页看，本页暂时没有模型表。</p></details>
+  </section>
+
+  <section><h2>其它福利站</h2>
+    <p class="hint">额度用完了就换一家，各站额度互不影响。</p>
+    <ul class="hl"><li><a href="../agentrouter/">AgentRouter</a> — AI Coding 公益站 · 注册即送额度，签到每日续命</li><li><a href="../api520/">熊猫API</a> — New API 付费中转站 · 注册送 100 额度、本页邀请再送 100，151 个模型（Claude Opus 4.6~5 / GPT-6 / Gemini 3.x）按量按次混排</li><li><a href="../docode/">DoCode</a> — New API 中转站 · 注册送 50 站内刀，注册时填邀请码 1Qof 再加 250，首日 300 刀，Claude 与 GPT 都在架上</li><li><a href="../nianhua/">年华 API</a> — New API 定制版中转站 · 倍率公开可查（89 模型 / 16 分组），签到领随机额度，公益分组 0.05 倍率、另有 0 元一次的多模态模型</li><li><a href="../supxh/">肖恩AI</a> — 免费大模型API · 注册送5000额度，每日签到1000~3000，邀请双方各得2000</li><li><a href="../api456/">api456.me</a> — New API 中转站 · 注册送$20，每日签到，支持 OpenAI 协议</li><li><a href="../justwoker/">JustDoWork</a> — New API 中转站 · 只用 GitHub 登录，主打 gpt-5.6 系模型，签到 + 任务持续拿额度，Anthropic 原生协议直连 Claude Code / Codex</li><li><a href="../matrix/">Matrix</a> — 统一 API 网关 + 开源应用商店 · 邀请注册送 600 积分，实名再送 2000</li><li><a href="../seekai/">SeekAi</a> — New API 中转站 · 注册送额度，签到与邀请持续续命，支持 Claude Code / Codex / Cursor</li><li><a href="../aaawinn/">Long的AI</a> — New API 中转站 · 白嫖分组全部免费、费用 0 元，GitHub 账号满 120 天可注册，GPT 系模型走 Anthropic 协议</li><li><a href="../hcnsec/">新疆幻城网安</a> — New API 公益网关 · 系统名「新疆幻城网安科技公益大模型安全网关」，签到 + 任务 + 邀请都能拿额度，注册即送 30000 站内$，免费分组里有标价 0 元一次的模型</li></ul>
+  </section>
+<script>
+document.querySelectorAll('.copy').forEach(function (btn) {
+  btn.addEventListener('click', function () {
+    navigator.clipboard.writeText(btn.previousElementSibling.innerText).then(function () {
+      btn.textContent = '已复制 ✓';
+      setTimeout(function () { btn.textContent = '复制配置'; }, 1800);
+    });
+  });
+});
+</script>
+  <footer>
+    <ul>
+      <li>本页注册链接为<strong>邀请链接</strong>，通过它注册双方都会获得站点发放的额度，不影响你的注册流程。</li>
+      <li>本站只做信息聚合，与各站点无隶属关系，不代收费用、不承诺可用性；公益站可能随时改规则或关站。</li>
+      <li>请勿把生产密钥、隐私数据、企业代码交给来源不明的中转服务；重要项目请使用官方 API。</li>
+      <li>请遵守各站点与上游服务商条款，禁止批量注册、刷量、转售额度。</li>
+    </ul>
+    <p class="hint"><a href="../../api/">开放 API</a> · 站点与状态数据，脚本 / 其他导航站可直接读取</p>
+    <p>数据快照时间：2026-11-10 02:47 UTC · 由 <a href="https://github.com/Q-shuang-dot/ai-coding-welfare">github.com/Q-shuang-dot/ai-coding-welfare</a> 自动生成</p>
+  </footer>
+</div>
+</body>
+</html>
