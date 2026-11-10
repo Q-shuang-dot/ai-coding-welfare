@@ -6,9 +6,9 @@
 
 <p align="center">
   <img src="https://img.shields.io/badge/Tracked%20services-12-blue" alt="Tracked services">
-  <img src="https://img.shields.io/badge/Online-11%2F12-orange" alt="Online">
+  <img src="https://img.shields.io/badge/Online-10%2F12-orange" alt="Online">
   <img src="https://img.shields.io/badge/Best%20first%20day-%24175-success" alt="Best first day">
-  <img src="https://img.shields.io/badge/Data%20updated-2026--11--10%2002.47%20UTC-informational" alt="Data updated">
+  <img src="https://img.shields.io/badge/Data%20updated-2026--11--10%2002.51%20UTC-informational" alt="Data updated">
 </p>
 
 <p align="center">
@@ -48,13 +48,13 @@
 | **NianHua API** | 🟢 Online | Posted on site | Daily check-in | Anthropic + OpenAI | <a href="https://us-3.nianhuaapi.com/sign-up?aff=aonj" target="_blank" rel="noopener">Sign up →</a> | `aonj` |
 | **ShawnAI** | 🟢 Online | **≈14000 pts** | ≈2000 pts/day | Anthropic + OpenAI | <a href="https://free.supxh.xin/register?code=MVU8GX" target="_blank" rel="noopener">Sign up →</a> | `MVU8GX` |
 | **api456.me** | 🟢 Online | **$50** | $10/day | OpenAI | <a href="https://api456.me/register?aff=zmza" target="_blank" rel="noopener">Sign up →</a> | `zmza` |
-| **JustDoWork** | 🟢 Online | Posted on site | Daily check-in | Anthropic + OpenAI | <a href="https://api.justwoker.icu/register?aff=OIWh" target="_blank" rel="noopener">GitHub sign up →</a> | `OIWh` |
+| **JustDoWork** | 🔴 Unreachable | Posted on site | Daily check-in | Anthropic + OpenAI | <a href="https://api.justwoker.icu/register?aff=OIWh" target="_blank" rel="noopener">GitHub sign up →</a> | `OIWh` |
 | **Matrix** | 🟢 Online | **2600 pts** | — | OpenAI-compatible | <a href="https://matrix.mzsjai.com/login?redirect=%2Fapp%2Fgrowth%3FinviteCode%3DMX3CDVGATLJW" target="_blank" rel="noopener">Sign up →</a> | — |
 | **SeekAi** | 🔴 Unreachable | Posted on site | Daily check-in | OpenAI | <a href="https://seekai.cc/sign-up?aff=dDJy" target="_blank" rel="noopener">Sign up →</a> | `dDJy` |
 | **Long's AI** | 🟢 Online | Free | No check-in | Anthropic + OpenAI | <a href="https://aaawinn.xyz/sign-up?aff=ijFL" target="_blank" rel="noopener">GitHub sign up →</a> | `ijFL` |
 | **Xinjiang Huancheng Security** | 🟢 Online | **30000 site-USD** | Daily check-in | Anthropic + OpenAI | <a href="https://api.hcnsec.cn/sign-up?aff=3J8z" target="_blank" rel="noopener">Sign up →</a> | `3J8z` |
 
-> "First day" = signup bonus + invite bonus from this page + whatever check-in pays out on day one (services with a daily reset pool count a single day's pool). Models, prices and status are scraped from each service's public API. Last update: `2026-11-10 02:47 UTC`.
+> "First day" = signup bonus + invite bonus from this page + whatever check-in pays out on day one (services with a daily reset pool count a single day's pool). Models, prices and status are scraped from each service's public API. Last update: `2026-11-10 02:51 UTC`.
 >
 > Services with a code in the "Invite code" column (DoCode `1Qof`, NianHua API `aonj`, ShawnAI `MVU8GX`, api456.me `zmza`, JustDoWork `OIWh`, SeekAi `dDJy`, Long's AI `ijFL`, Xinjiang Huancheng Security `3J8z`) require **typing the code yourself** in the signup form. Miss it and you only get the base signup bonus — it cannot be added afterwards. A dash means the invite bonus travels inside the link and needs no typing.
 >
@@ -112,7 +112,7 @@ powershell -ExecutionPolicy Bypass -File scripts/quickstart.ps1
 - Panel version: `init-20261016-861e4557`
 - Referral bonus: **$50**
 - Login methods: GitHub / LinuxDO
-- API latency: 1446 ms
+- API latency: 318 ms
 
 **Mirrors / alternate entry points**
 
@@ -245,15 +245,20 @@ curl -s https://agentrouter.org/v1/chat/completions \
 - Daily check-in: ❌
 - Open signups: ✅
 - Login methods: Email + password
-- API latency: 1111 ms
+- API latency: 1324 ms
 
 **Available models**
 
 | Model | Ratio | Input / 1M tokens | Output / 1M tokens | Protocols |
 | :-- | :--: | :--: | :--: | :--: |
+| `gpt-5.5` | 0.0006125 | 0.001 credit | 0.01 credit | openai |
+| `gpt-5.6-sol` | 0.0005439 | 0.001 credit | 0.007 credit | openai |
+| `gpt-5.6-terra` | 0.0002156 | 0 credit | 0.003 credit | openai |
+| `gpt-6-astra` | 0.002001 | 0.004 credit | 0.02 credit | openai |
+| `gpt-6-sol` | 0.0003864 | 0.001 credit | 0.004 credit | openai |
+| `gpt-6.1-sol` | 0.0003864 | 0.001 credit | 0.004 credit | openai |
 | `按量模型是根据输入输出字数算额度的~要控制字数喔` | per call | **4 credit / call** | — | openai |
 | `测试` | 0.00209484 | 0.004 credit | 0.021 credit | openai |
-| `随时看 look.api520.pro  监控网站  ～所有模型都超稳` | 37.5 | 75 credit | 75 credit | openai |
 | `熊猫-10-deepseek-v4-pro` | per call | **10 credit / call** | — | openai |
 | `熊猫-10-glm-5.3` | per call | **10 credit / call** | — | openai |
 | `熊猫-13-glm-5.2` | per call | **13 credit / call** | — | openai |
@@ -263,75 +268,6 @@ curl -s https://agentrouter.org/v1/chat/completions \
 | `熊猫-8-deepseek-v4.1-flash` | per call | **8 credit / call** | — | openai |
 | `熊猫-8-glm-5.1` | per call | **8 credit / call** | — | openai |
 | `熊猫-8-qwen3.8-max` | per call | **8 credit / call** | — | openai |
-| `熊猫-按量-顶级特供-官max-claude-fable-5-1` | 0.009 | 0.018 credit | 0.09 credit | anthropic / openai |
-| `熊猫-按量-顶级特供-官max-claude-fable-5-神话模型` | 0.009 | 0.018 credit | 0.09 credit | anthropic / openai |
-| `熊猫-按量-顶级特供-官max-claude-haiku-4.5` | 0.00075 | 0.002 credit | 0.008 credit | anthropic / openai |
-| `熊猫-按量-顶级特供-官max-claude-opus-4.6` | 0.00375 | 0.008 credit | 0.038 credit | anthropic / openai |
-| `熊猫-按量-顶级特供-官max-claude-opus-4.6-thinking` | 0.00375 | 0.008 credit | 0.038 credit | anthropic / openai |
-| `熊猫-按量-顶级特供-官max-claude-opus-4.7` | 0.00375 | 0.008 credit | 0.038 credit | anthropic / openai |
-| `熊猫-按量-顶级特供-官max-claude-opus-4.8` | 0.00375 | 0.008 credit | 0.038 credit | anthropic / openai |
-| `熊猫-按量-顶级特供-官max-claude-opus-5` | 0.00375 | 0.008 credit | 0.038 credit | anthropic / openai |
-| `熊猫-按量-顶级特供-官max-claude-opus-5.5` | 0.00336 | 0.007 credit | 0.034 credit | anthropic / openai |
-| `熊猫-按量-顶级特供-官max-claude-sonnet-4.6` | 0.00225 | 0.005 credit | 0.023 credit | anthropic / openai |
-| `熊猫-按量-满血非量化-deepseek-v4-pro` | 0.0004554 | 0.001 credit | 0.002 credit | openai |
-| `熊猫-按量-满血非量化-deepseek-v4.1-flash` | 0.000112 | 0 credit | 0.001 credit | openai |
-| `熊猫-按量-满血非量化-glm-5.2` | 0.0012144 | 0.002 credit | 0.009 credit | openai |
-| `熊猫-按量-满血非量化-kimi-k3` | 0.003036 | 0.006 credit | 0.03 credit | openai |
-| `熊猫-按量-特供顶级-官方正向满血-claude-fable-5-神话模型` | 0.009 | 0.018 credit | 0.09 credit | anthropic / openai |
-| `熊猫-按量-特供顶级-官方正向满血-claude-haiku-4.5` | 0.00075 | 0.002 credit | 0.008 credit | anthropic / openai |
-| `熊猫-按量-特供顶级-官方正向满血-claude-opus-4.6` | 0.00375 | 0.008 credit | 0.038 credit | anthropic / openai |
-| `熊猫-按量-特供顶级-官方正向满血-claude-opus-4.6-thinking` | 0.00375 | 0.008 credit | 0.038 credit | anthropic / openai |
-| `熊猫-按量-特供顶级-官方正向满血-claude-opus-4.7` | 0.00375 | 0.008 credit | 0.038 credit | anthropic / openai |
-| `熊猫-按量-特供顶级-官方正向满血-claude-opus-4.8` | 0.00375 | 0.008 credit | 0.038 credit | anthropic / openai |
-| `熊猫-按量-特供顶级-官方正向满血-claude-sonnet-4.6` | 0.00225 | 0.005 credit | 0.023 credit | anthropic / openai |
-| `熊猫-按量-特供顶级-官方正向满血-claude-sonnet-4.6-thinking` | 0.00225 | 0.005 credit | 0.023 credit | anthropic / openai |
-| `熊猫-按量-gpt-5.4` | 0.00036875 | 0.001 credit | 0.006 credit | openai |
-| `熊猫-按量-gpt-5.5` | 0.0006125 | 0.001 credit | 0.01 credit | openai |
-| `熊猫-按量-gpt-5.6-terra` | 0.000245 | 0 credit | 0.003 credit | openai |
-| `熊猫-按量-gpt-6-astra` | 0.002001 | 0.004 credit | 0.02 credit | openai |
-| `熊猫-按量-gpt-6-sol` | 0.0003864 | 0.001 credit | 0.004 credit | openai |
-| `熊猫-按量-gpt-6.1-sol` | 0.0003864 | 0.001 credit | 0.004 credit | openai |
-| `熊猫-按量-vertex官-gemini-2.5-pro` | 0.0010125 | 0.002 credit | 0.016 credit | openai |
-| `熊猫-按量-vertex官-gemini-3.1-pro-preview` | 0.00162 | 0.003 credit | 0.013 credit | openai |
-| `熊猫-按量-vertex官-gemini-4-argon` | 0.00162 | 0.003 credit | 0.016 credit | openai |
-| `熊猫-顶级-21-vertex逆-gemini-2.5-pro` | per call | **21 credit / call** | — | openai |
-| `熊猫-顶级-21-vertex逆-gemini-3.1-pro-preview` | per call | **21 credit / call** | — | openai |
-| `熊猫-顶级-X-25-不截断-claude-sonnet-4.6` | per call | **25 credit / call** | — | openai |
-| `熊猫-顶级-X-25-不截断-claude-sonnet-4.6-thinking` | per call | **25 credit / call** | — | openai |
-| `熊猫-官逆-14-gemini-4-pro-argon` | per call | **14 credit / call** | — | openai |
-| `熊猫-官逆-7-gemini-3.1-pro` | per call | **7 credit / call** | — | openai |
-| `熊猫-官逆-7-gemini-3.1-pro-thinking` | per call | **7 credit / call** | — | openai |
-| `熊猫-官逆-7-gemini-3.6-flash` | per call | **7 credit / call** | — | openai |
-| `熊猫-官逆-7-gemini-3.6-flash-thinking` | per call | **7 credit / call** | — | openai |
-| `熊猫-官逆-7-gemini-3.7-flash` | per call | **7 credit / call** | — | openai |
-| `熊猫-官逆-7-gemini-3.7-flash-thinking` | per call | **7 credit / call** | — | openai |
-| `熊猫-官逆-7-gemini-3.8-flash` | per call | **7 credit / call** | — | openai |
-| `熊猫-官key质量-88-claude-opus-5.5` | per call | **88 credit / call** | — | openai |
-| `熊猫-逆向-66-claude-opus-4.6` | per call | **66 credit / call** | — | openai |
-| `熊猫-特供-7-claude-haiku-4.5-20251001-满血速度快` | per call | **7 credit / call** | — | openai |
-| `熊猫-特供-按量-满血逆-claude-opus-4-6` | 0.001035 | 0.002 credit | 0.01 credit | anthropic / openai |
-| `熊猫-特供-按量-满血逆-claude-opus-4-7` | 0.001035 | 0.002 credit | 0.01 credit | anthropic / openai |
-| `熊猫-特供-按量-满血逆-claude-opus-4-8` | 0.001035 | 0.002 credit | 0.01 credit | anthropic / openai |
-| `熊猫-特供-按量-满血逆-claude-opus-5.5` | 0.0007728 | 0.002 credit | 0.008 credit | anthropic / openai |
-| `熊猫-特供-按量-满血逆-claude-sonnet-4-6` | 0.000621 | 0.001 credit | 0.006 credit | anthropic / openai |
-| `熊猫-特供-按量-满血逆-claude-sonnet-4.6` | 0.000531 | 0.001 credit | 0.005 credit | anthropic / openai |
-| `熊猫-特供-官key直连-200额度-claude-opus-4.8` | per call | **200 credit / call** | — | openai |
-| `熊猫-特供-官key直连-280额度-claude-opus-4.6` | per call | **280 credit / call** | — | openai |
-| `熊猫-特供-官key直连-280额度-claude-opus-4.6-thinking` | per call | **280 credit / call** | — | openai |
-| `熊猫-特供-官key直连-280额度-claude-opus-4.7` | per call | **280 credit / call** | — | openai |
-| `熊猫-特供-官key直连-280额度-claude-opus-4.7-thinking` | per call | **280 credit / call** | — | openai |
-| `熊猫-特供-官key直连-280额度-claude-opus-4.8` | per call | **280 credit / call** | — | openai |
-| `熊猫-特供-官key直连-280额度-claude-opus-4.8-thinking` | per call | **280 credit / call** | — | openai |
-| `熊猫-特供-A-55-claude-opus-4.5-thinking` | per call | **55 credit / call** | — | openai |
-| `熊猫-特供-A-55-claude-opus-4.6` | per call | **55 credit / call** | — | openai |
-| `熊猫-特供-A-55-claude-opus-4.6-thinking` | per call | **55 credit / call** | — | openai |
-| `熊猫-特供-X-10-gpt-5.5` | per call | **10 credit / call** | — | openai |
-| `熊猫-特供-X-19-gpt-5.6-terra` | per call | **19 credit / call** | — | openai |
-| `熊猫-特供-X-22-gpt-5.6-sol` | per call | **22 credit / call** | — | openai |
-| `熊猫-限时官key-88-claude-opus-4.6` | per call | **88 credit / call** | — | openai |
-| `熊猫-限时官key-88-claude-opus-4.7` | per call | **88 credit / call** | — | openai |
-| `熊猫-限时官key-88-claude-opus-4.8` | per call | **88 credit / call** | — | openai |
-| `熊猫-限时官key质量-88-claude-opus-5` | per call | **88 credit / call** | — | openai |
 | `熊猫-A-10-gemini-3.1-pro-preview-1000k` | per call | **10 credit / call** | — | openai |
 | `熊猫-A-10-grok-4.5` | per call | **10 credit / call** | — | openai |
 | `熊猫-A-10-grok-4.6` | per call | **10 credit / call** | — | openai |
@@ -357,20 +293,20 @@ curl -s https://agentrouter.org/v1/chat/completions \
 | `熊猫-A-5-gemini-3.6-flash-高质量-特价` | per call | **5 credit / call** | — | openai |
 | `熊猫-A-69-vertex逆-gemini-4-carbon` | per call | **69 credit / call** | — | openai |
 | `熊猫-A-8-kimi-k2.6` | per call | **8 credit / call** | — | openai |
-| `熊猫-A-9-gemini-3.8-flash-反重力-tob` | per call | **9 credit / call** | — | openai |
 | `熊猫-A-9-gemini-3.8-flash-search` | per call | **9 credit / call** | — | openai |
+| `熊猫-A-9-gemini-3.8-flash-反重力-tob` | per call | **9 credit / call** | — | openai |
 | `熊猫-aiStudio官-X-20-gemini-3.1-pro-preview` | per call | **20 credit / call** | — | openai |
-| `熊猫-aiStudio官-X-20-gemini-3.1-pro-preview-联网` | per call | **20 credit / call** | — | openai |
 | `熊猫-aiStudio官-X-20-gemini-3.1-pro-preview-thinking` | per call | **20 credit / call** | — | openai |
+| `熊猫-aiStudio官-X-20-gemini-3.1-pro-preview-联网` | per call | **20 credit / call** | — | openai |
 | `熊猫-B-10-gemini-3.7-flash` | per call | **10 credit / call** | — | openai |
 | `熊猫-gemini-3.8-flash-反重力-稳定名` | per call | **9 credit / call** | — | openai |
 | `熊猫-K-17-kiro-claude-sonnet-5` | per call | **17 credit / call** | — | openai |
 | `熊猫-vertex逆-23-gemini-3.1-pro-preview` | per call | **23 credit / call** | — | openai |
 | `熊猫-vertex逆-35-gemini-4-argon` | per call | **35 credit / call** | — | openai |
 | `熊猫-W-39-限时官key-claude-sonnet-5` | per call | **39 credit / call** | — | openai |
+| `熊猫-X-10-AS正向-gemini-3.6-flash` | per call | **10 credit / call** | — | openai |
 | `熊猫-X-10-官逆-gemini-3.1-pro` | per call | **10 credit / call** | — | openai |
 | `熊猫-X-10-官逆-gemini-3.1-pro-联网` | per call | **10 credit / call** | — | openai |
-| `熊猫-X-10-AS正向-gemini-3.6-flash` | per call | **10 credit / call** | — | openai |
 | `熊猫-x-11-gemini-3.1-pro-anti` | per call | **11 credit / call** | — | openai |
 | `熊猫-X-24-kiro-claude-opus-4.5` | per call | **24 credit / call** | — | openai |
 | `熊猫-X-24-kiro-claude-opus-4.6` | per call | **24 credit / call** | — | openai |
@@ -379,8 +315,79 @@ curl -s https://agentrouter.org/v1/chat/completions \
 | `熊猫-X-24-kiro-claude-opus-5` | per call | **24 credit / call** | — | openai |
 | `熊猫-X-24-kiro-claude-opus-5.5` | per call | **24 credit / call** | — | openai |
 | `熊猫-x-25-最强生图-gpt-image-2.6` | per call | **25 credit / call** | — | openai |
-| `熊猫-x-29-最强生图-gpt-image-2.5` | per call | **29 credit / call** | — | openai |
 | `熊猫-X-29-claude-opus-5` | per call | **29 credit / call** | — | openai |
+| `熊猫-x-29-最强生图-gpt-image-2.5` | per call | **29 credit / call** | — | openai |
+| `熊猫-官key质量-88-claude-opus-5.5` | per call | **88 credit / call** | — | openai |
+| `熊猫-官逆-14-gemini-4-pro-argon` | per call | **14 credit / call** | — | openai |
+| `熊猫-官逆-7-gemini-3.1-pro` | per call | **7 credit / call** | — | openai |
+| `熊猫-官逆-7-gemini-3.1-pro-thinking` | per call | **7 credit / call** | — | openai |
+| `熊猫-官逆-7-gemini-3.6-flash` | per call | **7 credit / call** | — | openai |
+| `熊猫-官逆-7-gemini-3.6-flash-thinking` | per call | **7 credit / call** | — | openai |
+| `熊猫-官逆-7-gemini-3.7-flash` | per call | **7 credit / call** | — | openai |
+| `熊猫-官逆-7-gemini-3.7-flash-thinking` | per call | **7 credit / call** | — | openai |
+| `熊猫-官逆-7-gemini-3.8-flash` | per call | **7 credit / call** | — | openai |
+| `熊猫-按量-gpt-5.4` | 0.00036875 | 0.001 credit | 0.006 credit | openai |
+| `熊猫-按量-gpt-5.5` | 0.0006125 | 0.001 credit | 0.01 credit | openai |
+| `熊猫-按量-gpt-5.6-terra` | 0.000245 | 0 credit | 0.003 credit | openai |
+| `熊猫-按量-gpt-6-astra` | 0.002001 | 0.004 credit | 0.02 credit | openai |
+| `熊猫-按量-gpt-6-sol` | 0.0003864 | 0.001 credit | 0.004 credit | openai |
+| `熊猫-按量-gpt-6.1-sol` | 0.0003864 | 0.001 credit | 0.004 credit | openai |
+| `熊猫-按量-vertex官-gemini-2.5-pro` | 0.0010125 | 0.002 credit | 0.016 credit | openai |
+| `熊猫-按量-vertex官-gemini-3.1-pro-preview` | 0.00162 | 0.003 credit | 0.013 credit | openai |
+| `熊猫-按量-vertex官-gemini-4-argon` | 0.00162 | 0.003 credit | 0.016 credit | openai |
+| `熊猫-按量-满血非量化-deepseek-v4-pro` | 0.0004554 | 0.001 credit | 0.002 credit | openai |
+| `熊猫-按量-满血非量化-deepseek-v4.1-flash` | 0.000112 | 0 credit | 0.001 credit | openai |
+| `熊猫-按量-满血非量化-glm-5.2` | 0.0012144 | 0.002 credit | 0.009 credit | openai |
+| `熊猫-按量-满血非量化-kimi-k3` | 0.003036 | 0.006 credit | 0.03 credit | openai |
+| `熊猫-按量-特供顶级-官方正向满血-claude-fable-5-神话模型` | 0.009 | 0.018 credit | 0.09 credit | anthropic / openai |
+| `熊猫-按量-特供顶级-官方正向满血-claude-haiku-4.5` | 0.00075 | 0.002 credit | 0.008 credit | anthropic / openai |
+| `熊猫-按量-特供顶级-官方正向满血-claude-opus-4.6` | 0.00375 | 0.008 credit | 0.038 credit | anthropic / openai |
+| `熊猫-按量-特供顶级-官方正向满血-claude-opus-4.6-thinking` | 0.00375 | 0.008 credit | 0.038 credit | anthropic / openai |
+| `熊猫-按量-特供顶级-官方正向满血-claude-opus-4.7` | 0.00375 | 0.008 credit | 0.038 credit | anthropic / openai |
+| `熊猫-按量-特供顶级-官方正向满血-claude-opus-4.8` | 0.00375 | 0.008 credit | 0.038 credit | anthropic / openai |
+| `熊猫-按量-特供顶级-官方正向满血-claude-sonnet-4.6` | 0.00225 | 0.005 credit | 0.023 credit | anthropic / openai |
+| `熊猫-按量-特供顶级-官方正向满血-claude-sonnet-4.6-thinking` | 0.00225 | 0.005 credit | 0.023 credit | anthropic / openai |
+| `熊猫-按量-顶级特供-官max-claude-fable-5-1` | 0.009 | 0.018 credit | 0.09 credit | anthropic / openai |
+| `熊猫-按量-顶级特供-官max-claude-fable-5-神话模型` | 0.009 | 0.018 credit | 0.09 credit | anthropic / openai |
+| `熊猫-按量-顶级特供-官max-claude-haiku-4.5` | 0.00075 | 0.002 credit | 0.008 credit | anthropic / openai |
+| `熊猫-按量-顶级特供-官max-claude-opus-4.6` | 0.00375 | 0.008 credit | 0.038 credit | anthropic / openai |
+| `熊猫-按量-顶级特供-官max-claude-opus-4.6-thinking` | 0.00375 | 0.008 credit | 0.038 credit | anthropic / openai |
+| `熊猫-按量-顶级特供-官max-claude-opus-4.7` | 0.00375 | 0.008 credit | 0.038 credit | anthropic / openai |
+| `熊猫-按量-顶级特供-官max-claude-opus-4.8` | 0.00375 | 0.008 credit | 0.038 credit | anthropic / openai |
+| `熊猫-按量-顶级特供-官max-claude-opus-5` | 0.00375 | 0.008 credit | 0.038 credit | anthropic / openai |
+| `熊猫-按量-顶级特供-官max-claude-opus-5.5` | 0.00336 | 0.007 credit | 0.034 credit | anthropic / openai |
+| `熊猫-按量-顶级特供-官max-claude-sonnet-4.6` | 0.00225 | 0.005 credit | 0.023 credit | anthropic / openai |
+| `熊猫-特供-7-claude-haiku-4.5-20251001-满血速度快` | per call | **7 credit / call** | — | openai |
+| `熊猫-特供-A-55-claude-opus-4.5-thinking` | per call | **55 credit / call** | — | openai |
+| `熊猫-特供-A-55-claude-opus-4.6` | per call | **55 credit / call** | — | openai |
+| `熊猫-特供-A-55-claude-opus-4.6-thinking` | per call | **55 credit / call** | — | openai |
+| `熊猫-特供-X-10-gpt-5.5` | per call | **10 credit / call** | — | openai |
+| `熊猫-特供-X-19-gpt-5.6-terra` | per call | **19 credit / call** | — | openai |
+| `熊猫-特供-X-22-gpt-5.6-sol` | per call | **22 credit / call** | — | openai |
+| `熊猫-特供-官key直连-200额度-claude-opus-4.8` | per call | **200 credit / call** | — | openai |
+| `熊猫-特供-官key直连-280额度-claude-opus-4.6` | per call | **280 credit / call** | — | openai |
+| `熊猫-特供-官key直连-280额度-claude-opus-4.6-thinking` | per call | **280 credit / call** | — | openai |
+| `熊猫-特供-官key直连-280额度-claude-opus-4.7` | per call | **280 credit / call** | — | openai |
+| `熊猫-特供-官key直连-280额度-claude-opus-4.7-thinking` | per call | **280 credit / call** | — | openai |
+| `熊猫-特供-官key直连-280额度-claude-opus-4.8` | per call | **280 credit / call** | — | openai |
+| `熊猫-特供-官key直连-280额度-claude-opus-4.8-thinking` | per call | **280 credit / call** | — | openai |
+| `熊猫-特供-按量-满血逆-claude-opus-4-6` | 0.001035 | 0.002 credit | 0.01 credit | anthropic / openai |
+| `熊猫-特供-按量-满血逆-claude-opus-4-7` | 0.001035 | 0.002 credit | 0.01 credit | anthropic / openai |
+| `熊猫-特供-按量-满血逆-claude-opus-4-8` | 0.001035 | 0.002 credit | 0.01 credit | anthropic / openai |
+| `熊猫-特供-按量-满血逆-claude-opus-5.5` | 0.0007728 | 0.002 credit | 0.008 credit | anthropic / openai |
+| `熊猫-特供-按量-满血逆-claude-sonnet-4-6` | 0.000621 | 0.001 credit | 0.006 credit | anthropic / openai |
+| `熊猫-特供-按量-满血逆-claude-sonnet-4.6` | 0.000531 | 0.001 credit | 0.005 credit | anthropic / openai |
+| `熊猫-逆向-66-claude-opus-4.6` | per call | **66 credit / call** | — | openai |
+| `熊猫-限时官key-88-claude-opus-4.6` | per call | **88 credit / call** | — | openai |
+| `熊猫-限时官key-88-claude-opus-4.7` | per call | **88 credit / call** | — | openai |
+| `熊猫-限时官key-88-claude-opus-4.8` | per call | **88 credit / call** | — | openai |
+| `熊猫-限时官key质量-88-claude-opus-5` | per call | **88 credit / call** | — | openai |
+| `熊猫-顶级-21-vertex逆-gemini-2.5-pro` | per call | **21 credit / call** | — | openai |
+| `熊猫-顶级-21-vertex逆-gemini-3.1-pro-preview` | per call | **21 credit / call** | — | openai |
+| `熊猫-顶级-X-25-不截断-claude-sonnet-4.6` | per call | **25 credit / call** | — | openai |
+| `熊猫-顶级-X-25-不截断-claude-sonnet-4.6-thinking` | per call | **25 credit / call** | — | openai |
+| `熊猫特供-anti-99-claude-opus-4.6` | per call | **99 credit / call** | — | openai |
+| `熊猫特供-anti-99-claude-opus-4.6-thinking` | per call | **99 credit / call** | — | openai |
 | `熊猫特供-按量-SSS-gemini-3.1-pro-preview` | 0.00075 | 0.002 credit | 0.009 credit | openai |
 | `熊猫特供-按量-SSS-gemini-3.1-pro-preview-thinking` | 0.00075 | 0.002 credit | 0.009 credit | openai |
 | `熊猫特供-按量-SSS-gemini-3.6-flash` | 0.0000711 | 0 credit | 0.001 credit | openai |
@@ -391,15 +398,8 @@ curl -s https://agentrouter.org/v1/chat/completions \
 | `熊猫特供-超纯满血-99额度-claude-opus-4.6-thinking` | per call | **99 credit / call** | — | openai |
 | `熊猫特供-超纯满血-99额度-claude-opus-4.7` | per call | **99 credit / call** | — | openai |
 | `熊猫特供-超纯满血-99额度-claude-opus-4.7-thinking` | per call | **99 credit / call** | — | openai |
-| `熊猫特供-anti-99-claude-opus-4.6` | per call | **99 credit / call** | — | openai |
-| `熊猫特供-anti-99-claude-opus-4.6-thinking` | per call | **99 credit / call** | — | openai |
 | `熊猫特供S-按量-gemini-3-flash-preview` | 0.0000675 | 0 credit | 0.001 credit | openai |
-| `gpt-5.5` | 0.0006125 | 0.001 credit | 0.01 credit | openai |
-| `gpt-5.6-sol` | 0.0005439 | 0.001 credit | 0.007 credit | openai |
-| `gpt-5.6-terra` | 0.0002156 | 0 credit | 0.003 credit | openai |
-| `gpt-6-astra` | 0.002001 | 0.004 credit | 0.02 credit | openai |
-| `gpt-6-sol` | 0.0003864 | 0.001 credit | 0.004 credit | openai |
-| `gpt-6.1-sol` | 0.0003864 | 0.001 credit | 0.004 credit | openai |
+| `随时看 look.api520.pro  监控网站  ～所有模型都超稳` | 37.5 | 75 credit | 75 credit | openai |
 
 <sub>Rows marked "per call" are billed per request regardless of token usage; the rest are converted from ratios and settled in the site's own unit (credit), on top of the group ratio. Always confirm against in-site pricing.</sub>
 
@@ -520,7 +520,7 @@ curl -s https://api520.pro/v1/chat/completions \
 - Daily check-in: ✅
 - Open signups: ✅
 - Login methods: Email + password
-- API latency: 454 ms
+- API latency: 1616 ms
 
 **Mirrors / alternate entry points**
 
@@ -648,7 +648,7 @@ curl -s https://ai.dahanxingbang.dpdns.org/v1/chat/completions \
 - Daily check-in: ❌
 - Open signups: ✅
 - Login methods: Email + password
-- API latency: 768 ms
+- API latency: 1783 ms
 
 **Mirrors / alternate entry points**
 
@@ -766,7 +766,7 @@ curl -s https://docode.cc/v1/chat/completions \
 - Daily check-in: ✅
 - Open signups: ✅
 - Login methods: Email + password
-- API latency: 920 ms
+- API latency: 1940 ms
 
 **Available models**
 
@@ -1033,7 +1033,7 @@ curl -s https://us-3.nianhuaapi.com/v1/chat/completions \
 
 **Live data** (scraped from public APIs)
 
-- API latency: 784 ms
+- API latency: 2142 ms
 
 > On 2026-09-20 the public pricing page returned 191 models including stepfun, deepseek-v4.1-flash, gpt-5.5, gemini-2.5-flash, claude-sonnet-4-6 and kimi-k2.5. Note that the response mixes many free and paid entries; availability and ratios defer to the console.
 
@@ -1147,7 +1147,7 @@ curl -s https://free.supxh.xin/v1/chat/completions \
 - Daily check-in: ✅
 - Open signups: ✅
 - Login methods: Email + password
-- API latency: 568 ms
+- API latency: 2517 ms
 
 > The model list and prices are only visible in the console after login (/api/pricing requires login anonymously), so this page does not list a model table.
 
@@ -1214,7 +1214,7 @@ curl -s https://api456.me/v1/chat/completions \
 ---
 
 <a id="site-justwoker"></a>
-<details><summary><b>🟢 JustDoWork</b></summary>
+<details><summary><b>🔴 JustDoWork</b></summary>
 
 > New API relay · GitHub-only login, focused on gpt-5.6 models, check-in + tasks for ongoing credit, native Anthropic protocol for Claude Code / Codex
 
@@ -1235,7 +1235,7 @@ curl -s https://api456.me/v1/chat/completions \
 - Open signups: ✅ (The service turned off email/password signup, so you have to create the account with GitHub (a common anti-abuse measure).)
 - Login methods: GitHub / Email + password
 - GitHub account must be at least **365 days** old
-- API latency: 19598 ms
+- API latency: 19587 ms
 
 > The pricing page requires login (/api/pricing returns 401 anonymously; panel pricing.requireAuth = true), so this page does not list a model table. Testing shows the main lineup is the gpt-5.6 family (gpt-5.6-luna / sol / terra), and every request carries roughly 2000 tokens of a fixed hidden prompt. Confirm the full list and ratios on the console's "Pricing" page.
 
@@ -1345,7 +1345,7 @@ curl -s https://api.justwoker.icu/v1/chat/completions \
 
 **Live data** (scraped from public APIs)
 
-- API latency: 166 ms
+- API latency: 3334 ms
 
 > The model list and prices are visible in the console's "Model list" after login (priced per million tokens, filterable by vendor / context window). The site has no public model or pricing API, so this page makes no claims.
 
@@ -1413,7 +1413,7 @@ Console: <https://matrix.mzsjai.com/app/apikey>
 - Daily check-in: ✅
 - Open signups: ✅
 - Login methods: GitHub / Telegram / Email + password
-- API latency: 382 ms
+- API latency: 122 ms
 
 **Mirrors / alternate entry points**
 
@@ -1515,7 +1515,7 @@ curl -s https://seekai.cc/v1/chat/completions \
 - Daily check-in: ❌
 - Open signups: ✅ (The service turned off email/password signup, so you have to create the account with GitHub (a common anti-abuse measure).)
 - Login methods: GitHub
-- API latency: 770 ms
+- API latency: 3005 ms
 
 > The site's model pricing API is not public (/api/pricing returns 401 anonymously; you would need to log into the admin page), and the free-tier group's model sources are published at https://aaawinn.xyz/public-pool. Announcements note that the free-tier group's GPT models only support the Anthropic protocol — the OpenAI protocol has compatibility issues.
 
@@ -1638,7 +1638,7 @@ curl -s https://aaawinn.xyz/v1/chat/completions \
 - Daily check-in: ✅
 - Open signups: ✅
 - Login methods: Passkey / Email + password
-- API latency: 276 ms
+- API latency: 4495 ms
 
 > The model pricing page requires login (/api/pricing returns 401 anonymously), but the names in the announcements can be copied directly: Qwen3.8-Flash-Next (zero per call), the DeepSeek-V4.1-Flash family (about 2 CNY per call in paid groups; the vision-exp version is open to free users), longcat-2.0 (1 CNY per call), glm-5.3-flash, qwen3.8-27b, the step family, spark-x2.5 and Qwen3.6-35B-A3B. The site also open-sourced SparkMuse-4B and Qing-Sec-20B, both searchable on ModelScope (hcnote/SparkMuse-4B).
 
@@ -1746,7 +1746,7 @@ These services are confirmed down or withdrawn. The names and reasons stay on re
 
 ## 🔔 Credit changes get announced here
 
-CI probes every service every 6 hours and diffs each field against the previous snapshot; 144 samples covering about 48.2 days so far. Credit adjustments, outages and recoveries, models added or removed, and price changes are all recorded automatically:
+CI probes every service every 6 hours and diffs each field against the previous snapshot; 145 samples covering about 48.2 days so far. Credit adjustments, outages and recoveries, models added or removed, and price changes are all recorded automatically:
 
 - Click **Watch → Custom → Releases** at the top of the repo and GitHub emails you when something important changes
 
