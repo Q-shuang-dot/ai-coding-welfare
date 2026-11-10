@@ -8,6 +8,7 @@ AI 福利站 · Claude Code / Codex 免费额度白嫖导航的自动变动记�
 
 ## 2026-11-10
 
+- 🟢 JustDoWork 恢复在线 <sub>07:17 UTC</sub>
 - 🔴 JustDoWork 探测不到了：注册页与公开接口都没响应 <sub>02:51 UTC</sub>
 - 💰 AgentRouter 邀请他人的奖励 $100 → $50 <sub>02:47 UTC</sub>
 - ➖ AgentRouter 下线模型：claude-opus-5-5 <sub>02:47 UTC</sub>
