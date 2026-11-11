@@ -8,6 +8,9 @@ AI 福利站 · Claude Code / Codex 免费额度白嫖导航的自动变动记�
 
 ## 2026-11-11
 
+- ➖ 熊猫API 下线模型：熊猫-A-45-vertex逆-gemini-4-carbon、熊猫-A-69-vertex逆-gemini-4-carbon、熊猫-vertex逆-23-gemini-3.1-pro-preview <sub>19:35 UTC</sub>
+- ➕ 年华 API 上线模型：claude-fable-5-2 <sub>19:35 UTC</sub>
+- 🏷️ 年华 API claude-sonnet-5 价格 $3 入 / $3 出（每 1M） → $3 入 / $15 出（每 1M） <sub>19:35 UTC</sub>
 - 📢 DoCode 发了公告：双 11，11 点有活动 <sub>06:19 UTC</sub>
 
 ## 2026-11-10

@@ -5,15 +5,15 @@
   <link rel="self" href="https://q-shuang-dot.github.io/ai-coding-welfare/feed.xml"/>
   <link href="https://q-shuang-dot.github.io/ai-coding-welfare/"/>
   <id>https://q-shuang-dot.github.io/ai-coding-welfare/</id>
-  <updated>2026-11-11T06:19:51.559Z</updated>
+  <updated>2026-11-11T19:35:59.300Z</updated>
   <author><name>AI 福利站 · Claude Code / Codex 免费额度白嫖导航</name></author>
   <entry>
-    <title>2026-11-11 · 1 项变动</title>
+    <title>2026-11-11 · 4 项变动</title>
     <link href="https://q-shuang-dot.github.io/ai-coding-welfare/changelog/#2026-11-11"/>
     <id>tag:q-shuang-dot.github.io,2026-11-11:changelog</id>
-    <updated>2026-11-11T06:19:51.559Z</updated>
-    <summary>DoCode 发了公告：双 11，11 点有活动</summary>
-    <content type="html">&lt;ul&gt;&lt;li&gt;📢 DoCode 发了公告：双 11，11 点有活动&lt;/li&gt;&lt;/ul&gt;</content>
+    <updated>2026-11-11T19:35:59.300Z</updated>
+    <summary>熊猫API 下线模型：熊猫-A-45-vertex逆-gemini-4-carbon、熊猫-A-69-vertex逆-gemini-4-carbon、熊猫-vertex逆-23-gemini-3.1-pro-preview（另有 3 项变动）</summary>
+    <content type="html">&lt;ul&gt;&lt;li&gt;➖ 熊猫API 下线模型：熊猫-A-45-vertex逆-gemini-4-carbon、熊猫-A-69-vertex逆-gemini-4-carbon、熊猫-vertex逆-23-gemini-3.1-pro-preview&lt;/li&gt;&lt;li&gt;➕ 年华 API 上线模型：claude-fable-5-2&lt;/li&gt;&lt;li&gt;🏷️ 年华 API claude-sonnet-5 价格 $3 入 / $3 出（每 1M） → $3 入 / $15 出（每 1M）&lt;/li&gt;&lt;li&gt;📢 DoCode 发了公告：双 11，11 点有活动&lt;/li&gt;&lt;/ul&gt;</content>
   </entry>
   <entry>
     <title>2026-11-10 · 8 项变动</title>
