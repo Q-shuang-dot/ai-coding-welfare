@@ -8,7 +8,7 @@
   <img src="https://img.shields.io/badge/%E6%94%B6%E5%BD%95%E7%A6%8F%E5%88%A9%E7%AB%99-12%20%E4%B8%AA-blue" alt="收录福利站">
   <img src="https://img.shields.io/badge/%E5%9C%A8%E7%BA%BF-11%2F12-orange" alt="在线">
   <img src="https://img.shields.io/badge/%E9%A6%96%E6%97%A5%E5%8F%AF%E5%BE%97-%E6%9C%80%E9%AB%98%20%24175-success" alt="首日可得">
-  <img src="https://img.shields.io/badge/%E6%95%B0%E6%8D%AE%E6%9B%B4%E6%96%B0-2026--11--10%2019.44%20UTC-informational" alt="数据更新">
+  <img src="https://img.shields.io/badge/%E6%95%B0%E6%8D%AE%E6%9B%B4%E6%96%B0-2026--11--11%2006.19%20UTC-informational" alt="数据更新">
 </p>
 
 <p align="center">
@@ -54,7 +54,7 @@
 | **Long的AI** | 🟢 在线 | 免费 | 无签到 | Anthropic + OpenAI | <a href="https://aaawinn.xyz/sign-up?aff=ijFL" target="_blank" rel="noopener">GitHub 注册 →</a> | `ijFL` |
 | **新疆幻城网安** | 🟢 在线 | **30000 站内刀** | 支持签到 | Anthropic + OpenAI | <a href="https://api.hcnsec.cn/sign-up?aff=3J8z" target="_blank" rel="noopener">点此注册 →</a> | `3J8z` |
 
-> 「首日可得」= 注册基础额度 + 本页邀请链接额度 + 当天能领的签到额度（每日重置额度池的站点按一天的池子算）；模型、价格、在线状态由脚本抓取站点公开接口自动生成，最后更新：`2026-11-10 19:44 UTC`。
+> 「首日可得」= 注册基础额度 + 本页邀请链接额度 + 当天能领的签到额度（每日重置额度池的站点按一天的池子算）；模型、价格、在线状态由脚本抓取站点公开接口自动生成，最后更新：`2026-11-11 06:19 UTC`。
 >
 > 「邀请码」列写了码的站（DoCode `1Qof`、年华 API `aonj`、肖恩AI `MVU8GX`、api456.me `zmza`、JustDoWork `OIWh`、SeekAi `dDJy`、Long的AI `ijFL`、新疆幻城网安 `3J8z`），注册表单里有一栏要**自己填**，漏填就只拿得到注册基础额度、事后补不上；其余站写 — 是因为邀请额度由链接自带，不用手打。
 >
@@ -114,7 +114,7 @@ powershell -ExecutionPolicy Bypass -File scripts/quickstart.ps1
 - 面板版本：`init-20261016-861e4557`
 - 邀请他人可得：**$50**
 - 登录方式：GitHub / LinuxDO
-- 接口延迟：313 ms
+- 接口延迟：956 ms
 
 **镜像 / 备用入口**
 
@@ -258,7 +258,7 @@ curl -s https://agentrouter.org/v1/chat/completions \
 - 每日签到：❌
 - 开放注册：✅
 - 登录方式：账号密码
-- 接口延迟：1259 ms
+- 接口延迟：2755 ms
 
 **当前可用模型**
 
@@ -536,7 +536,7 @@ curl -s https://api520.pro/v1/chat/completions \
 - 每日签到：✅
 - 开放注册：✅
 - 登录方式：账号密码
-- 接口延迟：1752 ms
+- 接口延迟：3256 ms
 
 **镜像 / 备用入口**
 
@@ -672,7 +672,7 @@ curl -s https://ai.dahanxingbang.dpdns.org/v1/chat/completions \
 - 每日签到：❌
 - 开放注册：✅
 - 登录方式：账号密码
-- 接口延迟：1761 ms
+- 接口延迟：3316 ms
 
 **镜像 / 备用入口**
 
@@ -766,9 +766,9 @@ curl -s https://docode.cc/v1/chat/completions \
 
 <details><summary><b>站点最新公告</b>（自动同步）</summary>
 
+- `2026-11-11` 双 11，11 点有活动
 - `2026-11-08` Claude特殊渠道受不可抗拒原因，倍率上调
 - `2026-10-22` Gemini Ultra分组上架，仅Gemini 4 Argon，高中低三档模型
-- `2026-10-15` -已修复好！ 生图功能暂时不可用，原因为 OpenAI 官方协议变更。 预计这两天修复好
 
 </details>
 
@@ -801,7 +801,7 @@ curl -s https://docode.cc/v1/chat/completions \
 - 每日签到：✅
 - 开放注册：✅
 - 登录方式：账号密码
-- 接口延迟：2103 ms
+- 接口延迟：3349 ms
 
 **当前可用模型**
 
@@ -1078,7 +1078,7 @@ curl -s https://us-3.nianhuaapi.com/v1/chat/completions \
 
 **实时数据**（自动抓取站点公开接口）
 
-- 接口延迟：2277 ms
+- 接口延迟：3830 ms
 
 > 2026-09-20 公开定价页返回 191 个模型，含 stepfun、deepseek-v4.1-flash、gpt-5.5、gemini-2.5-flash、claude-sonnet-4-6、kimi-k2.5 等。注意返回里同时混有大量免费与付费条目，模型可用性与倍率以控制台为准。
 
@@ -1195,7 +1195,7 @@ curl -s https://free.supxh.xin/v1/chat/completions \
 - 每日签到：✅
 - 开放注册：✅
 - 登录方式：账号密码
-- 接口延迟：2472 ms
+- 接口延迟：3839 ms
 
 > 模型清单与价格需登录后在控制台查看（/api/pricing 匿名请求需登录），本页不列模型表。
 
@@ -1293,7 +1293,7 @@ curl -s https://api456.me/v1/chat/completions \
 - 开放注册：✅（站点关掉了邮箱密码注册，得用 GitHub 登录建号（防批量注册的常规做法）。）
 - 登录方式：GitHub / 账号密码
 - GitHub 账号需满 **365 天**
-- 接口延迟：19898 ms
+- 接口延迟：19884 ms
 
 > 模型定价页需要登录（/api/pricing 匿名请求返回 401，面板 pricing.requireAuth = true），本页不列模型表。实测主力是 gpt-5.6 系（gpt-5.6-luna / sol / terra），每次请求会带约 2000 tokens 的固定隐藏提示词；完整清单与倍率请登录控制台「定价」页确认。
 
@@ -1405,7 +1405,7 @@ curl -s https://api.justwoker.icu/v1/chat/completions \
 
 **实时数据**（自动抓取站点公开接口）
 
-- 接口延迟：3483 ms
+- 接口延迟：4853 ms
 
 > 模型清单与价格需登录后在控制台「模型列表」查看（按每百万 Tokens 计价，可按厂商 / 上下文窗口筛选），站点没有公开的模型与定价接口，本页不做承诺。
 
@@ -1469,13 +1469,13 @@ curl -s https://api.justwoker.icu/v1/chat/completions \
 
 **实时数据**（自动抓取站点公开接口）
 
-- ⚠ 接口已连续 261 小时没抓到新数据，下列信息为 `2026-10-30 22:19 UTC` 的快照
+- ⚠ 接口已连续 272 小时没抓到新数据，下列信息为 `2026-10-30 22:19 UTC` 的快照
 - 站点名称：**SeekAi**
 - 面板版本：`v1.0.0-rc.25`
 - 每日签到：✅
 - 开放注册：✅
 - 登录方式：GitHub / Telegram / 账号密码
-- 接口延迟：153 ms
+- 接口延迟：173 ms
 
 **镜像 / 备用入口**
 
@@ -1580,7 +1580,7 @@ curl -s https://seekai.cc/v1/chat/completions \
 - 每日签到：❌
 - 开放注册：✅（站点关掉了邮箱密码注册，得用 GitHub 登录建号（防批量注册的常规做法）。）
 - 登录方式：GitHub
-- 接口延迟：3227 ms
+- 接口延迟：4493 ms
 
 > 站点的模型价格接口不公开（/api/pricing 匿名请求返回 401，要登录管理页才看得到），白嫖分组的模型来源公示在 https://aaawinn.xyz/public-pool；站方公告提到白嫖分组的 GPT 系模型只支持 Anthropic 协议对接，OpenAI 协议有兼容问题。
 
@@ -1714,7 +1714,7 @@ curl -s https://aaawinn.xyz/v1/chat/completions \
 - 每日签到：✅
 - 开放注册：✅
 - 登录方式：Passkey / 账号密码
-- 接口延迟：4900 ms
+- 接口延迟：6600 ms
 
 > 模型价格页需要登录（/api/pricing 匿名请求返回 401），不过站内公告里的名字可以直接抄：Qwen3.8-Flash-Next（0 元一次）、DeepSeek-V4.1-Flash 系（付费分组约 2 元一次，vision-exp 版本免费用户可用）、longcat-2.0（一次 1 元）、glm-5.3-flash、qwen3.8-27b、step 系、spark-x2.5、Qwen3.6-35B-A3B，站方还开源了 SparkMuse-4B 与 Qing-Sec-20B，均可在 ModelScope 搜到（hcnote/SparkMuse-4B）。
 
@@ -1830,18 +1830,18 @@ curl -s https://api.hcnsec.cn/v1/chat/completions \
 
 ## 🔔 额度变了，这里会通知你
 
-CI 每 6 小时抓一次各站接口，与上一次快照逐字段比对，目前已攒下 146 个样本、覆盖约 48.9 天。额度调整、掉线与恢复、模型上下线、价格变动都会自动记一条：
+CI 每 6 小时抓一次各站接口，与上一次快照逐字段比对，目前已攒下 146 个样本、覆盖约 49.4 天。额度调整、掉线与恢复、模型上下线、价格变动都会自动记一条：
 
 - 点仓库右上角 **Watch → Custom → Releases**：有重要变动时 GitHub 直接发邮件
 
 最近几条：
 
+- `2026-11-11` 📢 DoCode 发了公告：双 11，11 点有活动
 - `2026-11-10` 🟢 JustDoWork 恢复在线
 - `2026-11-10` 🔴 JustDoWork 探测不到了：注册页与公开接口都没响应
 - `2026-11-10` 💰 AgentRouter 邀请他人的奖励 $100 → $50
 - `2026-11-10` ➖ AgentRouter 下线模型：claude-opus-5-5
 - `2026-11-10` 🏷️ AgentRouter gpt-6.1-sol 价格 $4 入 / $20 出（每 1M） → $2 入 / $10 出（每 1M）
-- `2026-11-10` 📢 AgentRouter 发了公告：## gpt-6-astra 限量供应通知 gpt-6-astra 已调整为限量供应，**每天北京时间上午 10:00 投放一次，用完即止**。 预计每天仍有 **18 小时以上**可用，具体以实际可用情况为准。
 
 完整记录见 [CHANGELOG.md](CHANGELOG.md)。
 
