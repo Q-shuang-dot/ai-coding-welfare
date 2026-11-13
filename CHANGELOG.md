@@ -8,6 +8,9 @@ AI 福利站 · Claude Code / Codex 免费额度白嫖导航的自动变动记�
 
 ## 2026-11-13
 
+- ➕ 熊猫API 上线模型：熊猫-A-24-企业vt逆-gemini-4-hydrogen、熊猫-x-17-ais逆pg-gemini-4-hydrogen、熊猫-X-25-企业vertex逆-gemini-4-argon、熊猫-X-25-企业vertex逆-gemini-4-carbon 等 6 个 <sub>19:42 UTC</sub>
+- 🟢 JustDoWork 恢复在线 <sub>19:42 UTC</sub>
+- 📢 新疆幻城网安 发了公告：svip支持的模型如下：DeepSeek-V4-Pro, DeepSeek-V4.1-Flash, doubao-seed-2.1-lite, doubao-seed-2.1-pro, ernie-5.5-flash-preview, ernie-light-dt-1.0, gl <sub>19:42 UTC</sub>
 - 🔴 JustDoWork 探测不到了：注册页与公开接口都没响应 <sub>06:45 UTC</sub>
 
 ## 2026-11-12
