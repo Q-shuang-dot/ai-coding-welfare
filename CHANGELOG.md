@@ -6,6 +6,10 @@ AI 福利站 · Claude Code / Codex 免费额度白嫖导航的自动变动记�
 
 > 只记录会影响「值不值得注册」的字段。探测被站点 WAF 拦下时不记在线状态变化，避免机房 IP 被拦被误报成掉线。
 
+## 2026-11-14
+
+- 📢 DoCode 发了公告：gemini 3 系 4 系，不管是按量还是按次，都大部分时间无法使用，以后能正常使用会通知。 <sub>22:24 UTC</sub>
+
 ## 2026-11-13
 
 - ➕ 熊猫API 上线模型：熊猫-A-24-企业vt逆-gemini-4-hydrogen、熊猫-x-17-ais逆pg-gemini-4-hydrogen、熊猫-X-25-企业vertex逆-gemini-4-argon、熊猫-X-25-企业vertex逆-gemini-4-carbon 等 6 个 <sub>19:42 UTC</sub>

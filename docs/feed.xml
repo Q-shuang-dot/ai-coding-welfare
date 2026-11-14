@@ -5,8 +5,16 @@
   <link rel="self" href="https://q-shuang-dot.github.io/ai-coding-welfare/feed.xml"/>
   <link href="https://q-shuang-dot.github.io/ai-coding-welfare/"/>
   <id>https://q-shuang-dot.github.io/ai-coding-welfare/</id>
-  <updated>2026-11-14T18:01:09.975Z</updated>
+  <updated>2026-11-14T22:24:10.633Z</updated>
   <author><name>AI 福利站 · Claude Code / Codex 免费额度白嫖导航</name></author>
+  <entry>
+    <title>2026-11-14 · 1 项变动</title>
+    <link href="https://q-shuang-dot.github.io/ai-coding-welfare/changelog/#2026-11-14"/>
+    <id>tag:q-shuang-dot.github.io,2026-11-14:changelog</id>
+    <updated>2026-11-14T22:24:10.633Z</updated>
+    <summary>DoCode 发了公告：gemini 3 系 4 系，不管是按量还是按次，都大部分时间无法使用，以后能正常使用会通知。</summary>
+    <content type="html">&lt;ul&gt;&lt;li&gt;📢 DoCode 发了公告：gemini 3 系 4 系，不管是按量还是按次，都大部分时间无法使用，以后能正常使用会通知。&lt;/li&gt;&lt;/ul&gt;</content>
+  </entry>
   <entry>
     <title>2026-11-13 · 4 项变动</title>
     <link href="https://q-shuang-dot.github.io/ai-coding-welfare/changelog/#2026-11-13"/>
@@ -318,13 +326,5 @@
     <updated>2026-09-24T06:34:36.797Z</updated>
     <summary>AgentRouter 恢复在线（另有 1 项变动）</summary>
     <content type="html">&lt;ul&gt;&lt;li&gt;🟢 AgentRouter 恢复在线&lt;/li&gt;&lt;li&gt;🟢 肖恩AI 恢复在线&lt;/li&gt;&lt;/ul&gt;</content>
-  </entry>
-  <entry>
-    <title>2026-09-22 · 6 项变动</title>
-    <link href="https://q-shuang-dot.github.io/ai-coding-welfare/changelog/#2026-09-22"/>
-    <id>tag:q-shuang-dot.github.io,2026-09-22:changelog</id>
-    <updated>2026-09-22T07:36:52.225Z</updated>
-    <summary>AgentRouter 恢复在线（另有 5 项变动）</summary>
-    <content type="html">&lt;ul&gt;&lt;li&gt;🟢 AgentRouter 恢复在线&lt;/li&gt;&lt;li&gt;🟢 SeekAi 恢复在线&lt;/li&gt;&lt;li&gt;🔴 AgentRouter 探测不到了：注册页与公开接口都没响应&lt;/li&gt;&lt;li&gt;📢 DoCode 发了公告：中秋节活动预告：中秋节当天凡是 vip500，赠送 1500 额度；vip1000，赠送 3000 额度，；vip2000，赠送 5000 额度。中秋节三天，充值加赠 5-20%。&lt;/li&gt;&lt;li&gt;🔴 SeekAi 探测不到了：注册页与公开接口都没响应&lt;/li&gt;&lt;li&gt;🗑️ 移除收录 modelshare&lt;/li&gt;&lt;/ul&gt;</content>
   </entry>
 </feed>
