@@ -8,6 +8,8 @@ AI 福利站 · Claude Code / Codex 免费额度白嫖导航的自动变动记�
 
 ## 2026-11-15
 
+- ➕ 熊猫API 上线模型：熊猫-官key-按量-SSS-gemini-4-carbon、熊猫-官key-按量-SSS-gemini-4-hydrogen <sub>18:51 UTC</sub>
+- 🔴 JustDoWork 探测不到了：注册页与公开接口都没响应 <sub>18:51 UTC</sub>
 - ➖ 熊猫API 下线模型：熊猫-A-35-vertex逆-gemini-4-carbon、熊猫-vertex逆-35-gemini-4-argon <sub>06:31 UTC</sub>
 
 ## 2026-11-14
