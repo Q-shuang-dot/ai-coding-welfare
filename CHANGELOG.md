@@ -6,6 +6,10 @@ AI 福利站 · Claude Code / Codex 免费额度白嫖导航的自动变动记�
 
 > 只记录会影响「值不值得注册」的字段。探测被站点 WAF 拦下时不记在线状态变化，避免机房 IP 被拦被误报成掉线。
 
+## 2026-11-16
+
+- 🟢 JustDoWork 恢复在线 <sub>06:29 UTC</sub>
+
 ## 2026-11-15
 
 - ➕ 熊猫API 上线模型：熊猫-官key-按量-SSS-gemini-4-carbon、熊猫-官key-按量-SSS-gemini-4-hydrogen <sub>18:51 UTC</sub>
