@@ -8,6 +8,8 @@ AI 福利站 · Claude Code / Codex 免费额度白嫖导航的自动变动记�
 
 ## 2026-11-18
 
+- ➖ 熊猫API 下线模型：熊猫-顶级-21-vertex逆-gemini-2.5-pro <sub>20:31 UTC</sub>
+- 🟢 JustDoWork 恢复在线 <sub>20:31 UTC</sub>
 - ➕ 年华 API 上线模型：gpt-6.2-astra、gpt-6.2-sol、gpt-image-2.6-flare、gpt-image-2.6-sunburst <sub>07:28 UTC</sub>
 - 🔴 JustDoWork 探测不到了：注册页与公开接口都没响应 <sub>07:28 UTC</sub>
 
