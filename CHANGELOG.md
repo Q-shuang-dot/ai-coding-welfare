@@ -6,6 +6,11 @@ AI 福利站 · Claude Code / Codex 免费额度白嫖导航的自动变动记�
 
 > 只记录会影响「值不值得注册」的字段。探测被站点 WAF 拦下时不记在线状态变化，避免机房 IP 被拦被误报成掉线。
 
+## 2026-11-19
+
+- ➕ 熊猫API 上线模型：熊猫-X-19-企业vertex逆-gemini-4-neon、熊猫-X-23-企业vertex逆-gemini-4-neon-稳一点 <sub>07:25 UTC</sub>
+- 🟢 SeekAi 恢复在线 <sub>07:25 UTC</sub>
+
 ## 2026-11-18
 
 - ➖ 熊猫API 下线模型：熊猫-顶级-21-vertex逆-gemini-2.5-pro <sub>20:31 UTC</sub>
