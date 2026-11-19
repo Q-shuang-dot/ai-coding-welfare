@@ -8,6 +8,7 @@ AI 福利站 · Claude Code / Codex 免费额度白嫖导航的自动变动记�
 
 ## 2026-11-19
 
+- 🔴 JustDoWork 探测不到了：注册页与公开接口都没响应 <sub>20:37 UTC</sub>
 - ➕ 熊猫API 上线模型：熊猫-X-19-企业vertex逆-gemini-4-neon、熊猫-X-23-企业vertex逆-gemini-4-neon-稳一点 <sub>07:25 UTC</sub>
 - 🟢 SeekAi 恢复在线 <sub>07:25 UTC</sub>
 
