@@ -69,7 +69,7 @@ function siteCard(site, snap) {
         <div class="meta">
           <div>${esc(site.subtitle)}</div>
           ${meta.length ? `<div class="tags">${meta.map((t) => `<span class="tag">${t}</span>`).join('')}</div>` : ''}
-          ${route.note ? `<div class="notice">${esc(route.note)}</div>` : ''}
+${route.note ? `          <div class="notice">${esc(route.note)}</div>` : ''}
         </div>
         <div class="meta">${credit}</div>
         <div class="actions">
@@ -101,9 +101,11 @@ function modelsTable(sites, byId) {
     }
   }
   if (!rows.length) return '';
-  const hint = fixedAny
+  let hint = fixedAny
     ? '抓取自各站点公开的定价接口；标「按次」的模型按请求次数计费，与 tokens 无关，其余倍率 1 ≈ $2 / 1M tokens（非美元计价的站按站内单位显示），一切以站内实时公示为准。'
     : '抓取自各站点公开的定价接口；倍率 1 ≈ $2 / 1M tokens（非美元计价的站按站内单位显示），一切以站内实时公示为准。';
+  const manualSites = sites.filter((s) => s.modelsSource === 'manual').map((s) => s.name);
+  if (manualSites.length) hint += ` ${manualSites.join('、')}的模型与倍率按提供的信息人工登记，以机器人内公示为准。`;
   return `
     <section id="models">
       <h2>可用模型与价格</h2>

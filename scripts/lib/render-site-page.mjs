@@ -44,7 +44,7 @@ function factRows(site, snap) {
 
 function modelsTable(site, snap) {
   if (!snap?.models?.length) return '';
-  if (snap.models.every((m) => m.fixedPrice == null && m.inputPerMTok == null)) return '';
+  if (snap.models.every((m) => m.fixedPrice == null && m.inputPerMTok == null && m.ratio == null)) return '';
   const unit = site.credits?.unit ?? 'usd';
   // 非美元单位的站（熊猫API 的 🍚 额度）按它自己的单位标价，别套一个 $ 上去
   const price = (v) => usd(v, false, unit);
@@ -58,13 +58,17 @@ function modelsTable(site, snap) {
       (m.protocols ?? []).join(' / '),
     )}</td></tr>`;
   });
+  const manualModels = site.modelsSource === 'manual';
   const hint =
-    unit === 'usd'
-      ? fixedAny
-        ? '标「按次」的模型按请求次数计费，与 tokens 无关；其余倍率 1 ≈ $2 / 1M tokens。'
-        : '倍率 1 ≈ $2 / 1M tokens。'
-      : `标「按次」的模型按请求次数计费，与 tokens 无关；其余按倍率换算，站内以「${label}」结算、还要再乘分组倍率。`;
-  return `<section><h2>当前可用模型与价格</h2><p class="hint">${hint}抓取自站点公开定价接口，一切以站内实时公示为准。</p>
+    manualModels
+      ? '模型与倍率为人工登记，可能变动；价格与当前可用性以机器人内公示为准。'
+      : unit === 'usd'
+        ? fixedAny
+          ? '标「按次」的模型按请求次数计费，与 tokens 无关；其余倍率 1 ≈ $2 / 1M tokens。'
+          : '倍率 1 ≈ $2 / 1M tokens。'
+        : `标「按次」的模型按请求次数计费，与 tokens 无关；其余按倍率换算，站内以「${label}」结算、还要再乘分组倍率。`;
+  const source = manualModels ? '' : '抓取自站点公开定价接口，一切以站内实时公示为准。';
+  return `<section><h2>当前可用模型与价格</h2><p class="hint">${hint}${source}</p>
     <div class="table-wrap"><table><thead><tr><th>模型</th><th>倍率</th><th>输入 /1M</th><th>输出 /1M</th><th>协议</th></tr></thead>
     <tbody>${rows.join('')}</tbody></table></div></section>`;
 }

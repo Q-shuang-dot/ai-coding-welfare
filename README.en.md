@@ -5,14 +5,15 @@
 <p align="center">Free credits · a collection of relay and community services for free Claude Code / Codex / Cursor quota · daily check-ins</p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Tracked%20services-12-blue" alt="Tracked services">
-  <img src="https://img.shields.io/badge/Online-12%2F12-brightgreen" alt="Online">
-  <img src="https://img.shields.io/badge/Best%20first%20day-%24175-success" alt="Best first day">
+  <img src="https://img.shields.io/badge/Tracked%20services-13-blue" alt="Tracked services">
+  <img src="https://img.shields.io/badge/Online-13%2F13-brightgreen" alt="Online">
+  <img src="https://img.shields.io/badge/Best%20first%20day-%241300-success" alt="Best first day">
   <img src="https://img.shields.io/badge/Data%20updated-2026--11--19%2007.25%20UTC-informational" alt="Data updated">
 </p>
 
 <p align="center">
   <a href="https://agentrouter.org/register?aff=aibw"><b>AgentRouter sign up</b></a> ·
+  <a href="https://t.me/xingchi66bot?start=inv_8672125617"><b>星驰管家 sign up</b></a> ·
   <a href="https://api520.pro/register?aff=3pox"><b>Panda API sign up</b></a> ·
   <a href="https://ai.dahanxingbang.dpdns.org/sign-up?aff=ql9j"><b>大汉 API sign up</b></a> ·
   <a href="https://docode.cc/register?aff=1Qof"><b>DoCode sign up</b></a> ·
@@ -42,6 +43,7 @@
 | Service | Status | First day | After that | Protocols | Sign up | Invite code |
 | :-- | :--: | :--: | :--: | :--: | :--: | :--: |
 | **AgentRouter** 🔥 | 🟢 Online | **$175** | $25/day | Anthropic + OpenAI | <a href="https://agentrouter.org/register?aff=aibw" target="_blank" rel="noopener">Sign up →</a> | — |
+| **星驰管家** | 🟢 Online | **$1300** | $300/day | gpt-6.1-sol only (ratio 0.5) | <a href="https://t.me/xingchi66bot?start=inv_8672125617" target="_blank" rel="noopener">Sign up →</a> | — |
 | **Panda API** 💳 | 🟢 Online | **200 credit** | No check-in | Anthropic + OpenAI | <a href="https://api520.pro/register?aff=3pox" target="_blank" rel="noopener">Sign up →</a> | — |
 | **大汉 API** | 🟢 Online | Posted on site | Daily check-in | Anthropic + OpenAI | <a href="https://ai.dahanxingbang.dpdns.org/sign-up?aff=ql9j" target="_blank" rel="noopener">Sign up →</a> | — |
 | **DoCode** | 🟢 Online | **300 site-USD** | No check-in | Anthropic + OpenAI | <a href="https://docode.cc/register?aff=1Qof" target="_blank" rel="noopener">Sign up →</a> | `1Qof` |
@@ -58,7 +60,7 @@
 >
 > Services with a code in the "Invite code" column (DoCode `1Qof`, NianHua API `aonj`, ShawnAI `MVU8GX`, api456.me `zmza`, JustDoWork `OIWh`, SeekAi `dDJy`, Long's AI `ijFL`, Xinjiang Huancheng Security `3J8z`) require **typing the code yourself** in the signup form. Miss it and you only get the base signup bonus — it cannot be added afterwards. A dash means the invite bonus travels inside the link and needs no typing.
 >
-> Signing up for all 6 USD-priced services that still accept new users gets you roughly **$225** on day one; Panda API separately credits 200 credit, DoCode separately credits 300 site-USD, ShawnAI separately credits ≈14000 pts, Matrix separately credits 2600 pts, Long's AI separately credits Free, Xinjiang Huancheng Security separately credits 30000 site-USD — each service prices in its own unit with no published USD conversion, so those are left out of this total.
+> Signing up for all 7 USD-priced services that still accept new users gets you roughly **$1525** on day one; Panda API separately credits 200 credit, DoCode separately credits 300 site-USD, ShawnAI separately credits ≈14000 pts, Matrix separately credits 2600 pts, Long's AI separately credits Free, Xinjiang Huancheng Security separately credits 30000 site-USD — each service prices in its own unit with no published USD conversion, so those are left out of this total.
 >
 > 🟡 2 services have not returned fresh API data for over 48 hours. Details show the last successful snapshot; online status reflects whether the signup page actually loads.
 >
@@ -108,7 +110,7 @@ powershell -ExecutionPolicy Bypass -File scripts/quickstart.ps1
 
 **Live data** (scraped from public APIs)
 
-- ⚠ No fresh API data for 221 hours; the info below is a snapshot from `2026-11-10 02:47 UTC`
+- ⚠ No fresh API data for 223 hours; the info below is a snapshot from `2026-11-10 02:47 UTC`
 - Panel name: **Agent Router**
 - Panel version: `init-20261016-861e4557`
 - Referral bonus: **$50**
@@ -212,6 +214,70 @@ curl -s https://agentrouter.org/v1/chat/completions \
 - Discord: https://discord.gg/aYq5B4RW3
 - X: https://x.com/AgentRouter_0
 - Email: agent_router_org@163.com
+
+</details>
+
+---
+
+<a id="site-xingchi"></a>
+<details><summary><b>🟢 星驰管家</b></summary>
+
+> Telegram AI coding service · $1,000 on signup plus $300 first check-in ($1,300 day one)
+
+<a href="https://t.me/xingchi66bot?start=inv_8672125617" target="_blank" rel="noopener"><img src="https://img.shields.io/badge/Sign%20up-%E6%98%9F%E9%A9%B0%E7%AE%A1%E5%AE%B6-brightgreen?style=for-the-badge" alt="Sign up for 星驰管家"></a>
+
+**Why sign up**
+
+- Per submitted details: $1,000 signup credit plus $300 for the first check-in, $1,300 total on day one.
+- Only gpt-6.1-sol is listed, at a 0.5 model ratio.
+- Sign up and use the service through its Telegram bot; the invite parameter is included in the link.
+
+**How much you get**
+
+- Signup bonus: **$1000**
+- Daily check-in: **$300/day** (what keeps the free tier alive)
+- First day total: **$1300** (signup $1000 + first check-in $300)
+
+**Live data** (scraped from public APIs)
+
+- Daily check-in: ✅
+- Login methods: Telegram
+
+**Available models**
+
+| Model | Ratio | Input / 1M tokens | Output / 1M tokens | Protocols |
+| :-- | :--: | :--: | :--: | :--: |
+| `gpt-6.1-sol` | 0.5 | — | — | openai |
+
+<sub>Per submitted details, only gpt-6.1-sol is listed at a 0.5 ratio. Confirm pricing, availability and credit terms in the bot.</sub>
+
+**Signup requirements**
+
+- Start @xingchi66bot through this Telegram invite link.
+- $1,000 signup credit; claim the daily check-in credit under the service's rules.
+
+**Client setup**
+
+> Complete signup in the Telegram bot and retrieve the API Base URL, key and client configuration there; no unpublished endpoint is assumed.
+
+1. Open the Telegram invite and start @xingchi66bot.
+2. Follow the bot's signup steps, verify the credit and claim the daily check-in.
+3. Retrieve the API Base URL and key from the bot; select gpt-6.1-sol.
+
+Console: <https://t.me/xingchi66bot?start=inv_8672125617>
+
+**How to keep earning credits**
+
+- Check in through the bot daily for $300/day, subject to the bot's current terms.
+
+**⚠️ Read before use**
+
+- Signup, check-in and the 0.5 ratio are recorded from submitted details; verify current terms in the bot.
+- Only gpt-6.1-sol is listed; no separate API endpoint or status API is published.
+
+**Official channels**
+
+- Telegram bot: https://t.me/xingchi66bot
 
 </details>
 
@@ -1522,7 +1588,7 @@ curl -s https://seekai.cc/v1/chat/completions \
 
 **Live data** (scraped from public APIs)
 
-- ⚠ No fresh API data for 73 hours; the info below is a snapshot from `2026-11-16 06:28 UTC`
+- ⚠ No fresh API data for 75 hours; the info below is a snapshot from `2026-11-16 06:28 UTC`
 - Panel version: `v0.0.0`
 - Daily check-in: ❌
 - Open signups: ✅ (The service turned off email/password signup, so you have to create the account with GitHub (a common anti-abuse measure).)

@@ -141,6 +141,60 @@
       ]
     },
     {
+      "id": "xingchi",
+      "checkedAt": "2026-11-19T09:27:00.000Z",
+      "apiOk": false,
+      "pricingOk": false,
+      "latencyMs": null,
+      "error": null,
+      "systemName": "星驰管家",
+      "version": null,
+      "registerOpen": null,
+      "passwordRegister": null,
+      "checkinEnabled": true,
+      "loginMethods": [
+        "Telegram"
+      ],
+      "githubMinAccountAgeDays": null,
+      "quotaPerUnit": null,
+      "inviteeBonusUsd": null,
+      "inviterBonusUsd": null,
+      "topupEnabled": null,
+      "services": [],
+      "announcements": [],
+      "models": [
+        {
+          "name": "gpt-6.1-sol",
+          "ratio": 0.5,
+          "completionRatio": null,
+          "fixedPrice": null,
+          "inputPerMTok": null,
+          "outputPerMTok": null,
+          "groups": [],
+          "protocols": [
+            "openai"
+          ]
+        }
+      ],
+      "modelsSource": "manual",
+      "defaults": {
+        "claude": null,
+        "openai": "gpt-6.1-sol"
+      },
+      "signup": {
+        "ok": true,
+        "status": 200,
+        "ms": null,
+        "attempts": 1
+      },
+      "mirrors": [],
+      "probeBlocked": false,
+      "online": true,
+      "dataStale": false,
+      "staleFrom": null,
+      "staleFields": []
+    },
+    {
       "id": "api520",
       "checkedAt": "2026-11-19T07:24:26.519Z",
       "apiOk": true,

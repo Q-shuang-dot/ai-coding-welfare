@@ -16,6 +16,18 @@
       "page": "https://q-shuang-dot.github.io/ai-coding-welfare/sites/agentrouter/"
     },
     {
+      "id": "xingchi",
+      "name": "星驰管家",
+      "online": true,
+      "probeBlocked": false,
+      "latencyMs": null,
+      "models": 1,
+      "checkedAt": "2026-11-19T09:27:00.000Z",
+      "uptime7d": null,
+      "samples": 0,
+      "page": "https://q-shuang-dot.github.io/ai-coding-welfare/sites/xingchi/"
+    },
+    {
       "id": "api520",
       "name": "熊猫API",
       "online": true,

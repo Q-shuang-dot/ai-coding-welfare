@@ -201,7 +201,7 @@ function siteSection(site, snap, lang, meta) {
           ? t.modelNoteFixed
           : t.modelNoteToken
         : t.modelNoteUnit(unitStyle(plan.unit, lang).suffix.trim());
-    parts.push('', t.models, '', models, '', `<sub>${note}</sub>`);
+    parts.push('', t.models, '', models, '', `<sub>${site.modelsSource === 'manual' ? copy.modelsNote : note}</sub>`);
   } else if (copy.modelsNote) {
     parts.push('', `> ${copy.modelsNote}`);
   } else if (lang !== DEFAULT_LANG) {
