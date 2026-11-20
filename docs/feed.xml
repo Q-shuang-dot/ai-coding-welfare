@@ -5,8 +5,16 @@
   <link rel="self" href="https://q-shuang-dot.github.io/ai-coding-welfare/feed.xml"/>
   <link href="https://q-shuang-dot.github.io/ai-coding-welfare/"/>
   <id>https://q-shuang-dot.github.io/ai-coding-welfare/</id>
-  <updated>2026-11-19T20:37:45.662Z</updated>
+  <updated>2026-11-20T07:15:13.918Z</updated>
   <author><name>AI 福利站 · Claude Code / Codex 免费额度白嫖导航</name></author>
+  <entry>
+    <title>2026-11-20 · 2 项变动</title>
+    <link href="https://q-shuang-dot.github.io/ai-coding-welfare/changelog/#2026-11-20"/>
+    <id>tag:q-shuang-dot.github.io,2026-11-20:changelog</id>
+    <updated>2026-11-20T07:15:13.918Z</updated>
+    <summary>SeekAi 探测不到了：注册页与公开接口都没响应（另有 1 项变动）</summary>
+    <content type="html">&lt;ul&gt;&lt;li&gt;🔴 SeekAi 探测不到了：注册页与公开接口都没响应&lt;/li&gt;&lt;li&gt;📢 新疆幻城网安 发了公告：不少用户担心在本站使用服务时存在隐私泄露风险。为此，本站现已上线请求隐私脱敏功能：系统会自动对用户请求内的身份证号、银行卡号、IP 地址、各类密码密钥、家庭住址等敏感信息做脱敏处理，并同步清除相关日志。同时我们郑重提醒：请不要在本站上传个人隐私信息以及企业涉密资料。&lt;/li&gt;&lt;/ul&gt;</content>
+  </entry>
   <entry>
     <title>2026-11-19 · 3 项变动</title>
     <link href="https://q-shuang-dot.github.io/ai-coding-welfare/changelog/#2026-11-19"/>
@@ -318,13 +326,5 @@
     <updated>2026-10-03T16:17:55.440Z</updated>
     <summary>肖恩AI 恢复在线（另有 2 项变动）</summary>
     <content type="html">&lt;ul&gt;&lt;li&gt;🟢 肖恩AI 恢复在线&lt;/li&gt;&lt;li&gt;🔴 肖恩AI 探测不到了：注册页与公开接口都没响应&lt;/li&gt;&lt;li&gt;📢 新疆幻城网安 发了公告：很多免费用户动不动就说没有一个可以用的模型，那么今天站长教大家怎么挑到我网站比较好用的模型，1.模型点开详情，可以看见默认用户的可用率，有的模型可用率高、延迟低，就可以直接选择2.点击排行榜，看用户的选择，排行榜靠前的模型一般都是比较好用，每天都会动态刷新3.遇事不决，直接aut&lt;/li&gt;&lt;/ul&gt;</content>
-  </entry>
-  <entry>
-    <title>2026-10-02 · 2 项变动</title>
-    <link href="https://q-shuang-dot.github.io/ai-coding-welfare/changelog/#2026-10-02"/>
-    <id>tag:q-shuang-dot.github.io,2026-10-02:changelog</id>
-    <updated>2026-10-02T22:14:22.155Z</updated>
-    <summary>新疆幻城网安 发了公告：MiniMax-M3.1-Flash模型已上架，免费用户限时支持调用，后期将只允许付费用户调用（另有 1 项变动）</summary>
-    <content type="html">&lt;ul&gt;&lt;li&gt;📢 新疆幻城网安 发了公告：MiniMax-M3.1-Flash模型已上架，免费用户限时支持调用，后期将只允许付费用户调用&lt;/li&gt;&lt;li&gt;📢 新疆幻城网安 发了公告：longcat-2.5支持多模态，能力比肩glm-5.2，内测期间0元调用欢迎体验&lt;/li&gt;&lt;/ul&gt;</content>
   </entry>
 </feed>
