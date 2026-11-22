@@ -5,8 +5,16 @@
   <link rel="self" href="https://q-shuang-dot.github.io/ai-coding-welfare/feed.xml"/>
   <link href="https://q-shuang-dot.github.io/ai-coding-welfare/"/>
   <id>https://q-shuang-dot.github.io/ai-coding-welfare/</id>
-  <updated>2026-11-21T19:15:46.368Z</updated>
+  <updated>2026-11-22T06:48:12.465Z</updated>
   <author><name>AI 福利站 · Claude Code / Codex 免费额度白嫖导航</name></author>
+  <entry>
+    <title>2026-11-22 · 2 项变动</title>
+    <link href="https://q-shuang-dot.github.io/ai-coding-welfare/changelog/#2026-11-22"/>
+    <id>tag:q-shuang-dot.github.io,2026-11-22:changelog</id>
+    <updated>2026-11-22T06:48:12.465Z</updated>
+    <summary>熊猫API 上线模型：熊猫-顶级-21-vertex逆-gemini-2.5-pro（另有 1 项变动）</summary>
+    <content type="html">&lt;ul&gt;&lt;li&gt;➕ 熊猫API 上线模型：熊猫-顶级-21-vertex逆-gemini-2.5-pro&lt;/li&gt;&lt;li&gt;🔴 JustDoWork 探测不到了：注册页与公开接口都没响应&lt;/li&gt;&lt;/ul&gt;</content>
+  </entry>
   <entry>
     <title>2026-11-20 · 6 项变动</title>
     <link href="https://q-shuang-dot.github.io/ai-coding-welfare/changelog/#2026-11-20"/>
@@ -318,13 +326,5 @@
     <updated>2026-10-04T05:52:18.299Z</updated>
     <summary>DoCode 发了公告：最近上线模型：gpt-6.1-sol、claude-opus-5-5、claude-sonnet-5-5</summary>
     <content type="html">&lt;ul&gt;&lt;li&gt;📢 DoCode 发了公告：最近上线模型：gpt-6.1-sol、claude-opus-5-5、claude-sonnet-5-5&lt;/li&gt;&lt;/ul&gt;</content>
-  </entry>
-  <entry>
-    <title>2026-10-03 · 3 项变动</title>
-    <link href="https://q-shuang-dot.github.io/ai-coding-welfare/changelog/#2026-10-03"/>
-    <id>tag:q-shuang-dot.github.io,2026-10-03:changelog</id>
-    <updated>2026-10-03T16:17:55.440Z</updated>
-    <summary>肖恩AI 恢复在线（另有 2 项变动）</summary>
-    <content type="html">&lt;ul&gt;&lt;li&gt;🟢 肖恩AI 恢复在线&lt;/li&gt;&lt;li&gt;🔴 肖恩AI 探测不到了：注册页与公开接口都没响应&lt;/li&gt;&lt;li&gt;📢 新疆幻城网安 发了公告：很多免费用户动不动就说没有一个可以用的模型，那么今天站长教大家怎么挑到我网站比较好用的模型，1.模型点开详情，可以看见默认用户的可用率，有的模型可用率高、延迟低，就可以直接选择2.点击排行榜，看用户的选择，排行榜靠前的模型一般都是比较好用，每天都会动态刷新3.遇事不决，直接aut&lt;/li&gt;&lt;/ul&gt;</content>
   </entry>
 </feed>
