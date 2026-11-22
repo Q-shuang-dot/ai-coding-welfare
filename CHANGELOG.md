@@ -8,6 +8,7 @@ AI 福利站 · Claude Code / Codex 免费额度白嫖导航的自动变动记�
 
 ## 2026-11-22
 
+- 📢 DoCode 发了公告：新上架GPT【ultrafast】分组，8 倍速度极致体验。 <sub>19:40 UTC</sub>
 - ➕ 熊猫API 上线模型：熊猫-顶级-21-vertex逆-gemini-2.5-pro <sub>06:48 UTC</sub>
 - 🔴 JustDoWork 探测不到了：注册页与公开接口都没响应 <sub>06:48 UTC</sub>
 
