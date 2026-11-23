@@ -8,6 +8,7 @@ AI 福利站 · Claude Code / Codex 免费额度白嫖导航的自动变动记�
 
 ## 2026-11-23
 
+- 📢 新疆幻城网安 发了公告：svip用户已上线glm-5.4，支持多模态，能力比肩gpt-6-sol，欢迎svip用户体验 <sub>23:53 UTC</sub>
 - 🟢 JustDoWork 恢复在线 <sub>07:38 UTC</sub>
 
 ## 2026-11-22
