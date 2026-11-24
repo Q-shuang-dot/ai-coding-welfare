@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-23T23:53:40.200Z",
+  "generatedAt": "2026-11-24T02:24:18.464Z",
   "source": "https://github.com/Q-shuang-dot/ai-coding-welfare",
   "license": "MIT",
   "count": 13,
@@ -136,6 +136,87 @@
       ],
       "reviewedAt": "2026-11-19",
       "page": "https://q-shuang-dot.github.io/ai-coding-welfare/sites/xingchi/"
+    },
+    {
+      "id": "redapi",
+      "name": "Redapi",
+      "subtitle": "Sub2API 统一 AI 网关 · 注册送 $5，OpenAI / Anthropic 双协议，Claude Code、Codex 可直接接入",
+      "paid": false,
+      "recommended": false,
+      "tags": [
+        "Sub2API",
+        "中转站",
+        "付费中转",
+        "免费额度",
+        "Claude Code",
+        "Codex",
+        "Anthropic 兼容",
+        "OpenAI 兼容"
+      ],
+      "highlights": [
+        "注册送 $5：走本页邀请链接注册，新用户到账 $5 赠金（站方活动口径，注册后在控制台核对）",
+        "OpenAI 与 Anthropic 两条原生路由都在架：GET /v1/models、POST /v1/chat/completions、POST /v1/messages 匿名请求都回 401 而不是 404（2026-11-24 实测），Claude Code 填 Base URL、Codex CLI 走 /v1",
+        "Sub2API 面板：公开设置接口 /api/v1/settings/public 免登录可读，站方自报邮箱注册、邮箱验证开启、Turnstile 关闭、邀请码开关关闭（本页 aff 参数自动带上）",
+        "邮箱白名单：QQ / 163 / 126 / Gmail / Outlook / iCloud / Proton / *.edu.cn 等常见邮箱可注册，其它域名会被注册页直接拦下",
+        "站方首页标注已接入 OpenAI、Claude、Gemini、Grok、DeepSeek、GLM、Kimi、MiniMax 八个模型家族，按 Token 与按次两种方式计费，带智能路由和渠道监控",
+        "面板支付与订阅开关都开着（payment_enabled / subscription_enabled = true），属于付费中转站；站方公示 QQ 群 894796942"
+      ],
+      "credits": {
+        "signup": 5,
+        "invite": null,
+        "dailyCheckin": null,
+        "approx": false
+      },
+      "endpoints": {
+        "anthropic": "https://redapi.vip",
+        "openai": "https://redapi.vip/v1"
+      },
+      "signupUrl": "https://redapi.vip/register?aff=BJVQ43D9DSFT",
+      "homeUrl": "https://redapi.vip",
+      "docsUrl": null,
+      "inviteCode": null,
+      "register": {
+        "methods": [
+          "账号密码"
+        ],
+        "requirements": [
+          "务必从本页邀请链接进入注册（带 ?aff=BJVQ43D9DSFT），$5 注册赠金才会结算",
+          "邮箱 + 密码注册：面板里 GitHub / Google / LinuxDO / Telegram / 微信 / OIDC 登录开关都是关的，只有邮箱一条路",
+          "注册要邮箱验证码（email_verification = true），且只收白名单域名（QQ、163、Gmail、Outlook、iCloud、Proton、*.edu.cn 等）",
+          "没有 Cloudflare Turnstile（turnstile_enabled = false），但注册表单有推广码一栏（promo_code_enabled = true），有码可以再叠一层赠金"
+        ]
+      },
+      "earnMore": [
+        "邀请好友：面板 affiliate_enabled = true，具体返利比例登录后在「推广 / 邀请」页看",
+        "推广码（promo code）注册时可填，站方接口支持校验并回显赠送金额",
+        "充值：payment_enabled = true，支持在线支付；订阅套餐也开着（subscription_enabled = true）",
+        "没有每日签到：公开设置里看不到签到开关，按无签到登记，额度只能靠注册赠送、推广或充值"
+      ],
+      "caveats": [
+        "注册送 $5 是站方活动口径，公开接口不返回注册赠金数字，实际到账以注册后控制台余额为准",
+        "公开面拿不到模型清单和价格：model_plaza_enabled = false、/api/v1/model-plaza 返回 404，首页列的八个模型家族不等于完整可用清单",
+        "这是付费中转站（payment / subscription 都开着），$5 只够试吃，长期用要充值，别当长期白嫖站",
+        "上游与线路不公开，首页只写「智能路由 + 渠道监控」，Claude / GPT 是否官方直连无法从公开面核实，重活别全压上去",
+        "站点较新，没有历史可用性可查；本页只能探到 /v1/models 的 401 存活信号，注册页和接口都在 Cloudflare 后面",
+        "注册邮箱有域名白名单，小众邮箱或自建域名会被直接拒，换常见邮箱再试"
+      ],
+      "remarks": "注册送 $5；模型清单要登录；无签到",
+      "faq": [
+        [
+          "Redapi 注册送多少额度？",
+          "站方活动口径是注册送 $5；公开接口不返回这个数字，注册后进控制台核对实际到账。"
+        ],
+        [
+          "Redapi 支持 Claude Code 和 Codex 吗？",
+          "支持。Anthropic 端点填 https://redapi.vip（Base URL 不带 /v1），OpenAI 端点填 https://redapi.vip/v1；两条路由匿名请求都回 401，说明网关在架。"
+        ],
+        [
+          "Redapi 有哪些模型？",
+          "公开面拿不到清单（模型广场关闭、/v1/models 要鉴权），首页自报 OpenAI、Claude、Gemini、Grok、DeepSeek、GLM、Kimi、MiniMax 八个家族，具体模型与价格登录后看控制台。"
+        ]
+      ],
+      "reviewedAt": "2026-11-24",
+      "page": "https://q-shuang-dot.github.io/ai-coding-welfare/sites/redapi/"
     },
     {
       "id": "api520",
@@ -610,83 +691,6 @@
       ],
       "reviewedAt": "2026-11-02",
       "page": "https://q-shuang-dot.github.io/ai-coding-welfare/sites/api456/"
-    },
-    {
-      "id": "justwoker",
-      "name": "JustDoWork",
-      "subtitle": "New API 中转站 · 只用 GitHub 登录，主打 gpt-5.6 系模型，签到 + 任务持续拿额度，Anthropic 原生协议直连 Claude Code / Codex",
-      "paid": false,
-      "recommended": false,
-      "tags": [
-        "New API",
-        "中转站",
-        "免费额度",
-        "每日签到",
-        "GitHub 注册",
-        "Claude Code",
-        "Codex",
-        "Anthropic 兼容",
-        "OpenAI 兼容"
-      ],
-      "highlights": [
-        "只用 GitHub 授权登录，不用记密码、不用邮箱验证码（面板 email_verification = false），注册流程干净",
-        "每日签到与站内任务都开着（checkin_enabled / enable_task 均为 true），登录后台点一下就能持续拿额度",
-        "主打 gpt-5.6 系模型（gpt-5.6-luna / sol / terra），实测支持 function calling，能跑 Claude Code / Codex 的工具调用",
-        "Anthropic 原生协议在架：Claude Code 填 Base URL 直连 /v1/messages，OpenAI 兼容路由走 /v1，Codex CLI 也能对接"
-      ],
-      "credits": {
-        "signup": null,
-        "invite": null,
-        "dailyCheckin": null,
-        "approx": false
-      },
-      "endpoints": {
-        "anthropic": "https://api.justwoker.icu",
-        "openai": "https://api.justwoker.icu/v1"
-      },
-      "signupUrl": "https://api.justwoker.icu/register?aff=OIWh",
-      "homeUrl": "https://api.justwoker.icu",
-      "docsUrl": null,
-      "inviteCode": "OIWh",
-      "register": {
-        "methods": [
-          "GitHub OAuth"
-        ],
-        "requirements": [
-          "务必从本页邀请链接进入注册（带 ?aff=OIWh），邀请额度才会发放",
-          "只能用 GitHub 授权登录：面板里邮箱 / LinuxDO / Telegram / 微信 / OIDC 登录开关都是关的，没有邮箱密码注册入口",
-          "注册开着 Cloudflare Turnstile 人机校验，注册页与 API 都在 Cloudflare 后面，机房 IP 可能被 403 拦，家用宽带正常"
-        ]
-      },
-      "earnMore": [
-        "每日签到领额度（面板已开启），登录后台点一下就行",
-        "站内任务中心也能拿额度（enable_task 已开启）",
-        "邀请他人注册，邀请人可获得额度"
-      ],
-      "caveats": [
-        "额度数字站点公开接口不暴露（/api/status 里 quota_for_new_user / quota_for_invitee 均为空），注册后进后台核对实际到账",
-        "面板 price = 7.3（¥7.3 ≈ 站内 $1），额度按人民币口径显示，本页不做美元折算",
-        "站点挂在 Cloudflare 后面，/chat/completions 等端点匿名探测会被 WAF 返回 403，属正常防护，不代表接口不可用",
-        "上游为第三方中转，gpt-5.6 系模型在大上下文 / 高并发时可能出现超时或断流，别当稳定生产通道用",
-        "模型可用性与价格随上游调整，以控制台实时页面为准"
-      ],
-      "remarks": "只能 GitHub 登录；额度数字不公开",
-      "faq": [
-        [
-          "JustDoWork 注册送多少额度？",
-          "站方没有公开固定数字（/api/status 里 quota_for_new_user 为空），免费额度靠每日签到 + 站内任务，注册后进后台核对实际到账。"
-        ],
-        [
-          "JustDoWork 怎么注册？",
-          "只能用 GitHub 授权登录，注册开着 Cloudflare Turnstile；注册页和 API 都在 Cloudflare 后面，机房 IP 可能被 403，家用宽带正常。"
-        ],
-        [
-          "JustDoWork 支持 Claude Code 吗？",
-          "支持。Anthropic 端点 https://api.justwoker.icu（Base URL 不带 /v1），OpenAI 端点 https://api.justwoker.icu/v1；主力是 gpt-5.6 系模型。"
-        ]
-      ],
-      "reviewedAt": "2026-11-02",
-      "page": "https://q-shuang-dot.github.io/ai-coding-welfare/sites/justwoker/"
     },
     {
       "id": "matrix",

@@ -6,6 +6,14 @@ AI 福利站 · Claude Code / Codex 免费额度白嫖导航的自动变动记�
 
 > 只记录会影响「值不值得注册」的字段。探测被站点 WAF 拦下时不记在线状态变化，避免机房 IP 被拦被误报成掉线。
 
+## 2026-11-24
+
+- ➖ AgentRouter 下线模型：gpt-6-astra <sub>02:24 UTC</sub>
+- 🏷️ AgentRouter gpt-5.6-sol 价格 $4 入 / $20 出（每 1M） → $8 入 / $40 出（每 1M） <sub>02:24 UTC</sub>
+- 🏷️ AgentRouter gpt-6.1-sol 价格 $2 入 / $10 出（每 1M） → $8 入 / $40 出（每 1M） <sub>02:24 UTC</sub>
+- 🆕 新收录 Redapi：注册送 $5 <sub>02:24 UTC</sub>
+- 🗑️ 移除收录 JustDoWork <sub>02:24 UTC</sub>
+
 ## 2026-11-23
 
 - 📢 新疆幻城网安 发了公告：svip用户已上线glm-5.4，支持多模态，能力比肩gpt-6-sol，欢迎svip用户体验 <sub>23:53 UTC</sub>

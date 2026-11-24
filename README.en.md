@@ -8,19 +8,19 @@
   <img src="https://img.shields.io/badge/Tracked%20services-13-blue" alt="Tracked services">
   <img src="https://img.shields.io/badge/Online-13%2F13-brightgreen" alt="Online">
   <img src="https://img.shields.io/badge/Best%20first%20day-%241300-success" alt="Best first day">
-  <img src="https://img.shields.io/badge/Data%20updated-2026--11--23%2023.53%20UTC-informational" alt="Data updated">
+  <img src="https://img.shields.io/badge/Data%20updated-2026--11--24%2002.24%20UTC-informational" alt="Data updated">
 </p>
 
 <p align="center">
   <a href="https://agentrouter.org/register?aff=aibw"><b>AgentRouter sign up</b></a> ·
   <a href="https://t.me/xingchi66bot?start=inv_8672125617"><b>星驰管家 sign up</b></a> ·
+  <a href="https://redapi.vip/register?aff=BJVQ43D9DSFT"><b>Redapi sign up</b></a> ·
   <a href="https://api520.pro/register?aff=3pox"><b>Panda API sign up</b></a> ·
   <a href="https://ai.dahanxingbang.dpdns.org/sign-up?aff=ql9j"><b>大汉 API sign up</b></a> ·
   <a href="https://docode.cc/register?aff=1Qof"><b>DoCode sign up</b></a> ·
   <a href="https://us-3.nianhuaapi.com/sign-up?aff=aonj"><b>NianHua API sign up</b></a> ·
   <a href="https://free.supxh.xin/register?code=MVU8GX"><b>ShawnAI sign up</b></a> ·
   <a href="https://api456.me/register?aff=zmza"><b>api456.me sign up</b></a> ·
-  <a href="https://api.justwoker.icu/register?aff=OIWh"><b>JustDoWork sign up</b></a> ·
   <a href="https://matrix.mzsjai.com/login?redirect=%2Fapp%2Fgrowth%3FinviteCode%3DMX3CDVGATLJW"><b>Matrix sign up</b></a> ·
   <a href="https://seekai.cc/sign-up?aff=dDJy"><b>SeekAi sign up</b></a> ·
   <a href="https://aaawinn.xyz/sign-up?aff=ijFL"><b>Long's AI sign up</b></a> ·
@@ -44,23 +44,23 @@
 | :-- | :--: | :--: | :--: | :--: | :--: | :--: |
 | **AgentRouter** 🔥 | 🟢 Online | **$175** | $25/day | Anthropic + OpenAI | <a href="https://agentrouter.org/register?aff=aibw" target="_blank" rel="noopener">Sign up →</a> | — |
 | **星驰管家** | 🟢 Online | **$1300** | $300/day | gpt-6.1-sol only (ratio 0.5) | <a href="https://t.me/xingchi66bot?start=inv_8672125617" target="_blank" rel="noopener">Sign up →</a> | — |
+| **Redapi** | 🟢 Online | **$5** | — | Anthropic + OpenAI | <a href="https://redapi.vip/register?aff=BJVQ43D9DSFT" target="_blank" rel="noopener">Sign up →</a> | — |
 | **Panda API** 💳 | 🟢 Online | **200 credit** | No check-in | Anthropic + OpenAI | <a href="https://api520.pro/register?aff=3pox" target="_blank" rel="noopener">Sign up →</a> | — |
 | **大汉 API** | 🟢 Online | Posted on site | Daily check-in | Anthropic + OpenAI | <a href="https://ai.dahanxingbang.dpdns.org/sign-up?aff=ql9j" target="_blank" rel="noopener">Sign up →</a> | — |
 | **DoCode** | 🟢 Online | **300 site-USD** | No check-in | Anthropic + OpenAI | <a href="https://docode.cc/register?aff=1Qof" target="_blank" rel="noopener">Sign up →</a> | `1Qof` |
 | **NianHua API** | 🟢 Online | Posted on site | Daily check-in | Anthropic + OpenAI | <a href="https://us-3.nianhuaapi.com/sign-up?aff=aonj" target="_blank" rel="noopener">Sign up →</a> | `aonj` |
 | **ShawnAI** | 🟢 Online | **≈14000 pts** | ≈2000 pts/day | Anthropic + OpenAI | <a href="https://free.supxh.xin/register?code=MVU8GX" target="_blank" rel="noopener">Sign up →</a> | `MVU8GX` |
 | **api456.me** | 🟢 Online | **$50** | $10/day | OpenAI | <a href="https://api456.me/register?aff=zmza" target="_blank" rel="noopener">Sign up →</a> | `zmza` |
-| **JustDoWork** | 🟢 Online | Posted on site | Daily check-in | Anthropic + OpenAI | <a href="https://api.justwoker.icu/register?aff=OIWh" target="_blank" rel="noopener">GitHub sign up →</a> | `OIWh` |
 | **Matrix** | 🟢 Online | **2600 pts** | — | OpenAI-compatible | <a href="https://matrix.mzsjai.com/login?redirect=%2Fapp%2Fgrowth%3FinviteCode%3DMX3CDVGATLJW" target="_blank" rel="noopener">Sign up →</a> | — |
 | **SeekAi** | 🟢 Online | Posted on site | Daily check-in | OpenAI | <a href="https://seekai.cc/sign-up?aff=dDJy" target="_blank" rel="noopener">Sign up →</a> | `dDJy` |
 | **Long's AI** | 🟢 Online | Free | No check-in | Anthropic + OpenAI | <a href="https://aaawinn.xyz/sign-up?aff=ijFL" target="_blank" rel="noopener">GitHub sign up →</a> | `ijFL` |
 | **Xinjiang Huancheng Security** | 🟢 Online | **30000 site-USD** | Daily check-in | Anthropic + OpenAI | <a href="https://api.hcnsec.cn/sign-up?aff=3J8z" target="_blank" rel="noopener">Sign up →</a> | `3J8z` |
 
-> "First day" = signup bonus + invite bonus from this page + whatever check-in pays out on day one (services with a daily reset pool count a single day's pool). Models, prices and status are scraped from each service's public API. Last update: `2026-11-23 23:53 UTC`.
+> "First day" = signup bonus + invite bonus from this page + whatever check-in pays out on day one (services with a daily reset pool count a single day's pool). Models, prices and status are scraped from each service's public API. Last update: `2026-11-24 02:24 UTC`.
 >
-> Services with a code in the "Invite code" column (DoCode `1Qof`, NianHua API `aonj`, ShawnAI `MVU8GX`, api456.me `zmza`, JustDoWork `OIWh`, SeekAi `dDJy`, Long's AI `ijFL`, Xinjiang Huancheng Security `3J8z`) require **typing the code yourself** in the signup form. Miss it and you only get the base signup bonus — it cannot be added afterwards. A dash means the invite bonus travels inside the link and needs no typing.
+> Services with a code in the "Invite code" column (DoCode `1Qof`, NianHua API `aonj`, ShawnAI `MVU8GX`, api456.me `zmza`, SeekAi `dDJy`, Long's AI `ijFL`, Xinjiang Huancheng Security `3J8z`) require **typing the code yourself** in the signup form. Miss it and you only get the base signup bonus — it cannot be added afterwards. A dash means the invite bonus travels inside the link and needs no typing.
 >
-> Signing up for all 7 USD-priced services that still accept new users gets you roughly **$1525** on day one; Panda API separately credits 200 credit, DoCode separately credits 300 site-USD, ShawnAI separately credits ≈14000 pts, Matrix separately credits 2600 pts, Long's AI separately credits Free, Xinjiang Huancheng Security separately credits 30000 site-USD — each service prices in its own unit with no published USD conversion, so those are left out of this total.
+> Signing up for all 7 USD-priced services that still accept new users gets you roughly **$1530** on day one; Panda API separately credits 200 credit, DoCode separately credits 300 site-USD, ShawnAI separately credits ≈14000 pts, Matrix separately credits 2600 pts, Long's AI separately credits Free, Xinjiang Huancheng Security separately credits 30000 site-USD — each service prices in its own unit with no published USD conversion, so those are left out of this total.
 >
 > 🟡 3 services have not returned fresh API data for over 48 hours. Details show the last successful snapshot; online status reflects whether the signup page actually loads.
 >
@@ -110,12 +110,12 @@ powershell -ExecutionPolicy Bypass -File scripts/quickstart.ps1
 
 **Live data** (scraped from public APIs)
 
-- ⚠ No fresh API data for 333 hours; the info below is a snapshot from `2026-11-10 02:47 UTC`
+- ⚠ No fresh API data for 336 hours; the info below is a snapshot from `2026-11-10 02:47 UTC`
 - Panel name: **Agent Router**
 - Panel version: `init-20261016-861e4557`
 - Referral bonus: **$50**
 - Login methods: GitHub / LinuxDO
-- API latency: 307 ms
+- API latency: 2497 ms
 
 **Mirrors / alternate entry points**
 
@@ -125,9 +125,8 @@ powershell -ExecutionPolicy Bypass -File scripts/quickstart.ps1
 
 | Model | Ratio | Input / 1M tokens | Output / 1M tokens | Protocols |
 | :-- | :--: | :--: | :--: | :--: |
-| `gpt-5.6-sol` | 2 | $4 | $20 | openai |
-| `gpt-6-astra` | 4 | $8 | $40 | openai |
-| `gpt-6.1-sol` | 1 | $2 | $10 | openai |
+| `gpt-5.6-sol` | 4 | $8 | $40 | openai |
+| `gpt-6.1-sol` | 4 | $8 | $40 | openai |
 
 <sub>Ratio 1 ≈ $2 / 1M tokens; output price = ratio × completion ratio × $2. Always confirm against in-site pricing.</sub>
 
@@ -240,10 +239,10 @@ curl -s https://agentrouter.org/v1/chat/completions \
 
 **Live data** (scraped from public APIs)
 
-- ⚠ No fresh API data for 110 hours; the info below is a snapshot from `2026-11-19 09:27 UTC`
+- ⚠ No fresh API data for 113 hours; the info below is a snapshot from `2026-11-19 09:27 UTC`
 - Daily check-in: ✅
 - Login methods: Telegram
-- API latency: 570 ms
+- API latency: 2613 ms
 
 **Available models**
 
@@ -285,6 +284,123 @@ Console: <https://t.me/xingchi66bot?start=inv_8672125617>
 
 ---
 
+<a id="site-redapi"></a>
+<details><summary><b>🟢 Redapi</b></summary>
+
+> Sub2API AI gateway · $5 signup credit, native OpenAI and Anthropic routes, works with Claude Code and Codex
+
+> 📝 $5 signup credit; model list requires login; no check-in
+
+<a href="https://redapi.vip/register?aff=BJVQ43D9DSFT" target="_blank" rel="noopener"><img src="https://img.shields.io/badge/Sign%20up-Redapi-brightgreen?style=for-the-badge" alt="Sign up for Redapi"></a>
+
+**Why sign up**
+
+- $5 signup credit when you register through this page’s invite link (the site’s own promotion; confirm the balance in the console after signup)
+- Both native routes are live: anonymous GET /v1/models, POST /v1/chat/completions and POST /v1/messages return 401 rather than 404 (measured 2026-11-24), so Claude Code can use the Base URL and Codex CLI can use /v1
+- Sub2API panel: the public settings endpoint /api/v1/settings/public is readable without login, and the site reports email signup with verification on, Turnstile off and invitation codes off (this page’s aff parameter is applied automatically)
+- Email whitelist: QQ, 163, 126, Gmail, Outlook, iCloud, Proton and *.edu.cn addresses work; other domains are rejected at the signup page
+- The homepage lists OpenAI, Claude, Gemini, Grok, DeepSeek, GLM, Kimi and MiniMax, with per-token and per-call billing plus smart routing and channel monitoring
+- Payment and subscriptions are both enabled (payment_enabled / subscription_enabled = true), so this is a paid relay; the site publishes QQ group 894796942
+
+**How much you get**
+
+- Signup bonus: **$5**
+- First day total: **$5**
+
+**Live data** (scraped from public APIs)
+
+- API latency: 2075 ms
+
+> The model list needs a login: the public /api/v1/model-plaza returns 404 (model_plaza_enabled = false) and /v1/models returns 401 anonymously. The homepage claims eight model families — OpenAI, Claude, Gemini, Grok, DeepSeek, GLM, Kimi and MiniMax — so check the console for exact model names, ratios and group pricing.
+
+**Signup requirements**
+
+- Sign up through this page’s invite link (?aff=BJVQ43D9DSFT) so the $5 signup credit is settled
+- Email + password is the only route: GitHub / Google / LinuxDO / Telegram / WeChat / OIDC are all switched off in the panel
+- Registration needs an email verification code (email_verification = true) and only accepts whitelisted domains (QQ, 163, Gmail, Outlook, iCloud, Proton, *.edu.cn and similar)
+- Cloudflare Turnstile is off (turnstile_enabled = false), but the form has a promo-code field (promo_code_enabled = true) that can add extra credit
+
+**Client setup**
+
+<details open><summary><b>Claude Code</b> (Anthropic-compatible; Base URL without <code>/v1</code>)</summary>
+
+```bash
+# macOS / Linux
+export ANTHROPIC_BASE_URL=https://redapi.vip
+export ANTHROPIC_AUTH_TOKEN=YOUR_API_KEY
+export ANTHROPIC_MODEL=<sign in to see available model names>
+npm install -g @anthropic-ai/claude-code@latest && claude
+```
+
+```powershell
+# Windows PowerShell
+$env:ANTHROPIC_BASE_URL = "https://redapi.vip"
+$env:ANTHROPIC_AUTH_TOKEN = "YOUR_API_KEY"
+$env:ANTHROPIC_MODEL = "<sign in to see available model names>"
+claude
+```
+
+</details>
+
+<details><summary><b>Codex CLI</b> (OpenAI-compatible; goes into <code>~/.codex/config.toml</code>)</summary>
+
+```toml
+model = "<sign in to see available model names>"
+model_provider = "redapi"
+
+[model_providers.redapi]
+name = "Redapi"
+base_url = "https://redapi.vip/v1"
+env_key = "REDAPI_API_KEY"
+wire_api = "chat"
+```
+
+</details>
+
+<details><summary><b>OpenAI SDK / Cherry Studio / Cursor and other generic clients</b></summary>
+
+```python
+from openai import OpenAI
+
+client = OpenAI(api_key="YOUR_API_KEY", base_url="https://redapi.vip/v1")
+resp = client.chat.completions.create(model="<sign in to see available model names>", messages=[{"role": "user", "content": "ping"}])
+print(resp.choices[0].message.content)
+```
+
+Generic clients need two fields: **Base URL** = `https://redapi.vip/v1`, **API Key** = the key you created in the dashboard.
+
+</details>
+
+<details><summary><b>Connectivity self-test</b></summary>
+
+```bash
+curl -s https://redapi.vip/v1/chat/completions \
+  -H "Authorization: Bearer $KEY" -H "Content-Type: application/json" \
+  -d '{"model":"<sign in to see available model names>","messages":[{"role":"user","content":"reply OK only"}]}'
+```
+
+</details>
+
+**How to keep earning credits**
+
+- Invite friends: affiliate_enabled = true; the rebate rate is shown on the affiliate page after login
+- A promo code can be entered at signup; the site validates it and shows the bonus amount
+- Top up: payment_enabled = true with online payment, and subscription plans are also enabled (subscription_enabled = true)
+- No daily check-in is exposed in the public settings, so credit comes from the signup bonus, referrals or top-ups
+
+**⚠️ Read before use**
+
+- The $5 signup credit is the site’s promotion; the public API does not expose the amount, so confirm the balance in the console after registering
+- Model names and prices are not public: model_plaza_enabled = false and /api/v1/model-plaza returns 404, so the eight families on the homepage are not a complete availability list
+- This is a paid relay (payment and subscriptions are both on); $5 is a taster, not a long-term free supply
+- Upstreams are not disclosed — the homepage only mentions smart routing and channel monitoring — so do not assume Claude or GPT traffic is officially connected, and avoid putting heavy work on it
+- The site is new with no availability history; this page can only probe the 401 liveness signal on /v1/models, and both the signup page and API sit behind Cloudflare
+- The signup email whitelist rejects niche or self-hosted domains; retry with a common mailbox
+
+</details>
+
+---
+
 <a id="site-api520"></a>
 <details><summary><b>🟢 Panda API 💳</b></summary>
 
@@ -314,20 +430,15 @@ Console: <https://t.me/xingchi66bot?start=inv_8672125617>
 - Daily check-in: ❌
 - Open signups: ✅
 - Login methods: Email + password
-- API latency: 743 ms
+- API latency: 1338 ms
 
 **Available models**
 
 | Model | Ratio | Input / 1M tokens | Output / 1M tokens | Protocols |
 | :-- | :--: | :--: | :--: | :--: |
-| `gpt-5.5` | 0.0006125 | 0.001 credit | 0.01 credit | openai |
-| `gpt-5.6-sol` | 0.0005439 | 0.001 credit | 0.007 credit | openai |
-| `gpt-5.6-terra` | 0.0002156 | 0 credit | 0.003 credit | openai |
-| `gpt-6-astra` | 0.002001 | 0.004 credit | 0.02 credit | openai |
-| `gpt-6-sol` | 0.0003864 | 0.001 credit | 0.004 credit | openai |
-| `gpt-6.1-sol` | 0.0003864 | 0.001 credit | 0.004 credit | openai |
 | `按量模型是根据输入输出字数算额度的~要控制字数喔` | per call | **4 credit / call** | — | openai |
 | `测试` | 0.00209484 | 0.004 credit | 0.021 credit | openai |
+| `随时看 look.api520.pro  监控网站  ～所有模型都超稳` | 37.5 | 75 credit | 75 credit | openai |
 | `熊猫-10-deepseek-v4-pro` | per call | **10 credit / call** | — | openai |
 | `熊猫-10-glm-5.3` | per call | **10 credit / call** | — | openai |
 | `熊猫-13-glm-5.2` | per call | **13 credit / call** | — | openai |
@@ -337,6 +448,79 @@ Console: <https://t.me/xingchi66bot?start=inv_8672125617>
 | `熊猫-8-deepseek-v4.1-flash` | per call | **8 credit / call** | — | openai |
 | `熊猫-8-glm-5.1` | per call | **8 credit / call** | — | openai |
 | `熊猫-8-qwen3.8-max` | per call | **8 credit / call** | — | openai |
+| `熊猫-按量-顶级特供-官max-claude-fable-5-1` | 0.009 | 0.018 credit | 0.09 credit | anthropic / openai |
+| `熊猫-按量-顶级特供-官max-claude-fable-5-神话模型` | 0.009 | 0.018 credit | 0.09 credit | anthropic / openai |
+| `熊猫-按量-顶级特供-官max-claude-haiku-4.5` | 0.00075 | 0.002 credit | 0.008 credit | anthropic / openai |
+| `熊猫-按量-顶级特供-官max-claude-opus-4.6` | 0.00375 | 0.008 credit | 0.038 credit | anthropic / openai |
+| `熊猫-按量-顶级特供-官max-claude-opus-4.6-thinking` | 0.00375 | 0.008 credit | 0.038 credit | anthropic / openai |
+| `熊猫-按量-顶级特供-官max-claude-opus-4.7` | 0.00375 | 0.008 credit | 0.038 credit | anthropic / openai |
+| `熊猫-按量-顶级特供-官max-claude-opus-4.8` | 0.00375 | 0.008 credit | 0.038 credit | anthropic / openai |
+| `熊猫-按量-顶级特供-官max-claude-opus-5` | 0.00375 | 0.008 credit | 0.038 credit | anthropic / openai |
+| `熊猫-按量-顶级特供-官max-claude-opus-5.5` | 0.00336 | 0.007 credit | 0.034 credit | anthropic / openai |
+| `熊猫-按量-顶级特供-官max-claude-sonnet-4.6` | 0.00225 | 0.005 credit | 0.023 credit | anthropic / openai |
+| `熊猫-按量-满血非量化-deepseek-v4-pro` | 0.0004554 | 0.001 credit | 0.002 credit | openai |
+| `熊猫-按量-满血非量化-deepseek-v4.1-flash` | 0.000112 | 0 credit | 0.001 credit | openai |
+| `熊猫-按量-满血非量化-glm-5.2` | 0.0012144 | 0.002 credit | 0.009 credit | openai |
+| `熊猫-按量-满血非量化-kimi-k3` | 0.003036 | 0.006 credit | 0.03 credit | openai |
+| `熊猫-按量-特供顶级-官方正向满血-claude-fable-5-神话模型` | 0.009 | 0.018 credit | 0.09 credit | anthropic / openai |
+| `熊猫-按量-特供顶级-官方正向满血-claude-haiku-4.5` | 0.00075 | 0.002 credit | 0.008 credit | anthropic / openai |
+| `熊猫-按量-特供顶级-官方正向满血-claude-opus-4.6` | 0.00375 | 0.008 credit | 0.038 credit | anthropic / openai |
+| `熊猫-按量-特供顶级-官方正向满血-claude-opus-4.6-thinking` | 0.00375 | 0.008 credit | 0.038 credit | anthropic / openai |
+| `熊猫-按量-特供顶级-官方正向满血-claude-opus-4.7` | 0.00375 | 0.008 credit | 0.038 credit | anthropic / openai |
+| `熊猫-按量-特供顶级-官方正向满血-claude-opus-4.8` | 0.00375 | 0.008 credit | 0.038 credit | anthropic / openai |
+| `熊猫-按量-特供顶级-官方正向满血-claude-sonnet-4.6` | 0.00225 | 0.005 credit | 0.023 credit | anthropic / openai |
+| `熊猫-按量-特供顶级-官方正向满血-claude-sonnet-4.6-thinking` | 0.00225 | 0.005 credit | 0.023 credit | anthropic / openai |
+| `熊猫-按量-gpt-5.4` | 0.00036875 | 0.001 credit | 0.006 credit | openai |
+| `熊猫-按量-gpt-5.5` | 0.0006125 | 0.001 credit | 0.01 credit | openai |
+| `熊猫-按量-gpt-5.6-terra` | 0.000245 | 0 credit | 0.003 credit | openai |
+| `熊猫-按量-gpt-6-astra` | 0.002001 | 0.004 credit | 0.02 credit | openai |
+| `熊猫-按量-gpt-6-sol` | 0.0003864 | 0.001 credit | 0.004 credit | openai |
+| `熊猫-按量-gpt-6.1-sol` | 0.0003864 | 0.001 credit | 0.004 credit | openai |
+| `熊猫-按量-vertex官-gemini-2.5-pro` | 0.0010125 | 0.002 credit | 0.016 credit | openai |
+| `熊猫-按量-vertex官-gemini-3.1-pro-preview` | 0.00162 | 0.003 credit | 0.013 credit | openai |
+| `熊猫-按量-vertex官-gemini-4-argon` | 0.00162 | 0.003 credit | 0.016 credit | openai |
+| `熊猫-顶级-21-vertex逆-gemini-2.5-pro` | per call | **21 credit / call** | — | openai |
+| `熊猫-顶级-21-vertex逆-gemini-3.1-pro-preview` | per call | **21 credit / call** | — | openai |
+| `熊猫-顶级-X-25-不截断-claude-sonnet-4.6` | per call | **25 credit / call** | — | openai |
+| `熊猫-顶级-X-25-不截断-claude-sonnet-4.6-thinking` | per call | **25 credit / call** | — | openai |
+| `熊猫-官逆-12-gemini-4-hydrogen` | per call | **12 credit / call** | — | openai |
+| `熊猫-官逆-14-gemini-4-carbon` | per call | **14 credit / call** | — | openai |
+| `熊猫-官逆-14-gemini-4-pro-argon` | per call | **14 credit / call** | — | openai |
+| `熊猫-官逆-7-gemini-3.1-pro` | per call | **7 credit / call** | — | openai |
+| `熊猫-官逆-7-gemini-3.1-pro-thinking` | per call | **7 credit / call** | — | openai |
+| `熊猫-官逆-7-gemini-3.6-flash` | per call | **7 credit / call** | — | openai |
+| `熊猫-官逆-7-gemini-3.6-flash-thinking` | per call | **7 credit / call** | — | openai |
+| `熊猫-官逆-7-gemini-3.7-flash` | per call | **7 credit / call** | — | openai |
+| `熊猫-官逆-7-gemini-3.7-flash-thinking` | per call | **7 credit / call** | — | openai |
+| `熊猫-官逆-7-gemini-3.8-flash` | per call | **7 credit / call** | — | openai |
+| `熊猫-官key-按量-SSS-gemini-4-carbon` | 0.00168 | 0.003 credit | 0.017 credit | openai |
+| `熊猫-官key-按量-SSS-gemini-4-hydrogen` | 0.00168 | 0.003 credit | 0.017 credit | openai |
+| `熊猫-官key质量-88-claude-opus-5.5` | per call | **88 credit / call** | — | openai |
+| `熊猫-逆向-66-claude-opus-4.6` | per call | **66 credit / call** | — | openai |
+| `熊猫-特供-7-claude-haiku-4.5-20251001-满血速度快` | per call | **7 credit / call** | — | openai |
+| `熊猫-特供-按量-满血逆-claude-opus-4-6` | 0.001035 | 0.002 credit | 0.01 credit | anthropic / openai |
+| `熊猫-特供-按量-满血逆-claude-opus-4-7` | 0.001035 | 0.002 credit | 0.01 credit | anthropic / openai |
+| `熊猫-特供-按量-满血逆-claude-opus-4-8` | 0.001035 | 0.002 credit | 0.01 credit | anthropic / openai |
+| `熊猫-特供-按量-满血逆-claude-opus-5.5` | 0.0007728 | 0.002 credit | 0.008 credit | anthropic / openai |
+| `熊猫-特供-按量-满血逆-claude-sonnet-4-6` | 0.000621 | 0.001 credit | 0.006 credit | anthropic / openai |
+| `熊猫-特供-按量-满血逆-claude-sonnet-4.6` | 0.000531 | 0.001 credit | 0.005 credit | anthropic / openai |
+| `熊猫-特供-官key直连-200额度-claude-opus-4.8` | per call | **200 credit / call** | — | openai |
+| `熊猫-特供-官key直连-280额度-claude-opus-4.6` | per call | **280 credit / call** | — | openai |
+| `熊猫-特供-官key直连-280额度-claude-opus-4.6-thinking` | per call | **280 credit / call** | — | openai |
+| `熊猫-特供-官key直连-280额度-claude-opus-4.7` | per call | **280 credit / call** | — | openai |
+| `熊猫-特供-官key直连-280额度-claude-opus-4.7-thinking` | per call | **280 credit / call** | — | openai |
+| `熊猫-特供-官key直连-280额度-claude-opus-4.8` | per call | **280 credit / call** | — | openai |
+| `熊猫-特供-官key直连-280额度-claude-opus-4.8-thinking` | per call | **280 credit / call** | — | openai |
+| `熊猫-特供-A-55-claude-opus-4.5-thinking` | per call | **55 credit / call** | — | openai |
+| `熊猫-特供-A-55-claude-opus-4.6` | per call | **55 credit / call** | — | openai |
+| `熊猫-特供-A-55-claude-opus-4.6-thinking` | per call | **55 credit / call** | — | openai |
+| `熊猫-特供-X-10-gpt-5.5` | per call | **10 credit / call** | — | openai |
+| `熊猫-特供-X-19-gpt-5.6-terra` | per call | **19 credit / call** | — | openai |
+| `熊猫-特供-X-22-gpt-5.6-sol` | per call | **22 credit / call** | — | openai |
+| `熊猫-限时官key-88-claude-opus-4.6` | per call | **88 credit / call** | — | openai |
+| `熊猫-限时官key-88-claude-opus-4.7` | per call | **88 credit / call** | — | openai |
+| `熊猫-限时官key-88-claude-opus-4.8` | per call | **88 credit / call** | — | openai |
+| `熊猫-限时官key质量-88-claude-opus-5` | per call | **88 credit / call** | — | openai |
 | `熊猫-A-10-gemini-3.1-pro-preview-1000k` | per call | **10 credit / call** | — | openai |
 | `熊猫-A-10-grok-4.5` | per call | **10 credit / call** | — | openai |
 | `熊猫-A-10-grok-4.6` | per call | **10 credit / call** | — | openai |
@@ -360,18 +544,18 @@ Console: <https://t.me/xingchi66bot?start=inv_8672125617>
 | `熊猫-A-39-gemini-4-argon-high-反重力ultra` | per call | **39 credit / call** | — | openai |
 | `熊猫-A-5-gemini-3.6-flash-高质量-特价` | per call | **5 credit / call** | — | openai |
 | `熊猫-A-8-kimi-k2.6` | per call | **8 credit / call** | — | openai |
-| `熊猫-A-9-gemini-3.8-flash-search` | per call | **9 credit / call** | — | openai |
 | `熊猫-A-9-gemini-3.8-flash-反重力-tob` | per call | **9 credit / call** | — | openai |
+| `熊猫-A-9-gemini-3.8-flash-search` | per call | **9 credit / call** | — | openai |
 | `熊猫-aiStudio官-X-20-gemini-3.1-pro-preview` | per call | **20 credit / call** | — | openai |
-| `熊猫-aiStudio官-X-20-gemini-3.1-pro-preview-thinking` | per call | **20 credit / call** | — | openai |
 | `熊猫-aiStudio官-X-20-gemini-3.1-pro-preview-联网` | per call | **20 credit / call** | — | openai |
+| `熊猫-aiStudio官-X-20-gemini-3.1-pro-preview-thinking` | per call | **20 credit / call** | — | openai |
 | `熊猫-B-10-gemini-3.7-flash` | per call | **10 credit / call** | — | openai |
 | `熊猫-gemini-3.8-flash-反重力-稳定名` | per call | **9 credit / call** | — | openai |
 | `熊猫-K-17-kiro-claude-sonnet-5` | per call | **17 credit / call** | — | openai |
 | `熊猫-W-39-限时官key-claude-sonnet-5` | per call | **39 credit / call** | — | openai |
-| `熊猫-X-10-AS正向-gemini-3.6-flash` | per call | **10 credit / call** | — | openai |
 | `熊猫-X-10-官逆-gemini-3.1-pro` | per call | **10 credit / call** | — | openai |
 | `熊猫-X-10-官逆-gemini-3.1-pro-联网` | per call | **10 credit / call** | — | openai |
+| `熊猫-X-10-AS正向-gemini-3.6-flash` | per call | **10 credit / call** | — | openai |
 | `熊猫-x-11-gemini-3.1-pro-anti` | per call | **11 credit / call** | — | openai |
 | `熊猫-x-17-ais逆pg-gemini-4-hydrogen` | per call | **17 credit / call** | — | openai |
 | `熊猫-X-19-企业vertex逆-gemini-4-neon` | per call | **19 credit / call** | — | openai |
@@ -385,83 +569,8 @@ Console: <https://t.me/xingchi66bot?start=inv_8672125617>
 | `熊猫-X-25-企业vertex逆-gemini-4-argon` | per call | **25 credit / call** | — | openai |
 | `熊猫-X-25-企业vertex逆-gemini-4-carbon` | per call | **25 credit / call** | — | openai |
 | `熊猫-x-25-最强生图-gpt-image-2.6` | per call | **25 credit / call** | — | openai |
-| `熊猫-X-29-claude-opus-5` | per call | **29 credit / call** | — | openai |
 | `熊猫-x-29-最强生图-gpt-image-2.5` | per call | **29 credit / call** | — | openai |
-| `熊猫-官key-按量-SSS-gemini-4-carbon` | 0.00168 | 0.003 credit | 0.017 credit | openai |
-| `熊猫-官key-按量-SSS-gemini-4-hydrogen` | 0.00168 | 0.003 credit | 0.017 credit | openai |
-| `熊猫-官key质量-88-claude-opus-5.5` | per call | **88 credit / call** | — | openai |
-| `熊猫-官逆-12-gemini-4-hydrogen` | per call | **12 credit / call** | — | openai |
-| `熊猫-官逆-14-gemini-4-carbon` | per call | **14 credit / call** | — | openai |
-| `熊猫-官逆-14-gemini-4-pro-argon` | per call | **14 credit / call** | — | openai |
-| `熊猫-官逆-7-gemini-3.1-pro` | per call | **7 credit / call** | — | openai |
-| `熊猫-官逆-7-gemini-3.1-pro-thinking` | per call | **7 credit / call** | — | openai |
-| `熊猫-官逆-7-gemini-3.6-flash` | per call | **7 credit / call** | — | openai |
-| `熊猫-官逆-7-gemini-3.6-flash-thinking` | per call | **7 credit / call** | — | openai |
-| `熊猫-官逆-7-gemini-3.7-flash` | per call | **7 credit / call** | — | openai |
-| `熊猫-官逆-7-gemini-3.7-flash-thinking` | per call | **7 credit / call** | — | openai |
-| `熊猫-官逆-7-gemini-3.8-flash` | per call | **7 credit / call** | — | openai |
-| `熊猫-按量-gpt-5.4` | 0.00036875 | 0.001 credit | 0.006 credit | openai |
-| `熊猫-按量-gpt-5.5` | 0.0006125 | 0.001 credit | 0.01 credit | openai |
-| `熊猫-按量-gpt-5.6-terra` | 0.000245 | 0 credit | 0.003 credit | openai |
-| `熊猫-按量-gpt-6-astra` | 0.002001 | 0.004 credit | 0.02 credit | openai |
-| `熊猫-按量-gpt-6-sol` | 0.0003864 | 0.001 credit | 0.004 credit | openai |
-| `熊猫-按量-gpt-6.1-sol` | 0.0003864 | 0.001 credit | 0.004 credit | openai |
-| `熊猫-按量-vertex官-gemini-2.5-pro` | 0.0010125 | 0.002 credit | 0.016 credit | openai |
-| `熊猫-按量-vertex官-gemini-3.1-pro-preview` | 0.00162 | 0.003 credit | 0.013 credit | openai |
-| `熊猫-按量-vertex官-gemini-4-argon` | 0.00162 | 0.003 credit | 0.016 credit | openai |
-| `熊猫-按量-满血非量化-deepseek-v4-pro` | 0.0004554 | 0.001 credit | 0.002 credit | openai |
-| `熊猫-按量-满血非量化-deepseek-v4.1-flash` | 0.000112 | 0 credit | 0.001 credit | openai |
-| `熊猫-按量-满血非量化-glm-5.2` | 0.0012144 | 0.002 credit | 0.009 credit | openai |
-| `熊猫-按量-满血非量化-kimi-k3` | 0.003036 | 0.006 credit | 0.03 credit | openai |
-| `熊猫-按量-特供顶级-官方正向满血-claude-fable-5-神话模型` | 0.009 | 0.018 credit | 0.09 credit | anthropic / openai |
-| `熊猫-按量-特供顶级-官方正向满血-claude-haiku-4.5` | 0.00075 | 0.002 credit | 0.008 credit | anthropic / openai |
-| `熊猫-按量-特供顶级-官方正向满血-claude-opus-4.6` | 0.00375 | 0.008 credit | 0.038 credit | anthropic / openai |
-| `熊猫-按量-特供顶级-官方正向满血-claude-opus-4.6-thinking` | 0.00375 | 0.008 credit | 0.038 credit | anthropic / openai |
-| `熊猫-按量-特供顶级-官方正向满血-claude-opus-4.7` | 0.00375 | 0.008 credit | 0.038 credit | anthropic / openai |
-| `熊猫-按量-特供顶级-官方正向满血-claude-opus-4.8` | 0.00375 | 0.008 credit | 0.038 credit | anthropic / openai |
-| `熊猫-按量-特供顶级-官方正向满血-claude-sonnet-4.6` | 0.00225 | 0.005 credit | 0.023 credit | anthropic / openai |
-| `熊猫-按量-特供顶级-官方正向满血-claude-sonnet-4.6-thinking` | 0.00225 | 0.005 credit | 0.023 credit | anthropic / openai |
-| `熊猫-按量-顶级特供-官max-claude-fable-5-1` | 0.009 | 0.018 credit | 0.09 credit | anthropic / openai |
-| `熊猫-按量-顶级特供-官max-claude-fable-5-神话模型` | 0.009 | 0.018 credit | 0.09 credit | anthropic / openai |
-| `熊猫-按量-顶级特供-官max-claude-haiku-4.5` | 0.00075 | 0.002 credit | 0.008 credit | anthropic / openai |
-| `熊猫-按量-顶级特供-官max-claude-opus-4.6` | 0.00375 | 0.008 credit | 0.038 credit | anthropic / openai |
-| `熊猫-按量-顶级特供-官max-claude-opus-4.6-thinking` | 0.00375 | 0.008 credit | 0.038 credit | anthropic / openai |
-| `熊猫-按量-顶级特供-官max-claude-opus-4.7` | 0.00375 | 0.008 credit | 0.038 credit | anthropic / openai |
-| `熊猫-按量-顶级特供-官max-claude-opus-4.8` | 0.00375 | 0.008 credit | 0.038 credit | anthropic / openai |
-| `熊猫-按量-顶级特供-官max-claude-opus-5` | 0.00375 | 0.008 credit | 0.038 credit | anthropic / openai |
-| `熊猫-按量-顶级特供-官max-claude-opus-5.5` | 0.00336 | 0.007 credit | 0.034 credit | anthropic / openai |
-| `熊猫-按量-顶级特供-官max-claude-sonnet-4.6` | 0.00225 | 0.005 credit | 0.023 credit | anthropic / openai |
-| `熊猫-特供-7-claude-haiku-4.5-20251001-满血速度快` | per call | **7 credit / call** | — | openai |
-| `熊猫-特供-A-55-claude-opus-4.5-thinking` | per call | **55 credit / call** | — | openai |
-| `熊猫-特供-A-55-claude-opus-4.6` | per call | **55 credit / call** | — | openai |
-| `熊猫-特供-A-55-claude-opus-4.6-thinking` | per call | **55 credit / call** | — | openai |
-| `熊猫-特供-X-10-gpt-5.5` | per call | **10 credit / call** | — | openai |
-| `熊猫-特供-X-19-gpt-5.6-terra` | per call | **19 credit / call** | — | openai |
-| `熊猫-特供-X-22-gpt-5.6-sol` | per call | **22 credit / call** | — | openai |
-| `熊猫-特供-官key直连-200额度-claude-opus-4.8` | per call | **200 credit / call** | — | openai |
-| `熊猫-特供-官key直连-280额度-claude-opus-4.6` | per call | **280 credit / call** | — | openai |
-| `熊猫-特供-官key直连-280额度-claude-opus-4.6-thinking` | per call | **280 credit / call** | — | openai |
-| `熊猫-特供-官key直连-280额度-claude-opus-4.7` | per call | **280 credit / call** | — | openai |
-| `熊猫-特供-官key直连-280额度-claude-opus-4.7-thinking` | per call | **280 credit / call** | — | openai |
-| `熊猫-特供-官key直连-280额度-claude-opus-4.8` | per call | **280 credit / call** | — | openai |
-| `熊猫-特供-官key直连-280额度-claude-opus-4.8-thinking` | per call | **280 credit / call** | — | openai |
-| `熊猫-特供-按量-满血逆-claude-opus-4-6` | 0.001035 | 0.002 credit | 0.01 credit | anthropic / openai |
-| `熊猫-特供-按量-满血逆-claude-opus-4-7` | 0.001035 | 0.002 credit | 0.01 credit | anthropic / openai |
-| `熊猫-特供-按量-满血逆-claude-opus-4-8` | 0.001035 | 0.002 credit | 0.01 credit | anthropic / openai |
-| `熊猫-特供-按量-满血逆-claude-opus-5.5` | 0.0007728 | 0.002 credit | 0.008 credit | anthropic / openai |
-| `熊猫-特供-按量-满血逆-claude-sonnet-4-6` | 0.000621 | 0.001 credit | 0.006 credit | anthropic / openai |
-| `熊猫-特供-按量-满血逆-claude-sonnet-4.6` | 0.000531 | 0.001 credit | 0.005 credit | anthropic / openai |
-| `熊猫-逆向-66-claude-opus-4.6` | per call | **66 credit / call** | — | openai |
-| `熊猫-限时官key-88-claude-opus-4.6` | per call | **88 credit / call** | — | openai |
-| `熊猫-限时官key-88-claude-opus-4.7` | per call | **88 credit / call** | — | openai |
-| `熊猫-限时官key-88-claude-opus-4.8` | per call | **88 credit / call** | — | openai |
-| `熊猫-限时官key质量-88-claude-opus-5` | per call | **88 credit / call** | — | openai |
-| `熊猫-顶级-21-vertex逆-gemini-2.5-pro` | per call | **21 credit / call** | — | openai |
-| `熊猫-顶级-21-vertex逆-gemini-3.1-pro-preview` | per call | **21 credit / call** | — | openai |
-| `熊猫-顶级-X-25-不截断-claude-sonnet-4.6` | per call | **25 credit / call** | — | openai |
-| `熊猫-顶级-X-25-不截断-claude-sonnet-4.6-thinking` | per call | **25 credit / call** | — | openai |
-| `熊猫特供-anti-99-claude-opus-4.6` | per call | **99 credit / call** | — | openai |
-| `熊猫特供-anti-99-claude-opus-4.6-thinking` | per call | **99 credit / call** | — | openai |
+| `熊猫-X-29-claude-opus-5` | per call | **29 credit / call** | — | openai |
 | `熊猫特供-按量-SSS-gemini-3.1-pro-preview` | 0.00075 | 0.002 credit | 0.009 credit | openai |
 | `熊猫特供-按量-SSS-gemini-3.1-pro-preview-thinking` | 0.00075 | 0.002 credit | 0.009 credit | openai |
 | `熊猫特供-按量-SSS-gemini-3.6-flash` | 0.0000711 | 0 credit | 0.001 credit | openai |
@@ -472,8 +581,15 @@ Console: <https://t.me/xingchi66bot?start=inv_8672125617>
 | `熊猫特供-超纯满血-99额度-claude-opus-4.6-thinking` | per call | **99 credit / call** | — | openai |
 | `熊猫特供-超纯满血-99额度-claude-opus-4.7` | per call | **99 credit / call** | — | openai |
 | `熊猫特供-超纯满血-99额度-claude-opus-4.7-thinking` | per call | **99 credit / call** | — | openai |
+| `熊猫特供-anti-99-claude-opus-4.6` | per call | **99 credit / call** | — | openai |
+| `熊猫特供-anti-99-claude-opus-4.6-thinking` | per call | **99 credit / call** | — | openai |
 | `熊猫特供S-按量-gemini-3-flash-preview` | 0.0000675 | 0 credit | 0.001 credit | openai |
-| `随时看 look.api520.pro  监控网站  ～所有模型都超稳` | 37.5 | 75 credit | 75 credit | openai |
+| `gpt-5.5` | 0.0006125 | 0.001 credit | 0.01 credit | openai |
+| `gpt-5.6-sol` | 0.0005439 | 0.001 credit | 0.007 credit | openai |
+| `gpt-5.6-terra` | 0.0002156 | 0 credit | 0.003 credit | openai |
+| `gpt-6-astra` | 0.002001 | 0.004 credit | 0.02 credit | openai |
+| `gpt-6-sol` | 0.0003864 | 0.001 credit | 0.004 credit | openai |
+| `gpt-6.1-sol` | 0.0003864 | 0.001 credit | 0.004 credit | openai |
 
 <sub>Rows marked "per call" are billed per request regardless of token usage; the rest are converted from ratios and settled in the site's own unit (credit), on top of the group ratio. Always confirm against in-site pricing.</sub>
 
@@ -595,7 +711,7 @@ curl -s https://api520.pro/v1/chat/completions \
 - Daily check-in: ✅
 - Open signups: ✅
 - Login methods: Email + password
-- API latency: 1241 ms
+- API latency: 1819 ms
 
 **Mirrors / alternate entry points**
 
@@ -723,7 +839,7 @@ curl -s https://ai.dahanxingbang.dpdns.org/v1/chat/completions \
 - Daily check-in: ❌
 - Open signups: ✅
 - Login methods: Email + password
-- API latency: 2225 ms
+- API latency: 1866 ms
 
 **Mirrors / alternate entry points**
 
@@ -841,7 +957,7 @@ curl -s https://docode.cc/v1/chat/completions \
 - Daily check-in: ✅
 - Open signups: ✅
 - Login methods: Email + password
-- API latency: 1244 ms
+- API latency: 1358 ms
 
 **Available models**
 
@@ -1104,7 +1220,7 @@ curl -s https://us-3.nianhuaapi.com/v1/chat/completions \
 
 **Live data** (scraped from public APIs)
 
-- API latency: 1559 ms
+- API latency: 1059 ms
 
 > On 2026-09-20 the public pricing page returned 191 models including stepfun, deepseek-v4.1-flash, gpt-5.5, gemini-2.5-flash, claude-sonnet-4-6 and kimi-k2.5. Note that the response mixes many free and paid entries; availability and ratios defer to the console.
 
@@ -1218,7 +1334,7 @@ curl -s https://free.supxh.xin/v1/chat/completions \
 - Daily check-in: ✅
 - Open signups: ✅
 - Login methods: Email + password
-- API latency: 1413 ms
+- API latency: 1260 ms
 
 > The model list and prices are only visible in the console after login (/api/pricing requires login anonymously), so this page does not list a model table.
 
@@ -1284,117 +1400,6 @@ curl -s https://api456.me/v1/chat/completions \
 
 ---
 
-<a id="site-justwoker"></a>
-<details><summary><b>🟢 JustDoWork</b></summary>
-
-> New API relay · GitHub-only login, focused on gpt-5.6 models, check-in + tasks for ongoing credit, native Anthropic protocol for Claude Code / Codex
-
-<a href="https://api.justwoker.icu/register?aff=OIWh" target="_blank" rel="noopener"><img src="https://img.shields.io/badge/Sign%20up-JustDoWork-brightgreen?style=for-the-badge" alt="Sign up for JustDoWork"></a>
-
-**Why sign up**
-
-- GitHub authorization only — no password to remember and no email verification code (panel email_verification = false), a clean signup flow
-- Daily check-in and site tasks are both on (checkin_enabled / enable_task are true) — a click in the dashboard keeps the credit coming
-- Focused on gpt-5.6 models (gpt-5.6-luna / sol / terra); function calling is verified, so Claude Code / Codex tool calls work
-- The native Anthropic protocol is on the shelf: Claude Code connects to /v1/messages with the Base URL, the OpenAI-compatible route uses /v1, and Codex CLI works too
-
-**Live data** (scraped from public APIs)
-
-- Panel name: **JustDoWork**
-- Panel version: `v1.0.0-rc.23`
-- Daily check-in: ✅
-- Open signups: ✅ (The service turned off email/password signup, so you have to create the account with GitHub (a common anti-abuse measure).)
-- Login methods: GitHub / Email + password
-- GitHub account must be at least **365 days** old
-- API latency: 19826 ms
-
-> The pricing page requires login (/api/pricing returns 401 anonymously; panel pricing.requireAuth = true), so this page does not list a model table. Testing shows the main lineup is the gpt-5.6 family (gpt-5.6-luna / sol / terra), and every request carries roughly 2000 tokens of a fixed hidden prompt. Confirm the full list and ratios on the console's "Pricing" page.
-
-**Signup requirements**
-
-- Sign up through this page's invite link (?aff=OIWh) so the invite credit is granted
-- GitHub authorization is the only login: email / LinuxDO / Telegram / WeChat / OIDC are all disabled in the panel, and there is no email-password signup
-- Registration runs Cloudflare Turnstile; both the signup page and the API sit behind Cloudflare, so datacenter IPs may be 403'd (home broadband is fine)
-
-**Client setup**
-
-<details open><summary><b>Claude Code</b> (Anthropic-compatible; Base URL without <code>/v1</code>)</summary>
-
-```bash
-# macOS / Linux
-export ANTHROPIC_BASE_URL=https://api.justwoker.icu
-export ANTHROPIC_AUTH_TOKEN=YOUR_API_KEY
-export ANTHROPIC_MODEL=<sign in to see available model names>
-npm install -g @anthropic-ai/claude-code@latest && claude
-```
-
-```powershell
-# Windows PowerShell
-$env:ANTHROPIC_BASE_URL = "https://api.justwoker.icu"
-$env:ANTHROPIC_AUTH_TOKEN = "YOUR_API_KEY"
-$env:ANTHROPIC_MODEL = "<sign in to see available model names>"
-claude
-```
-
-</details>
-
-<details><summary><b>Codex CLI</b> (OpenAI-compatible; goes into <code>~/.codex/config.toml</code>)</summary>
-
-```toml
-model = "<sign in to see available model names>"
-model_provider = "justwoker"
-
-[model_providers.justwoker]
-name = "JustDoWork"
-base_url = "https://api.justwoker.icu/v1"
-env_key = "JUSTWOKER_API_KEY"
-wire_api = "chat"
-```
-
-</details>
-
-<details><summary><b>OpenAI SDK / Cherry Studio / Cursor and other generic clients</b></summary>
-
-```python
-from openai import OpenAI
-
-client = OpenAI(api_key="YOUR_API_KEY", base_url="https://api.justwoker.icu/v1")
-resp = client.chat.completions.create(model="<sign in to see available model names>", messages=[{"role": "user", "content": "ping"}])
-print(resp.choices[0].message.content)
-```
-
-Generic clients need two fields: **Base URL** = `https://api.justwoker.icu/v1`, **API Key** = the key you created in the dashboard.
-
-</details>
-
-<details><summary><b>Connectivity self-test</b></summary>
-
-```bash
-curl -s https://api.justwoker.icu/v1/chat/completions \
-  -H "Authorization: Bearer $KEY" -H "Content-Type: application/json" \
-  -d '{"model":"<sign in to see available model names>","messages":[{"role":"user","content":"reply OK only"}]}'
-```
-
-</details>
-
-**How to keep earning credits**
-
-- Daily check-in grants credit (enabled in the panel) — just click it in the dashboard
-- The site task center grants credit too (enable_task is on)
-- Invite others — the inviter earns credit
-
-**⚠️ Read before use**
-
-- The credit figures are not exposed by the public API (quota_for_new_user / quota_for_invitee are both empty in /api/status); check the dashboard after signing up
-- Panel price = 7.3 (¥7.3 ≈ 1 site-dollar), so credit is shown in CNY terms and this page does not convert to USD
-- The site sits behind Cloudflare, so anonymous probes of /chat/completions and similar endpoints get a 403 from the WAF — normal protection, not a broken API
-- Upstream is a third-party relay; the gpt-5.6 family can time out or drop the stream under large context or high concurrency, so do not treat it as a stable production channel
-- Model availability and prices move with upstream; defer to the console's live page
-
-</details>
-
----
-
 <a id="site-matrix"></a>
 <details><summary><b>🟢 Matrix</b></summary>
 
@@ -1416,7 +1421,7 @@ curl -s https://api.justwoker.icu/v1/chat/completions \
 
 **Live data** (scraped from public APIs)
 
-- API latency: 2262 ms
+- API latency: 255 ms
 
 > The model list and prices are visible in the console's "Model list" after login (priced per million tokens, filterable by vendor / context window). The site has no public model or pricing API, so this page makes no claims.
 
@@ -1483,7 +1488,7 @@ Console: <https://matrix.mzsjai.com/app/apikey>
 - Daily check-in: ✅
 - Open signups: ✅
 - Login methods: GitHub / Telegram / Email + password
-- API latency: 1915 ms
+- API latency: 1157 ms
 
 **Mirrors / alternate entry points**
 
@@ -1581,12 +1586,12 @@ curl -s https://seekai.cc/v1/chat/completions \
 
 **Live data** (scraped from public APIs)
 
-- ⚠ No fresh API data for 185 hours; the info below is a snapshot from `2026-11-16 06:28 UTC`
+- ⚠ No fresh API data for 188 hours; the info below is a snapshot from `2026-11-16 06:28 UTC`
 - Panel version: `v0.0.0`
 - Daily check-in: ❌
 - Open signups: ✅ (The service turned off email/password signup, so you have to create the account with GitHub (a common anti-abuse measure).)
 - Login methods: GitHub
-- API latency: 2045 ms
+- API latency: 1484 ms
 
 > The site's model pricing API is not public (/api/pricing returns 401 anonymously; you would need to log into the admin page), and the free-tier group's model sources are published at https://aaawinn.xyz/public-pool. Announcements note that the free-tier group's GPT models only support the Anthropic protocol — the OpenAI protocol has compatibility issues.
 
@@ -1709,7 +1714,7 @@ curl -s https://aaawinn.xyz/v1/chat/completions \
 - Daily check-in: ✅
 - Open signups: ✅
 - Login methods: Passkey / Email + password
-- API latency: 2772 ms
+- API latency: 331 ms
 
 > The model pricing page requires login (/api/pricing returns 401 anonymously), but the names in the announcements can be copied directly: Qwen3.8-Flash-Next (zero per call), the DeepSeek-V4.1-Flash family (about 2 CNY per call in paid groups; the vision-exp version is open to free users), longcat-2.0 (1 CNY per call), glm-5.3-flash, qwen3.8-27b, the step family, spark-x2.5 and Qwen3.6-35B-A3B. The site also open-sourced SparkMuse-4B and Qing-Sec-20B, both searchable on ModelScope (hcnote/SparkMuse-4B).
 
@@ -1811,13 +1816,14 @@ curl -s https://api.hcnsec.cn/v1/chat/completions \
 
 These services are confirmed down or withdrawn. The names and reasons stay on record: they are no longer recommended, no credits are advertised and the probes no longer run. History is in the changelog; a recovered service can be relisted.
 
+- **JustDoWork** (archived `2026-11-24`) — 站方已下架，注册页与 API 均无响应（2026-11-24 复核超时），按维护者确认移入历史区；站点恢复后可重新收录
 - **启源星** (archived `2026-11-02`) — 2026-11-01 22:02 UTC 起注册页与公开接口连续探测不到（首页、注册页、状态接口都没响应），确认停运，移入历史区；站点恢复后可重新收录
 
 ---
 
 ## 🔔 Credit changes get announced here
 
-CI probes every service every 6 hours and diffs each field against the previous snapshot; 130 samples covering about 62.1 days so far. Credit adjustments, outages and recoveries, models added or removed, and price changes are all recorded automatically:
+CI probes every service every 6 hours and diffs each field against the previous snapshot; 131 samples covering about 62.2 days so far. Credit adjustments, outages and recoveries, models added or removed, and price changes are all recorded automatically:
 
 - Click **Watch → Custom → Releases** at the top of the repo and GitHub emails you when something important changes
 

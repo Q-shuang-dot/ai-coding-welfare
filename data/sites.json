@@ -272,6 +272,129 @@
       "reviewedAt": "2026-11-19"
     },
     {
+      "id": "redapi",
+      "name": "Redapi",
+      "subtitle": "Sub2API 统一 AI 网关 · 注册送 $5，OpenAI / Anthropic 双协议，Claude Code、Codex 可直接接入",
+      "recommended": false,
+      "credits": {
+        "signup": 5,
+        "invite": null,
+        "dailyCheckin": null,
+        "approx": false
+      },
+      "signupUrl": "https://redapi.vip/register?aff=BJVQ43D9DSFT",
+      "homeUrl": "https://redapi.vip",
+      "docsUrl": null,
+      "statusApi": "https://redapi.vip/v1/models",
+      "panel": "relay",
+      "mirrors": [],
+      "tags": [
+        "Sub2API",
+        "中转站",
+        "付费中转",
+        "免费额度",
+        "Claude Code",
+        "Codex",
+        "Anthropic 兼容",
+        "OpenAI 兼容"
+      ],
+      "highlights": [
+        "注册送 $5：走本页邀请链接注册，新用户到账 $5 赠金（站方活动口径，注册后在控制台核对）",
+        "OpenAI 与 Anthropic 两条原生路由都在架：GET /v1/models、POST /v1/chat/completions、POST /v1/messages 匿名请求都回 401 而不是 404（2026-11-24 实测），Claude Code 填 Base URL、Codex CLI 走 /v1",
+        "Sub2API 面板：公开设置接口 /api/v1/settings/public 免登录可读，站方自报邮箱注册、邮箱验证开启、Turnstile 关闭、邀请码开关关闭（本页 aff 参数自动带上）",
+        "邮箱白名单：QQ / 163 / 126 / Gmail / Outlook / iCloud / Proton / *.edu.cn 等常见邮箱可注册，其它域名会被注册页直接拦下",
+        "站方首页标注已接入 OpenAI、Claude、Gemini、Grok、DeepSeek、GLM、Kimi、MiniMax 八个模型家族，按 Token 与按次两种方式计费，带智能路由和渠道监控",
+        "面板支付与订阅开关都开着（payment_enabled / subscription_enabled = true），属于付费中转站；站方公示 QQ 群 894796942"
+      ],
+      "endpoints": {
+        "anthropic": "https://redapi.vip",
+        "openai": "https://redapi.vip/v1"
+      },
+      "modelsNote": "模型清单要登录后才拿得到：公开的 /api/v1/model-plaza 返回 404（面板 model_plaza_enabled = false），/v1/models 匿名请求只回 401。首页自报接入 OpenAI、Claude、Gemini、Grok、DeepSeek、GLM、Kimi、MiniMax 八个家族，具体模型名、倍率与分组价以登录后的控制台为准。",
+      "register": {
+        "methods": [
+          "账号密码"
+        ],
+        "requirements": [
+          "务必从本页邀请链接进入注册（带 ?aff=BJVQ43D9DSFT），$5 注册赠金才会结算",
+          "邮箱 + 密码注册：面板里 GitHub / Google / LinuxDO / Telegram / 微信 / OIDC 登录开关都是关的，只有邮箱一条路",
+          "注册要邮箱验证码（email_verification = true），且只收白名单域名（QQ、163、Gmail、Outlook、iCloud、Proton、*.edu.cn 等）",
+          "没有 Cloudflare Turnstile（turnstile_enabled = false），但注册表单有推广码一栏（promo_code_enabled = true），有码可以再叠一层赠金"
+        ]
+      },
+      "earnMore": [
+        "邀请好友：面板 affiliate_enabled = true，具体返利比例登录后在「推广 / 邀请」页看",
+        "推广码（promo code）注册时可填，站方接口支持校验并回显赠送金额",
+        "充值：payment_enabled = true，支持在线支付；订阅套餐也开着（subscription_enabled = true）",
+        "没有每日签到：公开设置里看不到签到开关，按无签到登记，额度只能靠注册赠送、推广或充值"
+      ],
+      "caveats": [
+        "注册送 $5 是站方活动口径，公开接口不返回注册赠金数字，实际到账以注册后控制台余额为准",
+        "公开面拿不到模型清单和价格：model_plaza_enabled = false、/api/v1/model-plaza 返回 404，首页列的八个模型家族不等于完整可用清单",
+        "这是付费中转站（payment / subscription 都开着），$5 只够试吃，长期用要充值，别当长期白嫖站",
+        "上游与线路不公开，首页只写「智能路由 + 渠道监控」，Claude / GPT 是否官方直连无法从公开面核实，重活别全压上去",
+        "站点较新，没有历史可用性可查；本页只能探到 /v1/models 的 401 存活信号，注册页和接口都在 Cloudflare 后面",
+        "注册邮箱有域名白名单，小众邮箱或自建域名会被直接拒，换常见邮箱再试"
+      ],
+      "community": [
+        "QQ 群：894796942（站方首页公示）"
+      ],
+      "en": {
+        "subtitle": "Sub2API AI gateway · $5 signup credit, native OpenAI and Anthropic routes, works with Claude Code and Codex",
+        "highlights": [
+          "$5 signup credit when you register through this page’s invite link (the site’s own promotion; confirm the balance in the console after signup)",
+          "Both native routes are live: anonymous GET /v1/models, POST /v1/chat/completions and POST /v1/messages return 401 rather than 404 (measured 2026-11-24), so Claude Code can use the Base URL and Codex CLI can use /v1",
+          "Sub2API panel: the public settings endpoint /api/v1/settings/public is readable without login, and the site reports email signup with verification on, Turnstile off and invitation codes off (this page’s aff parameter is applied automatically)",
+          "Email whitelist: QQ, 163, 126, Gmail, Outlook, iCloud, Proton and *.edu.cn addresses work; other domains are rejected at the signup page",
+          "The homepage lists OpenAI, Claude, Gemini, Grok, DeepSeek, GLM, Kimi and MiniMax, with per-token and per-call billing plus smart routing and channel monitoring",
+          "Payment and subscriptions are both enabled (payment_enabled / subscription_enabled = true), so this is a paid relay; the site publishes QQ group 894796942"
+        ],
+        "modelsNote": "The model list needs a login: the public /api/v1/model-plaza returns 404 (model_plaza_enabled = false) and /v1/models returns 401 anonymously. The homepage claims eight model families — OpenAI, Claude, Gemini, Grok, DeepSeek, GLM, Kimi and MiniMax — so check the console for exact model names, ratios and group pricing.",
+        "register": {
+          "methods": [
+            "Email + password"
+          ],
+          "requirements": [
+            "Sign up through this page’s invite link (?aff=BJVQ43D9DSFT) so the $5 signup credit is settled",
+            "Email + password is the only route: GitHub / Google / LinuxDO / Telegram / WeChat / OIDC are all switched off in the panel",
+            "Registration needs an email verification code (email_verification = true) and only accepts whitelisted domains (QQ, 163, Gmail, Outlook, iCloud, Proton, *.edu.cn and similar)",
+            "Cloudflare Turnstile is off (turnstile_enabled = false), but the form has a promo-code field (promo_code_enabled = true) that can add extra credit"
+          ]
+        },
+        "earnMore": [
+          "Invite friends: affiliate_enabled = true; the rebate rate is shown on the affiliate page after login",
+          "A promo code can be entered at signup; the site validates it and shows the bonus amount",
+          "Top up: payment_enabled = true with online payment, and subscription plans are also enabled (subscription_enabled = true)",
+          "No daily check-in is exposed in the public settings, so credit comes from the signup bonus, referrals or top-ups"
+        ],
+        "caveats": [
+          "The $5 signup credit is the site’s promotion; the public API does not expose the amount, so confirm the balance in the console after registering",
+          "Model names and prices are not public: model_plaza_enabled = false and /api/v1/model-plaza returns 404, so the eight families on the homepage are not a complete availability list",
+          "This is a paid relay (payment and subscriptions are both on); $5 is a taster, not a long-term free supply",
+          "Upstreams are not disclosed — the homepage only mentions smart routing and channel monitoring — so do not assume Claude or GPT traffic is officially connected, and avoid putting heavy work on it",
+          "The site is new with no availability history; this page can only probe the 401 liveness signal on /v1/models, and both the signup page and API sit behind Cloudflare",
+          "The signup email whitelist rejects niche or self-hosted domains; retry with a common mailbox"
+        ],
+        "remarks": "$5 signup credit; model list requires login; no check-in"
+      },
+      "remarks": "注册送 $5；模型清单要登录；无签到",
+      "faq": [
+        [
+          "Redapi 注册送多少额度？",
+          "站方活动口径是注册送 $5；公开接口不返回这个数字，注册后进控制台核对实际到账。"
+        ],
+        [
+          "Redapi 支持 Claude Code 和 Codex 吗？",
+          "支持。Anthropic 端点填 https://redapi.vip（Base URL 不带 /v1），OpenAI 端点填 https://redapi.vip/v1；两条路由匿名请求都回 401，说明网关在架。"
+        ],
+        [
+          "Redapi 有哪些模型？",
+          "公开面拿不到清单（模型广场关闭、/v1/models 要鉴权），首页自报 OpenAI、Claude、Gemini、Grok、DeepSeek、GLM、Kimi、MiniMax 八个家族，具体模型与价格登录后看控制台。"
+        ]
+      ],
+      "reviewedAt": "2026-11-24"
+    },
+    {
       "id": "api520",
       "name": "熊猫API",
       "subtitle": "New API 付费中转站 · 注册送 100 额度、本页邀请再送 100，151 个模型（Claude Opus 4.6~5 / GPT-6 / Gemini 3.x）按量按次混排",
@@ -1108,7 +1231,11 @@
           "支持。Anthropic 端点 https://api.justwoker.icu（Base URL 不带 /v1），OpenAI 端点 https://api.justwoker.icu/v1；主力是 gpt-5.6 系模型。"
         ]
       ],
-      "reviewedAt": "2026-11-02"
+      "reviewedAt": "2026-11-02",
+      "archived": {
+        "at": "2026-11-24",
+        "reason": "站方已下架，注册页与 API 均无响应（2026-11-24 复核超时），按维护者确认移入历史区；站点恢复后可重新收录"
+      }
     },
     {
       "id": "matrix",
