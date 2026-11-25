@@ -285,117 +285,6 @@
       "reviewedAt": "2026-11-02"
     },
     {
-      "id": "xingchi",
-      "name": "星驰管家",
-      "subtitle": "Telegram AI Coding 福利站 · 注册送 $1,000，首签 $300，首日合计 $1,300",
-      "recommended": false,
-      "credits": {
-        "signup": 1000,
-        "dailyCheckin": 300,
-        "approx": false
-      },
-      "signupUrl": "https://t.me/xingchi66bot?start=inv_8672125617",
-      "homeUrl": "https://t.me/xingchi66bot",
-      "statusApi": "https://t.me/xingchi66bot?start=inv_8672125617",
-      "panel": "relay",
-      "mirrors": [],
-      "tags": [
-        "Telegram",
-        "公益站",
-        "免费额度",
-        "GPT-6.1-Sol"
-      ],
-      "highlights": [
-        "按提供的信息，注册赠送 $1,000，完成签到再领 $300，首日合计 $1,300。",
-        "目前仅提供 gpt-6.1-sol，模型倍率 0.5。",
-        "通过 Telegram 机器人注册和使用；邀请参数已放入注册链接。"
-      ],
-      "modelsNote": "按站方提供的信息登记：目前仅 gpt-6.1-sol，倍率 0.5；具体价格、可用性与额度规则以机器人内公示为准。",
-      "modelsSource": "manual",
-      "register": {
-        "methods": [
-          "Telegram"
-        ],
-        "requirements": [
-          "通过本页 Telegram 邀请链接启动 @xingchi66bot。",
-          "注册送 $1,000；每日签到额度按站内规则领取。"
-        ]
-      },
-      "setup": {
-        "client": "仅 gpt-6.1-sol（倍率 0.5）",
-        "note": "在 Telegram 机器人内完成注册并查看 API Base URL、Key 与客户端配置；此处不预设未公开的接入地址。",
-        "steps": [
-          "打开 Telegram 邀请入口并启动 @xingchi66bot。",
-          "在机器人内按提示注册，核对赠送额度并完成每日签到。",
-          "从机器人内获取 API Base URL 和 Key；模型选择 gpt-6.1-sol。"
-        ],
-        "dashboardUrl": "https://t.me/xingchi66bot?start=inv_8672125617"
-      },
-      "earnMore": [
-        "每日进入机器人按站内规则签到，额度为 $300/天（以站内公示为准）。"
-      ],
-      "caveats": [
-        "注册、签到福利及 0.5 倍率依据提交信息登记，使用前请在机器人内核对最新规则。",
-        "目前只登记 gpt-6.1-sol；暂未公开 API 地址与独立状态接口。"
-      ],
-      "community": [
-        "Telegram 机器人：https://t.me/xingchi66bot"
-      ],
-      "en": {
-        "subtitle": "Telegram AI coding service · $1,000 on signup plus $300 first check-in ($1,300 day one)",
-        "highlights": [
-          "Per submitted details: $1,000 signup credit plus $300 for the first check-in, $1,300 total on day one.",
-          "Only gpt-6.1-sol is listed, at a 0.5 model ratio.",
-          "Sign up and use the service through its Telegram bot; the invite parameter is included in the link."
-        ],
-        "modelsNote": "Per submitted details, only gpt-6.1-sol is listed at a 0.5 ratio. Confirm pricing, availability and credit terms in the bot.",
-        "register": {
-          "methods": [
-            "Telegram"
-          ],
-          "requirements": [
-            "Start @xingchi66bot through this Telegram invite link.",
-            "$1,000 signup credit; claim the daily check-in credit under the service's rules."
-          ]
-        },
-        "setup": {
-          "client": "gpt-6.1-sol only (ratio 0.5)",
-          "note": "Complete signup in the Telegram bot and retrieve the API Base URL, key and client configuration there; no unpublished endpoint is assumed.",
-          "steps": [
-            "Open the Telegram invite and start @xingchi66bot.",
-            "Follow the bot's signup steps, verify the credit and claim the daily check-in.",
-            "Retrieve the API Base URL and key from the bot; select gpt-6.1-sol."
-          ],
-          "dashboardUrl": "https://t.me/xingchi66bot?start=inv_8672125617"
-        },
-        "earnMore": [
-          "Check in through the bot daily for $300/day, subject to the bot's current terms."
-        ],
-        "caveats": [
-          "Signup, check-in and the 0.5 ratio are recorded from submitted details; verify current terms in the bot.",
-          "Only gpt-6.1-sol is listed; no separate API endpoint or status API is published."
-        ],
-        "community": [
-          "Telegram bot: https://t.me/xingchi66bot"
-        ]
-      },
-      "faq": [
-        [
-          "星驰管家首日能领多少额度？",
-          "按提交信息，注册送 $1,000，首日签到再领 $300，合计 $1,300；具体到账及活动规则以机器人内公示为准。"
-        ],
-        [
-          "提供哪些模型，倍率是多少？",
-          "目前仅登记 gpt-6.1-sol，倍率 0.5。"
-        ],
-        [
-          "如何注册和获取接入配置？",
-          "通过本页邀请链接启动 @xingchi66bot，按机器人提示注册，并在机器人内查看 API Base URL、Key 和客户端配置。"
-        ]
-      ],
-      "reviewedAt": "2026-11-19"
-    },
-    {
       "id": "redapi",
       "name": "Redapi",
       "subtitle": "Sub2API 统一 AI 网关 · 注册送 $5，OpenAI / Anthropic 双协议，Claude Code、Codex 可直接接入",
@@ -517,6 +406,117 @@
         ]
       ],
       "reviewedAt": "2026-11-24"
+    },
+    {
+      "id": "xingchi",
+      "name": "星驰管家",
+      "subtitle": "Telegram AI Coding 福利站 · 注册送 $1,000，首签 $300，首日合计 $1,300",
+      "recommended": false,
+      "credits": {
+        "signup": 1000,
+        "dailyCheckin": 300,
+        "approx": false
+      },
+      "signupUrl": "https://t.me/xingchi66bot?start=inv_8672125617",
+      "homeUrl": "https://t.me/xingchi66bot",
+      "statusApi": "https://t.me/xingchi66bot?start=inv_8672125617",
+      "panel": "relay",
+      "mirrors": [],
+      "tags": [
+        "Telegram",
+        "公益站",
+        "免费额度",
+        "GPT-6.1-Sol"
+      ],
+      "highlights": [
+        "按提供的信息，注册赠送 $1,000，完成签到再领 $300，首日合计 $1,300。",
+        "目前仅提供 gpt-6.1-sol，模型倍率 0.5。",
+        "通过 Telegram 机器人注册和使用；邀请参数已放入注册链接。"
+      ],
+      "modelsNote": "按站方提供的信息登记：目前仅 gpt-6.1-sol，倍率 0.5；具体价格、可用性与额度规则以机器人内公示为准。",
+      "modelsSource": "manual",
+      "register": {
+        "methods": [
+          "Telegram"
+        ],
+        "requirements": [
+          "通过本页 Telegram 邀请链接启动 @xingchi66bot。",
+          "注册送 $1,000；每日签到额度按站内规则领取。"
+        ]
+      },
+      "setup": {
+        "client": "仅 gpt-6.1-sol（倍率 0.5）",
+        "note": "在 Telegram 机器人内完成注册并查看 API Base URL、Key 与客户端配置；此处不预设未公开的接入地址。",
+        "steps": [
+          "打开 Telegram 邀请入口并启动 @xingchi66bot。",
+          "在机器人内按提示注册，核对赠送额度并完成每日签到。",
+          "从机器人内获取 API Base URL 和 Key；模型选择 gpt-6.1-sol。"
+        ],
+        "dashboardUrl": "https://t.me/xingchi66bot?start=inv_8672125617"
+      },
+      "earnMore": [
+        "每日进入机器人按站内规则签到，额度为 $300/天（以站内公示为准）。"
+      ],
+      "caveats": [
+        "注册、签到福利及 0.5 倍率依据提交信息登记，使用前请在机器人内核对最新规则。",
+        "目前只登记 gpt-6.1-sol；暂未公开 API 地址与独立状态接口。"
+      ],
+      "community": [
+        "Telegram 机器人：https://t.me/xingchi66bot"
+      ],
+      "en": {
+        "subtitle": "Telegram AI coding service · $1,000 on signup plus $300 first check-in ($1,300 day one)",
+        "highlights": [
+          "Per submitted details: $1,000 signup credit plus $300 for the first check-in, $1,300 total on day one.",
+          "Only gpt-6.1-sol is listed, at a 0.5 model ratio.",
+          "Sign up and use the service through its Telegram bot; the invite parameter is included in the link."
+        ],
+        "modelsNote": "Per submitted details, only gpt-6.1-sol is listed at a 0.5 ratio. Confirm pricing, availability and credit terms in the bot.",
+        "register": {
+          "methods": [
+            "Telegram"
+          ],
+          "requirements": [
+            "Start @xingchi66bot through this Telegram invite link.",
+            "$1,000 signup credit; claim the daily check-in credit under the service's rules."
+          ]
+        },
+        "setup": {
+          "client": "gpt-6.1-sol only (ratio 0.5)",
+          "note": "Complete signup in the Telegram bot and retrieve the API Base URL, key and client configuration there; no unpublished endpoint is assumed.",
+          "steps": [
+            "Open the Telegram invite and start @xingchi66bot.",
+            "Follow the bot's signup steps, verify the credit and claim the daily check-in.",
+            "Retrieve the API Base URL and key from the bot; select gpt-6.1-sol."
+          ],
+          "dashboardUrl": "https://t.me/xingchi66bot?start=inv_8672125617"
+        },
+        "earnMore": [
+          "Check in through the bot daily for $300/day, subject to the bot's current terms."
+        ],
+        "caveats": [
+          "Signup, check-in and the 0.5 ratio are recorded from submitted details; verify current terms in the bot.",
+          "Only gpt-6.1-sol is listed; no separate API endpoint or status API is published."
+        ],
+        "community": [
+          "Telegram bot: https://t.me/xingchi66bot"
+        ]
+      },
+      "faq": [
+        [
+          "星驰管家首日能领多少额度？",
+          "按提交信息，注册送 $1,000，首日签到再领 $300，合计 $1,300；具体到账及活动规则以机器人内公示为准。"
+        ],
+        [
+          "提供哪些模型，倍率是多少？",
+          "目前仅登记 gpt-6.1-sol，倍率 0.5。"
+        ],
+        [
+          "如何注册和获取接入配置？",
+          "通过本页邀请链接启动 @xingchi66bot，按机器人提示注册，并在机器人内查看 API Base URL、Key 和客户端配置。"
+        ]
+      ],
+      "reviewedAt": "2026-11-19"
     },
     {
       "id": "api520",

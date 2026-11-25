@@ -157,67 +157,6 @@
       "page": "https://q-shuang-dot.github.io/ai-coding-welfare/sites/agentrouter/"
     },
     {
-      "id": "xingchi",
-      "name": "星驰管家",
-      "subtitle": "Telegram AI Coding 福利站 · 注册送 $1,000，首签 $300，首日合计 $1,300",
-      "paid": false,
-      "recommended": false,
-      "tags": [
-        "Telegram",
-        "公益站",
-        "免费额度",
-        "GPT-6.1-Sol"
-      ],
-      "highlights": [
-        "按提供的信息，注册赠送 $1,000，完成签到再领 $300，首日合计 $1,300。",
-        "目前仅提供 gpt-6.1-sol，模型倍率 0.5。",
-        "通过 Telegram 机器人注册和使用；邀请参数已放入注册链接。"
-      ],
-      "credits": {
-        "signup": 1000,
-        "dailyCheckin": 300,
-        "approx": false
-      },
-      "endpoints": {},
-      "signupUrl": "https://t.me/xingchi66bot?start=inv_8672125617",
-      "homeUrl": "https://t.me/xingchi66bot",
-      "docsUrl": null,
-      "inviteCode": null,
-      "register": {
-        "methods": [
-          "Telegram"
-        ],
-        "requirements": [
-          "通过本页 Telegram 邀请链接启动 @xingchi66bot。",
-          "注册送 $1,000；每日签到额度按站内规则领取。"
-        ]
-      },
-      "earnMore": [
-        "每日进入机器人按站内规则签到，额度为 $300/天（以站内公示为准）。"
-      ],
-      "caveats": [
-        "注册、签到福利及 0.5 倍率依据提交信息登记，使用前请在机器人内核对最新规则。",
-        "目前只登记 gpt-6.1-sol；暂未公开 API 地址与独立状态接口。"
-      ],
-      "remarks": null,
-      "faq": [
-        [
-          "星驰管家首日能领多少额度？",
-          "按提交信息，注册送 $1,000，首日签到再领 $300，合计 $1,300；具体到账及活动规则以机器人内公示为准。"
-        ],
-        [
-          "提供哪些模型，倍率是多少？",
-          "目前仅登记 gpt-6.1-sol，倍率 0.5。"
-        ],
-        [
-          "如何注册和获取接入配置？",
-          "通过本页邀请链接启动 @xingchi66bot，按机器人提示注册，并在机器人内查看 API Base URL、Key 和客户端配置。"
-        ]
-      ],
-      "reviewedAt": "2026-11-19",
-      "page": "https://q-shuang-dot.github.io/ai-coding-welfare/sites/xingchi/"
-    },
-    {
       "id": "redapi",
       "name": "Redapi",
       "subtitle": "Sub2API 统一 AI 网关 · 注册送 $5，OpenAI / Anthropic 双协议，Claude Code、Codex 可直接接入",
@@ -297,6 +236,67 @@
       ],
       "reviewedAt": "2026-11-24",
       "page": "https://q-shuang-dot.github.io/ai-coding-welfare/sites/redapi/"
+    },
+    {
+      "id": "xingchi",
+      "name": "星驰管家",
+      "subtitle": "Telegram AI Coding 福利站 · 注册送 $1,000，首签 $300，首日合计 $1,300",
+      "paid": false,
+      "recommended": false,
+      "tags": [
+        "Telegram",
+        "公益站",
+        "免费额度",
+        "GPT-6.1-Sol"
+      ],
+      "highlights": [
+        "按提供的信息，注册赠送 $1,000，完成签到再领 $300，首日合计 $1,300。",
+        "目前仅提供 gpt-6.1-sol，模型倍率 0.5。",
+        "通过 Telegram 机器人注册和使用；邀请参数已放入注册链接。"
+      ],
+      "credits": {
+        "signup": 1000,
+        "dailyCheckin": 300,
+        "approx": false
+      },
+      "endpoints": {},
+      "signupUrl": "https://t.me/xingchi66bot?start=inv_8672125617",
+      "homeUrl": "https://t.me/xingchi66bot",
+      "docsUrl": null,
+      "inviteCode": null,
+      "register": {
+        "methods": [
+          "Telegram"
+        ],
+        "requirements": [
+          "通过本页 Telegram 邀请链接启动 @xingchi66bot。",
+          "注册送 $1,000；每日签到额度按站内规则领取。"
+        ]
+      },
+      "earnMore": [
+        "每日进入机器人按站内规则签到，额度为 $300/天（以站内公示为准）。"
+      ],
+      "caveats": [
+        "注册、签到福利及 0.5 倍率依据提交信息登记，使用前请在机器人内核对最新规则。",
+        "目前只登记 gpt-6.1-sol；暂未公开 API 地址与独立状态接口。"
+      ],
+      "remarks": null,
+      "faq": [
+        [
+          "星驰管家首日能领多少额度？",
+          "按提交信息，注册送 $1,000，首日签到再领 $300，合计 $1,300；具体到账及活动规则以机器人内公示为准。"
+        ],
+        [
+          "提供哪些模型，倍率是多少？",
+          "目前仅登记 gpt-6.1-sol，倍率 0.5。"
+        ],
+        [
+          "如何注册和获取接入配置？",
+          "通过本页邀请链接启动 @xingchi66bot，按机器人提示注册，并在机器人内查看 API Base URL、Key 和客户端配置。"
+        ]
+      ],
+      "reviewedAt": "2026-11-19",
+      "page": "https://q-shuang-dot.github.io/ai-coding-welfare/sites/xingchi/"
     },
     {
       "id": "api520",

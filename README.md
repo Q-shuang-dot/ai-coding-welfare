@@ -14,8 +14,8 @@
 <p align="center">
   <a href="https://docode.cc/register?aff=1Qof"><b>DoCode 注册</b></a> ·
   <a href="https://agentrouter.org/register?aff=aibw"><b>AgentRouter 注册</b></a> ·
-  <a href="https://t.me/xingchi66bot?start=inv_8672125617"><b>星驰管家 注册</b></a> ·
   <a href="https://redapi.vip/register?aff=BJVQ43D9DSFT"><b>Redapi 注册</b></a> ·
+  <a href="https://t.me/xingchi66bot?start=inv_8672125617"><b>星驰管家 注册</b></a> ·
   <a href="https://api520.pro/register?aff=3pox"><b>熊猫API 注册</b></a> ·
   <a href="https://ai.dahanxingbang.dpdns.org/sign-up?aff=ql9j"><b>大汉 API 注册</b></a> ·
   <a href="https://us-3.nianhuaapi.com/sign-up?aff=aonj"><b>年华 API 注册</b></a> ·
@@ -44,8 +44,8 @@
 | :-- | :--: | :--: | :--: | :--: | :--: | :--: |
 | **DoCode** | 🟢 在线 | **300 站内刀** | 无签到 | Anthropic + OpenAI | <a href="https://docode.cc/register?aff=1Qof" target="_blank" rel="noopener">点此注册 →</a> | `1Qof` |
 | **AgentRouter** 🔥 | 🟢 在线 | **$175** | $25/天 | Anthropic + OpenAI | <a href="https://agentrouter.org/register?aff=aibw" target="_blank" rel="noopener">点此注册 →</a> | — |
-| **星驰管家** | 🟢 在线 | **$1300** | $300/天 | 仅 gpt-6.1-sol（倍率 0.5） | <a href="https://t.me/xingchi66bot?start=inv_8672125617" target="_blank" rel="noopener">点此注册 →</a> | — |
 | **Redapi** | 🟢 在线 | **$5** | — | Anthropic + OpenAI | <a href="https://redapi.vip/register?aff=BJVQ43D9DSFT" target="_blank" rel="noopener">点此注册 →</a> | — |
+| **星驰管家** | 🟢 在线 | **$1300** | $300/天 | 仅 gpt-6.1-sol（倍率 0.5） | <a href="https://t.me/xingchi66bot?start=inv_8672125617" target="_blank" rel="noopener">点此注册 →</a> | — |
 | **熊猫API** 💳 | 🟢 在线 | **200 额度** | 无签到 | Anthropic + OpenAI | <a href="https://api520.pro/register?aff=3pox" target="_blank" rel="noopener">点此注册 →</a> | — |
 | **大汉 API** | 🟢 在线 | 站内公示 | 支持签到 | Anthropic + OpenAI | <a href="https://ai.dahanxingbang.dpdns.org/sign-up?aff=ql9j" target="_blank" rel="noopener">点此注册 →</a> | — |
 | **年华 API** | 🟢 在线 | 站内公示 | 支持签到 | Anthropic + OpenAI | <a href="https://us-3.nianhuaapi.com/sign-up?aff=aonj" target="_blank" rel="noopener">点此注册 →</a> | `aonj` |
@@ -246,7 +246,7 @@ curl -s https://docode.cc/v1/chat/completions \
 
 **实时数据**（自动抓取站点公开接口）
 
-- ⚠ 接口已连续 364 小时没抓到新数据，下列信息为 `2026-11-10 02:47 UTC` 的快照
+- ⚠ 接口已连续 365 小时没抓到新数据，下列信息为 `2026-11-10 02:47 UTC` 的快照
 - 站点名称：**Agent Router**
 - 面板版本：`init-20261016-861e4557`
 - 邀请他人可得：**$50**
@@ -357,73 +357,6 @@ curl -s https://agentrouter.org/v1/chat/completions \
 - `2026-10-19` ### 📢 供应调整公告 / Supply Adjustment Notice 即日起，**claude-opus-5-5** 模型将实行单独限量供应。每日于**北京时间 9:00**（对应 **UTC 1:00**）投放额度，**用完即止**。 Effective immediately, the **claude-opus-5-5** model will be supplied in limited quantities. Qu
 
 </details>
-
-</details>
-
----
-
-<a id="site-xingchi"></a>
-<details><summary><b>🟢 星驰管家</b></summary>
-
-> Telegram AI Coding 福利站 · 注册送 $1,000，首签 $300，首日合计 $1,300
-
-<a href="https://t.me/xingchi66bot?start=inv_8672125617" target="_blank" rel="noopener"><img src="https://img.shields.io/badge/%E7%AB%8B%E5%8D%B3%E6%B3%A8%E5%86%8C-%E6%98%9F%E9%A9%B0%E7%AE%A1%E5%AE%B6-brightgreen?style=for-the-badge" alt="注册 星驰管家"></a>
-
-**为什么值得注册**
-
-- 按提供的信息，注册赠送 $1,000，完成签到再领 $300，首日合计 $1,300。
-- 目前仅提供 gpt-6.1-sol，模型倍率 0.5。
-- 通过 Telegram 机器人注册和使用；邀请参数已放入注册链接。
-
-**能拿多少额度**
-
-- 注册即送：**$1000**
-- 每日签到：**$300/天**（长期续命的关键）
-- 首日合计：**$1300**　（注册 $1000 + 首签 $300）
-
-**实时数据**（自动抓取站点公开接口）
-
-- ⚠ 接口已连续 141 小时没抓到新数据，下列信息为 `2026-11-19 09:27 UTC` 的快照
-- 站点名称：**星驰管家**
-- 每日签到：✅
-- 登录方式：Telegram
-- 接口延迟：1065 ms
-
-**当前可用模型**
-
-| 模型 | 倍率 | 输入 / 1M tokens | 输出 / 1M tokens | 协议 |
-| :-- | :--: | :--: | :--: | :--: |
-| `gpt-6.1-sol` | 0.5 | — | — | openai |
-
-<sub>按站方提供的信息登记：目前仅 gpt-6.1-sol，倍率 0.5；具体价格、可用性与额度规则以机器人内公示为准。</sub>
-
-**注册要求**
-
-- 通过本页 Telegram 邀请链接启动 @xingchi66bot。
-- 注册送 $1,000；每日签到额度按站内规则领取。
-
-**接入配置**
-
-> 在 Telegram 机器人内完成注册并查看 API Base URL、Key 与客户端配置；此处不预设未公开的接入地址。
-
-1. 打开 Telegram 邀请入口并启动 @xingchi66bot。
-2. 在机器人内按提示注册，核对赠送额度并完成每日签到。
-3. 从机器人内获取 API Base URL 和 Key；模型选择 gpt-6.1-sol。
-
-控制台入口：<https://t.me/xingchi66bot?start=inv_8672125617>
-
-**如何继续拿额度**
-
-- 每日进入机器人按站内规则签到，额度为 $300/天（以站内公示为准）。
-
-**⚠️ 使用前必读**
-
-- 注册、签到福利及 0.5 倍率依据提交信息登记，使用前请在机器人内核对最新规则。
-- 目前只登记 gpt-6.1-sol；暂未公开 API 地址与独立状态接口。
-
-**官方渠道**
-
-- Telegram 机器人：https://t.me/xingchi66bot
 
 </details>
 
@@ -545,6 +478,73 @@ curl -s https://redapi.vip/v1/chat/completions \
 **官方渠道**
 
 - QQ 群：894796942（站方首页公示）
+
+</details>
+
+---
+
+<a id="site-xingchi"></a>
+<details><summary><b>🟢 星驰管家</b></summary>
+
+> Telegram AI Coding 福利站 · 注册送 $1,000，首签 $300，首日合计 $1,300
+
+<a href="https://t.me/xingchi66bot?start=inv_8672125617" target="_blank" rel="noopener"><img src="https://img.shields.io/badge/%E7%AB%8B%E5%8D%B3%E6%B3%A8%E5%86%8C-%E6%98%9F%E9%A9%B0%E7%AE%A1%E5%AE%B6-brightgreen?style=for-the-badge" alt="注册 星驰管家"></a>
+
+**为什么值得注册**
+
+- 按提供的信息，注册赠送 $1,000，完成签到再领 $300，首日合计 $1,300。
+- 目前仅提供 gpt-6.1-sol，模型倍率 0.5。
+- 通过 Telegram 机器人注册和使用；邀请参数已放入注册链接。
+
+**能拿多少额度**
+
+- 注册即送：**$1000**
+- 每日签到：**$300/天**（长期续命的关键）
+- 首日合计：**$1300**　（注册 $1000 + 首签 $300）
+
+**实时数据**（自动抓取站点公开接口）
+
+- ⚠ 接口已连续 143 小时没抓到新数据，下列信息为 `2026-11-19 09:27 UTC` 的快照
+- 站点名称：**星驰管家**
+- 每日签到：✅
+- 登录方式：Telegram
+- 接口延迟：1065 ms
+
+**当前可用模型**
+
+| 模型 | 倍率 | 输入 / 1M tokens | 输出 / 1M tokens | 协议 |
+| :-- | :--: | :--: | :--: | :--: |
+| `gpt-6.1-sol` | 0.5 | — | — | openai |
+
+<sub>按站方提供的信息登记：目前仅 gpt-6.1-sol，倍率 0.5；具体价格、可用性与额度规则以机器人内公示为准。</sub>
+
+**注册要求**
+
+- 通过本页 Telegram 邀请链接启动 @xingchi66bot。
+- 注册送 $1,000；每日签到额度按站内规则领取。
+
+**接入配置**
+
+> 在 Telegram 机器人内完成注册并查看 API Base URL、Key 与客户端配置；此处不预设未公开的接入地址。
+
+1. 打开 Telegram 邀请入口并启动 @xingchi66bot。
+2. 在机器人内按提示注册，核对赠送额度并完成每日签到。
+3. 从机器人内获取 API Base URL 和 Key；模型选择 gpt-6.1-sol。
+
+控制台入口：<https://t.me/xingchi66bot?start=inv_8672125617>
+
+**如何继续拿额度**
+
+- 每日进入机器人按站内规则签到，额度为 $300/天（以站内公示为准）。
+
+**⚠️ 使用前必读**
+
+- 注册、签到福利及 0.5 倍率依据提交信息登记，使用前请在机器人内核对最新规则。
+- 目前只登记 gpt-6.1-sol；暂未公开 API 地址与独立状态接口。
+
+**官方渠道**
+
+- Telegram 机器人：https://t.me/xingchi66bot
 
 </details>
 
@@ -1653,7 +1653,7 @@ curl -s https://seekai.cc/v1/chat/completions \
 
 **实时数据**（自动抓取站点公开接口）
 
-- ⚠ 接口已连续 216 小时没抓到新数据，下列信息为 `2026-11-16 06:28 UTC` 的快照
+- ⚠ 接口已连续 218 小时没抓到新数据，下列信息为 `2026-11-16 06:28 UTC` 的快照
 - 站点名称：**Long的AI**
 - 面板版本：`v0.0.0`
 - 每日签到：❌
