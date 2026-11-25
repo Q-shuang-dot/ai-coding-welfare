@@ -12,12 +12,12 @@
 </p>
 
 <p align="center">
+  <a href="https://docode.cc/register?aff=1Qof"><b>DoCode sign up</b></a> ·
   <a href="https://agentrouter.org/register?aff=aibw"><b>AgentRouter sign up</b></a> ·
   <a href="https://t.me/xingchi66bot?start=inv_8672125617"><b>星驰管家 sign up</b></a> ·
   <a href="https://redapi.vip/register?aff=BJVQ43D9DSFT"><b>Redapi sign up</b></a> ·
   <a href="https://api520.pro/register?aff=3pox"><b>Panda API sign up</b></a> ·
   <a href="https://ai.dahanxingbang.dpdns.org/sign-up?aff=ql9j"><b>大汉 API sign up</b></a> ·
-  <a href="https://docode.cc/register?aff=1Qof"><b>DoCode sign up</b></a> ·
   <a href="https://us-3.nianhuaapi.com/sign-up?aff=aonj"><b>NianHua API sign up</b></a> ·
   <a href="https://free.supxh.xin/register?code=MVU8GX"><b>ShawnAI sign up</b></a> ·
   <a href="https://api456.me/register?aff=zmza"><b>api456.me sign up</b></a> ·
@@ -42,12 +42,12 @@
 
 | Service | Status | First day | After that | Protocols | Sign up | Invite code |
 | :-- | :--: | :--: | :--: | :--: | :--: | :--: |
+| **DoCode** | 🟢 Online | **300 site-USD** | No check-in | Anthropic + OpenAI | <a href="https://docode.cc/register?aff=1Qof" target="_blank" rel="noopener">Sign up →</a> | `1Qof` |
 | **AgentRouter** 🔥 | 🟢 Online | **$175** | $25/day | Anthropic + OpenAI | <a href="https://agentrouter.org/register?aff=aibw" target="_blank" rel="noopener">Sign up →</a> | — |
 | **星驰管家** | 🟢 Online | **$1300** | $300/day | gpt-6.1-sol only (ratio 0.5) | <a href="https://t.me/xingchi66bot?start=inv_8672125617" target="_blank" rel="noopener">Sign up →</a> | — |
 | **Redapi** | 🟢 Online | **$5** | — | Anthropic + OpenAI | <a href="https://redapi.vip/register?aff=BJVQ43D9DSFT" target="_blank" rel="noopener">Sign up →</a> | — |
 | **Panda API** 💳 | 🟢 Online | **200 credit** | No check-in | Anthropic + OpenAI | <a href="https://api520.pro/register?aff=3pox" target="_blank" rel="noopener">Sign up →</a> | — |
 | **大汉 API** | 🟢 Online | Posted on site | Daily check-in | Anthropic + OpenAI | <a href="https://ai.dahanxingbang.dpdns.org/sign-up?aff=ql9j" target="_blank" rel="noopener">Sign up →</a> | — |
-| **DoCode** | 🟢 Online | **300 site-USD** | No check-in | Anthropic + OpenAI | <a href="https://docode.cc/register?aff=1Qof" target="_blank" rel="noopener">Sign up →</a> | `1Qof` |
 | **NianHua API** | 🟢 Online | Posted on site | Daily check-in | Anthropic + OpenAI | <a href="https://us-3.nianhuaapi.com/sign-up?aff=aonj" target="_blank" rel="noopener">Sign up →</a> | `aonj` |
 | **ShawnAI** | 🟢 Online | **≈14000 pts** | ≈2000 pts/day | Anthropic + OpenAI | <a href="https://free.supxh.xin/register?code=MVU8GX" target="_blank" rel="noopener">Sign up →</a> | `MVU8GX` |
 | **api456.me** | 🟢 Online | **$50** | $10/day | OpenAI | <a href="https://api456.me/register?aff=zmza" target="_blank" rel="noopener">Sign up →</a> | `zmza` |
@@ -60,7 +60,7 @@
 >
 > Services with a code in the "Invite code" column (DoCode `1Qof`, NianHua API `aonj`, ShawnAI `MVU8GX`, api456.me `zmza`, SeekAi `dDJy`, Long's AI `ijFL`, Xinjiang Huancheng Security `3J8z`) require **typing the code yourself** in the signup form. Miss it and you only get the base signup bonus — it cannot be added afterwards. A dash means the invite bonus travels inside the link and needs no typing.
 >
-> Signing up for all 7 USD-priced services that still accept new users gets you roughly **$1530** on day one; Panda API separately credits 200 credit, DoCode separately credits 300 site-USD, ShawnAI separately credits ≈14000 pts, Matrix separately credits 2600 pts, Long's AI separately credits Free, Xinjiang Huancheng Security separately credits 30000 site-USD — each service prices in its own unit with no published USD conversion, so those are left out of this total.
+> Signing up for all 7 USD-priced services that still accept new users gets you roughly **$1530** on day one; DoCode separately credits 300 site-USD, Panda API separately credits 200 credit, ShawnAI separately credits ≈14000 pts, Matrix separately credits 2600 pts, Long's AI separately credits Free, Xinjiang Huancheng Security separately credits 30000 site-USD — each service prices in its own unit with no published USD conversion, so those are left out of this total.
 >
 > 🟡 3 services have not returned fresh API data for over 48 hours. Details show the last successful snapshot; online status reflects whether the signup page actually loads.
 >
@@ -87,6 +87,130 @@ powershell -ExecutionPolicy Bypass -File scripts/quickstart.ps1
 ## 📚 Service details
 
 
+<a id="site-docode"></a>
+<details><summary><b>🟢 DoCode</b></summary>
+
+> New API relay · 50 site-dollars on signup, 250 more with invite code 1Qof, 300 on day one — both Claude and GPT on the shelf
+
+<a href="https://docode.cc/register?aff=1Qof" target="_blank" rel="noopener"><img src="https://img.shields.io/badge/Sign%20up-DoCode-brightgreen?style=for-the-badge" alt="Sign up for DoCode"></a>
+
+**Why sign up**
+
+- ⚠ Do not miss the invite code: type 1Qof into the "Invite code" field of the signup form or the 250 site-dollars will not arrive. Entering through this page's link normally fills it in automatically, but check that field with your own eyes before submitting — miss it and you only get the 50 signup bonus, which cannot be added later
+- 50 site-dollars on signup, 250 more with invite code 1Qof — 300 on day one with no top-up. Note this "dollar" is the site's own unit, not USD; see the risk notes below
+- Claude and GPT are both online: announcements name cc / cc-kiro group sonnet-5 and pay-per-call opus4.6, plus GPT pro / plus, Grok, Gemini and fable-5. One key covers everything, whereas most services on this page offer only one side
+- Both native routes are open (anonymous probes of /v1/messages and /v1/chat/completions return New API's 401 Invalid token), so Claude Code connects directly with the Base URL and Codex CLI uses /v1
+- The panel's public config ships one-click deeplinks for CC Switch, Cherry Studio, DeepChat, OpenCat, Lobe Chat and more — push the key straight from the dashboard
+- Besides the main domain there is api.docode.cc (announcements call it "direct to US"); both were alive in testing, so switch over if the main site is unreachable
+
+**How much you get**
+
+- Signup bonus: **50 site-USD**
+- Extra via this page's invite link: **250 site-USD**
+- First day total: **300 site-USD** (signup 50 site-USD + this page's invite 250 site-USD)
+
+**Live data** (scraped from public APIs)
+
+- Panel name: **DoCode**
+- Daily check-in: ❌
+- Open signups: ✅
+- Login methods: Email + password
+- API latency: 2013 ms
+
+**Mirrors / alternate entry points**
+
+- Direct to US: <https://api.docode.cc> · <a href="https://api.docode.cc/register?aff=1Qof" target="_blank" rel="noopener">Sign up via the mirror</a>
+
+> This service put its pricing page behind login (`/api/pricing` returns 401; its own nav config sets pricing.requireAuth = true), so this page does not list a model table. Announcements name Claude (cc / cc-kiro groups: sonnet-5 and pay-per-call opus4.6), GPT pro / plus, Grok, Gemini, fable-5, plus a separate image endpoint at img.docode.cc. Check the console's "Pricing" page after signing up for the full list, groups and ratios.
+
+**Signup requirements**
+
+- Invite code = 1Qof. Entering through this page's link (with ?aff=1Qof) normally fills the signup form's "Invite code" field automatically; double-check it yourself — leaving it empty gets you only the 50 signup site-dollars
+- The 250 site-dollars is settled at registration. Filling the invite code in from the dashboard afterwards does nothing
+- Email + password only: github / linuxdo / discord / telegram / WeChat / OIDC / Passkey are all false in the public config, so there is no third-party login
+- Registration needs an email verification code (email_verification = true) and passes Cloudflare Turnstile
+- If the main domain is unreachable, switch to api.docode.cc — same account, same credit
+
+**Client setup**
+
+<details open><summary><b>Claude Code</b> (Anthropic-compatible; Base URL without <code>/v1</code>)</summary>
+
+```bash
+# macOS / Linux
+export ANTHROPIC_BASE_URL=https://docode.cc
+export ANTHROPIC_AUTH_TOKEN=YOUR_API_KEY
+export ANTHROPIC_MODEL=<sign in to see available model names>
+npm install -g @anthropic-ai/claude-code@latest && claude
+```
+
+```powershell
+# Windows PowerShell
+$env:ANTHROPIC_BASE_URL = "https://docode.cc"
+$env:ANTHROPIC_AUTH_TOKEN = "YOUR_API_KEY"
+$env:ANTHROPIC_MODEL = "<sign in to see available model names>"
+claude
+```
+
+</details>
+
+<details><summary><b>Codex CLI</b> (OpenAI-compatible; goes into <code>~/.codex/config.toml</code>)</summary>
+
+```toml
+model = "<sign in to see available model names>"
+model_provider = "docode"
+
+[model_providers.docode]
+name = "DoCode"
+base_url = "https://docode.cc/v1"
+env_key = "DOCODE_API_KEY"
+wire_api = "chat"
+```
+
+</details>
+
+<details><summary><b>OpenAI SDK / Cherry Studio / Cursor and other generic clients</b></summary>
+
+```python
+from openai import OpenAI
+
+client = OpenAI(api_key="YOUR_API_KEY", base_url="https://docode.cc/v1")
+resp = client.chat.completions.create(model="<sign in to see available model names>", messages=[{"role": "user", "content": "ping"}])
+print(resp.choices[0].message.content)
+```
+
+Generic clients need two fields: **Base URL** = `https://docode.cc/v1`, **API Key** = the key you created in the dashboard.
+
+</details>
+
+<details><summary><b>Connectivity self-test</b></summary>
+
+```bash
+curl -s https://docode.cc/v1/chat/completions \
+  -H "Authorization: Bearer $KEY" -H "Content-Type: application/json" \
+  -d '{"model":"<sign in to see available model names>","messages":[{"role":"user","content":"reply OK only"}]}'
+```
+
+</details>
+
+**How to keep earning credits**
+
+- There is no site check-in (the panel reports checkin_enabled = false); credit comes from top-ups and occasional campaigns — announcements have run limited promos like "top up 100, get 500 dollars"
+- Inviting others also pays; an announcement raised the VIP referral bonus from 80 to 120 — confirm the exact figure on the dashboard's "Invite" page
+
+**⚠️ Read before use**
+
+- The site's "dollar" is not USD: the public price = 0.02 is the top-up ratio, 1 CNY = 50 site-dollars (announcements say it returns to 1:25 normally), while other services on this page give ¥7.3 ≈ $1. So 300 site-dollars corresponds to only ¥6–12 of face value, and this page does not fold it into the cross-service USD total
+- Billing is multiplied again by group ratios: announcements put the GPT pro group at 7–14× as upstream account prices move (New API convention: ratio 1 = $2 per million tokens). At roughly 13×, 300 site-dollars is on the order of ten million input tokens, with output multiplied by the completion ratio again — not a small amount, but always defer to the console's live ratio
+- The credit figures (50 signup / 250 invite) are not exposed by the public API: /api/status has neither quota_for_new_user nor quota_for_invitee. This page records what the site publishes; verify in the dashboard before doing the math
+- There is no daily check-in, so once credit runs out you must top up or wait for a campaign — no daily top-up like AgentRouter
+- This is a paid relay, not a community service: online top-ups are enabled (Stripe at ¥8) and most announcements are about top-up bonuses and ratio swings. Exhausted free credit means paying to continue
+- The FAQ's alternate domains ai.docode.pro / ai.docode.life and the announced hk.docode.cc all fail HTTPS (the first two have certificates issued only for docode.cc and therefore mismatch; hk fails the TLS handshake outright). This page lists only the verified api.docode.cc
+- Upstream instability is documented in the announcements: GPT plus "wiped out" then "temporarily revived", gpt-5.4 fully delisted, and on Sept 10 they were still saying "openai blew up, all of gpt is bad". Do not treat it as a stable production channel
+
+</details>
+
+---
+
 <a id="site-agentrouter"></a>
 <details open><summary><b>🟢 AgentRouter 🔥</b></summary>
 
@@ -110,7 +234,7 @@ powershell -ExecutionPolicy Bypass -File scripts/quickstart.ps1
 
 **Live data** (scraped from public APIs)
 
-- ⚠ No fresh API data for 356 hours; the info below is a snapshot from `2026-11-10 02:47 UTC`
+- ⚠ No fresh API data for 364 hours; the info below is a snapshot from `2026-11-10 02:47 UTC`
 - Panel name: **Agent Router**
 - Panel version: `init-20261016-861e4557`
 - Referral bonus: **$50**
@@ -239,7 +363,7 @@ curl -s https://agentrouter.org/v1/chat/completions \
 
 **Live data** (scraped from public APIs)
 
-- ⚠ No fresh API data for 133 hours; the info below is a snapshot from `2026-11-19 09:27 UTC`
+- ⚠ No fresh API data for 141 hours; the info below is a snapshot from `2026-11-19 09:27 UTC`
 - Daily check-in: ✅
 - Login methods: Telegram
 - API latency: 601 ms
@@ -806,130 +930,6 @@ curl -s https://ai.dahanxingbang.dpdns.org/v1/chat/completions \
 - Site: https://ai.dahanxingbang.dpdns.org
 - Announcements: https://ai.dahanxingbang.dpdns.org/api/status (public announcements field)
 - QQ group: 1130094152 · QQ: 2369210051 (contacts given in the site announcement)
-
-</details>
-
----
-
-<a id="site-docode"></a>
-<details><summary><b>🟢 DoCode</b></summary>
-
-> New API relay · 50 site-dollars on signup, 250 more with invite code 1Qof, 300 on day one — both Claude and GPT on the shelf
-
-<a href="https://docode.cc/register?aff=1Qof" target="_blank" rel="noopener"><img src="https://img.shields.io/badge/Sign%20up-DoCode-brightgreen?style=for-the-badge" alt="Sign up for DoCode"></a>
-
-**Why sign up**
-
-- ⚠ Do not miss the invite code: type 1Qof into the "Invite code" field of the signup form or the 250 site-dollars will not arrive. Entering through this page's link normally fills it in automatically, but check that field with your own eyes before submitting — miss it and you only get the 50 signup bonus, which cannot be added later
-- 50 site-dollars on signup, 250 more with invite code 1Qof — 300 on day one with no top-up. Note this "dollar" is the site's own unit, not USD; see the risk notes below
-- Claude and GPT are both online: announcements name cc / cc-kiro group sonnet-5 and pay-per-call opus4.6, plus GPT pro / plus, Grok, Gemini and fable-5. One key covers everything, whereas most services on this page offer only one side
-- Both native routes are open (anonymous probes of /v1/messages and /v1/chat/completions return New API's 401 Invalid token), so Claude Code connects directly with the Base URL and Codex CLI uses /v1
-- The panel's public config ships one-click deeplinks for CC Switch, Cherry Studio, DeepChat, OpenCat, Lobe Chat and more — push the key straight from the dashboard
-- Besides the main domain there is api.docode.cc (announcements call it "direct to US"); both were alive in testing, so switch over if the main site is unreachable
-
-**How much you get**
-
-- Signup bonus: **50 site-USD**
-- Extra via this page's invite link: **250 site-USD**
-- First day total: **300 site-USD** (signup 50 site-USD + this page's invite 250 site-USD)
-
-**Live data** (scraped from public APIs)
-
-- Panel name: **DoCode**
-- Daily check-in: ❌
-- Open signups: ✅
-- Login methods: Email + password
-- API latency: 2013 ms
-
-**Mirrors / alternate entry points**
-
-- Direct to US: <https://api.docode.cc> · <a href="https://api.docode.cc/register?aff=1Qof" target="_blank" rel="noopener">Sign up via the mirror</a>
-
-> This service put its pricing page behind login (`/api/pricing` returns 401; its own nav config sets pricing.requireAuth = true), so this page does not list a model table. Announcements name Claude (cc / cc-kiro groups: sonnet-5 and pay-per-call opus4.6), GPT pro / plus, Grok, Gemini, fable-5, plus a separate image endpoint at img.docode.cc. Check the console's "Pricing" page after signing up for the full list, groups and ratios.
-
-**Signup requirements**
-
-- Invite code = 1Qof. Entering through this page's link (with ?aff=1Qof) normally fills the signup form's "Invite code" field automatically; double-check it yourself — leaving it empty gets you only the 50 signup site-dollars
-- The 250 site-dollars is settled at registration. Filling the invite code in from the dashboard afterwards does nothing
-- Email + password only: github / linuxdo / discord / telegram / WeChat / OIDC / Passkey are all false in the public config, so there is no third-party login
-- Registration needs an email verification code (email_verification = true) and passes Cloudflare Turnstile
-- If the main domain is unreachable, switch to api.docode.cc — same account, same credit
-
-**Client setup**
-
-<details open><summary><b>Claude Code</b> (Anthropic-compatible; Base URL without <code>/v1</code>)</summary>
-
-```bash
-# macOS / Linux
-export ANTHROPIC_BASE_URL=https://docode.cc
-export ANTHROPIC_AUTH_TOKEN=YOUR_API_KEY
-export ANTHROPIC_MODEL=<sign in to see available model names>
-npm install -g @anthropic-ai/claude-code@latest && claude
-```
-
-```powershell
-# Windows PowerShell
-$env:ANTHROPIC_BASE_URL = "https://docode.cc"
-$env:ANTHROPIC_AUTH_TOKEN = "YOUR_API_KEY"
-$env:ANTHROPIC_MODEL = "<sign in to see available model names>"
-claude
-```
-
-</details>
-
-<details><summary><b>Codex CLI</b> (OpenAI-compatible; goes into <code>~/.codex/config.toml</code>)</summary>
-
-```toml
-model = "<sign in to see available model names>"
-model_provider = "docode"
-
-[model_providers.docode]
-name = "DoCode"
-base_url = "https://docode.cc/v1"
-env_key = "DOCODE_API_KEY"
-wire_api = "chat"
-```
-
-</details>
-
-<details><summary><b>OpenAI SDK / Cherry Studio / Cursor and other generic clients</b></summary>
-
-```python
-from openai import OpenAI
-
-client = OpenAI(api_key="YOUR_API_KEY", base_url="https://docode.cc/v1")
-resp = client.chat.completions.create(model="<sign in to see available model names>", messages=[{"role": "user", "content": "ping"}])
-print(resp.choices[0].message.content)
-```
-
-Generic clients need two fields: **Base URL** = `https://docode.cc/v1`, **API Key** = the key you created in the dashboard.
-
-</details>
-
-<details><summary><b>Connectivity self-test</b></summary>
-
-```bash
-curl -s https://docode.cc/v1/chat/completions \
-  -H "Authorization: Bearer $KEY" -H "Content-Type: application/json" \
-  -d '{"model":"<sign in to see available model names>","messages":[{"role":"user","content":"reply OK only"}]}'
-```
-
-</details>
-
-**How to keep earning credits**
-
-- There is no site check-in (the panel reports checkin_enabled = false); credit comes from top-ups and occasional campaigns — announcements have run limited promos like "top up 100, get 500 dollars"
-- Inviting others also pays; an announcement raised the VIP referral bonus from 80 to 120 — confirm the exact figure on the dashboard's "Invite" page
-
-**⚠️ Read before use**
-
-- The site's "dollar" is not USD: the public price = 0.02 is the top-up ratio, 1 CNY = 50 site-dollars (announcements say it returns to 1:25 normally), while other services on this page give ¥7.3 ≈ $1. So 300 site-dollars corresponds to only ¥6–12 of face value, and this page does not fold it into the cross-service USD total
-- Billing is multiplied again by group ratios: announcements put the GPT pro group at 7–14× as upstream account prices move (New API convention: ratio 1 = $2 per million tokens). At roughly 13×, 300 site-dollars is on the order of ten million input tokens, with output multiplied by the completion ratio again — not a small amount, but always defer to the console's live ratio
-- The credit figures (50 signup / 250 invite) are not exposed by the public API: /api/status has neither quota_for_new_user nor quota_for_invitee. This page records what the site publishes; verify in the dashboard before doing the math
-- There is no daily check-in, so once credit runs out you must top up or wait for a campaign — no daily top-up like AgentRouter
-- This is a paid relay, not a community service: online top-ups are enabled (Stripe at ¥8) and most announcements are about top-up bonuses and ratio swings. Exhausted free credit means paying to continue
-- The FAQ's alternate domains ai.docode.pro / ai.docode.life and the announced hk.docode.cc all fail HTTPS (the first two have certificates issued only for docode.cc and therefore mismatch; hk fails the TLS handshake outright). This page lists only the verified api.docode.cc
-- Upstream instability is documented in the announcements: GPT plus "wiped out" then "temporarily revived", gpt-5.4 fully delisted, and on Sept 10 they were still saying "openai blew up, all of gpt is bad". Do not treat it as a stable production channel
 
 </details>
 
@@ -1586,7 +1586,7 @@ curl -s https://seekai.cc/v1/chat/completions \
 
 **Live data** (scraped from public APIs)
 
-- ⚠ No fresh API data for 208 hours; the info below is a snapshot from `2026-11-16 06:28 UTC`
+- ⚠ No fresh API data for 216 hours; the info below is a snapshot from `2026-11-16 06:28 UTC`
 - Panel version: `v0.0.0`
 - Daily check-in: ❌
 - Open signups: ✅ (The service turned off email/password signup, so you have to create the account with GitHub (a common anti-abuse measure).)

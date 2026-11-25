@@ -48,6 +48,130 @@
   },
   "sites": [
     {
+      "id": "docode",
+      "name": "DoCode",
+      "subtitle": "New API 中转站 · 注册送 50 站内刀，注册时填邀请码 1Qof 再加 250，首日 300 刀，Claude 与 GPT 都在架上",
+      "recommended": false,
+      "credits": {
+        "signup": 50,
+        "invite": 250,
+        "dailyCheckin": null,
+        "approx": false,
+        "unit": "site-usd"
+      },
+      "signupUrl": "https://docode.cc/register?aff=1Qof",
+      "inviteCode": "1Qof",
+      "homeUrl": "https://docode.cc",
+      "docsUrl": null,
+      "statusApi": "https://docode.cc/api/status",
+      "pricingApi": null,
+      "mirrors": [
+        {
+          "label": "直连美国",
+          "homeUrl": "https://api.docode.cc",
+          "signupUrl": "https://api.docode.cc/register?aff=1Qof",
+          "labelEn": "Direct to US"
+        }
+      ],
+      "tags": [
+        "New API",
+        "免费额度",
+        "Claude Code",
+        "Codex",
+        "Anthropic 兼容",
+        "OpenAI 兼容"
+      ],
+      "highlights": [
+        "⚠️ 别漏了邀请码：注册表单里的「邀请码」一栏填 1Qof，这 250 站内刀才会到账。从本页链接进去通常会自动带上，但提交前务必肉眼确认那一栏不是空的——没填就只有注册送的 50，事后补不上",
+        "注册送 50 站内刀，填了邀请码 1Qof 再加 250，首日 300 刀不用充值——注意这个「刀」是站内计价单位，不是美元，换算见下面的风险提示",
+        "Claude 和 GPT 同时在架：站内公告点名 cc / cc-kiro 分组的 sonnet-5、按次计费的 opus4.6，以及 GPT pro / plus、Grok、Gemini、fable-5，一把 Key 通吃，本页多数站只给其中一边",
+        "Anthropic 与 OpenAI 两条原生路由都开着（不带 key 探 /v1/messages 与 /v1/chat/completions 都回 New API 的 401 Invalid token），Claude Code 填 Base URL 就能直连，Codex CLI 走 /v1",
+        "面板公开配置里带着一键导入的 deeplink：CC Switch、Cherry Studio、DeepChat、OpenCat、Lobe Chat 等客户端可以从后台直接把 Key 推过去",
+        "主域名之外还有 api.docode.cc（公告写「直连美国」），实测两个入口都活着，主站进不去时可以换"
+      ],
+      "endpoints": {
+        "anthropic": "https://docode.cc",
+        "openai": "https://docode.cc/v1"
+      },
+      "modelsNote": "该站把定价页设成了登录可见（`/api/pricing` 返回 401，站点自己的导航配置里 pricing.requireAuth = true），本页不列模型表。站内公告点名在售的有 Claude（cc / cc-kiro 分组，sonnet-5 与按次计费的 opus4.6）、GPT pro / plus、Grok、Gemini、fable-5，另有独立的生图入口 img.docode.cc；完整清单、分组与倍率注册后在控制台「定价」页确认。",
+      "register": {
+        "methods": [
+          "邮箱 + 密码"
+        ],
+        "requirements": [
+          "邀请码 = 1Qof。从本页链接进入（带 ?aff=1Qof）通常会自动填进注册表单的「邀请码」栏，提交前自己再看一眼；空着就只拿得到注册送的 50 站内刀",
+          "250 站内刀在注册那一刻结算，注册完再去后台补填邀请码是没用的",
+          "只能邮箱 + 密码建号：公开配置里 github / linuxdo / discord / telegram / 微信 / OIDC / Passkey 的开关全是 false，没有第三方登录入口",
+          "注册要邮箱验证码（email_verification = true），并且开着 Cloudflare Turnstile 人机校验",
+          "主域名打不开时换 api.docode.cc，同一套账号与额度"
+        ]
+      },
+      "earnMore": [
+        "站内没有签到（面板自报 checkin_enabled = false），额度靠充值和不定时活动，公告里出现过「充 100 送 500 刀」这类限时加码",
+        "邀请他人注册也有奖励，公告里提过 VIP 用户拉新额度从 80 上调至 120，具体金额登录后台「邀请」页确认"
+      ],
+      "caveats": [
+        "站内的「刀」不是美元：面板公开的 price = 0.02 就是充值比例，1 元 = 50 站内刀（公告里说平时恢复 1:25），而本页其它站是 ¥7.3 ≈ $1。所以 300 站内刀对应的充值面值只有 ¥6~12，本页也没把它并进跨站的美元合计",
+        "扣费还要再乘站内倍率：公告里 GPT pro 分组长期在 7~14 倍之间随上游号商价格来回调（New API 口径：倍率 1 = $2 / 百万 tokens）。按 13 倍粗算，300 站内刀约合一千万 tokens 量级的输入额度，输出还要乘补全倍率——量不算小，但一切以控制台实时倍率为准",
+        "额度数字（注册 50 / 邀请 250）站点公开接口没有暴露：/api/status 里既没有 quota_for_new_user 也没有 quota_for_invitee，本页登记的是站内公示口径，进后台核对一遍再算账",
+        "没有每日签到，额度用完只能充值或等活动，不像 AgentRouter 那样能每天续命",
+        "这是付费中转站不是公益站：后台开着在线充值（Stripe 单价 ¥8），公告里大半是充值送额度与倍率涨跌，免费额度用完要付费才能续",
+        "站内 FAQ 公示的备用域名 ai.docode.pro / ai.docode.life 与公告里的 hk.docode.cc 目前 HTTPS 都连不上（前两个的证书只签了 docode.cc、域名对不上，hk 直接 TLS 握手失败），本页只登记实测可用的 api.docode.cc",
+        "上游波动写在公告里：GPT plus「全面阵亡」后又「暂时复活」、gpt-5.4 已彻底下架、9 月 10 日还在说「openai 炸了，gpt 全线都不太行」，别当稳定生产通道用"
+      ],
+      "community": [],
+      "en": {
+        "subtitle": "New API relay · 50 site-dollars on signup, 250 more with invite code 1Qof, 300 on day one — both Claude and GPT on the shelf",
+        "highlights": [
+          "⚠ Do not miss the invite code: type 1Qof into the \"Invite code\" field of the signup form or the 250 site-dollars will not arrive. Entering through this page's link normally fills it in automatically, but check that field with your own eyes before submitting — miss it and you only get the 50 signup bonus, which cannot be added later",
+          "50 site-dollars on signup, 250 more with invite code 1Qof — 300 on day one with no top-up. Note this \"dollar\" is the site's own unit, not USD; see the risk notes below",
+          "Claude and GPT are both online: announcements name cc / cc-kiro group sonnet-5 and pay-per-call opus4.6, plus GPT pro / plus, Grok, Gemini and fable-5. One key covers everything, whereas most services on this page offer only one side",
+          "Both native routes are open (anonymous probes of /v1/messages and /v1/chat/completions return New API's 401 Invalid token), so Claude Code connects directly with the Base URL and Codex CLI uses /v1",
+          "The panel's public config ships one-click deeplinks for CC Switch, Cherry Studio, DeepChat, OpenCat, Lobe Chat and more — push the key straight from the dashboard",
+          "Besides the main domain there is api.docode.cc (announcements call it \"direct to US\"); both were alive in testing, so switch over if the main site is unreachable"
+        ],
+        "modelsNote": "This service put its pricing page behind login (`/api/pricing` returns 401; its own nav config sets pricing.requireAuth = true), so this page does not list a model table. Announcements name Claude (cc / cc-kiro groups: sonnet-5 and pay-per-call opus4.6), GPT pro / plus, Grok, Gemini, fable-5, plus a separate image endpoint at img.docode.cc. Check the console's \"Pricing\" page after signing up for the full list, groups and ratios.",
+        "register": {
+          "requirements": [
+            "Invite code = 1Qof. Entering through this page's link (with ?aff=1Qof) normally fills the signup form's \"Invite code\" field automatically; double-check it yourself — leaving it empty gets you only the 50 signup site-dollars",
+            "The 250 site-dollars is settled at registration. Filling the invite code in from the dashboard afterwards does nothing",
+            "Email + password only: github / linuxdo / discord / telegram / WeChat / OIDC / Passkey are all false in the public config, so there is no third-party login",
+            "Registration needs an email verification code (email_verification = true) and passes Cloudflare Turnstile",
+            "If the main domain is unreachable, switch to api.docode.cc — same account, same credit"
+          ]
+        },
+        "earnMore": [
+          "There is no site check-in (the panel reports checkin_enabled = false); credit comes from top-ups and occasional campaigns — announcements have run limited promos like \"top up 100, get 500 dollars\"",
+          "Inviting others also pays; an announcement raised the VIP referral bonus from 80 to 120 — confirm the exact figure on the dashboard's \"Invite\" page"
+        ],
+        "caveats": [
+          "The site's \"dollar\" is not USD: the public price = 0.02 is the top-up ratio, 1 CNY = 50 site-dollars (announcements say it returns to 1:25 normally), while other services on this page give ¥7.3 ≈ $1. So 300 site-dollars corresponds to only ¥6–12 of face value, and this page does not fold it into the cross-service USD total",
+          "Billing is multiplied again by group ratios: announcements put the GPT pro group at 7–14× as upstream account prices move (New API convention: ratio 1 = $2 per million tokens). At roughly 13×, 300 site-dollars is on the order of ten million input tokens, with output multiplied by the completion ratio again — not a small amount, but always defer to the console's live ratio",
+          "The credit figures (50 signup / 250 invite) are not exposed by the public API: /api/status has neither quota_for_new_user nor quota_for_invitee. This page records what the site publishes; verify in the dashboard before doing the math",
+          "There is no daily check-in, so once credit runs out you must top up or wait for a campaign — no daily top-up like AgentRouter",
+          "This is a paid relay, not a community service: online top-ups are enabled (Stripe at ¥8) and most announcements are about top-up bonuses and ratio swings. Exhausted free credit means paying to continue",
+          "The FAQ's alternate domains ai.docode.pro / ai.docode.life and the announced hk.docode.cc all fail HTTPS (the first two have certificates issued only for docode.cc and therefore mismatch; hk fails the TLS handshake outright). This page lists only the verified api.docode.cc",
+          "Upstream instability is documented in the announcements: GPT plus \"wiped out\" then \"temporarily revived\", gpt-5.4 fully delisted, and on Sept 10 they were still saying \"openai blew up, all of gpt is bad\". Do not treat it as a stable production channel"
+        ]
+      },
+      "remarks": "表单要手填邀请码 1Qof，漏填只有 50 刀",
+      "faq": [
+        [
+          "DoCode 的邀请码怎么填？",
+          "注册表单里的「邀请码」一栏填 1Qof。从本页链接进入通常会自动填好，提交前再确认一次不是空的——空着只有注册送的 50 站内刀，250 邀请额度事后补不上。"
+        ],
+        [
+          "DoCode 首日 300 站内刀值多少钱？",
+          "站内「刀」不是美元：面板 price = 0.02，即 1 元 = 50 站内刀（公告说平时恢复 1:25），300 刀约合充值面值 ¥6~12，本页不把它折成美元。"
+        ],
+        [
+          "DoCode 用什么协议接入？",
+          "Anthropic 端点 https://docode.cc（不带 /v1），OpenAI 端点 https://docode.cc/v1；主域名打不开时换 api.docode.cc，同一套账号和额度。"
+        ]
+      ],
+      "reviewedAt": "2026-11-02"
+    },
+    {
       "id": "agentrouter",
       "name": "AgentRouter",
       "subtitle": "AI Coding 公益站 · 注册即送额度，签到每日续命",
@@ -658,130 +782,6 @@
         ]
       ],
       "reviewedAt": "2026-11-10"
-    },
-    {
-      "id": "docode",
-      "name": "DoCode",
-      "subtitle": "New API 中转站 · 注册送 50 站内刀，注册时填邀请码 1Qof 再加 250，首日 300 刀，Claude 与 GPT 都在架上",
-      "recommended": false,
-      "credits": {
-        "signup": 50,
-        "invite": 250,
-        "dailyCheckin": null,
-        "approx": false,
-        "unit": "site-usd"
-      },
-      "signupUrl": "https://docode.cc/register?aff=1Qof",
-      "inviteCode": "1Qof",
-      "homeUrl": "https://docode.cc",
-      "docsUrl": null,
-      "statusApi": "https://docode.cc/api/status",
-      "pricingApi": null,
-      "mirrors": [
-        {
-          "label": "直连美国",
-          "homeUrl": "https://api.docode.cc",
-          "signupUrl": "https://api.docode.cc/register?aff=1Qof",
-          "labelEn": "Direct to US"
-        }
-      ],
-      "tags": [
-        "New API",
-        "免费额度",
-        "Claude Code",
-        "Codex",
-        "Anthropic 兼容",
-        "OpenAI 兼容"
-      ],
-      "highlights": [
-        "⚠️ 别漏了邀请码：注册表单里的「邀请码」一栏填 1Qof，这 250 站内刀才会到账。从本页链接进去通常会自动带上，但提交前务必肉眼确认那一栏不是空的——没填就只有注册送的 50，事后补不上",
-        "注册送 50 站内刀，填了邀请码 1Qof 再加 250，首日 300 刀不用充值——注意这个「刀」是站内计价单位，不是美元，换算见下面的风险提示",
-        "Claude 和 GPT 同时在架：站内公告点名 cc / cc-kiro 分组的 sonnet-5、按次计费的 opus4.6，以及 GPT pro / plus、Grok、Gemini、fable-5，一把 Key 通吃，本页多数站只给其中一边",
-        "Anthropic 与 OpenAI 两条原生路由都开着（不带 key 探 /v1/messages 与 /v1/chat/completions 都回 New API 的 401 Invalid token），Claude Code 填 Base URL 就能直连，Codex CLI 走 /v1",
-        "面板公开配置里带着一键导入的 deeplink：CC Switch、Cherry Studio、DeepChat、OpenCat、Lobe Chat 等客户端可以从后台直接把 Key 推过去",
-        "主域名之外还有 api.docode.cc（公告写「直连美国」），实测两个入口都活着，主站进不去时可以换"
-      ],
-      "endpoints": {
-        "anthropic": "https://docode.cc",
-        "openai": "https://docode.cc/v1"
-      },
-      "modelsNote": "该站把定价页设成了登录可见（`/api/pricing` 返回 401，站点自己的导航配置里 pricing.requireAuth = true），本页不列模型表。站内公告点名在售的有 Claude（cc / cc-kiro 分组，sonnet-5 与按次计费的 opus4.6）、GPT pro / plus、Grok、Gemini、fable-5，另有独立的生图入口 img.docode.cc；完整清单、分组与倍率注册后在控制台「定价」页确认。",
-      "register": {
-        "methods": [
-          "邮箱 + 密码"
-        ],
-        "requirements": [
-          "邀请码 = 1Qof。从本页链接进入（带 ?aff=1Qof）通常会自动填进注册表单的「邀请码」栏，提交前自己再看一眼；空着就只拿得到注册送的 50 站内刀",
-          "250 站内刀在注册那一刻结算，注册完再去后台补填邀请码是没用的",
-          "只能邮箱 + 密码建号：公开配置里 github / linuxdo / discord / telegram / 微信 / OIDC / Passkey 的开关全是 false，没有第三方登录入口",
-          "注册要邮箱验证码（email_verification = true），并且开着 Cloudflare Turnstile 人机校验",
-          "主域名打不开时换 api.docode.cc，同一套账号与额度"
-        ]
-      },
-      "earnMore": [
-        "站内没有签到（面板自报 checkin_enabled = false），额度靠充值和不定时活动，公告里出现过「充 100 送 500 刀」这类限时加码",
-        "邀请他人注册也有奖励，公告里提过 VIP 用户拉新额度从 80 上调至 120，具体金额登录后台「邀请」页确认"
-      ],
-      "caveats": [
-        "站内的「刀」不是美元：面板公开的 price = 0.02 就是充值比例，1 元 = 50 站内刀（公告里说平时恢复 1:25），而本页其它站是 ¥7.3 ≈ $1。所以 300 站内刀对应的充值面值只有 ¥6~12，本页也没把它并进跨站的美元合计",
-        "扣费还要再乘站内倍率：公告里 GPT pro 分组长期在 7~14 倍之间随上游号商价格来回调（New API 口径：倍率 1 = $2 / 百万 tokens）。按 13 倍粗算，300 站内刀约合一千万 tokens 量级的输入额度，输出还要乘补全倍率——量不算小，但一切以控制台实时倍率为准",
-        "额度数字（注册 50 / 邀请 250）站点公开接口没有暴露：/api/status 里既没有 quota_for_new_user 也没有 quota_for_invitee，本页登记的是站内公示口径，进后台核对一遍再算账",
-        "没有每日签到，额度用完只能充值或等活动，不像 AgentRouter 那样能每天续命",
-        "这是付费中转站不是公益站：后台开着在线充值（Stripe 单价 ¥8），公告里大半是充值送额度与倍率涨跌，免费额度用完要付费才能续",
-        "站内 FAQ 公示的备用域名 ai.docode.pro / ai.docode.life 与公告里的 hk.docode.cc 目前 HTTPS 都连不上（前两个的证书只签了 docode.cc、域名对不上，hk 直接 TLS 握手失败），本页只登记实测可用的 api.docode.cc",
-        "上游波动写在公告里：GPT plus「全面阵亡」后又「暂时复活」、gpt-5.4 已彻底下架、9 月 10 日还在说「openai 炸了，gpt 全线都不太行」，别当稳定生产通道用"
-      ],
-      "community": [],
-      "en": {
-        "subtitle": "New API relay · 50 site-dollars on signup, 250 more with invite code 1Qof, 300 on day one — both Claude and GPT on the shelf",
-        "highlights": [
-          "⚠ Do not miss the invite code: type 1Qof into the \"Invite code\" field of the signup form or the 250 site-dollars will not arrive. Entering through this page's link normally fills it in automatically, but check that field with your own eyes before submitting — miss it and you only get the 50 signup bonus, which cannot be added later",
-          "50 site-dollars on signup, 250 more with invite code 1Qof — 300 on day one with no top-up. Note this \"dollar\" is the site's own unit, not USD; see the risk notes below",
-          "Claude and GPT are both online: announcements name cc / cc-kiro group sonnet-5 and pay-per-call opus4.6, plus GPT pro / plus, Grok, Gemini and fable-5. One key covers everything, whereas most services on this page offer only one side",
-          "Both native routes are open (anonymous probes of /v1/messages and /v1/chat/completions return New API's 401 Invalid token), so Claude Code connects directly with the Base URL and Codex CLI uses /v1",
-          "The panel's public config ships one-click deeplinks for CC Switch, Cherry Studio, DeepChat, OpenCat, Lobe Chat and more — push the key straight from the dashboard",
-          "Besides the main domain there is api.docode.cc (announcements call it \"direct to US\"); both were alive in testing, so switch over if the main site is unreachable"
-        ],
-        "modelsNote": "This service put its pricing page behind login (`/api/pricing` returns 401; its own nav config sets pricing.requireAuth = true), so this page does not list a model table. Announcements name Claude (cc / cc-kiro groups: sonnet-5 and pay-per-call opus4.6), GPT pro / plus, Grok, Gemini, fable-5, plus a separate image endpoint at img.docode.cc. Check the console's \"Pricing\" page after signing up for the full list, groups and ratios.",
-        "register": {
-          "requirements": [
-            "Invite code = 1Qof. Entering through this page's link (with ?aff=1Qof) normally fills the signup form's \"Invite code\" field automatically; double-check it yourself — leaving it empty gets you only the 50 signup site-dollars",
-            "The 250 site-dollars is settled at registration. Filling the invite code in from the dashboard afterwards does nothing",
-            "Email + password only: github / linuxdo / discord / telegram / WeChat / OIDC / Passkey are all false in the public config, so there is no third-party login",
-            "Registration needs an email verification code (email_verification = true) and passes Cloudflare Turnstile",
-            "If the main domain is unreachable, switch to api.docode.cc — same account, same credit"
-          ]
-        },
-        "earnMore": [
-          "There is no site check-in (the panel reports checkin_enabled = false); credit comes from top-ups and occasional campaigns — announcements have run limited promos like \"top up 100, get 500 dollars\"",
-          "Inviting others also pays; an announcement raised the VIP referral bonus from 80 to 120 — confirm the exact figure on the dashboard's \"Invite\" page"
-        ],
-        "caveats": [
-          "The site's \"dollar\" is not USD: the public price = 0.02 is the top-up ratio, 1 CNY = 50 site-dollars (announcements say it returns to 1:25 normally), while other services on this page give ¥7.3 ≈ $1. So 300 site-dollars corresponds to only ¥6–12 of face value, and this page does not fold it into the cross-service USD total",
-          "Billing is multiplied again by group ratios: announcements put the GPT pro group at 7–14× as upstream account prices move (New API convention: ratio 1 = $2 per million tokens). At roughly 13×, 300 site-dollars is on the order of ten million input tokens, with output multiplied by the completion ratio again — not a small amount, but always defer to the console's live ratio",
-          "The credit figures (50 signup / 250 invite) are not exposed by the public API: /api/status has neither quota_for_new_user nor quota_for_invitee. This page records what the site publishes; verify in the dashboard before doing the math",
-          "There is no daily check-in, so once credit runs out you must top up or wait for a campaign — no daily top-up like AgentRouter",
-          "This is a paid relay, not a community service: online top-ups are enabled (Stripe at ¥8) and most announcements are about top-up bonuses and ratio swings. Exhausted free credit means paying to continue",
-          "The FAQ's alternate domains ai.docode.pro / ai.docode.life and the announced hk.docode.cc all fail HTTPS (the first two have certificates issued only for docode.cc and therefore mismatch; hk fails the TLS handshake outright). This page lists only the verified api.docode.cc",
-          "Upstream instability is documented in the announcements: GPT plus \"wiped out\" then \"temporarily revived\", gpt-5.4 fully delisted, and on Sept 10 they were still saying \"openai blew up, all of gpt is bad\". Do not treat it as a stable production channel"
-        ]
-      },
-      "remarks": "表单要手填邀请码 1Qof，漏填只有 50 刀",
-      "faq": [
-        [
-          "DoCode 的邀请码怎么填？",
-          "注册表单里的「邀请码」一栏填 1Qof。从本页链接进入通常会自动填好，提交前再确认一次不是空的——空着只有注册送的 50 站内刀，250 邀请额度事后补不上。"
-        ],
-        [
-          "DoCode 首日 300 站内刀值多少钱？",
-          "站内「刀」不是美元：面板 price = 0.02，即 1 元 = 50 站内刀（公告说平时恢复 1:25），300 刀约合充值面值 ¥6~12，本页不把它折成美元。"
-        ],
-        [
-          "DoCode 用什么协议接入？",
-          "Anthropic 端点 https://docode.cc（不带 /v1），OpenAI 端点 https://docode.cc/v1；主域名打不开时换 api.docode.cc，同一套账号和额度。"
-        ]
-      ],
-      "reviewedAt": "2026-11-02"
     },
     {
       "id": "nianhua",
