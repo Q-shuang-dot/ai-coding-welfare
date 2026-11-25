@@ -8,7 +8,7 @@
   <img src="https://img.shields.io/badge/%E6%94%B6%E5%BD%95%E7%A6%8F%E5%88%A9%E7%AB%99-13%20%E4%B8%AA-blue" alt="收录福利站">
   <img src="https://img.shields.io/badge/%E5%9C%A8%E7%BA%BF-13%2F13-brightgreen" alt="在线">
   <img src="https://img.shields.io/badge/%E9%A6%96%E6%97%A5%E5%8F%AF%E5%BE%97-%E6%9C%80%E9%AB%98%20%241300-success" alt="首日可得">
-  <img src="https://img.shields.io/badge/%E6%95%B0%E6%8D%AE%E6%9B%B4%E6%96%B0-2026--11--25%2008.32%20UTC-informational" alt="数据更新">
+  <img src="https://img.shields.io/badge/%E6%95%B0%E6%8D%AE%E6%9B%B4%E6%96%B0-2026--11--25%2021.41%20UTC-informational" alt="数据更新">
 </p>
 
 <p align="center">
@@ -56,7 +56,7 @@
 | **Long的AI** | 🟢 在线 | 免费 | 无签到 | Anthropic + OpenAI | <a href="https://aaawinn.xyz/sign-up?aff=ijFL" target="_blank" rel="noopener">GitHub 注册 →</a> | `ijFL` |
 | **新疆幻城网安** | 🟢 在线 | **30000 站内刀** | 支持签到 | Anthropic + OpenAI | <a href="https://api.hcnsec.cn/sign-up?aff=3J8z" target="_blank" rel="noopener">点此注册 →</a> | `3J8z` |
 
-> 「首日可得」= 注册基础额度 + 本页邀请链接额度 + 当天能领的签到额度（每日重置额度池的站点按一天的池子算）；模型、价格、在线状态由脚本抓取站点公开接口自动生成，最后更新：`2026-11-25 08:32 UTC`。
+> 「首日可得」= 注册基础额度 + 本页邀请链接额度 + 当天能领的签到额度（每日重置额度池的站点按一天的池子算）；模型、价格、在线状态由脚本抓取站点公开接口自动生成，最后更新：`2026-11-25 21:41 UTC`。
 >
 > 「邀请码」列写了码的站（DoCode `1Qof`、年华 API `aonj`、肖恩AI `MVU8GX`、api456.me `zmza`、SeekAi `dDJy`、Long的AI `ijFL`、新疆幻城网安 `3J8z`），注册表单里有一栏要**自己填**，漏填就只拿得到注册基础额度、事后补不上；其余站写 — 是因为邀请额度由链接自带，不用手打。
 >
@@ -117,7 +117,7 @@ powershell -ExecutionPolicy Bypass -File scripts/quickstart.ps1
 - 每日签到：❌
 - 开放注册：✅
 - 登录方式：账号密码
-- 接口延迟：3162 ms
+- 接口延迟：1374 ms
 
 **镜像 / 备用入口**
 
@@ -246,12 +246,12 @@ curl -s https://docode.cc/v1/chat/completions \
 
 **实时数据**（自动抓取站点公开接口）
 
-- ⚠ 接口已连续 366 小时没抓到新数据，下列信息为 `2026-11-10 02:47 UTC` 的快照
+- ⚠ 接口已连续 379 小时没抓到新数据，下列信息为 `2026-11-10 02:47 UTC` 的快照
 - 站点名称：**Agent Router**
 - 面板版本：`init-20261016-861e4557`
 - 邀请他人可得：**$50**
 - 登录方式：GitHub / LinuxDO
-- 接口延迟：263 ms
+- 接口延迟：261 ms
 
 **镜像 / 备用入口**
 
@@ -387,7 +387,7 @@ curl -s https://agentrouter.org/v1/chat/completions \
 
 **实时数据**（自动抓取站点公开接口）
 
-- 接口延迟：2399 ms
+- 接口延迟：691 ms
 
 > 模型清单要登录后才拿得到：公开的 /api/v1/model-plaza 返回 404（面板 model_plaza_enabled = false），/v1/models 匿名请求只回 401。首页自报接入 OpenAI、Claude、Gemini、Grok、DeepSeek、GLM、Kimi、MiniMax 八个家族，具体模型名、倍率与分组价以登录后的控制台为准。
 
@@ -504,11 +504,11 @@ curl -s https://redapi.vip/v1/chat/completions \
 
 **实时数据**（自动抓取站点公开接口）
 
-- ⚠ 接口已连续 143 小时没抓到新数据，下列信息为 `2026-11-19 09:27 UTC` 的快照
+- ⚠ 接口已连续 156 小时没抓到新数据，下列信息为 `2026-11-19 09:27 UTC` 的快照
 - 站点名称：**星驰管家**
 - 每日签到：✅
 - 登录方式：Telegram
-- 接口延迟：2778 ms
+- 接口延迟：1185 ms
 
 **当前可用模型**
 
@@ -582,7 +582,7 @@ curl -s https://redapi.vip/v1/chat/completions \
 - 每日签到：❌
 - 开放注册：✅
 - 登录方式：账号密码
-- 接口延迟：3089 ms
+- 接口延迟：1502 ms
 
 **当前可用模型**
 
@@ -866,7 +866,7 @@ curl -s https://api520.pro/v1/chat/completions \
 - 每日签到：✅
 - 开放注册：✅
 - 登录方式：账号密码
-- 接口延迟：3252 ms
+- 接口延迟：1699 ms
 
 **镜像 / 备用入口**
 
@@ -997,7 +997,7 @@ curl -s https://ai.dahanxingbang.dpdns.org/v1/chat/completions \
 - 每日签到：✅
 - 开放注册：✅
 - 登录方式：账号密码
-- 接口延迟：3264 ms
+- 接口延迟：1693 ms
 
 **当前可用模型**
 
@@ -1270,7 +1270,7 @@ curl -s https://us-3.nianhuaapi.com/v1/chat/completions \
 
 **实时数据**（自动抓取站点公开接口）
 
-- 接口延迟：3298 ms
+- 接口延迟：1754 ms
 
 > 2026-09-20 公开定价页返回 191 个模型，含 stepfun、deepseek-v4.1-flash、gpt-5.5、gemini-2.5-flash、claude-sonnet-4-6、kimi-k2.5 等。注意返回里同时混有大量免费与付费条目，模型可用性与倍率以控制台为准。
 
@@ -1387,7 +1387,7 @@ curl -s https://free.supxh.xin/v1/chat/completions \
 - 每日签到：✅
 - 开放注册：✅
 - 登录方式：账号密码
-- 接口延迟：3322 ms
+- 接口延迟：1900 ms
 
 > 模型清单与价格需登录后在控制台查看（/api/pricing 匿名请求需登录），本页不列模型表。
 
@@ -1484,7 +1484,7 @@ curl -s https://api456.me/v1/chat/completions \
 
 **实时数据**（自动抓取站点公开接口）
 
-- 接口延迟：4134 ms
+- 接口延迟：2849 ms
 
 > 模型清单与价格需登录后在控制台「模型列表」查看（按每百万 Tokens 计价，可按厂商 / 上下文窗口筛选），站点没有公开的模型与定价接口，本页不做承诺。
 
@@ -1553,7 +1553,7 @@ curl -s https://api456.me/v1/chat/completions \
 - 每日签到：✅
 - 开放注册：✅
 - 登录方式：GitHub / Telegram / 账号密码
-- 接口延迟：3589 ms
+- 接口延迟：2303 ms
 
 **镜像 / 备用入口**
 
@@ -1653,13 +1653,13 @@ curl -s https://seekai.cc/v1/chat/completions \
 
 **实时数据**（自动抓取站点公开接口）
 
-- ⚠ 接口已连续 218 小时没抓到新数据，下列信息为 `2026-11-16 06:28 UTC` 的快照
+- ⚠ 接口已连续 231 小时没抓到新数据，下列信息为 `2026-11-16 06:28 UTC` 的快照
 - 站点名称：**Long的AI**
 - 面板版本：`v0.0.0`
 - 每日签到：❌
 - 开放注册：✅（站点关掉了邮箱密码注册，得用 GitHub 登录建号（防批量注册的常规做法）。）
 - 登录方式：GitHub
-- 接口延迟：3648 ms
+- 接口延迟：2453 ms
 
 > 站点的模型价格接口不公开（/api/pricing 匿名请求返回 401，要登录管理页才看得到），白嫖分组的模型来源公示在 https://aaawinn.xyz/public-pool；站方公告提到白嫖分组的 GPT 系模型只支持 Anthropic 协议对接，OpenAI 协议有兼容问题。
 
@@ -1789,11 +1789,11 @@ curl -s https://aaawinn.xyz/v1/chat/completions \
 **实时数据**（自动抓取站点公开接口）
 
 - 站点名称：**新疆幻城网安科技公益大模型安全网关**
-- 面板版本：`v1.0.0-rc.51-hc3`
+- 面板版本：`v1.0.0-rc.51-hc4`
 - 每日签到：✅
 - 开放注册：✅
 - 登录方式：Passkey / 账号密码
-- 接口延迟：4735 ms
+- 接口延迟：8848 ms
 
 > 模型价格页需要登录（/api/pricing 匿名请求返回 401），不过站内公告里的名字可以直接抄：Qwen3.8-Flash-Next（0 元一次）、DeepSeek-V4.1-Flash 系（付费分组约 2 元一次，vision-exp 版本免费用户可用）、longcat-2.0（一次 1 元）、glm-5.3-flash、qwen3.8-27b、step 系、spark-x2.5、Qwen3.6-35B-A3B，站方还开源了 SparkMuse-4B 与 Qing-Sec-20B，均可在 ModelScope 搜到（hcnote/SparkMuse-4B）。
 
@@ -1910,7 +1910,7 @@ curl -s https://api.hcnsec.cn/v1/chat/completions \
 
 ## 🔔 额度变了，这里会通知你
 
-CI 每 6 小时抓一次各站接口，与上一次快照逐字段比对，目前已攒下 133 个样本、覆盖约 63.5 天。额度调整、掉线与恢复、模型上下线、价格变动都会自动记一条：
+CI 每 6 小时抓一次各站接口，与上一次快照逐字段比对，目前已攒下 133 个样本、覆盖约 64 天。额度调整、掉线与恢复、模型上下线、价格变动都会自动记一条：
 
 - 点仓库右上角 **Watch → Custom → Releases**：有重要变动时 GitHub 直接发邮件
 
