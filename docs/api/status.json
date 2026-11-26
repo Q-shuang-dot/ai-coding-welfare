@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-26T08:16:41.121Z",
+  "generatedAt": "2026-11-26T21:31:26.870Z",
   "source": "https://github.com/Q-shuang-dot/ai-coding-welfare",
   "sites": [
     {
@@ -8,11 +8,11 @@
       "name": "DoCode",
       "online": true,
       "probeBlocked": false,
-      "latencyMs": 1846,
+      "latencyMs": 1503,
       "models": 0,
-      "checkedAt": "2026-11-26T08:16:30.511Z",
+      "checkedAt": "2026-11-26T21:31:15.317Z",
       "uptime7d": 100,
-      "samples": 19,
+      "samples": 18,
       "page": "https://q-shuang-dot.github.io/ai-coding-welfare/sites/docode/"
     },
     {
@@ -20,11 +20,11 @@
       "name": "AgentRouter",
       "online": true,
       "probeBlocked": false,
-      "latencyMs": 248,
+      "latencyMs": 314,
       "models": 2,
-      "checkedAt": "2026-11-26T08:16:35.098Z",
+      "checkedAt": "2026-11-26T21:31:20.242Z",
       "uptime7d": 100,
-      "samples": 19,
+      "samples": 18,
       "page": "https://q-shuang-dot.github.io/ai-coding-welfare/sites/agentrouter/"
     },
     {
@@ -32,11 +32,11 @@
       "name": "Redapi",
       "online": true,
       "probeBlocked": false,
-      "latencyMs": 910,
+      "latencyMs": 992,
       "models": 0,
-      "checkedAt": "2026-11-26T08:16:29.455Z",
+      "checkedAt": "2026-11-26T21:31:14.671Z",
       "uptime7d": 100,
-      "samples": 9,
+      "samples": 10,
       "page": "https://q-shuang-dot.github.io/ai-coding-welfare/sites/redapi/"
     },
     {
@@ -44,11 +44,11 @@
       "name": "星驰管家",
       "online": true,
       "probeBlocked": false,
-      "latencyMs": 1258,
+      "latencyMs": 1087,
       "models": 1,
-      "checkedAt": "2026-11-26T08:16:29.804Z",
+      "checkedAt": "2026-11-26T21:31:14.767Z",
       "uptime7d": 100,
-      "samples": 19,
+      "samples": 18,
       "page": "https://q-shuang-dot.github.io/ai-coding-welfare/sites/xingchi/"
     },
     {
@@ -56,11 +56,11 @@
       "name": "熊猫API",
       "online": true,
       "probeBlocked": false,
-      "latencyMs": 1509,
-      "models": 154,
-      "checkedAt": "2026-11-26T08:16:30.064Z",
+      "latencyMs": 1734,
+      "models": 155,
+      "checkedAt": "2026-11-26T21:31:15.422Z",
       "uptime7d": 100,
-      "samples": 19,
+      "samples": 18,
       "page": "https://q-shuang-dot.github.io/ai-coding-welfare/sites/api520/"
     },
     {
@@ -68,11 +68,11 @@
       "name": "大汉 API",
       "online": true,
       "probeBlocked": false,
-      "latencyMs": 1510,
+      "latencyMs": 1885,
       "models": 0,
-      "checkedAt": "2026-11-26T08:16:35.087Z",
+      "checkedAt": "2026-11-26T21:31:20.536Z",
       "uptime7d": 100,
-      "samples": 19,
+      "samples": 18,
       "page": "https://q-shuang-dot.github.io/ai-coding-welfare/sites/dahanxingbang/"
     },
     {
@@ -80,11 +80,11 @@
       "name": "年华 API",
       "online": true,
       "probeBlocked": false,
-      "latencyMs": 1893,
+      "latencyMs": 1764,
       "models": 133,
-      "checkedAt": "2026-11-26T08:16:30.449Z",
+      "checkedAt": "2026-11-26T21:31:15.462Z",
       "uptime7d": 100,
-      "samples": 19,
+      "samples": 18,
       "page": "https://q-shuang-dot.github.io/ai-coding-welfare/sites/nianhua/"
     },
     {
@@ -92,11 +92,11 @@
       "name": "肖恩AI",
       "online": true,
       "probeBlocked": false,
-      "latencyMs": 1993,
+      "latencyMs": 2212,
       "models": 0,
-      "checkedAt": "2026-11-26T08:16:30.672Z",
+      "checkedAt": "2026-11-26T21:31:15.953Z",
       "uptime7d": 100,
-      "samples": 19,
+      "samples": 18,
       "page": "https://q-shuang-dot.github.io/ai-coding-welfare/sites/supxh/"
     },
     {
@@ -104,11 +104,11 @@
       "name": "api456.me",
       "online": true,
       "probeBlocked": false,
-      "latencyMs": 2445,
+      "latencyMs": 2227,
       "models": 0,
-      "checkedAt": "2026-11-26T08:16:30.999Z",
+      "checkedAt": "2026-11-26T21:31:15.917Z",
       "uptime7d": 100,
-      "samples": 19,
+      "samples": 18,
       "page": "https://q-shuang-dot.github.io/ai-coding-welfare/sites/api456/"
     },
     {
@@ -116,11 +116,11 @@
       "name": "Matrix",
       "online": true,
       "probeBlocked": false,
-      "latencyMs": 3022,
+      "latencyMs": 2914,
       "models": 0,
-      "checkedAt": "2026-11-26T08:16:31.578Z",
+      "checkedAt": "2026-11-26T21:31:16.604Z",
       "uptime7d": 100,
-      "samples": 19,
+      "samples": 18,
       "page": "https://q-shuang-dot.github.io/ai-coding-welfare/sites/matrix/"
     },
     {
@@ -128,11 +128,11 @@
       "name": "SeekAi",
       "online": true,
       "probeBlocked": false,
-      "latencyMs": 2485,
+      "latencyMs": 2642,
       "models": 0,
-      "checkedAt": "2026-11-26T08:16:31.042Z",
-      "uptime7d": 94.7,
-      "samples": 19,
+      "checkedAt": "2026-11-26T21:31:16.335Z",
+      "uptime7d": 94.4,
+      "samples": 18,
       "page": "https://q-shuang-dot.github.io/ai-coding-welfare/sites/seekai/"
     },
     {
@@ -140,11 +140,11 @@
       "name": "Long的AI",
       "online": true,
       "probeBlocked": false,
-      "latencyMs": 2577,
+      "latencyMs": 2763,
       "models": 0,
-      "checkedAt": "2026-11-26T08:16:31.135Z",
+      "checkedAt": "2026-11-26T21:31:16.457Z",
       "uptime7d": 100,
-      "samples": 19,
+      "samples": 18,
       "page": "https://q-shuang-dot.github.io/ai-coding-welfare/sites/aaawinn/"
     },
     {
@@ -152,11 +152,11 @@
       "name": "新疆幻城网安",
       "online": true,
       "probeBlocked": false,
-      "latencyMs": 6333,
+      "latencyMs": 4307,
       "models": 0,
-      "checkedAt": "2026-11-26T08:16:34.892Z",
+      "checkedAt": "2026-11-26T21:31:18.314Z",
       "uptime7d": 100,
-      "samples": 19,
+      "samples": 18,
       "page": "https://q-shuang-dot.github.io/ai-coding-welfare/sites/hcnsec/"
     }
   ]
