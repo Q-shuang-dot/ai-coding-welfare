@@ -5,8 +5,8 @@
 <p align="center">Free credits · a collection of relay and community services for free Claude Code / Codex / Cursor quota · daily check-ins</p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Tracked%20services-13-blue" alt="Tracked services">
-  <img src="https://img.shields.io/badge/Online-13%2F13-brightgreen" alt="Online">
+  <img src="https://img.shields.io/badge/Tracked%20services-14-blue" alt="Tracked services">
+  <img src="https://img.shields.io/badge/Online-14%2F14-brightgreen" alt="Online">
   <img src="https://img.shields.io/badge/Best%20first%20day-%241300-success" alt="Best first day">
   <img src="https://img.shields.io/badge/Data%20updated-2026--11--27%2008.32%20UTC-informational" alt="Data updated">
 </p>
@@ -24,7 +24,8 @@
   <a href="https://matrix.mzsjai.com/login?redirect=%2Fapp%2Fgrowth%3FinviteCode%3DMX3CDVGATLJW"><b>Matrix sign up</b></a> ·
   <a href="https://seekai.cc/sign-up?aff=dDJy"><b>SeekAi sign up</b></a> ·
   <a href="https://aaawinn.xyz/sign-up?aff=ijFL"><b>Long's AI sign up</b></a> ·
-  <a href="https://api.hcnsec.cn/sign-up?aff=3J8z"><b>Xinjiang Huancheng Security sign up</b></a>
+  <a href="https://api.hcnsec.cn/sign-up?aff=3J8z"><b>Xinjiang Huancheng Security sign up</b></a> ·
+  <a href="https://relaycore.cn/register?aff=YJ6EYCK6XFWF"><b>RelayCore sign up</b></a>
 </p>
 
 ---
@@ -55,12 +56,13 @@
 | **SeekAi** | 🟢 Online | Posted on site | Daily check-in | OpenAI | <a href="https://seekai.cc/sign-up?aff=dDJy" target="_blank" rel="noopener">Sign up →</a> | `dDJy` |
 | **Long's AI** | 🟢 Online | Free | No check-in | Anthropic + OpenAI | <a href="https://aaawinn.xyz/sign-up?aff=ijFL" target="_blank" rel="noopener">GitHub sign up →</a> | `ijFL` |
 | **Xinjiang Huancheng Security** | 🟢 Online | **30000 site-USD** | Daily check-in | Anthropic + OpenAI | <a href="https://api.hcnsec.cn/sign-up?aff=3J8z" target="_blank" rel="noopener">Sign up →</a> | `3J8z` |
+| **RelayCore** | 🟢 Online | Posted on site | — | Anthropic + OpenAI | <a href="https://relaycore.cn/register?aff=YJ6EYCK6XFWF" target="_blank" rel="noopener">Sign up →</a> | — |
 
 > "First day" = signup bonus + invite bonus from this page + whatever check-in pays out on day one (services with a daily reset pool count a single day's pool). Models, prices and status are scraped from each service's public API. Last update: `2026-11-27 08:32 UTC`.
 >
 > Services with a code in the "Invite code" column (DoCode `1Qof`, NianHua API `aonj`, ShawnAI `MVU8GX`, api456.me `zmza`, SeekAi `dDJy`, Long's AI `ijFL`, Xinjiang Huancheng Security `3J8z`) require **typing the code yourself** in the signup form. Miss it and you only get the base signup bonus — it cannot be added afterwards. A dash means the invite bonus travels inside the link and needs no typing.
 >
-> Signing up for all 7 USD-priced services that still accept new users gets you roughly **$1530** on day one; DoCode separately credits 300 site-USD, Panda API separately credits 200 credit, ShawnAI separately credits ≈14000 pts, Matrix separately credits 2600 pts, Long's AI separately credits Free, Xinjiang Huancheng Security separately credits 30000 site-USD — each service prices in its own unit with no published USD conversion, so those are left out of this total.
+> Signing up for all 8 USD-priced services that still accept new users gets you roughly **$1530** on day one; DoCode separately credits 300 site-USD, Panda API separately credits 200 credit, ShawnAI separately credits ≈14000 pts, Matrix separately credits 2600 pts, Long's AI separately credits Free, Xinjiang Huancheng Security separately credits 30000 site-USD — each service prices in its own unit with no published USD conversion, so those are left out of this total.
 >
 > 🟡 3 services have not returned fresh API data for over 48 hours. Details show the last successful snapshot; online status reflects whether the signup page actually loads.
 >
@@ -234,7 +236,7 @@ curl -s https://docode.cc/v1/chat/completions \
 
 **Live data** (scraped from public APIs)
 
-- ⚠ No fresh API data for 414 hours; the info below is a snapshot from `2026-11-10 02:47 UTC`
+- ⚠ No fresh API data for 419 hours; the info below is a snapshot from `2026-11-10 02:47 UTC`
 - Panel name: **Agent Router**
 - Panel version: `init-20261016-861e4557`
 - Referral bonus: **$50**
@@ -480,7 +482,7 @@ curl -s https://redapi.vip/v1/chat/completions \
 
 **Live data** (scraped from public APIs)
 
-- ⚠ No fresh API data for 191 hours; the info below is a snapshot from `2026-11-19 09:27 UTC`
+- ⚠ No fresh API data for 196 hours; the info below is a snapshot from `2026-11-19 09:27 UTC`
 - Daily check-in: ✅
 - Login methods: Telegram
 - API latency: 1395 ms
@@ -1587,7 +1589,7 @@ curl -s https://seekai.cc/v1/chat/completions \
 
 **Live data** (scraped from public APIs)
 
-- ⚠ No fresh API data for 266 hours; the info below is a snapshot from `2026-11-16 06:28 UTC`
+- ⚠ No fresh API data for 271 hours; the info below is a snapshot from `2026-11-16 06:28 UTC`
 - Panel version: `v0.0.0`
 - Daily check-in: ❌
 - Open signups: ✅ (The service turned off email/password signup, so you have to create the account with GitHub (a common anti-abuse measure).)
@@ -1808,6 +1810,116 @@ curl -s https://api.hcnsec.cn/v1/chat/completions \
 - QQ group: 943554225
 - Tutorial: https://hcnote.cn/2026/07/12/12831.html
 - Free-stuff directory: https://link.hcnsec.cn (the site marks it as a non-site link)
+
+</details>
+
+---
+
+<a id="site-relaycore"></a>
+<details><summary><b>🟢 RelayCore</b></summary>
+
+> Sub2API AI gateway · GPT groups from 0.05x, Claude from 0.06x, native OpenAI and Anthropic routes, works with Claude Code and Codex
+
+<a href="https://relaycore.cn/register?aff=YJ6EYCK6XFWF" target="_blank" rel="noopener"><img src="https://img.shields.io/badge/Sign%20up-RelayCore-brightgreen?style=for-the-badge" alt="Sign up for RelayCore"></a>
+
+**Why sign up**
+
+- Ranked #2 on PriceAI's relay leaderboard (2026-11-22 snapshot): 99.4% uptime over 7 days on 359k requests/24h (third-party monitoring)
+- Public model plaza without login: GET /api/v1/model-plaza returns 30 groups with rate multipliers (verified 2026-11-27), from grok 0.02x, GPT 0.05x, Claude-Kiro 0.06x
+- Three live routes: relaycore.cn, api.relaycore.cn (self-reported api_base_url) and api-us.relaycore.cn (US direct); anonymous /v1/models returns 401 not 404 on all three
+- Cache hits: personal observation of roughly 80-90% cache hit rate on main Claude groups (not a sampled statistic)
+- Signup via email, GitHub OAuth or LinuxDO OAuth (both toggled on in the public panel settings)
+- Paid relay: payment enabled, subscription off; refunds per the site's own terms
+
+**Live data** (scraped from public APIs)
+
+- API latency: 2509 ms
+
+> The model plaza is public (30 groups across OpenAI, Anthropic, Grok, Gemini, DeepSeek, GLM, Kimi and image models); listed multipliers are base group rates and some groups are flagged as degraded (e.g. grok-fast runs on free grok accounts).
+
+**Signup requirements**
+
+- Sign up through this page's invite link (?aff=YJ6EYCK6XFWF) so the referral binds
+- Email signup needs a verification code and only accepts whitelisted domains (QQ, 163, Gmail, Outlook, iCloud, Proton, etc.)
+- The signup form sits behind Cloudflare Turnstile, so register manually in a browser
+
+**Client setup**
+
+<details open><summary><b>Claude Code</b> (Anthropic-compatible; Base URL without <code>/v1</code>)</summary>
+
+```bash
+# macOS / Linux
+export ANTHROPIC_BASE_URL=https://api.relaycore.cn
+export ANTHROPIC_AUTH_TOKEN=YOUR_API_KEY
+export ANTHROPIC_MODEL=<sign in to see available model names>
+npm install -g @anthropic-ai/claude-code@latest && claude
+```
+
+```powershell
+# Windows PowerShell
+$env:ANTHROPIC_BASE_URL = "https://api.relaycore.cn"
+$env:ANTHROPIC_AUTH_TOKEN = "YOUR_API_KEY"
+$env:ANTHROPIC_MODEL = "<sign in to see available model names>"
+claude
+```
+
+</details>
+
+<details><summary><b>Codex CLI</b> (OpenAI-compatible; goes into <code>~/.codex/config.toml</code>)</summary>
+
+```toml
+model = "<sign in to see available model names>"
+model_provider = "relaycore"
+
+[model_providers.relaycore]
+name = "RelayCore"
+base_url = "https://api.relaycore.cn/v1"
+env_key = "RELAYCORE_API_KEY"
+wire_api = "chat"
+```
+
+</details>
+
+<details><summary><b>OpenAI SDK / Cherry Studio / Cursor and other generic clients</b></summary>
+
+```python
+from openai import OpenAI
+
+client = OpenAI(api_key="YOUR_API_KEY", base_url="https://api.relaycore.cn/v1")
+resp = client.chat.completions.create(model="<sign in to see available model names>", messages=[{"role": "user", "content": "ping"}])
+print(resp.choices[0].message.content)
+```
+
+Generic clients need two fields: **Base URL** = `https://api.relaycore.cn/v1`, **API Key** = the key you created in the dashboard.
+
+</details>
+
+<details><summary><b>Connectivity self-test</b></summary>
+
+```bash
+curl -s https://api.relaycore.cn/v1/chat/completions \
+  -H "Authorization: Bearer $KEY" -H "Content-Type: application/json" \
+  -d '{"model":"<sign in to see available model names>","messages":[{"role":"user","content":"reply OK only"}]}'
+```
+
+</details>
+
+**How to keep earning credits**
+
+- Referral rebate after the invitee spends (affiliate enabled); rates are visible in the console after login
+- US direct endpoint api-us.relaycore.cn for large or slow non-streaming requests
+
+**⚠️ Read before use**
+
+- No public signup-bonus figure: verify any trial credit in the console after signup
+- Paid relay, long-term use requires top-up; refunds follow the site's terms
+- Terms explicitly ban bulk signup and referral farming and risk control is on, so multi-account arbitrage may get restricted
+- Listed multipliers are base group rates; some groups are degraded (grok-fast) - test with small amounts first
+
+**Official channels**
+
+- QQ group: https://qm.qq.com/q/qp25L2hyBa
+- Telegram: https://t.me/relaycore_cn
 
 </details>
 

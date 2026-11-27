@@ -2761,7 +2761,7 @@
         },
         {
           "name": "熊猫特供-按量-SSS-gemini-3.6-flash",
-          "ratio": 0.0000711,
+          "ratio": 7.11e-05,
           "completionRatio": 5,
           "fixedPrice": null,
           "inputPerMTok": 0,
@@ -2775,7 +2775,7 @@
         },
         {
           "name": "熊猫特供-按量-SSS-gemini-3.8-flash",
-          "ratio": 0.00003555,
+          "ratio": 3.555e-05,
           "completionRatio": 5,
           "fixedPrice": null,
           "inputPerMTok": 0,
@@ -2897,7 +2897,7 @@
         },
         {
           "name": "熊猫特供S-按量-gemini-3-flash-preview",
-          "ratio": 0.0000675,
+          "ratio": 6.75e-05,
           "completionRatio": 8.3333,
           "fixedPrice": null,
           "inputPerMTok": 0,
@@ -5473,6 +5473,45 @@
         "status": 200,
         "ok": true,
         "ms": 6993,
+        "attempts": 1
+      },
+      "mirrors": [],
+      "probeBlocked": false,
+      "online": true,
+      "dataStale": false,
+      "staleFrom": null,
+      "staleFields": []
+    },
+    {
+      "id": "relaycore",
+      "checkedAt": "2026-11-27T13:26:24.960Z",
+      "apiOk": true,
+      "pricingOk": false,
+      "latencyMs": 2509,
+      "error": null,
+      "systemName": null,
+      "version": null,
+      "registerOpen": null,
+      "passwordRegister": null,
+      "checkinEnabled": null,
+      "loginMethods": [],
+      "githubMinAccountAgeDays": null,
+      "quotaPerUnit": null,
+      "inviteeBonusUsd": null,
+      "inviterBonusUsd": null,
+      "topupEnabled": null,
+      "services": [],
+      "announcements": [],
+      "models": [],
+      "modelsSource": "login-required",
+      "defaults": {
+        "claude": null,
+        "openai": null
+      },
+      "signup": {
+        "status": 200,
+        "ok": true,
+        "ms": 3383,
         "attempts": 1
       },
       "mirrors": [],
