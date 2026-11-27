@@ -1859,6 +1859,111 @@
         "at": "2026-11-02",
         "reason": "2026-11-01 22:02 UTC 起注册页与公开接口连续探测不到（首页、注册页、状态接口都没响应），确认停运，移入历史区；站点恢复后可重新收录"
       }
+    },
+    {
+      "id": "relaycore",
+      "name": "RelayCore",
+      "subtitle": "Sub2API 统一 AI 网关 · GPT 福利分组 0.05x、Claude 分组 0.06x 起，OpenAI / Anthropic 双协议，Claude Code、Codex 可直接接入",
+      "recommended": false,
+      "credits": {
+        "signup": null,
+        "invite": null,
+        "dailyCheckin": null,
+        "approx": false
+      },
+      "signupUrl": "https://relaycore.cn/register?aff=YJ6EYCK6XFWF",
+      "homeUrl": "https://relaycore.cn",
+      "docsUrl": "https://relaycore.cn/docs",
+      "statusApi": "https://relaycore.cn/v1/models",
+      "panel": "relay",
+      "mirrors": [],
+      "tags": [
+        "Sub2API",
+        "中转站",
+        "付费中转",
+        "Claude Code",
+        "Codex",
+        "Anthropic 兼容",
+        "OpenAI 兼容"
+      ],
+      "highlights": [
+        "PriceAI 中转站价格榜 2026-11-22 快照综合推荐第 2：近 7 日可用率 99.4%、24h 请求样本 35.9 万（第三方监测口径，见 https://priceai.cc/api-transit）",
+        "模型广场免登录可读：GET /api/v1/model-plaza 公开返回 30 个分组及倍率（2026-11-27 实测），最低 grok 极速 0.02x，GPT 福利 0.05x、GPT 福利-不降智 0.06x、Claude-Kiro 0.06x、生图 0.055x",
+        "三条接入线路：主站 relaycore.cn、专用 API 域名 api.relaycore.cn（面板 api_base_url 自报）、US 直连 api-us.relaycore.cn（面板公示用于大请求与非流式 60s 超时场景）；三条 /v1/models 匿名请求都回 401 而不是 404，网关与路由都在",
+        "缓存命中：个人实测 Claude 系主力分组缓存命中率约 80-90%（个人使用观察，非抽样统计）",
+        "注册方式三条：邮箱 + 密码、GitHub OAuth、LinuxDO OAuth（面板 github_oauth_enabled / linuxdo_oauth_enabled = true，2026-11-27 实测）",
+        "付费中转站：payment_enabled = true、subscription_enabled = false；充值 ¥1 = 1 站内额度，余额可按服务条款申请退款（购买页与条款口径）",
+        "邀请返利开着（affiliate_enabled = true），口径是被邀请方消费后返利，比例登录后在「推广」页看"
+      ],
+      "endpoints": {
+        "anthropic": "https://api.relaycore.cn",
+        "openai": "https://api.relaycore.cn/v1"
+      },
+      "modelsNote": "模型广场公开可读（model_plaza_enabled = true、require_auth = false）：/api/v1/model-plaza 返回 30 个分组，覆盖 OpenAI、Anthropic、Grok、Gemini、DeepSeek、智谱 GLM、Kimi、生图等平台；分组倍率是基础价口径，实际计费以请求时命中的分组与模型为准，个别分组有降智标注（如 grok-极速 自报「grok free 账号 降智」）。",
+      "register": {
+        "methods": [
+          "账号密码",
+          "GitHub OAuth",
+          "LinuxDO OAuth"
+        ],
+        "requirements": [
+          "务必从本页邀请链接进入注册（带 ?aff=YJ6EYCK6XFWF），邀请关系才会绑定",
+          "邮箱注册要验证码（email_verify_enabled = true），且只收白名单域名：QQ / 163 / Gmail / Outlook / iCloud / Proton / tuta / 139 / sina / aliyun 及 @users.noreply.github.com 等",
+          "注册表单带 Cloudflare Turnstile 人机验证（turnstile_enabled = true，另有腾讯云验证码兜底开关），建议浏览器手动注册",
+          "没有推广码栏（promo_code_enabled = false），也不要求填邀请码（invitation_code_enabled = false），aff 参数自动带上"
+        ]
+      },
+      "earnMore": [
+        "邀请好友：affiliate_enabled = true，返利在被邀请方消费后结算，比例登录后在「推广 / 邀请」页查看",
+        "US 直连线路 api-us.relaycore.cn：面板公示大请求、非流式等待超 60s 超时的场景改走这条",
+        "充值：payment_enabled = true，在线支付；订阅套餐未开放（subscription_enabled = false）",
+        "没有每日签到：按无签到登记，福利主要靠价格倍率而不是送额度"
+      ],
+      "caveats": [
+        "公开接口不返回注册赠金数字：注册送多少、送不送都要注册后在控制台核对，本页不替站方背书",
+        "付费中转站（payment 开着、subscription 关着），长期使用要充值；退款按服务条款与购买页规则执行",
+        "服务条款与使用政策明写禁止批量注册、自动化刷量、滥用优惠与刷量套利，且 risk_control_enabled = true：拿批量小号套返利有被风控的限制/封号风险",
+        "模型广场的倍率是分组基础价：个别分组自报降智（grok-极速 = grok free 账号），重活别全压上去，先小额试用",
+        "上游线路不公开，PriceAI 可用率是第三方监测口径而非站方承诺；站点存续与售后请自行评估",
+        "登录协议勾选强制（login_agreement_enabled = true），条款最近一次更新 2026-03-31"
+      ],
+      "community": [
+        "QQ 群：https://qm.qq.com/q/qp25L2hyBa（站方面板 navbar_promo 公示）",
+        "Telegram：https://t.me/relaycore_cn（站方面板 navbar_telegram 公示）"
+      ],
+      "en": {
+        "subtitle": "Sub2API AI gateway · GPT groups from 0.05x, Claude from 0.06x, native OpenAI and Anthropic routes, works with Claude Code and Codex",
+        "highlights": [
+          "Ranked #2 on PriceAI's relay leaderboard (2026-11-22 snapshot): 99.4% uptime over 7 days on 359k requests/24h (third-party monitoring)",
+          "Public model plaza without login: GET /api/v1/model-plaza returns 30 groups with rate multipliers (verified 2026-11-27), from grok 0.02x, GPT 0.05x, Claude-Kiro 0.06x",
+          "Three live routes: relaycore.cn, api.relaycore.cn (self-reported api_base_url) and api-us.relaycore.cn (US direct); anonymous /v1/models returns 401 not 404 on all three",
+          "Cache hits: personal observation of roughly 80-90% cache hit rate on main Claude groups (not a sampled statistic)",
+          "Signup via email, GitHub OAuth or LinuxDO OAuth (both toggled on in the public panel settings)",
+          "Paid relay: payment enabled, subscription off; refunds per the site's own terms"
+        ],
+        "modelsNote": "The model plaza is public (30 groups across OpenAI, Anthropic, Grok, Gemini, DeepSeek, GLM, Kimi and image models); listed multipliers are base group rates and some groups are flagged as degraded (e.g. grok-fast runs on free grok accounts).",
+        "register": {
+          "requirements": [
+            "Sign up through this page's invite link (?aff=YJ6EYCK6XFWF) so the referral binds",
+            "Email signup needs a verification code and only accepts whitelisted domains (QQ, 163, Gmail, Outlook, iCloud, Proton, etc.)",
+            "The signup form sits behind Cloudflare Turnstile, so register manually in a browser"
+          ]
+        },
+        "earnMore": [
+          "Referral rebate after the invitee spends (affiliate enabled); rates are visible in the console after login",
+          "US direct endpoint api-us.relaycore.cn for large or slow non-streaming requests"
+        ],
+        "caveats": [
+          "No public signup-bonus figure: verify any trial credit in the console after signup",
+          "Paid relay, long-term use requires top-up; refunds follow the site's terms",
+          "Terms explicitly ban bulk signup and referral farming and risk control is on, so multi-account arbitrage may get restricted",
+          "Listed multipliers are base group rates; some groups are degraded (grok-fast) - test with small amounts first"
+        ],
+        "community": [
+          "QQ group: https://qm.qq.com/q/qp25L2hyBa",
+          "Telegram: https://t.me/relaycore_cn"
+        ]
+      }
     }
   ]
 }

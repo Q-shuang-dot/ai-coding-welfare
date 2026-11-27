@@ -5,8 +5,8 @@
 <p align="center">免费额度 · 白嫖 Claude Code / Codex / Cursor 的中转与公益站合集 · 每日签到领福利</p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/%E6%94%B6%E5%BD%95%E7%A6%8F%E5%88%A9%E7%AB%99-13%20%E4%B8%AA-blue" alt="收录福利站">
-  <img src="https://img.shields.io/badge/%E5%9C%A8%E7%BA%BF-13%2F13-brightgreen" alt="在线">
+  <img src="https://img.shields.io/badge/%E6%94%B6%E5%BD%95%E7%A6%8F%E5%88%A9%E7%AB%99-14%20%E4%B8%AA-blue" alt="收录福利站">
+  <img src="https://img.shields.io/badge/%E5%9C%A8%E7%BA%BF-14%2F14-brightgreen" alt="在线">
   <img src="https://img.shields.io/badge/%E9%A6%96%E6%97%A5%E5%8F%AF%E5%BE%97-%E6%9C%80%E9%AB%98%20%241300-success" alt="首日可得">
   <img src="https://img.shields.io/badge/%E6%95%B0%E6%8D%AE%E6%9B%B4%E6%96%B0-2026--11--27%2008.32%20UTC-informational" alt="数据更新">
 </p>
@@ -24,7 +24,8 @@
   <a href="https://matrix.mzsjai.com/login?redirect=%2Fapp%2Fgrowth%3FinviteCode%3DMX3CDVGATLJW"><b>Matrix 注册</b></a> ·
   <a href="https://seekai.cc/sign-up?aff=dDJy"><b>SeekAi 注册</b></a> ·
   <a href="https://aaawinn.xyz/sign-up?aff=ijFL"><b>Long的AI 注册</b></a> ·
-  <a href="https://api.hcnsec.cn/sign-up?aff=3J8z"><b>新疆幻城网安 注册</b></a>
+  <a href="https://api.hcnsec.cn/sign-up?aff=3J8z"><b>新疆幻城网安 注册</b></a> ·
+  <a href="https://relaycore.cn/register?aff=YJ6EYCK6XFWF"><b>RelayCore 注册</b></a>
 </p>
 
 ---
@@ -55,12 +56,13 @@
 | **SeekAi** | 🟢 在线 | 站内公示 | 支持签到 | OpenAI | <a href="https://seekai.cc/sign-up?aff=dDJy" target="_blank" rel="noopener">点此注册 →</a> | `dDJy` |
 | **Long的AI** | 🟢 在线 | 免费 | 无签到 | Anthropic + OpenAI | <a href="https://aaawinn.xyz/sign-up?aff=ijFL" target="_blank" rel="noopener">GitHub 注册 →</a> | `ijFL` |
 | **新疆幻城网安** | 🟢 在线 | **30000 站内刀** | 支持签到 | Anthropic + OpenAI | <a href="https://api.hcnsec.cn/sign-up?aff=3J8z" target="_blank" rel="noopener">点此注册 →</a> | `3J8z` |
+| **RelayCore** | 🟢 在线 | 站内公示 | — | Anthropic + OpenAI | <a href="https://relaycore.cn/register?aff=YJ6EYCK6XFWF" target="_blank" rel="noopener">点此注册 →</a> | — |
 
 > 「首日可得」= 注册基础额度 + 本页邀请链接额度 + 当天能领的签到额度（每日重置额度池的站点按一天的池子算）；模型、价格、在线状态由脚本抓取站点公开接口自动生成，最后更新：`2026-11-27 08:32 UTC`。
 >
 > 「邀请码」列写了码的站（DoCode `1Qof`、年华 API `aonj`、肖恩AI `MVU8GX`、api456.me `zmza`、SeekAi `dDJy`、Long的AI `ijFL`、新疆幻城网安 `3J8z`），注册表单里有一栏要**自己填**，漏填就只拿得到注册基础额度、事后补不上；其余站写 — 是因为邀请额度由链接自带，不用手打。
 >
-> 7 个按美元计价、且还收新用户的站全注册一遍，第一天手上大约有 **$1530** 额度可用；DoCode 另发 300 站内刀，熊猫API 另发 200 额度，肖恩AI 另发 ≈14000 积分，Matrix 另发 2600 积分，Long的AI 另发 免费，新疆幻城网安 另发 30000 站内刀，都是各站自己的计价单位、与美元没有公开换算，未计入这个合计。
+> 8 个按美元计价、且还收新用户的站全注册一遍，第一天手上大约有 **$1530** 额度可用；DoCode 另发 300 站内刀，熊猫API 另发 200 额度，肖恩AI 另发 ≈14000 积分，Matrix 另发 2600 积分，Long的AI 另发 免费，新疆幻城网安 另发 30000 站内刀，都是各站自己的计价单位、与美元没有公开换算，未计入这个合计。
 >
 > 🟡 有 3 个站点已超过 48 小时没抓到接口数据，其明细为上一次成功抓取的快照；在线状态按注册页实际可访问性判断。
 >
@@ -246,7 +248,7 @@ curl -s https://docode.cc/v1/chat/completions \
 
 **实时数据**（自动抓取站点公开接口）
 
-- ⚠ 接口已连续 414 小时没抓到新数据，下列信息为 `2026-11-10 02:47 UTC` 的快照
+- ⚠ 接口已连续 419 小时没抓到新数据，下列信息为 `2026-11-10 02:47 UTC` 的快照
 - 站点名称：**Agent Router**
 - 面板版本：`init-20261016-861e4557`
 - 邀请他人可得：**$50**
@@ -504,7 +506,7 @@ curl -s https://redapi.vip/v1/chat/completions \
 
 **实时数据**（自动抓取站点公开接口）
 
-- ⚠ 接口已连续 191 小时没抓到新数据，下列信息为 `2026-11-19 09:27 UTC` 的快照
+- ⚠ 接口已连续 196 小时没抓到新数据，下列信息为 `2026-11-19 09:27 UTC` 的快照
 - 站点名称：**星驰管家**
 - 每日签到：✅
 - 登录方式：Telegram
@@ -1654,7 +1656,7 @@ curl -s https://seekai.cc/v1/chat/completions \
 
 **实时数据**（自动抓取站点公开接口）
 
-- ⚠ 接口已连续 266 小时没抓到新数据，下列信息为 `2026-11-16 06:28 UTC` 的快照
+- ⚠ 接口已连续 271 小时没抓到新数据，下列信息为 `2026-11-16 06:28 UTC` 的快照
 - 站点名称：**Long的AI**
 - 面板版本：`v0.0.0`
 - 每日签到：❌
@@ -1895,6 +1897,122 @@ curl -s https://api.hcnsec.cn/v1/chat/completions \
 - `2026-11-20` 不少用户担心在本站使用服务时存在隐私泄露风险。为此，本站现已上线请求隐私脱敏功能：系统会自动对用户请求内的身份证号、银行卡号、IP 地址、各类密码密钥、家庭住址等敏感信息做脱敏处理，并同步清除相关日志。同时我们郑重提醒：请不要在本站上传个人隐私信息以及企业涉密资料。
 
 </details>
+
+</details>
+
+---
+
+<a id="site-relaycore"></a>
+<details><summary><b>🟢 RelayCore</b></summary>
+
+> Sub2API 统一 AI 网关 · GPT 福利分组 0.05x、Claude 分组 0.06x 起，OpenAI / Anthropic 双协议，Claude Code、Codex 可直接接入
+
+<a href="https://relaycore.cn/register?aff=YJ6EYCK6XFWF" target="_blank" rel="noopener"><img src="https://img.shields.io/badge/%E7%AB%8B%E5%8D%B3%E6%B3%A8%E5%86%8C-RelayCore-brightgreen?style=for-the-badge" alt="注册 RelayCore"></a>
+
+**为什么值得注册**
+
+- PriceAI 中转站价格榜 2026-11-22 快照综合推荐第 2：近 7 日可用率 99.4%、24h 请求样本 35.9 万（第三方监测口径，见 https://priceai.cc/api-transit）
+- 模型广场免登录可读：GET /api/v1/model-plaza 公开返回 30 个分组及倍率（2026-11-27 实测），最低 grok 极速 0.02x，GPT 福利 0.05x、GPT 福利-不降智 0.06x、Claude-Kiro 0.06x、生图 0.055x
+- 三条接入线路：主站 relaycore.cn、专用 API 域名 api.relaycore.cn（面板 api_base_url 自报）、US 直连 api-us.relaycore.cn（面板公示用于大请求与非流式 60s 超时场景）；三条 /v1/models 匿名请求都回 401 而不是 404，网关与路由都在
+- 缓存命中：个人实测 Claude 系主力分组缓存命中率约 80-90%（个人使用观察，非抽样统计）
+- 注册方式三条：邮箱 + 密码、GitHub OAuth、LinuxDO OAuth（面板 github_oauth_enabled / linuxdo_oauth_enabled = true，2026-11-27 实测）
+- 付费中转站：payment_enabled = true、subscription_enabled = false；充值 ¥1 = 1 站内额度，余额可按服务条款申请退款（购买页与条款口径）
+- 邀请返利开着（affiliate_enabled = true），口径是被邀请方消费后返利，比例登录后在「推广」页看
+
+**实时数据**（自动抓取站点公开接口）
+
+- 接口延迟：2509 ms
+
+> 模型广场公开可读（model_plaza_enabled = true、require_auth = false）：/api/v1/model-plaza 返回 30 个分组，覆盖 OpenAI、Anthropic、Grok、Gemini、DeepSeek、智谱 GLM、Kimi、生图等平台；分组倍率是基础价口径，实际计费以请求时命中的分组与模型为准，个别分组有降智标注（如 grok-极速 自报「grok free 账号 降智」）。
+
+**注册要求**
+
+- 务必从本页邀请链接进入注册（带 ?aff=YJ6EYCK6XFWF），邀请关系才会绑定
+- 邮箱注册要验证码（email_verify_enabled = true），且只收白名单域名：QQ / 163 / Gmail / Outlook / iCloud / Proton / tuta / 139 / sina / aliyun 及 @users.noreply.github.com 等
+- 注册表单带 Cloudflare Turnstile 人机验证（turnstile_enabled = true，另有腾讯云验证码兜底开关），建议浏览器手动注册
+- 没有推广码栏（promo_code_enabled = false），也不要求填邀请码（invitation_code_enabled = false），aff 参数自动带上
+
+**接入配置**
+
+<details open><summary><b>Claude Code</b>（Anthropic 兼容，Base URL 不带 <code>/v1</code>）</summary>
+
+```bash
+# macOS / Linux
+export ANTHROPIC_BASE_URL=https://api.relaycore.cn
+export ANTHROPIC_AUTH_TOKEN=你在站点后台创建的 Key
+export ANTHROPIC_MODEL=<登录后台查看可用模型名>
+npm install -g @anthropic-ai/claude-code@latest && claude
+```
+
+```powershell
+# Windows PowerShell
+$env:ANTHROPIC_BASE_URL = "https://api.relaycore.cn"
+$env:ANTHROPIC_AUTH_TOKEN = "你在站点后台创建的 Key"
+$env:ANTHROPIC_MODEL = "<登录后台查看可用模型名>"
+claude
+```
+
+</details>
+
+<details><summary><b>Codex CLI</b>（OpenAI 兼容，写入 <code>~/.codex/config.toml</code>）</summary>
+
+```toml
+model = "<登录后台查看可用模型名>"
+model_provider = "relaycore"
+
+[model_providers.relaycore]
+name = "RelayCore"
+base_url = "https://api.relaycore.cn/v1"
+env_key = "RELAYCORE_API_KEY"
+wire_api = "chat"
+```
+
+</details>
+
+<details><summary><b>OpenAI SDK / Cherry Studio / Cursor 等通用客户端</b></summary>
+
+```python
+from openai import OpenAI
+
+client = OpenAI(api_key="你的 Key", base_url="https://api.relaycore.cn/v1")
+resp = client.chat.completions.create(model="<登录后台查看可用模型名>", messages=[{"role": "user", "content": "ping"}])
+print(resp.choices[0].message.content)
+```
+
+通用客户端只需填两项：**Base URL** = `https://api.relaycore.cn/v1`，**API Key** = 站点后台创建的 Key。
+
+</details>
+
+<details><summary><b>连通性自测</b></summary>
+
+```bash
+curl -s https://api.relaycore.cn/v1/chat/completions \
+  -H "Authorization: Bearer $KEY" -H "Content-Type: application/json" \
+  -d '{"model":"<登录后台查看可用模型名>","messages":[{"role":"user","content":"只回复 OK"}]}'
+```
+
+</details>
+
+**如何继续拿额度**
+
+- 邀请好友：affiliate_enabled = true，返利在被邀请方消费后结算，比例登录后在「推广 / 邀请」页查看
+- US 直连线路 api-us.relaycore.cn：面板公示大请求、非流式等待超 60s 超时的场景改走这条
+- 充值：payment_enabled = true，在线支付；订阅套餐未开放（subscription_enabled = false）
+- 没有每日签到：按无签到登记，福利主要靠价格倍率而不是送额度
+
+**⚠️ 使用前必读**
+
+- 公开接口不返回注册赠金数字：注册送多少、送不送都要注册后在控制台核对，本页不替站方背书
+- 付费中转站（payment 开着、subscription 关着），长期使用要充值；退款按服务条款与购买页规则执行
+- 服务条款与使用政策明写禁止批量注册、自动化刷量、滥用优惠与刷量套利，且 risk_control_enabled = true：拿批量小号套返利有被风控的限制/封号风险
+- 模型广场的倍率是分组基础价：个别分组自报降智（grok-极速 = grok free 账号），重活别全压上去，先小额试用
+- 上游线路不公开，PriceAI 可用率是第三方监测口径而非站方承诺；站点存续与售后请自行评估
+- 登录协议勾选强制（login_agreement_enabled = true），条款最近一次更新 2026-03-31
+
+**官方渠道**
+
+- QQ 群：https://qm.qq.com/q/qp25L2hyBa（站方面板 navbar_promo 公示）
+- Telegram：https://t.me/relaycore_cn（站方面板 navbar_telegram 公示）
 
 </details>
 

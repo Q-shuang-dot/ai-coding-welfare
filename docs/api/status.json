@@ -158,6 +158,18 @@
       "uptime7d": 100,
       "samples": 18,
       "page": "https://q-shuang-dot.github.io/ai-coding-welfare/sites/hcnsec/"
+    },
+    {
+      "id": "relaycore",
+      "name": "RelayCore",
+      "online": true,
+      "probeBlocked": false,
+      "latencyMs": 2509,
+      "models": 0,
+      "checkedAt": "2026-11-27T13:26:24.960Z",
+      "uptime7d": null,
+      "samples": 0,
+      "page": "https://q-shuang-dot.github.io/ai-coding-welfare/sites/relaycore/"
     }
   ]
 }
