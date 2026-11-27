@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-11-27T08:32:10.174Z",
+  "generatedAt": "2026-11-27T21:16:35.176Z",
   "sites": [
     {
       "id": "docode",
-      "checkedAt": "2026-11-27T08:31:59.320Z",
+      "checkedAt": "2026-11-27T21:16:24.006Z",
       "apiOk": true,
       "pricingOk": false,
-      "latencyMs": 1681,
+      "latencyMs": 1602,
       "error": null,
       "systemName": "DoCode",
       "version": "",
@@ -58,7 +58,7 @@
       "signup": {
         "status": 200,
         "ok": true,
-        "ms": 1085,
+        "ms": 975,
         "attempts": 1
       },
       "mirrors": [
@@ -75,10 +75,10 @@
     },
     {
       "id": "agentrouter",
-      "checkedAt": "2026-11-27T08:32:04.189Z",
+      "checkedAt": "2026-11-27T21:16:28.919Z",
       "apiOk": false,
       "pricingOk": false,
-      "latencyMs": 257,
+      "latencyMs": 325,
       "error": "invalid json",
       "systemName": "Agent Router",
       "version": "init-20261016-861e4557",
@@ -168,7 +168,7 @@
       "signup": {
         "status": 200,
         "ok": true,
-        "ms": 1475,
+        "ms": 1619,
         "attempts": 1
       },
       "mirrors": [
@@ -196,10 +196,10 @@
     },
     {
       "id": "redapi",
-      "checkedAt": "2026-11-27T08:31:58.531Z",
+      "checkedAt": "2026-11-27T21:16:23.178Z",
       "apiOk": true,
       "pricingOk": false,
-      "latencyMs": 1014,
+      "latencyMs": 954,
       "error": null,
       "systemName": null,
       "version": null,
@@ -223,7 +223,7 @@
       "signup": {
         "status": 200,
         "ok": true,
-        "ms": 1011,
+        "ms": 999,
         "attempts": 1
       },
       "mirrors": [],
@@ -235,10 +235,10 @@
     },
     {
       "id": "xingchi",
-      "checkedAt": "2026-11-27T08:31:58.914Z",
+      "checkedAt": "2026-11-27T21:16:23.325Z",
       "apiOk": true,
       "pricingOk": false,
-      "latencyMs": 1395,
+      "latencyMs": 1100,
       "error": null,
       "systemName": "星驰管家",
       "version": null,
@@ -277,7 +277,7 @@
       "signup": {
         "status": 200,
         "ok": true,
-        "ms": 1394,
+        "ms": 1102,
         "attempts": 1
       },
       "mirrors": [],
@@ -295,10 +295,10 @@
     },
     {
       "id": "api520",
-      "checkedAt": "2026-11-27T08:31:59.268Z",
+      "checkedAt": "2026-11-27T21:16:24.274Z",
       "apiOk": true,
       "pricingOk": true,
-      "latencyMs": 1740,
+      "latencyMs": 2044,
       "error": null,
       "systemName": "熊猫API",
       "version": "v1.0.0-rc.21-5555-gd455867c9-dirty",
@@ -408,12 +408,12 @@
           "inputPerMTok": null,
           "outputPerMTok": null,
           "groups": [
-            "C渠道",
-            "default",
             "D渠道",
             "E渠道",
             "A渠道",
-            "B渠道"
+            "B渠道",
+            "C渠道",
+            "default"
           ],
           "protocols": [
             "openai"
@@ -441,11 +441,11 @@
           "inputPerMTok": null,
           "outputPerMTok": null,
           "groups": [
+            "D渠道",
+            "顶级特供",
             "A渠道",
             "C渠道",
-            "default",
-            "D渠道",
-            "顶级特供"
+            "default"
           ],
           "protocols": [
             "openai"
@@ -477,11 +477,11 @@
           "inputPerMTok": null,
           "outputPerMTok": null,
           "groups": [
-            "D渠道",
-            "顶级特供",
             "A渠道",
             "C渠道",
-            "default"
+            "default",
+            "D渠道",
+            "顶级特供"
           ],
           "protocols": [
             "openai"
@@ -495,11 +495,11 @@
           "inputPerMTok": null,
           "outputPerMTok": null,
           "groups": [
+            "顶级特供",
             "A渠道",
             "C渠道",
             "default",
-            "D渠道",
-            "顶级特供"
+            "D渠道"
           ],
           "protocols": [
             "openai"
@@ -513,11 +513,11 @@
           "inputPerMTok": null,
           "outputPerMTok": null,
           "groups": [
-            "A渠道",
-            "C渠道",
             "default",
             "D渠道",
-            "顶级特供"
+            "顶级特供",
+            "A渠道",
+            "C渠道"
           ],
           "protocols": [
             "openai"
@@ -531,11 +531,11 @@
           "inputPerMTok": null,
           "outputPerMTok": null,
           "groups": [
-            "default",
-            "D渠道",
             "顶级特供",
             "A渠道",
-            "C渠道"
+            "C渠道",
+            "default",
+            "D渠道"
           ],
           "protocols": [
             "openai"
@@ -603,11 +603,11 @@
           "inputPerMTok": null,
           "outputPerMTok": null,
           "groups": [
-            "顶级特供",
-            "A渠道",
             "C渠道",
             "default",
-            "D渠道"
+            "D渠道",
+            "顶级特供",
+            "A渠道"
           ],
           "protocols": [
             "openai"
@@ -639,11 +639,11 @@
           "inputPerMTok": null,
           "outputPerMTok": null,
           "groups": [
+            "D渠道",
             "顶级特供",
             "A渠道",
             "C渠道",
-            "default",
-            "D渠道"
+            "default"
           ],
           "protocols": [
             "openai"
@@ -657,11 +657,11 @@
           "inputPerMTok": null,
           "outputPerMTok": null,
           "groups": [
-            "A渠道",
             "C渠道",
             "default",
             "D渠道",
-            "顶级特供"
+            "顶级特供",
+            "A渠道"
           ],
           "protocols": [
             "openai"
@@ -675,11 +675,11 @@
           "inputPerMTok": null,
           "outputPerMTok": null,
           "groups": [
-            "A渠道",
-            "C渠道",
             "default",
             "D渠道",
-            "顶级特供"
+            "顶级特供",
+            "A渠道",
+            "C渠道"
           ],
           "protocols": [
             "openai"
@@ -711,11 +711,11 @@
           "inputPerMTok": null,
           "outputPerMTok": null,
           "groups": [
+            "A渠道",
             "C渠道",
             "default",
             "D渠道",
-            "顶级特供",
-            "A渠道"
+            "顶级特供"
           ],
           "protocols": [
             "openai"
@@ -747,11 +747,11 @@
           "inputPerMTok": null,
           "outputPerMTok": null,
           "groups": [
-            "D渠道",
-            "顶级特供",
             "A渠道",
             "C渠道",
-            "default"
+            "default",
+            "D渠道",
+            "顶级特供"
           ],
           "protocols": [
             "openai"
@@ -762,24 +762,6 @@
           "ratio": 0,
           "completionRatio": 0,
           "fixedPrice": 19,
-          "inputPerMTok": null,
-          "outputPerMTok": null,
-          "groups": [
-            "default",
-            "D渠道",
-            "顶级特供",
-            "A渠道",
-            "C渠道"
-          ],
-          "protocols": [
-            "openai"
-          ]
-        },
-        {
-          "name": "熊猫-A-2-gemini-2.5-flash",
-          "ratio": 0,
-          "completionRatio": 0,
-          "fixedPrice": 2,
           "inputPerMTok": null,
           "outputPerMTok": null,
           "groups": [
@@ -794,6 +776,24 @@
           ]
         },
         {
+          "name": "熊猫-A-2-gemini-2.5-flash",
+          "ratio": 0,
+          "completionRatio": 0,
+          "fixedPrice": 2,
+          "inputPerMTok": null,
+          "outputPerMTok": null,
+          "groups": [
+            "A渠道",
+            "C渠道",
+            "default",
+            "D渠道",
+            "顶级特供"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
           "name": "熊猫-A-2-gemini-3.5-flash-lite",
           "ratio": 0,
           "completionRatio": 0,
@@ -801,11 +801,11 @@
           "inputPerMTok": null,
           "outputPerMTok": null,
           "groups": [
+            "default",
+            "D渠道",
             "顶级特供",
             "A渠道",
-            "C渠道",
-            "default",
-            "D渠道"
+            "C渠道"
           ],
           "protocols": [
             "openai"
@@ -819,11 +819,11 @@
           "inputPerMTok": null,
           "outputPerMTok": null,
           "groups": [
+            "D渠道",
+            "顶级特供",
             "A渠道",
             "C渠道",
-            "default",
-            "D渠道",
-            "顶级特供"
+            "default"
           ],
           "protocols": [
             "openai"
@@ -855,11 +855,11 @@
           "inputPerMTok": null,
           "outputPerMTok": null,
           "groups": [
+            "D渠道",
+            "顶级特供",
             "A渠道",
             "C渠道",
-            "default",
-            "D渠道",
-            "顶级特供"
+            "default"
           ],
           "protocols": [
             "openai"
@@ -873,11 +873,11 @@
           "inputPerMTok": null,
           "outputPerMTok": null,
           "groups": [
+            "顶级特供",
             "A渠道",
             "C渠道",
             "default",
-            "D渠道",
-            "顶级特供"
+            "D渠道"
           ],
           "protocols": [
             "openai"
@@ -891,11 +891,11 @@
           "inputPerMTok": null,
           "outputPerMTok": null,
           "groups": [
-            "A渠道",
-            "C渠道",
             "default",
             "D渠道",
-            "顶级特供"
+            "顶级特供",
+            "A渠道",
+            "C渠道"
           ],
           "protocols": [
             "openai"
@@ -909,11 +909,11 @@
           "inputPerMTok": null,
           "outputPerMTok": null,
           "groups": [
-            "C渠道",
             "default",
             "D渠道",
             "顶级特供",
-            "A渠道"
+            "A渠道",
+            "C渠道"
           ],
           "protocols": [
             "openai"
@@ -927,11 +927,11 @@
           "inputPerMTok": null,
           "outputPerMTok": null,
           "groups": [
+            "A渠道",
+            "C渠道",
             "default",
             "D渠道",
-            "顶级特供",
-            "A渠道",
-            "C渠道"
+            "顶级特供"
           ],
           "protocols": [
             "openai"
@@ -963,11 +963,11 @@
           "inputPerMTok": null,
           "outputPerMTok": null,
           "groups": [
-            "顶级特供",
-            "A渠道",
             "C渠道",
             "default",
-            "D渠道"
+            "D渠道",
+            "顶级特供",
+            "A渠道"
           ],
           "protocols": [
             "openai"
@@ -999,11 +999,11 @@
           "inputPerMTok": null,
           "outputPerMTok": null,
           "groups": [
+            "A渠道",
             "C渠道",
             "default",
             "D渠道",
-            "顶级特供",
-            "A渠道"
+            "顶级特供"
           ],
           "protocols": [
             "openai"
@@ -1011,24 +1011,6 @@
         },
         {
           "name": "熊猫-A-9-gemini-3.8-flash-search",
-          "ratio": 0,
-          "completionRatio": 0,
-          "fixedPrice": 9,
-          "inputPerMTok": null,
-          "outputPerMTok": null,
-          "groups": [
-            "D渠道",
-            "顶级特供",
-            "A渠道",
-            "C渠道",
-            "default"
-          ],
-          "protocols": [
-            "openai"
-          ]
-        },
-        {
-          "name": "熊猫-A-9-gemini-3.8-flash-反重力-tob",
           "ratio": 0,
           "completionRatio": 0,
           "fixedPrice": 9,
@@ -1046,10 +1028,10 @@
           ]
         },
         {
-          "name": "熊猫-aiStudio官-X-20-gemini-3.1-pro-preview",
+          "name": "熊猫-A-9-gemini-3.8-flash-反重力-tob",
           "ratio": 0,
           "completionRatio": 0,
-          "fixedPrice": 20,
+          "fixedPrice": 9,
           "inputPerMTok": null,
           "outputPerMTok": null,
           "groups": [
@@ -1058,6 +1040,24 @@
             "顶级特供",
             "A渠道",
             "C渠道"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "熊猫-aiStudio官-X-20-gemini-3.1-pro-preview",
+          "ratio": 0,
+          "completionRatio": 0,
+          "fixedPrice": 20,
+          "inputPerMTok": null,
+          "outputPerMTok": null,
+          "groups": [
+            "D渠道",
+            "顶级特供",
+            "A渠道",
+            "C渠道",
+            "default"
           ],
           "protocols": [
             "openai"
@@ -1107,11 +1107,11 @@
           "inputPerMTok": null,
           "outputPerMTok": null,
           "groups": [
+            "A渠道",
             "C渠道",
             "default",
             "D渠道",
-            "顶级特供",
-            "A渠道"
+            "顶级特供"
           ],
           "protocols": [
             "openai"
@@ -1125,11 +1125,11 @@
           "inputPerMTok": null,
           "outputPerMTok": null,
           "groups": [
-            "顶级特供",
             "A渠道",
             "C渠道",
             "default",
-            "D渠道"
+            "D渠道",
+            "顶级特供"
           ],
           "protocols": [
             "openai"
@@ -1140,6 +1140,78 @@
           "ratio": 0,
           "completionRatio": 0,
           "fixedPrice": 17,
+          "inputPerMTok": null,
+          "outputPerMTok": null,
+          "groups": [
+            "A渠道",
+            "C渠道",
+            "default",
+            "D渠道",
+            "顶级特供"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "熊猫-W-39-限时官key-claude-sonnet-5",
+          "ratio": 0,
+          "completionRatio": 0,
+          "fixedPrice": 39,
+          "inputPerMTok": null,
+          "outputPerMTok": null,
+          "groups": [
+            "default",
+            "D渠道",
+            "顶级特供",
+            "A渠道",
+            "C渠道"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "熊猫-X-10-AS正向-gemini-3.6-flash",
+          "ratio": 0,
+          "completionRatio": 0,
+          "fixedPrice": 10,
+          "inputPerMTok": null,
+          "outputPerMTok": null,
+          "groups": [
+            "C渠道",
+            "default",
+            "D渠道",
+            "顶级特供",
+            "A渠道"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "熊猫-X-10-官逆-gemini-3.1-pro",
+          "ratio": 0,
+          "completionRatio": 0,
+          "fixedPrice": 10,
+          "inputPerMTok": null,
+          "outputPerMTok": null,
+          "groups": [
+            "C渠道",
+            "default",
+            "D渠道",
+            "顶级特供",
+            "A渠道"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "熊猫-X-10-官逆-gemini-3.1-pro-联网",
+          "ratio": 0,
+          "completionRatio": 0,
+          "fixedPrice": 10,
           "inputPerMTok": null,
           "outputPerMTok": null,
           "groups": [
@@ -1154,78 +1226,6 @@
           ]
         },
         {
-          "name": "熊猫-W-39-限时官key-claude-sonnet-5",
-          "ratio": 0,
-          "completionRatio": 0,
-          "fixedPrice": 39,
-          "inputPerMTok": null,
-          "outputPerMTok": null,
-          "groups": [
-            "顶级特供",
-            "A渠道",
-            "C渠道",
-            "default",
-            "D渠道"
-          ],
-          "protocols": [
-            "openai"
-          ]
-        },
-        {
-          "name": "熊猫-X-10-AS正向-gemini-3.6-flash",
-          "ratio": 0,
-          "completionRatio": 0,
-          "fixedPrice": 10,
-          "inputPerMTok": null,
-          "outputPerMTok": null,
-          "groups": [
-            "顶级特供",
-            "A渠道",
-            "C渠道",
-            "default",
-            "D渠道"
-          ],
-          "protocols": [
-            "openai"
-          ]
-        },
-        {
-          "name": "熊猫-X-10-官逆-gemini-3.1-pro",
-          "ratio": 0,
-          "completionRatio": 0,
-          "fixedPrice": 10,
-          "inputPerMTok": null,
-          "outputPerMTok": null,
-          "groups": [
-            "顶级特供",
-            "A渠道",
-            "C渠道",
-            "default",
-            "D渠道"
-          ],
-          "protocols": [
-            "openai"
-          ]
-        },
-        {
-          "name": "熊猫-X-10-官逆-gemini-3.1-pro-联网",
-          "ratio": 0,
-          "completionRatio": 0,
-          "fixedPrice": 10,
-          "inputPerMTok": null,
-          "outputPerMTok": null,
-          "groups": [
-            "A渠道",
-            "C渠道",
-            "default",
-            "D渠道",
-            "顶级特供"
-          ],
-          "protocols": [
-            "openai"
-          ]
-        },
-        {
           "name": "熊猫-x-11-gemini-3.1-pro-anti",
           "ratio": 0,
           "completionRatio": 0,
@@ -1233,11 +1233,11 @@
           "inputPerMTok": null,
           "outputPerMTok": null,
           "groups": [
+            "D渠道",
+            "顶级特供",
             "A渠道",
             "C渠道",
-            "default",
-            "D渠道",
-            "顶级特供"
+            "default"
           ],
           "protocols": [
             "openai"
@@ -1251,11 +1251,11 @@
           "inputPerMTok": null,
           "outputPerMTok": null,
           "groups": [
-            "顶级特供",
-            "A渠道",
             "C渠道",
             "default",
-            "D渠道"
+            "D渠道",
+            "顶级特供",
+            "A渠道"
           ],
           "protocols": [
             "openai"
@@ -1269,6 +1269,24 @@
           "inputPerMTok": null,
           "outputPerMTok": null,
           "groups": [
+            "C渠道",
+            "default",
+            "D渠道",
+            "顶级特供",
+            "A渠道"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "熊猫-X-23-企业vertex逆-gemini-4-neon-稳一点",
+          "ratio": 0,
+          "completionRatio": 0,
+          "fixedPrice": 23,
+          "inputPerMTok": null,
+          "outputPerMTok": null,
+          "groups": [
             "A渠道",
             "C渠道",
             "default",
@@ -1280,10 +1298,10 @@
           ]
         },
         {
-          "name": "熊猫-X-23-企业vertex逆-gemini-4-neon-稳一点",
+          "name": "熊猫-X-24-kiro-claude-opus-4.5",
           "ratio": 0,
           "completionRatio": 0,
-          "fixedPrice": 23,
+          "fixedPrice": 24,
           "inputPerMTok": null,
           "outputPerMTok": null,
           "groups": [
@@ -1298,7 +1316,7 @@
           ]
         },
         {
-          "name": "熊猫-X-24-kiro-claude-opus-4.5",
+          "name": "熊猫-X-24-kiro-claude-opus-4.6",
           "ratio": 0,
           "completionRatio": 0,
           "fixedPrice": 24,
@@ -1316,7 +1334,7 @@
           ]
         },
         {
-          "name": "熊猫-X-24-kiro-claude-opus-4.6",
+          "name": "熊猫-X-24-kiro-claude-opus-4.7",
           "ratio": 0,
           "completionRatio": 0,
           "fixedPrice": 24,
@@ -1334,7 +1352,7 @@
           ]
         },
         {
-          "name": "熊猫-X-24-kiro-claude-opus-4.7",
+          "name": "熊猫-X-24-kiro-claude-opus-4.8",
           "ratio": 0,
           "completionRatio": 0,
           "fixedPrice": 24,
@@ -1352,7 +1370,7 @@
           ]
         },
         {
-          "name": "熊猫-X-24-kiro-claude-opus-4.8",
+          "name": "熊猫-X-24-kiro-claude-opus-5",
           "ratio": 0,
           "completionRatio": 0,
           "fixedPrice": 24,
@@ -1370,7 +1388,7 @@
           ]
         },
         {
-          "name": "熊猫-X-24-kiro-claude-opus-5",
+          "name": "熊猫-X-24-kiro-claude-opus-5.5",
           "ratio": 0,
           "completionRatio": 0,
           "fixedPrice": 24,
@@ -1382,24 +1400,6 @@
             "default",
             "D渠道",
             "顶级特供"
-          ],
-          "protocols": [
-            "openai"
-          ]
-        },
-        {
-          "name": "熊猫-X-24-kiro-claude-opus-5.5",
-          "ratio": 0,
-          "completionRatio": 0,
-          "fixedPrice": 24,
-          "inputPerMTok": null,
-          "outputPerMTok": null,
-          "groups": [
-            "default",
-            "D渠道",
-            "顶级特供",
-            "A渠道",
-            "C渠道"
           ],
           "protocols": [
             "openai"
@@ -1413,11 +1413,11 @@
           "inputPerMTok": null,
           "outputPerMTok": null,
           "groups": [
-            "A渠道",
-            "C渠道",
             "default",
             "D渠道",
-            "顶级特供"
+            "顶级特供",
+            "A渠道",
+            "C渠道"
           ],
           "protocols": [
             "openai"
@@ -1431,11 +1431,11 @@
           "inputPerMTok": null,
           "outputPerMTok": null,
           "groups": [
+            "A渠道",
+            "C渠道",
             "default",
             "D渠道",
-            "顶级特供",
-            "A渠道",
-            "C渠道"
+            "顶级特供"
           ],
           "protocols": [
             "openai"
@@ -1449,11 +1449,11 @@
           "inputPerMTok": null,
           "outputPerMTok": null,
           "groups": [
-            "A渠道",
             "C渠道",
             "default",
             "D渠道",
-            "顶级特供"
+            "顶级特供",
+            "A渠道"
           ],
           "protocols": [
             "openai"
@@ -1485,11 +1485,11 @@
           "inputPerMTok": null,
           "outputPerMTok": null,
           "groups": [
+            "顶级特供",
             "A渠道",
             "C渠道",
             "default",
-            "D渠道",
-            "顶级特供"
+            "D渠道"
           ],
           "protocols": [
             "openai"
@@ -1549,11 +1549,11 @@
           "inputPerMTok": null,
           "outputPerMTok": null,
           "groups": [
-            "default",
-            "D渠道",
             "顶级特供",
             "A渠道",
-            "C渠道"
+            "C渠道",
+            "default",
+            "D渠道"
           ],
           "protocols": [
             "openai"
@@ -1567,11 +1567,11 @@
           "inputPerMTok": null,
           "outputPerMTok": null,
           "groups": [
-            "A渠道",
-            "C渠道",
             "default",
             "D渠道",
-            "顶级特供"
+            "顶级特供",
+            "A渠道",
+            "C渠道"
           ],
           "protocols": [
             "openai"
@@ -1585,11 +1585,11 @@
           "inputPerMTok": null,
           "outputPerMTok": null,
           "groups": [
+            "A渠道",
+            "C渠道",
             "default",
             "D渠道",
-            "顶级特供",
-            "A渠道",
-            "C渠道"
+            "顶级特供"
           ],
           "protocols": [
             "openai"
@@ -1621,11 +1621,11 @@
           "inputPerMTok": null,
           "outputPerMTok": null,
           "groups": [
-            "顶级特供",
-            "A渠道",
             "C渠道",
             "default",
-            "D渠道"
+            "D渠道",
+            "顶级特供",
+            "A渠道"
           ],
           "protocols": [
             "openai"
@@ -1639,11 +1639,11 @@
           "inputPerMTok": null,
           "outputPerMTok": null,
           "groups": [
-            "顶级特供",
             "A渠道",
             "C渠道",
             "default",
-            "D渠道"
+            "D渠道",
+            "顶级特供"
           ],
           "protocols": [
             "openai"
@@ -1657,11 +1657,11 @@
           "inputPerMTok": null,
           "outputPerMTok": null,
           "groups": [
-            "A渠道",
             "C渠道",
             "default",
             "D渠道",
-            "顶级特供"
+            "顶级特供",
+            "A渠道"
           ],
           "protocols": [
             "openai"
@@ -1675,11 +1675,11 @@
           "inputPerMTok": null,
           "outputPerMTok": null,
           "groups": [
+            "顶级特供",
             "A渠道",
             "C渠道",
             "default",
-            "D渠道",
-            "顶级特供"
+            "D渠道"
           ],
           "protocols": [
             "openai"
@@ -1693,11 +1693,11 @@
           "inputPerMTok": null,
           "outputPerMTok": null,
           "groups": [
-            "D渠道",
-            "顶级特供",
             "A渠道",
             "C渠道",
-            "default"
+            "default",
+            "D渠道",
+            "顶级特供"
           ],
           "protocols": [
             "openai"
@@ -1711,11 +1711,11 @@
           "inputPerMTok": null,
           "outputPerMTok": null,
           "groups": [
+            "D渠道",
+            "顶级特供",
             "A渠道",
             "C渠道",
-            "default",
-            "D渠道",
-            "顶级特供"
+            "default"
           ],
           "protocols": [
             "openai"
@@ -2181,11 +2181,11 @@
           "inputPerMTok": null,
           "outputPerMTok": null,
           "groups": [
-            "default",
-            "D渠道",
             "顶级特供",
             "A渠道",
-            "C渠道"
+            "C渠道",
+            "default",
+            "D渠道"
           ],
           "protocols": [
             "openai"
@@ -2217,6 +2217,42 @@
           "inputPerMTok": null,
           "outputPerMTok": null,
           "groups": [
+            "A渠道",
+            "C渠道",
+            "default",
+            "D渠道",
+            "顶级特供"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "熊猫-特供-A-55-claude-opus-4.6-thinking",
+          "ratio": 0,
+          "completionRatio": 0,
+          "fixedPrice": 55,
+          "inputPerMTok": null,
+          "outputPerMTok": null,
+          "groups": [
+            "A渠道",
+            "C渠道",
+            "default",
+            "D渠道",
+            "顶级特供"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
+          "name": "熊猫-特供-X-10-gpt-5.5",
+          "ratio": 0,
+          "completionRatio": 0,
+          "fixedPrice": 10,
+          "inputPerMTok": null,
+          "outputPerMTok": null,
+          "groups": [
             "D渠道",
             "顶级特供",
             "A渠道",
@@ -2228,10 +2264,10 @@
           ]
         },
         {
-          "name": "熊猫-特供-A-55-claude-opus-4.6-thinking",
+          "name": "熊猫-特供-X-19-gpt-5.6-terra",
           "ratio": 0,
           "completionRatio": 0,
-          "fixedPrice": 55,
+          "fixedPrice": 19,
           "inputPerMTok": null,
           "outputPerMTok": null,
           "groups": [
@@ -2246,42 +2282,6 @@
           ]
         },
         {
-          "name": "熊猫-特供-X-10-gpt-5.5",
-          "ratio": 0,
-          "completionRatio": 0,
-          "fixedPrice": 10,
-          "inputPerMTok": null,
-          "outputPerMTok": null,
-          "groups": [
-            "default",
-            "D渠道",
-            "顶级特供",
-            "A渠道",
-            "C渠道"
-          ],
-          "protocols": [
-            "openai"
-          ]
-        },
-        {
-          "name": "熊猫-特供-X-19-gpt-5.6-terra",
-          "ratio": 0,
-          "completionRatio": 0,
-          "fixedPrice": 19,
-          "inputPerMTok": null,
-          "outputPerMTok": null,
-          "groups": [
-            "A渠道",
-            "C渠道",
-            "default",
-            "D渠道",
-            "顶级特供"
-          ],
-          "protocols": [
-            "openai"
-          ]
-        },
-        {
           "name": "熊猫-特供-X-22-gpt-5.6-sol",
           "ratio": 0,
           "completionRatio": 0,
@@ -2289,11 +2289,11 @@
           "inputPerMTok": null,
           "outputPerMTok": null,
           "groups": [
-            "A渠道",
             "C渠道",
             "default",
             "D渠道",
-            "顶级特供"
+            "顶级特供",
+            "A渠道"
           ],
           "protocols": [
             "openai"
@@ -2307,11 +2307,11 @@
           "inputPerMTok": null,
           "outputPerMTok": null,
           "groups": [
-            "顶级特供",
-            "A渠道",
             "C渠道",
             "default",
-            "D渠道"
+            "D渠道",
+            "顶级特供",
+            "A渠道"
           ],
           "protocols": [
             "openai"
@@ -2325,11 +2325,11 @@
           "inputPerMTok": null,
           "outputPerMTok": null,
           "groups": [
+            "顶级特供",
             "A渠道",
             "C渠道",
             "default",
-            "D渠道",
-            "顶级特供"
+            "D渠道"
           ],
           "protocols": [
             "openai"
@@ -2361,11 +2361,11 @@
           "inputPerMTok": null,
           "outputPerMTok": null,
           "groups": [
-            "default",
-            "D渠道",
             "顶级特供",
             "A渠道",
-            "C渠道"
+            "C渠道",
+            "default",
+            "D渠道"
           ],
           "protocols": [
             "openai"
@@ -2379,11 +2379,11 @@
           "inputPerMTok": null,
           "outputPerMTok": null,
           "groups": [
-            "A渠道",
-            "C渠道",
             "default",
             "D渠道",
-            "顶级特供"
+            "顶级特供",
+            "A渠道",
+            "C渠道"
           ],
           "protocols": [
             "openai"
@@ -2397,11 +2397,11 @@
           "inputPerMTok": null,
           "outputPerMTok": null,
           "groups": [
+            "C渠道",
             "default",
             "D渠道",
             "顶级特供",
-            "A渠道",
-            "C渠道"
+            "A渠道"
           ],
           "protocols": [
             "openai"
@@ -2523,11 +2523,11 @@
           "inputPerMTok": null,
           "outputPerMTok": null,
           "groups": [
+            "A渠道",
+            "C渠道",
             "default",
             "D渠道",
-            "顶级特供",
-            "A渠道",
-            "C渠道"
+            "顶级特供"
           ],
           "protocols": [
             "openai"
@@ -2559,11 +2559,11 @@
           "inputPerMTok": null,
           "outputPerMTok": null,
           "groups": [
-            "A渠道",
-            "C渠道",
             "default",
             "D渠道",
-            "顶级特供"
+            "顶级特供",
+            "A渠道",
+            "C渠道"
           ],
           "protocols": [
             "openai"
@@ -2577,11 +2577,11 @@
           "inputPerMTok": null,
           "outputPerMTok": null,
           "groups": [
+            "A渠道",
+            "C渠道",
             "default",
             "D渠道",
-            "顶级特供",
-            "A渠道",
-            "C渠道"
+            "顶级特供"
           ],
           "protocols": [
             "openai"
@@ -2595,11 +2595,11 @@
           "inputPerMTok": null,
           "outputPerMTok": null,
           "groups": [
-            "C渠道",
-            "default",
             "D渠道",
             "顶级特供",
-            "A渠道"
+            "A渠道",
+            "C渠道",
+            "default"
           ],
           "protocols": [
             "openai"
@@ -2613,11 +2613,11 @@
           "inputPerMTok": null,
           "outputPerMTok": null,
           "groups": [
-            "A渠道",
             "C渠道",
             "default",
             "D渠道",
-            "顶级特供"
+            "顶级特供",
+            "A渠道"
           ],
           "protocols": [
             "openai"
@@ -2631,11 +2631,11 @@
           "inputPerMTok": null,
           "outputPerMTok": null,
           "groups": [
-            "C渠道",
             "default",
             "D渠道",
             "顶级特供",
-            "A渠道"
+            "A渠道",
+            "C渠道"
           ],
           "protocols": [
             "openai"
@@ -2649,11 +2649,11 @@
           "inputPerMTok": null,
           "outputPerMTok": null,
           "groups": [
-            "default",
             "D渠道",
             "顶级特供",
             "A渠道",
-            "C渠道"
+            "C渠道",
+            "default"
           ],
           "protocols": [
             "openai"
@@ -2685,11 +2685,11 @@
           "inputPerMTok": null,
           "outputPerMTok": null,
           "groups": [
-            "A渠道",
-            "C渠道",
             "default",
             "D渠道",
-            "顶级特供"
+            "顶级特供",
+            "A渠道",
+            "C渠道"
           ],
           "protocols": [
             "openai"
@@ -2721,11 +2721,11 @@
           "inputPerMTok": null,
           "outputPerMTok": null,
           "groups": [
-            "顶级特供",
-            "A渠道",
             "C渠道",
             "default",
-            "D渠道"
+            "D渠道",
+            "顶级特供",
+            "A渠道"
           ],
           "protocols": [
             "openai"
@@ -2849,11 +2849,11 @@
           "inputPerMTok": null,
           "outputPerMTok": null,
           "groups": [
-            "A渠道",
-            "C渠道",
             "default",
             "D渠道",
-            "顶级特供"
+            "顶级特供",
+            "A渠道",
+            "C渠道"
           ],
           "protocols": [
             "openai"
@@ -2867,11 +2867,11 @@
           "inputPerMTok": null,
           "outputPerMTok": null,
           "groups": [
+            "A渠道",
             "C渠道",
             "default",
             "D渠道",
-            "顶级特供",
-            "A渠道"
+            "顶级特供"
           ],
           "protocols": [
             "openai"
@@ -2917,11 +2917,11 @@
           "inputPerMTok": 75,
           "outputPerMTok": 75,
           "groups": [
-            "default",
             "D渠道",
             "顶级特供",
             "A渠道",
-            "C渠道"
+            "C渠道",
+            "default"
           ],
           "protocols": [
             "openai"
@@ -2936,7 +2936,7 @@
       "signup": {
         "status": 200,
         "ok": true,
-        "ms": 1943,
+        "ms": 2344,
         "attempts": 1
       },
       "mirrors": [],
@@ -2948,10 +2948,10 @@
     },
     {
       "id": "dahanxingbang",
-      "checkedAt": "2026-11-27T08:32:04.292Z",
+      "checkedAt": "2026-11-27T21:16:29.464Z",
       "apiOk": true,
       "pricingOk": false,
-      "latencyMs": 1874,
+      "latencyMs": 2225,
       "error": null,
       "systemName": "大汉 API",
       "version": "orbit-home-20261127",
@@ -2983,7 +2983,7 @@
       "signup": {
         "status": 200,
         "ok": true,
-        "ms": 1872,
+        "ms": 2259,
         "attempts": 1
       },
       "mirrors": [
@@ -3000,10 +3000,10 @@
     },
     {
       "id": "nianhua",
-      "checkedAt": "2026-11-27T08:31:59.701Z",
+      "checkedAt": "2026-11-27T21:16:24.478Z",
       "apiOk": true,
       "pricingOk": true,
-      "latencyMs": 2175,
+      "latencyMs": 2242,
       "error": null,
       "systemName": "年华 API 中转站",
       "version": "1.0.0-rc.51-nianhua-payguard-invite-sec.20261120",
@@ -3242,9 +3242,9 @@
           "inputPerMTok": 10,
           "outputPerMTok": 50,
           "groups": [
+            "CCMax支持外接",
             "Cursor-CC",
-            "kiro",
-            "CCMax支持外接"
+            "kiro"
           ],
           "protocols": [
             "anthropic",
@@ -3290,8 +3290,8 @@
           "inputPerMTok": 1,
           "outputPerMTok": 5,
           "groups": [
-            "kiro",
-            "CCMax支持外接"
+            "CCMax支持外接",
+            "kiro"
           ],
           "protocols": [
             "anthropic",
@@ -3321,11 +3321,11 @@
           "inputPerMTok": 5,
           "outputPerMTok": 25,
           "groups": [
+            "default",
+            "kiro",
             "CC-Pro",
             "CCMax支持外接",
-            "Claude满血福利",
-            "default",
-            "kiro"
+            "Claude满血福利"
           ],
           "protocols": [
             "anthropic",
@@ -3340,11 +3340,11 @@
           "inputPerMTok": 5,
           "outputPerMTok": 25,
           "groups": [
-            "CC-Pro",
-            "CCMax支持外接",
             "Claude满血福利",
             "default",
-            "kiro"
+            "kiro",
+            "CC-Pro",
+            "CCMax支持外接"
           ],
           "protocols": [
             "anthropic",
@@ -3359,11 +3359,11 @@
           "inputPerMTok": 5,
           "outputPerMTok": 25,
           "groups": [
-            "default",
-            "kiro",
             "CC-Pro",
             "CCMax支持外接",
-            "Claude满血福利"
+            "Claude满血福利",
+            "default",
+            "kiro"
           ],
           "protocols": [
             "anthropic",
@@ -3396,10 +3396,10 @@
           "inputPerMTok": 4,
           "outputPerMTok": 20,
           "groups": [
-            "CC-Pro",
-            "CCMax支持外接",
             "Cursor-CC",
-            "kiro"
+            "kiro",
+            "CC-Pro",
+            "CCMax支持外接"
           ],
           "protocols": [
             "anthropic",
@@ -3414,11 +3414,11 @@
           "inputPerMTok": 3,
           "outputPerMTok": 15,
           "groups": [
+            "kiro",
             "CC-Pro",
             "CCMax支持外接",
             "Claude满血福利",
-            "default",
-            "kiro"
+            "default"
           ],
           "protocols": [
             "anthropic",
@@ -3450,8 +3450,8 @@
           "inputPerMTok": 75,
           "outputPerMTok": 75,
           "groups": [
-            "CCMax支持外接",
-            "CC-Pro"
+            "CC-Pro",
+            "CCMax支持外接"
           ],
           "protocols": [
             "anthropic",
@@ -3466,13 +3466,13 @@
           "inputPerMTok": 2.5,
           "outputPerMTok": 15,
           "groups": [
+            "GPT纯Plus低价分组",
+            "企业Pro",
             "福利（可用群内会通知）",
             "GPT",
             "GPT-Pro-不降智",
             "GPTPro",
-            "gpt破甲",
-            "GPT纯Plus低价分组",
-            "企业Pro"
+            "gpt破甲"
           ],
           "protocols": [
             "openai"
@@ -3840,11 +3840,11 @@
           "inputPerMTok": 1.75,
           "outputPerMTok": 14,
           "groups": [
+            "GPT",
             "GPTPro",
             "GPT纯Plus低价分组",
             "企业Pro",
-            "福利（可用群内会通知）",
-            "GPT"
+            "福利（可用群内会通知）"
           ],
           "protocols": [
             "openai"
@@ -3890,10 +3890,10 @@
           "inputPerMTok": 0.75,
           "outputPerMTok": 4.5,
           "groups": [
-            "福利（可用群内会通知）",
             "GPT",
             "GPTPro",
-            "GPT纯Plus低价分组"
+            "GPT纯Plus低价分组",
+            "福利（可用群内会通知）"
           ],
           "protocols": [
             "openai"
@@ -3924,14 +3924,14 @@
           "inputPerMTok": 5,
           "outputPerMTok": 30,
           "groups": [
-            "GPTPro",
-            "GPT官转",
-            "gpt破甲",
             "GPT纯Plus低价分组",
             "企业Pro",
             "福利（可用群内会通知）",
             "GPT",
-            "GPT-Pro-不降智"
+            "GPT-Pro-不降智",
+            "GPTPro",
+            "GPT官转",
+            "gpt破甲"
           ],
           "protocols": [
             "openai"
@@ -3962,10 +3962,10 @@
           "inputPerMTok": 4,
           "outputPerMTok": 20,
           "groups": [
-            "GPT-Pro-不降智",
             "GPT官转",
             "gpt破甲",
-            "福利（可用群内会通知）"
+            "福利（可用群内会通知）",
+            "GPT-Pro-不降智"
           ],
           "protocols": [
             "openai"
@@ -3979,12 +3979,12 @@
           "inputPerMTok": 75,
           "outputPerMTok": 450,
           "groups": [
-            "GPTPro",
-            "gpt破甲",
-            "GPT纯Plus低价分组",
             "企业Pro",
             "福利（可用群内会通知）",
-            "GPT"
+            "GPT",
+            "GPTPro",
+            "gpt破甲",
+            "GPT纯Plus低价分组"
           ],
           "protocols": [
             "openai"
@@ -3998,14 +3998,14 @@
           "inputPerMTok": 5,
           "outputPerMTok": 30,
           "groups": [
+            "GPT",
+            "GPT-Pro-不降智",
             "GPT官转",
             "gpt破甲",
-            "福利（可用群内会通知）",
-            "GPT-Pro-不降智",
-            "GPT纯Plus低价分组",
             "企业Pro",
-            "GPT",
-            "GPTPro"
+            "GPTPro",
+            "GPT纯Plus低价分组",
+            "福利（可用群内会通知）"
           ],
           "protocols": [
             "openai"
@@ -4019,14 +4019,14 @@
           "inputPerMTok": 75,
           "outputPerMTok": 450,
           "groups": [
-            "GPT-Pro-不降智",
             "GPTPro",
             "GPT官转",
             "gpt破甲",
             "GPT纯Plus低价分组",
             "企业Pro",
             "福利（可用群内会通知）",
-            "GPT"
+            "GPT",
+            "GPT-Pro-不降智"
           ],
           "protocols": [
             "openai"
@@ -4034,25 +4034,6 @@
         },
         {
           "name": "gpt-6",
-          "ratio": 37.5,
-          "completionRatio": 2,
-          "fixedPrice": null,
-          "inputPerMTok": 75,
-          "outputPerMTok": 150,
-          "groups": [
-            "gpt破甲",
-            "企业Pro",
-            "GPT",
-            "GPT-Pro-不降智",
-            "GPTPro",
-            "GPT官转"
-          ],
-          "protocols": [
-            "openai"
-          ]
-        },
-        {
-          "name": "gpt-6-astra",
           "ratio": 37.5,
           "completionRatio": 2,
           "fixedPrice": null,
@@ -4071,6 +4052,25 @@
           ]
         },
         {
+          "name": "gpt-6-astra",
+          "ratio": 37.5,
+          "completionRatio": 2,
+          "fixedPrice": null,
+          "inputPerMTok": 75,
+          "outputPerMTok": 150,
+          "groups": [
+            "GPT官转",
+            "gpt破甲",
+            "企业Pro",
+            "GPT",
+            "GPT-Pro-不降智",
+            "GPTPro"
+          ],
+          "protocols": [
+            "openai"
+          ]
+        },
+        {
           "name": "gpt-6-luna",
           "ratio": 37.5,
           "completionRatio": 2,
@@ -4078,11 +4078,11 @@
           "inputPerMTok": 75,
           "outputPerMTok": 150,
           "groups": [
+            "GPTPro",
             "gpt破甲",
             "企业Pro",
             "GPT",
-            "GPT-Pro-不降智",
-            "GPTPro"
+            "GPT-Pro-不降智"
           ],
           "protocols": [
             "openai"
@@ -4096,12 +4096,12 @@
           "inputPerMTok": 75,
           "outputPerMTok": 150,
           "groups": [
-            "GPT",
-            "GPT-Pro-不降智",
             "GPTPro",
             "GPT官转",
             "gpt破甲",
-            "企业Pro"
+            "企业Pro",
+            "GPT",
+            "GPT-Pro-不降智"
           ],
           "protocols": [
             "openai"
@@ -4151,10 +4151,10 @@
           "inputPerMTok": 75,
           "outputPerMTok": 150,
           "groups": [
-            "企业Pro",
-            "GPT",
             "GPT-Pro-不降智",
-            "GPTPro"
+            "GPTPro",
+            "企业Pro",
+            "GPT"
           ],
           "protocols": [
             "openai"
@@ -4215,13 +4215,13 @@
           "inputPerMTok": null,
           "outputPerMTok": null,
           "groups": [
-            "GPTPro",
-            "企业Pro",
-            "福利（可用群内会通知）",
             "ALL",
             "GPT",
             "GPT-Image",
-            "GPT-Pro-不降智"
+            "GPT-Pro-不降智",
+            "GPTPro",
+            "企业Pro",
+            "福利（可用群内会通知）"
           ],
           "protocols": [
             "image-generation",
@@ -4236,10 +4236,10 @@
           "inputPerMTok": null,
           "outputPerMTok": null,
           "groups": [
-            "GPT",
             "GPT-Image",
             "GPTPro",
-            "企业Pro"
+            "企业Pro",
+            "GPT"
           ],
           "protocols": [
             "image-generation",
@@ -4254,10 +4254,10 @@
           "inputPerMTok": null,
           "outputPerMTok": null,
           "groups": [
+            "企业Pro",
             "GPT",
             "GPT-Image",
-            "GPTPro",
-            "企业Pro"
+            "GPTPro"
           ],
           "protocols": [
             "image-generation",
@@ -4272,12 +4272,12 @@
           "inputPerMTok": null,
           "outputPerMTok": null,
           "groups": [
-            "GPTPro",
-            "企业Pro",
             "ALL",
             "GPT",
             "GPT-Image",
-            "GPT-Pro-不降智"
+            "GPT-Pro-不降智",
+            "GPTPro",
+            "企业Pro"
           ],
           "protocols": [
             "image-generation",
@@ -4286,26 +4286,6 @@
         },
         {
           "name": "gpt-image-2.5-flare",
-          "ratio": 0,
-          "completionRatio": 0,
-          "fixedPrice": 0.16,
-          "inputPerMTok": null,
-          "outputPerMTok": null,
-          "groups": [
-            "GPT-Image",
-            "GPT-Pro-不降智",
-            "GPTPro",
-            "企业Pro",
-            "ALL",
-            "GPT"
-          ],
-          "protocols": [
-            "image-generation",
-            "openai"
-          ]
-        },
-        {
-          "name": "gpt-image-2.5-sunburst",
           "ratio": 0,
           "completionRatio": 0,
           "fixedPrice": 0.16,
@@ -4325,6 +4305,26 @@
           ]
         },
         {
+          "name": "gpt-image-2.5-sunburst",
+          "ratio": 0,
+          "completionRatio": 0,
+          "fixedPrice": 0.16,
+          "inputPerMTok": null,
+          "outputPerMTok": null,
+          "groups": [
+            "GPT",
+            "GPT-Image",
+            "GPT-Pro-不降智",
+            "GPTPro",
+            "企业Pro",
+            "ALL"
+          ],
+          "protocols": [
+            "image-generation",
+            "openai"
+          ]
+        },
+        {
           "name": "gpt-image-2.6",
           "ratio": 37.5,
           "completionRatio": 2,
@@ -4332,11 +4332,11 @@
           "inputPerMTok": 75,
           "outputPerMTok": 150,
           "groups": [
+            "企业Pro",
+            "ALL",
             "GPT",
             "GPT-Image",
-            "GPTPro",
-            "企业Pro",
-            "ALL"
+            "GPTPro"
           ],
           "protocols": [
             "image-generation",
@@ -4439,8 +4439,8 @@
           "inputPerMTok": 75,
           "outputPerMTok": 150,
           "groups": [
-            "gpt破甲",
-            "GPT-Pro-不降智"
+            "GPT-Pro-不降智",
+            "gpt破甲"
           ],
           "protocols": [
             "openai"
@@ -4675,8 +4675,8 @@
           "inputPerMTok": 0,
           "outputPerMTok": 0,
           "groups": [
-            "公益",
-            "GPT-Image"
+            "GPT-Image",
+            "公益"
           ],
           "protocols": [
             "openai"
@@ -5142,7 +5142,7 @@
       "signup": {
         "status": 200,
         "ok": true,
-        "ms": 2389,
+        "ms": 2481,
         "attempts": 1
       },
       "mirrors": [],
@@ -5154,10 +5154,10 @@
     },
     {
       "id": "supxh",
-      "checkedAt": "2026-11-27T08:31:59.995Z",
+      "checkedAt": "2026-11-27T21:16:25.005Z",
       "apiOk": true,
       "pricingOk": true,
-      "latencyMs": 2282,
+      "latencyMs": 2661,
       "error": null,
       "systemName": null,
       "version": null,
@@ -5181,7 +5181,7 @@
       "signup": {
         "status": 200,
         "ok": true,
-        "ms": 2460,
+        "ms": 2750,
         "attempts": 1
       },
       "mirrors": [],
@@ -5193,10 +5193,10 @@
     },
     {
       "id": "api456",
-      "checkedAt": "2026-11-27T08:32:00.015Z",
+      "checkedAt": "2026-11-27T21:16:24.806Z",
       "apiOk": true,
       "pricingOk": false,
-      "latencyMs": 2488,
+      "latencyMs": 2574,
       "error": null,
       "systemName": "可萌中转站",
       "version": "v1.0.0-rc.45-api456.1",
@@ -5248,7 +5248,7 @@
       "signup": {
         "status": 200,
         "ok": true,
-        "ms": 2496,
+        "ms": 2543,
         "attempts": 1
       },
       "mirrors": [],
@@ -5260,10 +5260,10 @@
     },
     {
       "id": "matrix",
-      "checkedAt": "2026-11-27T08:32:00.817Z",
+      "checkedAt": "2026-11-27T21:16:26.034Z",
       "apiOk": true,
       "pricingOk": false,
-      "latencyMs": 3288,
+      "latencyMs": 3800,
       "error": null,
       "systemName": null,
       "version": null,
@@ -5287,7 +5287,7 @@
       "signup": {
         "status": 200,
         "ok": true,
-        "ms": 3322,
+        "ms": 3866,
         "attempts": 1
       },
       "mirrors": [],
@@ -5299,10 +5299,10 @@
     },
     {
       "id": "seekai",
-      "checkedAt": "2026-11-27T08:32:00.335Z",
+      "checkedAt": "2026-11-27T21:16:25.583Z",
       "apiOk": true,
       "pricingOk": false,
-      "latencyMs": 2805,
+      "latencyMs": 3348,
       "error": null,
       "systemName": "SeekAi",
       "version": "v1.0.0-rc.25",
@@ -5330,7 +5330,7 @@
       "signup": {
         "status": 200,
         "ok": true,
-        "ms": 2838,
+        "ms": 3332,
         "attempts": 1
       },
       "mirrors": [
@@ -5347,10 +5347,10 @@
     },
     {
       "id": "aaawinn",
-      "checkedAt": "2026-11-27T08:32:00.458Z",
+      "checkedAt": "2026-11-27T21:16:25.630Z",
       "apiOk": true,
       "pricingOk": false,
-      "latencyMs": 2927,
+      "latencyMs": 3393,
       "error": null,
       "systemName": "Long的AI",
       "version": "v0.0.0",
@@ -5402,7 +5402,7 @@
       "signup": {
         "status": 200,
         "ok": true,
-        "ms": 2930,
+        "ms": 3390,
         "attempts": 1
       },
       "mirrors": [],
@@ -5416,10 +5416,10 @@
     },
     {
       "id": "hcnsec",
-      "checkedAt": "2026-11-27T08:32:05.633Z",
+      "checkedAt": "2026-11-27T21:16:27.639Z",
       "apiOk": true,
       "pricingOk": false,
-      "latencyMs": 8101,
+      "latencyMs": 5105,
       "error": null,
       "systemName": "新疆幻城网安科技公益大模型安全网关",
       "version": "v1.0.0-rc.51-hc4",
@@ -5472,7 +5472,7 @@
       "signup": {
         "status": 200,
         "ok": true,
-        "ms": 6993,
+        "ms": 5153,
         "attempts": 1
       },
       "mirrors": [],
